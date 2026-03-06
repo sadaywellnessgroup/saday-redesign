@@ -1,0 +1,2797 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Saday Academy - Advanced Wellness Training</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;900&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#13ec5b",
+            "primary-dark": "#0ea341",
+            "purple-deep": "#523980",
+            "purple-soft": "#9072C6",
+            "background-light": "#ffffff",
+            "background-dark": "#523980",
+            "text-main": "#333333",
+            "text-muted": "#6B7280",
+            "accent-surface": "#f0ebfa",
+            "accent-purple": "#f5f3fa",
+          },
+          fontFamily: {
+            display: ["Lexend", "sans-serif"],
+          },
+        },
+      },
+    }
+  </script>
+  <style data-stitch-injected="">
+    /* For Webkit Browsers (Chrome, Safari, Edge) */
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* For Firefox */
+    html {
+      scrollbar-width: none;
+    }
+
+    /* For IE/Edge */
+    body {
+      -ms-overflow-style: none;
+      min-height: auto !important;
+    }
+  </style>
+  <script
+    data-stitch-injected="">(function Zr() { window.addEventListener("message", async function (e) { const r = e.data; if (!r || r.type !== "capture_screenshot" || e.source !== window.parent) return; const t = r.requestId, i = r.captureEngineSource, h = r.options || {}, u = window.innerWidth, a = window.innerHeight, d = window.scrollX, s = window.scrollY, c = document.documentElement, f = c.style.width, o = c.style.height, m = c.style.overflow, E = c.style.position; try { if (!window.snapdom && i) { const x = document.createElement("script"); x.setAttribute("data-stitch-injected", ""), x.textContent = i, document.head.appendChild(x) } const p = window.snapdom; if (!p) { window.parent.postMessage({ type: "screenshot_error", requestId: t, errorCode: "CAPTURE_ENGINE_UNAVAILABLE", error: "Capture engine not available. Ensure source is sent with the capture request." }, "*"); return } const y = h.exclude || ["[data-stitch-injected]"]; window.scrollTo(0, 0), c.style.width = u + "px", c.style.height = a + "px", c.style.overflow = "hidden", c.style.position = "relative"; const C = { name: "stitch-viewport-clip", afterClone: function (x) { const A = x.clone; if (!(A instanceof HTMLElement)) return; A.style.position = "relative", A.style.width = u + "px", A.style.height = a + "px", A.style.overflow = "hidden"; const R = [], L = A.querySelectorAll("*"); for (let _ = 0; _ < L.length; _++) { const T = L[_]; T instanceof HTMLElement && (T.style.position || (T.__snapdomComputedStyle || window.getComputedStyle(T)).position) === "fixed" && R.push(T) } if (d !== 0 || s !== 0) { const _ = A.querySelector("body"); _ && (_.style.marginTop = -s + "px", _.style.marginLeft = -d + "px") } for (let _ = 0; _ < R.length; _++)R[_].style.position = "absolute", A.appendChild(R[_]) } }, $ = (await (await p(document.documentElement, { exclude: y, embedFonts: !0, scale: h.scale || 1, quality: h.quality || 1, plugins: [C] })).toCanvas({ width: u, height: a })).toDataURL("image/png"); window.parent.postMessage({ type: "screenshot_captured", requestId: t, dataUrl: $, width: u, height: a }, "*") } catch (p) { window.parent.postMessage({ type: "screenshot_error", requestId: t, error: p instanceof Error ? p.message : String(p) }, "*") } finally { c.style.width = f, c.style.height = o, c.style.overflow = m, c.style.position = E, window.scrollTo(d, s) } }) })();</script>
+  <style>
+    *,
+    ::before,
+    ::after {
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-rotate: 0;
+      --tw-skew-x: 0;
+      --tw-skew-y: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-pan-x: ;
+      --tw-pan-y: ;
+      --tw-pinch-zoom: ;
+      --tw-scroll-snap-strictness: proximity;
+      --tw-gradient-from-position: ;
+      --tw-gradient-via-position: ;
+      --tw-gradient-to-position: ;
+      --tw-ordinal: ;
+      --tw-slashed-zero: ;
+      --tw-numeric-figure: ;
+      --tw-numeric-spacing: ;
+      --tw-numeric-fraction: ;
+      --tw-ring-inset: ;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: rgb(59 130 246 / 0.5);
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-colored: 0 0 #0000;
+      --tw-blur: ;
+      --tw-brightness: ;
+      --tw-contrast: ;
+      --tw-grayscale: ;
+      --tw-hue-rotate: ;
+      --tw-invert: ;
+      --tw-saturate: ;
+      --tw-sepia: ;
+      --tw-drop-shadow: ;
+      --tw-backdrop-blur: ;
+      --tw-backdrop-brightness: ;
+      --tw-backdrop-contrast: ;
+      --tw-backdrop-grayscale: ;
+      --tw-backdrop-hue-rotate: ;
+      --tw-backdrop-invert: ;
+      --tw-backdrop-opacity: ;
+      --tw-backdrop-saturate: ;
+      --tw-backdrop-sepia: ;
+      --tw-contain-size: ;
+      --tw-contain-layout: ;
+      --tw-contain-paint: ;
+      --tw-contain-style:
+    }
+
+    ::backdrop {
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-rotate: 0;
+      --tw-skew-x: 0;
+      --tw-skew-y: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-pan-x: ;
+      --tw-pan-y: ;
+      --tw-pinch-zoom: ;
+      --tw-scroll-snap-strictness: proximity;
+      --tw-gradient-from-position: ;
+      --tw-gradient-via-position: ;
+      --tw-gradient-to-position: ;
+      --tw-ordinal: ;
+      --tw-slashed-zero: ;
+      --tw-numeric-figure: ;
+      --tw-numeric-spacing: ;
+      --tw-numeric-fraction: ;
+      --tw-ring-inset: ;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: rgb(59 130 246 / 0.5);
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-colored: 0 0 #0000;
+      --tw-blur: ;
+      --tw-brightness: ;
+      --tw-contrast: ;
+      --tw-grayscale: ;
+      --tw-hue-rotate: ;
+      --tw-invert: ;
+      --tw-saturate: ;
+      --tw-sepia: ;
+      --tw-drop-shadow: ;
+      --tw-backdrop-blur: ;
+      --tw-backdrop-brightness: ;
+      --tw-backdrop-contrast: ;
+      --tw-backdrop-grayscale: ;
+      --tw-backdrop-hue-rotate: ;
+      --tw-backdrop-invert: ;
+      --tw-backdrop-opacity: ;
+      --tw-backdrop-saturate: ;
+      --tw-backdrop-sepia: ;
+      --tw-contain-size: ;
+      --tw-contain-layout: ;
+      --tw-contain-paint: ;
+      --tw-contain-style:
+    }
+
+    /* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */
+    *,
+    ::after,
+    ::before {
+      box-sizing: border-box;
+      border-width: 0;
+      border-style: solid;
+      border-color: #e5e7eb
+    }
+
+    ::after,
+    ::before {
+      --tw-content: ''
+    }
+
+    :host,
+    html {
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
+      -moz-tab-size: 4;
+      tab-size: 4;
+      font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-feature-settings: normal;
+      font-variation-settings: normal;
+      -webkit-tap-highlight-color: transparent
+    }
+
+    body {
+      margin: 0;
+      line-height: inherit
+    }
+
+    hr {
+      height: 0;
+      color: inherit;
+      border-top-width: 1px
+    }
+
+    abbr:where([title]) {
+      -webkit-text-decoration: underline dotted;
+      text-decoration: underline dotted
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: inherit;
+      font-weight: inherit
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit
+    }
+
+    b,
+    strong {
+      font-weight: bolder
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-feature-settings: normal;
+      font-variation-settings: normal;
+      font-size: 1em
+    }
+
+    small {
+      font-size: 80%
+    }
+
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline
+    }
+
+    sub {
+      bottom: -.25em
+    }
+
+    sup {
+      top: -.5em
+    }
+
+    table {
+      text-indent: 0;
+      border-color: inherit;
+      border-collapse: collapse
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-feature-settings: inherit;
+      font-variation-settings: inherit;
+      font-size: 100%;
+      font-weight: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+      color: inherit;
+      margin: 0;
+      padding: 0
+    }
+
+    button,
+    select {
+      text-transform: none
+    }
+
+    button,
+    input:where([type=button]),
+    input:where([type=reset]),
+    input:where([type=submit]) {
+      -webkit-appearance: button;
+      background-color: transparent;
+      background-image: none
+    }
+
+    :-moz-focusring {
+      outline: auto
+    }
+
+    :-moz-ui-invalid {
+      box-shadow: none
+    }
+
+    progress {
+      vertical-align: baseline
+    }
+
+    ::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+      height: auto
+    }
+
+    [type=search] {
+      -webkit-appearance: textfield;
+      outline-offset: -2px
+    }
+
+    ::-webkit-search-decoration {
+      -webkit-appearance: none
+    }
+
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button;
+      font: inherit
+    }
+
+    summary {
+      display: list-item
+    }
+
+    blockquote,
+    dd,
+    dl,
+    figure,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    hr,
+    p,
+    pre {
+      margin: 0
+    }
+
+    fieldset {
+      margin: 0;
+      padding: 0
+    }
+
+    legend {
+      padding: 0
+    }
+
+    menu,
+    ol,
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0
+    }
+
+    dialog {
+      padding: 0
+    }
+
+    textarea {
+      resize: vertical
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      opacity: 1;
+      color: #9ca3af
+    }
+
+    [role=button],
+    button {
+      cursor: pointer
+    }
+
+    :disabled {
+      cursor: default
+    }
+
+    audio,
+    canvas,
+    embed,
+    iframe,
+    img,
+    object,
+    svg,
+    video {
+      display: block;
+      vertical-align: middle
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto
+    }
+
+    [hidden]:where(:not([hidden=until-found])) {
+      display: none
+    }
+
+    [type='text'],
+    input:where(:not([type])),
+    [type='email'],
+    [type='url'],
+    [type='password'],
+    [type='number'],
+    [type='date'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='search'],
+    [type='tel'],
+    [type='time'],
+    [type='week'],
+    [multiple],
+    textarea,
+    select {
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: #fff;
+      border-color: #6b7280;
+      border-width: 1px;
+      border-radius: 0px;
+      padding-top: 0.5rem;
+      padding-right: 0.75rem;
+      padding-bottom: 0.5rem;
+      padding-left: 0.75rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      --tw-shadow: 0 0 #0000;
+    }
+
+    [type='text']:focus,
+    input:where(:not([type])):focus,
+    [type='email']:focus,
+    [type='url']:focus,
+    [type='password']:focus,
+    [type='number']:focus,
+    [type='date']:focus,
+    [type='datetime-local']:focus,
+    [type='month']:focus,
+    [type='search']:focus,
+    [type='tel']:focus,
+    [type='time']:focus,
+    [type='week']:focus,
+    [multiple]:focus,
+    textarea:focus,
+    select:focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      --tw-ring-inset: var(--tw-empty,
+          /*!*/
+          /*!*/
+        );
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: #2563eb;
+      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      border-color: #2563eb
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #6b7280;
+      opacity: 1
+    }
+
+    ::-webkit-datetime-edit-fields-wrapper {
+      padding: 0
+    }
+
+    ::-webkit-date-and-time-value {
+      min-height: 1.5em;
+      text-align: inherit
+    }
+
+    ::-webkit-datetime-edit {
+      display: inline-flex
+    }
+
+    ::-webkit-datetime-edit,
+    ::-webkit-datetime-edit-year-field,
+    ::-webkit-datetime-edit-month-field,
+    ::-webkit-datetime-edit-day-field,
+    ::-webkit-datetime-edit-hour-field,
+    ::-webkit-datetime-edit-minute-field,
+    ::-webkit-datetime-edit-second-field,
+    ::-webkit-datetime-edit-millisecond-field,
+    ::-webkit-datetime-edit-meridiem-field {
+      padding-top: 0;
+      padding-bottom: 0
+    }
+
+    select {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+      background-position: right 0.5rem center;
+      background-repeat: no-repeat;
+      background-size: 1.5em 1.5em;
+      padding-right: 2.5rem;
+      print-color-adjust: exact
+    }
+
+    [multiple],
+    [size]:where(select:not([size="1"])) {
+      background-image: initial;
+      background-position: initial;
+      background-repeat: unset;
+      background-size: initial;
+      padding-right: 0.75rem;
+      print-color-adjust: unset
+    }
+
+    [type='checkbox'],
+    [type='radio'] {
+      -webkit-appearance: none;
+      appearance: none;
+      padding: 0;
+      print-color-adjust: exact;
+      display: inline-block;
+      vertical-align: middle;
+      background-origin: border-box;
+      -webkit-user-select: none;
+      user-select: none;
+      flex-shrink: 0;
+      height: 1rem;
+      width: 1rem;
+      color: #2563eb;
+      background-color: #fff;
+      border-color: #6b7280;
+      border-width: 1px;
+      --tw-shadow: 0 0 #0000
+    }
+
+    [type='checkbox'] {
+      border-radius: 0px
+    }
+
+    [type='radio'] {
+      border-radius: 100%
+    }
+
+    [type='checkbox']:focus,
+    [type='radio']:focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      --tw-ring-inset: var(--tw-empty,
+          /*!*/
+          /*!*/
+        );
+      --tw-ring-offset-width: 2px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: #2563eb;
+      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
+    }
+
+    [type='checkbox']:checked,
+    [type='radio']:checked {
+      border-color: transparent;
+      background-color: currentColor;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat
+    }
+
+    [type='checkbox']:checked {
+      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+    }
+
+    @media (forced-colors: active) {
+      [type='checkbox']:checked {
+        -webkit-appearance: auto;
+        appearance: auto
+      }
+    }
+
+    [type='radio']:checked {
+      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+    }
+
+    @media (forced-colors: active) {
+      [type='radio']:checked {
+        -webkit-appearance: auto;
+        appearance: auto
+      }
+    }
+
+    [type='checkbox']:checked:hover,
+    [type='checkbox']:checked:focus,
+    [type='radio']:checked:hover,
+    [type='radio']:checked:focus {
+      border-color: transparent;
+      background-color: currentColor
+    }
+
+    [type='checkbox']:indeterminate {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");
+      border-color: transparent;
+      background-color: currentColor;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    @media (forced-colors: active) {
+      [type='checkbox']:indeterminate {
+        -webkit-appearance: auto;
+        appearance: auto
+      }
+    }
+
+    [type='checkbox']:indeterminate:hover,
+    [type='checkbox']:indeterminate:focus {
+      border-color: transparent;
+      background-color: currentColor
+    }
+
+    [type='file'] {
+      background: unset;
+      border-color: inherit;
+      border-width: 0;
+      border-radius: 0;
+      padding: 0;
+      font-size: unset;
+      line-height: inherit
+    }
+
+    [type='file']:focus {
+      outline: 1px solid ButtonText;
+      outline: 1px auto -webkit-focus-ring-color
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-select,
+    .form-multiselect {
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: #fff;
+      border-color: #6b7280;
+      border-width: 1px;
+      border-radius: 0px;
+      padding-top: 0.5rem;
+      padding-right: 0.75rem;
+      padding-bottom: 0.5rem;
+      padding-left: 0.75rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      --tw-shadow: 0 0 #0000;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-select:focus,
+    .form-multiselect:focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      --tw-ring-inset: var(--tw-empty,
+          /*!*/
+          /*!*/
+        );
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: #2563eb;
+      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      border-color: #2563eb
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: #6b7280;
+      opacity: 1
+    }
+
+    .form-input::-webkit-datetime-edit-fields-wrapper {
+      padding: 0
+    }
+
+    .form-input::-webkit-date-and-time-value {
+      min-height: 1.5em;
+      text-align: inherit
+    }
+
+    .form-input::-webkit-datetime-edit {
+      display: inline-flex
+    }
+
+    .form-input::-webkit-datetime-edit,
+    .form-input::-webkit-datetime-edit-year-field,
+    .form-input::-webkit-datetime-edit-month-field,
+    .form-input::-webkit-datetime-edit-day-field,
+    .form-input::-webkit-datetime-edit-hour-field,
+    .form-input::-webkit-datetime-edit-minute-field,
+    .form-input::-webkit-datetime-edit-second-field,
+    .form-input::-webkit-datetime-edit-millisecond-field,
+    .form-input::-webkit-datetime-edit-meridiem-field {
+      padding-top: 0;
+      padding-bottom: 0
+    }
+
+    .absolute {
+      position: absolute
+    }
+
+    .relative {
+      position: relative
+    }
+
+    .sticky {
+      position: sticky
+    }
+
+    .inset-0 {
+      inset: 0px
+    }
+
+    .bottom-6 {
+      bottom: 1.5rem
+    }
+
+    .left-3 {
+      left: 0.75rem
+    }
+
+    .left-6 {
+      left: 1.5rem
+    }
+
+    .top-0 {
+      top: 0px
+    }
+
+    .top-3 {
+      top: 0.75rem
+    }
+
+    .top-6 {
+      top: 1.5rem
+    }
+
+    .z-10 {
+      z-index: 10
+    }
+
+    .z-50 {
+      z-index: 50
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    .mb-1 {
+      margin-bottom: 0.25rem
+    }
+
+    .mb-10 {
+      margin-bottom: 2.5rem
+    }
+
+    .mb-12 {
+      margin-bottom: 3rem
+    }
+
+    .mb-2 {
+      margin-bottom: 0.5rem
+    }
+
+    .mb-3 {
+      margin-bottom: 0.75rem
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem
+    }
+
+    .mb-6 {
+      margin-bottom: 1.5rem
+    }
+
+    .mb-8 {
+      margin-bottom: 2rem
+    }
+
+    .mt-12 {
+      margin-top: 3rem
+    }
+
+    .mt-2 {
+      margin-top: 0.5rem
+    }
+
+    .mt-auto {
+      margin-top: auto
+    }
+
+    .line-clamp-3 {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3
+    }
+
+    .flex {
+      display: flex
+    }
+
+    .inline-flex {
+      display: inline-flex
+    }
+
+    .grid {
+      display: grid
+    }
+
+    .hidden {
+      display: none
+    }
+
+    .aspect-\[4\/3\] {
+      aspect-ratio: 4/3
+    }
+
+    .size-10 {
+      width: 2.5rem;
+      height: 2.5rem
+    }
+
+    .size-12 {
+      width: 3rem;
+      height: 3rem
+    }
+
+    .size-2 {
+      width: 0.5rem;
+      height: 0.5rem
+    }
+
+    .size-8 {
+      width: 2rem;
+      height: 2rem
+    }
+
+    .\!h-10 {
+      height: 2.5rem !important
+    }
+
+    .h-10 {
+      height: 2.5rem
+    }
+
+    .h-12 {
+      height: 3rem
+    }
+
+    .h-48 {
+      height: 12rem
+    }
+
+    .h-full {
+      height: 100%
+    }
+
+    .min-h-screen {
+      min-height: 100vh
+    }
+
+    .w-fit {
+      width: -moz-fit-content;
+      width: fit-content
+    }
+
+    .w-full {
+      width: 100%
+    }
+
+    .min-w-0 {
+      min-width: 0px
+    }
+
+    .min-w-40 {
+      min-width: 10rem
+    }
+
+    .min-w-\[80px\] {
+      min-width: 80px
+    }
+
+    .max-w-2xl {
+      max-width: 42rem
+    }
+
+    .max-w-64 {
+      max-width: 16rem
+    }
+
+    .max-w-7xl {
+      max-width: 80rem
+    }
+
+    .max-w-xl {
+      max-width: 36rem
+    }
+
+    .flex-1 {
+      flex: 1 1 0%
+    }
+
+    @keyframes pulse {
+      50% {
+        opacity: .5
+      }
+    }
+
+    .animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite
+    }
+
+    .resize-none {
+      resize: none
+    }
+
+    .grid-cols-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr))
+    }
+
+    .flex-col {
+      flex-direction: column
+    }
+
+    .flex-wrap {
+      flex-wrap: wrap
+    }
+
+    .items-start {
+      align-items: flex-start
+    }
+
+    .items-end {
+      align-items: flex-end
+    }
+
+    .items-center {
+      align-items: center
+    }
+
+    .items-stretch {
+      align-items: stretch
+    }
+
+    .justify-end {
+      justify-content: flex-end
+    }
+
+    .justify-center {
+      justify-content: center
+    }
+
+    .justify-between {
+      justify-content: space-between
+    }
+
+    .gap-1 {
+      gap: 0.25rem
+    }
+
+    .gap-10 {
+      gap: 2.5rem
+    }
+
+    .gap-2 {
+      gap: 0.5rem
+    }
+
+    .gap-3 {
+      gap: 0.75rem
+    }
+
+    .gap-4 {
+      gap: 1rem
+    }
+
+    .gap-6 {
+      gap: 1.5rem
+    }
+
+    .gap-8 {
+      gap: 2rem
+    }
+
+    .gap-9 {
+      gap: 2.25rem
+    }
+
+    .-space-x-2> :not([hidden])~ :not([hidden]) {
+      --tw-space-x-reverse: 0;
+      margin-right: calc(-0.5rem * var(--tw-space-x-reverse));
+      margin-left: calc(-0.5rem * calc(1 - var(--tw-space-x-reverse)))
+    }
+
+    .space-y-2> :not([hidden])~ :not([hidden]) {
+      --tw-space-y-reverse: 0;
+      margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+      margin-bottom: calc(0.5rem * var(--tw-space-y-reverse))
+    }
+
+    .overflow-hidden {
+      overflow: hidden
+    }
+
+    .overflow-x-hidden {
+      overflow-x: hidden
+    }
+
+    .truncate {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap
+    }
+
+    .whitespace-nowrap {
+      white-space: nowrap
+    }
+
+    .rounded-2xl {
+      border-radius: 1rem
+    }
+
+    .rounded-full {
+      border-radius: 9999px
+    }
+
+    .rounded-lg {
+      border-radius: 0.5rem
+    }
+
+    .rounded-md {
+      border-radius: 0.375rem
+    }
+
+    .rounded-xl {
+      border-radius: 0.75rem
+    }
+
+    .border {
+      border-width: 1px
+    }
+
+    .border-2 {
+      border-width: 2px
+    }
+
+    .border-y {
+      border-top-width: 1px;
+      border-bottom-width: 1px
+    }
+
+    .border-b {
+      border-bottom-width: 1px
+    }
+
+    .border-t {
+      border-top-width: 1px
+    }
+
+    .border-solid {
+      border-style: solid
+    }
+
+    .border-dashed {
+      border-style: dashed
+    }
+
+    .border-none {
+      border-style: none
+    }
+
+    .border-accent-surface {
+      --tw-border-opacity: 1;
+      border-color: rgb(208 195 240 / var(--tw-border-opacity, 1))
+    }
+
+    .border-background-dark {
+      --tw-border-opacity: 1;
+      border-color: rgb(82 57 128 / var(--tw-border-opacity, 1))
+    }
+
+    .border-primary {
+      --tw-border-opacity: 1;
+      border-color: rgb(19 236 91 / var(--tw-border-opacity, 1))
+    }
+
+    .border-text-main\/10 {
+      border-color: rgb(13 27 18 / 0.1)
+    }
+
+    .border-white\/10 {
+      border-color: rgb(255 255 255 / 0.1)
+    }
+
+    .border-white\/20 {
+      border-color: rgb(255 255 255 / 0.2)
+    }
+
+    .bg-accent-surface {
+      --tw-bg-opacity: 1;
+      background-color: rgb(240 235 250 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-background-dark {
+      --tw-bg-opacity: 1;
+      background-color: rgb(82 57 128 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-background-light {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-black\/20 {
+      background-color: rgb(0 0 0 / 0.2)
+    }
+
+    .bg-gray-200 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-gray-300 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-gray-400 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(156 163 175 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-gray-500 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(107 114 128 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-primary {
+      --tw-bg-opacity: 1;
+      background-color: rgb(19 236 91 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-primary\/20 {
+      background-color: rgb(19 236 91 / 0.2)
+    }
+
+    .bg-red-500 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-transparent {
+      background-color: transparent
+    }
+
+    .bg-white {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-white\/20 {
+      background-color: rgb(255 255 255 / 0.2)
+    }
+
+    .bg-white\/5 {
+      background-color: rgb(255 255 255 / 0.05)
+    }
+
+    .bg-white\/80 {
+      background-color: rgb(255 255 255 / 0.8)
+    }
+
+    .bg-white\/90 {
+      background-color: rgb(255 255 255 / 0.9)
+    }
+
+    .bg-\[url\(\'https\:\/\/www\.transparenttextures\.com\/patterns\/cubes\.png\'\)\] {
+      background-image: url('https://www.transparenttextures.com/patterns/cubes.png')
+    }
+
+    .bg-gradient-to-t {
+      background-image: linear-gradient(to top, var(--tw-gradient-stops))
+    }
+
+    .from-black\/50 {
+      --tw-gradient-from: rgb(0 0 0 / 0.5) var(--tw-gradient-from-position);
+      --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+    }
+
+    .to-transparent {
+      --tw-gradient-to: transparent var(--tw-gradient-to-position)
+    }
+
+    .bg-cover {
+      background-size: cover
+    }
+
+    .bg-center {
+      background-position: center
+    }
+
+    .p-4 {
+      padding: 1rem
+    }
+
+    .p-6 {
+      padding: 1.5rem
+    }
+
+    .p-8 {
+      padding: 2rem
+    }
+
+    .px-10 {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem
+    }
+
+    .px-3 {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem
+    }
+
+    .px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem
+    }
+
+    .px-8 {
+      padding-left: 2rem;
+      padding-right: 2rem
+    }
+
+    .py-1 {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem
+    }
+
+    .py-10 {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem
+    }
+
+    .py-16 {
+      padding-top: 4rem;
+      padding-bottom: 4rem
+    }
+
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem
+    }
+
+    .py-2\.5 {
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem
+    }
+
+    .py-3 {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem
+    }
+
+    .py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem
+    }
+
+    .pb-8 {
+      padding-bottom: 2rem
+    }
+
+    .pl-3 {
+      padding-left: 0.75rem
+    }
+
+    .pt-16 {
+      padding-top: 4rem
+    }
+
+    .pt-4 {
+      padding-top: 1rem
+    }
+
+    .pt-8 {
+      padding-top: 2rem
+    }
+
+    .text-left {
+      text-align: left
+    }
+
+    .text-center {
+      text-align: center
+    }
+
+    .font-display {
+      font-family: Lexend, sans-serif
+    }
+
+    .\!text-\[32px\] {
+      font-size: 32px !important
+    }
+
+    .text-3xl {
+      font-size: 1.875rem;
+      line-height: 2.25rem
+    }
+
+    .text-4xl {
+      font-size: 2.25rem;
+      line-height: 2.5rem
+    }
+
+    .text-6xl {
+      font-size: 3.75rem;
+      line-height: 1
+    }
+
+    .text-\[10px\] {
+      font-size: 10px
+    }
+
+    .text-\[16px\] {
+      font-size: 16px
+    }
+
+    .text-\[18px\] {
+      font-size: 18px
+    }
+
+    .text-\[20px\] {
+      font-size: 20px
+    }
+
+    .text-\[24px\] {
+      font-size: 24px
+    }
+
+    .text-\[32px\] {
+      font-size: 32px
+    }
+
+    .text-base {
+      font-size: 1rem;
+      line-height: 1.5rem
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
+      line-height: 1.75rem
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+      line-height: 1.25rem
+    }
+
+    .text-xl {
+      font-size: 1.25rem;
+      line-height: 1.75rem
+    }
+
+    .text-xs {
+      font-size: 0.75rem;
+      line-height: 1rem
+    }
+
+    .font-black {
+      font-weight: 900
+    }
+
+    .font-bold {
+      font-weight: 700
+    }
+
+    .font-medium {
+      font-weight: 500
+    }
+
+    .font-normal {
+      font-weight: 400
+    }
+
+    .font-semibold {
+      font-weight: 600
+    }
+
+    .uppercase {
+      text-transform: uppercase
+    }
+
+    .italic {
+      font-style: italic
+    }
+
+    .leading-\[1\.1\] {
+      line-height: 1.1
+    }
+
+    .leading-relaxed {
+      line-height: 1.625
+    }
+
+    .leading-tight {
+      line-height: 1.25
+    }
+
+    .tracking-\[-0\.015em\] {
+      letter-spacing: -0.015em
+    }
+
+    .tracking-tight {
+      letter-spacing: -0.025em
+    }
+
+    .tracking-wide {
+      letter-spacing: 0.025em
+    }
+
+    .tracking-wider {
+      letter-spacing: 0.05em
+    }
+
+    .tracking-widest {
+      letter-spacing: 0.1em
+    }
+
+    .text-black {
+      --tw-text-opacity: 1;
+      color: rgb(0 0 0 / var(--tw-text-opacity, 1))
+    }
+
+    .text-gray-400 {
+      --tw-text-opacity: 1;
+      color: rgb(156 163 175 / var(--tw-text-opacity, 1))
+    }
+
+    .text-primary {
+      --tw-text-opacity: 1;
+      color: rgb(19 236 91 / var(--tw-text-opacity, 1))
+    }
+
+    .text-primary-dark {
+      --tw-text-opacity: 1;
+      color: rgb(14 163 65 / var(--tw-text-opacity, 1))
+    }
+
+    .text-primary\/20 {
+      color: rgb(19 236 91 / 0.2)
+    }
+
+    .text-text-main {
+      --tw-text-opacity: 1;
+      color: rgb(51 51 51 / var(--tw-text-opacity, 1))
+    }
+
+    .text-text-main\/70 {
+      color: rgb(51 51 51 / 0.7)
+    }
+
+    .text-text-main\/80 {
+      color: rgb(51 51 51 / 0.8)
+    }
+
+    .text-text-muted {
+      --tw-text-opacity: 1;
+      color: rgb(107 114 128 / var(--tw-text-opacity, 1))
+    }
+
+    .text-white {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+    }
+
+    .text-yellow-500 {
+      --tw-text-opacity: 1;
+      color: rgb(234 179 8 / var(--tw-text-opacity, 1))
+    }
+
+    .underline {
+      -webkit-text-decoration-line: underline;
+      text-decoration-line: underline
+    }
+
+    .decoration-primary {
+      -webkit-text-decoration-color: #13ec5b;
+      text-decoration-color: #13ec5b
+    }
+
+    .decoration-purple-soft {
+      -webkit-text-decoration-color: #9072C6;
+      text-decoration-color: #9072C6
+    }
+
+    .decoration-2 {
+      text-decoration-thickness: 2px
+    }
+
+    .underline-offset-2 {
+      text-underline-offset: 2px
+    }
+
+    .antialiased {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale
+    }
+
+    .opacity-10 {
+      opacity: 0.1
+    }
+
+    .opacity-90 {
+      opacity: 0.9
+    }
+
+    .shadow-md {
+      --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    .shadow-sm {
+      --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    .shadow-xl {
+      --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    .backdrop-blur-md {
+      --tw-backdrop-blur: blur(12px);
+      -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+      backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)
+    }
+
+    .backdrop-blur-sm {
+      --tw-backdrop-blur: blur(4px);
+      -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+      backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)
+    }
+
+    .transition-all {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms
+    }
+
+    .transition-colors {
+      transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms
+    }
+
+    .transition-shadow {
+      transition-property: box-shadow;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms
+    }
+
+    .duration-300 {
+      transition-duration: 300ms
+    }
+
+    .\@container {
+      container-type: inline-size
+    }
+
+    .placeholder\:text-text-muted::placeholder {
+      --tw-text-opacity: 1;
+      color: rgb(76 154 102 / var(--tw-text-opacity, 1))
+    }
+
+    .hover\:scale-105:hover {
+      --tw-scale-x: 1.05;
+      --tw-scale-y: 1.05;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+    }
+
+    .hover\:bg-\[\#dbece1\]:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(219 236 225 / var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:bg-accent-surface:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(231 243 235 / var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:bg-primary:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(19 236 91 / var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:bg-primary-dark:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(14 163 65 / var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:bg-white\/10:hover {
+      background-color: rgb(255 255 255 / 0.1)
+    }
+
+    .hover\:bg-white\/30:hover {
+      background-color: rgb(255 255 255 / 0.3)
+    }
+
+    .hover\:text-primary:hover {
+      --tw-text-opacity: 1;
+      color: rgb(19 236 91 / var(--tw-text-opacity, 1))
+    }
+
+    .hover\:text-primary-dark:hover {
+      --tw-text-opacity: 1;
+      color: rgb(14 163 65 / var(--tw-text-opacity, 1))
+    }
+
+    .hover\:text-text-main:hover {
+      --tw-text-opacity: 1;
+      color: rgb(13 27 18 / var(--tw-text-opacity, 1))
+    }
+
+    .hover\:text-white:hover {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+    }
+
+    .hover\:underline:hover {
+      -webkit-text-decoration-line: underline;
+      text-decoration-line: underline
+    }
+
+    .hover\:shadow-lg:hover {
+      --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    .hover\:shadow-xl:hover {
+      --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    .focus\:border-primary:focus {
+      --tw-border-opacity: 1;
+      border-color: rgb(19 236 91 / var(--tw-border-opacity, 1))
+    }
+
+    .focus\:outline-0:focus {
+      outline-width: 0px
+    }
+
+    .focus\:ring-0:focus {
+      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+    }
+
+    .group:hover .group-hover\:bg-transparent {
+      background-color: transparent
+    }
+
+    .group:hover .group-hover\:text-primary-dark {
+      --tw-text-opacity: 1;
+      color: rgb(14 163 65 / var(--tw-text-opacity, 1))
+    }
+
+    @container (min-width: 480px) {
+      .\@\[480px\]\:min-w-\[400px\] {
+        min-width: 400px
+      }
+
+      .\@\[480px\]\:gap-8 {
+        gap: 2rem
+      }
+    }
+
+    @container (min-width: 864px) {
+      .\@\[864px\]\:flex-row {
+        flex-direction: row
+      }
+    }
+
+    @media (min-width: 640px) {
+      .sm\:w-auto {
+        width: auto
+      }
+
+      .sm\:flex-row {
+        flex-direction: row
+      }
+    }
+
+    @media (min-width: 768px) {
+      .md\:col-span-1 {
+        grid-column: span 1 / span 1
+      }
+
+      .md\:inline {
+        display: inline
+      }
+
+      .md\:flex {
+        display: flex
+      }
+
+      .md\:aspect-video {
+        aspect-ratio: 16 / 9
+      }
+
+      .md\:w-auto {
+        width: auto
+      }
+
+      .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+      }
+
+      .md\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr))
+      }
+
+      .md\:flex-row {
+        flex-direction: row
+      }
+
+      .md\:items-end {
+        align-items: flex-end
+      }
+
+      .md\:justify-start {
+        justify-content: flex-start
+      }
+
+      .md\:p-12 {
+        padding: 3rem
+      }
+
+      .md\:px-10 {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem
+      }
+
+      .md\:py-10 {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem
+      }
+
+      .md\:text-left {
+        text-align: left
+      }
+
+      .md\:text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem
+      }
+
+      .md\:text-5xl {
+        font-size: 3rem;
+        line-height: 1
+      }
+
+      .md\:text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .lg\:flex {
+        display: flex
+      }
+
+      .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+      }
+
+      .lg\:text-6xl {
+        font-size: 3.75rem;
+        line-height: 1
+      }
+    }
+
+    /* Purple palette utilities */
+    .bg-accent-purple {
+      background-color: rgb(245 243 250)
+    }
+
+    .bg-purple-soft {
+      --tw-bg-opacity: 1;
+      background-color: rgb(144 114 198 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-purple-deep {
+      --tw-bg-opacity: 1;
+      background-color: rgb(82 57 128 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-purple-soft\/20 {
+      background-color: rgb(144 114 198 / 0.2)
+    }
+
+    .bg-purple-soft\/60 {
+      background-color: rgb(144 114 198 / 0.6)
+    }
+
+    .bg-purple-soft\/80 {
+      background-color: rgb(144 114 198 / 0.8)
+    }
+
+    .text-purple-deep {
+      --tw-text-opacity: 1;
+      color: rgb(82 57 128 / var(--tw-text-opacity, 1))
+    }
+
+    .text-purple-soft {
+      --tw-text-opacity: 1;
+      color: rgb(144 114 198 / var(--tw-text-opacity, 1))
+    }
+
+    .border-purple-soft {
+      --tw-border-opacity: 1;
+      border-color: rgb(144 114 198 / var(--tw-border-opacity, 1))
+    }
+
+    .border-purple-deep {
+      --tw-border-opacity: 1;
+      border-color: rgb(82 57 128 / var(--tw-border-opacity, 1))
+    }
+
+    .hover\:bg-purple-soft:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(144 114 198 / var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:bg-purple-deep:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(82 57 128 / var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:bg-accent-purple:hover {
+      background-color: rgb(245 243 250)
+    }
+
+    .hover\:text-purple-deep:hover {
+      --tw-text-opacity: 1;
+      color: rgb(82 57 128 / var(--tw-text-opacity, 1))
+    }
+
+    .hover\:text-purple-soft:hover {
+      --tw-text-opacity: 1;
+      color: rgb(144 114 198 / var(--tw-text-opacity, 1))
+    }
+
+    .placeholder-white\/50::placeholder {
+      color: rgba(255, 255, 255, 0.5)
+    }
+  </style>
+</head>
+
+<body class="bg-background-light text-text-main font-display antialiased overflow-x-hidden"
+  style="background-color:#ffffff;">
+  <div class="relative flex min-h-screen w-full flex-col">
+    <!-- Header -->
+    <header
+      class="flex items-center justify-between whitespace-nowrap border-b border-solid border-accent-surface px-10 py-3 bg-white/90 backdrop-blur-md sticky top-0 z-50">
+      <div class="flex items-center gap-8">
+        <div class="flex items-center gap-4 text-text-main">
+          <div class="size-8 text-primary">
+            <span class="material-symbols-outlined !text-[32px]">spa</span>
+          </div>
+          <h2 class="text-text-main text-lg font-bold leading-tight tracking-[-0.015em]">Saday Academy</h2>
+        </div>
+        <div class="hidden lg:flex items-center gap-9">
+          <a class="text-text-main text-sm font-medium hover:text-purple-soft transition-colors"
+            href="saday-courses.html">Courses</a>
+          <a class="text-text-main text-sm font-medium hover:text-purple-soft transition-colors"
+            href="#">Instructors</a>
+          <a class="text-text-main text-sm font-medium hover:text-purple-soft transition-colors" href="#">About</a>
+          <a class="text-text-main text-sm font-medium hover:text-purple-soft transition-colors" href="#">Contact</a>
+        </div>
+      </div>
+      <div class="flex flex-1 justify-end gap-4 items-center">
+        <label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+          <div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-accent-surface bg-white">
+            <div class="text-purple-soft flex items-center justify-center pl-3">
+              <span class="material-symbols-outlined text-[20px]">search</span>
+            </div>
+            <input
+              class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-main focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-text-muted px-3 text-sm font-normal"
+              style="color:#333;" placeholder="Search courses...">
+          </div>
+        </label>
+        <div class="flex gap-2">
+          <button
+            class="flex items-center justify-center rounded-lg h-10 px-4 bg-accent-purple hover:bg-accent-surface text-purple-deep text-sm font-bold transition-colors">
+            <span class="truncate">Sign In</span>
+          </button>
+          <button
+            class="flex items-center justify-center rounded-lg h-10 px-4 bg-purple-soft hover:bg-purple-deep text-white text-sm font-bold transition-colors shadow-sm">
+            <span class="truncate">Join Now</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main class="flex flex-col items-center">
+      <!-- Hero Section -->
+      <div class="layout-container w-full max-w-7xl px-4 md:px-10 py-10">
+        <div class="@container">
+          <div class="flex flex-col gap-6 py-4 md:py-10 @[864px]:flex-row items-center">
+            <div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 flex-1">
+              <div class="flex flex-col gap-3 text-left">
+                <div class="inline-flex items-center gap-2 rounded-full bg-accent-surface px-3 py-1 w-fit">
+                  <span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+                  <span class="text-xs font-bold text-text-main uppercase tracking-wide">For Professionals Only</span>
+                </div>
+                <h1 class="text-text-main text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
+                  Advanced Wellness Training for <span class="text-purple-deep">Practitioners</span>
+                </h1>
+                <p class="text-text-main/80 text-lg font-normal leading-relaxed max-w-xl">
+                  Master practice-oriented skills with courses led by industry experts. This isn't basic wellness—it's
+                  advanced specialization designed to elevate your career.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <a href="saday-courses.html"
+                  class="flex items-center justify-center rounded-lg h-12 px-6 bg-purple-soft hover:bg-purple-deep text-white text-base font-bold transition-all shadow-md">
+                  Explore Courses
+                </a>
+                <button
+                  class="flex items-center justify-center rounded-lg h-12 px-6 border border-purple-deep bg-white hover:bg-accent-purple text-purple-deep text-base font-bold transition-all">
+                  View Instructors
+                </button>
+              </div>
+              <div class="flex items-center gap-2 text-sm text-text-muted mt-2">
+                <span class="material-symbols-outlined text-[18px]">info</span>
+                <span>Looking for personal wellness? <a
+                    class="underline decoration-purple-soft decoration-2 underline-offset-2 hover:text-purple-deep font-semibold"
+                    href="#">Book a consultation here.</a></span>
+              </div>
+            </div>
+            <div
+              class="w-full aspect-[4/3] md:aspect-video bg-cover bg-center rounded-2xl shadow-xl flex-1 relative overflow-hidden group"
+              data-alt="Professional wellness instructor teaching a small group class in a bright studio"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMe_Xz3G6f7HEpg814NwIt3ytRHSRqlT2TVa7zLNxIvH8xH9CS8_0ZpJj2-ht68md1FNe5RHPCOmrpiV6VFmptkGiIIXuw4DyeMADSXzxUArDkuP6UN0ZIVQ_iC-IfuPF0G7bNWtwGxF46j_joda7-ARhjZoqsrk1iHROjstmZ_rKbkNXn32jWh9HafBoOViAcXMaXOQPFYmFFTsGRlYAPdMFzwhb5noOduFUaFDsdp2A1S7jJaPg_vwGBZrwAEVXs61ig37IR2Q2m');">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <div class="absolute bottom-6 left-6 text-white">
+                <p class="font-bold text-lg">Dr. Elena Rostova</p>
+                <p class="text-sm opacity-90">Lead Instructor, Advanced Physiology</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Features Grid -->
+      <div class="w-full bg-white border-y border-accent-surface" style="border-color:#e5e7eb;">
+        <div class="max-w-7xl mx-auto px-4 md:px-10 py-16">
+          <div class="flex flex-col gap-10">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+              <div class="max-w-2xl">
+                <h2 class="text-text-main text-3xl font-bold leading-tight mb-4">Why Choose Saday Academy?</h2>
+                <p class="text-text-main/70 text-lg">Our curriculum is designed specifically for professionals seeking
+                  advanced specialization beyond standard certification requirements.</p>
+              </div>
+              <button class="text-purple-soft font-bold hover:underline flex items-center gap-1">
+                Learn about our methodology <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+              </button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <!-- Feature 1 -->
+              <div
+                class="flex flex-col gap-4 rounded-xl border border-accent-surface bg-accent-purple p-6 hover:shadow-lg transition-shadow">
+                <div class="size-12 rounded-lg bg-purple-soft/20 flex items-center justify-center text-purple-deep">
+                  <span class="material-symbols-outlined text-[32px]">school</span>
+                </div>
+                <div>
+                  <h3 class="text-text-main text-xl font-bold mb-2">Expert-Led Instruction</h3>
+                  <p class="text-text-muted">Learn directly from PhDs and industry leaders with decades of clinical
+                    experience, not just theoretical knowledge.</p>
+                </div>
+              </div>
+              <!-- Feature 2 -->
+              <div
+                class="flex flex-col gap-4 rounded-xl border border-accent-surface bg-accent-purple p-6 hover:shadow-lg transition-shadow">
+                <div class="size-12 rounded-lg bg-purple-soft/20 flex items-center justify-center text-purple-deep">
+                  <span class="material-symbols-outlined text-[32px]">clinical_notes</span>
+                </div>
+                <div>
+                  <h3 class="text-text-main text-xl font-bold mb-2">Practice-Oriented</h3>
+                  <p class="text-text-muted">Curriculum focused on immediate application in clinical or therapeutic
+                    settings. Real case studies and protocols.</p>
+                </div>
+              </div>
+              <!-- Feature 3 -->
+              <div
+                class="flex flex-col gap-4 rounded-xl border border-accent-surface bg-accent-purple p-6 hover:shadow-lg transition-shadow">
+                <div class="size-12 rounded-lg bg-purple-soft/20 flex items-center justify-center text-purple-deep">
+                  <span class="material-symbols-outlined text-[32px]">workspace_premium</span>
+                </div>
+                <div>
+                  <h3 class="text-text-main text-xl font-bold mb-2">Advanced Certification</h3>
+                  <p class="text-text-muted">Earn credentials that are recognized by top health institutions and count
+                    towards continuing education credits.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- In-Demand Courses Section -->
+      <div class="w-full max-w-7xl px-4 md:px-10 py-16">
+        <div class="flex justify-between items-end mb-8">
+          <div>
+            <h2 class="text-text-main text-3xl font-bold leading-tight mb-2">Most In-Demand Courses</h2>
+            <p class="text-text-muted">Deep dive into our most popular advanced specializations.</p>
+          </div>
+          <div class="hidden md:flex gap-2">
+            <button
+              class="size-10 rounded-full border border-purple-soft flex items-center justify-center text-purple-deep hover:bg-accent-purple transition-colors">
+              <span class="material-symbols-outlined">arrow_back</span>
+            </button>
+            <button
+              class="size-10 rounded-full border border-purple-soft flex items-center justify-center text-purple-deep hover:bg-accent-purple transition-colors">
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Course Card 1 -->
+          <div
+            class="group flex flex-col rounded-xl overflow-hidden border border-accent-surface bg-white hover:shadow-xl transition-all duration-300">
+            <div class="relative h-48 w-full bg-gray-200 overflow-hidden"
+              data-alt="Abstract representation of somatic movement therapy"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCE8dY6R2CbjA6-eW5_tRt8o8Ygwn99aonR49H9X3faCpCedvQj1FPnxggegJV3VcpEhiuyNwWHeJhhVLhBu5kIWgvXLBSVNHgOAucbRh8Qdgz2cl_9qFAcjHfoC78AkVt7MgKHLhrPRI5suVHDZMLHPUy9CUcNehIwleWF32q4zty_TjUyK6GRas3GPr3pG1NKGHNa7I4BnIPjbo_NPR7SvjZ_LeEbbymik4ZZXDB2WiUE2CFGqLuqQfktBrZ2xtlhiAHeAY30TclZ'); background-size: cover; background-position: center;">
+              <div
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider text-text-main">
+                8 Weeks
+              </div>
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+            </div>
+            <div class="flex flex-col p-6 flex-1">
+              <div class="flex items-center gap-2 mb-3 text-xs font-bold text-purple-deep uppercase tracking-wide">
+                <span class="material-symbols-outlined text-[16px]">psychology</span> Somatic Therapy
+              </div>
+              <h3 class="text-xl font-bold text-text-main mb-2 group-hover:text-purple-soft transition-colors">
+                Integrative Somatic Trauma Therapy</h3>
+              <p class="text-sm text-text-muted mb-6 line-clamp-3">
+                A comprehensive framework for understanding the physiological effects of trauma. Learn evidence-based
+                somatic interventions to support client recovery.
+              </p>
+              <div class="mt-auto flex flex-col gap-4">
+                <div
+                  class="flex items-center justify-between text-sm text-text-main border-t border-accent-surface pt-4">
+                  <div class="flex items-center gap-2">
+                    <div class="size-8 rounded-full bg-gray-300 bg-cover bg-center" data-alt="Portrait of instructor"
+                      style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiJ_S5IgBtd6bMXLUYXMmnkJGzHJeCCEjtZTMTVxGC2zkhU_Uxu4br_4JIqrs3di3Hzb8euZPRWEURK7bjeMO3C8xskfONNLSWO4xX-t9X6PzUGz5vz10rh4JO2WkPOxtGKv4QGOTzDq0JVTBfVN19-_XdTlx_LP6Xy1LeM9tb05WBh2Rr56SovdlRTVLqdl8CsxwkP1stdVcrshCY3VGaZOKv-n0GJQ8KFjbPw3UeIZd2clTWLclHPuJU9ac6Q4AT7RZwkFrgCIsb');">
+                    </div>
+                    <span class="font-medium">Dr. Sarah Jenks</span>
+                  </div>
+                  <div class="flex items-center gap-1 font-bold">
+                    <span class="material-symbols-outlined text-yellow-500 text-[18px]">star</span>
+                    4.9 (120)
+                  </div>
+                </div>
+                <button
+                  class="w-full py-2.5 rounded-lg border border-purple-soft text-purple-deep font-bold text-sm hover:bg-purple-soft hover:text-white transition-colors">
+                  View Syllabus
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Course Card 2 -->
+          <div
+            class="group flex flex-col rounded-xl overflow-hidden border border-accent-surface bg-white hover:shadow-xl transition-all duration-300">
+            <div class="relative h-48 w-full bg-gray-200 overflow-hidden"
+              data-alt="Close up of essential oils and herbs for holistic nutrition"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-wIkIA0980qY2lqI4XqfunBl1uNpWkjXEP96KPrUb5sU7XfXhK-LJJRiv_4TsBUV1RQN1LGJXgwk252SEecBwmW6Sp_ciGJrpXOKybdyKvl6YxpXxUOV5eaZGHB8TzrJQpvaUXfCl6_yPlfsXGoaqb-BOpOQ6bCAsoL0sXqsKETusXBXqrBYMLsEYtbFFz5Ix_wAYNu1yMuC74wKDW8CxbAZFpglBuJpEDmKQkbWAO9h2uQeLzXSrzlgI-omzYPIpdPXggqSj1Fx1'); background-size: cover; background-position: center;">
+              <div
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider text-text-main">
+                12 Weeks
+              </div>
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+            </div>
+            <div class="flex flex-col p-6 flex-1">
+              <div class="flex items-center gap-2 mb-3 text-xs font-bold text-purple-deep uppercase tracking-wide">
+                <span class="material-symbols-outlined text-[16px]">nutrition</span> Nutrition Science
+              </div>
+              <h3 class="text-xl font-bold text-text-main mb-2 group-hover:text-purple-soft transition-colors">Advanced
+                Metabolic Health</h3>
+              <p class="text-sm text-text-muted mb-6 line-clamp-3">
+                Go beyond basic diet plans. Understand metabolic flexibility, hormonal regulation, and personalized
+                nutrition strategies for complex client cases.
+              </p>
+              <div class="mt-auto flex flex-col gap-4">
+                <div
+                  class="flex items-center justify-between text-sm text-text-main border-t border-accent-surface pt-4">
+                  <div class="flex items-center gap-2">
+                    <div class="size-8 rounded-full bg-gray-300 bg-cover bg-center" data-alt="Portrait of instructor"
+                      style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3iSqn5g9R3ALBDHIq5MbKzApCK4oX5X7ftCLdZjTP2JxesWilIu_JvyjaLowyOn7jscGvnfmLQGj9H7gQpkus3TbqZ3SqXbAdFEzBOMrv8rDxomv5VaCLqjK_H_q192WClcl9rq3U3XFd5cDeDYodN9PBs9mzuuOEyxyqwvkR0pdFxMgNPb5Gf1T92Z2vnxX5h4XFi1JdFBrlcZvRv91S_4T6KyDmxNuMGPTnc-bwOxEJLtZUBxA2iqXizru5wvckeXkCvl-yYDYr');">
+                    </div>
+                    <span class="font-medium">Mark Davidson, RD</span>
+                  </div>
+                  <div class="flex items-center gap-1 font-bold">
+                    <span class="material-symbols-outlined text-yellow-500 text-[18px]">star</span>
+                    5.0 (85)
+                  </div>
+                </div>
+                <button
+                  class="w-full py-2.5 rounded-lg border border-purple-soft text-purple-deep font-bold text-sm hover:bg-purple-soft hover:text-white transition-colors">
+                  View Syllabus
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Course Card 3 -->
+          <div
+            class="group flex flex-col rounded-xl overflow-hidden border border-accent-surface bg-white hover:shadow-xl transition-all duration-300">
+            <div class="relative h-48 w-full bg-gray-200 overflow-hidden"
+              data-alt="Peaceful yoga studio setting with natural light"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnPxNVabewplrMpKb6u8ads_8VEyaztNR9lIyn4eZdSYy4nL6uFU_7KASptnB6vHlsJPDKmvzNF-Gi9xdW73iaMN9wL8at_KOpBaue0UNXO05aw6Qb_sOS5T-sZnAuwWR0uwE9TRCv3iUyYtopgoHQxwtQ-WSP08IXH8PMWz8iloQfPZC9kKKewkYOYk0ehgYpvLl1H8XBDnpq-_sb-LXX9N6oqrsV7treR-OluG2k0QberwgTq2U7kPnTHznkmlWYCXN7-rvnHgb7'); background-size: cover; background-position: center;">
+              <div
+                class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider text-text-main">
+                4 Weeks
+              </div>
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+            </div>
+            <div class="flex flex-col p-6 flex-1">
+              <div class="flex items-center gap-2 mb-3 text-xs font-bold text-purple-deep uppercase tracking-wide">
+                <span class="material-symbols-outlined text-[16px]">mindfulness</span> Mindfulness
+              </div>
+              <h3 class="text-xl font-bold text-text-main mb-2 group-hover:text-purple-soft transition-colors">MBSR for
+                Clinicians</h3>
+              <p class="text-sm text-text-muted mb-6 line-clamp-3">
+                Mindfulness-Based Stress Reduction specifically adapted for clinical practice. Learn to facilitate
+                mindfulness interventions safely and effectively.
+              </p>
+              <div class="mt-auto flex flex-col gap-4">
+                <div
+                  class="flex items-center justify-between text-sm text-text-main border-t border-accent-surface pt-4">
+                  <div class="flex items-center gap-2">
+                    <div class="size-8 rounded-full bg-gray-300 bg-cover bg-center" data-alt="Portrait of instructor"
+                      style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEO_hkAtIaf1dlm8FI-_ZRZyokkj-xT-0VCVAHo8AodCrsRxdJWtl3TAFQEwyO0KmweXyhycqNQaurVwIr90gGpi0ybyEgl08H9zU7o8tVG3vyeLJnuNPutqHVtQCbseESlCEh06Fxon3UwLoMge7z850brWWF_N-xWCna-1U40vxkL4D5er3cFTxlZULH9bCABx1x0qzctOmWXWwEW83XSh-Aa79fzuHUzTsFlJF9J_Z4wj1zV-HTwApvjtZ7Zx2dsLWb1Xwdd9bG');">
+                    </div>
+                    <span class="font-medium">Lila Chen</span>
+                  </div>
+                  <div class="flex items-center gap-1 font-bold">
+                    <span class="material-symbols-outlined text-yellow-500 text-[18px]">star</span>
+                    4.8 (210)
+                  </div>
+                </div>
+                <button
+                  class="w-full py-2.5 rounded-lg border border-purple-soft text-purple-deep font-bold text-sm hover:bg-purple-soft hover:text-white transition-colors">
+                  View Syllabus
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Upcoming Live Courses -->
+      <div class="w-full text-white" style="background-color:#523980;">
+        <div class="max-w-7xl mx-auto px-4 md:px-10 py-16">
+          <div class="flex flex-col md:flex-row justify-between items-center mb-10 gap-6">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="size-2 rounded-full bg-primary animate-pulse"></span>
+                <span class="text-primary text-sm font-bold uppercase tracking-widest">Interactive Learning</span>
+              </div>
+              <h2 class="text-3xl font-bold leading-tight">Upcoming Live Sessions</h2>
+              <p class="text-white/70 mt-2">Join real-time workshops with Q&amp;A sessions.</p>
+            </div>
+            <button
+              class="px-6 py-3 border border-white/30 rounded-lg hover:bg-white/10 transition-colors font-semibold text-white">
+              View Calendar
+            </button>
+          </div>
+          <div class="flex flex-col gap-4">
+            <!-- Live Row 1 -->
+            <div
+              class="flex flex-col md:flex-row items-center gap-6 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+              <div class="flex flex-col items-center justify-center min-w-[80px] text-center">
+                <span class="text-sm font-medium text-primary uppercase">OCT</span>
+                <span class="text-3xl font-bold">12</span>
+              </div>
+              <div class="flex-1 text-center md:text-left">
+                <h3 class="text-xl font-bold mb-1">Advanced Polyvagal Theory Application</h3>
+                <p class="text-sm text-gray-400 flex items-center justify-center md:justify-start gap-2">
+                  <span class="material-symbols-outlined text-[16px]">schedule</span> 10:00 AM - 2:00 PM EST
+                  <span class="hidden md:inline">•</span>
+                  <span class="material-symbols-outlined text-[16px]">videocam</span> Live via Zoom
+                </p>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="flex -space-x-2">
+                  <div class="size-8 rounded-full bg-purple-soft/60 border-2 border-purple-deep"></div>
+                  <div class="size-8 rounded-full bg-purple-soft/80 border-2 border-purple-deep"></div>
+                  <div
+                    class="size-8 rounded-full bg-purple-soft border-2 border-purple-deep flex items-center justify-center text-[10px] text-white font-bold">
+                    +42</div>
+                </div>
+                <button
+                  class="px-4 py-2 bg-primary text-black font-bold rounded-lg text-sm hover:bg-primary-dark hover:text-white transition-colors">
+                  Reserve Seat
+                </button>
+              </div>
+            </div>
+            <!-- Live Row 2 -->
+            <div
+              class="flex flex-col md:flex-row items-center gap-6 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+              <div class="flex flex-col items-center justify-center min-w-[80px] text-center">
+                <span class="text-sm font-medium text-primary uppercase">OCT</span>
+                <span class="text-3xl font-bold">24</span>
+              </div>
+              <div class="flex-1 text-center md:text-left">
+                <h3 class="text-xl font-bold mb-1">Functional Medicine Case Studies Review</h3>
+                <p class="text-sm text-gray-400 flex items-center justify-center md:justify-start gap-2">
+                  <span class="material-symbols-outlined text-[16px]">schedule</span> 1:00 PM - 3:30 PM EST
+                  <span class="hidden md:inline">•</span>
+                  <span class="material-symbols-outlined text-[16px]">videocam</span> Live via Zoom
+                </p>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="flex -space-x-2">
+                  <div class="size-8 rounded-full bg-purple-soft/60 border-2 border-purple-deep"></div>
+                  <div class="size-8 rounded-full bg-purple-soft/80 border-2 border-purple-deep"></div>
+                  <div
+                    class="size-8 rounded-full bg-purple-soft border-2 border-purple-deep flex items-center justify-center text-[10px] text-white font-bold">
+                    +15</div>
+                </div>
+                <button
+                  class="px-4 py-2 bg-primary text-black font-bold rounded-lg text-sm hover:bg-primary-dark hover:text-white transition-colors">
+                  Reserve Seat
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Faculty -->
+      <div class="w-full"
+        style="background:linear-gradient(135deg,#f5f3fa 0%,#ffffff 50%,#f0ebfa 100%); border-top:1px solid #e8e0f5; border-bottom:1px solid #e8e0f5;">
+        <div class="max-w-7xl mx-auto px-4 md:px-10 py-16">
+
+          <!-- Section Header -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+            <div>
+              <div
+                class="inline-flex items-center gap-2 rounded-full px-3 py-1 mb-3 w-fit text-xs font-bold uppercase tracking-wider"
+                style="background:#ede9fa; color:#523980;">
+                <span class="material-symbols-outlined text-[15px]">school</span> Meet Our Faculty
+              </div>
+              <h2 class="text-text-main text-3xl md:text-4xl font-black leading-tight mb-2">
+                Learn from <span style="color:#523980;">World-Class</span> Practitioners
+              </h2>
+              <p class="text-text-muted max-w-lg">Each instructor brings decades of clinical experience and
+                groundbreaking research to every course.</p>
+            </div>
+            <!-- Arrow Controls (desktop) -->
+            <div class="hidden md:flex gap-2 shrink-0" id="facultyArrows">
+              <button id="facultyPrev"
+                class="size-11 rounded-full border-2 flex items-center justify-center transition-all duration-200"
+                style="border-color:#9072C6; color:#523980; background:#fff;"
+                onmouseenter="this.style.background='#9072C6';this.style.color='#fff';"
+                onmouseleave="this.style.background='#fff';this.style.color='#523980';">
+                <span class="material-symbols-outlined">arrow_back</span>
+              </button>
+              <button id="facultyNext"
+                class="size-11 rounded-full border-2 flex items-center justify-center transition-all duration-200"
+                style="border-color:#9072C6; color:#523980; background:#fff;"
+                onmouseenter="this.style.background='#9072C6';this.style.color='#fff';"
+                onmouseleave="this.style.background='#fff';this.style.color='#523980';">
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Carousel Viewport -->
+          <div id="facultyCarousel" class="relative overflow-hidden" style="border-radius:1.25rem;">
+            <div id="facultyTrack" class="flex transition-transform duration-500 ease-in-out"
+              style="will-change:transform;">
+
+
+              <!-- Faculty Card 1 – Dr. Sarah Jenks -->
+              <div class="faculty-slide shrink-0 w-full md:w-1/3 px-3">
+                <div
+                  class="group flex flex-col rounded-xl overflow-hidden border border-accent-surface bg-white hover:shadow-xl transition-all duration-300">
+                  <!-- Avatar strip -->
+                  <div class="flex justify-center pt-8 pb-4"
+                    style="background:linear-gradient(160deg,#f0ebfa,#faf9ff);">
+                    <div class="size-24 rounded-full bg-gray-200 overflow-hidden bg-cover bg-center"
+                      style="border: 3px solid #e8e0f5; background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiJ_S5IgBtd6bMXLUYXMmnkJGzHJeCCEjtZTMTVxGC2zkhU_Uxu4br_4JIqrs3di3Hzb8euZPRWEURK7bjeMO3C8xskfONNLSWO4xX-t9X6PzUGz5vz10rh4JO2WkPOxtGKv4QGOTzDq0JVTBfVN19-_XdTlx_LP6Xy1LeM9tb05WBh2Rr56SovdlRTVLqdl8CsxwkP1stdVcrshCY3VGaZOKv-n0GJQ8KFjbPw3UeIZd2clTWLclHPuJU9ac6Q4AT7RZwkFrgCIsb'); background-size:cover; background-position:top center;">
+                    </div>
+                  </div>
+                  <!-- Body -->
+                  <div class="flex flex-col p-6 flex-1">
+                    <div class="text-center mb-4">
+                      <h3 class="text-lg font-bold text-text-main group-hover:text-purple-soft transition-colors">Dr.
+                        Sarah Jenks</h3>
+                      <p class="text-sm text-text-muted mt-0.5">PhD · Somatic Trauma Specialist</p>
+                    </div>
+                    <div class="flex justify-center mb-4">
+                      <span
+                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
+                        style="background:#f0ebfa; color:#523980;">
+                        <span class="material-symbols-outlined text-[13px]">psychology</span> Somatic Therapy
+                      </span>
+                    </div>
+                    <div class="mt-auto flex flex-col gap-4">
+                      <div
+                        class="flex items-center justify-between text-sm text-text-main border-t border-accent-surface pt-4">
+                        <div class="flex items-center gap-1">
+                          <span class="material-symbols-outlined text-yellow-500 text-[17px]">star</span>
+                          <span class="font-bold">4.9</span>
+                          <span class="text-text-muted">(120 reviews)</span>
+                        </div>
+                        <span class="text-xs text-text-muted">8 courses</span>
+                      </div>
+                      <button
+                        class="w-full py-2.5 rounded-lg border border-purple-soft text-purple-deep font-bold text-sm hover:bg-purple-soft hover:text-white transition-colors">
+                        View Profile
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Faculty Card 2 – Mark Davidson -->
+              <div class="faculty-slide shrink-0 w-full md:w-1/3 px-3">
+                <div
+                  class="group flex flex-col rounded-xl overflow-hidden border border-accent-surface bg-white hover:shadow-xl transition-all duration-300">
+                  <div class="flex justify-center pt-8 pb-4"
+                    style="background:linear-gradient(160deg,#f0ebfa,#faf9ff);">
+                    <div class="size-24 rounded-full bg-gray-200 ring-4 overflow-hidden bg-cover bg-center"
+                      style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3iSqn5g9R3ALBDHIq5MbKzApCK4oX5X7ftCLdZjTP2JxesWilIu_JvyjaLowyOn7jscGvnfmLQGj9H7gQpkus3TbqZ3SqXbAdFEzBOMrv8rDxomv5VaCLqjK_H_q192WClcl9rq3U3XFd5cDeDYodN9PBs9mzuuOEyxyqwvkR0pdFxMgNPb5Gf1T92Z2vnxX5h4XFi1JdFBrlcZvRv91S_4T6KyDmxNuMGPTnc-bwOxEJLtZUBxA2iqXizru5wvckeXkCvl-yYDYr'); background-size:cover; background-position:top center;">
+                    </div>
+                  </div>
+                  <div class="flex flex-col p-6 flex-1">
+                    <div class="text-center mb-4">
+                      <h3 class="text-lg font-bold text-text-main group-hover:text-purple-soft transition-colors">Mark
+                        Davidson</h3>
+                      <p class="text-sm text-text-muted mt-0.5">RD · Metabolic Health Expert</p>
+                    </div>
+                    <div class="flex justify-center mb-4">
+                      <span
+                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
+                        style="background:#f0ebfa; color:#523980;">
+                        <span class="material-symbols-outlined text-[13px]">nutrition</span> Nutrition Science
+                      </span>
+                    </div>
+                    <div class="mt-auto flex flex-col gap-4">
+                      <div
+                        class="flex items-center justify-between text-sm text-text-main border-t border-accent-surface pt-4">
+                        <div class="flex items-center gap-1">
+                          <span class="material-symbols-outlined text-yellow-500 text-[17px]">star</span>
+                          <span class="font-bold">5.0</span>
+                          <span class="text-text-muted">(85 reviews)</span>
+                        </div>
+                        <span class="text-xs text-text-muted">5 courses</span>
+                      </div>
+                      <button
+                        class="w-full py-2.5 rounded-lg border border-purple-soft text-purple-deep font-bold text-sm hover:bg-purple-soft hover:text-white transition-colors">
+                        View Profile
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Faculty Card 3 – Lila Chen -->
+              <div class="faculty-slide shrink-0 w-full md:w-1/3 px-3">
+                <div
+                  class="group flex flex-col rounded-xl overflow-hidden border border-accent-surface bg-white hover:shadow-xl transition-all duration-300">
+                  <div class="flex justify-center pt-8 pb-4"
+                    style="background:linear-gradient(160deg,#f0ebfa,#faf9ff);">
+                    <div class="size-24 rounded-full bg-gray-200 ring-4 overflow-hidden bg-cover bg-center"
+                      style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEO_hkAtIaf1dlm8FI-_ZRZyokkj-xT-0VCVAHo8AodCrsRxdJWtl3TAFQEwyO0KmweXyhycqNQaurVwIr90gGpi0ybyEgl08H9zU7o8tVG3vyeLJnuNPutqHVtQCbseESlCEh06Fxon3UwLoMge7z850brWWF_N-xWCna-1U40vxkL4D5er3cFTxlZULH9bCABx1x0qzctOmWXWwEW83XSh-Aa79fzuHUzTsFlJF9J_Z4wj1zV-HTwApvjtZ7Zx2dsLWb1Xwdd9bG'); background-size:cover; background-position:top center;">
+                    </div>
+                  </div>
+                  <div class="flex flex-col p-6 flex-1">
+                    <div class="text-center mb-4">
+                      <h3 class="text-lg font-bold text-text-main group-hover:text-purple-soft transition-colors">Lila
+                        Chen</h3>
+                      <p class="text-sm text-text-muted mt-0.5">MSc · MBSR Clinical Facilitator</p>
+                    </div>
+                    <div class="flex justify-center mb-4">
+                      <span
+                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
+                        style="background:#f0ebfa; color:#523980;">
+                        <span class="material-symbols-outlined text-[13px]">mindfulness</span> Mindfulness
+                      </span>
+                    </div>
+                    <div class="mt-auto flex flex-col gap-4">
+                      <div
+                        class="flex items-center justify-between text-sm text-text-main border-t border-accent-surface pt-4">
+                        <div class="flex items-center gap-1">
+                          <span class="material-symbols-outlined text-yellow-500 text-[17px]">star</span>
+                          <span class="font-bold">4.8</span>
+                          <span class="text-text-muted">(210 reviews)</span>
+                        </div>
+                        <span class="text-xs text-text-muted">6 courses</span>
+                      </div>
+                      <button
+                        class="w-full py-2.5 rounded-lg border border-purple-soft text-purple-deep font-bold text-sm hover:bg-purple-soft hover:text-white transition-colors">
+                        View Profile
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Faculty Card 4 – Dr. James Okafor -->
+              <div class="faculty-slide shrink-0 w-full md:w-1/3 px-3">
+                <div
+                  class="group flex flex-col rounded-xl overflow-hidden border border-accent-surface bg-white hover:shadow-xl transition-all duration-300">
+                  <div class="flex justify-center pt-8 pb-4"
+                    style="background:linear-gradient(160deg,#f0ebfa,#faf9ff);">
+                    <div class="size-24 rounded-full bg-gray-200 ring-4 overflow-hidden bg-cover bg-center"
+                      style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-wIkIA0980qY2lqI4XqfunBl1uNpWkjXEP96KPrUb5sU7XfXhK-LJJRiv_4TsBUV1RQN1LGJXgwk252SEecBwmW6Sp_ciGJrpXOKybdyKvl6YxpXxUOV5eaZGHB8TzrJQpvaUXfCl6_yPlfsXGoaqb-BOpOQ6bCAsoL0sXqsKETusXBXqrBYMLsEYtbFFz5Ix_wAYNu1yMuC74wKDW8CxbAZFpglBuJpEDmKQkbWAO9h2uQeLzXSrzlgI-omzYPIpdPXggqSj1Fx1'); background-size:cover; background-position:top center;">
+                    </div>
+                  </div>
+                  <div class="flex flex-col p-6 flex-1">
+                    <div class="text-center mb-4">
+                      <h3 class="text-lg font-bold text-text-main group-hover:text-purple-soft transition-colors">Dr.
+                        James Okafor</h3>
+                      <p class="text-sm text-text-muted mt-0.5">MD · Functional Medicine Physician</p>
+                    </div>
+                    <div class="flex justify-center mb-4">
+                      <span
+                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
+                        style="background:#f0ebfa; color:#523980;">
+                        <span class="material-symbols-outlined text-[13px]">medical_services</span> Functional Medicine
+                      </span>
+                    </div>
+                    <div class="mt-auto flex flex-col gap-4">
+                      <div
+                        class="flex items-center justify-between text-sm text-text-main border-t border-accent-surface pt-4">
+                        <div class="flex items-center gap-1">
+                          <span class="material-symbols-outlined text-yellow-500 text-[17px]">star</span>
+                          <span class="font-bold">4.9</span>
+                          <span class="text-text-muted">(94 reviews)</span>
+                        </div>
+                        <span class="text-xs text-text-muted">4 courses</span>
+                      </div>
+                      <button
+                        class="w-full py-2.5 rounded-lg border border-purple-soft text-purple-deep font-bold text-sm hover:bg-purple-soft hover:text-white transition-colors">
+                        View Profile
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Faculty Card 5 – Dr. Elena Rostova -->
+              <div class="faculty-slide shrink-0 w-full md:w-1/3 px-3">
+                <div
+                  class="group flex flex-col rounded-xl overflow-hidden border border-accent-surface bg-white hover:shadow-xl transition-all duration-300">
+                  <div class="flex justify-center pt-8 pb-4"
+                    style="background:linear-gradient(160deg,#f0ebfa,#faf9ff);">
+                    <div class="size-24 rounded-full bg-gray-200 ring-4 overflow-hidden bg-cover bg-center"
+                      style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCE8dY6R2CbjA6-eW5_tRt8o8Ygwn99aonR49H9X3faCpCedvQj1FPnxggegJV3VcpEhiuyNwWHeJhhVLhBu5kIWgvXLBSVNHgOAucbRh8Qdgz2cl_9qFAcjHfoC78AkVt7MgKHLhrPRI5suVHDZMLHPUy9CUcNehIwleWF32q4zty_TjUyK6GRas3GPr3pG1NKGHNa7I4BnIPjbo_NPR7SvjZ_LeEbbymik4ZZXDB2WiUE2CFGqLuqQfktBrZ2xtlhiAHeAY30TclZ'); background-size:cover; background-position:top center;">
+                    </div>
+                  </div>
+                  <div class="flex flex-col p-6 flex-1">
+                    <div class="text-center mb-4">
+                      <h3 class="text-lg font-bold text-text-main group-hover:text-purple-soft transition-colors">Dr.
+                        Elena Rostova</h3>
+                      <p class="text-sm text-text-muted mt-0.5">PhD · Lead Instructor, Physiology</p>
+                    </div>
+                    <div class="flex justify-center mb-4">
+                      <span
+                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
+                        style="background:#f0ebfa; color:#523980;">
+                        <span class="material-symbols-outlined text-[13px]">biotech</span> Advanced Physiology
+                      </span>
+                    </div>
+                    <div class="mt-auto flex flex-col gap-4">
+                      <div
+                        class="flex items-center justify-between text-sm text-text-main border-t border-accent-surface pt-4">
+                        <div class="flex items-center gap-1">
+                          <span class="material-symbols-outlined text-yellow-500 text-[17px]">star</span>
+                          <span class="font-bold">4.7</span>
+                          <span class="text-text-muted">(178 reviews)</span>
+                        </div>
+                        <span class="text-xs text-text-muted">7 courses</span>
+                      </div>
+                      <button
+                        class="w-full py-2.5 rounded-lg border border-purple-soft text-purple-deep font-bold text-sm hover:bg-purple-soft hover:text-white transition-colors">
+                        View Profile
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div><!-- /track -->
+          </div><!-- /viewport -->
+
+          <!-- Dot Indicators + mobile arrows -->
+          <div class="flex items-center justify-center gap-4 mt-20">
+            <!-- Mobile prev -->
+            <button id="facultyPrevMob" class="flex md:hidden size-9 rounded-full border-2 items-center justify-center"
+              style="border-color:#9072C6;color:#523980;">
+              <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+            </button>
+            <div id="facultyDots" class="flex gap-2"></div>
+            <!-- Mobile next -->
+            <button id="facultyNextMob" class="flex md:hidden size-9 rounded-full border-2 items-center justify-center"
+              style="border-color:#9072C6;color:#523980;">
+              <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <script>
+        (function () {
+          const track = document.getElementById('facultyTrack');
+          const viewport = document.getElementById('facultyCarousel');
+          const dotsContainer = document.getElementById('facultyDots');
+          const slides = track.querySelectorAll('.faculty-slide');
+          const totalSlides = slides.length;
+
+          // Determine how many slides are visible
+          function visibleCount() {
+            return window.innerWidth >= 768 ? 3 : 1;
+          }
+
+          let current = 0;
+          let autoTimer = null;
+
+          // Build dots
+          function buildDots() {
+            dotsContainer.innerHTML = '';
+            const groups = Math.ceil(totalSlides / visibleCount());
+            for (let i = 0; i < groups; i++) {
+              const d = document.createElement('button');
+              d.style.cssText = 'width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;transition:all 0.3s;';
+              d.addEventListener('click', () => goTo(i * visibleCount()));
+              dotsContainer.appendChild(d);
+            }
+            updateDots();
+          }
+
+          function updateDots() {
+            const vc = visibleCount();
+            const activeGroup = Math.floor(current / vc);
+            const groups = Math.ceil(totalSlides / vc);
+            [...dotsContainer.children].forEach((d, i) => {
+              const active = i === activeGroup;
+              d.style.background = active ? '#523980' : '#d8cff0';
+              d.style.width = active ? '24px' : '8px';
+              d.style.borderRadius = active ? '4px' : '50%';
+            });
+          }
+
+          function goTo(index) {
+            const vc = visibleCount();
+            const maxIndex = totalSlides - vc;
+            current = Math.max(0, Math.min(index, maxIndex));
+            const slideWidth = slides[0].offsetWidth;
+            track.style.transform = `translateX(-${current * slideWidth}px)`;
+            updateDots();
+          }
+
+          function next() { goTo(current + 1 >= totalSlides - visibleCount() + 1 ? 0 : current + 1); }
+          function prev() { goTo(current - 1 < 0 ? totalSlides - visibleCount() : current - 1); }
+
+          // Wire arrows
+          document.getElementById('facultyNext').addEventListener('click', next);
+          document.getElementById('facultyPrev').addEventListener('click', prev);
+          document.getElementById('facultyNextMob').addEventListener('click', next);
+          document.getElementById('facultyPrevMob').addEventListener('click', prev);
+
+          // Auto-play
+          function startAuto() { autoTimer = setInterval(next, 4000); }
+          function stopAuto() { clearInterval(autoTimer); }
+          viewport.addEventListener('mouseenter', stopAuto);
+          viewport.addEventListener('mouseleave', startAuto);
+
+          // Responsive rebuild on resize
+          window.addEventListener('resize', () => { buildDots(); goTo(0); });
+
+          buildDots();
+          startAuto();
+        })();
+      </script>
+      <!-- Testimonials -->
+      <div class="w-full bg-white border-b" style="border-color:#e5e7eb;">
+        <div class="max-w-7xl mx-auto px-4 md:px-10 py-16">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-text-main text-3xl font-bold leading-tight mb-4">Trusted by Industry Professionals</h2>
+            <p class="text-text-muted text-lg">See how Saday Academy is helping practitioners advance their careers.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="p-8 rounded-2xl border relative" style="background-color:#f5f3fa; border-color:#d8cff0;">
+              <span class="material-symbols-outlined absolute top-6 left-6 text-6xl"
+                style="color:rgba(144,114,198,0.25);">format_quote</span>
+              <div class="relative z-10 pt-4">
+                <p class="text-text-main mb-6 italic leading-relaxed">"The depth of knowledge in the Somatic Therapy
+                  course was unparalleled. It gave me practical tools I used with my clients the very next day. Truly
+                  advanced training."</p>
+                <div class="flex items-center gap-3">
+                  <div class="size-10 rounded-full bg-gray-200 bg-cover bg-center" data-alt="Headshot of Jessica M."
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkGgOSUzC-KVHk5qnKB7JKKxu2jTDGcvWeMrd8-Bu5_QWB6XWqPaHfzbGqhNT65l8jfVb6IrIcIo0FwfyaHIvRUPxhmrE_pr2lBPOAiycuYPyxWgD0B5ec0JmgeL8J45JvQDUeFX9Fs3pSMocBnxktVrcRKZYAOWUAhq1oSIfG_NcvB07uUaOzHD5JjjXRLGFD_894S72Hl9dn62XIYPgbhnBYgAbU_HsHxOSofP76ncM9eSDh4wIFJ0xgmqGvovVd6I7-xfFBLaQA');">
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-sm">Jessica M.</h4>
+                    <p class="text-xs text-text-muted">Licensed Clinical Social Worker</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="p-8 rounded-2xl border relative" style="background-color:#f5f3fa; border-color:#d8cff0;">
+              <span class="material-symbols-outlined absolute top-6 left-6 text-6xl"
+                style="color:rgba(144,114,198,0.25);">format_quote</span>
+              <div class="relative z-10 pt-4">
+                <p class="text-text-main mb-6 italic leading-relaxed">"Finally, a course that respects my prior
+                  experience. The instructors don't waste time on basics; they dive straight into complex
+                  methodologies."</p>
+                <div class="flex items-center gap-3">
+                  <div class="size-10 rounded-full bg-gray-200 bg-cover bg-center" data-alt="Headshot of David K."
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBn9dH6Zexpj_6Wby9QvYs7bOQc2dsjWGF0CwYNH0ecLia8Bun1zfWCdTUsxdZXwhCUC92lHoHts4VGgbroO9BzRXHo_REAuv5gLZOBSzEJmC3pMZHk-P-Cux6wtcMmpD_i6mSNomR2VJO0l-AcYVWCm2Zj1N2KjqdxXDgXRZnvHQlinDUEfW3RFV_AFrLtNc7S44lHw4BI6JIUY69i4bxkB3A3q53v3UKdn5V45UyS4uka4_fM0akdKCfelF7V65Mj_xeQq8kqWhVF');">
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-sm">David K.</h4>
+                    <p class="text-xs text-text-muted">Holistic Health Coach</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="p-8 rounded-2xl border relative" style="background-color:#f5f3fa; border-color:#d8cff0;">
+              <span class="material-symbols-outlined absolute top-6 left-6 text-6xl"
+                style="color:rgba(144,114,198,0.25);">format_quote</span>
+              <div class="relative z-10 pt-4">
+                <p class="text-text-main mb-6 italic leading-relaxed">"The community aspect is fantastic. Networking
+                  with other high-level professionals during the live sessions has been invaluable for my practice."</p>
+                <div class="flex items-center gap-3">
+                  <div class="size-10 rounded-full bg-gray-200 bg-cover bg-center" data-alt="Headshot of Sarah L."
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCwI8Wa-HcxQ2f3NUNw0Qt1beSGgG0izeNfBUNesdGzgc3G4bQkPaaCAM28JJ0E_C2Xi1y2bZhUXno-JZvNGTkAjn3dxfByOyCvHg32EuMRtAHpAnOW2Sq9NTb7VCgAjBiFdp04TJFuEZNpMjqZ0YmO5ALbgJbYUAwX_02KNHv3Aplc48cKaNScuJcoeaoAghToxTxfHam4_nFTcSl-IuPP6uWqCCcQLDuA5WI5afGnPK0zWEGbXfzWMF1TXfIi4MGLVvjP-Rtk-oNh');">
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-sm">Sarah L.</h4>
+                    <p class="text-xs text-text-muted">Yoga Therapist</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Refer a Friend & CTA -->
+      <div class="w-full max-w-7xl px-4 md:px-10 py-16">
+        <div class="relative rounded-2xl overflow-hidden text-white p-8 md:p-12" style="background-color:#523980;">
+          <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10">
+          </div>
+          <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="flex-1">
+              <div
+                class="inline-flex items-center gap-2 rounded-full bg-white/20 backdrop-blur-md px-3 py-1 text-sm font-bold mb-4 text-white">
+                <span class="material-symbols-outlined text-[18px]">card_giftcard</span>
+                Referral Program
+              </div>
+              <h2 class="text-3xl md:text-4xl font-black mb-4">Refer a Colleague, Earn Credits</h2>
+              <p class="text-lg md:text-xl font-medium opacity-90 max-w-xl">
+                Know another professional who would benefit from advanced training? Refer them and you both get $100
+                towards your next course.
+              </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+              <button
+                class="text-purple-deep px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:scale-105 transition-all w-full sm:w-auto text-center"
+                style="background-color:#13ec5b;">
+                Get Referral Link
+              </button>
+              <button
+                class="bg-white/20 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all w-full sm:w-auto text-center">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Non-pro redirect -->
+        <div class="mt-12 p-6 rounded-xl border border-dashed text-center"
+          style="border-color:#d8cff0; background-color:#f5f3fa;">
+          <p class="text-text-muted mb-3 font-medium">Not a health professional?</p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <span class="text-text-main font-semibold">Looking for personal wellness coaching?</span>
+            <a class="inline-flex items-center gap-2 text-purple-soft font-bold hover:underline" href="#">
+              Book a Consultation
+              <span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="pt-16 pb-8" style="background-color:#523980;">
+      <div class="max-w-7xl mx-auto px-4 md:px-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <div class="md:col-span-1">
+            <div class="flex items-center gap-2 text-white mb-4">
+              <span class="material-symbols-outlined text-primary text-[24px]">spa</span>
+              <span class="text-lg font-bold">Saday Academy</span>
+            </div>
+            <p class="text-white/70 text-sm leading-relaxed text-gray-400">
+              Empowering wellness professionals with advanced, evidence-based education for modern practice.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-4">Academy</h4>
+            <ul class="space-y-2 text-sm text-white/70">
+              <li><a class="text-gray-400 hover:text-primary" href="#">All Courses</a></li>
+              <li><a class="text-gray-400 hover:text-primary" href="#">Instructors</a></li>
+              <li><a class="text-gray-400 hover:text-primary" href="#">Live Events</a></li>
+              <li><a class="text-gray-400 hover:text-primary" href="#">Reviews</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-4">Support</h4>
+            <ul class="space-y-2 text-sm text-white/70">
+              <li><a class="text-gray-400 hover:text-primary" href="#">Student Portal</a></li>
+              <li><a class="text-gray-400 hover:text-primary" href="#">Accreditation</a></li>
+              <li><a class="text-gray-400 hover:text-primary" href="#">Contact Us</a></li>
+              <li><a class="text-gray-400 hover:text-primary" href="#">FAQs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-4">Stay Updated</h4>
+            <form class="flex flex-col gap-2">
+              <input
+                class="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-sm text-white placeholder-white/50 focus:border-primary focus:ring-0"
+                placeholder="Enter your email" type="email">
+              <button
+                class="bg-purple-soft text-white font-bold py-2 rounded-lg text-sm hover:bg-primary hover:text-black transition-colors">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div
+          class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+          <p>© 2026 Saday Wellness Academy. All rights reserved.</p>
+          <div class="flex gap-6">
+            <a class="hover:text-white" href="#">Privacy Policy</a>
+            <a class="hover:text-white" href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

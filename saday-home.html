@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Saday Wellness</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#13ec5b",
+            "background-light": "#f6f8f6",
+            "background-dark": "#102216",
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex flex-col">
+  <!-- Header / Navbar -->
+  <header
+    class="w-full border-b border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-10 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary/20 text-primary">
+          <span class="material-symbols-outlined">spa</span>
+        </div>
+        <h2 class="text-xl font-bold tracking-tight">Saday Wellness</h2>
+      </div>
+      <nav class="hidden md:flex items-center gap-8">
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Academy</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+      </nav>
+      <button
+        class="hidden md:flex items-center justify-center px-6 py-2.5 bg-primary hover:bg-primary/90 text-slate-900 text-sm font-bold rounded-full transition-all transform active:scale-95 shadow-lg shadow-primary/20">
+        Get Started
+      </button>
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden p-2 text-slate-600 dark:text-slate-300">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </header>
+  <main class="flex-1 w-full max-w-[1280px] mx-auto px-4 md:px-10 py-8">
+    <!-- Hero Section -->
+    <section class="mb-16 @container">
+      <div class="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16 py-8">
+        <div class="flex-1 flex flex-col gap-6 text-left items-start">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary-dark dark:text-primary text-xs font-semibold tracking-wide uppercase">
+            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Mental Health Matters
+          </div>
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-slate-900 dark:text-white">
+            Your Partner in <br class="hidden lg:block" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-600">Mental
+              Wellness</span>
+          </h1>
+          <p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed">
+            Professional support for your healing journey and personal growth. We provide a safe space for individuals,
+            professionals, and institutions to thrive.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-2">
+            <button
+              class="flex items-center justify-center px-8 py-4 bg-primary hover:bg-primary/90 text-slate-900 text-base font-bold rounded-lg transition-all shadow-lg shadow-primary/25">
+              Start Healing
+            </button>
+            <button
+              class="flex items-center justify-center px-8 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary text-slate-900 dark:text-white text-base font-medium rounded-lg transition-all">
+              Learn More
+            </button>
+          </div>
+          <div class="flex items-center gap-4 mt-4 text-sm text-slate-500 dark:text-slate-400">
+            <div class="flex -space-x-2">
+              <img alt="User Avatar 1"
+                class="w-8 h-8 rounded-full border-2 border-background-light dark:border-background-dark"
+                data-alt="Small avatar of a smiling woman"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPtKyF4keiEDFgM8qaWENzGk7gMyvnZpi4Vk_wDMABZ4FlsQr9bVazLScHOMX6FA7w0eiHdWc0uJnukj5t1-JWSfeWyBKPEr-hFd06gpTp_gGzAaFM6ThPjPnxSYnGGgYL8WdSK-mabEhpVIlc1niCNr53xOzSVMXYAngUhuac6A2B1Ut7Qr2vPwtxv8--Gf0mNGlpMlpSAGIEWDgD0rDXWzdhxAjW7Lsrs-Gv7JP_0HMriE0ZgqI_BvTKBSZFbjQzi-ItaFI82Er6" />
+              <img alt="User Avatar 2"
+                class="w-8 h-8 rounded-full border-2 border-background-light dark:border-background-dark"
+                data-alt="Small avatar of a smiling man"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBOfp8ltSBk_H6vJHSxyeitUXXQt8-ZgAFIQZcCZ0NoY8yNlfxNhLdRY8HVwRQvlq3JLNPHEmdzx89fqWiBM7HkcYnUO4B5_D9tQlsgA6Y_BosPFgzooXNjJljgjbq_9Je_fRauSrJ5L7XFcLDW_-KHilrFYz2eWEL7KQ-wU9X3RqEHxpRORsmQR7-fXe-6DN-p3tNpmgMkF-4SP0G92T7tQSZUt8FDlIIp5nr5MsDcPoYDvfRE9qKxRdCJ1oSrhrGV85RtQJQiB30" />
+              <img alt="User Avatar 3"
+                class="w-8 h-8 rounded-full border-2 border-background-light dark:border-background-dark"
+                data-alt="Small avatar of a young woman"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm_dTx86GnMh3mFQDVmoHoq67CDuri1n4YNQVMrjH_R_Jg7b9B3utQleTjNFZ9KtMwyB9cikEi2eCh-giaK4joK3M_TqtlwCYNHPvo7dTDnK5YZXzFIWgsjCSvBAt4mzm6_td4yakDXx3l0X2RreWJ3kZ5lyIUibteCF7lCvQZeovCwbCN0R1sghlxUlkNWnpyenOiY0vWcKWhEXK94KRdOZTSfkpWT4KrMT_NC-JLPZ92fBrAlQjOH17zQo7DdYm6Fnptyx-3RTHj" />
+            </div>
+            <p>Trusted by 1000+ individuals</p>
+          </div>
+        </div>
+        <div class="flex-1 w-full">
+          <div
+            class="relative w-full aspect-[4/3] lg:aspect-square max-h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+            <img alt="Professional therapist talking to patient"
+              class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+              data-alt="Calm therapist listening attentively to a client in a bright office"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyGHlWD6Ht4hzL1vn_y9pTLQbnzLcwsfM3_ZvjV12-VuNymbbODam3ccIglUDyULpfmljupPlN4cPdHOnBSNIj5ok42o1sxK8ynYlG7A8mf5VMaSasdex71HjqsT2ROlAi7hUD3UePMjvy2fodQJj3Xau3VZ10s4w66AklFi1h4ajHPzF2YQUPHAwdxQJPnyGUaVzralY6HCPJdB_FWl112fajU_McD1DFC22es52CShugZ4BwDCjrLclsD-fCAIBOF5u8J7M_KsXQ" />
+            <!-- Floating Card -->
+            <div
+              class="absolute bottom-6 left-6 right-6 z-20 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-100 dark:border-slate-800 flex items-center gap-4">
+              <div
+                class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900 flex items-center justify-center text-emerald-600 dark:text-emerald-300">
+                <span class="material-symbols-outlined">verified</span>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-slate-900 dark:text-white">Certified Professionals</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Expert care tailored to you</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Who We Serve Section -->
+    <section class="py-12">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4 text-slate-900 dark:text-white">Who We Serve</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          We offer tailored solutions for every step of the mental wellness journey, whether you're seeking personal
+          healing, professional growth, or institutional support.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1: Individuals -->
+        <div
+          class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="relative h-48 overflow-hidden">
+            <img alt="Individual meditation"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              data-alt="Person meditating peacefully outdoors in nature"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuChqT7ARgmV_Gi9Z0Shh4M5Qtsen8lHiogJsa1KN09TgVl0U7TAJT-tjPH_Xd7-HOTBx_6RSsDLYHVVqu2byHUZxVMHn-1wXKcvcKLBe2cVuVlzQERcK5wdXF5DlegpaepLug4GpGQ71yQy9Ju22GaXY3lzLgzhIVTtX6eph0eWY9OdVQvjF21MnnWTvEeDiwD5eSYY2QCkGpPKi0LXY4rOSIJ9prGqgjnCTCG3qndfg7fNlimmagmfYI0dCr_5mmf0C0MH1CXDpMWV" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <span class="material-symbols-outlined mb-2 text-primary text-3xl">self_improvement</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">For Individuals</h3>
+            <p class="text-slate-600 dark:text-slate-400 mb-6 flex-1 text-sm leading-relaxed">
+              Embark on a personal healing journey with our expert therapists. Find peace, understanding, and strategies
+              for a better life.
+            </p>
+            <button
+              class="w-full py-3 px-4 rounded-lg bg-slate-50 dark:bg-slate-800 hover:bg-primary/20 text-slate-900 dark:text-white font-medium text-sm transition-colors border border-slate-200 dark:border-slate-700 hover:border-primary group-hover:border-primary flex items-center justify-center gap-2">
+              <span>Click here to learn more</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+        <!-- Card 2: Professionals -->
+        <div
+          class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="relative h-48 overflow-hidden">
+            <img alt="Professional workshop"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              data-alt="Group of professionals in a meeting or workshop setting"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5ka8uR1jMQVa51DvDq9o3aZcmvrtyTd9Yz5WEqRzooQlVR_xTiS1Xur0buQEav1sjbhdFs5YjJAZb9RFRXzIl7qTo-FGJS218Nutf7rCDQZRygNZChMJ95ptgbGSKrOTPTToh5Q_8kTmAI00B0CZ_kXfqfj-45VV9QyH7tHIXOHDIhbCNnW0fbyfHZ12Aywzd2v9xsTNd9j9C1WNuakcrXQEDSJBVJO7JjkJMLelm9ucEYg7KO-d9WcpQvWnA8KRFcxDX1q4zHY3x" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <span class="material-symbols-outlined mb-2 text-primary text-3xl">psychology</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">For Professionals</h3>
+            <p class="text-slate-600 dark:text-slate-400 mb-6 flex-1 text-sm leading-relaxed">
+              Enhance your skills with our psychology courses and workshops. Stay ahead with continuing education
+              designed for experts.
+            </p>
+            <a href="./saday-academy.html" target="_blank" rel="noopener noreferrer">
+              <button
+                class="w-full py-3 px-4 rounded-lg bg-slate-50 dark:bg-slate-800 hover:bg-primary/20 text-slate-900 dark:text-white font-medium text-sm transition-colors border border-slate-200 dark:border-slate-700 hover:border-primary group-hover:border-primary flex items-center justify-center gap-2">
+                <span>Explore Workshops &amp; Courses</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </button>
+            </a>
+          </div>
+        </div>
+        <!-- Card 3: Institutions -->
+        <div
+          class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="relative h-48 overflow-hidden">
+            <img alt="Corporate office building"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              data-alt="Modern corporate office interior representing institutions"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfJeecNsLPZakAUDhS2R9aSJYkFyuCsfS8QiRhSbs1EyDGDDqiSO3ZvtRHc5enDnLGcQ5M4a1HBqxeirGmoDMWU54a-V5hKdn7k1TQcMRT4yLlIn6L631VmdEoB-3D2MIwVUKAvpNkqqiulaMj8jej6KtnSLS66oX7AWiXRM3zgSLKrI6RHUEkaSPrhVbAJ0a3fuQP8DXSgmzJF1Hoay1oU_oGZQuS0TCVEHpqSb1jTpMGL4pWltVggqBGd8rCUEWbv9vzidWOgWBx" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <span class="material-symbols-outlined mb-2 text-primary text-3xl">domain</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">For Institutions</h3>
+            <p class="text-slate-600 dark:text-slate-400 mb-6 flex-1 text-sm leading-relaxed">
+              Build safe environments with our structured programs. We help organizations foster mental well-being for
+              their communities.
+            </p>
+            <button
+              class="w-full py-3 px-4 rounded-lg bg-slate-50 dark:bg-slate-800 hover:bg-primary/20 text-slate-900 dark:text-white font-medium text-sm transition-colors border border-slate-200 dark:border-slate-700 hover:border-primary group-hover:border-primary flex items-center justify-center gap-2">
+              <span>Explore structured programs</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter / CTA Section -->
+    <section class="py-16 mt-8">
+      <div class="relative rounded-3xl overflow-hidden bg-slate-900 px-6 py-16 text-center shadow-2xl">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+        </div>
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-primary/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl"></div>
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <h2 class="text-3xl font-bold text-white mb-4">Start your journey to wellness today</h2>
+          <p class="text-slate-300 mb-8">Join our community and get the latest updates on mental health workshops, tips,
+            and resources delivered to your inbox.</p>
+          <form class="flex flex-col sm:flex-row gap-3 w-full max-w-md mx-auto">
+            <input
+              class="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              placeholder="Enter your email address" type="email" />
+            <button
+              class="px-6 py-3 bg-primary hover:bg-primary/90 text-slate-900 font-bold rounded-lg transition-colors"
+              type="button">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 py-12">
+    <div class="max-w-[1280px] mx-auto px-4 md:px-10">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/20 text-primary">
+              <span class="material-symbols-outlined text-sm">spa</span>
+            </div>
+            <h3 class="font-bold text-lg">Saday Wellness</h3>
+          </div>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            Empowering minds, healing hearts, and building resilient communities through professional mental health
+            support.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-slate-900 dark:text-white">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+            <li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Our Services</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">The Academy</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-slate-900 dark:text-white">Services</h4>
+          <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+            <li><a class="hover:text-primary transition-colors" href="#">Individual Therapy</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Group Workshops</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Professional Training</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Corporate Programs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-slate-900 dark:text-white">Contact</h4>
+          <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-xs">mail</span>
+              hello@sadaywellness.com
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-xs">call</span>
+              +1 (555) 123-4567
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="border-t border-slate-100 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
+        <p>© 2023 Saday Wellness. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a class="hover:text-primary" href="#">Privacy Policy</a>
+          <a class="hover:text-primary" href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

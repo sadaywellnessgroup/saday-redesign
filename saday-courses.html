@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Courses - Saday Academy</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#13ec5b",
+            "primary-dark": "#0ea341",
+            "purple-deep": "#523980",
+            "purple-soft": "#9072C6",
+            "background-light": "#ffffff",
+            "background-dark": "#523980",
+            "text-main": "#333333",
+            "text-muted": "#6B7280",
+            "accent-surface": "#f0ebfa",
+            "accent-purple": "#f5f3fa",
+          },
+          fontFamily: {
+            display: ["Lexend", "sans-serif"],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    /* For Webkit Browsers (Chrome, Safari, Edge) */
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* For Firefox */
+    html {
+      scrollbar-width: none;
+    }
+
+    /* For IE/Edge */
+    body {
+      -ms-overflow-style: none;
+      min-height: auto !important;
+    }
+
+    /* Purple palette utilities */
+    .bg-accent-purple {
+      background-color: rgb(245 243 250);
+    }
+
+    .bg-purple-soft {
+      background-color: rgb(144 114 198);
+    }
+
+    .bg-purple-deep {
+      background-color: rgb(82 57 128);
+    }
+
+    .text-purple-deep {
+      color: rgb(82 57 128);
+    }
+
+    .text-purple-soft {
+      color: rgb(144 114 198);
+    }
+
+    .border-purple-soft {
+      border-color: rgb(144 114 198);
+    }
+
+    .border-purple-deep {
+      border-color: rgb(82 57 128);
+    }
+
+    .hover\:bg-purple-soft:hover {
+      background-color: rgb(144 114 198);
+      color: white;
+    }
+
+    .hover\:bg-purple-deep:hover {
+      background-color: rgb(82 57 128);
+      color: white;
+    }
+
+    .hover\:bg-accent-purple:hover {
+      background-color: rgb(245 243 250);
+    }
+
+    .hover\:text-purple-deep:hover {
+      color: rgb(82 57 128);
+    }
+
+    .hover\:text-purple-soft:hover {
+      color: rgb(144 114 198);
+    }
+
+    /* Filter active state */
+    .filter-btn.active {
+      background-color: #523980;
+      color: white;
+      border-color: #523980;
+    }
+
+    /* Course card transition for filtering */
+    .course-card {
+      transition: all 0.4s ease-out;
+    }
+
+    .course-card.hidden {
+      display: none;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-text-main font-display antialiased overflow-x-hidden">
+  <div class="relative flex min-h-screen w-full flex-col">
+
+    <!-- Header -->
+    <header
+      class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-10 py-3 bg-white/90 backdrop-blur-md sticky top-0 z-50">
+      <div class="flex items-center gap-8">
+        <div class="flex items-center gap-4 text-text-main">
+          <div class="size-8 text-primary">
+            <span class="material-symbols-outlined !text-[32px]">spa</span>
+          </div>
+          <h2 class="text-text-main text-lg font-bold leading-tight tracking-[-0.015em]">Saday Academy</h2>
+        </div>
+        <div class="hidden lg:flex items-center gap-9">
+          <a class="text-purple-deep text-sm font-bold transition-colors" href="saday-courses.html">Courses</a>
+          <a class="text-text-main text-sm font-medium hover:text-purple-soft transition-colors"
+            href="saday-academy.html#faculty">Instructors</a>
+          <a class="text-text-main text-sm font-medium hover:text-purple-soft transition-colors" href="#">About</a>
+          <a class="text-text-main text-sm font-medium hover:text-purple-soft transition-colors" href="#">Contact</a>
+        </div>
+      </div>
+      <div class="flex flex-1 justify-end gap-4 items-center">
+        <label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+          <div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-gray-200 bg-white">
+            <div class="text-purple-soft flex items-center justify-center pl-3">
+              <span class="material-symbols-outlined text-[20px]">search</span>
+            </div>
+            <input
+              class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-main focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-text-muted px-3 text-sm font-normal"
+              placeholder="Search courses...">
+          </div>
+        </label>
+        <div class="flex gap-2">
+          <button
+            class="flex items-center justify-center rounded-lg h-10 px-4 bg-accent-purple hover:bg-gray-100 text-purple-deep text-sm font-bold transition-colors">
+            <span class="truncate">Sign In</span>
+          </button>
+          <button
+            class="flex items-center justify-center rounded-lg h-10 px-4 bg-purple-soft hover:bg-purple-deep text-white text-sm font-bold transition-colors shadow-sm">
+            <span class="truncate">Join Now</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex flex-col flex-1">
+
+      <!-- Page Hero -->
+      <div class="w-full bg-accent-purple border-b border-gray-200 py-16 md:py-24 relative overflow-hidden">
+        <!-- Background decorative blob -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-purple-soft/10 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 md:px-10 relative z-10">
+          <div
+            class="inline-flex items-center gap-2 rounded-full px-3 py-1 mb-4 w-fit text-xs font-bold uppercase tracking-wider"
+            style="background:#e8e0f5; color:#523980;">
+            <span class="material-symbols-outlined text-[15px]">library_books</span> 8 Advanced Programs
+          </div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-text-main mb-4 tracking-tight">
+            Our <span class="text-purple-deep">Courses</span>
+          </h1>
+          <p class="text-lg text-text-muted max-w-2xl leading-relaxed">
+            Evidence-based, clinically focused specializations designed to elevate your practice. Learn from
+            world-class instructors and integrate the latest research into your patient care.
+          </p>
+        </div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="w-full border-b border-gray-200 bg-white sticky top-[65px] z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 md:px-10 py-4 overflow-x-auto no-scrollbar">
+          <div class="flex gap-3 min-w-max" id="category-filters">
+            <button
+              class="filter-btn active px-5 py-2 rounded-full border border-gray-300 text-sm font-bold transition-colors"
+              data-filter="all">
+              All Courses
+            </button>
+            <button
+              class="filter-btn px-5 py-2 rounded-full border border-gray-300 text-text-main hover:bg-gray-10 text-sm font-bold transition-colors"
+              data-filter="psychological">
+              Psychological
+            </button>
+            <button
+              class="filter-btn px-5 py-2 rounded-full border border-gray-300 text-text-main hover:bg-gray-10 text-sm font-bold transition-colors"
+              data-filter="psychiatric">
+              Psychiatric
+            </button>
+            <button
+              class="filter-btn px-5 py-2 rounded-full border border-gray-300 text-text-main hover:bg-gray-10 text-sm font-bold transition-colors"
+              data-filter="therapeutic">
+              Therapeutic
+            </button>
+            <button
+              class="filter-btn px-5 py-2 rounded-full border border-gray-300 text-text-main hover:bg-gray-10 text-sm font-bold transition-colors"
+              data-filter="somatic">
+              Somatic & Integrative
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Category Info Section -->
+        <div id="category-info-section" class="border-t border-gray-100 bg-gray-50 hidden transition-all duration-300">
+          <div class="max-w-7xl mx-auto px-4 md:px-10 py-6 flex items-start gap-4">
+            <div
+              class="mt-1 size-10 rounded-full bg-purple-soft/10 flex items-center justify-center text-purple-deep flex-shrink-0"
+              id="category-info-icon">
+              <span class="material-symbols-outlined text-[20px]">info</span>
+            </div>
+            <div>
+              <h3 class="text-text-main font-bold text-lg mb-1" id="category-info-title">Category Need
+              </h3>
+              <p class="text-text-muted text-sm leading-relaxed max-w-4xl" id="category-info-desc">
+                Description goes here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course Grid Area -->
+      <div class="w-full bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 md:px-10">
+
+          <!-- Featured Mastery Track Carousel Container -->
+          <div id="featured-bundle-container"
+            class="mb-12 relative w-full overflow-hidden rounded-2xl group/carousel border border-gray-200 shadow-sm bg-gray-50 transition-all duration-300 transform origin-top"
+            style="opacity: 1; transform: scale(1);">
+            <!-- Carousel Track -->
+            <div id="bundle-carousel-track" class="flex transition-transform duration-500 ease-in-out w-full">
+
+              <!-- Slide 1 -->
+              <div
+                class="w-full shrink-0 p-6 md:p-8 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden group">
+                <!-- Background accent -->
+                <div
+                  class="absolute -right-20 -top-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none">
+                </div>
+
+                <div class="w-full md:w-1/3 relative shrink-0">
+                  <div class="aspect-video md:aspect-[4/3] rounded-xl overflow-hidden shadow-sm relative z-10">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-purple-deep/20 mix-blend-multiply"></div>
+                  </div>
+                  <!-- Stack visual effect to imply multiple courses -->
+                  <div class="absolute top-2 -right-2 bottom-2 left-2 border-2 border-gray-200 rounded-xl z-0 bg-white">
+                  </div>
+                  <div
+                    class="absolute top-4 -right-4 bottom-0 left-4 border-2 border-gray-200 rounded-xl z-[-1] bg-gray-50">
+                  </div>
+                </div>
+
+                <div class="flex-grow flex flex-col justify-center relative z-10">
+                  <div class="flex items-center gap-3 mb-3">
+                    <div
+                      class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1 w-fit">
+                      <span class="material-symbols-outlined text-[14px]">stars</span> Featured Bundle
+                    </div>
+                  </div>
+                  <h3 class="text-2xl md:text-3xl font-bold text-text-main mb-3">The Complete Psychiatry & Neurobiology
+                    Path</h3>
+                  <p class="text-text-muted mb-6 max-w-2xl leading-relaxed">A comprehensive 4-course mastery track. Move
+                    beyond treating symptoms to understand the physiological, developmental, and neurobiological roots
+                    of trauma.</p>
+
+                  <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-auto">
+                    <a href="saday-package-detail.html"
+                      class="bg-purple-deep text-white px-6 py-3 rounded-lg font-bold hover:bg-opacity-90 transition-all shadow-md group-hover:shadow-lg flex items-center gap-2">
+                      View Full Track <span
+                        class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                    <div class="flex items-center gap-2 text-sm font-bold text-text-muted">
+                      <span class="material-symbols-outlined text-[20px] text-primary">local_offer</span>
+                      Save 30% on Bundle
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div
+                class="w-full shrink-0 p-6 md:p-8 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden group">
+                <!-- Background accent -->
+                <div
+                  class="absolute -right-20 -top-20 w-64 h-64 bg-purple-soft/10 rounded-full blur-3xl pointer-events-none">
+                </div>
+
+                <div class="w-full md:w-1/3 relative shrink-0">
+                  <div class="aspect-video md:aspect-[4/3] rounded-xl overflow-hidden shadow-sm relative z-10">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=800"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 grayscale">
+                    <div class="absolute inset-0 bg-purple-deep/20 mix-blend-multiply"></div>
+                  </div>
+                  <!-- Stack visual effect to imply multiple courses -->
+                  <div class="absolute top-2 -right-2 bottom-2 left-2 border-2 border-gray-200 rounded-xl z-0 bg-white">
+                  </div>
+                  <div
+                    class="absolute top-4 -right-4 bottom-0 left-4 border-2 border-gray-200 rounded-xl z-[-1] bg-gray-50">
+                  </div>
+                </div>
+
+                <div class="flex-grow flex flex-col justify-center relative z-10">
+                  <div class="flex items-center gap-3 mb-3">
+                    <div
+                      class="bg-purple-soft/20 text-purple-deep px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1 w-fit">
+                      <span class="material-symbols-outlined text-[14px]">stars</span> New Release Bundle
+                    </div>
+                  </div>
+                  <h3 class="text-2xl md:text-3xl font-bold text-text-main mb-3">Clinical Psychopharmacology Path</h3>
+                  <p class="text-text-muted mb-6 max-w-2xl leading-relaxed">Master mechanisms, side effects, and
+                    clinical nuances of psychotropics. A highly requested 3-course deep dive crucial for therapists
+                    managing complex cases.</p>
+
+                  <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-auto">
+                    <a href="saday-package-detail.html"
+                      class="bg-purple-deep text-white px-6 py-3 rounded-lg font-bold hover:bg-opacity-90 transition-all shadow-md group-hover:shadow-lg flex items-center gap-2">
+                      View Full Track <span
+                        class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                    <div class="flex items-center gap-2 text-sm font-bold text-text-muted">
+                      <span class="material-symbols-outlined text-[20px] text-primary">local_offer</span>
+                      Save 25% on Bundle
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Carousel Controls -->
+            <button id="bundle-prev"
+              class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/90 text-purple-deep size-10 rounded-full flex items-center justify-center shadow-md hover:bg-white hover:scale-110 transition-all z-20 opacity-0 group-hover/carousel:opacity-100 disabled:opacity-50 disabled:cursor-not-allowed hidden md:flex">
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button id="bundle-next"
+              class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white/90 text-purple-deep size-10 rounded-full flex items-center justify-center shadow-md hover:bg-white hover:scale-110 transition-all z-20 opacity-0 group-hover/carousel:opacity-100 disabled:opacity-50 disabled:cursor-not-allowed hidden md:flex">
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+
+            <!-- Carousel Indicators -->
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20" id="bundle-indicators">
+              <button class="w-8 h-1.5 rounded-full bg-purple-deep transition-all" data-index="0"></button>
+              <button class="w-8 h-1.5 rounded-full bg-gray-300 transition-all hover:bg-purple-soft/50"
+                data-index="1"></button>
+            </div>
+          </div>
+
+          <!-- Individual Courses Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="course-grid">
+
+            <!-- Course 1: Somatic (Somatic & Integrative) -->
+            <div
+              class="course-card group flex flex-col rounded-xl overflow-hidden border border-gray-200 bg-white hover:shadow-xl hover:border-purple-soft/30 transition-all duration-300"
+              data-category="somatic">
+              <div class="relative h-44 w-full bg-gray-200 overflow-hidden"
+                style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800'); background-size: cover; background-position: center;">
+                <div
+                  class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider text-text-main shadow-sm">
+                  8 Days
+                </div>
+                <div class="absolute inset-0 bg-purple-deep/0 group-hover:bg-purple-deep/10 transition-colors">
+                </div>
+              </div>
+              <div class="flex flex-col p-5 flex-1">
+                <div
+                  class="flex items-center gap-1.5 mb-2 text-[11px] font-bold text-purple-deep uppercase tracking-wide">
+                  <span class="material-symbols-outlined text-[14px]">psychology</span> Somatic
+                  Therapy
+                </div>
+                <h3
+                  class="text-lg font-bold text-text-main leading-snug mb-2 group-hover:text-purple-soft transition-colors">
+                  Integrative Somatic Trauma Therapy</h3>
+                <p class="text-sm text-text-muted mb-5 line-clamp-3">A comprehensive framework for
+                  understanding the physiological effects of trauma. Learn evidence-based somatic
+                  interventions to support client recovery.</p>
+                <div class="mt-auto flex flex-col gap-4">
+                  <div class="flex items-center justify-between text-xs text-text-main border-t border-gray-100 pt-4">
+                    <div class="flex items-center gap-2">
+                      <div class="size-6 rounded-full bg-gray-300 bg-cover bg-center"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiJ_S5IgBtd6bMXLUYXMmnkJGzHJeCCEjtZTMTVxGC2zkhU_Uxu4br_4JIqrs3di3Hzb8euZPRWEURK7bjeMO3C8xskfONNLSWO4xX-t9X6PzUGz5vz10rh4JO2WkPOxtGKv4QGOTzDq0JVTBfVN19-_XdTlx_LP6Xy1LeM9tb05WBh2Rr56SovdlRTVLqdl8CsxwkP1stdVcrshCY3VGaZOKv-n0GJQ8KFjbPw3UeIZd2clTWLclHPuJU9ac6Q4AT7RZwkFrgCIsb');">
+                      </div>
+                      <span class="font-bold">Dr. Sarah Jenks</span>
+                    </div>
+                    <div class="flex items-center font-bold">
+                      <span class="material-symbols-outlined text-yellow-500 text-[14px] mr-1">star</span>4.9
+                    </div>
+                  </div>
+                  <a href="saday-course-detail.html"
+                    class="block w-full py-2 rounded-lg border border-purple-soft text-purple-deep font-bold text-sm hover:bg-purple-soft hover:text-white transition-colors text-center">
+                    View Syllabus
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course 2: Psychiatric -->
+            <div
+              class="course-card group flex flex-col rounded-xl overflow-hidden border border-gray-200 bg-white hover:shadow-xl hover:border-purple-soft/30 transition-all duration-300"
+              data-category="psychiatric">
+              <div class="relative h-44 w-full bg-gray-200 overflow-hidden"
+                style="background-image: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=800'); background-size: cover; background-position: center;">
+                <div
+                  class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider text-text-main shadow-sm">
+                  12 Days
+                </div>
+                <div class="absolute inset-0 bg-purple-deep/0 group-hover:bg-purple-deep/10 transition-colors">
+                </div>
+              </div>
+              <div class="flex flex-col p-5 flex-1">
+                <div
+                  class="flex items-center gap-1.5 mb-2 text-[11px] font-bold text-purple-deep uppercase tracking-wide">
+                  <span class="material-symbols-outlined text-[14px]">neurology</span>
+                  Psychopharmacology
+                </div>
+                <h3
+                  class="text-lg font-bold text-text-main leading-snug mb-2 group-hover:text-purple-soft transition-colors">
+                  Advanced Clinical Psychopharmacology</h3>
+                <p class="text-sm text-text-muted mb-5 line-clamp-3">Master the complexities of modern
+                  psychiatric medications, including off-label uses, drug interactions, and tapering
+                  protocols for complex cases.</p>
+                <div class="mt-auto flex flex-col gap-4">
+                  <div class="flex items-center justify-between text-xs text-text-main border-t border-gray-100 pt-4">
+                    <div class="flex items-center gap-2">
+                      <div class="size-6 rounded-full bg-gray-300 bg-cover bg-center"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-wIkIA0980qY2lqI4XqfunBl1uNpWkjXEP96KPrUb5sU7XfXhK-LJJRiv_4TsBUV1RQN1LGJXgwk252SEecBwmW6Sp_ciGJrpXOKybdyKvl6YxpXxUOV5eaZGHB8TzrJQpvaUXfCl6_yPlfsXGoaqb-BOpOQ6bCAsoL0sXqsKETusXBXqrBYMLsEYtbFFz5Ix_wAYNu1yMuC74wKDW8CxbAZFpglBuJpEDmKQkbWAO9h2uQeLzXSrzlgI-omzYPIpdPXggqSj1Fx1');">
+                      </div>
+                      <span class="font-bold">Dr. James Okafor</span>
+                    </div>
+                    <div class="flex items-center font-bold">
+                      <span class="material-symbols-outlined text-yellow-500 text-[14px] mr-1">star</span>4.9
+                    </div>
+                  </div>
+                  <button
+                    class="w-full py-2 rounded-lg border border-purple-soft text-purple-deep font-bold text-sm hover:bg-purple-soft hover:text-white transition-colors">
+                    View Syllabus
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course 3: Psychological -->
+            <div
+              class="course-card group flex flex-col rounded-xl overflow-hidden border border-gray-200 bg-white hover:shadow-xl hover:border-purple-soft/30 transition-all duration-300"
+              data-category="psychological">
+              <div class="relative h-44 w-full bg-gray-200 overflow-hidden"
+                style="background-image: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800'); background-size: cover; background-position: center;">
+                <div
+                  class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider text-text-main shadow-sm">
+                  6 Days
+                </div>
+                <div class="absolute inset-0 bg-purple-deep/0 group-hover:bg-purple-deep/10 transition-colors">
+                </div>
+              </div>
+              <div class="flex flex-col p-5 flex-1">
+                <div
+                  class="flex items-center gap-1.5 mb-2 text-[11px] font-bold text-purple-deep uppercase tracking-wide">
+                  <span class="material-symbols-outlined text-[14px]">psychology_alt</span> CBT
+                  Applications
+                </div>
+                <h3
+                  class="text-lg font-bold text-text-main leading-snug mb-2 group-hover:text-purple-soft transition-colors">
+                  CBT for Treatment-Resistant Depression</h3>
+                <p class="text-sm text-text-muted mb-5 line-clamp-3">Advanced cognitive behavioral
+                  techniques specifically tailored for clients who have not responded to standard
+                  first-line interventions.</p>
+                <div class="mt-auto flex flex-col gap-4">
+                  <div class="flex items-center justify-between text-xs text-text-main border-t border-gray-100 pt-4">
+                    <div class="flex items-center gap-2">
+                      <div class="size-6 rounded-full bg-gray-300 bg-cover bg-center"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCE8dY6R2CbjA6-eW5_tRt8o8Ygwn99aonR49H9X3faCpCedvQj1FPnxggegJV3VcpEhiuyNwWHeJhhVLhBu5kIWgvXLBSVNHgOAucbRh8Qdgz2cl_9qFAcjHfoC78AkVt7MgKHLhrPRI5suVHDZMLHPUy9CUcNehIwleWF32q4zty_TjUyK6GRas3GPr3pG1NKGHNa7I4BnIPjbo_NPR7SvjZ_LeEbbymik4ZZXDB2WiUE2CFGqLuqQfktBrZ2xtlhiAHeAY30TclZ');">
+                      </div>
+                      <span class="font-bold">Dr. Elena Rostova</span>
+                    </div>
+                    <div class="flex items-center font-bold">
+                      <span class="material-symbols-outlined text-yellow-500 text-[14px] mr-1">star</span>4.8
+                    </div>
+                  </div>
+                  <button
+                    class="w-full py-2 rounded-lg border border-purple-soft text-purple-deep font-bold text-sm hover:bg-purple-soft hover:text-white transition-colors">
+                    View Syllabus
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course 4: Therapeutic -->
+            <div
+              class="course-card group flex flex-col rounded-xl overflow-hidden border border-gray-200 bg-white hover:shadow-xl hover:border-purple-soft/30 transition-all duration-300"
+              data-category="therapeutic">
+              <div class="relative h-44 w-full bg-gray-200 overflow-hidden"
+                style="background-image: url('https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&q=80&w=800'); background-size: cover; background-position: center;">
+                <div
+                  class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider text-text-main shadow-sm">
+                  10 Days
+                </div>
+                <div class="absolute inset-0 bg-purple-deep/0 group-hover:bg-purple-deep/10 transition-colors">
+                </div>
+              </div>
+              <div class="flex flex-col p-5 flex-1">
+                <div
+                  class="flex items-center gap-1.5 mb-2 text-[11px] font-bold text-purple-deep uppercase tracking-wide">
+                  <span class="material-symbols-outlined text-[14px]">diversity_3</span> Family
+                  Therapy
+                </div>
+                <h3
+                  class="text-lg font-bold text-text-main leading-snug mb-2 group-hover:text-purple-soft transition-colors">
+                  Systemic Family Systems Dynamics</h3>
+                <p class="text-sm text-text-muted mb-5 line-clamp-3">Explore the structural and
+                  strategic models of family therapy. Learn to map family genograms and intervene at
+                  the systemic level rather than individual.</p>
+                <div class="mt-auto flex flex-col gap-4">
+                  <div class="flex items-center justify-between text-xs text-text-main border-t border-gray-100 pt-4">
+                    <div class="flex items-center gap-2">
+                      <div class="size-6 rounded-full bg-gray-300 bg-cover bg-center"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiJ_S5IgBtd6bMXLUYXMmnkJGzHJeCCEjtZTMTVxGC2zkhU_Uxu4br_4JIqrs3di3Hzb8euZPRWEURK7bjeMO3C8xskfONNLSWO4xX-t9X6PzUGz5vz10rh4JO2WkPOxtGKv4QGOTzDq0JVTBfVN19-_XdTlx_LP6Xy1LeM9tb05WBh2Rr56SovdlRTVLqdl8CsxwkP1stdVcrshCY3VGaZOKv-n0GJQ8KFjbPw3UeIZd2clTWLclHPuJU9ac6Q4AT7RZwkFrgCIsb');">
+                      </div>
+                      <span class="font-bold">Dr. Sarah Jenks</span>
+                    </div>
+                    <div class="flex items-center font-bold">
+                      <span class="material-symbols-outlined text-yellow-500 text-[14px] mr-1">star</span>4.7
+                    </div>
+                  </div>
+                  <button
+                    class="w-full py-2 rounded-lg border border-purple-soft text-purple-deep font-bold text-sm hover:bg-purple-soft hover:text-white transition-colors">
+                    View Syllabus
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course 5: Somatic & Integrative -->
+            <div
+              class="course-card group flex flex-col rounded-xl overflow-hidden border border-gray-200 bg-white hover:shadow-xl hover:border-purple-soft/30 transition-all duration-300"
+              data-category="somatic">
+              <div class="relative h-44 w-full bg-gray-200 overflow-hidden"
+                style="background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800'); background-size: cover; background-position: center;">
+                <div
+                  class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider text-text-main shadow-sm">
+                  12 Days
+                </div>
+                <div class="absolute inset-0 bg-purple-deep/0 group-hover:bg-purple-deep/10 transition-colors">
+                </div>
+              </div>
+              <div class="flex flex-col p-5 flex-1">
+                <div
+                  class="flex items-center gap-1.5 mb-2 text-[11px] font-bold text-purple-deep uppercase tracking-wide">
+                  <span class="material-symbols-outlined text-[14px]">nutrition</span> Nutrition
+                  Science
+                </div>
+                <h3
+                  class="text-lg font-bold text-text-main leading-snug mb-2 group-hover:text-purple-soft transition-colors">
+                  Advanced Metabolic Health</h3>
+                <p class="text-sm text-text-muted mb-5 line-clamp-3">Go beyond basic diet plans.
+                  Understand metabolic flexibility, hormonal regulation, and personalized nutrition
+                  strategies for complex client cases.</p>
+                <div class="mt-auto flex flex-col gap-4">
+                  <div class="flex items-center justify-between text-xs text-text-main border-t border-gray-100 pt-4">
+                    <div class="flex items-center gap-2">
+                      <div class="size-6 rounded-full bg-gray-300 bg-cover bg-center"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3iSqn5g9R3ALBDHIq5MbKzApCK4oX5X7ftCLdZjTP2JxesWilIu_JvyjaLowyOn7jscGvnfmLQGj9H7gQpkus3TbqZ3SqXbAdFEzBOMrv8rDxomv5VaCLqjK_H_q192WClcl9rq3U3XFd5cDeDYodN9PBs9mzuuOEyxyqwvkR0pdFxMgNPb5Gf1T92Z2vnxX5h4XFi1JdFBrlcZvRv91S_4T6KyDmxNuMGPTnc-bwOxEJLtZUBxA2iqXizru5wvckeXkCvl-yYDYr');">
+                      </div>
+                      <span class="font-bold">Mark Davidson, RD</span>
+                    </div>
+                    <div class="flex items-center font-bold">
+                      <span class="material-symbols-outlined text-yellow-500 text-[14px] mr-1">star</span>5.0
+                    </div>
+                  </div>
+                  <button
+                    class="w-full py-2 rounded-lg border border-purple-soft text-purple-deep font-bold text-sm hover:bg-purple-soft hover:text-white transition-colors">
+                    View Syllabus
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course 6: Somatic & Integrative -->
+            <div
+              class="course-card group flex flex-col rounded-xl overflow-hidden border border-gray-200 bg-white hover:shadow-xl hover:border-purple-soft/30 transition-all duration-300"
+              data-category="somatic">
+              <div class="relative h-44 w-full bg-gray-200 overflow-hidden"
+                style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800'); background-size: cover; background-position: center;">
+                <div
+                  class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider text-text-main shadow-sm">
+                  4 Days
+                </div>
+                <div class="absolute inset-0 bg-purple-deep/0 group-hover:bg-purple-deep/10 transition-colors">
+                </div>
+              </div>
+              <div class="flex flex-col p-5 flex-1">
+                <div
+                  class="flex items-center gap-1.5 mb-2 text-[11px] font-bold text-purple-deep uppercase tracking-wide">
+                  <span class="material-symbols-outlined text-[14px]">mindfulness</span> Mindfulness
+                </div>
+                <h3
+                  class="text-lg font-bold text-text-main leading-snug mb-2 group-hover:text-purple-soft transition-colors">
+                  MBSR for Clinicians</h3>
+                <p class="text-sm text-text-muted mb-5 line-clamp-3">Mindfulness-Based Stress Reduction
+                  specifically adapted for clinical practice. Learn to facilitate mindfulness
+                  interventions safely.</p>
+                <div class="mt-auto flex flex-col gap-4">
+                  <div class="flex items-center justify-between text-xs text-text-main border-t border-gray-100 pt-4">
+                    <div class="flex items-center gap-2">
+                      <div class="size-6 rounded-full bg-gray-300 bg-cover bg-center"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEO_hkAtIaf1dlm8FI-_ZRZyokkj-xT-0VCVAHo8AodCrsRxdJWtl3TAFQEwyO0KmweXyhycqNQaurVwIr90gGpi0ybyEgl08H9zU7o8tVG3vyeLJnuNPutqHVtQCbseESlCEh06Fxon3UwLoMge7z850brWWF_N-xWCna-1U40vxkL4D5er3cFTxlZULH9bCABx1x0qzctOmWXWwEW83XSh-Aa79fzuHUzTsFlJF9J_Z4wj1zV-HTwApvjtZ7Zx2dsLWb1Xwdd9bG');">
+                      </div>
+                      <span class="font-bold">Lila Chen</span>
+                    </div>
+                    <div class="flex items-center font-bold">
+                      <span class="material-symbols-outlined text-yellow-500 text-[14px] mr-1">star</span>4.8
+                    </div>
+                  </div>
+                  <button
+                    class="w-full py-2 rounded-lg border border-purple-soft text-purple-deep font-bold text-sm hover:bg-purple-soft hover:text-white transition-colors">
+                    View Syllabus
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course 7: Psychological -->
+            <div
+              class="course-card group flex flex-col rounded-xl overflow-hidden border border-gray-200 bg-white hover:shadow-xl hover:border-purple-soft/30 transition-all duration-300"
+              data-category="psychological">
+              <div class="relative h-44 w-full bg-gray-200 overflow-hidden"
+                style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800'); background-size: cover; background-position: center;">
+                <div
+                  class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider text-text-main shadow-sm">
+                  8 Days
+                </div>
+                <div class="absolute inset-0 bg-purple-deep/0 group-hover:bg-purple-deep/10 transition-colors">
+                </div>
+              </div>
+              <div class="flex flex-col p-5 flex-1">
+                <div
+                  class="flex items-center gap-1.5 mb-2 text-[11px] font-bold text-purple-deep uppercase tracking-wide">
+                  <span class="material-symbols-outlined text-[14px]">groups</span> Group Dynamics
+                </div>
+                <h3
+                  class="text-lg font-bold text-text-main leading-snug mb-2 group-hover:text-purple-soft transition-colors">
+                  Facilitating Process Groups</h3>
+                <p class="text-sm text-text-muted mb-5 line-clamp-3">Master the art of interpersonal
+                  process groups. Navigate conflict, build cohesion, and utilize the group-as-a-whole
+                  as a therapeutic instrument.</p>
+                <div class="mt-auto flex flex-col gap-4">
+                  <div class="flex items-center justify-between text-xs text-text-main border-t border-gray-100 pt-4">
+                    <div class="flex items-center gap-2">
+                      <div class="size-6 rounded-full bg-gray-300 bg-cover bg-center"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-wIkIA0980qY2lqI4XqfunBl1uNpWkjXEP96KPrUb5sU7XfXhK-LJJRiv_4TsBUV1RQN1LGJXgwk252SEecBwmW6Sp_ciGJrpXOKybdyKvl6YxpXxUOV5eaZGHB8TzrJQpvaUXfCl6_yPlfsXGoaqb-BOpOQ6bCAsoL0sXqsKETusXBXqrBYMLsEYtbFFz5Ix_wAYNu1yMuC74wKDW8CxbAZFpglBuJpEDmKQkbWAO9h2uQeLzXSrzlgI-omzYPIpdPXggqSj1Fx1');">
+                      </div>
+                      <span class="font-bold">Dr. James Okafor</span>
+                    </div>
+                    <div class="flex items-center font-bold">
+                      <span class="material-symbols-outlined text-yellow-500 text-[14px] mr-1">star</span>4.9
+                    </div>
+                  </div>
+                  <button
+                    class="w-full py-2 rounded-lg border border-purple-soft text-purple-deep font-bold text-sm hover:bg-purple-soft hover:text-white transition-colors">
+                    View Syllabus
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Course 8: Psychiatric -->
+            <div
+              class="course-card group flex flex-col rounded-xl overflow-hidden border border-gray-200 bg-white hover:shadow-xl hover:border-purple-soft/30 transition-all duration-300"
+              data-category="psychiatric">
+              <div class="relative h-44 w-full bg-gray-200 overflow-hidden"
+                style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800'); background-size: cover; background-position: center;">
+                <div
+                  class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider text-text-main shadow-sm">
+                  6 Days
+                </div>
+                <div class="absolute inset-0 bg-purple-deep/0 group-hover:bg-purple-deep/10 transition-colors">
+                </div>
+              </div>
+              <div class="flex flex-col p-5 flex-1">
+                <div
+                  class="flex items-center gap-1.5 mb-2 text-[11px] font-bold text-purple-deep uppercase tracking-wide">
+                  <span class="material-symbols-outlined text-[14px]">local_hospital</span> Diagnosis
+                </div>
+                <h3
+                  class="text-lg font-bold text-text-main leading-snug mb-2 group-hover:text-purple-soft transition-colors">
+                  Differential Diagnosis Practicum</h3>
+                <p class="text-sm text-text-muted mb-5 line-clamp-3">Refine your diagnostic skills.
+                  Differentiate between highly comorbid conditions through case studies, standardized
+                  patients, and clinical vignettes.</p>
+                <div class="mt-auto flex flex-col gap-4">
+                  <div class="flex items-center justify-between text-xs text-text-main border-t border-gray-100 pt-4">
+                    <div class="flex items-center gap-2">
+                      <div class="size-6 rounded-full bg-gray-300 bg-cover bg-center"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCE8dY6R2CbjA6-eW5_tRt8o8Ygwn99aonR49H9X3faCpCedvQj1FPnxggegJV3VcpEhiuyNwWHeJhhVLhBu5kIWgvXLBSVNHgOAucbRh8Qdgz2cl_9qFAcjHfoC78AkVt7MgKHLhrPRI5suVHDZMLHPUy9CUcNehIwleWF32q4zty_TjUyK6GRas3GPr3pG1NKGHNa7I4BnIPjbo_NPR7SvjZ_LeEbbymik4ZZXDB2WiUE2CFGqLuqQfktBrZ2xtlhiAHeAY30TclZ');">
+                      </div>
+                      <span class="font-bold">Dr. Elena Rostova</span>
+                    </div>
+                    <div class="flex items-center font-bold">
+                      <span class="material-symbols-outlined text-yellow-500 text-[14px] mr-1">star</span>4.7
+                    </div>
+                  </div>
+                  <button
+                    class="w-full py-2 rounded-lg border border-purple-soft text-purple-deep font-bold text-sm hover:bg-purple-soft hover:text-white transition-colors">
+                    View Syllabus
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-purple-deep pt-16 pb-8 border-t border-purple-deep text-white">
+      <div class="max-w-7xl mx-auto px-4 md:px-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
+          <div class="lg:col-span-2 flex flex-col gap-4 pr-8">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="material-symbols-outlined text-primary text-[24px]">spa</span>
+              <span class="text-lg font-bold">Saday Academy</span>
+            </div>
+            <p class="text-white/70 text-sm leading-relaxed text-gray-300">
+              Empowering wellness professionals with advanced, evidence-based education for modern
+              practice.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-4">Academy</h4>
+            <ul class="space-y-2 text-sm text-white/70">
+              <li><a class="text-gray-300 hover:text-primary transition-colors" href="#">All Courses</a>
+              </li>
+              <li><a class="text-gray-300 hover:text-primary transition-colors" href="#">Instructors</a>
+              </li>
+              <li><a class="text-gray-300 hover:text-primary transition-colors" href="#">Live Events</a>
+              </li>
+              <li><a class="text-gray-300 hover:text-primary transition-colors" href="#">Reviews</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-4">Support</h4>
+            <ul class="space-y-2 text-sm text-white/70">
+              <li><a class="text-gray-300 hover:text-primary transition-colors" href="#">Student
+                  Portal</a></li>
+              <li><a class="text-gray-300 hover:text-primary transition-colors" href="#">Accreditation</a>
+              </li>
+              <li><a class="text-gray-300 hover:text-primary transition-colors" href="#">Contact Us</a>
+              </li>
+              <li><a class="text-gray-300 hover:text-primary transition-colors" href="#">FAQs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-4">Legal</h4>
+            <ul class="space-y-2 text-sm text-white/70">
+              <li><a class="text-gray-300 hover:text-primary transition-colors" href="#">Terms of
+                  Service</a></li>
+              <li><a class="text-gray-300 hover:text-primary transition-colors" href="#">Privacy
+                  Policy</a></li>
+              <li><a class="text-gray-300 hover:text-primary transition-colors" href="#">Cookie Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-300">
+          <p>© 2026 Saday Wellness Academy. All rights reserved.</p>
+          <div class="flex gap-4 text-white">
+            <a href="#" class="hover:text-primary transition-colors"><span
+                class="material-symbols-outlined text-[20px]">language</span></a>
+            <a href="#" class="hover:text-primary transition-colors"><span
+                class="material-symbols-outlined text-[20px]">share</span></a>
+          </div>
+        </div>
+
+      </div>
+  </div>
+  </footer>
+
+  </div>
+
+  <script>
+    // Data for dynamic category descriptions
+    const categoryData = {
+      'all': {
+        title: 'Comprehensive Learning',
+        description: 'Explore our full library of evidence-based clinical specializations. Whether you are looking to deepen your understanding of psychiatric medications, master systemic family therapy, or integrate somatic approaches, our world-class faculty provides the advanced training you need to elevate your practice.',
+        icon: 'library_books'
+      },
+      'psychological': {
+        title: 'Psychological Specializations',
+        description: 'Advanced clinical training focusing on cognitive, behavioral, and interpersonal modalities. Master specialized techniques for treatment-resistant depression, complex trauma, and process group facilitation to improve client outcomes.',
+        icon: 'psychology_alt'
+      },
+      'psychiatric': {
+        title: 'Psychiatric & Medical Specializations',
+        description: 'Rigorous medical frameworks for the clinical practitioner. Enhance your diagnostic acuity, understand complex psychopharmacology interactions, and confidently manage highly comorbid populations.',
+        icon: 'neurology'
+      },
+      'therapeutic': {
+        title: 'Therapeutic Modalities',
+        description: 'In-depth exploration of structural, strategic, and relational therapy models. Move beyond individual constraints to treat family systems, couples, and profound relational dynamics effectively.',
+        icon: 'diversity_3'
+      },
+      'somatic': {
+        title: 'Somatic & Integrative Approaches',
+        description: 'Bridge the mind-body gap with evidence-based integrative therapies. Learn the physiological mechanics of trauma, advanced metabolic nutrition, and clinical applications of mindfulness to support holistic recovery.',
+        icon: 'spa'
+      }
+    };
+
+    // Tab filtering logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const courses = document.querySelectorAll('.course-card');
+
+      // Info section DOM elements
+      const infoSection = document.getElementById('category-info-section');
+      const infoTitle = document.getElementById('category-info-title');
+      const infoDesc = document.getElementById('category-info-desc');
+      const infoIcon = document.getElementById('category-info-icon');
+
+      // Initialize with "all" data
+      updateInfoSection('all');
+
+      function updateInfoSection(category) {
+        const data = categoryData[category];
+        if (data) {
+          infoTitle.textContent = data.title;
+          infoDesc.textContent = data.description;
+          infoIcon.innerHTML = `<span class="material-symbols-outlined text-[20px]">${data.icon}</span>`;
+          infoSection.classList.remove('hidden');
+        } else {
+          infoSection.classList.add('hidden');
+        }
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterBtns.forEach(b => {
+            b.classList.remove('active');
+            b.classList.add('text-text-main');
+            b.style.backgroundColor = '';
+            b.style.color = '';
+            b.style.borderColor = '';
+          });
+
+          // Add active class to clicked button
+          btn.classList.add('active');
+          btn.classList.remove('text-text-main');
+
+          const filterValue = btn.getAttribute('data-filter');
+
+          // Update the info section
+          updateInfoSection(filterValue);
+
+          // Show/Hide Featured Carousel depending on 'all' tab
+          const bundleContainer = document.getElementById('featured-bundle-container');
+          if (bundleContainer) {
+            if (filterValue === 'all') {
+              bundleContainer.style.display = 'block';
+              setTimeout(() => {
+                bundleContainer.style.opacity = '1';
+                bundleContainer.style.transform = 'scale(1)';
+                bundleContainer.classList.add('mb-12');
+                bundleContainer.classList.remove('mb-0');
+              }, 10);
+            } else {
+              bundleContainer.style.opacity = '0';
+              bundleContainer.style.transform = 'scale(0.98)';
+              bundleContainer.classList.remove('mb-12');
+              bundleContainer.classList.add('mb-0');
+              setTimeout(() => {
+                bundleContainer.style.display = 'none';
+              }, 300);
+            }
+          }
+
+          // Filter courses
+          courses.forEach(course => {
+            if (filterValue === 'all' || course.getAttribute('data-category') === filterValue) {
+              course.classList.remove('hidden');
+              // Small delay to allow display:block to apply before animating opacity/transform
+              setTimeout(() => {
+                course.style.opacity = '1';
+                course.style.transform = 'scale(1)';
+              }, 10);
+            } else {
+              course.style.opacity = '0';
+              course.style.transform = 'scale(0.95)';
+              // Wait for transition before hiding
+              setTimeout(() => {
+                course.classList.add('hidden');
+              }, 400); // matches transition duration
+            }
+          });
+        });
+      });
+
+      // Bundle Carousel Logic
+      const track = document.getElementById('bundle-carousel-track');
+      const prevBtn = document.getElementById('bundle-prev');
+      const nextBtn = document.getElementById('bundle-next');
+      const indicators = document.querySelectorAll('#bundle-indicators button');
+      let currentSlide = 0;
+      const totalSlides = 2; // Hardcoded 2 slides for this demo
+
+      function updateCarousel() {
+        if (!track) return;
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        // Update indicators
+        indicators.forEach((ind, index) => {
+          if (index === currentSlide) {
+            ind.classList.remove('bg-gray-300', 'hover:bg-purple-soft/50');
+            ind.classList.add('bg-purple-deep');
+          } else {
+            ind.classList.remove('bg-purple-deep');
+            ind.classList.add('bg-gray-300', 'hover:bg-purple-soft/50');
+          }
+        });
+      }
+
+      if (nextBtn && prevBtn) {
+        nextBtn.addEventListener('click', () => {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+          currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+          updateCarousel();
+        });
+
+        indicators.forEach(ind => {
+          ind.addEventListener('click', (e) => {
+            currentSlide = parseInt(e.target.getAttribute('data-index'));
+            updateCarousel();
+          });
+        });
+
+        // Auto advance every 7 seconds, provided it's visible
+        setInterval(() => {
+          const bundleContainer = document.getElementById('featured-bundle-container');
+          if (bundleContainer && bundleContainer.style.display !== 'none') {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+          }
+        }, 7000);
+      }
+    });
+  </script>
+</body>
+
+</html>
