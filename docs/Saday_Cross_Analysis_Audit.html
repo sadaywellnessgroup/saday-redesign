@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Saday Wellness — Cross-Analysis Audit: Vendor Quote × Other Claude × Locked Spec</title>
+<style>
+  @page {
+    size: A4;
+    margin: 18mm 16mm 20mm 16mm;
+    @bottom-center {
+      content: "Saday Wellness · Cross-Analysis Audit · Page " counter(page) " of " counter(pages);
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 8pt;
+      color: #888;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.45;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+  }
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    color: #0a0a0a;
+    page-break-after: avoid;
+    line-height: 1.25;
+  }
+  h1 {
+    font-size: 22pt;
+    margin: 0 0 4pt 0;
+    letter-spacing: -0.02em;
+  }
+  h2 {
+    font-size: 14pt;
+    margin: 22pt 0 8pt 0;
+    padding-bottom: 4pt;
+    border-bottom: 1.5pt solid #1a1a1a;
+  }
+  h3 {
+    font-size: 11.5pt;
+    margin: 14pt 0 6pt 0;
+  }
+  h4 {
+    font-size: 10.5pt;
+    margin: 10pt 0 4pt 0;
+    color: #333;
+  }
+  p { margin: 0 0 8pt 0; }
+  ul, ol { margin: 4pt 0 8pt 18pt; padding: 0; }
+  li { margin-bottom: 3pt; }
+  strong { color: #000; }
+  code, .mono {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 9pt;
+    background: #f3f3f3;
+    padding: 1pt 4pt;
+    border-radius: 2pt;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6pt 0 12pt 0;
+    font-size: 9pt;
+  }
+  table th, table td {
+    border: 0.5pt solid #ccc;
+    padding: 5pt 7pt;
+    vertical-align: top;
+    text-align: left;
+  }
+  table thead th {
+    background: #1a1a1a;
+    color: #fff;
+    font-weight: 600;
+    font-size: 9pt;
+  }
+  table tbody tr:nth-child(even) td { background: #f7f7f7; }
+  table tr { page-break-inside: avoid; }
+  .meta {
+    font-size: 9pt;
+    color: #666;
+    margin-bottom: 14pt;
+    border-bottom: 0.5pt solid #ddd;
+    padding-bottom: 8pt;
+  }
+  .lead {
+    font-size: 11pt;
+    border-left: 2pt solid #1a1a1a;
+    padding-left: 10pt;
+    margin: 8pt 0 14pt 0;
+  }
+  .callout {
+    padding: 8pt 12pt;
+    margin: 10pt 0;
+    font-size: 9.5pt;
+    border-left: 3pt solid;
+    border-radius: 2pt;
+  }
+  .callout.agree    { background: #eef9f0; border-left-color: #27884a; }
+  .callout.disagree { background: #fff0ee; border-left-color: #c0392b; }
+  .callout.flag     { background: #fff8e6; border-left-color: #d4a017; }
+  .callout.info     { background: #eef3fb; border-left-color: #2563eb; }
+  .badge {
+    display: inline-block;
+    padding: 1pt 6pt;
+    border-radius: 2pt;
+    font-size: 8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-right: 4pt;
+  }
+  .badge.right    { background: #d1fae5; color: #065f46; }
+  .badge.wrong    { background: #fecaca; color: #7f1d1d; }
+  .badge.weak     { background: #fef3c7; color: #92400e; }
+  .badge.partial  { background: #ddd6fe; color: #4c1d95; }
+  .pagebreak { page-break-before: always; }
+  .footer {
+    margin-top: 24pt;
+    padding-top: 8pt;
+    border-top: 0.5pt solid #ccc;
+    font-size: 8.5pt;
+    color: #666;
+  }
+  .total-row td {
+    font-weight: 700;
+    background: #1a1a1a !important;
+    color: #fff;
+  }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .small { font-size: 9pt; }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10pt;
+    margin: 8pt 0;
+  }
+  .panel {
+    border: 0.5pt solid #ccc;
+    padding: 8pt 10pt;
+    background: #fafafa;
+    border-radius: 3pt;
+    font-size: 9pt;
+  }
+  .panel h4 { margin-top: 0; }
+  hr { border: none; border-top: 0.5pt solid #ccc; margin: 14pt 0; }
+  .quote-block {
+    border-left: 2pt solid #999;
+    padding: 4pt 10pt;
+    margin: 6pt 0 10pt 0;
+    font-style: italic;
+    color: #444;
+    font-size: 9pt;
+    background: #fafafa;
+  }
+</style>
+</head>
+<body>
+
+<h1>Saday Wellness — Cross-Analysis Audit</h1>
+<div class="meta">
+  <strong>Document:</strong> <code>docs/Saday_Cross_Analysis_Audit.html</code> &nbsp;·&nbsp;
+  <strong>Date:</strong> 2026-05-05 &nbsp;·&nbsp;
+  <strong>Subject:</strong> brutal audit of a second-Claude analysis (vendor-quote review + the founder's "cut DPDP, drop ASQ, add e-prescription, reduce tracks" proposal) cross-referenced against locked specs (<code>data-model.md</code> v1.1, <code>intake-spec.md</code> v1.0, <code>stack-decision.md</code> v1.0, <code>Saday_Master_Blueprint</code>) and the prior solo-agentic estimate (<code>Saday_Solo_Agentic_Build_Estimate.html</code>).<br>
+  <strong>Goal:</strong> identify exactly which parts of the second-Claude analysis to trust, which to discard, and where the truth materially differs — across <em>tech stack</em>, <em>scope</em>, and <em>cost (build · run · deploy · maintain)</em> for both the planned (Next.js + Supabase) and proposed (Vue + Laravel + MySQL) paths.
+</div>
+
+<p class="lead">
+The second-Claude analysis is mostly directionally correct and morally right where it matters most (refusing to drop DPDP and suicide screening, refusing to add e-prescription). It is <strong>weakest where it engages with your actual locked architecture</strong> — it underplays effort to make moral arguments, misses the agentic-codegen leverage angle, contradicts your spec without flagging the conflict, and contains at least one factually questionable claim (Laravel 13 non-existence). Use it as a sanity check against my prior analysis; do not adopt its scope-cut list verbatim.
+</p>
+
+<h2>1 · Headline verdict on the second-Claude doc</h2>
+
+<table>
+<thead>
+<tr><th style="width: 40%;">Claim from second-Claude</th><th style="width: 14%;">Audit verdict</th><th>Justification</th></tr>
+</thead>
+<tbody>
+
+<tr>
+<td>"₹2L is suspicious in both directions" (under-priced for senior, fits junior Lucknow rate)</td>
+<td><span class="badge right">Right</span></td>
+<td>Matches my own analysis. ₹3,333/day is junior-band. Real risk is silent quality regression on PHI code, not absolute number.</td>
+</tr>
+
+<tr>
+<td>"Stack contradicts the blueprint" — Vue/Laravel/MySQL ≠ Next.js/Supabase/Postgres</td>
+<td><span class="badge right">Right</span></td>
+<td>Matches blueprint §13 and <code>stack-decision.md</code>. Critical issue.</td>
+</tr>
+
+<tr>
+<td>"Laravel 13 does not exist. Current stable is Laravel 11; Laravel 12 was the active line in early 2026."</td>
+<td><span class="badge wrong">Factually questionable</span></td>
+<td>Laravel cadence: 11 (Mar 2024), 12 (Feb 2025), <strong>13 typically lands ~Feb/Mar 2026</strong>. By the quote date (May 2026), Laravel 13 most likely exists. The second-Claude is over-confident here. Do not use this as a yellow flag against the dev — you'll lose credibility if you raise it and he points to <code>laravel/laravel:13</code> on Packagist.</td>
+</tr>
+
+<tr>
+<td>"Supabase RLS is database-level access guarantee. Laravel policies are application-level — bypassed if anyone queries DB directly."</td>
+<td><span class="badge right">Right</span></td>
+<td>Same point as <code>stack-decision.md §3.B</code> and my prior B6 analysis. Single most important architectural critique.</td>
+</tr>
+
+<tr>
+<td>"60 working days is delusional. Multiply his timeline by 2.2×. He'll deliver something on day 60, but it'll be 60–70% complete with the boring-but-fatal pieces skipped."</td>
+<td><span class="badge right">Right (heuristic)</span></td>
+<td>2.2× multiplier is an arbitrary number but the conclusion tracks. My own estimate puts spec-true delivery at 22–28 weeks (1.8–2.3× the quoted 12 weeks). The "boring-but-fatal pieces skipped" prediction is the load-bearing insight — webhook reconciliation, audit immutability, RLS-equivalents, safety SLA, incident queue.</td>
+</tr>
+
+<tr>
+<td>"Razorpay webhook reconciliation alone — done correctly with retry, dead-letter, idempotency, and a recon screen — is a full week."</td>
+<td><span class="badge right">Right</span></td>
+<td>Matches my own 6–8 dev-day Razorpay estimate. This is the line item every solo dev under-quotes by ~3×.</td>
+</tr>
+
+<tr>
+<td>"Compressing a security audit into a sprint is theatre. Real audit takes 3–5 days minimum + a week of fixes."</td>
+<td><span class="badge right">Right</span></td>
+<td>Matches my §5 calendar-blocking dependencies (5–7 days external + 3–5 days fix work).</td>
+</tr>
+
+<tr>
+<td>"Maintenance: 4 hours/month is one busy afternoon. First month post-launch alone surfaces 20+ hours."</td>
+<td><span class="badge right">Right</span></td>
+<td>Universally true on any V1 launch. Applies to ANY vendor offering bundled maintenance at this price.</td>
+</tr>
+
+<tr>
+<td>"P1 in 4 business hours is unacceptable on a clinical platform with a suicidality screen."</td>
+<td><span class="badge right">Right</span></td>
+<td>Concrete clinical justification: an undelivered C-SSRS/ASQ flag at 9pm Saturday cannot wait until Monday morning. This is a real contract-clause-must-change issue.</td>
+</tr>
+
+<tr>
+<td>"Year-1 cash deployed ₹8–11L vs revenue ₹1.25–2.75L. Net −₹6L to −₹9L."</td>
+<td><span class="badge partial">Directionally right, single-track economics worth interrogating</span></td>
+<td>The build/legal/infra/marketing additions are reasonable. Revenue side assumes 5 MHPs only and bottom-up MRR — for a platform without proven demand that's the right floor. <strong>But the analysis assumes a marketing-led acquisition motion that has not been validated.</strong> Operational break-even at month 18–24 is plausible but conditional on unbuilt parts of the business (MHP retention, patient acquisition cost, conversion).</td>
+</tr>
+
+<tr>
+<td>"Audit log = one extra database table. India-only hosting = picking the Mumbai region in the dropdown. Your developer was always going to do this."</td>
+<td><span class="badge wrong">Materially wrong (under-states effort)</span></td>
+<td><strong>This is the biggest factual error in the doc.</strong> Per <code>data-model.md §B4</code>, audit log = per-row sha256 + monthly partitioning + JSONB redaction rule + weekly Merkle root externalised to S3 ap-south-1 with object-lock + service_role-only INSERT (A4). That is <strong>4–6 dev-days</strong> in my estimate, not "one extra table." DPDP residency is more than a region picker — it's vendor DPAs (B10), DSR portal (B3), consent ledger (B2), breach 72h workflow (B9), idle timeout (B8), incident_log table, and a DPIA. Total: 5–7 dev-days minimum. <strong>The second-Claude downplayed effort to win a moral argument.</strong> The moral argument is correct; the effort claim is propaganda.</td>
+</tr>
+
+<tr>
+<td>"About 20–30% of patients walking into any mental health intake will have current or past suicidal thoughts."</td>
+<td><span class="badge weak">Stated without source, but in the right ballpark</span></td>
+<td>NIMHANS/NCBI-published prevalence in Indian psychiatric outpatient samples runs 30–45% lifetime suicidal ideation; current ideation rates in mental-health intake samples are 15–30%. The claim is defensible but precision-framed without a citation. A practicing psychiatrist would already know the order of magnitude.</td>
+</tr>
+
+<tr>
+<td>"Cut Hindi at launch (English only V1) saves 8–12 days."</td>
+<td><span class="badge weak">Conflicts with spec; flag trade-off, do not silently adopt</span></td>
+<td><code>CLAUDE.md</code>: "EN + HI only" is the locked language scope and a stated differentiator vs Tealfeed/Swasthmind. Your blueprint's Tier-2 audience play depends on HI. Cutting HI for V1 is <em>defensible</em> if launch trigger is "first 10 metro patients" but is a strategic regression, not a free scope cut. The second-Claude proposes it as cost reduction without flagging that it removes a positioning differentiator.</td>
+</tr>
+
+<tr>
+<td>"Drop SOAP versioning (plain notes, append-only) saves 5–7 days. MHPs annoyed if they make a typo, but legally fine."</td>
+<td><span class="badge wrong">Conflicts with spec; "legally fine" is the wrong frame</span></td>
+<td><code>data-model.md A9</code> + B6 + addendum pattern (signed + versioned + immutable + addendum_to_id) is locked because it's how MHA §24 record-access claims are defended in court. "Plain append-only" is OK for V1 ops but the second-Claude's framing ("legally fine") is misleading — it's only legally fine if you have addendum tracking, which is the versioning system. The two are not separable. If you cut "versioning," you must keep the addendum pattern; the second-Claude conflates them.</td>
+</tr>
+
+<tr>
+<td>"Drop earnings ledger / payouts entity. Track commission manually in a sheet for first 6 months. Saves 6–8 days."</td>
+<td><span class="badge weak">Operational risk under-stated</span></td>
+<td>Sheet-based reconciliation works for ~50 transactions/month. It does not work when Razorpay webhooks fail silently, when refunds split a paid-out batch, or when a TDS audit asks for transaction-level attribution. Save the 6–8 days <em>only</em> if you accept the reconciliation risk and commit to migrating to ledger before transaction volume crosses ~100/month. Quote-Claude's recommendation is fine for a wedge-only V1 with &lt;50 patients; risky beyond.</td>
+</tr>
+
+<tr>
+<td>"3 tracks (1, 2, 6) is good V1 scope. Defer Tracks 3, 4, 5, 7."</td>
+<td><span class="badge right">Right</span></td>
+<td>Matches blueprint risk gradient. Track 4 (SUD/NDPS) and Track 3 (BPD/bipolar) are correctly deferred — they need DBT-trained / specialist MHPs you don't have and carry higher legal exposure.</td>
+</tr>
+
+<tr>
+<td>"Drop e-prescription. Use letterhead PDF with wet signature in V1."</td>
+<td><span class="badge right">Right (matches blueprint v1.2)</span></td>
+<td>Already the locked v1.2 position. Adding structured e-Rx in V1 would compound regulatory exposure: DSC procurement, NMC verification, Schedule H/H1/X formulary blocks, NDPS controls, drug-interaction checking, pharmacy verification chain. Real cost ₹50k–1L + 30–45 dev-days + medico-legal review. The second-Claude's pushback against your "add e-prescription" idea is correct and should be heeded.</td>
+</tr>
+
+<tr>
+<td>"Cannot have informant system without DPDP scaffolding — they're the same code."</td>
+<td><span class="badge right">Right</span></td>
+<td>Excellent point. Informant linkage L1/L2/L3 requires consent capture (B2), access logs (audit), revocation (DSR-shaped). Cutting DPDP and keeping informant is technically incoherent.</td>
+</tr>
+
+<tr>
+<td>"Drop admin portal beyond a basic user-list page. Founder operates from DB GUI for first 50 patients."</td>
+<td><span class="badge right">Right</span></td>
+<td>Matches my §11 question 6. Admin portal can lag by 60 days post-launch — patients and MHPs cannot. This is the single largest defensible scope cut.</td>
+</tr>
+
+<tr>
+<td>"Renegotiate scope, not price. ₹2L for 90 days, one care track, self-only, 6 tools, no informant, no SOAP signing, no admin portal."</td>
+<td><span class="badge weak">Internally contradictory with later sections</span></td>
+<td>Section 7 says "kill informant + no SOAP signing." Later (Section "Revised scope"), the same Claude says "KEEP informant L1, KEEP SOAP simplified, KEEP ASQ." Both cannot be true. Read the Revised-scope table as the more considered position; treat the Section-7 line as a brainstorm.</td>
+</tr>
+
+<tr>
+<td>"Make him prove the audit log works before milestone 1: hash-of-previous-row chain, demonstrate UPDATE attempts get caught."</td>
+<td><span class="badge weak">Half-right — wrong on the cryptographic shape</span></td>
+<td>"Hash of previous row" = real hash chain = explicitly deferred to V1.5 in <code>data-model.md A7</code>. V1 is per-row content hash + weekly Merkle anchor. The second-Claude is asking the dev to prove a stronger invariant than your own spec requires. Right test, wrong cryptographic shape. Ask instead: <em>"Show me an audit row with a content hash. Show me the weekly Merkle build cron. Show me a service_role-only INSERT policy."</em></td>
+</tr>
+
+<tr>
+<td>"Demand references to two production systems with payments end-to-end and any class of regulated data."</td>
+<td><span class="badge right">Right</span></td>
+<td>Reference-check via live URLs + screen-share is exactly the right vouching protocol. "Skills are vouchable" without a production-system + data-class test is meaningless.</td>
+</tr>
+
+<tr>
+<td>"Restructure payment 30/40/30 instead of 50/50."</td>
+<td><span class="badge right">Right</span></td>
+<td>Same recommendation in my prior analysis. Code-pushed-to-your-org from sprint 1 + milestone-gated payments is the correct vendor-risk structure.</td>
+</tr>
+
+<tr>
+<td>"Clinical safety carve-out: 12-month warranty on safety-screen defects, not 6."</td>
+<td><span class="badge right">Right</span></td>
+<td>Insightful contract-clause add. Not in my prior analysis — adopt this. Belongs in a master services agreement with the vendor as a non-negotiable.</td>
+</tr>
+
+<tr>
+<td>"Run the ₹8,000 manual validation test before paying milestone 1."</td>
+<td><span class="badge right">Right (and I missed this)</span></td>
+<td>This is the strongest strategic point in the entire second-Claude doc. <strong>Before any platform spend, pay for a Meta-ads-to-WhatsApp manual flow. If 20 paid bookings cannot be acquired in a week with manual ops, the platform is not the bottleneck — demand is.</strong> My prior analysis missed this entirely. Adopt unchanged.</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2 class="pagebreak">2 · Tech-stack scrutiny — three-way comparison</h2>
+
+<p>Compare your locked stack, the vendor's quoted stack, and the second-Claude's revised position (which mostly accepts the vendor's stack). Each row evaluates a real architectural concern.</p>
+
+<table>
+<thead>
+<tr>
+  <th style="width: 22%;">Concern</th>
+  <th>Locked: Next.js 14 + Supabase Postgres + RLS + TS</th>
+  <th>Vendor: Vue 3.5 + Laravel 13 + MySQL on VPS</th>
+  <th>Second-Claude verdict</th>
+  <th>My audit</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+  <td><strong>SOAP body deny to admin (B6)</strong></td>
+  <td>Database-layer RLS on <code>session_notes</code>. Survives controller bugs, ORM bugs, console scripts.</td>
+  <td>Laravel policy. PHP-layer. One forgotten <code>$this-&gt;authorize()</code> = leak.</td>
+  <td>Correctly identifies the regression.</td>
+  <td>Vendor stack cannot match B6 without a separate-DB-user / two-connection-string hack. Major regression.</td>
+</tr>
+
+<tr>
+  <td><strong>Audit cryptography (B4)</strong></td>
+  <td>pg_cron + pg_partman + service_role-only INSERT + Merkle to S3 ap-south-1.</td>
+  <td>"Append-only audit log on all PHI writes" — single line.</td>
+  <td>Says "audit log = one table" — under-states by 4–6 dev-days.</td>
+  <td>Both the vendor and second-Claude under-state. Per-row sha256 + weekly Merkle externalisation is real cryptographic work, not a checkbox.</td>
+</tr>
+
+<tr>
+  <td><strong>Encryption key custody (DM5)</strong></td>
+  <td>Supabase Vault. Keys off the app server.</td>
+  <td>Implicit Laravel <code>APP_KEY</code> envelope. Single symmetric key on app server.</td>
+  <td>Not addressed.</td>
+  <td>Vendor stack is materially weaker for PHI at rest. Mitigation requires AWS KMS or HashiCorp Vault — adds 1–2 dev-days vendor didn't quote.</td>
+</tr>
+
+<tr>
+  <td><strong>Type safety end-to-end</strong></td>
+  <td>TS strict + <code>supabase gen types</code>. Schema mismatches fail compile.</td>
+  <td>PHP 8.3 + Eloquent dynamic <code>$model-&gt;whatever</code>. Looser by design.</td>
+  <td>Not addressed.</td>
+  <td>For agentic codegen, this is the biggest single quality lever. The vendor's stack erodes it.</td>
+</tr>
+
+<tr>
+  <td><strong>Frontend topology for distress flow</strong></td>
+  <td>React + client state + localStorage draft + per-screen no-roundtrip.</td>
+  <td>Vue 3.5 — equivalent in capability. Pinia + Vue Router work fine.</td>
+  <td>Not deeply addressed; assumes Vue is OK.</td>
+  <td>Vue is fine for the intake UX. The frontend framework is the least-broken part of the vendor's pivot. <strong>Don't fight Vue-vs-React; fight the database and key-custody choices.</strong></td>
+</tr>
+
+<tr>
+  <td><strong>i18n EN+HI with DB-stored tool content</strong></td>
+  <td><code>next-intl</code> for UI + DB-stored tool content with <code>(tool, version, language)</code> version-locking.</td>
+  <td>"Vue I18n — Hindi + English locale-switchable" — UI strings only; DB content i18n unspecified.</td>
+  <td>Recommends dropping HI at V1. Conflict with locked spec.</td>
+  <td>Tool-content version-locking <em>per language</em> is critical for clinical reproducibility. Vendor's quote does not address this. Cutting HI saves 8–12 days but loses Tier-2 differentiator. Defensible only as a deliberate strategic choice, not a quiet scope reduction.</td>
+</tr>
+
+<tr>
+  <td><strong>Hosting + region (DPDP)</strong></td>
+  <td>Supabase ap-south-1 + Vercel/Cloudflare global with India edge.</td>
+  <td>"₹1,500–3,000/mo VPS on DigitalOcean / AWS Lightsail / Hetzner." Hetzner is EU-only.</td>
+  <td>Says "pick Mumbai region" — over-simplifies.</td>
+  <td>Hetzner listing is a DPDP yellow flag. Confirms the dev hasn't internalised India residency. Demand a written commitment to Mumbai-region only.</td>
+</tr>
+
+<tr>
+  <td><strong>Agentic codegen leverage</strong></td>
+  <td>Very high (TS, gen-types, pure-SQL RLS, single language).</td>
+  <td>Medium (Laravel/Vue mature but two languages, dynamic Eloquent, no equivalent of <code>gen types</code>).</td>
+  <td>Not analysed.</td>
+  <td>Major omission in second-Claude doc. For a solo founder, codegen-on-locked-stack is a 1.5–2× throughput multiplier. The vendor's stack erodes that multiplier by ~30%.</td>
+</tr>
+
+<tr>
+  <td><strong>Bus factor / hiring pool (Indian)</strong></td>
+  <td>Smaller Next.js+TS pool, higher rates.</td>
+  <td>Larger Laravel/Vue pool, lower rates.</td>
+  <td>Not addressed.</td>
+  <td>This is the single strongest argument <em>for</em> the vendor's stack pick. <code>stack-decision.md §3.G</code> already weighed it. Real consideration if you expect to hire 2+ devs in 6 months.</td>
+</tr>
+
+<tr>
+  <td><strong>Operational overhead (you-as-ops)</strong></td>
+  <td>Near-zero. Managed everything.</td>
+  <td>Medium. VPS = your nginx, supervisor, redis, php-fpm tuning, OS patching, backup verification.</td>
+  <td>Mentioned ("droplet is your problem to back up").</td>
+  <td>Real recurring cost. ~1 hour/week + risk of a 3am pager. For a practicing psychiatrist this is the wrong overhead.</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="callout disagree">
+<strong>Net stack verdict.</strong> The second-Claude correctly identifies that the vendor's stack is wrong for the spec, but does not engage with three of the most important regressions: <em>type-safety end-to-end</em>, <em>encryption key custody</em>, and <em>agentic-codegen leverage</em>. Its prescription ("renegotiate scope, accept stack") is wrong. The right prescription is "<strong>renegotiate stack first</strong> (Postgres + RLS-equivalent + Vault/KMS, framework negotiable), then renegotiate scope on that stack."
+</div>
+
+<h2>3 · Scope scrutiny — what to cut, what to keep</h2>
+
+<p>Audit each of the second-Claude's proposed scope changes against your locked specs. The pattern: it gets the safety/legal items right, and gets several spec-conflict items wrong by treating them as free cuts.</p>
+
+<table>
+<thead>
+<tr>
+  <th style="width: 22%;">Proposed change</th>
+  <th style="width: 12%;">2nd-Claude</th>
+  <th style="width: 12%;">My audit</th>
+  <th>Justification</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+  <td>Drop DPDP basics (audit log, consent capture, India hosting, breach SOP)</td>
+  <td><strong>KEEP</strong> — non-negotiable</td>
+  <td><strong>KEEP</strong> — non-negotiable</td>
+  <td>Agree absolutely. DPDP is not a feature. ₹250 cr cap; realistic enforcement ₹5–25 lakh per violation; DPDP DPB has been activated. Zero defensible reason to drop. Effort to keep is real (5–7 dev-days for the schema layer alone) but mandatory.</td>
+</tr>
+
+<tr>
+  <td>Drop suicide screening (ASQ / C-SSRS / red-flag clusters / crisis screen)</td>
+  <td><strong>KEEP</strong> — clinical floor</td>
+  <td><strong>KEEP</strong> — clinical floor</td>
+  <td>Agree absolutely. Telemed Practice Guidelines 2020 require emergency referral pathways. As a psychiatrist your registration is exposed if you remove the standard of care voluntarily. C-SSRS items 1–2 are 30 seconds; D2 is locked.</td>
+</tr>
+
+<tr>
+  <td>Add structured e-prescription with DSC + Schedule H/H1/X formulary</td>
+  <td><strong>DROP</strong> from V1 → letterhead PDF</td>
+  <td><strong>DROP</strong> from V1 → letterhead PDF</td>
+  <td>Agree. Adds 30–45 dev-days, ₹50k–1L procurement, mandatory medico-legal review. NDPS Act criminal liability if mishandled. Already V2-deferred in blueprint v1.2.</td>
+</tr>
+
+<tr>
+  <td>Reduce tracks to V1 = T1 + T2 + T6 (proxy/caregiver)</td>
+  <td><strong>DO IT</strong></td>
+  <td><strong>FLAG: T6 conflicts with intake D6 lock</strong></td>
+  <td>T1 + T2 cut is sensible. <strong>But T6 (proxy/caregiver) directly conflicts with <code>intake-spec.md §1.3 + D6</code>: minors AND proxy soft-exit with waitlist.</strong> Proxy is V1.5+ pending ML sign-off + parental-consent artifact. The second-Claude has not read your intake spec and is restoring proxy without acknowledging the locked decision. Adopt T1 + T2 only for V1; reopen T6 only via a written D6 reversal in <code>scope-exceptions.md</code> with parental-consent artifact attached.</td>
+</tr>
+
+<tr>
+  <td>Cut Hindi at launch — EN-only V1, HI as fast-follow</td>
+  <td>Recommended (saves 8–12 days)</td>
+  <td><strong>FLAG TRADE-OFF, do not adopt silently</strong></td>
+  <td>Conflicts with <code>CLAUDE.md</code> "EN + HI only" lock and Tier-2 audience differentiator. Defensible if launch trigger is "first 10 metro patients"; not defensible if you intend to lead with HI on Meta ads. <strong>Make it a deliberate strategic decision, not a quiet cost cut.</strong> Save the days only after explicitly accepting the differentiator loss.</td>
+</tr>
+
+<tr>
+  <td>Cut session packages, coupons</td>
+  <td>Cut (saves 4–6 days)</td>
+  <td><strong>Cut</strong></td>
+  <td>Already V1.5 in blueprint. Single price per session is fine for V1. Free.</td>
+</tr>
+
+<tr>
+  <td>Drop SOAP versioning, keep "plain notes, append-only"</td>
+  <td>Cut (saves 5–7 days)</td>
+  <td><strong>FLAG: conflicts with B6 + A9 + addendum pattern</strong></td>
+  <td>The locked spec is signed + versioned + immutable + addendum-pattern (<code>data-model.md A9</code>). The second-Claude conflates "versioning" with "addendum tracking" — they are <em>the same mechanism</em>. If you keep MHA §24 record-access defensibility, you keep the addendum pattern, which is what "versioning" actually means in your spec. <strong>Possible compromise: keep addendum-after-sign, drop pre-sign version history. Saves ~2 days, preserves legal posture.</strong></td>
+</tr>
+
+<tr>
+  <td>Drop earnings ledger / payouts — manual sheet for first 6 months</td>
+  <td>Cut (saves 6–8 days)</td>
+  <td><strong>Risk under-stated</strong></td>
+  <td>Works for &lt;50 patients/month. Breaks when refunds split a paid-out batch, when TDS audit asks for transaction-level attribution, or when a Razorpay webhook fails silently. Defensible only with a hard commitment to migrate to ledger before crossing 100 transactions/month. <strong>If you accept the risk, save 4–6 days (not 6–8 — you still need refund + reconciliation, only payout-attribution drops).</strong></td>
+</tr>
+
+<tr>
+  <td>Drop two-way WhatsApp inbox</td>
+  <td>Cut</td>
+  <td><strong>Cut</strong></td>
+  <td>Already V1.5. Free cut.</td>
+</tr>
+
+<tr>
+  <td>Reduce assessment library to 5 tools (PHQ-9, GAD-7, ASQ, AUDIT-C, ISI)</td>
+  <td>Cut to 5 (saves 5–8 days)</td>
+  <td><strong>Cut to 6 (add C-SSRS, drop ASQ)</strong></td>
+  <td>Two corrections: (1) Spec D2 locks <strong>C-SSRS</strong> as the suicide screen, not ASQ — vendor's swap was unilateral and second-Claude perpetuated it. (2) Drop MDQ, ASRS, PCL-5, OCI-R, MSI-BPD, SCOFF, PSS-10 in V1 (saves ~5 days). Keep PHQ-9 + GAD-7 + C-SSRS + AUDIT-C + ISI + PCL-5 (PTSD prevalence in your target cohort warrants it). Re-introduce others by track at V1.5.</td>
+</tr>
+
+<tr>
+  <td>Drop admin portal beyond user-list + refund button</td>
+  <td>Cut (saves 4–6 days)</td>
+  <td><strong>Cut (saves 6–8 days against spec admin portal)</strong></td>
+  <td>Strongest defensible scope cut. Patients/MHPs cannot wait 60 days; admin can. Run from Supabase Studio + a Notion runbook for first 50 patients.</td>
+</tr>
+
+<tr>
+  <td>Informant L1 only; defer L2/L3</td>
+  <td>Cut to L1 only</td>
+  <td><strong>Cut to L1 only</strong></td>
+  <td>L1 (read-only access with consent) is the wedge. L2/L3 (notify/co-author) defers cleanly. Saves ~2 days.</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="callout flag">
+<strong>Net scope verdict.</strong> The second-Claude's "Revised scope summary" table is mostly right and worth adopting <em>with three corrections</em>: (1) drop T6 proxy from V1 (not in V1 per D6); (2) keep C-SSRS not ASQ as the suicide screen; (3) re-frame "drop SOAP versioning" as "drop pre-sign history, keep addendum pattern." Net realistic V1 scope is <strong>~75–95 dev-days, not 56</strong> as the second-Claude suggests — its day-count under-states because it under-states the DPDP/audit floor.
+</div>
+
+<h2 class="pagebreak">4 · Cost scrutiny — develop · run · deploy · maintain</h2>
+
+<h3>4.1 · Build cost (year 0–1, one-time)</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Path</th>
+  <th class="num">Build cash</th>
+  <th class="num">Your time (build)</th>
+  <th class="num">Pen-test</th>
+  <th class="num">Legal (DPDP + medico-legal + ToS)</th>
+  <th class="num">Content (HI translation + WA templates + privacy)</th>
+  <th class="num">Build total</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Vendor as quoted, full spec</td><td class="num">₹2L</td><td class="num">~30h review</td><td class="num">not incl. (₹50k–1.2L)</td><td class="num">not incl. (₹65k–2L)</td><td class="num">not incl. (₹50k–1.5L)</td><td class="num">~₹3.65–6.7L</td></tr>
+<tr><td>Vendor renegotiated (Postgres-mandated, 16–20 wks)</td><td class="num">₹3–5L</td><td class="num">~80h review</td><td class="num">~₹50–80k</td><td class="num">~₹65k–2L</td><td class="num">~₹50k–1.5L</td><td class="num">~₹4.65–9.3L</td></tr>
+<tr><td>Vendor revised-scope (T1+T2 only, EN-only, no e-Rx, ledger-as-sheet) — second-Claude's path</td><td class="num">₹1.5L (his number) — realistic ₹1.8–2.3L</td><td class="num">~30h review</td><td class="num">~₹30–50k (lighter)</td><td class="num">~₹50k–1L (no HI)</td><td class="num">~₹20–40k (EN only)</td><td class="num">~₹2.5–4.2L</td></tr>
+<tr><td>Solo agentic on locked stack (full spec)</td><td class="num">₹0</td><td class="num">~600h (24–28 wks × 25h)</td><td class="num">~₹40–80k</td><td class="num">~₹65k–2L</td><td class="num">~₹50k–1.5L</td><td class="num">~₹1.55–4.3L cash + ~600h</td></tr>
+<tr><td>Solo agentic on revised-scope</td><td class="num">₹0</td><td class="num">~350–400h (14–16 wks)</td><td class="num">~₹40–80k</td><td class="num">~₹50k–1.5L</td><td class="num">~₹20–40k (EN only)</td><td class="num">~₹1.1–2.7L cash + ~400h</td></tr>
+<tr><td>Hybrid (you + 1 contractor) on revised-scope</td><td class="num">₹1.5–2.5L contractor</td><td class="num">~200h</td><td class="num">~₹40–80k</td><td class="num">~₹50k–1.5L</td><td class="num">~₹20–40k</td><td class="num">~₹2.6–4.7L cash + ~200h</td></tr>
+</tbody>
+</table>
+
+<h3>4.2 · Run cost (year-1 infrastructure)</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Stack</th>
+  <th class="num">Compute / hosting</th>
+  <th class="num">Database</th>
+  <th class="num">Storage / CDN</th>
+  <th class="num">Email / WhatsApp / Video</th>
+  <th class="num">Monitoring</th>
+  <th class="num">Year-1 infra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Vendor VPS (2vCPU/4GB)</td>
+  <td class="num">₹3–6k/mo (₹36–72k)</td>
+  <td class="num">on-VPS MySQL — same</td>
+  <td class="num">~₹500/mo S3 (₹6k)</td>
+  <td class="num">₹2.5–4k/mo MSG91 + ₹3–6k/mo Daily.co + ₹0.5k/mo SMTP (₹72k–1.3L)</td>
+  <td class="num">₹0–2k/mo Sentry (₹0–24k)</td>
+  <td class="num">~₹1.2–2.3L</td>
+</tr>
+<tr>
+  <td>Locked stack (Supabase Pro Mumbai + Vercel + Cloudflare + S3)</td>
+  <td class="num">Vercel Pro ₹1.7k/mo (₹20k); Cloudflare free</td>
+  <td class="num">Supabase Pro ₹2.1k/mo + ap-south compute add-on ₹1.7k–4.2k/mo (₹46–76k)</td>
+  <td class="num">Supabase Storage incl. ~50GB; S3 audit-export ~₹500/mo (₹6k)</td>
+  <td class="num">same MSG91 + Daily.co + SMTP (₹72k–1.3L)</td>
+  <td class="num">Sentry team plan ₹2k/mo (₹24k)</td>
+  <td class="num">~₹1.7–2.6L</td>
+</tr>
+<tr>
+  <td>Locked stack at scale (1000 patients, 200 sessions/mo)</td>
+  <td class="num">Vercel Pro ₹1.7k/mo (₹20k)</td>
+  <td class="num">Supabase Pro + compute upgrade ₹4–8k/mo (₹50k–1L)</td>
+  <td class="num">~₹2k/mo (₹24k)</td>
+  <td class="num">MSG91 ₹5–8k + Daily.co ₹15–25k/mo (₹2.4–4L) — video is the dominant cost</td>
+  <td class="num">Sentry ₹2k/mo (₹24k)</td>
+  <td class="num">~₹3.6–6L</td>
+</tr>
+</tbody>
+</table>
+
+<p class="small"><strong>Calibration note:</strong> Vendor's ₹1,500–3,000/mo VPS estimate is correct for the box itself but ignores third-party APIs (Daily.co, MSG91, Sentry) which dominate run cost. Locked stack costs ~₹4–9k/mo more than the VPS path but includes managed Postgres, automatic backups, PITR, Vault, Edge Functions, and Mumbai residency without you doing the ops. <strong>The infra-cost differential (~₹50k–₹1L year-1) is dwarfed by the dev-time differential</strong> — comparing infra costs alone misframes the decision.</p>
+
+<h3>4.3 · Deploy cost (one-time)</h3>
+
+<table>
+<thead>
+<tr><th>Path</th><th>Deploy effort</th><th>Cash</th></tr>
+</thead>
+<tbody>
+<tr><td>Vendor VPS</td><td>nginx config, SSL, supervisor, php-fpm, redis tuning, cron, backup scripts, log rotation, fail2ban, OS hardening — ~3–4 dev-days vendor's, ongoing yours</td><td>included in ₹2L; ongoing your time ~1h/week forever</td></tr>
+<tr><td>Locked stack</td><td>git push to Vercel/Pages, Supabase project provisioned, Cloudflare DNS — ~half-day</td><td>included in build; ongoing your time near-zero</td></tr>
+</tbody>
+</table>
+
+<h3>4.4 · Maintain cost (year 1, after go-live)</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Path</th>
+  <th>Bug fixes &amp; small changes</th>
+  <th>Security patches</th>
+  <th>P1 incidents (suicide-screen failure, payment fail, video down)</th>
+  <th>Year-1 maintenance cash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Vendor 6-month bundled (4h/mo, 4-business-hour SLA)</td>
+  <td>Way under-quoted; 20+ hours of fixes in month 1 alone</td>
+  <td>Laravel + MySQL + nginx + OS — vendor's responsibility 6 mo, then yours</td>
+  <td><strong>4-business-hour SLA is unsafe for a clinical platform.</strong> 9pm Saturday safety-screen failure waits till Monday.</td>
+  <td>₹0 in months 1–6 (capped); ₹40–80k/mo from month 7 onward (managed-service shop or in-house dev). <strong>Year-1 maintenance ~₹2.4–4.8L.</strong></td>
+</tr>
+<tr>
+  <td>Locked stack (you maintain solo, Supabase managed underneath)</td>
+  <td>Your time ~5–10h/week first 3 months, ~3–5h/week thereafter</td>
+  <td>Supabase patches Postgres; Vercel patches Node; you patch app deps via Renovate/Dependabot. ~1h/week.</td>
+  <td>You + Sentry alerting. P1 SLA = your phone. Sustainable for first 100–200 patients; not at scale.</td>
+  <td>₹0 cash; ~150–250 of your hours year-1.</td>
+</tr>
+<tr>
+  <td>Hybrid (you + retained contractor)</td>
+  <td>Contractor retainer ₹40–60k/mo for 8–12h/mo + your time</td>
+  <td>Same as locked-stack solo</td>
+  <td>Contractor + you + Sentry. P1 = paged contractor. Sustainable.</td>
+  <td>₹4.8–7.2L cash year-1.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="callout disagree">
+<strong>The vendor's maintenance offer is the most under-priced part of the quote and the most likely failure point.</strong> 4 hours/month for a V1 launch is one busy afternoon. By month 3 you will be paying out-of-band, by month 7 you will be paying ₹40–80k/mo to someone or running it yourself. The second-Claude's read here is correct. Treat the bundled 6 months as a 30–60-day actually-useful window plus 5 months of "I'll get to it."
+</div>
+
+<h3>4.5 · Year-1 total cost (cash + opportunity)</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Path</th>
+  <th class="num">Build</th>
+  <th class="num">Run (infra)</th>
+  <th class="num">Maintain</th>
+  <th class="num">Marketing test</th>
+  <th class="num">Counsellor</th>
+  <th class="num">Year-1 cash total</th>
+  <th class="num">Your hours</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Vendor as quoted, full spec</td><td class="num">₹3.7–6.7L</td><td class="num">₹1.2–2.3L</td><td class="num">₹2.4–4.8L</td><td class="num">₹2–3.5L</td><td class="num">₹1.4–2.3L</td><td class="num"><strong>₹10.7–19.6L</strong></td><td class="num">~30+ ongoing</td></tr>
+<tr><td>Vendor revised-scope (2nd-Claude path)</td><td class="num">₹2.5–4.2L</td><td class="num">₹1.2–2.3L</td><td class="num">₹2.4–4.8L</td><td class="num">₹2–3.5L</td><td class="num">₹1.4–2.3L</td><td class="num"><strong>₹9.5–17.1L</strong></td><td class="num">~30+ ongoing</td></tr>
+<tr><td>Solo agentic, full spec</td><td class="num">₹1.5–4.3L cash</td><td class="num">₹1.7–2.6L</td><td class="num">~₹0 cash</td><td class="num">₹2–3.5L</td><td class="num">₹1.4–2.3L</td><td class="num"><strong>₹6.6–12.7L</strong></td><td class="num">~600 + 200 ongoing</td></tr>
+<tr><td>Solo agentic, revised-scope</td><td class="num">₹1.1–2.7L cash</td><td class="num">₹1.7–2.6L</td><td class="num">~₹0 cash</td><td class="num">₹2–3.5L</td><td class="num">₹1.4–2.3L</td><td class="num"><strong>₹6.2–11.1L</strong></td><td class="num">~400 + 200 ongoing</td></tr>
+<tr><td>Hybrid, revised-scope</td><td class="num">₹2.6–4.7L</td><td class="num">₹1.7–2.6L</td><td class="num">₹4.8–7.2L</td><td class="num">₹2–3.5L</td><td class="num">₹1.4–2.3L</td><td class="num"><strong>₹12.5–20.3L</strong></td><td class="num">~200 + 50 ongoing</td></tr>
+</tbody>
+</table>
+
+<p class="small"><strong>Sanity check vs second-Claude's "₹8–11L year-1."</strong> Their figure is in the realistic band for the vendor-revised path with normal marketing assumptions. They under-stated maintenance by leaving month 7+ cost out. My table includes it explicitly because it is foreseeable.</p>
+
+<h2>5 · ROI re-engagement</h2>
+
+<p>The second-Claude's revenue-side claim is "year-1 revenue ₹1.25–2.75L → year-1 net −₹6L to −₹9L." The build/maintenance side under-states; the revenue side is in the right band but worth pressure-testing.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Revenue line</th>
+  <th>Second-Claude assumption</th>
+  <th>My audit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>5 MHPs × ₹2,500/mo subscription, ramped m3–m12</td>
+  <td>₹75k–1.25L</td>
+  <td>Math checks. ₹2,500/mo × 5 × 10 months = ₹1.25L upper. Lower bound assumes churn. <strong>But the model assumes MHPs pay you a subscription</strong> — in the Indian telemed market the dominant model is commission, not MHP-pays-platform. If your model is commission-only, this line is ₹0.</td>
+</tr>
+<tr>
+  <td>Commission 10–15% on session fees, 30% leakage, ramped</td>
+  <td>₹50k–1.5L</td>
+  <td>Anchored on ~150–250 paid sessions in year 1 at ₹500–₹1,200/session × 12.5% commission. Reasonable floor. Upper bound implies ~1,000 paid sessions year-1, which requires ~80–100 sessions/month by m12 — aggressive without an organic moat.</td>
+</tr>
+<tr>
+  <td>Total year-1 revenue band</td>
+  <td>₹1.25–2.75L</td>
+  <td><strong>Floor is right, ceiling is optimistic.</strong> Realistic floor ₹0.7–1.5L (commission-only, modest patient acquisition); realistic ceiling ₹2.5L (sustained organic + Meta ads converting at 8–12% from booking-page).</td>
+</tr>
+</tbody>
+</table>
+
+<p>Cross-tabulating year-1 cash deployed × revenue:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Path</th>
+  <th class="num">Year-1 cash</th>
+  <th class="num">Year-1 revenue (realistic)</th>
+  <th class="num">Year-1 net cash</th>
+  <th>Operational break-even (months)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Vendor full spec</td><td class="num">₹10.7–19.6L</td><td class="num">₹0.7–2.5L</td><td class="num">−₹8 to −₹19L</td><td>24–36 conditional</td></tr>
+<tr><td>Vendor revised-scope</td><td class="num">₹9.5–17.1L</td><td class="num">₹0.7–2.5L</td><td class="num">−₹7 to −₹16L</td><td>20–30 conditional</td></tr>
+<tr><td>Solo agentic, revised-scope</td><td class="num">₹6.2–11.1L</td><td class="num">₹0.7–2.5L</td><td class="num">−₹4 to −₹10L</td><td>15–24 conditional</td></tr>
+<tr><td>Hybrid, revised-scope</td><td class="num">₹12.5–20.3L</td><td class="num">₹0.7–2.5L</td><td class="num">−₹10 to −₹19L</td><td>22–32 conditional</td></tr>
+</tbody>
+</table>
+
+<div class="callout flag">
+<strong>The math conclusion that survives every path.</strong> Year-1 is loss-making by ₹4–19L depending on path, with operational break-even nowhere closer than month 15. <strong>The platform is not the binding constraint on the business — demand validation is.</strong> The second-Claude's strategic point — run an ₹8,000 manual ads-to-WhatsApp test before paying milestone 1 — is the single most valuable line in their entire response. <strong>Do that first.</strong> If you cannot get 20 paid bookings in a week with manual ops, no platform configuration above changes the conclusion.
+</div>
+
+<h2 class="pagebreak">6 · Where the second-Claude doc is most valuable, most flawed, and what to take from it</h2>
+
+<div class="grid-2">
+<div class="panel">
+<h4>Most valuable contributions (adopt)</h4>
+<ul>
+  <li><strong>The ₹8,000 manual validation test before any build spend.</strong> I missed this entirely; it is the single strongest strategic point.</li>
+  <li><strong>Refusing to drop DPDP and suicide screening.</strong> Clinically and legally correct, with the right intensity.</li>
+  <li><strong>Refusing to add e-prescription in V1.</strong> Saves you 30–45 dev-days of regulatory exposure.</li>
+  <li><strong>The "informant requires DPDP scaffolding — same code" insight.</strong> Subtle and correct.</li>
+  <li><strong>30/40/30 payment restructure.</strong> Vendor risk handled correctly.</li>
+  <li><strong>12-month warranty on safety-screen defects.</strong> Adopt as a non-negotiable contract clause.</li>
+  <li><strong>Reference-check via live URLs + screen-share.</strong> The right vouching protocol.</li>
+  <li><strong>Lighthouse ≥90 ≠ accessibility audit.</strong> Sharp call-out.</li>
+  <li><strong>P1 in 4 business hours is unsafe for a clinical platform.</strong> Single most important contract clause to renegotiate.</li>
+</ul>
+</div>
+<div class="panel">
+<h4>Most flawed (do not adopt verbatim)</h4>
+<ul>
+  <li><strong>"Laravel 13 doesn't exist"</strong> — factually questionable by May 2026. Don't raise.</li>
+  <li><strong>"Audit log = one extra database table"</strong> — under-states B4 by 4–6 dev-days.</li>
+  <li><strong>"India hosting = pick the dropdown"</strong> — DPDP residency is more than region.</li>
+  <li><strong>"Hash of previous row"</strong> — wrong cryptographic shape; V1 is per-row hash + weekly Merkle, not a chain.</li>
+  <li><strong>Adding T6 proxy in V1</strong> — conflicts with intake-spec D6 lock; not flagged.</li>
+  <li><strong>"Drop SOAP versioning, plain notes legally fine"</strong> — versioning IS the addendum pattern; conflates them.</li>
+  <li><strong>"Cut Hindi at launch"</strong> — proposed as cost cut, but it's a strategic positioning regression; flag explicitly.</li>
+  <li><strong>"5 tools: PHQ-9, GAD-7, ASQ, AUDIT-C, ISI"</strong> — perpetuates the vendor's unilateral C-SSRS→ASQ swap. Spec D2 locks C-SSRS.</li>
+  <li><strong>Internal contradiction</strong> on informant + SOAP signing between Section 7 brainstorm and the Revised-scope table. Use only the Revised table.</li>
+  <li><strong>No engagement with agentic codegen, type safety, key custody, or RLS attack-test architecture</strong> — the doc treats Laravel/Vue/MySQL as just a stack pivot, not a regression of three locked B-series guarantees.</li>
+</ul>
+</div>
+</div>
+
+<h2>7 · Recommended path forward (synthesised across both Claudes + locked specs)</h2>
+
+<ol>
+<li><strong>Run the ₹8,000 demand validation test in week 1.</strong> Meta ads → WhatsApp manual flow. Target 20 paid bookings in 7 days. <em>If this fails, no platform path is rational.</em> Do not pay any milestone before this completes.</li>
+
+<li><strong>Stack: Postgres-mandated, framework negotiable.</strong> Tell the vendor — or any vendor — the database is Postgres in ap-south-1 with RLS as the primary authorisation layer for <code>session_notes</code> body columns; key custody is Vault or KMS, not <code>APP_KEY</code>. Frontend (React vs Vue) and backend language (Next.js vs Laravel-with-Inertia) are negotiable. <strong>If they cannot articulate how they implement B4 / B6 / DM5 on their stack in concrete sentences, the discrepancy isn't a discrepancy — it's a competence signal.</strong></li>
+
+<li><strong>Scope: V1 = T1 + T2 only, EN as launch default + HI as fast-follow (4-week post-launch), C-SSRS items 1–2 + 3–6 gated, 6 tools (PHQ-9 / GAD-7 / C-SSRS / AUDIT-C / ISI / PCL-5), letterhead-PDF Rx, informant L1 only, addendum-after-sign on SOAP, admin = Supabase Studio + Notion runbook, no session packages, no two-way WA.</strong> This is ~75–95 dev-days realistic, not 56.</li>
+
+<li><strong>Cost: pick path on the demand-test result.</strong>
+<ul>
+<li><em>If demand validates strongly (20+ paid in week):</em> hybrid path — you build safety-critical (schema/RLS/audit/intake/scoring), 1 contractor builds dashboards/payments/video/notifications. Year-1 cash ₹12–20L. Launch in 14–16 weeks.</li>
+<li><em>If demand validates marginally (10–20 paid):</em> solo agentic on revised scope. Year-1 cash ₹6–11L. Launch in 22–28 weeks.</li>
+<li><em>If demand fails (&lt;10 paid in week):</em> do not build. Iterate the offer, audience, or pricing first.</li>
+</ul></li>
+
+<li><strong>Vendor as-quoted is not a path on this list.</strong> It is the wrong stack at a price that masks quality risk. <em>If</em> the vendor will (a) move to Postgres, (b) extend timeline to 16–20 weeks, (c) re-price to ₹3–5L, (d) add a 12-month safety-screen warranty, (e) accept 30/40/30 payment with code-pushed-to-your-org from sprint 1, then it merges into the hybrid path's contractor slot. Until then, no.</li>
+
+<li><strong>Contract non-negotiables (whatever path you pick):</strong> source-pushed to your GitHub org from day one; safety-screen defect warranty 12 months; P1 SLA &lt; 1 hour with named on-call (not 4 business hours); milestone payments tied to demonstrable acceptance, not lump sum; documentation deliverables (architecture diagram, ENV inventory, runbook, schema doc, OpenAPI, backup/restore drill, on-call playbook, walkthrough video) explicitly named for milestone 2.</li>
+
+<li><strong>Compliance non-negotiables:</strong> audit log = per-row sha256 + monthly partition + weekly Merkle to S3 ap-south-1 (B4); SOAP body deny on admin at DB layer (B6); Vault/KMS key custody (DM5); DSR portal schema in V1 (B3); consent ledger versioned transcripts (B2); breach 72h workflow (B9); vendor DPA registry with renewal alerts (B10).</li>
+</ol>
+
+<h2>8 · Open questions the founder must answer before locking any path</h2>
+
+<ol>
+<li><strong>Demand validation:</strong> have you run the ₹8,000 ads-to-WhatsApp test? If not, when? <em>This must be Q1.</em></li>
+<li><strong>Revenue model:</strong> commission-only on sessions, or MHP subscription too? Affects the year-1 revenue floor materially.</li>
+<li><strong>Launch trigger:</strong> first 10 patients? First MHP onboarded? First DPDP-audit-ready checkpoint? Sets the V1 scope cutoff.</li>
+<li><strong>Hindi at launch:</strong> required for positioning, or fast-follow acceptable? Saves 8–12 dev-days if fast-follow.</li>
+<li><strong>Track 6 (proxy):</strong> defer to V1.5 per intake-spec D6, or reopen with parental-consent artifact + ML sign-off?</li>
+<li><strong>Maintenance plan from month 7:</strong> in-house dev, retained contractor (₹40–80k/mo), or you?</li>
+<li><strong>Vendor: stay or replace?</strong> If he agrees to Postgres + 16–20 wks + ₹3–5L + 12-mo safety warranty + 30/40/30 + code-day-1 + named compliance deliverables — keep. If he refuses any of these — replace.</li>
+<li><strong>Bus factor:</strong> is "you alone" acceptable for V1, or do you need a second technical person committed before launch?</li>
+</ol>
+
+<div class="footer">
+<strong>Drafted:</strong> 2026-05-05 by Claude (Opus 4.7) for the founder. <br>
+<strong>Sources cross-referenced:</strong> second-Claude analysis transcript (vendor-quote review + scope-revision proposal), <code>data-model.md</code> v1.1, <code>intake-spec.md</code> v1.0, <code>stack-decision.md</code> v1.0, <code>Saday_Master_Blueprint.html</code>, <code>Saday_Action_Plan_by_Claude.md</code>, <code>Saday_Solo_Agentic_Build_Estimate.html</code> (prior PDF), <code>Saday Wellness Quote.pdf</code> (vendor). <br>
+<strong>Status:</strong> internal audit document. Calibrated to be honest, not diplomatic. Numbers are best-guesses with explicit bias flags. Treat the second-Claude doc as ~70% useful and ~30% misleading; this audit isolates which is which.
+</div>
+
+</body>
+</html>

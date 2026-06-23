@@ -1,0 +1,509 @@
+[
+  {
+    "module": "Manual Booking",
+    "screen": "Manual Booking",
+    "submenu": "—",
+    "url": "https://crm.swasthmind.com/manual-booking",
+    "headings": [],
+    "tabs": [
+      "New Booking",
+      "Appointment History"
+    ],
+    "tables": [],
+    "actionsAvailable": [
+      "Dashboard",
+      "Conversations",
+      "My Schedule",
+      "My Therapists",
+      "Manual Booking",
+      "Sessions",
+      "Assessments",
+      "My Clients",
+      "Reports",
+      "Seminars",
+      "Internships/Career",
+      "Ecommerce",
+      "Cancellation & Reschedule Policy",
+      "Session Follow-ups",
+      "FAQ & Tutorials",
+      "Bulk Messages",
+      "New Booking",
+      "Appointment History",
+      "+ Create New Client",
+      "Clear"
+    ],
+    "flaggedDestructive": [
+      "Create Booking & Send Payment Link"
+    ],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/manual_booking/manual_booking__full.png",
+    "designAudit": {
+      "module": "Manual Booking",
+      "screen": "Manual Booking",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1f2d2b",
+            "count": 176
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 17
+          },
+          {
+            "hex": "#6b7c78",
+            "count": 6
+          },
+          {
+            "hex": "#1e293b",
+            "count": 4
+          },
+          {
+            "hex": "#808080",
+            "count": 2
+          },
+          {
+            "hex": "#545454",
+            "count": 2
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#efefef",
+            "count": 2
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          },
+          {
+            "hex": "#eef4f2",
+            "count": 1
+          },
+          {
+            "hex": "#f1f5f9",
+            "count": 1
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 1
+          },
+          {
+            "hex": "#6366f1",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 7,
+        "uniqueBgColors": 6
+      },
+      "typography": {
+        "fontFamilies": [
+          "Inter",
+          "Arial"
+        ],
+        "topFontSizes": [
+          {
+            "size": "16px",
+            "count": 37
+          },
+          {
+            "size": "14px",
+            "count": 9
+          },
+          {
+            "size": "12px",
+            "count": 7
+          },
+          {
+            "size": "24px",
+            "count": 2
+          }
+        ],
+        "fontWeights": [
+          "600"
+        ],
+        "uniqueFontSizeCount": 4
+      },
+      "layout": {
+        "type": "unknown",
+        "flexCount": 57,
+        "gridCount": 1,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 23,
+        "inputs": 9,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 38,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 6,
+        "charts": 23,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "contained"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 6,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1.47,
+        "bodyColor": "#1f2d2b",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "6 input(s) missing label",
+        "Body text contrast ratio 1.47 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Manual Booking",
+    "screen": "New Booking",
+    "submenu": "New Booking",
+    "url": "https://crm.swasthmind.com/manual-booking",
+    "headings": [],
+    "tabs": [
+      "New Booking",
+      "Appointment History"
+    ],
+    "tables": [],
+    "actionsAvailable": [
+      "Dashboard",
+      "Conversations",
+      "My Schedule",
+      "My Therapists",
+      "Manual Booking",
+      "Sessions",
+      "Assessments",
+      "My Clients",
+      "Reports",
+      "Seminars",
+      "Internships/Career",
+      "Ecommerce",
+      "Cancellation & Reschedule Policy",
+      "Session Follow-ups",
+      "FAQ & Tutorials",
+      "Bulk Messages",
+      "New Booking",
+      "Appointment History",
+      "+ Create New Client",
+      "Clear"
+    ],
+    "flaggedDestructive": [
+      "Create Booking & Send Payment Link"
+    ],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/manual_booking/new_booking__full.png",
+    "designAudit": {
+      "module": "Manual Booking",
+      "screen": "New Booking",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1f2d2b",
+            "count": 177
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 17
+          },
+          {
+            "hex": "#6b7c78",
+            "count": 6
+          },
+          {
+            "hex": "#1e293b",
+            "count": 4
+          },
+          {
+            "hex": "#808080",
+            "count": 2
+          },
+          {
+            "hex": "#545454",
+            "count": 2
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#efefef",
+            "count": 2
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          },
+          {
+            "hex": "#eef4f2",
+            "count": 1
+          },
+          {
+            "hex": "#f1f5f9",
+            "count": 1
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 1
+          },
+          {
+            "hex": "#6366f1",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 7,
+        "uniqueBgColors": 6
+      },
+      "typography": {
+        "fontFamilies": [
+          "Inter",
+          "Arial"
+        ],
+        "topFontSizes": [
+          {
+            "size": "16px",
+            "count": 37
+          },
+          {
+            "size": "14px",
+            "count": 10
+          },
+          {
+            "size": "12px",
+            "count": 7
+          },
+          {
+            "size": "24px",
+            "count": 2
+          }
+        ],
+        "fontWeights": [
+          "600"
+        ],
+        "uniqueFontSizeCount": 4
+      },
+      "layout": {
+        "type": "unknown",
+        "flexCount": 57,
+        "gridCount": 1,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 23,
+        "inputs": 9,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 38,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 6,
+        "charts": 23,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "contained"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 6,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1.47,
+        "bodyColor": "#1f2d2b",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "6 input(s) missing label",
+        "Body text contrast ratio 1.47 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Manual Booking",
+    "screen": "Appointment History",
+    "submenu": "Appointment History",
+    "url": "https://crm.swasthmind.com/manual-booking",
+    "headings": [],
+    "tabs": [
+      "New Booking",
+      "Appointment History"
+    ],
+    "tables": [],
+    "actionsAvailable": [
+      "Dashboard",
+      "Conversations",
+      "My Schedule",
+      "My Therapists",
+      "Manual Booking",
+      "Sessions",
+      "Assessments",
+      "My Clients",
+      "Reports",
+      "Seminars",
+      "Internships/Career",
+      "Ecommerce",
+      "Cancellation & Reschedule Policy",
+      "Session Follow-ups",
+      "FAQ & Tutorials",
+      "Bulk Messages",
+      "New Booking",
+      "Appointment History",
+      "+ Create New Client",
+      "Clear"
+    ],
+    "flaggedDestructive": [
+      "Create Booking & Send Payment Link"
+    ],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/manual_booking/appointment_history__full.png",
+    "designAudit": {
+      "module": "Manual Booking",
+      "screen": "Appointment History",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1f2d2b",
+            "count": 177
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 17
+          },
+          {
+            "hex": "#6b7c78",
+            "count": 6
+          },
+          {
+            "hex": "#1e293b",
+            "count": 4
+          },
+          {
+            "hex": "#808080",
+            "count": 2
+          },
+          {
+            "hex": "#545454",
+            "count": 2
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#efefef",
+            "count": 2
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          },
+          {
+            "hex": "#eef4f2",
+            "count": 1
+          },
+          {
+            "hex": "#f1f5f9",
+            "count": 1
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 1
+          },
+          {
+            "hex": "#6366f1",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 7,
+        "uniqueBgColors": 6
+      },
+      "typography": {
+        "fontFamilies": [
+          "Inter",
+          "Arial"
+        ],
+        "topFontSizes": [
+          {
+            "size": "16px",
+            "count": 37
+          },
+          {
+            "size": "14px",
+            "count": 10
+          },
+          {
+            "size": "12px",
+            "count": 7
+          },
+          {
+            "size": "24px",
+            "count": 2
+          }
+        ],
+        "fontWeights": [
+          "600"
+        ],
+        "uniqueFontSizeCount": 4
+      },
+      "layout": {
+        "type": "unknown",
+        "flexCount": 57,
+        "gridCount": 1,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 23,
+        "inputs": 9,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 38,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 6,
+        "charts": 23,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "contained"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 6,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1.47,
+        "bodyColor": "#1f2d2b",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "6 input(s) missing label",
+        "Body text contrast ratio 1.47 below WCAG AA (4.5)"
+      ]
+    }
+  }
+]

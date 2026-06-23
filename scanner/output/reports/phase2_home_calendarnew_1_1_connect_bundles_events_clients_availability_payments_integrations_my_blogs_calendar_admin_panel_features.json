@@ -1,0 +1,1178 @@
+[
+  {
+    "module": "Payments",
+    "feature": "Withdrawals history",
+    "subCapability": "1-1 Connect",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Withdrawals history",
+    "subCapability": "Bundles",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Withdrawals history",
+    "subCapability": "Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Withdrawals history",
+    "subCapability": "Availability",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Withdrawals history",
+    "subCapability": "Payments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Withdrawals history",
+    "subCapability": "Integrations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Withdrawals history",
+    "subCapability": "My Blogs",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Withdrawals history",
+    "subCapability": "Create new",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Withdrawals history",
+    "subCapability": "Withdrawl Date",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Withdrawals history",
+    "subCapability": "Account Details",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Withdrawals history",
+    "subCapability": "Amount",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "1-1 Connect",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "Bundles",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "Availability",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "Payments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "Integrations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "My Blogs",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "Create new",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "1-1 Connect",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "Events",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "Bundles",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "Date Filter",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "Payment Status",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "Session Status",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "Session Type",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "Clear Filters",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Payment Details",
+    "subCapability": "Date & Time",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "1-1 Connect",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Bundles",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Availability",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Payments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Integrations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "My Blogs",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Create new",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Add New",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Active",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Inactive",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Coupon Name",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Coupon Code",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Discount",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Apply On",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Times Used",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Usage Limit",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Start Date",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Payments",
+    "feature": "Coupon management",
+    "subCapability": "Expiry Date",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Blogs",
+    "feature": "Published Articles",
+    "subCapability": "1-1 Connect",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Blogs",
+    "feature": "Published Articles",
+    "subCapability": "Bundles",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Blogs",
+    "feature": "Published Articles",
+    "subCapability": "Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Blogs",
+    "feature": "Published Articles",
+    "subCapability": "Availability",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Blogs",
+    "feature": "Published Articles",
+    "subCapability": "Payments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Blogs",
+    "feature": "Published Articles",
+    "subCapability": "Integrations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Blogs",
+    "feature": "Published Articles",
+    "subCapability": "My Blogs",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Blogs",
+    "feature": "Published Articles",
+    "subCapability": "Create new",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Blogs",
+    "feature": "Published Articles",
+    "subCapability": "New Article",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Back to home",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Segment Analysis",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Team Members",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Payments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Manage Payout",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Global Defaults",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Form Templates",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Org Settings",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Create new",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Invite Member",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Active",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Invited",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Export",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Member Name",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Email",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Team Members",
+    "subCapability": "Access Role",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Gateways",
+    "subCapability": "Back to home",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Gateways",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Gateways",
+    "subCapability": "Segment Analysis",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Gateways",
+    "subCapability": "Team Members",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Gateways",
+    "subCapability": "Payments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Gateways",
+    "subCapability": "Manage Payout",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Gateways",
+    "subCapability": "Global Defaults",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Gateways",
+    "subCapability": "Form Templates",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Gateways",
+    "subCapability": "Org Settings",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Gateways",
+    "subCapability": "Create new",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Gateways",
+    "subCapability": "Learn More",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Gateways",
+    "subCapability": "Manage",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Gateways",
+    "subCapability": "Learn More",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Gateways",
+    "subCapability": "Install",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Gateways",
+    "subCapability": "Learn More",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Gateways",
+    "subCapability": "Install",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Deductions",
+    "subCapability": "Back to home",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Deductions",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Deductions",
+    "subCapability": "Segment Analysis",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Deductions",
+    "subCapability": "Team Members",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Deductions",
+    "subCapability": "Payments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Deductions",
+    "subCapability": "Manage Payout",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Deductions",
+    "subCapability": "Global Defaults",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Deductions",
+    "subCapability": "Form Templates",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Deductions",
+    "subCapability": "Org Settings",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Deductions",
+    "subCapability": "Create new",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Deductions",
+    "subCapability": "Add New",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Statuses",
+    "subCapability": "Back to home",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Statuses",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Statuses",
+    "subCapability": "Segment Analysis",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Statuses",
+    "subCapability": "Team Members",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Statuses",
+    "subCapability": "Payments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Statuses",
+    "subCapability": "Manage Payout",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Statuses",
+    "subCapability": "Global Defaults",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Statuses",
+    "subCapability": "Form Templates",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Statuses",
+    "subCapability": "Org Settings",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Payment Statuses",
+    "subCapability": "Create new",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Template library",
+    "subCapability": "Back to home",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Template library",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Template library",
+    "subCapability": "Segment Analysis",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Template library",
+    "subCapability": "Team Members",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Template library",
+    "subCapability": "Payments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Template library",
+    "subCapability": "Manage Payout",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Template library",
+    "subCapability": "Global Defaults",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Template library",
+    "subCapability": "Form Templates",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Template library",
+    "subCapability": "Org Settings",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Template library",
+    "subCapability": "Create new",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Template library",
+    "subCapability": "Create Your First Template",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Back to home",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Segment Analysis",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Team Members",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Payments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Manage Payout",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Global Defaults",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Form Templates",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Org Settings",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Create new",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Back",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Preview",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Save as Draft",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Publish",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Text InputSingle line text",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "EmailEmail address",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "NumberNumeric input",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Text AreaMultiple line text",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "DropdownSelect from options",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Radio ButtonsSingle choice",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "CheckboxesMultiple choices",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "DateDate picker",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "TimeTime picker",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Linear ScaleScale from 1-10",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Multiple Choice GridGrid with radio options",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Admin Panel",
+    "feature": "Form Builder",
+    "subCapability": "Checkbox GridGrid with checkboxes",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  }
+]

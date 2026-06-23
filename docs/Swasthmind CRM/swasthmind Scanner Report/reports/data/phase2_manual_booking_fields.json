@@ -1,0 +1,242 @@
+[
+  {
+    "entity": "Manual Booking",
+    "field": "Search Client",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Manual Booking",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "Name, phone or email",
+    "type": "text",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Manual Booking",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Manual Booking",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "Online",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Manual Booking",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Manual Booking",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Manual Booking",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": ":rc:",
+    "type": "radio",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Manual Booking",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": ":rc:",
+    "type": "radio",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Manual Booking",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "Search Client",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "New Booking",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "Name, phone or email",
+    "type": "text",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "New Booking",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "New Booking",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "Online",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "New Booking",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "New Booking",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "New Booking",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": ":rc:",
+    "type": "radio",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "New Booking",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": ":rc:",
+    "type": "radio",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "New Booking",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "Search Client",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Appointment History",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "Name, phone or email",
+    "type": "text",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Appointment History",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Appointment History",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "Online",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Appointment History",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Appointment History",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Appointment History",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": ":rc:",
+    "type": "radio",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Appointment History",
+    "notes": ""
+  },
+  {
+    "entity": "Manual Booking",
+    "field": ":rc:",
+    "type": "radio",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Appointment History",
+    "notes": ""
+  }
+]

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saday Wellness — Master Blueprint v2.0</title>
+<style>
+  :root {
+    --blue: #1a56db; --green: #057a55; --red: #c81e1e; --orange: #b45309;
+    --purple: #6d28d9; --teal: #0f766e;
+    --gray: #374151; --light: #f9fafb; --border: #e5e7eb;
+    --warn: #fef3c7; --ok: #ecfdf5; --info: #eff6ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; color: var(--gray); background: #fff; }
+  .toc { position: fixed; top: 0; left: 0; width: 240px; height: 100vh; overflow-y: auto; background: #0f172a; padding: 20px 0; z-index: 100; }
+  .toc .brand { padding: 0 16px 16px; border-bottom: 1px solid #1e293b; margin-bottom: 12px; }
+  .toc .brand b { color: #f1f5f9; font-size: 14px; font-weight: 700; display: block; }
+  .toc .brand span { color: #64748b; font-size: 11px; }
+  .toc h3 { color: #94a3b8; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; padding: 16px 16px 6px; }
+  .toc a { display: block; color: #cbd5e1; font-size: 12px; padding: 5px 16px 5px 20px; text-decoration: none; border-left: 2px solid transparent; }
+  .toc a:hover { color: #fff; border-left-color: var(--blue); background: #1e293b; }
+  main { margin-left: 240px; padding: 32px 44px 100px; max-width: 1180px; }
+  .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #f1f5f9; padding: 20px 24px; border-radius: 8px; margin-bottom: 32px; }
+  h2 { font-size: 19px; font-weight: 700; margin: 44px 0 14px; padding-top: 10px; border-top: 2px solid var(--blue); color: var(--blue); }
+  .card { border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px; margin-bottom: 14px; background: #fff; }
+  .badge { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 10.5px; font-weight: 600; }
+  .badge-green { background: #d1fae5; color: var(--green); }
+  .badge-red { background: #fee2e2; color: var(--red); }
+  .pill-p0 { background: #fee2e2; color: var(--red); font-weight: 700; padding: 2px 6px; border-radius: 4px; }
+  .track { border-left: 4px solid #60a5fa; padding: 12px 16px; margin-bottom: 12px; background: #f8fafc; border-radius: 0 6px 6px 0; }
+</style>
+</head>
+<body>
+
+<nav class="toc">
+  <div class="brand"><b>Saday Wellness</b><span>Master Blueprint · v2.0 (Amalgamated)</span></div>
+  <h3>Architecture</h3>
+  <a href="#summary">1. Executive Summary</a>
+  <a href="#moat">2. The Informant Moat (L1-L3)</a>
+  <a href="#vault">3. The Material Vault</a>
+  <a href="#triage">4. Adaptive Intake 2.0</a>
+  <h3>Implementation</h3>
+  <a href="#tech">5. Tech Stack & Security</a>
+  <a href="#roadmap">6. 6-Month Roadmap</a>
+</nav>
+
+<main>
+
+<div class="hero">
+  <h1>Saday Wellness — Master Blueprint v2.0</h1>
+  <p>Amalgamated Clinical Ecosystem. Incorporating Swasthmind clinical depth and proprietary Informant-led care logic. Excludes all Tealfeed marketplace/payout fluff.</p>
+  <div class="tags">
+    <span class="badge badge-green">V2.0 · April 2026</span>
+    <span class="badge badge-green">DPDP Compliant</span>
+    <span class="badge badge-red">P0: Informant System</span>
+  </div>
+</div>
+
+<h2 id="summary">1. Executive Summary</h2>
+<p>Saday is a <b>clinical-first</b> mental health platform. Unlike generic booking sites, Saday focuses on the "Invisibles" in care: the family members (Informants), the longitudinal outcome data, and the strict routing of patients into five distinct care tracks.</p>
+
+<h2 id="moat">2. The Informant Moat (L1/L2/L3 System)</h2>
+<p>This is the core differentiator. We enable family involvement without breaking patient confidentiality.</p>
+<div class="card">
+  <h4>L1: Observer (Passive)</h4>
+  <p>Caregiver submits weekly observation forms (mood, sleep, compliance). <b>View:</b> Only their own submissions. <b>Benefit:</b> Tracks "Insight-free" symptoms (Mania/Psychosis).</p>
+</div>
+<div class="card">
+  <h4>L2: Collateral (Active)</h4>
+  <p>Informant invited for a specific session. <b>View:</b> Joint video room only. <b>Benefit:</b> Essential for ADHD/Dementia/Paediatric diagnostics.</p>
+</div>
+<div class="card">
+  <h4>L3: Guardian (Full)</h4>
+  <p>Parent/Legal Guardian controls the account. <b>Requirement:</b> Mandatory for patients &lt;12 years old.</p>
+</div>
+
+<h2 id="vault">3. The Saday Material Vault</h2>
+<p>A centralized storage system for clinical assets (PDFs, Videos, Homework). No more ad-hoc WhatsApp attachments.</p>
+<ul>
+  <li><b>Storage:</b> Supabase S3 bucket (Mumbai).</li>
+  <li><b>Permission Engine:</b> MHP "dispatches" a file; patient receives a WhatsApp link (MSG91) + a notification in their Patient Portal.</li>
+  <li><b>Tracking:</b> System logs <code>view_event</code>. MHP can see if the patient actually read the "Anxiety Toolkit" before the next session.</li>
+</ul>
+
+<h2 id="triage">4. Adaptive Intake 2.0 (Symptom Clusters)</h2>
+<p>We move away from the PHQ-9 as the front door. We use **Symptom Clusters**.</p>
+<table>
+  <thead><tr><th>Cluster</th><th>Tool Triggered</th><th>Red Flag Rule</th></tr></thead>
+  <tbody>
+    <tr><td>Mood/Sadness</td><td>PHQ-9</td><td>Q9 > 0 → Safety Protocol</td></tr>
+    <tr><td>Memory/Confusion</td><td>AD8 (Informant)</td><td>Age > 60 → Geriatric Triage</td></tr>
+    <tr><td>Intense Conflicts</td><td>MSI-BPD</td><td>Route to DBT-trained MHP</td></tr>
+    <tr><td>Addiction</td><td>AUDIT/DAST</td><td>Withdrawal signs → Emergency Exit</td></tr>
+  </tbody>
+</table>
+
+<h2 id="tech">5. Tech Stack & Security</h2>
+<div class="card">
+  <p><b>Backend:</b> Supabase (Postgres + RLS) - Mumbai Region.</p>
+  <p><b>Video:</b> Daily.co (Native Embed).</p>
+  <p><b>Communications:</b> MSG91 (WhatsApp Business API) - Two-way inbox.</p>
+  <p><b>Security:</b> HttpOnly Cookies, Field-level encryption for Phone/Email.</p>
+</div>
+
+<h2 id="roadmap">6. 6-Month Roadmap</h2>
+<div class="track">
+  <b>Month 1-2: The Front Door</b>
+  <p>Adaptive Intake (HI/EN) + Booking + Basic Notes.</p>
+</div>
+<div class="track">
+  <b>Month 3-4: The Clinical Core</b>
+  <p>Informant Linking (L1) + 12 core assessment tools + Material Vault.</p>
+</div>
+<div class="track">
+  <b>Month 5-6: The Care Loop</b>
+  <p>Outcome tracking (Week 0-12) + L2 Collateral sessions + Professional Dashboard.</p>
+</div>
+
+</main>
+</body>
+</html>

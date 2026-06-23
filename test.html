@@ -1,0 +1,1599 @@
+<html lang="en" data-ai-id="el-d26309b5" id="el-d26309b5"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Readex%20Pro:wght@400;500;600;700&amp;family=Lato:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style data-ai-id="stl-global-style" id="stl-global-style">
+   :root {
+          
+--color-primary-lightest: #efebf7;
+--color-primary-lighter: #c8b7e9;
+--color-primary-light: #a78be0;
+--color-primary: #5e2dc6;
+--color-primary-dark: #4a20a1;
+--color-primary-darker: #3b1984;
+--color-primary-darkest: #27105d;
+
+--color-accent1-lightest: #fcf8f8;
+--color-accent1-lighter: #f7e7e7;
+--color-accent1-light: #f3d8d8;
+--color-accent1: #edb6b6;
+--color-accent1-dark: #de7171;
+--color-accent1-darker: #d53b3d;
+--color-accent1-darkest: #9e1e21;
+
+--color-accent2-lightest: #fdfdfd;
+--color-accent2-lighter: #fbfaf9;
+--color-accent2-light: #f9f8f6;
+--color-accent2: #f4f2f0;
+--color-accent2-dark: #cec4b5;
+--color-accent2-darker: #b2a188;
+--color-accent2-darkest: #857154;
+
+--color-accent3-lightest: #f5f9fc;
+--color-accent3-lighter: #dbebf6;
+--color-accent3-light: #c6e1f2;
+--color-accent3: #93c9ec;
+--color-accent3-dark: #4fabe3;
+--color-accent3-darker: #1e94da;
+--color-accent3-darkest: #126899;
+
+--color-neutral-lightest: #f5f5f5;
+--color-neutral-lighter: #dddddd;
+--color-neutral-light: #c9c9c9;
+--color-neutral: #9e9e9e;
+--color-neutral-dark: #7e7e7e;
+--color-neutral-darker: #666666;
+--color-neutral-darkest: #474747;
+
+
+          
+/* Buttons */
+--button-primary-bg: var(--color-primary);
+--button-primary-hover-bg: var(--color-primary-dark);
+--button-primary-text: var(--color-neutral-lightest);
+--button-secondary-bg: var(--color-neutral-lightest);
+--button-secondary-border: var(--color-neutral-light);
+--button-secondary-text: var(--color-primary-dark);
+--button-tertiary-text: var(--color-accent1-dark);
+
+/* Text & Links */
+--link-color: var(--color-primary);
+--link-hover-color: var(--color-primary-dark);
+--heading-color: var(--color-neutral-darkest);
+--body-color: var(--color-neutral);
+--subhead-color: var(--color-neutral-dark);
+--muted-text-color: var(--color-neutral-light);
+--placeholder-color: var(--color-neutral-light);
+
+/* Surfaces & Layout */
+--card-bg: var(--color-neutral-lightest);
+--card-hover-bg: var(--color-neutral-lighter);
+--card-border: var(--color-neutral-lighter);
+section:nth-of-type(odd) {
+  --section-bg: linear-gradient(
+    180deg,
+    var(--color-neutral-lightest),
+    var(--color-primary-lightest)
+  );
+}
+section:nth-of-type(even) {
+  --section-bg: linear-gradient(
+    180deg,
+    var(--color-primary-lightest),
+    var(--color-neutral-lightest)
+  );
+}
+--nav-bg: var(--color-neutral-lightest);
+--nav-text: var(--color-neutral-darkest);
+--nav-active: var(--color-primary);
+--footer-bg: var(--color-neutral-darkest);
+--footer-text: var(--color-neutral-light);
+
+/* Components & Indicators */
+--badge-bg: var(--color-accent1);
+--icon-color: var(--color-primary);
+--icon-secondary-color: var(--color-accent2);
+--progress-color: var(--color-primary);
+--progress-bg: var(--color-neutral-lighter);
+--tab-active: var(--color-primary);
+--tab-inactive: var(--color-neutral-light);
+
+/* Forms & Inputs */
+--input-border-active: var(--color-primary);
+--input-focus: var(--color-primary-light);
+--input-border: var(--color-neutral-light);
+--input-bg: var(--color-neutral-lightest);
+
+/* Callouts & Banners */
+--callout-bg: var(--color-accent1-lightest);
+--callout-border: var(--color-accent1-light);
+
+/* Stats & Illustrations */
+--stats-highlight: var(--color-primary-dark);
+--stats-accent: var(--color-accent2-dark);
+--illu-main: var(--color-primary);
+--illu-accent: var(--color-accent1);
+--illu-fill-light: var(--color-neutral-lightest);
+--illu-fill-dark: var(--color-neutral-darkest);
+
+
+          
+  --font-heading: 'Readex Pro', sans-serif;
+  --font-body: 'Lato', sans-serif;
+
+
+          --spacing-xs: 0.5rem;
+          --spacing-sm: 1rem;
+          --spacing-md: 2rem;
+          --spacing-lg: 3rem;
+          --spacing-xl: 4rem;
+          --spacing-xxl: 6rem;
+
+          --border-radius: 12px;
+          --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--color-neutral);
+            background-color: var(--color-background);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+        }
+        
+        h2 {
+            font-size: clamp(1.75rem, 5vw, 2.75rem);
+        }
+        
+        h3 {
+            font-size: clamp(1.35rem, 3vw, 2rem);
+        }
+
+        h4 {
+          font-size: 1.25rem;
+        }
+        
+        p {
+            font-size: 1.025rem;
+            line-height: 1.8;
+        }
+        
+        a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        button {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 600;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border: none;
+            border-radius: var(--border-radius-md);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }    
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);}
+        }
+        
+        .section-divider {
+            width: 60px;
+            height: 4px;
+            background-color: var(--color-accent);
+            margin: var(--spacing-md) 0;
+            border-radius: var(--border-radius-sm);
+        }
+  </style>
+<!-- Alpine.js -->
+<script defer="" src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js">
+</script>
+<script data-ai-id="scr-global-script" id="scr-global-script">
+   document.addEventListener('DOMContentLoaded', function() {
+        const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+        smoothScrollLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const element = document.querySelector(href);
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    });
+  </script>
+
+    <script editor-injected-script="true">
+      window.__CURRENT_ORG__ = {"_id":"6999ad918983583b6c770d60","currencyCode":"INR"};
+      window.__MOCK_PRODUCTS__ = {"packages":[{"title":"Comprehensive Mental Health Support Package","description":"Includes individual consultations, access to CBT workshops, community support, and AI-powered WhatsApp assistance.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-package-Comprehensive_Mental_Health_Support_Package.png","mrp":148,"price":98}],"courses":[{"title":"CBT Mastery for Practitioners","description":"Enhance your clinical skills with evidence-based Cognitive Behavioral Therapy techniques.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-course-CBT_Mastery_for_Practitioners.png","mrp":148,"price":98},{"title":"Mindfulness for Mental Wellness","description":"Learn guided mindfulness exercises to improve your mental health and well-being.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-course-Mindfulness_for_Mental_Wellness.png","mrp":148,"price":98},{"title":"Confidentiality and Ethics in Mental Health","description":"Understand the importance of confidentiality and professional standards in mental health practice.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-course-Confidentiality_and_Ethics_in_Mental_Health.png","mrp":148,"price":98}],"digitalProducts":[{"title":"Evidence-Based Mental Health eBook","description":"A comprehensive guide to evidence-based practices in mental health care.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-digitalProduct-Evidence-Based_Mental_Health_eBook.png","mrp":148,"price":98}],"memberships":[{"title":"Saday Wellness Pro Membership","description":"Gain unlimited access to all courses, workshops, and exclusive community support programs.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-membership-Saday_Wellness_Pro_Membership.png","mrp":148,"price":98}],"telegramCommunities":[{"title":"Saday Wellness Support Group","description":"A private Telegram community for peer support, sharing experiences, and professional advice.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-telegramCommunity-Saday_Wellness_Support_Group.png","mrp":148,"price":98}],"webinars":[{"title":"Advanced CBT Techniques Webinar","description":"Join Dr. Shivangini Singh for an in-depth webinar on advanced Cognitive Behavioral Therapy techniques.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-webinar-Advanced_CBT_Techniques_Webinar.png","mrp":148,"price":98}]};
+      window.__CDN_URL__ = "https://d502jbuhuh9wk.cloudfront.net/";
+    </script>
+  
+<script src="https://sadaywellness.graphy.com/n/websiteV3/utils.js" data-preview-mode="true" editor-injected-script="true"></script>
+<script src="https://sadaywellness.graphy.com/n/websiteV3/courselistV3.js" data-preview-mode="true" editor-injected-script="true"></script></head>
+<body data-ai-id="el-90261894" id="el-90261894">
+<section data-ai-id="sec-topbar" data-nav-element="header" data-section-type="header" data-template-name="HEADER1" id="sec-topbar">
+<div class="topbar-wrapper" data-ai-id="el-topbar-wrapper" data-nav-element="header" data-type="html" id="el-topbar-wrapper">
+<div class="topbar-left" data-ai-id="el-topbar-left" data-nav-element="header" data-type="html" id="el-topbar-left">
+<div class="logo-container" data-ai-id="el-logo-container" data-nav-element="header" data-type="html" id="el-logo-container">
+<a data-ai-id="el-logo-link" data-nav-element="header" href="/" id="el-logo-link">
+<img alt="Saday Wellness Logo" data-ai-id="el-logo-img" data-cta-type="website_logo" data-nav-element="header" data-type="image" id="el-logo-img" src="https://d502jbuhuh9wk.cloudfront.net/ai_web/6999ad918983583b6c770d60/media/image/345d9b3f-c917-4890-a85c-7ea63f9878b3-Saday_tree.png">
+</a>
+</div>
+</div>
+<div class="topbar-right" data-ai-id="el-topbar-right" data-nav-element="header" data-type="html" id="el-topbar-right">
+<nav class="nav-left" data-ai-id="el-nav-left" data-nav-element="header" data-type="html" id="el-nav-left">
+<a class="dashboard-link" data-ai-id="el-nav-courses" data-nav-element="header" data-type="text" href="/courses" id="el-nav-courses">
+       Courses
+      </a>
+<a class="dashboard-link" data-ai-id="el-nav-about" data-nav-element="header" data-type="text" href="/aboutus" id="el-nav-about">
+       About
+      </a>
+<a class="dashboard-link" data-ai-id="el-nav-contact" data-nav-element="header" data-type="text" href="/contactus" id="el-nav-contact">
+       Contact
+      </a>
+<a class="dashboard-link" data-ai-id="el-dashboard-link" data-cta-type="dashboard" data-nav-element="header" data-type="text" href="#" id="el-dashboard-link" style="display:none">
+       Dashboard
+      </a>
+<button class="login-btn" data-ai-id="el-login-btn" data-button-enum="login" data-cta-type="login_signup" data-nav-element="header" data-type="html" id="el-login-btn">
+       Login
+      </button>
+</nav>
+<!-- USER PIC AND DROPDOWN SECTION -->
+<div data-ai-id="el-logged-in-state" data-cta-type="logged-in-state" data-nav-element="header" id="el-logged-in-state">
+<button class="dropdown-trigger-wrapper" data-ai-id="el-dropdown-trigger" data-nav-element="header" data-type="html" id="el-dropdown-trigger">
+<div class="avatar" data-ai-id="el-avatar" data-nav-element="header" data-type="html" id="el-avatar">
+<img class="avatar" data-ai-id="el-avatar-text" data-cta-type="profile_icon" data-nav-element="header" id="el-avatar-text" src="%%PROFILE_ICON%%">
+</div>
+<svg data-ai-id="el-chevron-icon" data-nav-element="header" data-type="html" fill="none" height="16" id="el-chevron-icon" stroke="currentColor" viewBox="0 0 24 24" width="16">
+<polyline points="6 9 12 15 18 9">
+</polyline>
+</svg>
+</button>
+</div>
+</div>
+<div class="dropdown-menu" data-ai-id="el-dropdown-menu" data-nav-element="header" data-type="html" id="el-dropdown-menu">
+<a data-ai-id="el-purchases-text" data-cta-type="my-purchases" data-nav-element="header" data-type="text" href="" id="el-purchases-text">
+      My Purchases
+     </a>
+<a data-ai-id="el-profile-text" data-cta-type="my-profile" data-nav-element="header" data-type="text" href="" id="el-profile-text">
+      My Profile
+     </a>
+<button data-ai-id="el-logout-btn" data-button-enum="logout" data-cta-type="signout" data-nav-element="header" data-type="html" id="el-logout-btn">
+      Log Out
+     </button>
+</div>
+</div>
+</section>
+<style data-ai-id="stl-topbar" id="stl-topbar">
+   #sec-topbar{
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    background: var(--section-bg);
+    padding:10;
+  }
+  .topbar-wrapper {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 73.66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 77.752px;
+    background-color: var(--section-bg);
+    border-bottom: 1px solid var(--card-border);
+    z-index: 100;
+    box-sizing: border-box;
+  }
+
+  .topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 19.444px;
+  }
+ 
+  .logo-container {
+    width: auto;
+    max-width: 160px; 
+    height: 46.667px;
+    background-color: var(--logo-bg);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .logo-container img {
+    width: auto;
+    height: 46.667px;
+    max-width: 160px;
+    object-fit: contain;
+  }
+
+  .site-title {
+    font-size: 15.556px;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    color: var(--heading-color);
+    line-height: 15.556px;
+    margin: 0;
+  }
+
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 32.738px;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 31.111px;
+  }
+
+  .dashboard-link {
+    font-size: 17.5px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--heading-color);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9.795px;
+    padding: 11.754px 23.508px;
+    border-radius: 23.508px;
+    background-color: var(--button-primary-bg);
+    color: var(--button-primary-text);
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .dropdown-trigger-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5.456px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .avatar {
+    width: 38.194px;
+    height: 38.194px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19.097px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--body-color);
+  }
+
+  .dropdown-trigger-wrapper svg {
+    width: 16.369px;
+    height: 16.369px;
+    stroke-width: 2;
+    color: var(--muted-text-color);
+  }
+
+  .dropdown-menu {
+    position: fixed;
+    top: 64px;
+    right: 77.752px;
+    width: 249px;
+    background: var(--section-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .dropdown-menu a,
+  .dropdown-menu button {
+    font-size: 14px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--body-color);
+    text-decoration: none;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+
+  .dropdown-menu a:hover,
+  .dropdown-menu button:hover {
+    background-color: var(--card-hover-bg);
+  }
+  
+  [data-cta-type="logged-in-state"] {
+      display: none;
+  }
+
+  @media (max-width: 768px) {
+    .topbar-wrapper {
+      padding: 0 24px;
+    }
+
+    .dashboard-link {
+      display: none;
+    }
+  }
+  </style>
+<script data-ai-id="scr-topbar" id="scr-topbar">
+   const trigger = document.getElementById("el-dropdown-trigger");
+  const menu = document.getElementById("el-dropdown-menu");
+
+  if (trigger && menu) {
+    trigger.addEventListener("click", () => {
+      const isOpen = menu.style.opacity === "1";
+
+      if (isOpen) {
+        menu.style.opacity = "0";
+        menu.style.visibility = "hidden";
+      } else {
+        menu.style.opacity = "1";
+        menu.style.visibility = "visible";
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && !trigger.contains(e.target)) {
+        menu.style.opacity = "0";
+        menu.style.visibility = "hidden";
+      }
+    });
+  }
+  </script>
+
+<section data-ai-id="sec-crsl1" data-section-type="course_store" data-template-name="COURSE_STORE2" id="sec-crsl1" style="min-height:70vh;">
+<div data-ai-id="el-crsl1a" data-type="html" id="el-crsl1a" x-data="courseListData()">
+<!-- Hero Header -->
+<div class="crsl-hero-header" data-ai-id="el-hero-header-9ab12cd3">
+<span class="crsl-eyebrow" data-ai-id="el-eyebrow-9ab12cd3">
+      ADVANCED PROGRAMS
+     </span>
+<h1 class="crsl-heading" data-ai-id="el-heading-9ab12cd3">
+      Our
+      <span style="color: #5e2dc6">
+       Courses
+      </span>
+</h1>
+<p class="crsl-description" data-ai-id="el-description-9ab12cd3">
+      Evidence-based, clinically focused specializations designed to elevate your practice.
+     </p>
+</div>
+<!-- Category Filter -->
+<div class="filter-pills-wrapper" data-ai-id="el-crsl1b" data-type="html" id="el-crsl1b" x-show="hasCategoriesAvailable">
+<div class="filter-pills-container" data-ai-id="el-filter-container-9ab12cd3">
+<button :class="!selectedCategory ? 'active' : ''" class="filter-pill active" data-ai-id="el-filter-all-9ab12cd3" id="el-filter-all-9ab12cd3" x-on:click="selectedCategory = ''; onCategoryChange()">
+       All Courses
+      </button>
+<template :key="category._id" x-for="category in categories">
+<button :class="selectedCategory === category._id['spayee:resource.spayee:filter1'] ? 'active' : ''" class="filter-pill" data-ai-id="el-filter-cat-9ab12cd3" x-on:click="selectedCategory = category._id['spayee:resource.spayee:filter1']; onCategoryChange()" x-text="category._id['spayee:resource.spayee:filter1']">
+</button>
+</template><button :class="selectedCategory === category._id['spayee:resource.spayee:filter1'] ? 'active' : ''" class="filter-pill" data-ai-id="el-filter-cat-9ab12cd3" x-on:click="selectedCategory = category._id['spayee:resource.spayee:filter1']; onCategoryChange()" x-text="category._id['spayee:resource.spayee:filter1']">Psychotherapy</button><button :class="selectedCategory === category._id['spayee:resource.spayee:filter1'] ? 'active' : ''" class="filter-pill" data-ai-id="el-filter-cat-9ab12cd3" x-on:click="selectedCategory = category._id['spayee:resource.spayee:filter1']; onCategoryChange()" x-text="category._id['spayee:resource.spayee:filter1']">Psychological assessment</button>
+</div>
+</div>
+<!-- Breadcrumb (Hidden) -->
+<div data-ai-id="el-crsl1i" id="el-crsl1i" style="display: none;">
+</div>
+<!-- Courses Grid -->
+<div class="crsl-grid" data-ai-id="el-crsl1o" id="el-crsl1o">
+<template :key="course.uniqueKey" x-for="course in courses">
+<div class="crsl-card" data-ai-id="el-crsl1q" x-on:click="window.location.href = course.courseUrl">
+<div class="crsl-card-img-wrapper" data-ai-id="el-img-wrapper-9ab12cd3">
+<img :alt="course.title" :src="course.coverUrl" class="crsl-card-img" data-ai-id="el-crsl1r">
+</div>
+<div class="crsl-card-content" data-ai-id="el-card-content-9ab12cd3">
+<span class="crsl-card-publisher" data-ai-id="el-crsl1u" x-text="course.publisher">
+</span>
+<h3 class="crsl-card-title" data-ai-id="el-crsl1t" x-text="course.title">
+</h3>
+<div class="crsl-card-price-row" data-ai-id="el-price-row-9ab12cd3">
+<span class="crsl-price" data-ai-id="el-crsl1x" x-text="course.price">
+</span>
+<span class="crsl-mrp" data-ai-id="el-mrp-9ab12cd3" x-show="course.mrp" x-text="course.mrp">
+</span>
+</div>
+</div>
+</div>
+</template><div class="crsl-card" data-ai-id="el-crsl1q" x-on:click="window.location.href = course.courseUrl">
+<div class="crsl-card-img-wrapper" data-ai-id="el-img-wrapper-9ab12cd3">
+<img :alt="course.title" :src="course.coverUrl" class="crsl-card-img" data-ai-id="el-crsl1r" alt="Dialectical Behavioural Therapy (DBT) Course : Skills, Challenges &amp; Clinical Realities" src="https://d502jbuhuh9wk.cloudfront.net/courses/69c4cd1173f709818670035b/69c4cd1173f709818670035b_scaled_cover.jpg?v=1">
+</div>
+<div class="crsl-card-content" data-ai-id="el-card-content-9ab12cd3">
+<span class="crsl-card-publisher" data-ai-id="el-crsl1u" x-text="course.publisher">Saday Wellness Academy</span>
+<h3 class="crsl-card-title" data-ai-id="el-crsl1t" x-text="course.title">Dialectical Behavioural Therapy (DBT) Course : Skills, Challenges &amp; Clinical Realities</h3>
+<div class="crsl-card-price-row" data-ai-id="el-price-row-9ab12cd3">
+<span class="crsl-price" data-ai-id="el-crsl1x" x-text="course.price">₹2999</span>
+<span class="crsl-mrp" data-ai-id="el-mrp-9ab12cd3" x-show="course.mrp" x-text="course.mrp">4499</span>
+</div>
+</div>
+</div><div class="crsl-card" data-ai-id="el-crsl1q" x-on:click="window.location.href = course.courseUrl">
+<div class="crsl-card-img-wrapper" data-ai-id="el-img-wrapper-9ab12cd3">
+<img :alt="course.title" :src="course.coverUrl" class="crsl-card-img" data-ai-id="el-crsl1r" alt="Projective Pathways Course: TAT, CAT &amp; SSCT in Clinical Practice" src="https://d502jbuhuh9wk.cloudfront.net/courses/69c531dec47820aca013ae94/69c531dec47820aca013ae94_scaled_cover.jpg?v=1">
+</div>
+<div class="crsl-card-content" data-ai-id="el-card-content-9ab12cd3">
+<span class="crsl-card-publisher" data-ai-id="el-crsl1u" x-text="course.publisher">Saday Wellness Academy</span>
+<h3 class="crsl-card-title" data-ai-id="el-crsl1t" x-text="course.title">Projective Pathways Course: TAT, CAT &amp; SSCT in Clinical Practice</h3>
+<div class="crsl-card-price-row" data-ai-id="el-price-row-9ab12cd3">
+<span class="crsl-price" data-ai-id="el-crsl1x" x-text="course.price">₹1999</span>
+<span class="crsl-mrp" data-ai-id="el-mrp-9ab12cd3" x-show="course.mrp" x-text="course.mrp">2999</span>
+</div>
+</div>
+</div><div class="crsl-card" data-ai-id="el-crsl1q" x-on:click="window.location.href = course.courseUrl">
+<div class="crsl-card-img-wrapper" data-ai-id="el-img-wrapper-9ab12cd3">
+<img :alt="course.title" :src="course.coverUrl" class="crsl-card-img" data-ai-id="el-crsl1r" alt="Cognitive Behvaioural Therapy (CBT) Course: Beliefs, behaviours and beyond:" src="https://d502jbuhuh9wk.cloudfront.net/courses/69b809929f67b625676e4718/69b809929f67b625676e4718_scaled_cover.jpg?v=1">
+</div>
+<div class="crsl-card-content" data-ai-id="el-card-content-9ab12cd3">
+<span class="crsl-card-publisher" data-ai-id="el-crsl1u" x-text="course.publisher">Saday Wellness Academy</span>
+<h3 class="crsl-card-title" data-ai-id="el-crsl1t" x-text="course.title">Cognitive Behvaioural Therapy (CBT) Course: Beliefs, behaviours and beyond:</h3>
+<div class="crsl-card-price-row" data-ai-id="el-price-row-9ab12cd3">
+<span class="crsl-price" data-ai-id="el-crsl1x" x-text="course.price">₹2999</span>
+<span class="crsl-mrp" data-ai-id="el-mrp-9ab12cd3" x-show="course.mrp" x-text="course.mrp">4499</span>
+</div>
+</div>
+</div><div class="crsl-card" data-ai-id="el-crsl1q" x-on:click="window.location.href = course.courseUrl">
+<div class="crsl-card-img-wrapper" data-ai-id="el-img-wrapper-9ab12cd3">
+<img :alt="course.title" :src="course.coverUrl" class="crsl-card-img" data-ai-id="el-crsl1r" alt="Fundamentals of Rorschach: Exner Scoring &amp; Clinical Utility Course" src="https://d502jbuhuh9wk.cloudfront.net/courses/69c52b654d4eacd62847fc1e/69c52b654d4eacd62847fc1e_scaled_cover.jpg?v=2">
+</div>
+<div class="crsl-card-content" data-ai-id="el-card-content-9ab12cd3">
+<span class="crsl-card-publisher" data-ai-id="el-crsl1u" x-text="course.publisher">Saday Wellness Academy</span>
+<h3 class="crsl-card-title" data-ai-id="el-crsl1t" x-text="course.title">Fundamentals of Rorschach: Exner Scoring &amp; Clinical Utility Course</h3>
+<div class="crsl-card-price-row" data-ai-id="el-price-row-9ab12cd3">
+<span class="crsl-price" data-ai-id="el-crsl1x" x-text="course.price">₹1999</span>
+<span class="crsl-mrp" data-ai-id="el-mrp-9ab12cd3" x-show="course.mrp" x-text="course.mrp">2999</span>
+</div>
+</div>
+</div><div class="crsl-card" data-ai-id="el-crsl1q" x-on:click="window.location.href = course.courseUrl">
+<div class="crsl-card-img-wrapper" data-ai-id="el-img-wrapper-9ab12cd3">
+<img :alt="course.title" :src="course.coverUrl" class="crsl-card-img" data-ai-id="el-crsl1r" alt="Unblock OCD: ERP in Clinical Practice" src="https://d502jbuhuh9wk.cloudfront.net/courses/69c5680f46973dfb56ce475d/69c5680f46973dfb56ce475d_scaled_cover.jpg?v=1">
+</div>
+<div class="crsl-card-content" data-ai-id="el-card-content-9ab12cd3">
+<span class="crsl-card-publisher" data-ai-id="el-crsl1u" x-text="course.publisher">Saday Wellness Academy</span>
+<h3 class="crsl-card-title" data-ai-id="el-crsl1t" x-text="course.title">Unblock OCD: ERP in Clinical Practice</h3>
+<div class="crsl-card-price-row" data-ai-id="el-price-row-9ab12cd3">
+<span class="crsl-price" data-ai-id="el-crsl1x" x-text="course.price">₹2499</span>
+<span class="crsl-mrp" data-ai-id="el-mrp-9ab12cd3" x-show="course.mrp" x-text="course.mrp">3499</span>
+</div>
+</div>
+</div><div class="crsl-card" data-ai-id="el-crsl1q" x-on:click="window.location.href = course.courseUrl">
+<div class="crsl-card-img-wrapper" data-ai-id="el-img-wrapper-9ab12cd3">
+<img :alt="course.title" :src="course.coverUrl" class="crsl-card-img" data-ai-id="el-crsl1r" alt="Quantifying Intelligence : Administering, Scoring &amp; Interpreting IQ Tests" src="https://d502jbuhuh9wk.cloudfront.net/courses/69c5366f40a0f7b6c26c8da1/69c5366f40a0f7b6c26c8da1_scaled_cover.jpg?v=1">
+</div>
+<div class="crsl-card-content" data-ai-id="el-card-content-9ab12cd3">
+<span class="crsl-card-publisher" data-ai-id="el-crsl1u" x-text="course.publisher">Saday Wellness Academy</span>
+<h3 class="crsl-card-title" data-ai-id="el-crsl1t" x-text="course.title">Quantifying Intelligence : Administering, Scoring &amp; Interpreting IQ Tests</h3>
+<div class="crsl-card-price-row" data-ai-id="el-price-row-9ab12cd3">
+<span class="crsl-price" data-ai-id="el-crsl1x" x-text="course.price">₹2499</span>
+<span class="crsl-mrp" data-ai-id="el-mrp-9ab12cd3" x-show="course.mrp" x-text="course.mrp">3999</span>
+</div>
+</div>
+</div><div class="crsl-card" data-ai-id="el-crsl1q" x-on:click="window.location.href = course.courseUrl">
+<div class="crsl-card-img-wrapper" data-ai-id="el-img-wrapper-9ab12cd3">
+<img :alt="course.title" :src="course.coverUrl" class="crsl-card-img" data-ai-id="el-crsl1r" alt="Hypnotherapy Orientation Course: Into the Unconcious" src="https://d502jbuhuh9wk.cloudfront.net/courses/69c523eddc5e7ddeacb27b9e/69c523eddc5e7ddeacb27b9e_scaled_cover.jpg?v=1">
+</div>
+<div class="crsl-card-content" data-ai-id="el-card-content-9ab12cd3">
+<span class="crsl-card-publisher" data-ai-id="el-crsl1u" x-text="course.publisher">Saday Wellness Academy</span>
+<h3 class="crsl-card-title" data-ai-id="el-crsl1t" x-text="course.title">Hypnotherapy Orientation Course: Into the Unconcious</h3>
+<div class="crsl-card-price-row" data-ai-id="el-price-row-9ab12cd3">
+<span class="crsl-price" data-ai-id="el-crsl1x" x-text="course.price">₹1999</span>
+<span class="crsl-mrp" data-ai-id="el-mrp-9ab12cd3" x-show="course.mrp" x-text="course.mrp">2999</span>
+</div>
+</div>
+</div>
+</div>
+<div data-ai-id="el-crms1y" id="el-crms1y" style="height: 20px; margin-top: 40px;" x-ref="loadMore">
+</div>
+<p class="loader" data-ai-id="el-crst34" x-show="!hasMore">
+     No more courses
+    </p>
+</div>
+</section>
+<section class="carousel-section" data-ai-id="sec-crsl1" data-section-type="custom" id="sec-crsl1">
+</section>
+<style data-ai-id="stl-crsl1" id="stl-crsl1">
+   #sec-crsl1 {
+    background-color: #ffffff !important;
+    padding: 60px 24px !important;
+    min-height: 70vh !important;
+    font-family: var(--font-body);
+}
+
+.crsl-hero-header {
+    max-width: 1200px;
+    margin: 0 auto 48px;
+    text-align: left;
+}
+
+.crsl-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #5e2dc6;
+    background-color: #f3f0ff;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.crsl-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 16px;
+    line-height: 1.1;
+}
+
+.crsl-description {
+    font-size: 1.05rem;
+    color: #666;
+    max-width: 560px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.filter-pills-wrapper { margin: var(--spacing-lg) 0; padding: 0 var(--spacing-lg); max-width: 1200px; margin-left: auto; margin-right: auto; }
+.filter-pills-container { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.filter-pill { padding: 10px 24px; border-radius: 50px; border: 1px solid var(--color-neutral-lighter); background: #ffffff; color: var(--color-neutral-darkest); font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; white-space: nowrap; font-family: var(--font-body); }
+.filter-pill:hover { border-color: var(--color-primary); color: var(--color-primary); background-color: var(--color-primary-lightest); }
+.filter-pill.active { background-color: var(--color-primary) !important; border-color: var(--color-primary) !important; color: #ffffff !important; }
+
+.crsl-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.crsl-card {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #f3f4f6;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;    flex-direction: column;
+    height: 100%;
+}
+
+.crsl-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.crsl-card-img-wrapper {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.crsl-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.crsl-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.crsl-card-publisher {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #9ca3af;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.crsl-card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 20px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.crsl-card-price-row {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid #f3f4f6;
+    margin-top: auto;
+}
+
+.crsl-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.crsl-mrp {
+    text-decoration: line-through;
+    color: #9ca3af;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+@media (max-width: 1024px) {
+    .crsl-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .crsl-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .crsl-heading {
+        font-size: 2.5rem;
+    }
+    .filter-pills-container {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 8px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .filter-pills-container::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .crsl-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.carousel-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.carousel-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+.slide-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.slide-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+@media (max-width: 768px) {
+    .slide-image {
+        height: 250px;
+    }
+}
+  </style>
+<script data-ai-id="scr-crsl1" id="scr-crsl1">
+   // Course list section script initialized
+  </script>
+<style data-ai-id="stl-crsl1" id="stl-crsl1">
+   #sec-crsl1 {
+        padding: 40px 20px;
+        background-color: var(--section-bg, #FFFFFF);
+    }
+
+    /* Category Filter */
+    #el-crsl1b {
+        margin-bottom: 20px;
+    }
+
+    #el-crsl1c {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: var(--heading-color, #333);
+        font-size: 14px;
+        font-family: var(--font-heading, Arial, sans-serif);
+    }
+
+    #el-crsl1d {
+        padding: 8px 12px;
+        border: 1px solid var(--input-border, #ccc);
+        border-radius: 4px;
+        font-size: 14px;
+        width: 100%;
+        max-width: 300px;
+        background-color: var(--input-bg, #FFFFFF);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: var(--heading-color, #333);
+        font-weight: 500;
+        font-family: var(--font-body, Arial, sans-serif);
+    }
+
+    #el-crsl1d:hover {
+        border-color: var(--input-border-active, #999);
+    }
+
+    #el-crsl1d:focus {
+        outline: 2px solid var(--input-border-active, #2d6cdf);
+        outline-offset: 2px;
+        border-color: var(--input-border-active, #2d6cdf);
+    }
+
+    #el-crsl1d:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    /* Breadcrumb */
+    #el-crsl1i {
+        margin-bottom: 1rem;
+    }
+
+    #el-crsl1j {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        color: #555;
+    }
+
+    #el-crsl1k {
+        color: #2d6cdf;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+        font-family: var(--font-body, Arial, sans-serif);
+    }
+
+    #el-crsl1k:hover {
+        text-decoration: underline;
+        color: #1e4a9a;
+    }
+
+    #el-crsl1k:focus {
+        outline: 2px solid #2d6cdf;
+        outline-offset: 2px;
+    }
+
+    #el-crsl1l {
+        color: #999;
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0 3px;
+    }
+
+    #el-crsl1m {
+        font-weight: 600;
+        color: #333;
+    }
+
+    /* Divider line */
+    #el-crsl1n {
+        margin-top: 10px;
+        height: 1px;
+        background: linear-gradient(to right, #ddd, #eee, #ddd);
+    }
+
+    /* Courses Grid */
+    #el-crsl1o {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    /* Course Card */
+    #el-crsl1q {
+        border: 1px solid #eee;
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+        background: var(--card-bg, #FFFFFF);
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    #el-crsl1q:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        transform: translateY(-4px);
+    }
+
+    #el-crsl1q:focus-within {
+        outline: 2px solid #2d6cdf;
+        outline-offset: 2px;
+    }
+
+    /* Card Image */
+    #el-crsl1r {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        display: block;
+    }
+
+    #el-crsl1q:hover #el-crsl1r {
+        transform: scale(1.05);
+    }
+
+    /* Card Content */
+    #el-crsl1s {
+        padding: 15px;
+    }
+
+    /* Card Title */
+    #el-crsl1t {
+        margin: 0 0 10px 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--heading-color, #333);
+        line-height: 1.4;
+        font-family: var(--font-heading, Arial, sans-serif);
+    }
+
+    /* Card Publisher */
+    #el-crsl1u {
+        margin: 0 0 10px 0;
+        font-size: 10px;
+        color: var(--muted-text-color, #999);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-family: var(--font-body, Arial, sans-serif);
+    }
+
+    /* Price Row */
+    #el-crsl1v {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+    #el-crsl1v .mrp {
+        text-decoration: line-through;
+        color: #999;
+        font-size: 14px;
+        font-family: var(--font-body, Arial, sans-serif);
+    }
+
+    #el-crsl1v .price {
+        font-weight: 600;
+        font-size: 15px;
+        color: #111;
+        font-family: var(--font-heading, Arial, sans-serif);
+    }
+
+    /* Load More Trigger */
+    #el-crsl1y {
+        height: 20px;
+        margin-top: 40px;
+    }
+
+    /* No More Courses Message */
+    #el-crsl1z {
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+        color: #666;
+        margin: 0;
+        padding-top: 100px;
+        font-weight: 500;
+        font-family: var(--font-body, Arial, sans-serif);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        #sec-crsl1 {
+            padding: 30px 15px;
+        }
+
+        #el-crsl1o {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        #el-crsl1r {
+            height: 180px;
+        }
+
+        #el-crsl1t {
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #sec-crsl1 {
+            padding: 20px 10px;
+        }
+
+        #el-crsl1o {
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        #el-crsl1d {
+            max-width: 100%;
+        }
+
+        #el-crsl1r {
+            height: 200px;
+        }
+
+        #el-crsl1t {
+            font-size: 14px;
+        }
+
+        #el-crsl1u {
+            font-size: 9px;
+        }
+
+        #el-crsl1v .price {
+            font-size: 14px;
+        }
+    }
+  </style>
+<script data-ai-id="scr-crsl1" id="scr-crsl1">
+   (function() {
+        const section = document.getElementById('sec-crsl1');
+        if (section) {
+            const images = section.querySelectorAll('[data-type="image"]');
+            images.forEach(img => {
+                img.addEventListener('load', function() {
+                    this.style.opacity = '1';
+                });
+                img.addEventListener('error', function() {
+                    this.style.opacity = '0.5';
+                });
+            });
+        }
+    })();
+  </script>
+
+
+<section class="sdf-footer-section" data-ai-id="sec-foot1" id="sec-foot1">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<div class="sdf-footer-container" data-ai-id="el-sdf-container">
+<div class="sdf-footer-grid" data-ai-id="el-sdf-grid">
+<!-- Column 1: Logo & Description -->
+<div class="sdf-footer-col sdf-footer-brand" data-ai-id="el-sdf-col1">
+<div class="sdf-footer-logo" data-ai-id="el-sdf-logo">
+<i class="fa-solid fa-leaf" data-ai-id="el-sdf-logo-icon" style="color: #22E36A;">
+</i>
+<span data-ai-id="el-sdf-logo-text">
+        Saday Academy
+       </span>
+</div>
+<p class="sdf-footer-description" data-ai-id="el-sdf-description">
+       Empowering learners worldwide with expert-led courses and a community-driven approach to personal and professional growth.
+      </p>
+</div>
+<!-- Column 2: Academy Links -->
+<div class="sdf-footer-col" data-ai-id="el-sdf-col2">
+<h4 class="sdf-footer-title" data-ai-id="el-sdf-title1">
+       Academy
+      </h4>
+<ul class="sdf-footer-links" data-ai-id="el-sdf-links1">
+<li>
+<a data-ai-id="el-sdf-link1-1" href="/courses">
+         All Courses
+        </a>
+</li>
+<li>
+<a data-ai-id="el-sdf-link1-2" href="#">
+         Instructors
+        </a>
+</li>
+<li>
+<a data-ai-id="el-sdf-link1-3" href="#">
+         Live Events
+        </a>
+</li>
+<li>
+<a data-ai-id="el-sdf-link1-4" href="#">
+         Reviews
+        </a>
+</li>
+</ul>
+</div>
+<!-- Column 3: Support Links -->
+<div class="sdf-footer-col" data-ai-id="el-sdf-col3">
+<h4 class="sdf-footer-title" data-ai-id="el-sdf-title2">
+       Support
+      </h4>
+<ul class="sdf-footer-links" data-ai-id="el-sdf-links2">
+<li>
+<a data-ai-id="el-sdf-link2-1" href="#">
+         Student Portal
+        </a>
+</li>
+<li>
+<a data-ai-id="el-sdf-link2-2" href="#">
+         Accreditation
+        </a>
+</li>
+<li>
+<a data-ai-id="el-sdf-link2-3" href="/contactus">
+         Contact Us
+        </a>
+</li>
+<li>
+<a data-ai-id="el-sdf-link2-4" href="#">
+         FAQs
+        </a>
+</li>
+</ul>
+</div>
+<!-- Column 4: Newsletter -->
+<div class="sdf-footer-col" data-ai-id="el-sdf-col4">
+<h4 class="sdf-footer-title" data-ai-id="el-sdf-title3">
+       Stay Updated
+      </h4>
+<p class="sdf-footer-newsletter-text" data-ai-id="el-sdf-newsletter-desc">
+       Subscribe to get the latest updates and offers.
+      </p>
+<form class="sdf-footer-newsletter-form" data-ai-id="el-sdf-form" onsubmit="return false;">
+<input class="sdf-footer-input" data-ai-id="el-sdf-input" placeholder="Email address" required="" type="email">
+<button class="sdf-footer-button" data-ai-id="el-sdf-button" type="submit">
+        Subscribe
+       </button>
+</form>
+</div>
+</div>
+<hr class="sdf-footer-divider" data-ai-id="el-sdf-divider">
+<div class="sdf-footer-bottom" data-ai-id="el-sdf-bottom">
+<p class="sdf-footer-copyright" data-ai-id="el-sdf-copyright">
+      © 2024 Saday Academy. All rights reserved.
+     </p>
+<div class="sdf-footer-legal" data-ai-id="el-sdf-legal">
+<a data-ai-id="el-sdf-legal1" href="/privacypolicy">
+       Privacy Policy
+      </a>
+<a data-ai-id="el-sdf-legal2" href="/termsofuse">
+       Terms of Service
+      </a>
+</div>
+</div>
+</div>
+</section>
+<style data-ai-id="stl-foot1" id="stl-foot1">
+   #sec-foot1 {
+  background-color: #5B458E;
+  color: #FFFFFF;
+  padding: 80px 20px 40px;
+  font-family: 'Inter', sans-serif;
+}
+
+.sdf-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sdf-footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.sdf-footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.sdf-footer-description {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+.sdf-footer-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #FFFFFF;
+}
+
+.sdf-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sdf-footer-links li {
+  margin-bottom: 12px;
+}
+
+.sdf-footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.sdf-footer-links a:hover {
+  color: #FFFFFF;
+}
+
+.sdf-footer-newsletter-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.sdf-footer-newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sdf-footer-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #FFFFFF;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.sdf-footer-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sdf-footer-input:focus {
+  border-color: #8B75D1;
+}
+
+.sdf-footer-button {
+  background: linear-gradient(90deg, #8B75D1, #7A63C7);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.sdf-footer-button:hover {
+  opacity: 0.9;
+}
+
+.sdf-footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 0 0 30px 0;
+}
+
+.sdf-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sdf-footer-copyright {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.sdf-footer-legal {
+  display: flex;
+  gap: 24px;
+}
+
+.sdf-footer-legal a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.sdf-footer-legal a:hover {
+  color: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+  .sdf-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #sec-foot1 {
+    padding: 60px 20px 30px;
+    text-align: center;
+  }
+
+  .sdf-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .sdf-footer-logo {
+    justify-content: center;
+  }
+
+  .sdf-footer-newsletter-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .sdf-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sdf-footer-legal {
+    justify-content: center;
+  }
+}
+  </style>
+<script data-ai-id="scr-foot1" id="scr-foot1">
+   // Footer script for potential interactivity (e.g., newsletter submission)
+(function() {
+  const form = document.querySelector('.sdf-footer-newsletter-form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input').value;
+      if (email) {
+        // Placeholder for submission logic
+        console.log('Newsletter subscription for:', email);
+        alert('Thank you for subscribing!');
+        this.reset();
+      }
+    });
+  }
+})();
+  </script>
+
+
+<section data-ai-id="sec-graphy-footer" data-nav-element="graphy_footer" data-section-type="graphy_footer" id="sec-graphy-footer" style="background-color: #f7f8f5; padding: 12px 20px;">
+<div class="footer-content" data-nav-element="graphy_footer">
+<div class="footer-left">
+<img alt="Graphy Logo" class="logo-image" src="https://media.marka-img.com/461f7112/zQ3tBUI9rdD1qblfI0JQJO7IngL4xv.png">
+</div>
+<div class="footer-right">
+<div class="trust-badge">
+<img alt="Trust Badge" class="badge-image" src="https://media.marka-img.com/461f7112/sg3a5Hm3ZPL7Zb38mHFsXCzMTRNbgY.png">
+<span class="trust-text">200K+ creators trust Graphy</span>
+</div>
+<a class="cta-link" href="https://graphy.com" target="_blank">Try Graphy</a>
+</div>
+</div>
+</section>
+<style data-ai-id="stl-graphy-footer" id="stl-graphy-footer">
+    #sec-graphy-footer {
+        background-color: #f7f8f5;
+    }
+
+    #sec-graphy-footer .footer-content {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 16px !important;
+        max-width: 1400px !important;
+        margin: 0 auto !important;
+        flex-wrap: wrap !important;
+    }
+
+    #sec-graphy-footer .footer-left {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+
+    #sec-graphy-footer .powered-by {
+        font-size: 11px !important;
+        color: #666 !important;
+        font-family: Roobert, Arial, sans-serif !important;
+        font-weight: normal !important;
+        letter-spacing: 0.015em !important;
+    }
+
+    #sec-graphy-footer .logo-image {
+        width: 50px !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+    #sec-graphy-footer .footer-right {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    #sec-graphy-footer .trust-badge {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    #sec-graphy-footer .badge-image {
+        width: 28px !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+    #sec-graphy-footer .trust-text {
+        font-size: 11px !important;
+        color: #666 !important;
+        font-family: Roobert, Arial, sans-serif !important;
+        letter-spacing: 0.015em !important;
+    }
+
+    #sec-graphy-footer .cta-link {
+        font-size: 11px !important;
+        color: white !important;
+        text-decoration: none !important;
+        font-weight: 600 !important;
+        font-family: Roobert, Arial, sans-serif !important;
+        padding: 10px 20px !important;
+        background-color: #232228 !important;
+        border: none !important;
+        border-radius: 100px !important;
+        transition: all 0.3s ease !important;
+        white-space: nowrap !important;
+        letter-spacing: 0.015em !important;
+        display: inline-block !important;
+    }
+
+    #sec-graphy-footer .cta-link:hover {
+        background-color: #3d3a43 !important;
+        transform: translateY(-2px) !important;
+    }
+
+    @media (max-width: 768px) {
+        #sec-graphy-footer .footer-content {
+            gap: 12px;
+            padding: 0 16px;
+        }
+
+        #sec-graphy-footer .logo-image {
+            width: 50px;
+        }
+
+        #sec-graphy-footer .trust-text,
+        #sec-graphy-footer .powered-by,
+        #sec-graphy-footer .cta-link {
+            font-size: 11px;
+        }
+
+        #sec-graphy-footer .cta-link {
+            padding: 6px 12px;
+        }
+
+        #sec-graphy-footer .badge-image {
+            width: 28px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #sec-graphy-footer .footer-content {
+            gap: 8px;
+        }
+
+        #sec-graphy-footer .logo-image {
+            width: 45px;
+        }
+
+        #sec-graphy-footer .badge-image {
+            width: 24px;
+        }
+    }
+</style>
+
+</body></html>

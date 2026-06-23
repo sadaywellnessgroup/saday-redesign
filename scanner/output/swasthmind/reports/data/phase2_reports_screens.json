@@ -1,0 +1,1596 @@
+[
+  {
+    "module": "Reports",
+    "screen": "Reports",
+    "submenu": "—",
+    "url": "https://crm.swasthmind.com/my-report",
+    "headings": [],
+    "tabs": [
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Sr no",
+          "Client Name",
+          "Mode",
+          "Type",
+          "Date",
+          "Price (Rs)",
+          "Invoice",
+          ""
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "Dashboard",
+      "Conversations",
+      "My Schedule",
+      "My Therapists",
+      "Manual Booking",
+      "Sessions",
+      "Assessments",
+      "My Clients",
+      "Reports",
+      "Seminars",
+      "Internships/Career",
+      "Ecommerce",
+      "Cancellation & Reschedule Policy",
+      "Session Follow-ups",
+      "FAQ & Tutorials",
+      "Bulk Messages",
+      "Sr no",
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43",
+      "1",
+      "2",
+      "3"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/reports/reports__full.png",
+    "designAudit": {
+      "module": "Reports",
+      "screen": "Reports",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1f2d2b",
+            "count": 354
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 8
+          },
+          {
+            "hex": "#1e293b",
+            "count": 4
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f8fafc",
+            "count": 4
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          },
+          {
+            "hex": "#f1f5f9",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 4,
+        "uniqueBgColors": 3
+      },
+      "typography": {
+        "fontFamilies": [
+          "Inter",
+          "Arial"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 153
+          },
+          {
+            "size": "16px",
+            "count": 21
+          },
+          {
+            "size": "13px",
+            "count": 18
+          },
+          {
+            "size": "12px",
+            "count": 12
+          },
+          {
+            "size": "24px",
+            "count": 2
+          }
+        ],
+        "fontWeights": [
+          "600",
+          "700"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 53,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 33,
+        "inputs": 4,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 47,
+        "badges": 87,
+        "tooltips": 0,
+        "dropdowns": 15,
+        "charts": 74,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 2,
+        "interactivesMissingRole": 8,
+        "bodyContrastRatio": 1.47,
+        "bodyColor": "#1f2d2b",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "2 input(s) missing label",
+        "Body text contrast ratio 1.47 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Reports",
+    "screen": "SS-4",
+    "submenu": "SS-4",
+    "url": "https://crm.swasthmind.com/my-report",
+    "headings": [],
+    "tabs": [
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Sr no",
+          "Client Name",
+          "Mode",
+          "Type",
+          "Date",
+          "Price (Rs)",
+          "Invoice",
+          ""
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "Dashboard",
+      "Conversations",
+      "My Schedule",
+      "My Therapists",
+      "Manual Booking",
+      "Sessions",
+      "Assessments",
+      "My Clients",
+      "Reports",
+      "Seminars",
+      "Internships/Career",
+      "Ecommerce",
+      "Cancellation & Reschedule Policy",
+      "Session Follow-ups",
+      "FAQ & Tutorials",
+      "Bulk Messages",
+      "Sr no",
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43",
+      "1",
+      "2",
+      "3"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/reports/ss_4__full.png",
+    "designAudit": {
+      "module": "Reports",
+      "screen": "SS-4",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1f2d2b",
+            "count": 354
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 8
+          },
+          {
+            "hex": "#1e293b",
+            "count": 4
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f8fafc",
+            "count": 3
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 2
+          },
+          {
+            "hex": "#f1f5f9",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 4,
+        "uniqueBgColors": 3
+      },
+      "typography": {
+        "fontFamilies": [
+          "Inter",
+          "Arial"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 153
+          },
+          {
+            "size": "16px",
+            "count": 21
+          },
+          {
+            "size": "13px",
+            "count": 18
+          },
+          {
+            "size": "12px",
+            "count": 12
+          },
+          {
+            "size": "24px",
+            "count": 2
+          }
+        ],
+        "fontWeights": [
+          "600",
+          "700"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 53,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 33,
+        "inputs": 4,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 47,
+        "badges": 87,
+        "tooltips": 0,
+        "dropdowns": 15,
+        "charts": 74,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 2,
+        "interactivesMissingRole": 8,
+        "bodyContrastRatio": 1.47,
+        "bodyColor": "#1f2d2b",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "2 input(s) missing label",
+        "Body text contrast ratio 1.47 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Reports",
+    "screen": "SS-3",
+    "submenu": "SS-3",
+    "url": "https://crm.swasthmind.com/my-report",
+    "headings": [],
+    "tabs": [
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Sr no",
+          "Client Name",
+          "Mode",
+          "Type",
+          "Date",
+          "Price (Rs)",
+          "Invoice",
+          ""
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "Dashboard",
+      "Conversations",
+      "My Schedule",
+      "My Therapists",
+      "Manual Booking",
+      "Sessions",
+      "Assessments",
+      "My Clients",
+      "Reports",
+      "Seminars",
+      "Internships/Career",
+      "Ecommerce",
+      "Cancellation & Reschedule Policy",
+      "Session Follow-ups",
+      "FAQ & Tutorials",
+      "Bulk Messages",
+      "Sr no",
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43",
+      "1",
+      "2",
+      "3"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/reports/ss_3__full.png",
+    "designAudit": {
+      "module": "Reports",
+      "screen": "SS-3",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1f2d2b",
+            "count": 354
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 9
+          },
+          {
+            "hex": "#1e293b",
+            "count": 4
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f5f9f7",
+            "count": 3
+          },
+          {
+            "hex": "#f8fafc",
+            "count": 3
+          },
+          {
+            "hex": "#f1f5f9",
+            "count": 1
+          },
+          {
+            "hex": "#1f2d2b",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 4,
+        "uniqueBgColors": 4
+      },
+      "typography": {
+        "fontFamilies": [
+          "Inter",
+          "Arial"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 153
+          },
+          {
+            "size": "16px",
+            "count": 21
+          },
+          {
+            "size": "13px",
+            "count": 18
+          },
+          {
+            "size": "12px",
+            "count": 12
+          },
+          {
+            "size": "24px",
+            "count": 2
+          }
+        ],
+        "fontWeights": [
+          "600",
+          "700"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 53,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 33,
+        "inputs": 4,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 47,
+        "badges": 87,
+        "tooltips": 1,
+        "dropdowns": 15,
+        "charts": 74,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 2,
+        "interactivesMissingRole": 8,
+        "bodyContrastRatio": 1.47,
+        "bodyColor": "#1f2d2b",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "2 input(s) missing label",
+        "Body text contrast ratio 1.47 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Reports",
+    "screen": "SS-2",
+    "submenu": "SS-2",
+    "url": "https://crm.swasthmind.com/my-report",
+    "headings": [],
+    "tabs": [
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Sr no",
+          "Client Name",
+          "Mode",
+          "Type",
+          "Date",
+          "Price (Rs)",
+          "Invoice",
+          ""
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "Dashboard",
+      "Conversations",
+      "My Schedule",
+      "My Therapists",
+      "Manual Booking",
+      "Sessions",
+      "Assessments",
+      "My Clients",
+      "Reports",
+      "Seminars",
+      "Internships/Career",
+      "Ecommerce",
+      "Cancellation & Reschedule Policy",
+      "Session Follow-ups",
+      "FAQ & Tutorials",
+      "Bulk Messages",
+      "Sr no",
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43",
+      "1",
+      "2",
+      "3"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/reports/ss_2__full.png",
+    "designAudit": {
+      "module": "Reports",
+      "screen": "SS-2",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1f2d2b",
+            "count": 354
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 9
+          },
+          {
+            "hex": "#1e293b",
+            "count": 4
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f5f9f7",
+            "count": 3
+          },
+          {
+            "hex": "#f8fafc",
+            "count": 3
+          },
+          {
+            "hex": "#f1f5f9",
+            "count": 1
+          },
+          {
+            "hex": "#1f2d2b",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 4,
+        "uniqueBgColors": 4
+      },
+      "typography": {
+        "fontFamilies": [
+          "Inter",
+          "Arial"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 153
+          },
+          {
+            "size": "16px",
+            "count": 21
+          },
+          {
+            "size": "13px",
+            "count": 18
+          },
+          {
+            "size": "12px",
+            "count": 12
+          },
+          {
+            "size": "24px",
+            "count": 2
+          }
+        ],
+        "fontWeights": [
+          "600",
+          "700"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 53,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 33,
+        "inputs": 4,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 47,
+        "badges": 87,
+        "tooltips": 1,
+        "dropdowns": 15,
+        "charts": 74,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 2,
+        "interactivesMissingRole": 8,
+        "bodyContrastRatio": 1.47,
+        "bodyColor": "#1f2d2b",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "2 input(s) missing label",
+        "Body text contrast ratio 1.47 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Reports",
+    "screen": "SS-1",
+    "submenu": "SS-1",
+    "url": "https://crm.swasthmind.com/my-report",
+    "headings": [],
+    "tabs": [
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Sr no",
+          "Client Name",
+          "Mode",
+          "Type",
+          "Date",
+          "Price (Rs)",
+          "Invoice",
+          ""
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "Dashboard",
+      "Conversations",
+      "My Schedule",
+      "My Therapists",
+      "Manual Booking",
+      "Sessions",
+      "Assessments",
+      "My Clients",
+      "Reports",
+      "Seminars",
+      "Internships/Career",
+      "Ecommerce",
+      "Cancellation & Reschedule Policy",
+      "Session Follow-ups",
+      "FAQ & Tutorials",
+      "Bulk Messages",
+      "Sr no",
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43",
+      "1",
+      "2",
+      "3"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/reports/ss_1__full.png",
+    "designAudit": {
+      "module": "Reports",
+      "screen": "SS-1",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1f2d2b",
+            "count": 354
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 9
+          },
+          {
+            "hex": "#1e293b",
+            "count": 4
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f5f9f7",
+            "count": 3
+          },
+          {
+            "hex": "#f8fafc",
+            "count": 3
+          },
+          {
+            "hex": "#f1f5f9",
+            "count": 1
+          },
+          {
+            "hex": "#1f2d2b",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 4,
+        "uniqueBgColors": 4
+      },
+      "typography": {
+        "fontFamilies": [
+          "Inter",
+          "Arial"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 153
+          },
+          {
+            "size": "16px",
+            "count": 21
+          },
+          {
+            "size": "13px",
+            "count": 18
+          },
+          {
+            "size": "12px",
+            "count": 12
+          },
+          {
+            "size": "24px",
+            "count": 2
+          }
+        ],
+        "fontWeights": [
+          "600",
+          "700"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 53,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 33,
+        "inputs": 4,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 47,
+        "badges": 87,
+        "tooltips": 1,
+        "dropdowns": 15,
+        "charts": 74,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 2,
+        "interactivesMissingRole": 8,
+        "bodyContrastRatio": 1.47,
+        "bodyColor": "#1f2d2b",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "2 input(s) missing label",
+        "Body text contrast ratio 1.47 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Reports",
+    "screen": "SS-46",
+    "submenu": "SS-46",
+    "url": "https://crm.swasthmind.com/my-report",
+    "headings": [],
+    "tabs": [
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Sr no",
+          "Client Name",
+          "Mode",
+          "Type",
+          "Date",
+          "Price (Rs)",
+          "Invoice",
+          ""
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "Dashboard",
+      "Conversations",
+      "My Schedule",
+      "My Therapists",
+      "Manual Booking",
+      "Sessions",
+      "Assessments",
+      "My Clients",
+      "Reports",
+      "Seminars",
+      "Internships/Career",
+      "Ecommerce",
+      "Cancellation & Reschedule Policy",
+      "Session Follow-ups",
+      "FAQ & Tutorials",
+      "Bulk Messages",
+      "Sr no",
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43",
+      "1",
+      "2",
+      "3"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/reports/ss_46__full.png",
+    "designAudit": {
+      "module": "Reports",
+      "screen": "SS-46",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1f2d2b",
+            "count": 354
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 9
+          },
+          {
+            "hex": "#1e293b",
+            "count": 4
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f5f9f7",
+            "count": 3
+          },
+          {
+            "hex": "#f8fafc",
+            "count": 3
+          },
+          {
+            "hex": "#f1f5f9",
+            "count": 1
+          },
+          {
+            "hex": "#1f2d2b",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 4,
+        "uniqueBgColors": 4
+      },
+      "typography": {
+        "fontFamilies": [
+          "Inter",
+          "Arial"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 153
+          },
+          {
+            "size": "16px",
+            "count": 21
+          },
+          {
+            "size": "13px",
+            "count": 18
+          },
+          {
+            "size": "12px",
+            "count": 12
+          },
+          {
+            "size": "24px",
+            "count": 2
+          }
+        ],
+        "fontWeights": [
+          "600",
+          "700"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 53,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 33,
+        "inputs": 4,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 47,
+        "badges": 87,
+        "tooltips": 1,
+        "dropdowns": 15,
+        "charts": 74,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 2,
+        "interactivesMissingRole": 8,
+        "bodyContrastRatio": 1.47,
+        "bodyColor": "#1f2d2b",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "2 input(s) missing label",
+        "Body text contrast ratio 1.47 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Reports",
+    "screen": "SS-45",
+    "submenu": "SS-45",
+    "url": "https://crm.swasthmind.com/my-report",
+    "headings": [],
+    "tabs": [
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Sr no",
+          "Client Name",
+          "Mode",
+          "Type",
+          "Date",
+          "Price (Rs)",
+          "Invoice",
+          ""
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "Dashboard",
+      "Conversations",
+      "My Schedule",
+      "My Therapists",
+      "Manual Booking",
+      "Sessions",
+      "Assessments",
+      "My Clients",
+      "Reports",
+      "Seminars",
+      "Internships/Career",
+      "Ecommerce",
+      "Cancellation & Reschedule Policy",
+      "Session Follow-ups",
+      "FAQ & Tutorials",
+      "Bulk Messages",
+      "Sr no",
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43",
+      "1",
+      "2",
+      "3"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/reports/ss_45__full.png",
+    "designAudit": {
+      "module": "Reports",
+      "screen": "SS-45",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1f2d2b",
+            "count": 354
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 9
+          },
+          {
+            "hex": "#1e293b",
+            "count": 4
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f5f9f7",
+            "count": 3
+          },
+          {
+            "hex": "#f8fafc",
+            "count": 3
+          },
+          {
+            "hex": "#f1f5f9",
+            "count": 1
+          },
+          {
+            "hex": "#1f2d2b",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 4,
+        "uniqueBgColors": 4
+      },
+      "typography": {
+        "fontFamilies": [
+          "Inter",
+          "Arial"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 153
+          },
+          {
+            "size": "16px",
+            "count": 21
+          },
+          {
+            "size": "13px",
+            "count": 18
+          },
+          {
+            "size": "12px",
+            "count": 12
+          },
+          {
+            "size": "24px",
+            "count": 2
+          }
+        ],
+        "fontWeights": [
+          "600",
+          "700"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 53,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 33,
+        "inputs": 4,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 47,
+        "badges": 87,
+        "tooltips": 1,
+        "dropdowns": 15,
+        "charts": 74,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 2,
+        "interactivesMissingRole": 8,
+        "bodyContrastRatio": 1.47,
+        "bodyColor": "#1f2d2b",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "2 input(s) missing label",
+        "Body text contrast ratio 1.47 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Reports",
+    "screen": "SS-44",
+    "submenu": "SS-44",
+    "url": "https://crm.swasthmind.com/my-report",
+    "headings": [],
+    "tabs": [
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Sr no",
+          "Client Name",
+          "Mode",
+          "Type",
+          "Date",
+          "Price (Rs)",
+          "Invoice",
+          ""
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "Dashboard",
+      "Conversations",
+      "My Schedule",
+      "My Therapists",
+      "Manual Booking",
+      "Sessions",
+      "Assessments",
+      "My Clients",
+      "Reports",
+      "Seminars",
+      "Internships/Career",
+      "Ecommerce",
+      "Cancellation & Reschedule Policy",
+      "Session Follow-ups",
+      "FAQ & Tutorials",
+      "Bulk Messages",
+      "Sr no",
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43",
+      "1",
+      "2",
+      "3"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/reports/ss_44__full.png",
+    "designAudit": {
+      "module": "Reports",
+      "screen": "SS-44",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1f2d2b",
+            "count": 354
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 9
+          },
+          {
+            "hex": "#1e293b",
+            "count": 4
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f5f9f7",
+            "count": 3
+          },
+          {
+            "hex": "#f8fafc",
+            "count": 3
+          },
+          {
+            "hex": "#f1f5f9",
+            "count": 1
+          },
+          {
+            "hex": "#1f2d2b",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 4,
+        "uniqueBgColors": 4
+      },
+      "typography": {
+        "fontFamilies": [
+          "Inter",
+          "Arial"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 153
+          },
+          {
+            "size": "16px",
+            "count": 21
+          },
+          {
+            "size": "13px",
+            "count": 18
+          },
+          {
+            "size": "12px",
+            "count": 12
+          },
+          {
+            "size": "24px",
+            "count": 2
+          }
+        ],
+        "fontWeights": [
+          "600",
+          "700"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 53,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 33,
+        "inputs": 4,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 47,
+        "badges": 87,
+        "tooltips": 1,
+        "dropdowns": 15,
+        "charts": 74,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 2,
+        "interactivesMissingRole": 8,
+        "bodyContrastRatio": 1.47,
+        "bodyColor": "#1f2d2b",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "2 input(s) missing label",
+        "Body text contrast ratio 1.47 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Reports",
+    "screen": "SS-43",
+    "submenu": "SS-43",
+    "url": "https://crm.swasthmind.com/my-report",
+    "headings": [],
+    "tabs": [
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Sr no",
+          "Client Name",
+          "Mode",
+          "Type",
+          "Date",
+          "Price (Rs)",
+          "Invoice",
+          ""
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "Dashboard",
+      "Conversations",
+      "My Schedule",
+      "My Therapists",
+      "Manual Booking",
+      "Sessions",
+      "Assessments",
+      "My Clients",
+      "Reports",
+      "Seminars",
+      "Internships/Career",
+      "Ecommerce",
+      "Cancellation & Reschedule Policy",
+      "Session Follow-ups",
+      "FAQ & Tutorials",
+      "Bulk Messages",
+      "Sr no",
+      "SS-4",
+      "SS-3",
+      "SS-2",
+      "SS-1",
+      "SS-46",
+      "SS-45",
+      "SS-44",
+      "SS-43",
+      "1",
+      "2",
+      "3"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/reports/ss_43__full.png",
+    "designAudit": {
+      "module": "Reports",
+      "screen": "SS-43",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1f2d2b",
+            "count": 354
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 9
+          },
+          {
+            "hex": "#1e293b",
+            "count": 4
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f5f9f7",
+            "count": 3
+          },
+          {
+            "hex": "#f8fafc",
+            "count": 3
+          },
+          {
+            "hex": "#f1f5f9",
+            "count": 1
+          },
+          {
+            "hex": "#1f2d2b",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 4,
+        "uniqueBgColors": 4
+      },
+      "typography": {
+        "fontFamilies": [
+          "Inter",
+          "Arial"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 153
+          },
+          {
+            "size": "16px",
+            "count": 21
+          },
+          {
+            "size": "13px",
+            "count": 18
+          },
+          {
+            "size": "12px",
+            "count": 12
+          },
+          {
+            "size": "24px",
+            "count": 2
+          }
+        ],
+        "fontWeights": [
+          "600",
+          "700"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 53,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 33,
+        "inputs": 4,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 47,
+        "badges": 87,
+        "tooltips": 1,
+        "dropdowns": 15,
+        "charts": 74,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 2,
+        "interactivesMissingRole": 8,
+        "bodyContrastRatio": 1.47,
+        "bodyColor": "#1f2d2b",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "2 input(s) missing label",
+        "Body text contrast ratio 1.47 below WCAG AA (4.5)"
+      ]
+    }
+  }
+]

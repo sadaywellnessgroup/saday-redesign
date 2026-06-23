@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SwasthMind CRM — Capture Workbook</title>
+<style>
+  :root {
+    --blue: #1a56db; --green: #057a55; --red: #c81e1e; --orange: #b45309;
+    --gray: #374151; --light: #f9fafb; --border: #e5e7eb; --warn: #fef3c7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; color: var(--gray); background: #fff; }
+  .toc { position: fixed; top: 0; left: 0; width: 220px; height: 100vh; overflow-y: auto; background: #1e293b; padding: 16px 0; z-index: 100; }
+  .toc h3 { color: #94a3b8; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; padding: 0 16px 8px; }
+  .toc a { display: block; color: #cbd5e1; font-size: 12px; padding: 5px 16px; text-decoration: none; border-left: 2px solid transparent; }
+  .toc a:hover { color: #fff; border-left-color: var(--blue); background: #2d3d55; }
+  .toc .section-link { color: #f1f5f9; font-weight: 600; padding-top: 12px; }
+  main { margin-left: 220px; padding: 32px 40px 80px; max-width: 1160px; }
+  h1 { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+  .meta { color: #6b7280; font-size: 12px; margin-bottom: 32px; }
+  h2 { font-size: 18px; font-weight: 700; margin: 40px 0 12px; padding-top: 8px; border-top: 2px solid var(--blue); color: var(--blue); }
+  h3 { font-size: 14px; font-weight: 600; margin: 24px 0 8px; }
+  p { line-height: 1.6; margin-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 12px; }
+  th { background: #1e293b; color: #f1f5f9; font-weight: 600; text-align: left; padding: 7px 10px; white-space: nowrap; }
+  td { padding: 6px 10px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.4; }
+  tr:nth-child(even) td { background: var(--light); }
+  .badge { display: inline-block; padding: 1px 7px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+  .badge-green { background: #d1fae5; color: var(--green); }
+  .badge-red { background: #fee2e2; color: var(--red); }
+  .badge-orange { background: #fef3c7; color: var(--orange); }
+  .badge-blue { background: #dbeafe; color: var(--blue); }
+  .badge-gray { background: #f3f4f6; color: var(--gray); }
+  .warn-box { background: var(--warn); border-left: 4px solid #f59e0b; padding: 10px 14px; margin: 10px 0 16px; border-radius: 4px; font-size: 12px; }
+  .screen-card { border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px; margin-bottom: 16px; }
+  .screen-card h4 { font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+  .screen-card dl { display: grid; grid-template-columns: 160px 1fr; gap: 4px 12px; }
+  .screen-card dt { font-weight: 600; color: #6b7280; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; padding-top: 2px; }
+  .screen-card dd { font-size: 12px; line-height: 1.5; }
+  .gap { background: #fff7ed; border: 1px solid #fdba74; border-radius: 4px; padding: 6px 10px; margin: 4px 0; font-size: 12px; }
+  .gap strong { color: var(--red); }
+  code { background: #f1f5f9; padding: 1px 5px; border-radius: 3px; font-family: monospace; font-size: 11px; }
+  .q1 { color: var(--red); } .q2 { color: var(--orange); } .q3 { color: var(--gray); } .q4 { color: var(--green); } .q5 { color: #065f46; font-weight: 700; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+  /* ═══════════ MOBILE ═══════════ */
+  .mobile-header { display: none; }
+
+  @media (max-width: 820px) {
+    body { font-size: 14px; }
+
+    .mobile-header {
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; left: 0; right: 0;
+      background: #1e293b; color: #f1f5f9;
+      padding: 10px 14px; z-index: 200;
+      border-bottom: 1px solid #0f172a;
+    }
+    .mobile-header b { color: #f1f5f9; font-size: 14px; }
+    .mobile-header span { color: #94a3b8; font-size: 11px; margin-left: 6px; }
+    .mobile-header label {
+      color: #f1f5f9; font-size: 22px; line-height: 1; cursor: pointer;
+      padding: 4px 10px; border: 1px solid #334155; border-radius: 4px;
+      user-select: none;
+    }
+
+    .toc {
+      position: fixed; top: 0; left: 0; width: 80%; max-width: 300px;
+      height: 100vh; z-index: 150;
+      transform: translateX(-100%); transition: transform .25s ease;
+      box-shadow: 2px 0 10px rgba(0,0,0,.4);
+    }
+    #toc-toggle:checked ~ .toc { transform: translateX(0); }
+
+    .toc-overlay {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5);
+      z-index: 140;
+    }
+    #toc-toggle:checked ~ .toc-overlay { display: block; }
+
+    main { margin-left: 0; padding: 18px 14px 80px; max-width: 100%; }
+
+    h1 { font-size: 22px; }
+    h2 { font-size: 17px; margin-top: 30px; padding-top: 8px; }
+    h3 { font-size: 14px; margin: 18px 0 6px; }
+    .meta { font-size: 11.5px; margin-bottom: 20px; }
+
+    table {
+      display: block; overflow-x: auto; -webkit-overflow-scrolling: touch;
+      width: 100%; font-size: 11.5px;
+    }
+    thead, tbody { display: table; width: 100%; min-width: 560px; }
+    tr { display: table-row; }
+    th, td { display: table-cell; padding: 6px 8px; word-break: break-word; white-space: normal; }
+    th { white-space: nowrap; }
+
+    .screen-card { padding: 12px 14px; }
+    .screen-card dl { grid-template-columns: 1fr; gap: 2px 0; }
+    .screen-card dt { padding-top: 6px; }
+
+    .warn-box { padding: 10px 12px; font-size: 12px; }
+    .gap { padding: 8px 10px; font-size: 11.5px; }
+    code { font-size: 10.5px; }
+  }
+
+  @media (min-width: 821px) {
+    .mobile-header, .toc-overlay, #toc-toggle { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<input type="checkbox" id="toc-toggle" hidden>
+<header class="mobile-header">
+  <div><b>SwasthMind CRM</b><span>Capture Workbook</span></div>
+  <label for="toc-toggle" aria-label="Toggle menu">☰</label>
+</header>
+<label for="toc-toggle" class="toc-overlay" aria-hidden="true"></label>
+
+<nav class="toc">
+  <h3>SwasthMind CRM</h3>
+  <a class="section-link" href="#sitemap">Sitemap</a>
+  <a href="#sitemap">Navigation map</a>
+  <a href="#roles">User roles</a>
+  <a class="section-link" href="#screens">Screens</a>
+  <a href="#sc-dashboard">Dashboard</a>
+  <a href="#sc-clients">My Clients</a>
+  <a href="#sc-sessions">Sessions</a>
+  <a href="#sc-booking">Manual Booking</a>
+  <a href="#sc-conversations">Conversations</a>
+  <a href="#sc-assessments">Assessments</a>
+  <a href="#sc-reports">Reports</a>
+  <a href="#sc-followups">Session Follow-ups</a>
+  <a href="#sc-bulk">Bulk Messages</a>
+  <a href="#sc-therapists">My Therapists</a>
+  <a href="#sc-policy">Cancel &amp; Reschedule</a>
+  <a href="#sc-profile">Profile / Settings</a>
+  <a class="section-link" href="#features">Features Matrix</a>
+  <a class="section-link" href="#fields">Data Fields</a>
+  <a class="section-link" href="#flows">Flows</a>
+  <a class="section-link" href="#permissions">Permissions</a>
+  <a class="section-link" href="#integrations">Integrations</a>
+  <a class="section-link" href="#datamodel">Data Model</a>
+  <a class="section-link" href="#compliance">Security &amp; Compliance</a>
+  <a class="section-link" href="#gaps">Gaps Index</a>
+</nav>
+
+<main>
+
+<h1>SwasthMind CRM — Capture Workbook</h1>
+<p class="meta">Scan date: 2026-04-19 &nbsp;·&nbsp; CRM: crm.swasthmind.com &nbsp;·&nbsp; Tenant: Production &nbsp;·&nbsp; Role scanned: Admin (Super Admin) &nbsp;·&nbsp; PHI redaction: Active</p>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="sitemap">1. Sitemap</h2>
+
+<table>
+<thead><tr>
+  <th>#</th><th>Top nav / module</th><th>Submenu</th><th>Screen / page</th><th>Available to roles</th><th>Purpose</th>
+</tr></thead>
+<tbody>
+<tr><td>1</td><td>Dashboard</td><td>—</td><td>Dashboard Overview</td><td>Admin, Branch Admin, Accountant</td><td>KPI summary: session bookings, revenue, client count, assessments, conversations; date-range filter</td></tr>
+<tr><td>2</td><td>Conversations</td><td>—</td><td>Conversations list</td><td>Admin only (RBAC: all sub-roles locked out)</td><td>WhatsApp inbox; AI categorisation per thread</td></tr>
+<tr><td>3</td><td>My Schedule</td><td>—</td><td>Schedule / calendar view</td><td>Admin only</td><td>Provider's personal appointment calendar + slot management</td></tr>
+<tr><td>4</td><td>My Therapists</td><td>—</td><td>Therapist roster</td><td>Admin, Branch Admin</td><td>Manage therapist profiles linked to the org</td></tr>
+<tr><td>5</td><td>Manual Booking</td><td>—</td><td>Manual booking form</td><td>Admin, Branch Admin, Receptionist</td><td>Create a session booking manually for a client</td></tr>
+<tr><td>6</td><td>Sessions</td><td>Upcoming Sessions</td><td>Upcoming Sessions list</td><td>Admin, Branch Admin, Receptionist</td><td>View/manage future scheduled sessions</td></tr>
+<tr><td>7</td><td>Sessions</td><td>Completed Sessions</td><td>Completed Sessions list</td><td>Admin, Branch Admin</td><td>View past sessions with payment status</td></tr>
+<tr><td>8</td><td>Sessions</td><td>Session Packages</td><td>Session Packages list</td><td>Admin</td><td>Define multi-session bundles for sale</td></tr>
+<tr><td>9</td><td>Sessions</td><td>Session Discounts</td><td>Session Discounts list</td><td>Admin</td><td>Configure discount codes/rules for sessions</td></tr>
+<tr><td>10</td><td>Sessions</td><td>Purchased Packages</td><td>Purchased Packages list</td><td>Admin</td><td>View client-purchased session packages</td></tr>
+<tr><td>11</td><td>Assessments</td><td>Automated Reports</td><td>Automated Reports list</td><td>Admin, Branch Admin</td><td>View/manage auto-triggered assessment reports</td></tr>
+<tr><td>12</td><td>Assessments</td><td>Manual Assessments</td><td>Manual Assessments list</td><td>Admin, Branch Admin</td><td>Administer assessments manually to clients</td></tr>
+<tr><td>13</td><td>My Clients</td><td>—</td><td>Client roster</td><td>Admin, Branch Admin</td><td>Full client/patient list; CRM contact management</td></tr>
+<tr><td>14</td><td>Reports</td><td>—</td><td>Reports dashboard</td><td>Admin, Accountant</td><td>Analytics and reporting across sessions, revenue, clients</td></tr>
+<tr><td>15</td><td>Seminars</td><td>—</td><td>Seminars list</td><td>Admin, Receptionist</td><td>Manage group seminars/webinars</td></tr>
+<tr><td>16</td><td>Internships/Career</td><td>Job Listings</td><td>Job Listings list</td><td>Admin</td><td>Post and manage open positions</td></tr>
+<tr><td>17</td><td>Internships/Career</td><td>Applications</td><td>Applications list</td><td>Admin</td><td>Review incoming job/internship applications</td></tr>
+<tr><td>18</td><td>Ecommerce</td><td>—</td><td>Ecommerce page</td><td>Admin</td><td>Sell digital products, courses, or packages</td></tr>
+<tr><td>19</td><td>Cancellation &amp; Reschedule Policy</td><td>—</td><td>Policy configuration</td><td>Admin</td><td>Define cancellation windows, fees, and reschedule rules</td></tr>
+<tr><td>20</td><td>Session Follow-ups</td><td>Manage Flows</td><td>Flows builder</td><td>Admin</td><td>Create automated post-session follow-up messaging flows</td></tr>
+<tr><td>21</td><td>Session Follow-ups</td><td>Submissions</td><td>Submissions list</td><td>Admin</td><td>View client responses to follow-up flows</td></tr>
+<tr><td>22</td><td>FAQ &amp; Tutorials</td><td>—</td><td>FAQ/Help page</td><td>Admin, Branch Admin, Receptionist, Accountant</td><td>In-app help and tutorial content</td></tr>
+<tr><td>23</td><td>Bulk Messages</td><td>Message Templates</td><td>Templates list</td><td>Admin</td><td>Create/manage reusable message templates</td></tr>
+<tr><td>24</td><td>Bulk Messages</td><td>Message Logs</td><td>Message Logs list</td><td>Admin</td><td>Audit log of bulk messages sent</td></tr>
+<tr><td>25</td><td>Bulk Messages</td><td>Bulk Message Plans</td><td>Plans list</td><td>Admin</td><td>Configure scheduled/triggered bulk message campaigns</td></tr>
+<tr><td>26</td><td>Profile (top-right)</td><td>Profile</td><td>Admin profile page</td><td>Admin</td><td>Edit org details, professional info, prescription settings, payment/banking details</td></tr>
+<tr><td>27</td><td>Profile (top-right)</td><td>Invoices</td><td>Invoices list</td><td>Admin, Accountant</td><td>View billing invoices for CRM subscription</td></tr>
+<tr><td>28</td><td>User Management</td><td>Receptionists</td><td>Receptionist user list</td><td>Admin, Branch Admin</td><td>Add/manage receptionist-role staff</td></tr>
+<tr><td>29</td><td>User Management</td><td>Accountants</td><td>Accountant user list</td><td>Admin</td><td>Add/manage accountant-role staff</td></tr>
+<tr><td>30</td><td>User Management</td><td>Co-Admins</td><td>Co-Admin user list</td><td>Admin</td><td>Add co-admin users with near-full access</td></tr>
+<tr><td>31</td><td>User Management</td><td>Branch Admins</td><td>Branch Admin user list</td><td>Admin</td><td>Assign admin-level managers per branch</td></tr>
+<tr><td>32</td><td>User Management</td><td>Address</td><td>Branches/address config</td><td>Admin</td><td>Manage physical branch locations</td></tr>
+<tr><td>33</td><td>User Management</td><td>Access Control</td><td>RBAC configuration</td><td>Admin</td><td>Configure module-level access per role via checkbox matrix</td></tr>
+</tbody>
+</table>
+
+<h3 id="roles">User Roles</h3>
+<table>
+<thead><tr><th>Role</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><strong>Admin (Super Admin)</strong></td><td>Full access to all modules; manages subscription, billing, all users, RBAC. Only role with access to Reports, Invoices, Accountants, Branch Admins.</td></tr>
+<tr><td>Co-Admin</td><td>Near-admin access; specific capabilities configurable via Access Control.</td></tr>
+<tr><td>Branch Admin</td><td>Manages a single branch; default access: Dashboard, My Therapists, Manual Booking, Upcoming/Completed Sessions, Receptionists, Organisation Policies, FAQ.</td></tr>
+<tr><td>Receptionist</td><td>Front-desk role; default: Manual Booking, Upcoming Sessions, Seminars, FAQ. Cannot access Reports or financial data.</td></tr>
+<tr><td>Accountant</td><td>Finance-focused; default: Dashboard, Upcoming Sessions, Reports, Invoices, FAQ. Cannot access most clinical screens.</td></tr>
+<tr><td>Therapist</td><td>Clinical provider. <strong style="color:var(--red)">⚠ 0/29 modules enabled in RBAC matrix — likely configuration error.</strong></td></tr>
+</tbody>
+</table>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="screens">2. Screens</h2>
+
+<div class="screen-card" id="sc-dashboard">
+<h4>Dashboard</h4>
+<dl>
+  <dt>Path</dt><dd>/ (root — /dashboard)</dd>
+  <dt>Purpose</dt><dd>KPI overview for the organisation across sessions, revenue, clients, assessments, and conversations</dd>
+  <dt>Key UI</dt><dd>5 KPI cards with WhatsApp sub-metrics, date-range filter (From / To), Download icon, User Management shortcut button</dd>
+  <dt>Data shown</dt><dd>Session Bookings count, Session Bookings Revenue (₹), My Clients count, Assessments Count, Conversations count — all with "WhatsApp: N" sub-metric</dd>
+  <dt>Actions</dt><dd>Filter by date range, Download/export (not clicked), Navigate to User Management</dd>
+  <dt>Pain points</dt><dd>Download button effect unknown (not clicked per safety rules); no drill-down from KPI cards; WhatsApp as only sub-attribution channel</dd>
+</dl>
+</div>
+
+<div class="screen-card" id="sc-clients">
+<h4>My Clients — List View</h4>
+<dl>
+  <dt>Path</dt><dd>/my-clients</dd>
+  <dt>Purpose</dt><dd>Central client roster; search, filter, add, and edit client records</dd>
+  <dt>Key UI</dt><dd>Search bar, Source filter, Therapist filter, Add Client button, Export button, sortable table with Edit + Bio action columns, pagination</dd>
+  <dt>Columns</dt><dd>Sr No, Name (PHI), Email (PHI), Phone (PHI), Registered On, Edit, Bio</dd>
+  <dt>Actions</dt><dd>Search by name, Filter by Source (Both / Whatsapp / Web bot), Filter by Therapist, Add Client (modal), Export (not clicked), Edit per row (modal), Bio per row (modal), Click row → /clients/{id}/show</dd>
+  <dt>Pain points</dt><dd>No bulk actions; no email/phone search; only 2 sort options; no last-session or next-appointment column; no clinical flags</dd>
+</dl>
+</div>
+
+<div class="screen-card">
+<h4>My Clients — Client Detail (/clients/{id}/show)</h4>
+<dl>
+  <dt>Purpose</dt><dd>View and add notes for a specific client</dd>
+  <dt>Tabs</dt><dd>Notes only (no Sessions tab, no Assessments tab, no Documents tab)</dd>
+  <dt>Data shown</dt><dd>Name, Email, Phone, Origin (Whatsapp / Web bot)</dd>
+  <dt>Pain points</dt><dd>Extremely minimal — only Notes; no embedded session history, assessment results, appointment timeline, or documents; Bio not accessible from detail view</dd>
+</dl>
+</div>
+
+<div class="screen-card" id="sc-sessions">
+<h4>Sessions — Upcoming Sessions</h4>
+<dl>
+  <dt>Path</dt><dd>/upcoming-sessions</dd>
+  <dt>Purpose</dt><dd>View and manage all future scheduled sessions across therapists</dd>
+  <dt>Columns</dt><dd>Sr No, Client Name (PHI), Therapist Name, Session Type, Date, Time, Duration, Amount (₹), Payment Status, Booking Channel, Actions (Cancel / Reschedule)</dd>
+  <dt>Filters</dt><dd>Date range, Therapist, Session Type, Booking Channel, Payment Status</dd>
+  <dt>Actions</dt><dd>Filter, Search, Export (not clicked), Cancel Session (destructive — not clicked), Reschedule (form — opened to inspect fields, Cancelled without saving), Send Payment Link</dd>
+  <dt>Pain points</dt><dd>No bulk cancel/reschedule; payment link send not confirmed as safe (not clicked); reschedule form has limited time-slot picker</dd>
+</dl>
+</div>
+
+<div class="screen-card">
+<h4>Sessions — Completed Sessions</h4>
+<dl>
+  <dt>Path</dt><dd>/completed-sessions</dd>
+  <dt>Purpose</dt><dd>Historical session ledger with payment tracking</dd>
+  <dt>Columns</dt><dd>Sr No, Client Name (PHI), Therapist Name, Session Type, Date, Time, Duration, Amount (₹), Discount, Net Amount, Payment Status, Payment Method, Booking Channel</dd>
+  <dt>Actions</dt><dd>Filter by date, therapist, payment status; Export (not clicked); View invoice per row</dd>
+</dl>
+</div>
+
+<div class="screen-card" id="sc-booking">
+<h4>Manual Booking</h4>
+<dl>
+  <dt>Path</dt><dd>/manual-booking</dd>
+  <dt>Purpose</dt><dd>Create a session booking for a client manually (front-desk / admin use)</dd>
+  <dt>Key UI</dt><dd>Single-page form; no stepper; all fields on one screen</dd>
+  <dt>Fields</dt><dd>Select Client (relation — searchable), Select Therapist (relation), Session Type (enum), Date (date picker), Time Slot (slot-based, not free time), Duration (auto-filled), Package (optional — if client has active package), Discount Code (optional), Payment Method (enum), Notes (text)</dd>
+  <dt>Actions</dt><dd>Create Booking, Create Booking &amp; Send Payment Link (not clicked), Cancel</dd>
+  <dt>Pain points</dt><dd>No recurring session option; slot picker depends on therapist availability being configured; payment link send effect unknown</dd>
+</dl>
+</div>
+
+<div class="screen-card" id="sc-conversations">
+<h4>Conversations</h4>
+<dl>
+  <dt>Path</dt><dd>/my-conversations</dd>
+  <dt>Purpose</dt><dd>WhatsApp conversation inbox with AI-powered triage categorisation</dd>
+  <dt>Columns</dt><dd>Sr No, Contact Name (PHI), Phone (PHI), First Interaction (datetime), Last Interaction (datetime), Total Messages, Conversational Tag (AI category), Urgency Level (1–5), Actions (ⓘ AI analysis, 👁 view chat)</dd>
+  <dt>Filters</dt><dd>Category filter (Therapy Potential / Emotional Distress / Information / Exploration / Transactional / SOS), date range</dd>
+  <dt>Actions</dt><dd>Filter by category, View AI analysis modal (ⓘ), View chat history (👁), Summarise (on-demand AI re-analysis), Export (not clicked)</dd>
+  <dt>Pain points</dt><dd>Read-only — cannot reply from CRM; SOS category has no automated escalation; duplicate-name rows observed; "Unknown" contacts when phone captured before name</dd>
+</dl>
+</div>
+
+<div class="screen-card" id="sc-assessments">
+<h4>Assessments — Automated Reports</h4>
+<dl>
+  <dt>Path</dt><dd>/automated-reports</dd>
+  <dt>Purpose</dt><dd>View assessment results automatically sent to clients post-session</dd>
+  <dt>Columns</dt><dd>Sr No, Client Name (PHI), Therapist, Assessment Type, Date Assigned, Date Completed, Score, Status (Assigned / Completed / Expired), Actions</dd>
+  <dt>Actions</dt><dd>Filter by date, therapist, type, status; View responses (read-only)</dd>
+</dl>
+</div>
+
+<div class="screen-card">
+<h4>Assessments — Manual Assessments</h4>
+<dl>
+  <dt>Path</dt><dd>/manual-assessments</dd>
+  <dt>Purpose</dt><dd>Manually assign an assessment to a client outside of the automatic post-session trigger</dd>
+  <dt>Actions</dt><dd>Add Assessment (opens form: Client, Therapist, Assessment Type, Session), View existing, Filter</dd>
+</dl>
+</div>
+
+<div class="screen-card" id="sc-reports">
+<h4>Reports</h4>
+<dl>
+  <dt>Path</dt><dd>/my-report</dd>
+  <dt>Purpose</dt><dd>Session-level financial ledger and analytics</dd>
+  <dt>Columns</dt><dd>Invoice No, Client Name (PHI), Client Email (PHI), Client Phone (PHI), Therapist, Session Date, Start Time, End Time, Duration, Gross Amount, Discount, Net Amount, Payment Status</dd>
+  <dt>Filters</dt><dd>Date range, Therapist, Payment Status</dd>
+  <dt>Pain points</dt><dd>Row-level ledger only — no aggregate KPIs (total revenue, utilisation %, therapist revenue split); no chart/visualisation; no export confirmed</dd>
+</dl>
+</div>
+
+<div class="screen-card" id="sc-followups">
+<h4>Session Follow-ups — Manage Flows</h4>
+<dl>
+  <dt>Path</dt><dd>/manage-flows</dd>
+  <dt>Purpose</dt><dd>Build automated WhatsApp follow-up sequences sent to clients after sessions</dd>
+  <dt>Tabs</dt><dd>Check-in (post-session wellbeing check), Feedback (session satisfaction)</dd>
+  <dt>Key UI</dt><dd>Flow builder with Add Question button; question types: Single Choice, Multi Choice, Open Text, Scale/Rating, Section Header; Publish to WhatsApp button; trigger offset (hours after session) — Check-in tab only</dd>
+  <dt>Actions</dt><dd>Add Question, Edit Question, Reorder (drag), Publish Check-in, Publish Feedback, Send Now (immediate send), Preview</dd>
+  <dt>Pain points</dt><dd>No conditional branching; Feedback tab missing trigger offset field; once published to Meta, updates require re-publish; no versioning</dd>
+</dl>
+</div>
+
+<div class="screen-card" id="sc-bulk">
+<h4>Bulk Messages — Message Templates</h4>
+<dl>
+  <dt>Path</dt><dd>/message-templates</dd>
+  <dt>Purpose</dt><dd>Create and manage reusable WhatsApp message templates for bulk campaigns</dd>
+  <dt>Actions</dt><dd>Add Template (modal: Template Name, Message Body, Variables), Edit, Delete (not clicked)</dd>
+</dl>
+</div>
+
+<div class="screen-card" id="sc-therapists">
+<h4>My Therapists</h4>
+<dl>
+  <dt>Path</dt><dd>/my-therapists</dd>
+  <dt>Purpose</dt><dd>Manage therapist professional profiles linked to the organisation</dd>
+  <dt>Pain points</dt><dd>List was empty (0 records) despite 10 therapist names appearing in booking dropdowns — data-source split between Therapist and User tables suspected (DM-09)</dd>
+  <dt>Actions</dt><dd>Add Therapist (extensive form — see Data Fields), Edit, View profile, Assign to branches</dd>
+</dl>
+</div>
+
+<div class="screen-card" id="sc-policy">
+<h4>Cancellation &amp; Reschedule Policy</h4>
+<dl>
+  <dt>Path</dt><dd>/cancellation-reschedule</dd>
+  <dt>Purpose</dt><dd>Single policy record controlling all cancellation and reschedule rules for the organisation</dd>
+  <dt>Fields observed</dt><dd>Reschedule Window (3 hrs), Cancellation Window (8 hrs), Refund % (100), Refund Processing (Manual), Allow Client Cancellation (bool), Allow Client Reschedule (bool)</dd>
+</dl>
+</div>
+
+<div class="screen-card" id="sc-profile">
+<h4>Profile / Edit Profile</h4>
+<dl>
+  <dt>Path</dt><dd>/profile, /edit/profile</dd>
+  <dt>Purpose</dt><dd>Admin org profile: personal details, professional details, practice details, prescription settings, payment/banking details, social media links, subscription info</dd>
+  <dt>Key sections</dt><dd>Personal (Name, Email, Phone), Professional (Qualification, Specializations, Years Exp, Title, Certifications, Languages, License), Practice (Org Name, Session Types ×10, Therapy Approaches ×6, Working Hours Mon–Sat), Prescription (Letterhead img, Signature img), Payment (Account Holder, Bank, IFSC, PAN, GSTIN), Social (LinkedIn, Instagram, YouTube, Facebook, X, Custom URL)</dd>
+</dl>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="features">3. Features Matrix</h2>
+
+<table>
+<thead><tr>
+  <th>Module</th><th>Feature</th><th>Sub-capability</th><th>Present?</th><th>Quality</th><th>Notes</th>
+</tr></thead>
+<tbody>
+<tr><td>My Clients</td><td>Client list</td><td>Paginated table</td><td><span class="badge badge-green">Yes</span></td><td class="q3">3</td><td>8 rows/page default</td></tr>
+<tr><td>My Clients</td><td>Client list</td><td>Search by name</td><td><span class="badge badge-green">Yes</span></td><td class="q3">3</td><td>Name-only — no email/phone search</td></tr>
+<tr><td>My Clients</td><td>Client list</td><td>Filter by source</td><td><span class="badge badge-green">Yes</span></td><td class="q4">4</td><td>Both / Whatsapp / Web bot</td></tr>
+<tr><td>My Clients</td><td>Client list</td><td>Filter by therapist</td><td><span class="badge badge-green">Yes</span></td><td class="q3">3</td><td></td></tr>
+<tr><td>My Clients</td><td>Client list</td><td>Column sort</td><td><span class="badge badge-orange">Partial</span></td><td class="q2">2</td><td>Only Sr No and Name sortable</td></tr>
+<tr><td>My Clients</td><td>Client list</td><td>Bulk actions</td><td><span class="badge badge-red">No</span></td><td>—</td><td>No bulk select, message, or export</td></tr>
+<tr><td>My Clients</td><td>Client list</td><td>Export / download</td><td><span class="badge badge-green">Yes</span></td><td>—</td><td>Button present; effect not tested</td></tr>
+<tr><td>My Clients</td><td>Client creation</td><td>Add new client</td><td><span class="badge badge-green">Yes</span></td><td class="q2">2</td><td>Only 3 fields (Name, Email, Phone) — no intake form</td></tr>
+<tr><td>My Clients</td><td>Client Bio</td><td>Extended demographic profile</td><td><span class="badge badge-green">Yes</span></td><td class="q4">4</td><td>11 fields incl. pronouns + emergency contact</td></tr>
+<tr><td>My Clients</td><td>Client detail</td><td>Notes per client</td><td><span class="badge badge-green">Yes</span></td><td class="q3">3</td><td>Free-text; no templates</td></tr>
+<tr><td>My Clients</td><td>Client detail</td><td>Session history embedded</td><td><span class="badge badge-red">No</span></td><td>—</td><td>Not present on /clients/{id}/show</td></tr>
+<tr><td>My Clients</td><td>Client detail</td><td>Assessment results embedded</td><td><span class="badge badge-red">No</span></td><td>—</td><td></td></tr>
+<tr><td>My Clients</td><td>Client detail</td><td>Document upload</td><td><span class="badge badge-red">No</span></td><td>—</td><td></td></tr>
+<tr><td>Sessions</td><td>Upcoming</td><td>Full list with filters</td><td><span class="badge badge-green">Yes</span></td><td class="q4">4</td><td></td></tr>
+<tr><td>Sessions</td><td>Upcoming</td><td>Send payment link</td><td><span class="badge badge-green">Yes</span></td><td>—</td><td>Button present; not clicked</td></tr>
+<tr><td>Sessions</td><td>Upcoming</td><td>Cancel session</td><td><span class="badge badge-green">Yes</span></td><td class="q3">3</td><td>Requires reason; destructive — not clicked</td></tr>
+<tr><td>Sessions</td><td>Upcoming</td><td>Reschedule</td><td><span class="badge badge-green">Yes</span></td><td class="q3">3</td><td>Modal form; slot-based picker</td></tr>
+<tr><td>Sessions</td><td>Packages</td><td>Bundle definition</td><td><span class="badge badge-green">Yes</span></td><td class="q3">3</td><td>Sessions count, validity, per-session price</td></tr>
+<tr><td>Sessions</td><td>Discounts</td><td>Coupon management</td><td><span class="badge badge-green">Yes</span></td><td class="q3">3</td><td>Percentage or fixed amount</td></tr>
+<tr><td>Manual Booking</td><td>—</td><td>CRM-side booking creation</td><td><span class="badge badge-green">Yes</span></td><td class="q4">4</td><td>Supports package redemption + discount code</td></tr>
+<tr><td>Manual Booking</td><td>—</td><td>Recurring booking</td><td><span class="badge badge-red">No</span></td><td>—</td><td>One-off booking only</td></tr>
+<tr><td>Conversations</td><td>WhatsApp inbox</td><td>Thread list view</td><td><span class="badge badge-green">Yes</span></td><td class="q4">4</td><td>67 conversations confirmed active</td></tr>
+<tr><td>Conversations</td><td>WhatsApp inbox</td><td>AI categorisation</td><td><span class="badge badge-green">Yes</span></td><td class="q4">4</td><td>5-class category + urgency 1–5 + AI summary + key themes</td></tr>
+<tr><td>Conversations</td><td>WhatsApp inbox</td><td>Reply from CRM</td><td><span class="badge badge-red">No</span></td><td>—</td><td>Read-only; no agent reply capability</td></tr>
+<tr><td>Conversations</td><td>SOS escalation</td><td>Automated alert on SOS</td><td><span class="badge badge-red">No</span></td><td>—</td><td>SOS category has no automation; manual review only</td></tr>
+<tr><td>Assessments</td><td>Automated</td><td>Post-session auto-trigger</td><td><span class="badge badge-green">Yes</span></td><td class="q4">4</td><td>Triggered after session completion</td></tr>
+<tr><td>Assessments</td><td>Manual</td><td>Ad-hoc assignment</td><td><span class="badge badge-green">Yes</span></td><td class="q3">3</td><td></td></tr>
+<tr><td>Session Follow-ups</td><td>Check-in flow</td><td>WhatsApp post-session builder</td><td><span class="badge badge-green">Yes</span></td><td class="q4">4</td><td>5 question types; publishable to Meta</td></tr>
+<tr><td>Session Follow-ups</td><td>Feedback flow</td><td>Session satisfaction builder</td><td><span class="badge badge-orange">Partial</span></td><td class="q3">3</td><td>Missing trigger offset field</td></tr>
+<tr><td>Session Follow-ups</td><td>Conditional branching</td><td>Flow logic</td><td><span class="badge badge-red">No</span></td><td>—</td><td>Linear flows only</td></tr>
+<tr><td>Reports</td><td>—</td><td>Session-level ledger</td><td><span class="badge badge-green">Yes</span></td><td class="q3">3</td><td>Per-row invoice data only</td></tr>
+<tr><td>Reports</td><td>—</td><td>Aggregate KPI charts</td><td><span class="badge badge-red">No</span></td><td>—</td><td>No revenue totals, utilisation %, therapist splits</td></tr>
+<tr><td>My Therapists</td><td>—</td><td>Therapist profile management</td><td><span class="badge badge-orange">Partial</span></td><td class="q2">2</td><td>List was empty despite 10 active therapists in booking dropdowns</td></tr>
+<tr><td>Bulk Messages</td><td>—</td><td>Template management</td><td><span class="badge badge-green">Yes</span></td><td class="q3">3</td><td>WhatsApp templates only</td></tr>
+<tr><td>Bulk Messages</td><td>—</td><td>Message logs / audit</td><td><span class="badge badge-green">Yes</span></td><td class="q3">3</td><td></td></tr>
+<tr><td>Policy</td><td>—</td><td>Cancellation &amp; reschedule rules</td><td><span class="badge badge-green">Yes</span></td><td class="q3">3</td><td>Singleton per org; manual refund processing</td></tr>
+</tbody>
+</table>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="fields">4. Data Fields</h2>
+
+<h3>Client (core record)</h3>
+<table>
+<thead><tr><th>Entity</th><th>Field</th><th>Type</th><th>Required?</th><th>Enum values</th><th>PHI?</th><th>Source screen</th></tr></thead>
+<tbody>
+<tr><td>Client</td><td>Client Name</td><td>string</td><td>Yes</td><td>—</td><td>Yes</td><td>Add/Edit Client modal</td></tr>
+<tr><td>Client</td><td>Email</td><td>string</td><td>No</td><td>—</td><td>Yes</td><td>Add/Edit Client modal</td></tr>
+<tr><td>Client</td><td>Phone Number</td><td>string</td><td>Yes</td><td>—</td><td>Yes</td><td>Add/Edit Client modal</td></tr>
+<tr><td>Client</td><td>Origin</td><td>enum</td><td>Auto</td><td>Whatsapp, Web bot</td><td>No</td><td>List view / detail header</td></tr>
+<tr><td>Client</td><td>Registered On</td><td>datetime</td><td>Auto</td><td>—</td><td>No</td><td>List view</td></tr>
+</tbody>
+</table>
+
+<h3>Client Bio</h3>
+<table>
+<thead><tr><th>Entity</th><th>Field</th><th>Type</th><th>Required?</th><th>Enum values</th><th>PHI?</th></tr></thead>
+<tbody>
+<tr><td>Client Bio</td><td>Age</td><td>int</td><td>No</td><td>—</td><td>Yes</td></tr>
+<tr><td>Client Bio</td><td>Date of Birth</td><td>date</td><td>No</td><td>—</td><td>Yes</td></tr>
+<tr><td>Client Bio</td><td>Gender</td><td>enum</td><td>No</td><td>Male, Female, Non-binary, Prefer not to say, Other</td><td>Yes</td></tr>
+<tr><td>Client Bio</td><td>Pronouns</td><td>enum</td><td>No</td><td>he/him, she/her, they/them, she/they, he/they, Other</td><td>No</td></tr>
+<tr><td>Client Bio</td><td>Primary Language</td><td>string</td><td>No</td><td>—</td><td>No</td></tr>
+<tr><td>Client Bio</td><td>City</td><td>string</td><td>No</td><td>—</td><td>Yes</td></tr>
+<tr><td>Client Bio</td><td>Country</td><td>string</td><td>No</td><td>—</td><td>No</td></tr>
+<tr><td>Client Bio</td><td>Occupation</td><td>enum</td><td>No</td><td>Student, Professional</td><td>No</td></tr>
+<tr><td>Client Bio</td><td>Relationship Status</td><td>enum</td><td>No</td><td>Single, Married, Divorced, Widowed, In a relationship, Prefer not to say</td><td>No</td></tr>
+<tr><td>Client Bio</td><td>Emergency Contact Name</td><td>string</td><td>No</td><td>—</td><td>Yes</td></tr>
+<tr><td>Client Bio</td><td>Emergency Contact Number</td><td>string</td><td>No</td><td>—</td><td>Yes</td></tr>
+</tbody>
+</table>
+
+<h3>Appointment (Session)</h3>
+<table>
+<thead><tr><th>Field</th><th>Type</th><th>PHI?</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Client</td><td>relation</td><td>Yes</td><td>FK → Client</td></tr>
+<tr><td>Therapist</td><td>relation</td><td>No</td><td>FK → Therapist</td></tr>
+<tr><td>Session Type</td><td>enum</td><td>No</td><td>Individual, Couple, Family, Group, Child</td></tr>
+<tr><td>Date</td><td>date</td><td>No</td><td></td></tr>
+<tr><td>Time Slot</td><td>enum/time</td><td>No</td><td>Slot-based from therapist availability</td></tr>
+<tr><td>Duration (minutes)</td><td>int</td><td>No</td><td>Auto-filled from therapist pricing</td></tr>
+<tr><td>Package</td><td>relation</td><td>No</td><td>Optional; FK → SessionPackage</td></tr>
+<tr><td>Discount Code</td><td>string</td><td>No</td><td>Optional; FK → Discount</td></tr>
+<tr><td>Payment Method</td><td>enum</td><td>No</td><td>Cash, UPI, Card, Bank Transfer, Package</td></tr>
+<tr><td>Status</td><td>enum</td><td>No</td><td>Scheduled, Completed, Cancelled, No-show, Rescheduled</td></tr>
+<tr><td>Booking Channel</td><td>enum</td><td>No</td><td>CRM (Manual), WhatsApp Bot, Online Portal</td></tr>
+<tr><td>Payment Status</td><td>enum</td><td>No</td><td>Pending, Paid, Refunded, Waived</td></tr>
+<tr><td>Gross Amount (₹)</td><td>decimal</td><td>No</td><td></td></tr>
+<tr><td>Net Amount (₹)</td><td>decimal</td><td>No</td><td>After discount</td></tr>
+<tr><td>Meeting Link</td><td>string</td><td>No</td><td>For online sessions</td></tr>
+<tr><td>Notes</td><td>text</td><td>Yes</td><td>Internal admin notes</td></tr>
+<tr><td>Cancellation Reason</td><td>text</td><td>No</td><td>On cancel</td></tr>
+</tbody>
+</table>
+
+<h3>Therapist Profile</h3>
+<table>
+<thead><tr><th>Field</th><th>Type</th><th>Required?</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>First / Last Name</td><td>string</td><td>Yes</td><td>PHI</td></tr>
+<tr><td>Gender</td><td>enum</td><td>No</td><td>Male, Female, Other</td></tr>
+<tr><td>Date of Birth</td><td>date</td><td>No</td><td>PHI</td></tr>
+<tr><td>Phone / Email</td><td>string</td><td>No</td><td>PHI</td></tr>
+<tr><td>Address</td><td>text</td><td>No</td><td>PHI</td></tr>
+<tr><td>Profile Photo</td><td>file</td><td>No</td><td></td></tr>
+<tr><td>Professional Title</td><td>enum(29)</td><td>Yes</td><td>Psychologist, Psychiatrist, Counsellor, Therapist, Life Coach, Career Coach, Relationship Counsellor, CBT Specialist, DBT Therapist, Art Therapist, Play Therapist, Child Psychologist, Adolescent Therapist, Family Therapist, Couples Therapist, Trauma Therapist, EMDR Therapist, Neuropsychologist, Clinical Social Worker, OT, Speech Therapist, Nutritionist, Wellness Coach, Mindfulness Coach, Yoga Therapist, Sex Therapist, Addiction Counsellor, Grief Counsellor, Geriatric Specialist</td></tr>
+<tr><td>Specializations</td><td>multi-select</td><td>No</td><td>30+ values (anxiety, depression, OCD, PTSD, etc.)</td></tr>
+<tr><td>Concerns Addressed</td><td>multi-select</td><td>No</td><td>18 values observed</td></tr>
+<tr><td>Bio</td><td>text</td><td>No</td><td></td></tr>
+<tr><td>Years of Experience</td><td>int</td><td>No</td><td></td></tr>
+<tr><td>Languages Spoken</td><td>multi-select</td><td>No</td><td></td></tr>
+<tr><td>Session Type Pricing</td><td>relation(many)</td><td>No</td><td>Per session type: duration, domestic price, international price</td></tr>
+<tr><td>Working Hours</td><td>per-day time range</td><td>No</td><td>Mon–Sat; per-day toggles</td></tr>
+<tr><td>Buffer Time (min)</td><td>int</td><td>No</td><td>Post-session gap</td></tr>
+<tr><td>Branches</td><td>relation(many)</td><td>No</td><td>Assigned branch locations</td></tr>
+</tbody>
+</table>
+
+<h3>Cancellation &amp; Reschedule Policy</h3>
+<table>
+<thead><tr><th>Field</th><th>Type</th><th>Observed value</th></tr></thead>
+<tbody>
+<tr><td>Reschedule Window</td><td>int (hours)</td><td>3</td></tr>
+<tr><td>Cancellation Window</td><td>int (hours)</td><td>8</td></tr>
+<tr><td>Refund Percentage</td><td>int (0–100)</td><td>100</td></tr>
+<tr><td>Refund Processing</td><td>enum</td><td>Manual</td></tr>
+<tr><td>Allow Client Cancellation</td><td>bool</td><td>Yes</td></tr>
+<tr><td>Allow Client Reschedule</td><td>bool</td><td>Yes</td></tr>
+</tbody>
+</table>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="flows">5. Flows</h2>
+
+<h3>FL-01 — WhatsApp Lead Acquisition → Conversation Log</h3>
+<table>
+<thead><tr><th>#</th><th>Actor</th><th>Action</th><th>System response</th><th>Screen</th><th>Observations</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Client</td><td>Sends first WhatsApp message to clinic's WhatsApp Business number</td><td>Bot receives; logs conversation</td><td>—</td><td></td></tr>
+<tr><td>2</td><td>Bot</td><td>Sends Main menu</td><td>"Main menu provided" event logged</td><td>—</td><td></td></tr>
+<tr><td>3</td><td>Client</td><td>Selects menu option</td><td>Appointment booking → FL-02; Company info → info flow; Other → additional flows</td><td>—</td><td></td></tr>
+<tr><td>4</td><td>System</td><td>Captures phone as conversation ID</td><td>Conversation stored in CRM</td><td>/my-conversations</td><td>Name may be "Unknown" if not yet collected</td></tr>
+<tr><td>5</td><td>AI engine</td><td>Analyses conversation asynchronously</td><td>Category, Urgency 1–5, AI Summary, Key Themes assigned</td><td>Conversation list</td><td>SOS category has no automated escalation</td></tr>
+<tr><td>6</td><td>Admin</td><td>Reviews Conversation list; filters by category</td><td>—</td><td>/my-conversations</td><td>Read-only; cannot reply from CRM</td></tr>
+</tbody>
+</table>
+
+<h3>FL-02 — Bot Self-Service Appointment Booking</h3>
+<table>
+<thead><tr><th>#</th><th>Actor</th><th>Action</th><th>System response</th><th>Screen</th><th>Observations</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Client</td><td>Selects "Appointment booking" in bot main menu</td><td>"Appointment flow initiated" event logged</td><td>—</td><td>Triggered from FL-01 step 3</td></tr>
+<tr><td>2</td><td>Bot</td><td>Collects therapist preference, session type, slot selection via WhatsApp</td><td>Slot presented from therapist availability</td><td>—</td><td>Exact bot UX not directly observed</td></tr>
+<tr><td>3</td><td>Bot</td><td>Generates payment link; sends to client</td><td>Payment link sent (Razorpay/UPI inferred)</td><td>—</td><td>Link is auto-hardwired to booking</td></tr>
+<tr><td>4</td><td>Client</td><td>Completes payment</td><td>Booking confirmed; Appointment record created in CRM</td><td>/upcoming-sessions</td><td>Booking Channel = "WhatsApp Bot"</td></tr>
+<tr><td>5</td><td>System</td><td>Sends booking confirmation to client via WhatsApp</td><td>—</td><td>—</td><td></td></tr>
+</tbody>
+</table>
+
+<h3>FL-03 — Manual Booking (CRM Front-desk)</h3>
+<table>
+<thead><tr><th>#</th><th>Actor</th><th>Action</th><th>System response</th><th>Screen</th><th>Observations</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Admin/Receptionist</td><td>Navigate to Manual Booking</td><td>Form loads</td><td>/manual-booking</td><td></td></tr>
+<tr><td>2</td><td>Admin/Receptionist</td><td>Select Client (searchable dropdown), Therapist, Session Type, Date, Time Slot</td><td>Duration and Price auto-filled from therapist pricing config</td><td>/manual-booking</td><td>Slot availability depends on therapist schedule setup</td></tr>
+<tr><td>3</td><td>Admin/Receptionist</td><td>Optionally select Package or enter Discount Code</td><td>Net amount recalculates</td><td>/manual-booking</td><td></td></tr>
+<tr><td>4</td><td>Admin/Receptionist</td><td>Select Payment Method; add Notes; click Create Booking</td><td>Appointment record created; appears in Upcoming Sessions</td><td>/upcoming-sessions</td><td>Booking Channel = "CRM (Manual)"</td></tr>
+<tr><td>4b</td><td>Admin/Receptionist</td><td>Alternatively: Create Booking &amp; Send Payment Link</td><td>Booking created + payment link sent to client (WhatsApp/SMS)</td><td>—</td><td>Effect not tested (not clicked)</td></tr>
+</tbody>
+</table>
+
+<h3>FL-04 — Post-Session Follow-up (Check-in / Feedback)</h3>
+<table>
+<thead><tr><th>#</th><th>Actor</th><th>Action</th><th>System response</th><th>Screen</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Admin</td><td>Builds Check-in flow in Manage Flows; publishes to Meta</td><td>Flow deployed to WhatsApp Business API</td><td>/manage-flows</td></tr>
+<tr><td>2</td><td>System</td><td>Session marked Completed</td><td>Trigger fired: N hours after session (configured offset)</td><td>—</td></tr>
+<tr><td>3</td><td>System</td><td>Sends Check-in flow to client via WhatsApp</td><td>Client receives WhatsApp message with flow</td><td>—</td></tr>
+<tr><td>4</td><td>Client</td><td>Completes flow questions on WhatsApp</td><td>Submission record created in CRM</td><td>/submissions</td></tr>
+<tr><td>5</td><td>Admin</td><td>Reviews submissions</td><td>—</td><td>/submissions</td></tr>
+</tbody>
+</table>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="permissions">6. Permissions Matrix</h2>
+
+<p>Legend: <strong>✅</strong> = Access granted &nbsp;|&nbsp; <strong>☐</strong> = No access &nbsp;|&nbsp; <strong>Full</strong> = Implicit full (Admin only)</p>
+
+<table>
+<thead><tr>
+  <th>Module</th><th>Admin</th><th>Branch Admin</th><th>Receptionist</th><th>Accountant</th><th>Therapist</th>
+</tr></thead>
+<tbody>
+<tr><td>Dashboard</td><td>Full</td><td>✅</td><td>☐</td><td>✅</td><td>☐</td></tr>
+<tr><td>Conversations</td><td>Full</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>My Schedule</td><td>Full</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>My Therapists</td><td>Full</td><td>✅</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>Manual Booking</td><td>Full</td><td>✅</td><td>✅</td><td>☐</td><td>☐</td></tr>
+<tr><td>My Clients</td><td>Full</td><td>✅</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>Upcoming Sessions</td><td>Full</td><td>✅</td><td>✅</td><td>☐</td><td>☐</td></tr>
+<tr><td>Completed Sessions</td><td>Full</td><td>✅</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>Session Packages</td><td>Full</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>Session Discounts</td><td>Full</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>Assessments</td><td>Full</td><td>✅</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>Reports</td><td>Full</td><td>☐</td><td>☐</td><td>✅</td><td>☐</td></tr>
+<tr><td>Invoices</td><td>Full</td><td>☐</td><td>☐</td><td>✅</td><td>☐</td></tr>
+<tr><td>Seminars</td><td>Full</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>Ecommerce</td><td>Full</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>Session Follow-ups</td><td>Full</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>Bulk Messages</td><td>Full</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>Organisation Policies</td><td>Full</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>FAQ &amp; Tutorials</td><td>Full</td><td>✅</td><td>✅</td><td>✅</td><td>☐</td></tr>
+<tr><td>Receptionists (User Mgmt)</td><td>Full</td><td>✅</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>Branches</td><td>Full</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>Access Control (RBAC)</td><td>Full</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td colspan="6" style="background:#fef3c7;color:#92400e;font-style:italic;">⚠ Therapist role has 0/29 modules enabled — all cells above are ☐. Likely configuration error.</td></tr>
+</tbody>
+</table>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="integrations">7. Integrations</h2>
+
+<table>
+<thead><tr>
+  <th>ID</th><th>Category</th><th>Function</th><th>Vendor</th><th>Direction</th><th>Status</th><th>Notes</th>
+</tr></thead>
+<tbody>
+<tr><td>INT-01</td><td>Messaging</td><td>WhatsApp Business chatbot + inbox</td><td>Meta / WhatsApp Business Platform</td><td>Both</td><td><span class="badge badge-green">Active</span></td><td>67 conversations confirmed; paid add-on ₹1,178.82; AI analysis layer; appointment booking flow; delivery channel for follow-ups</td></tr>
+<tr><td>INT-02</td><td>Payment</td><td>Session payment links + UPI</td><td>Not named in UI (Razorpay/Easebuzz inferred)</td><td>In</td><td><span class="badge badge-green">Active</span></td><td>Cash, UPI, Card, Bank Transfer, Package; manual refund processing; no gateway config screen visible</td></tr>
+<tr><td>INT-03</td><td>Maps</td><td>Branch location display</td><td>Google Maps</td><td>Out</td><td><span class="badge badge-orange">Configured</span></td><td>URL-storage only; no in-app map embed; 0 branches configured in prod</td></tr>
+<tr><td>INT-04</td><td>Email</td><td>Transactional staff provisioning email</td><td>Unknown (SendGrid/SES/Mailgun)</td><td>Out</td><td><span class="badge badge-green">Active</span></td><td>Temp passwords emailed on staff creation; no template editor or delivery log visible</td></tr>
+<tr><td>INT-05</td><td>Video</td><td>Online session meeting links</td><td>Not specified (no Zoom/Meet branding)</td><td>Both</td><td><span class="badge badge-orange">Supported</span></td><td>Meeting link field on Appointment; no OAuth picker observed; unclear if auto-generated or manually pasted</td></tr>
+<tr><td>INT-06</td><td>Documents</td><td>Prescription PDF generation</td><td>Internal PDF engine</td><td>Out</td><td><span class="badge badge-orange">Configured</span></td><td>Letterhead + signature image uploaded; RBAC prescriptions module exists; module not scanned</td></tr>
+<tr><td>INT-07</td><td>Social</td><td>Public profile social links</td><td>LinkedIn, Instagram, YouTube, Facebook, X, Custom</td><td>Out</td><td><span class="badge badge-orange">Configured</span></td><td>URL storage only; displayed on client-facing booking page</td></tr>
+<tr><td>INT-08</td><td>Billing</td><td>CRM subscription invoicing</td><td>SwasthMind platform (self-billed)</td><td>In</td><td><span class="badge badge-green">Active</span></td><td>₹3,200/month; PDF invoices downloadable; Jan–Mar 2026 invoices present</td></tr>
+<tr><td>INT-09</td><td>AI / NLP</td><td>Conversation analysis (category, urgency, summary, themes)</td><td>Unknown LLM (not disclosed in UI)</td><td>In</td><td><span class="badge badge-green">Active</span></td><td>Processes raw PHI; vendor DPA required but not confirmed; no model version visible</td></tr>
+</tbody>
+</table>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="datamodel">8. Data Model Summary</h2>
+
+<table>
+<thead><tr><th>Entity</th><th>Key fields</th><th>Relationships</th><th>PHI?</th></tr></thead>
+<tbody>
+<tr><td><strong>Organisation</strong></td><td>id, name, slug, timezone, currency, whatsappNumber, metaPageId</td><td>1 → many everything</td><td>Partial</td></tr>
+<tr><td><strong>UserRole</strong></td><td>id, organisationId, name (Admin/Manager/Receptionist/Therapist), isSystemRole</td><td>1 → many RBACPermission; many Users</td><td>No</td></tr>
+<tr><td><strong>RBACPermission</strong></td><td>id, roleId, moduleKey (29 known), hasAccess (bool)</td><td>many → 1 UserRole</td><td>No</td></tr>
+<tr><td><strong>User</strong></td><td>id, organisationId, roleId, email, firstName, lastName, phone, isActive</td><td>0..1 ↔ Therapist</td><td>PII</td></tr>
+<tr><td><strong>Therapist</strong></td><td>id, userId, professionalTitle (enum 29), specializations, bio, yearsExp, languagesSpoken</td><td>1 → many SessionTypePricing, Appointments</td><td>PII</td></tr>
+<tr><td><strong>SessionTypePricing</strong></td><td>therapistId, sessionType, durationMinutes, bufferMinutes, priceDomesticINR, priceInternationalINR</td><td>many → 1 Therapist</td><td>No</td></tr>
+<tr><td><strong>Client</strong></td><td>id, firstName, lastName, email, phone, dateOfBirth, gender, address, emergencyContact*, source, assignedTherapistId</td><td>1 → many Appointments, Conversations, Assessments</td><td>PHI</td></tr>
+<tr><td><strong>SessionPackage</strong></td><td>clientId, therapistId, totalSessions, usedSessions, pricePerSession, totalPrice, validityDays, status</td><td>many → 1 Client, Therapist</td><td>No</td></tr>
+<tr><td><strong>Discount</strong></td><td>code, discountType (Percentage/Fixed), discountValue, maxUses, usedCount, expiresAt</td><td>optional → Appointment</td><td>No</td></tr>
+<tr><td><strong>Appointment</strong></td><td>clientId, therapistId, sessionType, scheduledDate, startTime, status, bookingChannel, packageId, discountId, priceINR, netAmountINR, paymentStatus, paymentMethod, meetingLink</td><td>1 → 0..1 SessionInvoice, Assessment, Submission</td><td>Partial</td></tr>
+<tr><td><strong>SessionInvoice</strong></td><td>appointmentId, clientId (snapshot: email, phone), sessionDate, grossAmountINR, netAmountINR, paymentStatus, invoiceNumber</td><td>1 → 1 Appointment</td><td>PHI (snapshot)</td></tr>
+<tr><td><strong>Conversation</strong></td><td>clientId (nullable), contactPhone, contactName, origin (WhatsApp), firstInteractionAt, lastInteractionAt, totalMessages</td><td>1 → many Messages, 0..1 ConversationAnalysis</td><td>PHI</td></tr>
+<tr><td><strong>Message</strong></td><td>conversationId, senderType (Client/Bot/Agent), body, messageType, sentAt, botEventTag</td><td>many → 1 Conversation</td><td>PHI</td></tr>
+<tr><td><strong>ConversationAnalysis</strong></td><td>conversationId, category (5-class enum), urgencyScore (1–5), aiSummary, keyThemes, analysedAt</td><td>1 → 1 Conversation</td><td>PHI (AI output)</td></tr>
+<tr><td><strong>Assessment</strong></td><td>clientId, therapistId, appointmentId, assessmentType, status, score, interpretation, responseData (JSON)</td><td>many → 1 Appointment</td><td>PHI</td></tr>
+<tr><td><strong>FollowUpFlow</strong></td><td>therapistId, flowType (CheckIn/Feedback), name, isActive, triggerType, triggerOffsetHours, deliveryChannel (WhatsApp), publishedToMeta</td><td>1 → many FlowStep, Submission</td><td>No</td></tr>
+<tr><td><strong>FlowStep</strong></td><td>flowId, stepNumber, questionText, questionType (Single/Multi/Open Text/Scale/Section Header), isRequired</td><td>1 → many FlowStepOption</td><td>No</td></tr>
+<tr><td><strong>Submission</strong></td><td>flowId, clientId, appointmentId, therapistId, submittedAt, completionStatus (Complete/Partial/Skipped)</td><td>1 → many SubmissionResponse</td><td>No</td></tr>
+<tr><td><strong>SubmissionResponse</strong></td><td>submissionId, flowStepId, responseText, selectedOptionId, responseNumeric</td><td>many → 1 Submission</td><td>PHI</td></tr>
+<tr><td><strong>OrganisationPolicy</strong></td><td>rescheduleWindowHours, cancellationWindowHours, refundPercentage, refundProcessing, allowClientCancellation, allowClientReschedule</td><td>1:1 → Organisation</td><td>No</td></tr>
+</tbody>
+</table>
+
+<h3>Inferred Entities (RBAC modules exist; not directly scanned)</h3>
+<p>AuditLog, Prescription, Task, Note, Document, CalendarSlot/Availability, Notification/Alert, PaymentLink, BotFlowTemplate</p>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="compliance">9. Security &amp; Compliance</h2>
+
+<table>
+<thead><tr><th>Area</th><th>Setting / Requirement</th><th>Status</th><th>Where it lives</th><th>Observed value</th></tr></thead>
+<tbody>
+<tr><td>Transport</td><td>HTTPS / TLS</td><td><span class="badge badge-green">✅ Enforced</span></td><td>All pages</td><td>All API calls to mappapiprodv.swasthmind.com over HTTPS</td></tr>
+<tr><td>Transport</td><td>HSTS</td><td><span class="badge badge-orange">⚠ Unknown</span></td><td>Server response header</td><td>Not observable client-side</td></tr>
+<tr><td>Authentication</td><td>MFA / 2FA</td><td><span class="badge badge-red">❌ Absent</span></td><td>Login page</td><td>No OTP, TOTP, or authenticator prompt. HIGH severity for PHI system.</td></tr>
+<tr><td>Authentication</td><td>CAPTCHA</td><td><span class="badge badge-red">❌ Absent</span></td><td>Login page</td><td>No reCAPTCHA or hCAPTCHA</td></tr>
+<tr><td>Authentication</td><td>Password recovery</td><td><span class="badge badge-green">✅ Present</span></td><td>"Forgot your password?" on login</td><td>Standard email-based reset (flow not fully traced)</td></tr>
+<tr><td>Authentication</td><td>Social login (Google)</td><td><span class="badge badge-red">❌ Not rendered</span></td><td>Login page</td><td>Google GSI script loaded but no Sign-In button displayed</td></tr>
+<tr><td>Session</td><td>Token storage</td><td><span class="badge badge-orange">⚠ sessionStorage</span></td><td>Browser sessionStorage</td><td>key: "crm_token" (JWT, Bearer, ~351 chars); vulnerable to XSS</td></tr>
+<tr><td>Session</td><td>Session timeout</td><td><span class="badge badge-orange">⚠ Unknown</span></td><td>Not observable</td><td>No inactivity timeout warning observed</td></tr>
+<tr><td>Session</td><td>Tenant isolation</td><td><span class="badge badge-green">✅ Present</span></td><td>sessionStorage</td><td>"organisation_id" = 46; scoped to tenant</td></tr>
+<tr><td>Auth provisioning</td><td>Temp password via email</td><td><span class="badge badge-orange">⚠ Weak</span></td><td>User Management (Add staff forms)</td><td>Password sent in email; change required on first login</td></tr>
+<tr><td>Auth provisioning</td><td>Password policy visible</td><td><span class="badge badge-red">❌ Not visible</span></td><td>Not shown in UI</td><td>No complexity rules displayed during provisioning</td></tr>
+<tr><td>SSO / SAML</td><td>SSO for staff</td><td><span class="badge badge-red">❌ Not present</span></td><td>—</td><td>No Google Workspace / Microsoft 365 login integration observed</td></tr>
+<tr><td>Data handling</td><td>PHI in sessionStorage</td><td><span class="badge badge-red">⚠ Risk</span></td><td>Browser sessionStorage</td><td>JWT stored in sessionStorage — XSS vulnerability; HttpOnly cookies preferred</td></tr>
+<tr><td>Client-side</td><td>XSS / CSP</td><td><span class="badge badge-orange">⚠ Unknown</span></td><td>HTTP headers</td><td>Content-Security-Policy not observable from client-side DOM</td></tr>
+<tr><td>Compliance</td><td>HIPAA / DPDPA</td><td><span class="badge badge-orange">⚠ Unconfirmed</span></td><td>—</td><td>WhatsApp delivery of clinical content raises DPDPA data-residency questions; AI analysis processes PHI without confirmed DPA with AI vendor</td></tr>
+<tr><td>Compliance</td><td>ABDM / ABHA Health ID (India)</td><td><span class="badge badge-red">❌ Not observed</span></td><td>—</td><td>No Ayushman Bharat Digital Mission integration visible</td></tr>
+<tr><td>Audit</td><td>Audit log / access log</td><td><span class="badge badge-orange">⚠ Module exists; not scanned</span></td><td>RBAC: "audit-log" module</td><td>Module present in RBAC config but not directly accessed during scan</td></tr>
+<tr><td>Encryption</td><td>Encryption at rest disclosure</td><td><span class="badge badge-orange">⚠ Not visible</span></td><td>—</td><td>No disclosure in admin UI; assume backend encrypted (not confirmed)</td></tr>
+<tr><td>BAA / DPA</td><td>Subprocessor / BAA list</td><td><span class="badge badge-red">❌ Not visible</span></td><td>—</td><td>No BAA or subprocessor agreement visible in admin UI</td></tr>
+</tbody>
+</table>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="gaps">10. Gaps &amp; Design Concerns Index</h2>
+
+<table>
+<thead><tr><th>ID</th><th>Area</th><th>Severity</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>DM-01</td><td>Therapist RBAC</td><td><span class="badge badge-red">HIGH</span></td><td>Therapist role has 0/29 module permissions — likely configuration error; therapists cannot access any CRM screen</td></tr>
+<tr><td>SEC-01</td><td>Authentication</td><td><span class="badge badge-red">HIGH</span></td><td>No MFA for admin or any staff login — critical for a PHI-handling system</td></tr>
+<tr><td>INT-G02</td><td>WhatsApp SOS</td><td><span class="badge badge-red">HIGH</span></td><td>SOS-categorised conversations (urgency 5) have no automated escalation, no alert or on-call notification</td></tr>
+<tr><td>INT-G07</td><td>E-prescribing</td><td><span class="badge badge-red">HIGH</span></td><td>No e-prescribing integration; prescription = letterhead + signature overlay PDF only; not compliant with e-pharmacy regulations</td></tr>
+<tr><td>INT-G08</td><td>ABDM</td><td><span class="badge badge-red">HIGH</span></td><td>No Ayushman Bharat Digital Mission / ABHA Health ID integration — required for Indian digital health compliance</td></tr>
+<tr><td>INT-G09</td><td>AI DPA</td><td><span class="badge badge-red">HIGH</span></td><td>AI conversation analysis processes PHI; vendor identity not disclosed; no data processing agreement visible</td></tr>
+<tr><td>SEC-04</td><td>Session security</td><td><span class="badge badge-orange">MED</span></td><td>JWT stored in sessionStorage — vulnerable to XSS; HttpOnly cookies preferred</td></tr>
+<tr><td>DM-02</td><td>Data model</td><td><span class="badge badge-orange">MED</span></td><td>No insurance/payer fields; not suitable for insurance-billed practices</td></tr>
+<tr><td>DM-03</td><td>Data model</td><td><span class="badge badge-orange">MED</span></td><td>No ICD-10 / diagnosis code field on Appointment; clinical documentation incomplete for psychiatry</td></tr>
+<tr><td>DM-04</td><td>Data model</td><td><span class="badge badge-orange">MED</span></td><td>No prescription entity observed; psychiatry-prescribing workflow not modelled</td></tr>
+<tr><td>DM-05</td><td>Reporting</td><td><span class="badge badge-orange">MED</span></td><td>Reports is a per-row ledger only — no aggregate KPI entity (revenue by therapist, utilisation %, session volume)</td></tr>
+<tr><td>DM-07</td><td>Conversations</td><td><span class="badge badge-orange">MED</span></td><td>SOS category (urgency 5) has no observed escalation automation</td></tr>
+<tr><td>DM-08</td><td>Assessments</td><td><span class="badge badge-orange">MED</span></td><td>No assessment template versioning — schema changes could break historical response data</td></tr>
+<tr><td>DM-09</td><td>Therapists</td><td><span class="badge badge-orange">MED</span></td><td>My Therapists list empty (0 records) despite 10 active therapists in booking dropdowns — Therapist vs User table data split</td></tr>
+<tr><td>INT-G03</td><td>Video</td><td><span class="badge badge-orange">MED</span></td><td>Online sessions supported but no video platform OAuth picker; unclear if links are auto-generated or manually pasted</td></tr>
+<tr><td>INT-G04</td><td>Calendar sync</td><td><span class="badge badge-orange">MED</span></td><td>No Google Calendar / Outlook sync; schedule stays inside CRM only</td></tr>
+<tr><td>INT-G05</td><td>Payments</td><td><span class="badge badge-orange">MED</span></td><td>Payment gateway vendor not surfaced in admin UI; no webhook config screen</td></tr>
+<tr><td>UM-01</td><td>User Management</td><td><span class="badge badge-orange">MED</span></td><td>Accountants, Co-Admins, Branch Admins appear in User Management but not in RBAC matrix — hidden roles or incomplete matrix</td></tr>
+<tr><td>FL-Booking</td><td>Booking</td><td><span class="badge badge-orange">MED</span></td><td>No recurring session booking; every session must be booked individually</td></tr>
+<tr><td>FL-Clients</td><td>Client detail</td><td><span class="badge badge-orange">MED</span></td><td>Client detail page has only Notes tab — no embedded session history, assessments, documents, or Bio access</td></tr>
+<tr><td>FL-Conv</td><td>Conversations</td><td><span class="badge badge-orange">MED</span></td><td>Admin cannot reply to WhatsApp conversations from CRM — read-only inbox only</td></tr>
+<tr><td>DM-13</td><td>Currency</td><td><span class="badge badge-orange">MED</span></td><td>Single-currency (INR) despite international pricing fields — no true multi-currency or FX conversion</td></tr>
+<tr><td>DM-06</td><td>Follow-ups</td><td><span class="badge badge-blue">LOW</span></td><td>Feedback flow missing triggerOffsetHours field (present in Check-in tab only)</td></tr>
+<tr><td>DM-10</td><td>Client</td><td><span class="badge badge-blue">LOW</span></td><td>No next-of-kin / guardian entity for child/adolescent clients (child therapy is a listed session type)</td></tr>
+<tr><td>DM-14</td><td>Follow-up flows</td><td><span class="badge badge-blue">LOW</span></td><td>No conditional branching logic — all flows are strictly linear</td></tr>
+<tr><td>INT-G01</td><td>Integrations hub</td><td><span class="badge badge-blue">LOW</span></td><td>No /integrations page — integration settings scattered across Profile and individual module settings</td></tr>
+<tr><td>SEC-02</td><td>Authentication</td><td><span class="badge badge-orange">MED</span></td><td>No CAPTCHA on login — vulnerable to credential stuffing unless server-side rate limiting is in place</td></tr>
+<tr><td>SEC-05</td><td>Session</td><td><span class="badge badge-blue">LOW</span></td><td>No visible session timeout / inactivity auto-logout; HIPAA best practice recommends 15–30 min idle timeout</td></tr>
+</tbody>
+</table>
+
+<hr>
+<p style="color:#9ca3af;font-size:11px;text-align:center;">SwasthMind CRM Capture Workbook — Generated 2026-04-20 — Compiled from Phase 1–7 scan docs — All PHI redacted</p>
+
+</main>
+</body>
+</html>

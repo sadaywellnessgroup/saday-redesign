@@ -1,0 +1,26 @@
+[
+  {
+    "module": "Admin Panel",
+    "screen": "Payment Gateways",
+    "vendor": "Razorpay",
+    "category": "Payment",
+    "direction": "Unknown",
+    "notes": "Found on page"
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "Payment Gateways",
+    "vendor": "Easebuzz",
+    "category": "Payment",
+    "direction": "Unknown",
+    "notes": "Found on page"
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "Payment Gateways",
+    "vendor": "Tealfeed Pay",
+    "category": "Unknown",
+    "direction": "Unknown",
+    "notes": "Found on page"
+  }
+]

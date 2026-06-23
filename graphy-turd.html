@@ -1,0 +1,4145 @@
+<div style="pointer-events:none">
+    <main>
+        <section data-ai-id="sec-topbar" data-nav-element="header" data-section-type="header"
+            data-template-name="HEADER1" id="sec-topbar">
+            <div class="topbar-wrapper" data-ai-id="el-topbar-wrapper" data-nav-element="header" data-type="html"
+                id="el-topbar-wrapper">
+                <div class="topbar-left" data-ai-id="el-topbar-left" data-nav-element="header" data-type="html"
+                    id="el-topbar-left">
+                    <div class="logo-container" data-ai-id="el-logo-container" data-nav-element="header"
+                        data-type="html" id="el-logo-container">
+                        <a data-ai-id="el-logo-link" data-nav-element="header" href="/">
+                            <img alt="Logo" data-ai-id="el-logo-img" data-cta-type="website_logo"
+                                data-nav-element="header" data-type="image" id="el-logo-img"
+                                src="https://d502jbuhuh9wk.cloudfront.net/resources/images/yourlogohere.jpg">
+                        </a>
+                    </div>
+                </div>
+                <div class="topbar-right" data-ai-id="el-topbar-right" data-nav-element="header" data-type="html"
+                    id="el-topbar-right">
+                    <nav class="nav-left" data-ai-id="el-nav-left" data-nav-element="header" data-type="html"
+                        id="el-nav-left">
+                        <a class="dashboard-link" data-ai-id="el-dashboard-link" data-cta-type="dashboard"
+                            data-nav-element="header" data-type="text" href="/t/home" id="el-dashboard-link"
+                            style="">Dashboard</a>
+                        <button class="login-btn" data-ai-id="el-login-btn" data-button-enum="login"
+                            data-cta-type="login_signup" data-nav-element="header" data-type="html" id="el-login-btn"
+                            style="display: none;">
+                            Login
+                        </button>
+                    </nav>
+                    <!-- USER PIC AND DROPDOWN SECTION -->
+                    <div data-ai-id="el-logged-in-state" data-cta-type="logged-in-state" data-nav-element="header"
+                        id="logged-in-state" style="display: block !important;">
+                        <button class="dropdown-trigger-wrapper" data-ai-id="el-dropdown-trigger"
+                            data-nav-element="header" data-type="html" id="el-dropdown-trigger">
+                            <div class="avatar" data-ai-id="el-avatar" data-nav-element="header" data-type="html"
+                                id="el-avatar">
+                                <img class="avatar" data-ai-id="el-avatar-text" data-cta-type="profile_icon"
+                                    data-nav-element="header" id="el-avatar-text"
+                                    src="https://d502jbuhuh9wk.cloudfront.net/users/6999ad928983583b6c770d61/thumbnail.jpg?v=4">
+                            </div>
+                            <svg data-ai-id="el-chevron-icon" data-nav-element="header" data-type="html" fill="none"
+                                height="16" id="el-chevron-icon" stroke="currentColor" viewBox="0 0 24 24" width="16">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="dropdown-menu" data-ai-id="el-dropdown-menu" data-nav-element="header" data-type="html"
+                    id="el-dropdown-menu">
+                    <a data-ai-id="el-purchases-text" data-cta-type="my-purchases" data-nav-element="header"
+                        data-type="text" href="" id="el-purchases-text" style="display: none;">My Purchases</a>
+                    <a data-ai-id="el-profile-text" data-cta-type="my-profile" data-nav-element="header"
+                        data-type="text" href="/t/myprofile" id="el-profile-text" style="">My Profile</a>
+                    <button data-ai-id="el-logout-btn" data-button-enum="logout" data-cta-type="signout"
+                        data-nav-element="header" data-type="html" id="el-logout-btn" style="">
+                        Log Out
+                    </button>
+                </div>
+            </div>
+        </section>
+        <style data-ai-id="stl-topbar" id="stl-topbar">
+            #sec-topbar {
+                position: sticky;
+                top: 0;
+                z-index: 10000;
+                background: var(--section-bg);
+                padding: 10;
+            }
+
+            .topbar-wrapper {
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 73.66px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 77.752px;
+                background-color: var(--section-bg);
+                border-bottom: 1px solid var(--card-border);
+                z-index: 100;
+                box-sizing: border-box;
+            }
+
+            .topbar-left {
+                display: flex;
+                align-items: center;
+                gap: 19.444px;
+            }
+
+            .logo-container {
+                width: 46.667px;
+                height: 46.667px;
+                background-color: var(--logo-bg);
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+
+            .logo-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .site-title {
+                font-size: 15.556px;
+                font-family: var(--font-heading);
+                font-weight: 500;
+                color: var(--heading-color);
+                line-height: 15.556px;
+                margin: 0;
+            }
+
+            .topbar-right {
+                display: flex;
+                align-items: center;
+                gap: 32.738px;
+            }
+
+            .nav-left {
+                display: flex;
+                align-items: center;
+                gap: 31.111px;
+            }
+
+            .dashboard-link {
+                font-size: 17.5px;
+                font-family: var(--font-body);
+                font-weight: 500;
+                color: var(--heading-color);
+                text-decoration: none;
+                white-space: nowrap;
+            }
+
+            .login-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 9.795px;
+                padding: 11.754px 23.508px;
+                border-radius: 23.508px;
+                background-color: var(--button-primary-bg);
+                color: var(--button-primary-text);
+                border: none;
+                cursor: pointer;
+                font-family: var(--font-heading);
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .dropdown-trigger-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 5.456px;
+                cursor: pointer;
+                background: none;
+                border: none;
+                padding: 0;
+            }
+
+            .avatar {
+                width: 38.194px;
+                height: 38.194px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 19.097px;
+                font-family: var(--font-body);
+                font-weight: 500;
+                color: var(--body-color);
+            }
+
+            .dropdown-trigger-wrapper svg {
+                width: 16.369px;
+                height: 16.369px;
+                stroke-width: 2;
+                color: var(--muted-text-color);
+            }
+
+            .dropdown-menu {
+                position: fixed;
+                top: 64px;
+                right: 77.752px;
+                width: 249px;
+                background: var(--section-bg);
+                border: 1px solid var(--card-border);
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                padding: 12px;
+                z-index: 99;
+                opacity: 0;
+                visibility: hidden;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .dropdown-menu a,
+            .dropdown-menu button {
+                font-size: 14px;
+                font-family: var(--font-body);
+                font-weight: 500;
+                color: var(--body-color);
+                text-decoration: none;
+                background: none;
+                border: none;
+                text-align: left;
+                cursor: pointer;
+                padding: 8px 12px;
+                border-radius: 4px;
+                transition: background-color 0.2s;
+            }
+
+            .dropdown-menu a:hover,
+            .dropdown-menu button:hover {
+                background-color: var(--card-hover-bg);
+            }
+
+            [data-cta-type="logged-in-state"] {
+                display: none;
+            }
+
+            @media (max-width: 768px) {
+                .topbar-wrapper {
+                    padding: 0 24px;
+                }
+
+                .dashboard-link {
+                    display: none;
+                }
+            }
+        </style>
+        <script data-ai-id="scr-topbar" id="scr-topbar">
+            const trigger = document.getElementById("el-dropdown-trigger");
+            const menu = document.getElementById("el-dropdown-menu");
+
+            if (trigger && menu) {
+                trigger.addEventListener("click", () => {
+                    const isOpen = menu.style.opacity === "1";
+
+                    if (isOpen) {
+                        menu.style.opacity = "0";
+                        menu.style.visibility = "hidden";
+                    } else {
+                        menu.style.opacity = "1";
+                        menu.style.visibility = "visible";
+                    }
+                });
+
+                document.addEventListener("click", (e) => {
+                    if (!menu.contains(e.target) && !trigger.contains(e.target)) {
+                        menu.style.opacity = "0";
+                        menu.style.visibility = "hidden";
+                    }
+                });
+            }
+        </script>
+
+
+        <section data-ai-id="sec-crsh10" id="sec-crsh10">
+            <div class="hero-container" data-ai-id="el-crsh10a" id="el-crsh10a">
+                <div class="hero-content" data-ai-id="el-crsh10c" id="el-crsh10c">
+                    <nav class="hero-breadcrumbs" data-ai-id="el-breadcrumbs" id="el-breadcrumbs">
+                        <span data-ai-id="el-bc-1">
+                            Courses
+                        </span>
+                        <svg fill="none" height="12" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="12">
+                            <path d="m9 18 6-6-6-6">
+                            </path>
+                        </svg>
+                        <span data-ai-id="el-bc-2">
+                            Somatic &amp; Integrative
+                        </span>
+                        <svg fill="none" height="12" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="12">
+                            <path d="m9 18 6-6-6-6">
+                            </path>
+                        </svg>
+                        <span class="active" data-ai-id="el-bc-3">
+                            Somatic Therapy
+                        </span>
+                    </nav>
+                    <h1 class="hero-heading" data-ai-id="el-crsh10e" id="el-crsh10e">
+                        Integrative Somatic Trauma Therapy
+                    </h1>
+                    <p class="hero-description" data-ai-id="el-crsh10f" id="el-crsh10f">
+                        A comprehensive framework for understanding the physiological effects of trauma. Learn
+                        evidence-based somatic interventions to support client recovery safely and effectively over this
+                        intensive 10-day program.
+                    </p>
+                    <div class="hero-badges" data-ai-id="el-badges-row" id="el-badges-row">
+                        <div class="badge-item rating" data-ai-id="el-badge-rating">
+                            <svg fill="#facc15" height="16" stroke="#facc15" stroke-width="2" viewBox="0 0 24 24"
+                                width="16">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <span>
+                                4.9 (128 Reviews)
+                            </span>
+                        </div>
+                        <div class="badge-item duration" data-ai-id="el-badge-duration">
+                            <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                <rect height="18" rx="2" ry="2" width="18" x="3" y="4">
+                                </rect>
+                                <line x1="16" x2="16" y1="2" y2="6">
+                                </line>
+                                <line x1="8" x2="8" y1="2" y2="6">
+                                </line>
+                                <line x1="3" x2="21" y1="10" y2="10">
+                                </line>
+                            </svg>
+                            <span>
+                                10 Days
+                            </span>
+                        </div>
+                        <div class="badge-item certificate" data-ai-id="el-badge-cert">
+                            <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10">
+                                </path>
+                                <path d="m9 12 2 2 4-4">
+                                </path>
+                            </svg>
+                            <span>
+                                Certificate Included
+                            </span>
+                        </div>
+                    </div>
+                    <div class="hero-actions" data-ai-id="el-actions" id="el-actions">
+                        <button class="btn-enroll" data-ai-id="el-btn-enroll" data-cta-type="scroll_buy_now">
+                            Enroll Now — $499
+                            <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18">
+                                <path d="M5 12h14">
+                                </path>
+                                <path d="m12 5 7 7-7 7">
+                                </path>
+                            </svg>
+                        </button>
+                        <button class="btn-cart" data-ai-id="el-btn-cart">
+                            <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18">
+                                <circle cx="8" cy="21" r="1">
+                                </circle>
+                                <circle cx="19" cy="21" r="1">
+                                </circle>
+                                <path
+                                    d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12">
+                                </path>
+                            </svg>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual" data-ai-id="el-visual" id="el-visual">
+                    <div class="image-tilt-wrapper" data-ai-id="el-tilt-wrap">
+                        <img alt="Somatic Therapy Preview" class="hero-main-image" data-ai-id="el-crsh10b"
+                            id="el-crsh10b"
+                            src="https://images.unsplash.com/photo-1616569925882-18e6a431bba9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w1MjAyNzJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGRvaW5nJTIweW9nYSUyMHN0cmV0Y2hpbmclMjBhdCUyMHN1bnNldCUyMGJlYWNofGVufDB8MHx8fDE3NzM2Nzg0NDZ8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080">
+                    </div>
+                    <div class="floating-card card-top" data-ai-id="el-card-top">
+                        <div class="card-icon-play">
+                            <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20">
+                                <polygon points="5 3 19 12 5 21 5 3">
+                                </polygon>
+                            </svg>
+                        </div>
+                        <div class="card-text">
+                            <span class="card-label">
+                                TOTAL CONTENT
+                            </span>
+                            <span class="card-value">
+                                24 Hours
+                            </span>
+                        </div>
+                    </div>
+                    <div class="floating-card card-bottom" data-ai-id="el-card-bottom">
+                        <div class="card-icon-users">
+                            <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2">
+                                </path>
+                                <circle cx="9" cy="7" r="4">
+                                </circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87">
+                                </path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="card-text">
+                            <span class="card-value">
+                                2,500+
+                            </span>
+                            <span class="card-label">
+                                CLINICIANS ENROLLED
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style data-ai-id="stl-crsh10" id="stl-crsh10">
+            #sec-crsh10 {
+                padding: 80px 5%;
+                background-color: #f8f9fb;
+                font-family: var(--font-body);
+                overflow: hidden;
+            }
+
+            .hero-container {
+                max-width: 1280px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 1.1fr 0.9fr;
+                gap: 60px;
+                align-items: center;
+            }
+
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .hero-breadcrumbs {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 14px;
+                font-weight: 600;
+                color: #888;
+            }
+
+            .hero-breadcrumbs .active {
+                color: #6b5299;
+            }
+
+            .hero-heading {
+                font-size: clamp(32px, 4vw, 56px);
+                font-weight: 800;
+                line-height: 1.1;
+                color: #333;
+                margin: 0;
+            }
+
+            .hero-description {
+                font-size: 18px;
+                line-height: 1.6;
+                color: #666;
+                max-width: 540px;
+                margin: 0;
+            }
+
+            .hero-badges {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                margin-top: 8px;
+            }
+
+            .badge-item {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 8px 16px;
+                border-radius: 50px;
+                font-size: 14px;
+                font-weight: 700;
+            }
+
+            .badge-item.rating {
+                background: transparent;
+                padding-left: 0;
+            }
+
+            .badge-item.duration {
+                background: #f0ebf7;
+                color: #6b5299;
+            }
+
+            .badge-item.certificate {
+                background: transparent;
+                color: #00d084;
+            }
+
+            .hero-actions {
+                display: flex;
+                gap: 16px;
+                margin-top: 16px;
+            }
+
+            .btn-enroll {
+                background-color: #6b5299;
+                color: white;
+                padding: 16px 32px;
+                border-radius: 12px;
+                font-weight: 700;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                border: none;
+                cursor: pointer;
+                transition: transform 0.2s, background-color 0.2s;
+            }
+
+            .btn-enroll:hover {
+                background-color: #5a4482;
+                transform: translateY(-2px);
+            }
+
+            .btn-cart {
+                background-color: white;
+                color: #6b5299;
+                padding: 16px 32px;
+                border-radius: 12px;
+                font-weight: 700;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                border: 2px solid #6b5299;
+                cursor: pointer;
+                transition: transform 0.2s, background-color 0.2s;
+            }
+
+            .btn-cart:hover {
+                background-color: #f0ebf7;
+                transform: translateY(-2px);
+            }
+
+            .hero-visual {
+                position: relative;
+                padding: 40px;
+            }
+
+            .image-tilt-wrapper {
+                transform: rotate(-3deg);
+                border-radius: 24px;
+                overflow: hidden;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+                background: white;
+                padding: 8px;
+            }
+
+            .hero-main-image {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 16px;
+            }
+
+            .floating-card {
+                position: absolute;
+                background: white;
+                padding: 16px 24px;
+                border-radius: 16px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                z-index: 10;
+            }
+
+            .card-top {
+                top: 0;
+                right: 0;
+                transform: translateY(-20%);
+            }
+
+            .card-bottom {
+                bottom: 0;
+                left: 0;
+                transform: translateY(20%);
+            }
+
+            .card-icon-play {
+                width: 40px;
+                height: 40px;
+                background: #f0ebf7;
+                color: #6b5299;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .card-icon-users {
+                width: 48px;
+                height: 48px;
+                background: #d1fae5;
+                color: #059669;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .card-text {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .card-label {
+                font-size: 10px;
+                font-weight: 800;
+                color: #999;
+                letter-spacing: 0.05em;
+            }
+
+            .card-value {
+                font-size: 18px;
+                font-weight: 800;
+                color: #333;
+            }
+
+            @media (max-width: 1024px) {
+                #sec-crsh10 {
+                    padding: 40px 20px;
+                }
+
+                .hero-container {
+                    grid-template-columns: 1fr;
+                    text-align: left;
+                    gap: 40px;
+                }
+
+                .hero-breadcrumbs,
+                .hero-badges,
+                .hero-actions {
+                    justify-content: flex-start;
+                }
+
+                .hero-description {
+                    margin: 0;
+                    max-width: 100%;
+                }
+
+                .hero-visual {
+                    max-width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    order: 2;
+                }
+
+                .image-tilt-wrapper {
+                    transform: none;
+                    padding: 0;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+                    border-radius: 20px;
+                }
+
+                .floating-card {
+                    display: none;
+                }
+
+                .hero-actions {
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 12px;
+                }
+
+                .btn-enroll,
+                .btn-cart {
+                    width: 100%;
+                    justify-content: center;
+                    padding: 14px 24px;
+                    font-size: 16px;
+                }
+
+                .hero-heading {
+                    font-size: 32px;
+                }
+
+                .hero-description {
+                    font-size: 16px;
+                }
+            }
+        </style>
+        <style id="stl-ch2">
+            #sec-ch2 {
+                width: 100%;
+                background-color: var(--color-primary-lightest);
+                padding: 3rem 2rem;
+                overflow: hidden;
+            }
+
+            .hero-grid {
+                max-width: 1300px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 1fr 1.1fr;
+                gap: 3rem;
+                align-items: center;
+            }
+
+            .hero-image-side {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .image-box {
+                position: relative;
+                width: 100%;
+                max-width: 400px;
+                aspect-ratio: 4/5;
+                border-radius: 0;
+                overflow: hidden;
+                box-shadow: 0 25px 50px rgba(30, 78, 121, 0.18);
+                transition: transform 0.4s;
+            }
+
+            .image-box:hover {
+                transform: translateY(-8px);
+            }
+
+            .course-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                display: block;
+                transition: transform 0.5s ease;
+            }
+
+            .image-box:hover .course-image {
+                transform: scale(1.08);
+            }
+
+            .hero-content-side {
+                display: flex;
+                flex-direction: column;
+                gap: 1.75rem;
+            }
+
+            .content-title {
+                font-family: var(--font-heading);
+                font-size: 3rem;
+                font-weight: 800;
+                line-height: 1.15;
+                color: var(--heading-color);
+                margin: 0;
+            }
+
+            .course-tagline {
+                font-family: var(--font-body);
+                font-size: 1.125rem;
+                line-height: 1.8;
+                color: var(--body-color);
+                margin: 0;
+            }
+
+            .instructor-info-row {
+                display: flex;
+                gap: 0.75rem;
+                align-items: center;
+                padding: 0.75rem 0;
+            }
+
+            .language-info-row {
+                display: flex;
+                gap: 0.75rem;
+                align-items: center;
+                padding: 0.75rem 0;
+                border-bottom: 1px solid var(--card-border);
+            }
+
+            .info-label {
+                font-family: var(--font-body);
+                font-size: 0.95rem;
+                font-weight: 600;
+                color: var(--muted-text-color);
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            .info-value {
+                font-family: var(--font-body);
+                font-size: 1rem;
+                font-weight: 500;
+                color: var(--heading-color);
+            }
+
+            .buy-now-btn {
+                flex: 1;
+                min-width: 150px;
+                padding: 1rem 1.5rem;
+                background-color: var(--button-primary-bg);
+                color: var(--button-primary-text);
+                font-family: var(--font-heading);
+                font-size: 1rem;
+                font-weight: 600;
+                border: none;
+                border-radius: 0;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+
+            .buy-now-btn:hover {
+                background-color: var(--button-primary-hover-bg);
+                transform: translateY(-2px);
+                box-shadow: 0 10px 24px rgba(30, 78, 121, 0.2);
+            }
+
+            @media (max-width: 1024px) {
+                .hero-grid {
+                    grid-template-columns: 1fr;
+                    gap: 2rem;
+                }
+
+                .content-title {
+                    font-size: 2.5rem;
+                }
+
+                .image-box {
+                    max-width: 350px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #sec-ch2 {
+                    padding: 2rem 1.5rem;
+                }
+
+                .content-title {
+                    font-size: 2rem;
+                }
+
+                .buy-now-btn {
+                    width: 100%;
+                }
+            }
+        </style>
+        <section data-ai-id="sec-p9k2m4x7" id="sec-p9k2m4x7">
+            <div class="course-details-wrapper" data-ai-id="el-wrapper-1">
+                <div class="main-content" data-ai-id="el-main-content">
+
+                    <div class="content-block" data-ai-id="el-learn-block">
+                        <h2 class="block-title" data-ai-id="el-learn-title" data-type="text">
+                            <span class="icon-circle" data-ai-id="el-icon-1">
+                                <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z">
+                                    </path>
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z">
+                                    </path>
+                                </svg>
+                            </span>
+                            What You Will Learn
+                        </h2>
+                        <div class="learning-grid" data-ai-id="el-learning-grid">
+                            <div class="learning-card" data-ai-id="el-learn-card-1">
+                                <div class="card-icon purple" data-ai-id="el-icon-p1">
+                                    <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2v20">
+                                        </path>
+                                        <path d="M2 12h20">
+                                        </path>
+                                        <path d="m4.93 4.93 14.14 14.14">
+                                        </path>
+                                        <path d="m4.93 19.07 14.14-14.14">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 data-ai-id="el-learn-h-1" data-type="text">
+                                    Physiology of Trauma
+                                </h3>
+                                <p data-ai-id="el-learn-p-1" data-type="text">
+                                    Understand nervous system dysregulation, survival responses, and polyvagal theory.
+                                </p>
+                            </div>
+                            <div class="learning-card" data-ai-id="el-learn-card-2">
+                                <div class="card-icon blue" data-ai-id="el-icon-p2">
+                                    <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 data-ai-id="el-learn-h-2" data-type="text">
+                                    Somatic Tracking
+                                </h3>
+                                <p data-ai-id="el-learn-p-2" data-type="text">
+                                    Learn techniques to help clients safely track and discharge trapped survival energy.
+                                </p>
+                            </div>
+                            <div class="learning-card" data-ai-id="el-learn-card-3">
+                                <div class="card-icon green" data-ai-id="el-icon-p3">
+                                    <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11 2a2 2 0 0 0-2 2v5H4a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h5v5c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-5h5a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-5V4a2 2 0 0 0-2-2h-2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 data-ai-id="el-learn-h-3" data-type="text">
+                                    Resourcing Skills
+                                </h3>
+                                <p data-ai-id="el-learn-p-3" data-type="text">
+                                    Build client capacity and resilience before attempting trauma reprocessing.
+                                </p>
+                            </div>
+                            <div class="learning-card" data-ai-id="el-learn-card-4">
+                                <div class="card-icon teal" data-ai-id="el-icon-p4">
+                                    <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2">
+                                        </path>
+                                        <circle cx="9" cy="7" r="4">
+                                        </circle>
+                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87">
+                                        </path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 data-ai-id="el-learn-h-4" data-type="text">
+                                    Clinical Integration
+                                </h3>
+                                <p data-ai-id="el-learn-p-4" data-type="text">
+                                    Seamlessly blend somatic approaches into your existing therapeutic modality.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <style>
+                        .curriculum-list {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 12px;
+                            max-width: 780px;
+                        }
+
+                        .curr-item {
+                            border: 1px solid #e5e7eb;
+                            border-radius: 12px;
+                            overflow: hidden;
+                            background: #ffffff;
+                            transition: border-color 0.2s, box-shadow 0.2s;
+                        }
+
+                        .curr-item[open] {
+                            border-color: rgba(94, 45, 198, 0.4);
+                            box-shadow: 0 4px 20px rgba(94, 45, 198, 0.08);
+                        }
+
+                        .curr-header {
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            padding: 16px 20px;
+                            cursor: pointer;
+                            list-style: none;
+                            user-select: none;
+                            transition: background 0.15s;
+                        }
+
+                        .curr-header::-webkit-details-marker {
+                            display: none;
+                        }
+
+                        .curr-header::marker {
+                            display: none;
+                        }
+
+                        .curr-header:hover {
+                            background: #f9fafb;
+                        }
+
+                        .curr-item[open] .curr-header {
+                            background: #faf8ff;
+                        }
+
+                        .curr-badge {
+                            flex-shrink: 0;
+                            background: rgba(94, 45, 198, 0.1);
+                            color: #5e2dc6;
+                            font-size: 10px;
+                            font-weight: 800;
+                            padding: 4px 10px;
+                            border-radius: 4px;
+                            text-transform: uppercase;
+                            letter-spacing: 0.6px;
+                            transition: background 0.2s, color 0.2s;
+                            white-space: nowrap;
+                        }
+
+                        .curr-item[open] .curr-badge {
+                            background: #5e2dc6;
+                            color: #ffffff;
+                        }
+
+                        .curr-title {
+                            flex: 1;
+                            font-size: 15px;
+                            font-weight: 600;
+                            color: #1a1a2e;
+                            line-height: 1.4;
+                            transition: color 0.2s;
+                        }
+
+                        .curr-item[open] .curr-title {
+                            color: #5e2dc6;
+                        }
+
+                        .curr-chevron {
+                            flex-shrink: 0;
+                            color: #9ca3af;
+                            transition: transform 0.3s ease, color 0.2s;
+                        }
+
+                        .curr-item[open] .curr-chevron {
+                            transform: rotate(180deg);
+                            color: #5e2dc6;
+                        }
+
+                        .curr-body {
+                            padding: 0 20px 18px;
+                            border-top: 1px solid #f3f4f6;
+                            background: rgba(249, 250, 251, 0.6);
+                        }
+
+                        .curr-body p {
+                            font-size: 14px;
+                            color: #6b7280;
+                            line-height: 1.6;
+                            margin: 14px 0 12px;
+                        }
+
+                        .curr-meta {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                            border-top: 1px solid #e5e7eb;
+                            padding-top: 12px;
+                        }
+
+                        .curr-meta-label {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            font-size: 13px;
+                            font-weight: 700;
+                            color: #1a1a2e;
+                        }
+
+                        .curr-duration {
+                            display: flex;
+                            align-items: center;
+                            gap: 4px;
+                            font-size: 12px;
+                            font-weight: 600;
+                            color: #6b7280;
+                            background: #ffffff;
+                            border: 1px solid #e5e7eb;
+                            padding: 4px 10px;
+                            border-radius: 999px;
+                            white-space: nowrap;
+                        }
+                    </style>
+                    <div class="curriculum-list">
+                        <details class="curr-item" open="">
+                            <summary class="curr-header">
+                                <span class="curr-badge">
+                                    Day 1
+                                </span>
+                                <span class="curr-title">
+                                    Foundations of Somatic Experiencing
+                                </span>
+                                <svg class="curr-chevron" fill="none" height="20" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                    width="20">
+                                    <path d="m6 9 6 6 6-6">
+                                    </path>
+                                </svg>
+                            </summary>
+                            <div class="curr-body">
+                                <p>
+                                    Introduction to the core principles of somatic therapy, history, and neurobiology.
+                                </p>
+                                <div class="curr-meta">
+                                    <span class="curr-meta-label">
+                                        <svg fill="none" height="16" stroke="#8b5cf6" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polygon points="10 8 16 12 10 16 10 8">
+                                            </polygon>
+                                        </svg>
+                                        Video Modules &amp; Readings
+                                    </span>
+                                    <span class="curr-duration">
+                                        <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polyline points="12 6 12 12 16 14">
+                                            </polyline>
+                                        </svg>
+                                        2 Hrs
+                                    </span>
+                                </div>
+                            </div>
+                        </details>
+                        <details class="curr-item">
+                            <summary class="curr-header">
+                                <span class="curr-badge">
+                                    Day 2
+                                </span>
+                                <span class="curr-title">
+                                    The Polyvagal Theory in Practice
+                                </span>
+                                <svg class="curr-chevron" fill="none" height="20" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                    width="20">
+                                    <path d="m6 9 6 6 6-6">
+                                    </path>
+                                </svg>
+                            </summary>
+                            <div class="curr-body">
+                                <p>
+                                    Deep dive into the autonomic nervous system and its role in trauma recovery.
+                                </p>
+                                <div class="curr-meta">
+                                    <span class="curr-meta-label">
+                                        <svg fill="none" height="16" stroke="#8b5cf6" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polygon points="10 8 16 12 10 16 10 8">
+                                            </polygon>
+                                        </svg>
+                                        Video Modules &amp; Readings
+                                    </span>
+                                    <span class="curr-duration">
+                                        <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polyline points="12 6 12 12 16 14">
+                                            </polyline>
+                                        </svg>
+                                        2.5 Hrs
+                                    </span>
+                                </div>
+                            </div>
+                        </details>
+                        <details class="curr-item">
+                            <summary class="curr-header">
+                                <span class="curr-badge">
+                                    Day 3
+                                </span>
+                                <span class="curr-title">
+                                    Building Safety &amp; Resourcing
+                                </span>
+                                <svg class="curr-chevron" fill="none" height="20" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                    width="20">
+                                    <path d="m6 9 6 6 6-6">
+                                    </path>
+                                </svg>
+                            </summary>
+                            <div class="curr-body">
+                                <p>
+                                    Establishing internal and external resources for stabilization.
+                                </p>
+                                <div class="curr-meta">
+                                    <span class="curr-meta-label">
+                                        <svg fill="none" height="16" stroke="#8b5cf6" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polygon points="10 8 16 12 10 16 10 8">
+                                            </polygon>
+                                        </svg>
+                                        Video Modules &amp; Readings
+                                    </span>
+                                    <span class="curr-duration">
+                                        <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polyline points="12 6 12 12 16 14">
+                                            </polyline>
+                                        </svg>
+                                        3 Hrs
+                                    </span>
+                                </div>
+                            </div>
+                        </details>
+                        <details class="curr-item">
+                            <summary class="curr-header">
+                                <span class="curr-badge">
+                                    Day 4
+                                </span>
+                                <span class="curr-title">
+                                    Tracking the Nervous System
+                                </span>
+                                <svg class="curr-chevron" fill="none" height="20" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                    width="20">
+                                    <path d="m6 9 6 6 6-6">
+                                    </path>
+                                </svg>
+                            </summary>
+                            <div class="curr-body">
+                                <p>
+                                    Developing somatic awareness and identifying activation patterns.
+                                </p>
+                                <div class="curr-meta">
+                                    <span class="curr-meta-label">
+                                        <svg fill="none" height="16" stroke="#8b5cf6" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polygon points="10 8 16 12 10 16 10 8">
+                                            </polygon>
+                                        </svg>
+                                        Video Modules &amp; Readings
+                                    </span>
+                                    <span class="curr-duration">
+                                        <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polyline points="12 6 12 12 16 14">
+                                            </polyline>
+                                        </svg>
+                                        2 Hrs
+                                    </span>
+                                </div>
+                            </div>
+                        </details>
+                        <details class="curr-item">
+                            <summary class="curr-header">
+                                <span class="curr-badge">
+                                    Day 5
+                                </span>
+                                <span class="curr-title">
+                                    Titration &amp; Pendulation
+                                </span>
+                                <svg class="curr-chevron" fill="none" height="20" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                    width="20">
+                                    <path d="m6 9 6 6 6-6">
+                                    </path>
+                                </svg>
+                            </summary>
+                            <div class="curr-body">
+                                <p>
+                                    Mastering the core SE techniques for safe trauma processing.
+                                </p>
+                                <div class="curr-meta">
+                                    <span class="curr-meta-label">
+                                        <svg fill="none" height="16" stroke="#8b5cf6" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polygon points="10 8 16 12 10 16 10 8">
+                                            </polygon>
+                                        </svg>
+                                        Video Modules &amp; Readings
+                                    </span>
+                                    <span class="curr-duration">
+                                        <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polyline points="12 6 12 12 16 14">
+                                            </polyline>
+                                        </svg>
+                                        3 Hrs
+                                    </span>
+                                </div>
+                            </div>
+                        </details>
+                        <details class="curr-item">
+                            <summary class="curr-header">
+                                <span class="curr-badge">
+                                    Day 6
+                                </span>
+                                <span class="curr-title">
+                                    Working with the Fight/Flight Response
+                                </span>
+                                <svg class="curr-chevron" fill="none" height="20" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                    width="20">
+                                    <path d="m6 9 6 6 6-6">
+                                    </path>
+                                </svg>
+                            </summary>
+                            <div class="curr-body">
+                                <p>
+                                    Techniques for discharging high-intensity survival energy.
+                                </p>
+                                <div class="curr-meta">
+                                    <span class="curr-meta-label">
+                                        <svg fill="none" height="16" stroke="#8b5cf6" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polygon points="10 8 16 12 10 16 10 8">
+                                            </polygon>
+                                        </svg>
+                                        Video Modules &amp; Readings
+                                    </span>
+                                    <span class="curr-duration">
+                                        <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polyline points="12 6 12 12 16 14">
+                                            </polyline>
+                                        </svg>
+                                        2.5 Hrs
+                                    </span>
+                                </div>
+                            </div>
+                        </details>
+                        <details class="curr-item">
+                            <summary class="curr-header">
+                                <span class="curr-badge">
+                                    Day 7
+                                </span>
+                                <span class="curr-title">
+                                    Thawing the Freeze Response
+                                </span>
+                                <svg class="curr-chevron" fill="none" height="20" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                    width="20">
+                                    <path d="m6 9 6 6 6-6">
+                                    </path>
+                                </svg>
+                            </summary>
+                            <div class="curr-body">
+                                <p>
+                                    Safely navigating the dorsal vagal state and immobilization.
+                                </p>
+                                <div class="curr-meta">
+                                    <span class="curr-meta-label">
+                                        <svg fill="none" height="16" stroke="#8b5cf6" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polygon points="10 8 16 12 10 16 10 8">
+                                            </polygon>
+                                        </svg>
+                                        Video Modules &amp; Readings
+                                    </span>
+                                    <span class="curr-duration">
+                                        <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polyline points="12 6 12 12 16 14">
+                                            </polyline>
+                                        </svg>
+                                        3.5 Hrs
+                                    </span>
+                                </div>
+                            </div>
+                        </details>
+                        <details class="curr-item">
+                            <summary class="curr-header">
+                                <span class="curr-badge">
+                                    Day 8
+                                </span>
+                                <span class="curr-title">
+                                    Attachment and Developmental Trauma
+                                </span>
+                                <svg class="curr-chevron" fill="none" height="20" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                    width="20">
+                                    <path d="m6 9 6 6 6-6">
+                                    </path>
+                                </svg>
+                            </summary>
+                            <div class="curr-body">
+                                <p>
+                                    Integrating somatic work with relational and early-life trauma.
+                                </p>
+                                <div class="curr-meta">
+                                    <span class="curr-meta-label">
+                                        <svg fill="none" height="16" stroke="#8b5cf6" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polygon points="10 8 16 12 10 16 10 8">
+                                            </polygon>
+                                        </svg>
+                                        Video Modules &amp; Readings
+                                    </span>
+                                    <span class="curr-duration">
+                                        <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polyline points="12 6 12 12 16 14">
+                                            </polyline>
+                                        </svg>
+                                        2 Hrs
+                                    </span>
+                                </div>
+                            </div>
+                        </details>
+                        <details class="curr-item">
+                            <summary class="curr-header">
+                                <span class="curr-badge">
+                                    Day 9
+                                </span>
+                                <span class="curr-title">
+                                    Touch and Boundaries in Practice
+                                </span>
+                                <svg class="curr-chevron" fill="none" height="20" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                    width="20">
+                                    <path d="m6 9 6 6 6-6">
+                                    </path>
+                                </svg>
+                            </summary>
+                            <div class="curr-body">
+                                <p>
+                                    Ethical considerations and somatic boundary-building techniques.
+                                </p>
+                                <div class="curr-meta">
+                                    <span class="curr-meta-label">
+                                        <svg fill="none" height="16" stroke="#8b5cf6" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polygon points="10 8 16 12 10 16 10 8">
+                                            </polygon>
+                                        </svg>
+                                        Video Modules &amp; Readings
+                                    </span>
+                                    <span class="curr-duration">
+                                        <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polyline points="12 6 12 12 16 14">
+                                            </polyline>
+                                        </svg>
+                                        2 Hrs
+                                    </span>
+                                </div>
+                            </div>
+                        </details>
+                        <details class="curr-item">
+                            <summary class="curr-header">
+                                <span class="curr-badge">
+                                    Day 10
+                                </span>
+                                <span class="curr-title">
+                                    Clinical Integration &amp; Case Studies
+                                </span>
+                                <svg class="curr-chevron" fill="none" height="20" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                                    width="20">
+                                    <path d="m6 9 6 6 6-6">
+                                    </path>
+                                </svg>
+                            </summary>
+                            <div class="curr-body">
+                                <p>
+                                    Applying SE principles to complex clinical cases and final review.
+                                </p>
+                                <div class="curr-meta">
+                                    <span class="curr-meta-label">
+                                        <svg fill="none" height="16" stroke="#8b5cf6" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polygon points="10 8 16 12 10 16 10 8">
+                                            </polygon>
+                                        </svg>
+                                        Video Modules &amp; Readings
+                                    </span>
+                                    <span class="curr-duration">
+                                        <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14">
+                                            <circle cx="12" cy="12" r="10">
+                                            </circle>
+                                            <polyline points="12 6 12 12 16 14">
+                                            </polyline>
+                                        </svg>
+                                        1.5 Hrs
+                                    </span>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="content-block" data-ai-id="el-instructors-block">
+                        <h2 class="block-title" data-ai-id="el-inst-title" data-type="text">
+                            <span class="icon-circle" data-ai-id="el-icon-3">
+                                <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2">
+                                    </path>
+                                    <circle cx="9" cy="7" r="4">
+                                    </circle>
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87">
+                                    </path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75">
+                                    </path>
+                                </svg>
+                            </span>
+                            Meet Your Instructors
+                        </h2>
+                        <div class="instructors-grid" data-ai-id="el-inst-grid">
+                            <div class="instructor-card" data-ai-id="el-inst-card-1">
+                                <div class="inst-img-wrapper" data-ai-id="el-inst-img-1">
+                                    <img alt="Dr. Sarah Jenks" data-ai-id="el-img-1"
+                                        src="https://images.unsplash.com/photo-1742436707321-33fed05590bb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w1MjAyNzJ8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBkb2N0b3IlMjBwb3J0cmFpdCUyMHNtaWxpbmd8ZW58MHwyfHx8MTc3MzY3OTU3MHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080">
+                                </div>
+                                <h3 data-ai-id="el-inst-name-1" data-type="text">
+                                    Dr. Sarah Jenks
+                                </h3>
+                                <p class="inst-title" data-ai-id="el-inst-t-1" data-type="text">
+                                    PH.D., SEP, LPC
+                                </p>
+                                <p class="inst-bio" data-ai-id="el-inst-b-1" data-type="text">
+                                    Dr. Jenks is a leading expert in somatic experiencing and trauma resolution with
+                                    over 15 years of clinical practice. She has trained thousands of professionals
+                                    worldwide to safely work with the autonomic nervous system.
+                                </p>
+                                <div class="inst-quote" data-ai-id="el-inst-q-1">
+                                    <p data-ai-id="el-inst-qt-1" data-type="text">
+                                        "My goal is to bridge the gap between cognitive understanding and bodily
+                                        experience for profound, lasting holistic healing."
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="instructor-card" data-ai-id="el-inst-card-2">
+                                <div class="inst-img-wrapper" data-ai-id="el-inst-img-2">
+                                    <img alt="Dr. James Okafor" data-ai-id="el-img-2"
+                                        src="https://images.unsplash.com/photo-1752070339136-ee8d6559e698?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w1MjAyNzJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZG9jdG9yJTIwcG9ydHJhaXQlMjBzbWlsaW5nfGVufDB8Mnx8fDE3NzM2Nzk1NzF8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080">
+                                </div>
+                                <h3 data-ai-id="el-inst-name-2" data-type="text">
+                                    Dr. James Okafor
+                                </h3>
+                                <p class="inst-title" data-ai-id="el-inst-t-2" data-type="text">
+                                    M.D., PSYCHIATRIST
+                                </p>
+                                <p class="inst-bio" data-ai-id="el-inst-b-2" data-type="text">
+                                    Dual-board certified in psychiatry and addiction medicine, Dr. Okafor specializes in
+                                    the physiological manifestations of complex PTSD and treatment-resistant mood
+                                    disorders.
+                                </p>
+                                <div class="inst-quote" data-ai-id="el-inst-q-2">
+                                    <p data-ai-id="el-inst-qt-2" data-type="text">
+                                        "We must look beyond the symptom to the system. Understanding neurobiology is
+                                        the key to unlocking true resilience."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="sidebar" data-ai-id="el-sidebar">
+                    <div class="pricing-card sticky" data-ai-id="el-pricing-card">
+                        <div class="price-header" data-ai-id="el-price-h">
+                            <span class="current-price" data-ai-id="el-curr-p">
+                                $999
+                            </span>
+                            <span class="original-price" data-ai-id="el-orig-p">
+                                $1000
+                            </span>
+                        </div>
+                        <div class="offer-badge" data-ai-id="el-offer-b" data-type="text">
+                            LIMITED TIME OFFER
+                        </div>
+                        <button class="enroll-btn" data-ai-id="el-enroll-btn" data-cta-type="plan_buy_now"
+                            id="plan-buy-button">
+                            Buy now for $999
+                        </button>
+                        <p class="guarantee-text" data-ai-id="el-guarantee" data-type="text">
+                            30-Day Money-Back Guarantee
+                        </p>
+                        <div class="includes-list" data-ai-id="el-includes">
+                            <h4 data-ai-id="el-inc-title" data-type="text">
+                                THIS COURSE INCLUDES:
+                            </h4>
+                            <ul>
+                                <li data-ai-id="el-li-1">
+                                    <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect height="14" rx="2" ry="2" width="20" x="2" y="3">
+                                        </rect>
+                                        <line x1="8" x2="16" y1="21" y2="21">
+                                        </line>
+                                        <line x1="12" x2="12" y1="17" y2="21">
+                                        </line>
+                                    </svg>
+                                    24 hours on-demand video
+                                </li>
+                                <li data-ai-id="el-li-2">
+                                    <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z">
+                                        </path>
+                                        <polyline points="14 2 14 8 20 8">
+                                        </polyline>
+                                        <line x1="16" x2="8" y1="13" y2="13">
+                                        </line>
+                                        <line x1="16" x2="8" y1="17" y2="17">
+                                        </line>
+                                        <polyline points="10 9 9 9 8 9">
+                                        </polyline>
+                                    </svg>
+                                    15 downloadable resources
+                                </li>
+                                <li data-ai-id="el-li-3">
+                                    <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10">
+                                        </path>
+                                    </svg>
+                                    Full lifetime access
+                                </li>
+                                <li data-ai-id="el-li-4">
+                                    <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect height="20" rx="2" ry="2" width="14" x="5" y="2">
+                                        </rect>
+                                        <line x1="12" x2="12.01" y1="18" y2="18">
+                                        </line>
+                                    </svg>
+                                    Access on mobile and TV
+                                </li>
+                                <li data-ai-id="el-li-5">
+                                    <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6">
+                                        </path>
+                                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18">
+                                        </path>
+                                        <path d="M4 22h16">
+                                        </path>
+                                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22">
+                                        </path>
+                                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22">
+                                        </path>
+                                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z">
+                                        </path>
+                                    </svg>
+                                    Certificate of completion
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <style data-ai-id="stl-p9k2m4x7" id="stl-p9k2m4x7">
+            #sec-p9k2m4x7 {
+                padding: 80px 20px;
+                background-color: #fff;
+                color: #333;
+                font-family: var(--font-body);
+            }
+
+            [x-cloak] {
+                display: none !important;
+            }
+
+            .course-details-wrapper {
+                max-width: 1100px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 1fr 320px;
+                gap: 60px;
+                align-items: start;
+            }
+
+            .main-content {
+                display: flex;
+                flex-direction: column;
+                gap: 60px;
+            }
+
+            .content-block {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .block-title {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-size: 24px;
+                font-weight: 700;
+                color: #1a1a1a;
+                margin: 0;
+            }
+
+            .icon-circle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                background-color: #f3f0ff;
+                color: #5e2dc6;
+            }
+
+            .block-desc {
+                font-size: 15px;
+                color: #666;
+                line-height: 1.6;
+                margin: 0;
+            }
+
+            /* Learning Grid */
+            .learning-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .learning-card {
+                background: #f8f9fa;
+                padding: 24px;
+                border-radius: 12px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                transition: transform 0.2s ease;
+            }
+
+            .learning-card:hover {
+                transform: translateY(-2px);
+            }
+
+            .card-icon {
+                width: 40px;
+                height: 40px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .card-icon.purple {
+                background: #f3f0ff;
+                color: #5e2dc6;
+            }
+
+            .card-icon.blue {
+                background: #eef2ff;
+                color: #4f46e5;
+            }
+
+            .card-icon.green {
+                background: #ecfdf5;
+                color: #10b981;
+            }
+
+            .card-icon.teal {
+                background: #f0fdfa;
+                color: #0d9488;
+            }
+
+            .learning-card h3 {
+                font-size: 16px;
+                font-weight: 700;
+                margin: 0;
+                color: #1a1a1a;
+            }
+
+            .learning-card p {
+                font-size: 14px;
+                color: #666;
+                margin: 0;
+                line-height: 1.5;
+            }
+
+            /* Curriculum Accordion */
+            .curriculum-accordion {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .accordion-item {
+                border: 1px solid #eee;
+                border-radius: 8px;
+                overflow: hidden;
+                background: #fff;
+            }
+
+            .accordion-header {
+                padding: 16px 20px;
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                cursor: pointer;
+                transition: background 0.2s ease;
+            }
+
+            .accordion-header:hover {
+                background: #fcfcfc;
+            }
+
+            .day-badge {
+                background: #5e2dc6;
+                color: #fff;
+                font-size: 10px;
+                font-weight: 800;
+                padding: 4px 8px;
+                border-radius: 4px;
+                letter-spacing: 0.5px;
+                min-width: 50px;
+                text-align: center;
+            }
+
+            .day-title {
+                flex: 1;
+                font-size: 16px;
+                font-weight: 600;
+                color: #1a1a1a;
+            }
+
+            .toggle-icon {
+                color: #999;
+                transition: transform 0.3s ease;
+            }
+
+            .accordion-item.active .toggle-icon {
+                transform: rotate(180deg);
+            }
+
+            .accordion-content {
+                padding: 0 20px 20px 20px;
+                border-top: 1px solid #f5f5f5;
+            }
+
+            .accordion-content p {
+                font-size: 14px;
+                color: #666;
+                margin: 16px 0;
+            }
+
+            .module-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 12px 16px;
+                background: #f8f9fa;
+                border-radius: 8px;
+                font-size: 13px;
+                color: #1a1a1a;
+                font-weight: 600;
+            }
+
+            .module-info {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: #5e2dc6;
+            }
+
+            .module-duration {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                color: #666;
+                font-weight: 400;
+            }
+
+            /* Instructors */
+            .instructors-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .instructor-card {
+                background: #f8f9fa;
+                padding: 32px 24px;
+                border-radius: 16px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .inst-img-wrapper {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-bottom: 20px;
+                border: 4px solid #fff;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            }
+
+            .inst-img-wrapper img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .instructor-card h3 {
+                font-size: 18px;
+                font-weight: 700;
+                margin: 0 0 4px 0;
+                color: #1a1a1a;
+            }
+
+            .inst-title {
+                font-size: 11px;
+                font-weight: 800;
+                color: #5e2dc6;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 16px;
+            }
+
+            .inst-bio {
+                font-size: 13px;
+                color: #666;
+                line-height: 1.6;
+                margin-bottom: 24px;
+            }
+
+            .inst-quote {
+                background: #fff;
+                padding: 16px;
+                border-radius: 12px;
+                position: relative;
+                width: 100%;
+            }
+
+            .inst-quote p {
+                font-size: 13px;
+                font-style: italic;
+                color: #1a1a1a;
+                margin: 0;
+                line-height: 1.5;
+            }
+
+            /* Sidebar Pricing Card */
+            .sidebar {
+                position: sticky;
+                top: 40px;
+            }
+
+            .pricing-card {
+                background: #fff;
+                border-radius: 16px;
+                padding: 32px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+                border: 1px solid #f0f0f0;
+                text-align: center;
+            }
+
+            .price-header {
+                display: flex;
+                align-items: baseline;
+                justify-content: center;
+                gap: 8px;
+                margin-bottom: 8px;
+            }
+
+            .current-price {
+                font-size: 36px;
+                font-weight: 800;
+                color: #1a1a1a;
+            }
+
+            .original-price {
+                font-size: 18px;
+                color: #999;
+                text-decoration: line-through;
+            }
+
+            .offer-badge {
+                font-size: 10px;
+                font-weight: 800;
+                color: #10b981;
+                letter-spacing: 1px;
+                margin-bottom: 24px;
+            }
+
+            .enroll-btn {
+                width: 100%;
+                background: #5e2dc6;
+                color: #fff;
+                border: none;
+                padding: 16px;
+                border-radius: 8px;
+                font-size: 16px;
+                font-weight: 700;
+                cursor: pointer;
+                transition: background 0.2s ease;
+                margin-bottom: 12px;
+            }
+
+            .enroll-btn:hover {
+                background: #4a20a1;
+            }
+
+            .guarantee-text {
+                font-size: 11px;
+                color: #666;
+                margin-bottom: 32px;
+            }
+
+            .includes-list {
+                text-align: left;
+                border-top: 1px solid #eee;
+                padding-top: 24px;
+            }
+
+            .includes-list h4 {
+                font-size: 11px;
+                font-weight: 800;
+                color: #1a1a1a;
+                margin-bottom: 16px;
+                letter-spacing: 0.5px;
+            }
+
+            .includes-list ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .includes-list li {
+                font-size: 13px;
+                color: #444;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .includes-list li svg {
+                color: #5e2dc6;
+                flex-shrink: 0;
+            }
+
+            @media (max-width: 992px) {
+                .course-details-wrapper {
+                    grid-template-columns: 1fr;
+                    gap: 40px;
+                }
+
+                .sidebar {
+                    order: -1;
+                }
+
+                .pricing-card.sticky {
+                    position: static;
+                }
+            }
+
+            @media (max-width: 640px) {
+
+                .learning-grid,
+                .instructors-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .block-title {
+                    font-size: 20px;
+                }
+            }
+
+            .pricing-card sticky {
+                position: fixed;
+            }
+        </style>
+        <script data-ai-id="scr-p9k2m4x7" id="scr-p9k2m4x7">
+            // Interactivity handled by Alpine.js in the HTML structure
+        </script>
+
+
+        <section class="sdf-footer-section" data-ai-id="sec-foot1" id="sec-foot1">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+            <div class="sdf-footer-container" data-ai-id="el-sdf-container">
+                <div class="sdf-footer-grid" data-ai-id="el-sdf-grid">
+
+                    <div class="sdf-footer-col sdf-footer-brand" data-ai-id="el-sdf-col1">
+                        <div class="sdf-footer-logo" data-ai-id="el-sdf-logo">
+                            <i class="fa-solid fa-leaf" data-ai-id="el-sdf-logo-icon" style="color: #22E36A;">
+                            </i>
+                            <span data-ai-id="el-sdf-logo-text">
+                                Saday Academy
+                            </span>
+                        </div>
+                        <p class="sdf-footer-description" data-ai-id="el-sdf-description">
+                            Empowering learners worldwide with expert-led courses and a community-driven approach to
+                            personal and professional growth.
+                        </p>
+                    </div>
+
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col2">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title1">
+                            Academy
+                        </h4>
+                        <ul class="sdf-footer-links" data-ai-id="el-sdf-links1">
+                            <li>
+                                <a data-ai-id="el-sdf-link1-1" href="/courses">
+                                    All Courses
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-2" href="#">
+                                    Instructors
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-3" href="#">
+                                    Live Events
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-4" href="#">
+                                    Reviews
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col3">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title2">
+                            Support
+                        </h4>
+                        <ul class="sdf-footer-links" data-ai-id="el-sdf-links2">
+                            <li>
+                                <a data-ai-id="el-sdf-link2-1" href="#">
+                                    Student Portal
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-2" href="#">
+                                    Accreditation
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-3" href="/contactus">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-4" href="#">
+                                    FAQs
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col4">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title3">
+                            Stay Updated
+                        </h4>
+                        <p class="sdf-footer-newsletter-text" data-ai-id="el-sdf-newsletter-desc">
+                            Subscribe to get the latest updates and offers.
+                        </p>
+                        <form class="sdf-footer-newsletter-form" data-ai-id="el-sdf-form" onsubmit="return false;">
+                            <input class="sdf-footer-input" data-ai-id="el-sdf-input" placeholder="Email address"
+                                required="" type="email">
+                            <button class="sdf-footer-button" data-ai-id="el-sdf-button" type="submit">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <hr class="sdf-footer-divider" data-ai-id="el-sdf-divider">
+                <div class="sdf-footer-bottom" data-ai-id="el-sdf-bottom">
+                    <p class="sdf-footer-copyright" data-ai-id="el-sdf-copyright">
+                        © 2024 Saday Academy. All rights reserved.
+                    </p>
+                    <div class="sdf-footer-legal" data-ai-id="el-sdf-legal">
+                        <a data-ai-id="el-sdf-legal1" href="/privacypolicy">
+                            Privacy Policy
+                        </a>
+                        <a data-ai-id="el-sdf-legal2" href="/termsofuse">
+                            Terms of Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style data-ai-id="stl-foot1" id="stl-foot1">
+            #sec-foot1 {
+                background-color: #5B458E;
+                color: #FFFFFF;
+                padding: 80px 20px 40px;
+                font-family: 'Inter', sans-serif;
+            }
+
+            .sdf-footer-container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .sdf-footer-grid {
+                display: grid;
+                grid-template-columns: 1.4fr 1fr 1fr 1fr;
+                gap: 60px;
+                margin-bottom: 60px;
+            }
+
+            .sdf-footer-logo {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 24px;
+            }
+
+            .sdf-footer-description {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 16px;
+                line-height: 1.6;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            .sdf-footer-title {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 24px;
+                color: #FFFFFF;
+            }
+
+            .sdf-footer-links {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .sdf-footer-links li {
+                margin-bottom: 12px;
+            }
+
+            .sdf-footer-links a {
+                color: rgba(255, 255, 255, 0.75);
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 400;
+                transition: color 0.3s ease;
+            }
+
+            .sdf-footer-links a:hover {
+                color: #FFFFFF;
+            }
+
+            .sdf-footer-newsletter-text {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 14px;
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+
+            .sdf-footer-newsletter-form {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .sdf-footer-input {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 8px;
+                padding: 12px 16px;
+                color: #FFFFFF;
+                font-size: 14px;
+                outline: none;
+                transition: border-color 0.3s ease;
+            }
+
+            .sdf-footer-input::placeholder {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            .sdf-footer-input:focus {
+                border-color: #8B75D1;
+            }
+
+            .sdf-footer-button {
+                background: linear-gradient(90deg, #8B75D1, #7A63C7);
+                color: #FFFFFF;
+                border: none;
+                border-radius: 8px;
+                padding: 12px 24px;
+                font-size: 16px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: opacity 0.3s ease;
+            }
+
+            .sdf-footer-button:hover {
+                opacity: 0.9;
+            }
+
+            .sdf-footer-divider {
+                border: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                margin: 0 0 30px 0;
+            }
+
+            .sdf-footer-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .sdf-footer-copyright {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 14px;
+                margin: 0;
+                font-weight: 400;
+            }
+
+            .sdf-footer-legal {
+                display: flex;
+                gap: 24px;
+            }
+
+            .sdf-footer-legal a {
+                color: rgba(255, 255, 255, 0.75);
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 400;
+                transition: color 0.3s ease;
+            }
+
+            .sdf-footer-legal a:hover {
+                color: #FFFFFF;
+            }
+
+            @media (max-width: 1024px) {
+                .sdf-footer-grid {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 40px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #sec-foot1 {
+                    padding: 60px 20px 30px;
+                    text-align: center;
+                }
+
+                .sdf-footer-grid {
+                    grid-template-columns: 1fr;
+                    gap: 40px;
+                }
+
+                .sdf-footer-logo {
+                    justify-content: center;
+                }
+
+                .sdf-footer-newsletter-form {
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+
+                .sdf-footer-bottom {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .sdf-footer-legal {
+                    justify-content: center;
+                }
+            }
+        </style>
+        <script data-ai-id="scr-foot1" id="scr-foot1">
+            // Footer script for potential interactivity (e.g., newsletter submission)
+            (function () {
+                const form = document.querySelector('.sdf-footer-newsletter-form');
+                if (form) {
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        const email = this.querySelector('input').value;
+                        if (email) {
+                            // Placeholder for submission logic
+                            console.log('Newsletter subscription for:', email);
+                            alert('Thank you for subscribing!');
+                            this.reset();
+                        }
+                    });
+                }
+            })();
+        </script>
+        <section class="sdf-footer-section" data-ai-id="sec-foot1" id="sec-foot1">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+            <div class="sdf-footer-container" data-ai-id="el-sdf-container">
+                <div class="sdf-footer-grid" data-ai-id="el-sdf-grid">
+
+                    <div class="sdf-footer-col sdf-footer-brand" data-ai-id="el-sdf-col1">
+                        <div class="sdf-footer-logo" data-ai-id="el-sdf-logo">
+                            <i class="fa-solid fa-leaf" data-ai-id="el-sdf-logo-icon" style="color: #22E36A;">
+                            </i>
+                            <span data-ai-id="el-sdf-logo-text">
+                                Saday Academy
+                            </span>
+                        </div>
+                        <p class="sdf-footer-description" data-ai-id="el-sdf-description">
+                            Empowering learners worldwide with expert-led courses and a community-driven approach to
+                            personal and professional growth.
+                        </p>
+                    </div>
+
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col2">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title1">
+                            Academy
+                        </h4>
+                        <ul class="sdf-footer-links" data-ai-id="el-sdf-links1">
+                            <li>
+                                <a data-ai-id="el-sdf-link1-1" href="/courses">
+                                    All Courses
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-2" href="#">
+                                    Instructors
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-3" href="#">
+                                    Live Events
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-4" href="#">
+                                    Reviews
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col3">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title2">
+                            Support
+                        </h4>
+                        <ul class="sdf-footer-links" data-ai-id="el-sdf-links2">
+                            <li>
+                                <a data-ai-id="el-sdf-link2-1" href="#">
+                                    Student Portal
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-2" href="#">
+                                    Accreditation
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-3" href="/contactus">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-4" href="#">
+                                    FAQs
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col4">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title3">
+                            Stay Updated
+                        </h4>
+                        <p class="sdf-footer-newsletter-text" data-ai-id="el-sdf-newsletter-desc">
+                            Subscribe to get the latest updates and offers.
+                        </p>
+                        <form class="sdf-footer-newsletter-form" data-ai-id="el-sdf-form" onsubmit="return false;">
+                            <input class="sdf-footer-input" data-ai-id="el-sdf-input" placeholder="Email address"
+                                required="" type="email">
+                            <button class="sdf-footer-button" data-ai-id="el-sdf-button" type="submit">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <hr class="sdf-footer-divider" data-ai-id="el-sdf-divider">
+                <div class="sdf-footer-bottom" data-ai-id="el-sdf-bottom">
+                    <p class="sdf-footer-copyright" data-ai-id="el-sdf-copyright">
+                        © 2024 Saday Academy. All rights reserved.
+                    </p>
+                    <div class="sdf-footer-legal" data-ai-id="el-sdf-legal">
+                        <a data-ai-id="el-sdf-legal1" href="/privacypolicy">
+                            Privacy Policy
+                        </a>
+                        <a data-ai-id="el-sdf-legal2" href="/termsofuse">
+                            Terms of Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style data-ai-id="stl-foot1" id="stl-foot1">
+            #sec-foot1 {
+                background-color: #5B458E;
+                color: #FFFFFF;
+                padding: 80px 20px 40px;
+                font-family: 'Inter', sans-serif;
+            }
+
+            .sdf-footer-container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .sdf-footer-grid {
+                display: grid;
+                grid-template-columns: 1.4fr 1fr 1fr 1fr;
+                gap: 60px;
+                margin-bottom: 60px;
+            }
+
+            .sdf-footer-logo {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 24px;
+            }
+
+            .sdf-footer-description {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 16px;
+                line-height: 1.6;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            .sdf-footer-title {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 24px;
+                color: #FFFFFF;
+            }
+
+            .sdf-footer-links {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .sdf-footer-links li {
+                margin-bottom: 12px;
+            }
+
+            .sdf-footer-links a {
+                color: rgba(255, 255, 255, 0.75);
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 400;
+                transition: color 0.3s ease;
+            }
+
+            .sdf-footer-links a:hover {
+                color: #FFFFFF;
+            }
+
+            .sdf-footer-newsletter-text {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 14px;
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+
+            .sdf-footer-newsletter-form {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .sdf-footer-input {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 8px;
+                padding: 12px 16px;
+                color: #FFFFFF;
+                font-size: 14px;
+                outline: none;
+                transition: border-color 0.3s ease;
+            }
+
+            .sdf-footer-input::placeholder {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            .sdf-footer-input:focus {
+                border-color: #8B75D1;
+            }
+
+            .sdf-footer-button {
+                background: linear-gradient(90deg, #8B75D1, #7A63C7);
+                color: #FFFFFF;
+                border: none;
+                border-radius: 8px;
+                padding: 12px 24px;
+                font-size: 16px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: opacity 0.3s ease;
+            }
+
+            .sdf-footer-button:hover {
+                opacity: 0.9;
+            }
+
+            .sdf-footer-divider {
+                border: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                margin: 0 0 30px 0;
+            }
+
+            .sdf-footer-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .sdf-footer-copyright {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 14px;
+                margin: 0;
+                font-weight: 400;
+            }
+
+            .sdf-footer-legal {
+                display: flex;
+                gap: 24px;
+            }
+
+            .sdf-footer-legal a {
+                color: rgba(255, 255, 255, 0.75);
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 400;
+                transition: color 0.3s ease;
+            }
+
+            .sdf-footer-legal a:hover {
+                color: #FFFFFF;
+            }
+
+            @media (max-width: 1024px) {
+                .sdf-footer-grid {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 40px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #sec-foot1 {
+                    padding: 60px 20px 30px;
+                    text-align: center;
+                }
+
+                .sdf-footer-grid {
+                    grid-template-columns: 1fr;
+                    gap: 40px;
+                }
+
+                .sdf-footer-logo {
+                    justify-content: center;
+                }
+
+                .sdf-footer-newsletter-form {
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+
+                .sdf-footer-bottom {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .sdf-footer-legal {
+                    justify-content: center;
+                }
+            }
+        </style>
+        <script data-ai-id="scr-foot1" id="scr-foot1">
+            // Footer script for potential interactivity (e.g., newsletter submission)
+            (function () {
+                const form = document.querySelector('.sdf-footer-newsletter-form');
+                if (form) {
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        const email = this.querySelector('input').value;
+                        if (email) {
+                            // Placeholder for submission logic
+                            console.log('Newsletter subscription for:', email);
+                            alert('Thank you for subscribing!');
+                            this.reset();
+                        }
+                    });
+                }
+            })();
+        </script>
+        <section class="sdf-footer-section" data-ai-id="sec-foot1" id="sec-foot1">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+            <div class="sdf-footer-container" data-ai-id="el-sdf-container">
+                <div class="sdf-footer-grid" data-ai-id="el-sdf-grid">
+
+                    <div class="sdf-footer-col sdf-footer-brand" data-ai-id="el-sdf-col1">
+                        <div class="sdf-footer-logo" data-ai-id="el-sdf-logo">
+                            <i class="fa-solid fa-leaf" data-ai-id="el-sdf-logo-icon" style="color: #22E36A;">
+                            </i>
+                            <span data-ai-id="el-sdf-logo-text">
+                                Saday Academy
+                            </span>
+                        </div>
+                        <p class="sdf-footer-description" data-ai-id="el-sdf-description">
+                            Empowering learners worldwide with expert-led courses and a community-driven approach to
+                            personal and professional growth.
+                        </p>
+                    </div>
+
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col2">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title1">
+                            Academy
+                        </h4>
+                        <ul class="sdf-footer-links" data-ai-id="el-sdf-links1">
+                            <li>
+                                <a data-ai-id="el-sdf-link1-1" href="/courses">
+                                    All Courses
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-2" href="#">
+                                    Instructors
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-3" href="#">
+                                    Live Events
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-4" href="#">
+                                    Reviews
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col3">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title2">
+                            Support
+                        </h4>
+                        <ul class="sdf-footer-links" data-ai-id="el-sdf-links2">
+                            <li>
+                                <a data-ai-id="el-sdf-link2-1" href="#">
+                                    Student Portal
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-2" href="#">
+                                    Accreditation
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-3" href="/contactus">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-4" href="#">
+                                    FAQs
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col4">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title3">
+                            Stay Updated
+                        </h4>
+                        <p class="sdf-footer-newsletter-text" data-ai-id="el-sdf-newsletter-desc">
+                            Subscribe to get the latest updates and offers.
+                        </p>
+                        <form class="sdf-footer-newsletter-form" data-ai-id="el-sdf-form" onsubmit="return false;">
+                            <input class="sdf-footer-input" data-ai-id="el-sdf-input" placeholder="Email address"
+                                required="" type="email">
+                            <button class="sdf-footer-button" data-ai-id="el-sdf-button" type="submit">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <hr class="sdf-footer-divider" data-ai-id="el-sdf-divider">
+                <div class="sdf-footer-bottom" data-ai-id="el-sdf-bottom">
+                    <p class="sdf-footer-copyright" data-ai-id="el-sdf-copyright">
+                        © 2024 Saday Academy. All rights reserved.
+                    </p>
+                    <div class="sdf-footer-legal" data-ai-id="el-sdf-legal">
+                        <a data-ai-id="el-sdf-legal1" href="/privacypolicy">
+                            Privacy Policy
+                        </a>
+                        <a data-ai-id="el-sdf-legal2" href="/termsofuse">
+                            Terms of Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style data-ai-id="stl-foot1" id="stl-foot1">
+            #sec-foot1 {
+                background-color: #5B458E;
+                color: #FFFFFF;
+                padding: 80px 20px 40px;
+                font-family: 'Inter', sans-serif;
+            }
+
+            .sdf-footer-container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .sdf-footer-grid {
+                display: grid;
+                grid-template-columns: 1.4fr 1fr 1fr 1fr;
+                gap: 60px;
+                margin-bottom: 60px;
+            }
+
+            .sdf-footer-logo {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 24px;
+            }
+
+            .sdf-footer-description {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 16px;
+                line-height: 1.6;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            .sdf-footer-title {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 24px;
+                color: #FFFFFF;
+            }
+
+            .sdf-footer-links {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .sdf-footer-links li {
+                margin-bottom: 12px;
+            }
+
+            .sdf-footer-links a {
+                color: rgba(255, 255, 255, 0.75);
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 400;
+                transition: color 0.3s ease;
+            }
+
+            .sdf-footer-links a:hover {
+                color: #FFFFFF;
+            }
+
+            .sdf-footer-newsletter-text {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 14px;
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+
+            .sdf-footer-newsletter-form {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .sdf-footer-input {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 8px;
+                padding: 12px 16px;
+                color: #FFFFFF;
+                font-size: 14px;
+                outline: none;
+                transition: border-color 0.3s ease;
+            }
+
+            .sdf-footer-input::placeholder {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            .sdf-footer-input:focus {
+                border-color: #8B75D1;
+            }
+
+            .sdf-footer-button {
+                background: linear-gradient(90deg, #8B75D1, #7A63C7);
+                color: #FFFFFF;
+                border: none;
+                border-radius: 8px;
+                padding: 12px 24px;
+                font-size: 16px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: opacity 0.3s ease;
+            }
+
+            .sdf-footer-button:hover {
+                opacity: 0.9;
+            }
+
+            .sdf-footer-divider {
+                border: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                margin: 0 0 30px 0;
+            }
+
+            .sdf-footer-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .sdf-footer-copyright {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 14px;
+                margin: 0;
+                font-weight: 400;
+            }
+
+            .sdf-footer-legal {
+                display: flex;
+                gap: 24px;
+            }
+
+            .sdf-footer-legal a {
+                color: rgba(255, 255, 255, 0.75);
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 400;
+                transition: color 0.3s ease;
+            }
+
+            .sdf-footer-legal a:hover {
+                color: #FFFFFF;
+            }
+
+            @media (max-width: 1024px) {
+                .sdf-footer-grid {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 40px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #sec-foot1 {
+                    padding: 60px 20px 30px;
+                    text-align: center;
+                }
+
+                .sdf-footer-grid {
+                    grid-template-columns: 1fr;
+                    gap: 40px;
+                }
+
+                .sdf-footer-logo {
+                    justify-content: center;
+                }
+
+                .sdf-footer-newsletter-form {
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+
+                .sdf-footer-bottom {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .sdf-footer-legal {
+                    justify-content: center;
+                }
+            }
+        </style>
+        <script data-ai-id="scr-foot1" id="scr-foot1">
+            // Footer script for potential interactivity (e.g., newsletter submission)
+            (function () {
+                const form = document.querySelector('.sdf-footer-newsletter-form');
+                if (form) {
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        const email = this.querySelector('input').value;
+                        if (email) {
+                            // Placeholder for submission logic
+                            console.log('Newsletter subscription for:', email);
+                            alert('Thank you for subscribing!');
+                            this.reset();
+                        }
+                    });
+                }
+            })();
+        </script>
+        <section class="sdf-footer-section" data-ai-id="sec-foot1" id="sec-foot1">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+            <div class="sdf-footer-container" data-ai-id="el-sdf-container">
+                <div class="sdf-footer-grid" data-ai-id="el-sdf-grid">
+
+                    <div class="sdf-footer-col sdf-footer-brand" data-ai-id="el-sdf-col1">
+                        <div class="sdf-footer-logo" data-ai-id="el-sdf-logo">
+                            <i class="fa-solid fa-leaf" data-ai-id="el-sdf-logo-icon" style="color: #22E36A;">
+                            </i>
+                            <span data-ai-id="el-sdf-logo-text">
+                                Saday Academy
+                            </span>
+                        </div>
+                        <p class="sdf-footer-description" data-ai-id="el-sdf-description">
+                            Empowering learners worldwide with expert-led courses and a community-driven approach to
+                            personal and professional growth.
+                        </p>
+                    </div>
+
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col2">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title1">
+                            Academy
+                        </h4>
+                        <ul class="sdf-footer-links" data-ai-id="el-sdf-links1">
+                            <li>
+                                <a data-ai-id="el-sdf-link1-1" href="/courses">
+                                    All Courses
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-2" href="#">
+                                    Instructors
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-3" href="#">
+                                    Live Events
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-4" href="#">
+                                    Reviews
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col3">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title2">
+                            Support
+                        </h4>
+                        <ul class="sdf-footer-links" data-ai-id="el-sdf-links2">
+                            <li>
+                                <a data-ai-id="el-sdf-link2-1" href="#">
+                                    Student Portal
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-2" href="#">
+                                    Accreditation
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-3" href="/contactus">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-4" href="#">
+                                    FAQs
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col4">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title3">
+                            Stay Updated
+                        </h4>
+                        <p class="sdf-footer-newsletter-text" data-ai-id="el-sdf-newsletter-desc">
+                            Subscribe to get the latest updates and offers.
+                        </p>
+                        <form class="sdf-footer-newsletter-form" data-ai-id="el-sdf-form" onsubmit="return false;">
+                            <input class="sdf-footer-input" data-ai-id="el-sdf-input" placeholder="Email address"
+                                required="" type="email">
+                            <button class="sdf-footer-button" data-ai-id="el-sdf-button" type="submit">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <hr class="sdf-footer-divider" data-ai-id="el-sdf-divider">
+                <div class="sdf-footer-bottom" data-ai-id="el-sdf-bottom">
+                    <p class="sdf-footer-copyright" data-ai-id="el-sdf-copyright">
+                        © 2024 Saday Academy. All rights reserved.
+                    </p>
+                    <div class="sdf-footer-legal" data-ai-id="el-sdf-legal">
+                        <a data-ai-id="el-sdf-legal1" href="/privacypolicy">
+                            Privacy Policy
+                        </a>
+                        <a data-ai-id="el-sdf-legal2" href="/termsofuse">
+                            Terms of Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style data-ai-id="stl-foot1" id="stl-foot1">
+            #sec-foot1 {
+                background-color: #5B458E;
+                color: #FFFFFF;
+                padding: 80px 20px 40px;
+                font-family: 'Inter', sans-serif;
+            }
+
+            .sdf-footer-container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .sdf-footer-grid {
+                display: grid;
+                grid-template-columns: 1.4fr 1fr 1fr 1fr;
+                gap: 60px;
+                margin-bottom: 60px;
+            }
+
+            .sdf-footer-logo {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 24px;
+            }
+
+            .sdf-footer-description {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 16px;
+                line-height: 1.6;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            .sdf-footer-title {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 24px;
+                color: #FFFFFF;
+            }
+
+            .sdf-footer-links {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .sdf-footer-links li {
+                margin-bottom: 12px;
+            }
+
+            .sdf-footer-links a {
+                color: rgba(255, 255, 255, 0.75);
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 400;
+                transition: color 0.3s ease;
+            }
+
+            .sdf-footer-links a:hover {
+                color: #FFFFFF;
+            }
+
+            .sdf-footer-newsletter-text {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 14px;
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+
+            .sdf-footer-newsletter-form {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .sdf-footer-input {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 8px;
+                padding: 12px 16px;
+                color: #FFFFFF;
+                font-size: 14px;
+                outline: none;
+                transition: border-color 0.3s ease;
+            }
+
+            .sdf-footer-input::placeholder {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            .sdf-footer-input:focus {
+                border-color: #8B75D1;
+            }
+
+            .sdf-footer-button {
+                background: linear-gradient(90deg, #8B75D1, #7A63C7);
+                color: #FFFFFF;
+                border: none;
+                border-radius: 8px;
+                padding: 12px 24px;
+                font-size: 16px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: opacity 0.3s ease;
+            }
+
+            .sdf-footer-button:hover {
+                opacity: 0.9;
+            }
+
+            .sdf-footer-divider {
+                border: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                margin: 0 0 30px 0;
+            }
+
+            .sdf-footer-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .sdf-footer-copyright {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 14px;
+                margin: 0;
+                font-weight: 400;
+            }
+
+            .sdf-footer-legal {
+                display: flex;
+                gap: 24px;
+            }
+
+            .sdf-footer-legal a {
+                color: rgba(255, 255, 255, 0.75);
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 400;
+                transition: color 0.3s ease;
+            }
+
+            .sdf-footer-legal a:hover {
+                color: #FFFFFF;
+            }
+
+            @media (max-width: 1024px) {
+                .sdf-footer-grid {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 40px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #sec-foot1 {
+                    padding: 60px 20px 30px;
+                    text-align: center;
+                }
+
+                .sdf-footer-grid {
+                    grid-template-columns: 1fr;
+                    gap: 40px;
+                }
+
+                .sdf-footer-logo {
+                    justify-content: center;
+                }
+
+                .sdf-footer-newsletter-form {
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+
+                .sdf-footer-bottom {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .sdf-footer-legal {
+                    justify-content: center;
+                }
+            }
+        </style>
+        <script data-ai-id="scr-foot1" id="scr-foot1">
+            // Footer script for potential interactivity (e.g., newsletter submission)
+            (function () {
+                const form = document.querySelector('.sdf-footer-newsletter-form');
+                if (form) {
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        const email = this.querySelector('input').value;
+                        if (email) {
+                            // Placeholder for submission logic
+                            console.log('Newsletter subscription for:', email);
+                            alert('Thank you for subscribing!');
+                            this.reset();
+                        }
+                    });
+                }
+            })();
+        </script>
+        <section class="sdf-footer-section" data-ai-id="sec-foot1" id="sec-foot1">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+            <div class="sdf-footer-container" data-ai-id="el-sdf-container">
+                <div class="sdf-footer-grid" data-ai-id="el-sdf-grid">
+
+                    <div class="sdf-footer-col sdf-footer-brand" data-ai-id="el-sdf-col1">
+                        <div class="sdf-footer-logo" data-ai-id="el-sdf-logo">
+                            <i class="fa-solid fa-leaf" data-ai-id="el-sdf-logo-icon" style="color: #22E36A;">
+                            </i>
+                            <span data-ai-id="el-sdf-logo-text">
+                                Saday Academy
+                            </span>
+                        </div>
+                        <p class="sdf-footer-description" data-ai-id="el-sdf-description">
+                            Empowering learners worldwide with expert-led courses and a community-driven approach to
+                            personal and professional growth.
+                        </p>
+                    </div>
+
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col2">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title1">
+                            Academy
+                        </h4>
+                        <ul class="sdf-footer-links" data-ai-id="el-sdf-links1">
+                            <li>
+                                <a data-ai-id="el-sdf-link1-1" href="/courses">
+                                    All Courses
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-2" href="#">
+                                    Instructors
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-3" href="#">
+                                    Live Events
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-4" href="#">
+                                    Reviews
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col3">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title2">
+                            Support
+                        </h4>
+                        <ul class="sdf-footer-links" data-ai-id="el-sdf-links2">
+                            <li>
+                                <a data-ai-id="el-sdf-link2-1" href="#">
+                                    Student Portal
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-2" href="#">
+                                    Accreditation
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-3" href="/contactus">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-4" href="#">
+                                    FAQs
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col4">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title3">
+                            Stay Updated
+                        </h4>
+                        <p class="sdf-footer-newsletter-text" data-ai-id="el-sdf-newsletter-desc">
+                            Subscribe to get the latest updates and offers.
+                        </p>
+                        <form class="sdf-footer-newsletter-form" data-ai-id="el-sdf-form" onsubmit="return false;">
+                            <input class="sdf-footer-input" data-ai-id="el-sdf-input" placeholder="Email address"
+                                required="" type="email">
+                            <button class="sdf-footer-button" data-ai-id="el-sdf-button" type="submit">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <hr class="sdf-footer-divider" data-ai-id="el-sdf-divider">
+                <div class="sdf-footer-bottom" data-ai-id="el-sdf-bottom">
+                    <p class="sdf-footer-copyright" data-ai-id="el-sdf-copyright">
+                        © 2024 Saday Academy. All rights reserved.
+                    </p>
+                    <div class="sdf-footer-legal" data-ai-id="el-sdf-legal">
+                        <a data-ai-id="el-sdf-legal1" href="/privacypolicy">
+                            Privacy Policy
+                        </a>
+                        <a data-ai-id="el-sdf-legal2" href="/termsofuse">
+                            Terms of Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style data-ai-id="stl-foot1" id="stl-foot1">
+            #sec-foot1 {
+                background-color: #5B458E;
+                color: #FFFFFF;
+                padding: 80px 20px 40px;
+                font-family: 'Inter', sans-serif;
+            }
+
+            .sdf-footer-container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .sdf-footer-grid {
+                display: grid;
+                grid-template-columns: 1.4fr 1fr 1fr 1fr;
+                gap: 60px;
+                margin-bottom: 60px;
+            }
+
+            .sdf-footer-logo {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 24px;
+            }
+
+            .sdf-footer-description {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 16px;
+                line-height: 1.6;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            .sdf-footer-title {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 24px;
+                color: #FFFFFF;
+            }
+
+            .sdf-footer-links {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .sdf-footer-links li {
+                margin-bottom: 12px;
+            }
+
+            .sdf-footer-links a {
+                color: rgba(255, 255, 255, 0.75);
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 400;
+                transition: color 0.3s ease;
+            }
+
+            .sdf-footer-links a:hover {
+                color: #FFFFFF;
+            }
+
+            .sdf-footer-newsletter-text {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 14px;
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+
+            .sdf-footer-newsletter-form {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .sdf-footer-input {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 8px;
+                padding: 12px 16px;
+                color: #FFFFFF;
+                font-size: 14px;
+                outline: none;
+                transition: border-color 0.3s ease;
+            }
+
+            .sdf-footer-input::placeholder {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            .sdf-footer-input:focus {
+                border-color: #8B75D1;
+            }
+
+            .sdf-footer-button {
+                background: linear-gradient(90deg, #8B75D1, #7A63C7);
+                color: #FFFFFF;
+                border: none;
+                border-radius: 8px;
+                padding: 12px 24px;
+                font-size: 16px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: opacity 0.3s ease;
+            }
+
+            .sdf-footer-button:hover {
+                opacity: 0.9;
+            }
+
+            .sdf-footer-divider {
+                border: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                margin: 0 0 30px 0;
+            }
+
+            .sdf-footer-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .sdf-footer-copyright {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 14px;
+                margin: 0;
+                font-weight: 400;
+            }
+
+            .sdf-footer-legal {
+                display: flex;
+                gap: 24px;
+            }
+
+            .sdf-footer-legal a {
+                color: rgba(255, 255, 255, 0.75);
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 400;
+                transition: color 0.3s ease;
+            }
+
+            .sdf-footer-legal a:hover {
+                color: #FFFFFF;
+            }
+
+            @media (max-width: 1024px) {
+                .sdf-footer-grid {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 40px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #sec-foot1 {
+                    padding: 60px 20px 30px;
+                    text-align: center;
+                }
+
+                .sdf-footer-grid {
+                    grid-template-columns: 1fr;
+                    gap: 40px;
+                }
+
+                .sdf-footer-logo {
+                    justify-content: center;
+                }
+
+                .sdf-footer-newsletter-form {
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+
+                .sdf-footer-bottom {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .sdf-footer-legal {
+                    justify-content: center;
+                }
+            }
+        </style>
+        <script data-ai-id="scr-foot1" id="scr-foot1">
+            // Footer script for potential interactivity (e.g., newsletter submission)
+            (function () {
+                const form = document.querySelector('.sdf-footer-newsletter-form');
+                if (form) {
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        const email = this.querySelector('input').value;
+                        if (email) {
+                            // Placeholder for submission logic
+                            console.log('Newsletter subscription for:', email);
+                            alert('Thank you for subscribing!');
+                            this.reset();
+                        }
+                    });
+                }
+            })();
+        </script>
+
+
+
+        <section class="sdf-footer-section" data-ai-id="sec-foot1" id="sec-foot1">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+            <div class="sdf-footer-container" data-ai-id="el-sdf-container">
+                <div class="sdf-footer-grid" data-ai-id="el-sdf-grid">
+                    <!-- Column 1: Logo & Description -->
+                    <div class="sdf-footer-col sdf-footer-brand" data-ai-id="el-sdf-col1">
+                        <div class="sdf-footer-logo" data-ai-id="el-sdf-logo">
+                            <i class="fa-solid fa-leaf" data-ai-id="el-sdf-logo-icon" style="color: #22E36A;">
+                            </i>
+                            <span data-ai-id="el-sdf-logo-text">
+                                Saday Academy
+                            </span>
+                        </div>
+                        <p class="sdf-footer-description" data-ai-id="el-sdf-description">
+                            Empowering learners worldwide with expert-led courses and a community-driven approach to
+                            personal and professional growth.
+                        </p>
+                    </div>
+                    <!-- Column 2: Academy Links -->
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col2">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title1">
+                            Academy
+                        </h4>
+                        <ul class="sdf-footer-links" data-ai-id="el-sdf-links1">
+                            <li>
+                                <a data-ai-id="el-sdf-link1-1" href="/courses">
+                                    All Courses
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-2" href="#">
+                                    Instructors
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-3" href="#">
+                                    Live Events
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link1-4" href="#">
+                                    Reviews
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Column 3: Support Links -->
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col3">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title2">
+                            Support
+                        </h4>
+                        <ul class="sdf-footer-links" data-ai-id="el-sdf-links2">
+                            <li>
+                                <a data-ai-id="el-sdf-link2-1" href="#">
+                                    Student Portal
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-2" href="#">
+                                    Accreditation
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-3" href="/contactus">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li>
+                                <a data-ai-id="el-sdf-link2-4" href="#">
+                                    FAQs
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Column 4: Newsletter -->
+                    <div class="sdf-footer-col" data-ai-id="el-sdf-col4">
+                        <h4 class="sdf-footer-title" data-ai-id="el-sdf-title3">
+                            Stay Updated
+                        </h4>
+                        <p class="sdf-footer-newsletter-text" data-ai-id="el-sdf-newsletter-desc">
+                            Subscribe to get the latest updates and offers.
+                        </p>
+                        <form class="sdf-footer-newsletter-form" data-ai-id="el-sdf-form" onsubmit="return false;">
+                            <input class="sdf-footer-input" data-ai-id="el-sdf-input" placeholder="Email address"
+                                required="" type="email">
+                            <button class="sdf-footer-button" data-ai-id="el-sdf-button" type="submit">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <hr class="sdf-footer-divider" data-ai-id="el-sdf-divider">
+                <div class="sdf-footer-bottom" data-ai-id="el-sdf-bottom">
+                    <p class="sdf-footer-copyright" data-ai-id="el-sdf-copyright">
+                        © 2024 Saday Academy. All rights reserved.
+                    </p>
+                    <div class="sdf-footer-legal" data-ai-id="el-sdf-legal">
+                        <a data-ai-id="el-sdf-legal1" href="/privacypolicy">
+                            Privacy Policy
+                        </a>
+                        <a data-ai-id="el-sdf-legal2" href="/termsofuse">
+                            Terms of Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style data-ai-id="stl-foot1" id="stl-foot1">
+            #sec-foot1 {
+                background-color: #5B458E;
+                color: #FFFFFF;
+                padding: 80px 20px 40px;
+                font-family: 'Inter', sans-serif;
+            }
+
+            .sdf-footer-container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .sdf-footer-grid {
+                display: grid;
+                grid-template-columns: 1.4fr 1fr 1fr 1fr;
+                gap: 60px;
+                margin-bottom: 60px;
+            }
+
+            .sdf-footer-logo {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 24px;
+            }
+
+            .sdf-footer-description {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 16px;
+                line-height: 1.6;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            .sdf-footer-title {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 24px;
+                color: #FFFFFF;
+            }
+
+            .sdf-footer-links {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .sdf-footer-links li {
+                margin-bottom: 12px;
+            }
+
+            .sdf-footer-links a {
+                color: rgba(255, 255, 255, 0.75);
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 400;
+                transition: color 0.3s ease;
+            }
+
+            .sdf-footer-links a:hover {
+                color: #FFFFFF;
+            }
+
+            .sdf-footer-newsletter-text {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 14px;
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+
+            .sdf-footer-newsletter-form {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .sdf-footer-input {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 8px;
+                padding: 12px 16px;
+                color: #FFFFFF;
+                font-size: 14px;
+                outline: none;
+                transition: border-color 0.3s ease;
+            }
+
+            .sdf-footer-input::placeholder {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            .sdf-footer-input:focus {
+                border-color: #8B75D1;
+            }
+
+            .sdf-footer-button {
+                background: linear-gradient(90deg, #8B75D1, #7A63C7);
+                color: #FFFFFF;
+                border: none;
+                border-radius: 8px;
+                padding: 12px 24px;
+                font-size: 16px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: opacity 0.3s ease;
+            }
+
+            .sdf-footer-button:hover {
+                opacity: 0.9;
+            }
+
+            .sdf-footer-divider {
+                border: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                margin: 0 0 30px 0;
+            }
+
+            .sdf-footer-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .sdf-footer-copyright {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 14px;
+                margin: 0;
+                font-weight: 400;
+            }
+
+            .sdf-footer-legal {
+                display: flex;
+                gap: 24px;
+            }
+
+            .sdf-footer-legal a {
+                color: rgba(255, 255, 255, 0.75);
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 400;
+                transition: color 0.3s ease;
+            }
+
+            .sdf-footer-legal a:hover {
+                color: #FFFFFF;
+            }
+
+            @media (max-width: 1024px) {
+                .sdf-footer-grid {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 40px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #sec-foot1 {
+                    padding: 60px 20px 30px;
+                    text-align: center;
+                }
+
+                .sdf-footer-grid {
+                    grid-template-columns: 1fr;
+                    gap: 40px;
+                }
+
+                .sdf-footer-logo {
+                    justify-content: center;
+                }
+
+                .sdf-footer-newsletter-form {
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+
+                .sdf-footer-bottom {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .sdf-footer-legal {
+                    justify-content: center;
+                }
+            }
+        </style>
+        <script data-ai-id="scr-foot1" id="scr-foot1">
+            // Footer script for potential interactivity (e.g., newsletter submission)
+            (function () {
+                const form = document.querySelector('.sdf-footer-newsletter-form');
+                if (form) {
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        const email = this.querySelector('input').value;
+                        if (email) {
+                            // Placeholder for submission logic
+                            console.log('Newsletter subscription for:', email);
+                            alert('Thank you for subscribing!');
+                            this.reset();
+                        }
+                    });
+                }
+            })();
+        </script>
+
+
+        <section id="sec-graphy-footer" data-ai-id="sec-graphy-footer" data-section-type="graphy_footer"
+            data-nav-element="graphy_footer" style="background-color: #f7f8f5; padding: 12px 20px;">
+            <div data-nav-element="graphy_footer" class="footer-content">
+                <div class="footer-left">
+                    <img src="https://media.marka-img.com/461f7112/zQ3tBUI9rdD1qblfI0JQJO7IngL4xv.png" alt="Graphy Logo"
+                        class="logo-image">
+                </div>
+                <div class="footer-right">
+                    <div class="trust-badge">
+                        <img src="https://media.marka-img.com/461f7112/sg3a5Hm3ZPL7Zb38mHFsXCzMTRNbgY.png"
+                            alt="Trust Badge" class="badge-image">
+                        <span class="trust-text">200K+ creators trust Graphy</span>
+                    </div>
+                    <a href="https://graphy.com" class="cta-link" target="_blank">Try Graphy</a>
+                </div>
+            </div>
+        </section>
+
+        <style id="stl-graphy-footer" data-ai-id="stl-graphy-footer">
+            #sec-graphy-footer {
+                background-color: #f7f8f5;
+            }
+
+            #sec-graphy-footer .footer-content {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                gap: 16px !important;
+                max-width: 1400px !important;
+                margin: 0 auto !important;
+                flex-wrap: wrap !important;
+            }
+
+            #sec-graphy-footer .footer-left {
+                display: flex !important;
+                align-items: center !important;
+                gap: 8px !important;
+            }
+
+            #sec-graphy-footer .powered-by {
+                font-size: 11px !important;
+                color: #666 !important;
+                font-family: Roobert, Arial, sans-serif !important;
+                font-weight: normal !important;
+                letter-spacing: 0.015em !important;
+            }
+
+            #sec-graphy-footer .logo-image {
+                width: 50px !important;
+                height: auto !important;
+                display: block !important;
+            }
+
+            #sec-graphy-footer .footer-right {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+
+            #sec-graphy-footer .trust-badge {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+
+            #sec-graphy-footer .badge-image {
+                width: 28px !important;
+                height: auto !important;
+                display: block !important;
+            }
+
+            #sec-graphy-footer .trust-text {
+                font-size: 11px !important;
+                color: #666 !important;
+                font-family: Roobert, Arial, sans-serif !important;
+                letter-spacing: 0.015em !important;
+            }
+
+            #sec-graphy-footer .cta-link {
+                font-size: 11px !important;
+                color: white !important;
+                text-decoration: none !important;
+                font-weight: 600 !important;
+                font-family: Roobert, Arial, sans-serif !important;
+                padding: 10px 20px !important;
+                background-color: #232228 !important;
+                border: none !important;
+                border-radius: 100px !important;
+                transition: all 0.3s ease !important;
+                white-space: nowrap !important;
+                letter-spacing: 0.015em !important;
+                display: inline-block !important;
+            }
+
+            #sec-graphy-footer .cta-link:hover {
+                background-color: #3d3a43 !important;
+                transform: translateY(-2px) !important;
+            }
+
+            @media (max-width: 768px) {
+                #sec-graphy-footer .footer-content {
+                    gap: 12px;
+                    padding: 0 16px;
+                }
+
+                #sec-graphy-footer .logo-image {
+                    width: 50px;
+                }
+
+                #sec-graphy-footer .trust-text,
+                #sec-graphy-footer .powered-by,
+                #sec-graphy-footer .cta-link {
+                    font-size: 11px;
+                }
+
+                #sec-graphy-footer .cta-link {
+                    padding: 6px 12px;
+                }
+
+                #sec-graphy-footer .badge-image {
+                    width: 28px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                #sec-graphy-footer .footer-content {
+                    gap: 8px;
+                }
+
+                #sec-graphy-footer .logo-image {
+                    width: 45px;
+                }
+
+                #sec-graphy-footer .badge-image {
+                    width: 24px;
+                }
+            }
+        </style>
+    </main>
+    <div>
+        <script defer="" type="text/javascript" src="https://api.pirsch.io/pirsch-extended.js" id="pirschextendedjs"
+            data-code="x1OuToaydbdHeXNXm3CGg9cPe3mmXAuw"></script>
+    </div>
+</div>

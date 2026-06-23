@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec5b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                        "deep-purple": "#523980",
+                        "soft-purple": "#9072C6",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 bg-white dark:bg-slate-950">
+<div class="flex items-center gap-4 text-deep-purple dark:text-primary">
+<div class="size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-tight">Saday Academy</h2>
+</div>
+<div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-8">
+<a class="hover:text-primary transition-colors text-sm font-medium" href="#">Courses</a>
+<a class="hover:text-primary transition-colors text-sm font-medium" href="#">Instructors</a>
+<a class="hover:text-primary transition-colors text-sm font-medium" href="#">About</a>
+<a class="hover:text-primary transition-colors text-sm font-medium" href="#">Contact</a>
+<a class="hover:text-primary transition-colors text-sm font-medium" href="#">Sign In</a>
+</nav>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-deep-purple text-sm font-bold shadow-sm hover:opacity-90 transition-opacity">
+                        Join Now
+                    </button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="Student profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZePZb5FQuU5is5XpX_07ZBpu7GF9mBXF-c5SbHSqGWbPrVyDtl1oPOeBF5GWOba5UUeTUJJP3qW-DZ9wJcKQmvCNvCOIv5SID7cP3FEM4RWJs7fLPVCyCGEEnIvbmhkwvB0OYUgniEcF_ix--ZhsZwuuHD4LGKbEVKzEpp6OKoPnC6DHN67RYttrrXT2m7s5gJ2ljubDIFA-hvHpZI35d7nF1l8VOy4eTJyu8JNqsXafcGaBRz_6Rn0KW14eFq5zwkwaw2VkaCrZX");'></div>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="lg:hidden">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full px-6 md:px-10 py-10">
+<!-- Page Title Section -->
+<div class="mb-10">
+<h1 class="text-4xl md:text-5xl font-black text-deep-purple dark:text-slate-100 mb-4">Our Courses</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
+                        Evidence-based clinical specializations for modern practitioners. Elevate your practice with world-class instruction and clinical mastery.
+                    </p>
+</div>
+<!-- Search & Filters -->
+<div class="flex flex-col gap-6 mb-12">
+<div class="relative w-full max-w-2xl">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-xl border-none bg-white dark:bg-slate-900 shadow-sm focus:ring-2 focus:ring-primary text-base" placeholder="Search courses, instructors, or topics..." type="text"/>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="px-5 py-2 rounded-full bg-deep-purple text-white text-sm font-medium">All Courses</button>
+<button class="px-5 py-2 rounded-full bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-sm font-medium hover:bg-primary/10 hover:border-primary transition-all">Psychological</button>
+<button class="px-5 py-2 rounded-full bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-sm font-medium hover:bg-primary/10 hover:border-primary transition-all">Psychiatric</button>
+<button class="px-5 py-2 rounded-full bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-sm font-medium hover:bg-primary/10 hover:border-primary transition-all">Therapeutic</button>
+<button class="px-5 py-2 rounded-full bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-sm font-medium hover:bg-primary/10 hover:border-primary transition-all">Somatic &amp; Integrative</button>
+</div>
+</div>
+<!-- Featured Spotlight -->
+<div class="relative group mb-16 overflow-hidden rounded-2xl bg-deep-purple p-1">
+<div class="flex flex-col lg:flex-row items-stretch bg-white dark:bg-slate-950 rounded-[14px] overflow-hidden">
+<div class="w-full lg:w-1/2 min-h-[300px] bg-center bg-no-repeat bg-cover" data-alt="Clinical professionals in a deep discussion" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6rG3W4XuWGCBPgdiOBy_taeJMzTj7YGGpTzZA3RQKxzLYx6PjrF8O-S6wVO-IwZRmlR_ob_w-OTxp2MjBcpRZ-GKjwHkWf-N5L0ADZoLne89EpfDthjkxIBV3UG0OJ9YyFfHhxaPRZQ-X7F4sH4idFZi1XgMiLVSaae2oIKnUjPWubGcQRtba0wKwCvkN4F1ZMyVkmPboEJpjlAjTXPbcqLOOx41RtwnCyLibKpIKQjSQ7Rtus7Lk9vXqGAhidwFNQP5f7ZnQACqP");'></div>
+<div class="flex flex-1 flex-col justify-center p-8 lg:p-12 gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-deep-purple dark:text-primary text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">stars</span> Featured Release
+                            </div>
+<div>
+<h3 class="text-3xl font-bold text-deep-purple dark:text-slate-100 mb-2 leading-tight">New Release Bundle: Clinical Psychopharmacology Path</h3>
+<p class="text-slate-600 dark:text-slate-400 text-lg">Master the essential principles of psychiatric medication management in this comprehensive Mastery Track.</p>
+</div>
+<div class="flex items-center gap-6 py-4 border-y border-slate-100 dark:border-slate-800">
+<div class="flex flex-col">
+<span class="text-xs text-slate-400 uppercase font-bold">Duration</span>
+<span class="font-semibold">12 Modules</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-slate-400 uppercase font-bold">Certification</span>
+<span class="font-semibold">Advanced Mastery</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-slate-400 uppercase font-bold">Level</span>
+<span class="font-semibold">Professional</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="flex-1 md:flex-none min-w-[180px] h-12 rounded-lg bg-primary text-deep-purple font-bold hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                                    View Full Track <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="flex-1 md:flex-none min-w-[180px] h-12 rounded-lg bg-soft-purple/10 text-deep-purple dark:text-soft-purple font-bold hover:bg-soft-purple/20 transition-all border border-soft-purple/30">
+                                    Save for Later
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Course Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Individual Course Card -->
+<div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-800 flex flex-col">
+<div class="h-52 bg-center bg-no-repeat bg-cover relative" data-alt="Hands holding therapeutic stones" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVMbokuWv2uiICbZeTxLWpSSKUvrqejGbTnoj8G0ufeWgrmVLIw1odAJbjHZf8Iu-_k-M-vFczV3W_btgICNcHjkAr0rhE59yNl_MgarQwdudFf_kMGG7VH4Wz2TXExSo9hbyKKsATM7VldeDgo4StH95wc7bNArWgw8joQQdlBHQemWJ_S6y-LmwG8B-CKXySEZmNCQnzaFEX8CT5n_CHmeMdM-HQ6tqikEcwTyUke0MIk4PM28opNlk8BhC_bRAIO83nm4_vF1x8");'>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-deep-purple font-bold text-sm">
+                                8 Days
+                            </div>
+</div>
+<div class="p-6 flex flex-col flex-1 gap-4">
+<div class="flex justify-between items-start">
+<span class="text-xs font-bold text-soft-purple uppercase tracking-widest">Therapeutic</span>
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="text-xs font-bold ml-1">4.9</span>
+</div>
+</div>
+<h4 class="text-xl font-bold text-deep-purple dark:text-slate-100 group-hover:text-primary transition-colors">Integrative Somatic Trauma Therapy</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2">Learn advanced somatic techniques for resolving trauma stored in the body's nervous system.</p>
+<div class="flex items-center gap-3 mt-auto pt-4 border-t border-slate-50 dark:border-slate-800">
+<div class="size-8 rounded-full bg-slate-200" data-alt="Dr. Sarah Jenkins" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoEx32PUJ8fORZxgVvOvGNjvQaX9wX3MF0-l7M3lhsx5gG8kfy9wFiFkoIKppoa4sjxyj6TNJmzibS0UbB9lfcFAzajYoSwIvReJ4l2lY4bO1YZidrNKbRDzVx75mc83XcA6PcFyk005mzSmufbtWJh6mCaawjQ1VAfRQbjaUpjlHzuVuWTy7P-p1g5Ue8hDbmKgZETmf0nwdbhW84WRZZ4O49rGItevzsrun0oa_C9ySYYev8HsXQ-r2Vs8c4HwGP_eZSqjQbh_Yp"); background-size: cover;'></div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Dr. Sarah Jenkins</span>
+</div>
+<button class="w-full h-11 bg-primary text-deep-purple font-bold rounded-lg mt-2">View Syllabus</button>
+</div>
+</div>
+<!-- Bundle/Mastery Track Card -->
+<div class="group bg-deep-purple text-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col relative">
+<div class="absolute top-0 right-0 p-4">
+<div class="bg-primary text-deep-purple text-[10px] font-black uppercase px-3 py-1 rounded-full">Best Value Bundle</div>
+</div>
+<div class="h-52 bg-center bg-no-repeat bg-cover opacity-80" data-alt="Medical abstract brain imaging" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAn_-nNc6fss1dje008zqPLtkh4Con74qMTf5KEhGIwJdGyTrlcv3s_A1ymWLsh8PWRKUp8ipS3c-Ec8pkCn3h2JHzAH9jQ254km18FEN9cXqqBtAkc5nhdWVAn1C6Yx8GE1xEYJR-I-aZDn8-xBFgURMS5ZkxG1czFr6PHM8Z-dDpO8LElpJosJlrlStItkoJN7j9OcAgJ4Q0IlWVZanuOoVF-Ya8ERvhgGX2WYFLmYr0kcMvcWiTVufHV7HoWcRpQuD5q7FKOyypu");'></div>
+<div class="p-6 flex flex-col flex-1 gap-4">
+<div class="flex justify-between items-start">
+<span class="text-xs font-bold text-primary uppercase tracking-widest">Mastery Track</span>
+</div>
+<h4 class="text-xl font-bold text-white">The Depression Recovery Specialist Track</h4>
+<ul class="text-sm text-slate-200 space-y-2">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Includes 4 Certificates</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> CBT Mastery for Depression</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Lifestyle Medicine Integration</li>
+</ul>
+<div class="mt-auto pt-4">
+<p class="text-xs text-slate-300 mb-3 italic">Curated by Academic Board</p>
+<button class="w-full h-11 bg-white text-deep-purple font-bold rounded-lg hover:bg-primary transition-colors">View Track Details</button>
+</div>
+</div>
+</div>
+<!-- Individual Course Card 2 -->
+<div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-800 flex flex-col">
+<div class="h-52 bg-center bg-no-repeat bg-cover relative" data-alt="Counseling session in a cozy office" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrKMN-MdGkejoYxc11PVPwHmNvEdSxBggFCuDQujOzgcTmxDxo6fGQNrcNuSSClNo3O4On4eXSgIw14cpk8Gc8UjtBMvL-Lqu0uPu3OaEWHvJGHD6mqy-vAV88OCFkno9JxaMFkboe6BPZtyI0kpHuUqa1ewkzCltHFtKUHwm9cSFt5mxBuK2aRabUNtuujBvqvClcfDpzl8wEQ4ZGQ898nzKeFbpxb8ix1dBN3S41UgL9LHCfgOnr3GzUpx7iDzOxU3mrLyxpjsRr");'>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-deep-purple font-bold text-sm">
+                                6 Days
+                            </div>
+</div>
+<div class="p-6 flex flex-col flex-1 gap-4">
+<div class="flex justify-between items-start">
+<span class="text-xs font-bold text-soft-purple uppercase tracking-widest">Psychological</span>
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="text-xs font-bold ml-1">4.8</span>
+</div>
+</div>
+<h4 class="text-xl font-bold text-deep-purple dark:text-slate-100 group-hover:text-primary transition-colors">CBT for Treatment-Resistant Depression</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2">New protocols for patients who haven't responded to traditional therapeutic interventions.</p>
+<div class="flex items-center gap-3 mt-auto pt-4 border-t border-slate-50 dark:border-slate-800">
+<div class="size-8 rounded-full bg-slate-200" data-alt="Prof. Michael Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCNchlpODWPqUVa53zLeSX80r0zgR4M8Xa2GTiAnybSiAyKGHfLPmFWZIVJkW1OO-MIuwwIVm0Idt06gRzUWRbrnsvVoAc01pEIPr3YEZR5VA00E-MGs1funptfDEaWrDsuDnRjTd8Q5bKmS0f_daLRyGLP5aNHmPr08u0wUsl60K-ec0XhexKTiGGMMEulrld5o8iYBJRAXt-bzdcke1cLc8jwdOhytFHiqmv6x_3OwA99jxyPZhGPedm0FaVSHiujaC60mBkiPda0"); background-size: cover;'></div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Prof. Michael Chen</span>
+</div>
+<button class="w-full h-11 bg-primary text-deep-purple font-bold rounded-lg mt-2">View Syllabus</button>
+</div>
+</div>
+<!-- Individual Course Card 3 -->
+<div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-800 flex flex-col">
+<div class="h-52 bg-center bg-no-repeat bg-cover relative" data-alt="Molecular diagram of neurotransmitters" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQev5dzZ4hsL3iRhU_sWGZW31Sh_0rQMdSyVtNr0PLBcAL8eV3mTt1EbeDUT0DgKEG3FZMFKD-xMFdm39WObBUnwir3KhjuDsu_wRZCPnDPz80XNYGHT7Iczisb_txcttnHBeFcptFmfhDO8XaOX7xag5n8wPkUT_1nZENYkr1-iQlni0Kq89ua7YCNjYikjaWarg2ZqGMzmy1Sd9lr8un4XIsoNSebKmRagFGykChjbR4aVVwBBTcdWq0nUXL3l6f15oa8WaCsoze");'>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-deep-purple font-bold text-sm">
+                                5 Days
+                            </div>
+</div>
+<div class="p-6 flex flex-col flex-1 gap-4">
+<div class="flex justify-between items-start">
+<span class="text-xs font-bold text-soft-purple uppercase tracking-widest">Psychiatric</span>
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="text-xs font-bold ml-1">5.0</span>
+</div>
+</div>
+<h4 class="text-xl font-bold text-deep-purple dark:text-slate-100 group-hover:text-primary transition-colors">Advanced Neurobiology for Practitioners</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2">Understanding the brain-body connection from a high-level scientific perspective for clinical use.</p>
+<div class="flex items-center gap-3 mt-auto pt-4 border-t border-slate-50 dark:border-slate-800">
+<div class="size-8 rounded-full bg-slate-200" data-alt="Dr. Elena Rodriguez" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlM1-pCkCQGbYTMygDQvQp_AzJCc05OlW_v3TgSILouIkSkk0YvLpoXsu9gae1F0FXe3TweV3Qs36khs81B7cou8idpg-yJ_7O46GQtRNEevc3T45eWlJJjsiOKR4bXWX96ccuUAYQwXai3IRKCd4xfNcYysWfGczItd04XxfGvlgbMT_G7h1LqfvKWsm9pKt3nLL1oLmZgTFA0yJWWsAibH-XpTIsYBHyUFe2zuv0TvMLp0utWQ35M9RXxQAF9UO73t0JUYGi5nsS"); background-size: cover;'></div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Dr. Elena Rodriguez</span>
+</div>
+<button class="w-full h-11 bg-primary text-deep-purple font-bold rounded-lg mt-2">View Syllabus</button>
+</div>
+</div>
+<!-- Specialization Card -->
+<div class="group bg-slate-100 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border-2 border-dashed border-slate-300 dark:border-slate-700 flex flex-col justify-center items-center p-12 text-center">
+<div class="size-16 rounded-full bg-primary/20 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-4xl">school</span>
+</div>
+<h4 class="text-xl font-bold text-deep-purple dark:text-slate-100 mb-2">Request a Custom Curriculum</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Looking for a specific specialization for your clinic or team? We design custom tracks for organizations.</p>
+<button class="px-6 py-2 rounded-lg border border-deep-purple dark:border-primary text-deep-purple dark:text-primary font-bold text-sm hover:bg-deep-purple hover:text-white dark:hover:bg-primary dark:hover:text-deep-purple transition-all">Contact Partnerships</button>
+</div>
+<!-- Mastery Track 2 -->
+<div class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-800 flex flex-col">
+<div class="h-52 bg-center bg-no-repeat bg-cover relative" data-alt="Serene landscape meditation concept" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDFbFTttnTjpcAYbrfpnntT7yfL3xYvnRImFpSfL5fvj81uClXpreMx8rRs3rjGmJJgfQCYCEbxc85vMpLz4yZ7MCYvMB0D_yss6i-66eyY9hTG0yfIJsxaDRYFChfAOO4gkXcwtIdQwG1CyRLNZfKhRNJ7LJT0CqPGjbOdHifx6-53qE4yhhu6hjUhXIhrI4W8f0B2FRyXNLoIFHnHtDe4uLEFBudLbYLhOG4xyVOIgQemlEulJxAVH8782ZWWsekk-cILu1CuxHU4");'>
+<div class="absolute top-4 left-4 bg-primary text-deep-purple text-[10px] font-black uppercase px-2 py-1 rounded">Mastery Track</div>
+</div>
+<div class="p-6 flex flex-col flex-1 gap-4">
+<div class="flex justify-between items-start">
+<span class="text-xs font-bold text-soft-purple uppercase tracking-widest">Somatic &amp; Integrative</span>
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="text-xs font-bold ml-1">4.7</span>
+</div>
+</div>
+<h4 class="text-xl font-bold text-deep-purple dark:text-slate-100 group-hover:text-primary transition-colors">Holistic Integrative Care Certification</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2">A 3-part specialization focusing on nutrition, movement, and mindfulness for clinical recovery.</p>
+<div class="mt-auto pt-4 flex flex-col gap-3">
+<div class="flex -space-x-2">
+<div class="size-7 rounded-full border-2 border-white dark:border-slate-900 bg-slate-300" data-alt="Instructor 1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAnuOb9H5hPm3w3ZpNkTc2vE-N6yfVT3rFwN1vHty7KFi872Qe0xVR9tvDwY7oUzq-JFzp_ZBCd2IYz_8PaXYQK3MDxCnqrl0hLpCEKNshTMFV06WjKBdpTQvhMVALZyu2LFlaSmYuZoj1gfdDt1iomN3SDdk0eRaJR8n36lbjauuaudewftXHoxrphbx7eDKDr7PfObcT6kjiFndNEjWqBRPItFJZum4gsGQmT_S2STEvORoYIilgbfkczSUmk09ECoHfiRqjQ0uIA"); background-size: cover;'></div>
+<div class="size-7 rounded-full border-2 border-white dark:border-slate-900 bg-slate-300" data-alt="Instructor 2" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHVn5LR1H-0Cl9wdTL2DeAFqa7IM4wT4RYvYGgg6t_-PkT-wIDjxhZNcc-Zp4JJcMiJ19fMTDMGGJQrnvrPpHb1gjnWKouW7s46uHCsJBeqdeeLL7q10bqSK4_dfU4KzXQpBl9B_NvHIn75dSoGv2tXAI44Z7U764FHYlBHkJQAlaa4Gkq-Bielhp-E97OLXmSXRZkFAk5hEeO5Bik0a-xRWEzQS7ip0auBdiUOqO5Sp4_QfACvBiw2SYDlYmWmWjFFb1Tx7W6vFCr"); background-size: cover;'></div>
+<div class="size-7 rounded-full border-2 border-white dark:border-slate-900 bg-slate-300" data-alt="Instructor 3" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMBIvIEFgZLtAhds2aP-aUbwhEEx5vwEkrldosIFFjh6icV5YedOj4mfNxidnRO6Ec-CRw5_FkuGzy2MYDDcZmf6r8aCFFSN_oOnphehpmnmjBqNMOWbh9oTOq-gf-WNjBvE54ouPU38WASQKS2GWFSag2LEp3I3vUjDm9noI2VSZinGcqBdj3-OxqAOTpd6jfiI0PN8LAfxnXuebFRm1OAnNIXldWSYoCZzfM2cb6xT9DWOb3A_-lqTwNoIVkYOZt2h6djqDdKyTT"); background-size: cover;'></div>
+<div class="size-7 rounded-full border-2 border-white dark:border-slate-900 bg-slate-100 flex items-center justify-center text-[10px] font-bold text-slate-600">+2</div>
+</div>
+<button class="w-full h-11 bg-primary text-deep-purple font-bold rounded-lg">View Track Details</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More -->
+<div class="mt-16 text-center">
+<button class="px-10 py-3 rounded-full border-2 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 font-bold hover:border-primary hover:text-primary transition-all">
+                        Load More Courses
+                    </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-purple text-white py-16 px-6 md:px-20 mt-10">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="col-span-1 lg:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Saday Academy</h2>
+</div>
+<p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Saday Academy is dedicated to providing high-quality, evidence-based training for clinical practitioners worldwide. Our mission is to bridge the gap between scientific research and clinical excellence.
+                        </p>
+<div class="flex gap-4">
+<a class="size-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-deep-purple transition-all" href="#">
+<span class="material-symbols-outlined text-sm">language</span>
+</a>
+<a class="size-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-deep-purple transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="size-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-deep-purple transition-all" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6 text-primary">Explore</h4>
+<ul class="space-y-4 text-sm text-slate-300">
+<li><a class="hover:text-primary transition-colors" href="#">Course Catalog</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Mastery Tracks</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Certification Details</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Instructor Directory</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6 text-primary">Company</h4>
+<ul class="space-y-4 text-sm text-slate-300">
+<li><a class="hover:text-primary transition-colors" href="#">About Saday</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Our Methodology</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6 text-primary">Contact</h4>
+<ul class="space-y-4 text-sm text-slate-300">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span>123 Clinical Way, Ste 400<br/>San Francisco, CA 94103</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<span>+1 (800) SADAY-AC</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">alternate_email</span>
+<span>support@saday.academy</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto border-t border-white/10 mt-16 pt-8 text-center text-xs text-slate-400">
+                    © 2024 Saday Academy. All rights reserved. Registered education provider for clinical specializations.
+                </div>
+</footer>
+</div>
+</div>
+</body></html>

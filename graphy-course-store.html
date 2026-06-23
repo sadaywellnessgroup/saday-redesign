@@ -1,0 +1,651 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Readex%20Pro:wght@400;500;600;700&amp;family=Lato:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+   <style data-ai-id="stl-global-style" id="stl-global-style">
+    :root {
+          
+--color-primary-lightest: #efebf7;
+--color-primary-lighter: #c8b7e9;
+--color-primary-light: #a78be0;
+--color-primary: #5e2dc6;
+--color-primary-dark: #4a20a1;
+--color-primary-darker: #3b1984;
+--color-primary-darkest: #27105d;
+
+--color-accent1-lightest: #fcf8f8;
+--color-accent1-lighter: #f7e7e7;
+--color-accent1-light: #f3d8d8;
+--color-accent1: #edb6b6;
+--color-accent1-dark: #de7171;
+--color-accent1-darker: #d53b3d;
+--color-accent1-darkest: #9e1e21;
+
+--color-accent2-lightest: #fdfdfd;
+--color-accent2-lighter: #fbfaf9;
+--color-accent2-light: #f9f8f6;
+--color-accent2: #f4f2f0;
+--color-accent2-dark: #cec4b5;
+--color-accent2-darker: #b2a188;
+--color-accent2-darkest: #857154;
+
+--color-accent3-lightest: #f5f9fc;
+--color-accent3-lighter: #dbebf6;
+--color-accent3-light: #c6e1f2;
+--color-accent3: #93c9ec;
+--color-accent3-dark: #4fabe3;
+--color-accent3-darker: #1e94da;
+--color-accent3-darkest: #126899;
+
+--color-neutral-lightest: #f5f5f5;
+--color-neutral-lighter: #dddddd;
+--color-neutral-light: #c9c9c9;
+--color-neutral: #9e9e9e;
+--color-neutral-dark: #7e7e7e;
+--color-neutral-darker: #666666;
+--color-neutral-darkest: #474747;
+
+
+          
+/* Buttons */
+--button-primary-bg: var(--color-primary);
+--button-primary-hover-bg: var(--color-primary-dark);
+--button-primary-text: var(--color-neutral-lightest);
+--button-secondary-bg: var(--color-neutral-lightest);
+--button-secondary-border: var(--color-neutral-light);
+--button-secondary-text: var(--color-primary-dark);
+--button-tertiary-text: var(--color-accent1-dark);
+
+/* Text & Links */
+--link-color: var(--color-primary);
+--link-hover-color: var(--color-primary-dark);
+--heading-color: var(--color-neutral-darkest);
+--body-color: var(--color-neutral);
+--subhead-color: var(--color-neutral-dark);
+--muted-text-color: var(--color-neutral-light);
+--placeholder-color: var(--color-neutral-light);
+
+/* Surfaces & Layout */
+--card-bg: var(--color-neutral-lightest);
+--card-hover-bg: var(--color-neutral-lighter);
+--card-border: var(--color-neutral-lighter);
+section:nth-of-type(odd) {
+  --section-bg: linear-gradient(
+    180deg,
+    var(--color-neutral-lightest),
+    var(--color-primary-lightest)
+  );
+}
+section:nth-of-type(even) {
+  --section-bg: linear-gradient(
+    180deg,
+    var(--color-primary-lightest),
+    var(--color-neutral-lightest)
+  );
+}
+--nav-bg: var(--color-neutral-lightest);
+--nav-text: var(--color-neutral-darkest);
+--nav-active: var(--color-primary);
+--footer-bg: var(--color-neutral-darkest);
+--footer-text: var(--color-neutral-light);
+
+/* Components & Indicators */
+--badge-bg: var(--color-accent1);
+--icon-color: var(--color-primary);
+--icon-secondary-color: var(--color-accent2);
+--progress-color: var(--color-primary);
+--progress-bg: var(--color-neutral-lighter);
+--tab-active: var(--color-primary);
+--tab-inactive: var(--color-neutral-light);
+
+/* Forms & Inputs */
+--input-border-active: var(--color-primary);
+--input-focus: var(--color-primary-light);
+--input-border: var(--color-neutral-light);
+--input-bg: var(--color-neutral-lightest);
+
+/* Callouts & Banners */
+--callout-bg: var(--color-accent1-lightest);
+--callout-border: var(--color-accent1-light);
+
+/* Stats & Illustrations */
+--stats-highlight: var(--color-primary-dark);
+--stats-accent: var(--color-accent2-dark);
+--illu-main: var(--color-primary);
+--illu-accent: var(--color-accent1);
+--illu-fill-light: var(--color-neutral-lightest);
+--illu-fill-dark: var(--color-neutral-darkest);
+
+
+          
+  --font-heading: 'Readex Pro', sans-serif;
+  --font-body: 'Lato', sans-serif;
+
+
+          --spacing-xs: 0.5rem;
+          --spacing-sm: 1rem;
+          --spacing-md: 2rem;
+          --spacing-lg: 3rem;
+          --spacing-xl: 4rem;
+          --spacing-xxl: 6rem;
+
+          --border-radius: 12px;
+          --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--color-neutral);
+            background-color: var(--color-background);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+        }
+        
+        h2 {
+            font-size: clamp(1.75rem, 5vw, 2.75rem);
+        }
+        
+        h3 {
+            font-size: clamp(1.35rem, 3vw, 2rem);
+        }
+
+        h4 {
+          font-size: 1.25rem;
+        }
+        
+        p {
+            font-size: 1.025rem;
+            line-height: 1.8;
+        }
+        
+        a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        button {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 600;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border: none;
+            border-radius: var(--border-radius-md);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }    
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);}
+        }
+        
+        .section-divider {
+            width: 60px;
+            height: 4px;
+            background-color: var(--color-accent);
+            margin: var(--spacing-md) 0;
+            border-radius: var(--border-radius-sm);
+        }
+   </style>
+   <!-- Alpine.js -->
+   <script defer="" src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js">
+   </script>
+   <script data-ai-id="scr-global-script" id="scr-global-script">
+    document.addEventListener('DOMContentLoaded', function() {
+        const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+        smoothScrollLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const element = document.querySelector(href);
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    });
+   </script>
+  
+ 
+    <script editor-injected-script="true">
+      window.__CURRENT_ORG__ = {"_id":"6999ad918983583b6c770d60","currencyCode":"INR"};
+      window.__MOCK_PRODUCTS__ = {"packages":[{"title":"Comprehensive Mental Health Support Package","description":"Includes individual consultations, access to CBT workshops, community support, and AI-powered WhatsApp assistance.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-package-Comprehensive_Mental_Health_Support_Package.png","mrp":148,"price":98}],"courses":[{"title":"CBT Mastery for Practitioners","description":"Enhance your clinical skills with evidence-based Cognitive Behavioral Therapy techniques.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-course-CBT_Mastery_for_Practitioners.png","mrp":148,"price":98},{"title":"Mindfulness for Mental Wellness","description":"Learn guided mindfulness exercises to improve your mental health and well-being.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-course-Mindfulness_for_Mental_Wellness.png","mrp":148,"price":98},{"title":"Confidentiality and Ethics in Mental Health","description":"Understand the importance of confidentiality and professional standards in mental health practice.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-course-Confidentiality_and_Ethics_in_Mental_Health.png","mrp":148,"price":98}],"digitalProducts":[{"title":"Evidence-Based Mental Health eBook","description":"A comprehensive guide to evidence-based practices in mental health care.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-digitalProduct-Evidence-Based_Mental_Health_eBook.png","mrp":148,"price":98}],"memberships":[{"title":"Saday Wellness Pro Membership","description":"Gain unlimited access to all courses, workshops, and exclusive community support programs.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-membership-Saday_Wellness_Pro_Membership.png","mrp":148,"price":98}],"telegramCommunities":[{"title":"Saday Wellness Support Group","description":"A private Telegram community for peer support, sharing experiences, and professional advice.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-telegramCommunity-Saday_Wellness_Support_Group.png","mrp":148,"price":98}],"webinars":[{"title":"Advanced CBT Techniques Webinar","description":"Join Dr. Shivangini Singh for an in-depth webinar on advanced Cognitive Behavioral Therapy techniques.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-webinar-Advanced_CBT_Techniques_Webinar.png","mrp":148,"price":98}]};
+      window.__CDN_URL__ = "https://d502jbuhuh9wk.cloudfront.net/";
+    </script>
+  
+<script src="https://sadaywellness.graphy.com/n/websiteV3/utils.js" data-preview-mode="true" editor-injected-script="true"></script>
+<script src="https://sadaywellness.graphy.com/n/websiteV3/courselistV3.js" data-preview-mode="true" editor-injected-script="true"></script></head>
+ <body>
+  <section data-ai-id="sec-crsl1" data-section-type="course_store" data-template-name="COURSE_STORE2" id="sec-crsl1" style="min-height:70vh;">
+   <div data-ai-id="el-crsl1a" data-type="html" id="el-crsl1a" x-data="courseListData()">
+    <!--Category Dropdown goes here -->
+    <div data-ai-id="el-crsl1b" data-type="html" id="el-crsl1b" x-show="hasCategoriesAvailable">
+     <label data-ai-id="el-crsl1c" data-type="text" for="category-select" id="el-crsl1c">
+      Filter by Category
+     </label>
+     <select :disabled="categoriesLoading" data-ai-id="el-crsl1d" data-type="html" id="el-crsl1d" x-model="selectedCategory" x-on:change="onCategoryChange()">
+      <option data-ai-id="el-crsl1e" data-type="text" id="el-crsl1e" value="">
+       All Categories
+      </option>
+      <template :key="category._id" data-ai-id="el-crsl1f" id="el-crsl1f" x-for="category in categories">
+       <option :value="category._id['spayee:resource.spayee:filter1']" data-ai-id="el-crsl1g" data-type="text" id="el-crsl1g">
+        <span data-ai-id="el-crsl1h" data-type="text" id="el-crsl1h" x-text="category._id['spayee:resource.spayee:filter1']">
+        </span>
+       </option>
+      </template><option :value="category._id['spayee:resource.spayee:filter1']" data-ai-id="el-crsl1g" data-type="text" id="el-crsl1g" value="Psychotherapy">
+        <span data-ai-id="el-crsl1h" data-type="text" id="el-crsl1h" x-text="category._id['spayee:resource.spayee:filter1']">Psychotherapy</span>
+       </option><option :value="category._id['spayee:resource.spayee:filter1']" data-ai-id="el-crsl1g" data-type="text" id="el-crsl1g" value="Psychological assessment">
+        <span data-ai-id="el-crsl1h" data-type="text" id="el-crsl1h" x-text="category._id['spayee:resource.spayee:filter1']">Psychological assessment</span>
+       </option>
+     </select>
+    </div>
+    <!-- Breadcrumb (visible when category is selected) -->
+    <div class="breadcrumb-wrapper" data-ai-id="el-crsl1i" data-type="html" id="el-crsl1i" x-show="selectedCategory" style="display: none;">
+     <nav class="breadcrumb" data-ai-id="el-crsl1j" data-type="html" id="el-crsl1j">
+      <a class="breadcrumb-link" data-ai-id="el-crsl1k" data-type="html" href="/courses" id="el-crsl1k">
+       Courses
+      </a>
+      <span class="breadcrumb-separator" data-ai-id="el-crsl1l" data-type="text" id="el-crsl1l">
+       ›
+      </span>
+      <span class="breadcrumb-current" data-ai-id="el-crsl1m" data-type="text" id="el-crsl1m" x-text="selectedCategoryLabel"></span>
+     </nav>
+     <div class="breadcrumb-divider" data-ai-id="el-crsl1n" data-type="html" id="el-crsl1n">
+     </div>
+    </div>
+    <!-- Courses Grid -->
+    <div data-ai-id="el-crsl1o" data-type="html" id="el-crsl1o">
+     <template :key="course.uniqueKey" data-ai-id="el-crsl1p" id="el-crsl1p" x-for="course in courses">
+      <div data-ai-id="el-crsl1q" data-type="html" id="el-crsl1q" x-on:click="window.location.href = course.courseUrl">
+       <img :alt="course.title" :src="course.coverUrl" data-ai-id="el-crsl1r" data-type="image" id="el-crsl1r">
+       <div data-ai-id="el-crsl1s" data-type="html" id="el-crsl1s">
+        <h3 data-ai-id="el-crsl1t" data-type="text" id="el-crsl1t" x-text="course.title">
+        </h3>
+        <p data-ai-id="el-crsl1u" data-type="text" id="el-crsl1u" x-text="course.publisher">
+        </p>
+        <div class="price-row" data-ai-id="el-crsl1v" data-type="html" id="el-crsl1v">
+         <span class="mrp" data-ai-id="el-crsl1w" data-type="text" id="el-crsl1w" x-text="course.mrp">
+         </span>
+         <span class="price" data-ai-id="el-crsl1x" data-type="text" id="el-crsl1x" x-text="course.price">
+         </span>
+        </div>
+       </div>
+      </div>
+     </template><div data-ai-id="el-crsl1q" data-type="html" id="el-crsl1q" x-on:click="window.location.href = course.courseUrl">
+       <img :alt="course.title" :src="course.coverUrl" data-ai-id="el-crsl1r" data-type="image" id="el-crsl1r" alt="Dialectical Behavioural Therapy (DBT) Course : Skills, Challenges &amp; Clinical Realities" src="https://d502jbuhuh9wk.cloudfront.net/courses/69c4cd1173f709818670035b/69c4cd1173f709818670035b_scaled_cover.jpg?v=1">
+       <div data-ai-id="el-crsl1s" data-type="html" id="el-crsl1s">
+        <h3 data-ai-id="el-crsl1t" data-type="text" id="el-crsl1t" x-text="course.title">Dialectical Behavioural Therapy (DBT) Course : Skills, Challenges &amp; Clinical Realities</h3>
+        <p data-ai-id="el-crsl1u" data-type="text" id="el-crsl1u" x-text="course.publisher">Saday Wellness Academy</p>
+        <div class="price-row" data-ai-id="el-crsl1v" data-type="html" id="el-crsl1v">
+         <span class="mrp" data-ai-id="el-crsl1w" data-type="text" id="el-crsl1w" x-text="course.mrp">4499</span>
+         <span class="price" data-ai-id="el-crsl1x" data-type="text" id="el-crsl1x" x-text="course.price">₹2999</span>
+        </div>
+       </div>
+      </div><div data-ai-id="el-crsl1q" data-type="html" id="el-crsl1q" x-on:click="window.location.href = course.courseUrl">
+       <img :alt="course.title" :src="course.coverUrl" data-ai-id="el-crsl1r" data-type="image" id="el-crsl1r" alt="Projective Pathways Course: TAT, CAT &amp; SSCT in Clinical Practice" src="https://d502jbuhuh9wk.cloudfront.net/courses/69c531dec47820aca013ae94/69c531dec47820aca013ae94_scaled_cover.jpg?v=1">
+       <div data-ai-id="el-crsl1s" data-type="html" id="el-crsl1s">
+        <h3 data-ai-id="el-crsl1t" data-type="text" id="el-crsl1t" x-text="course.title">Projective Pathways Course: TAT, CAT &amp; SSCT in Clinical Practice</h3>
+        <p data-ai-id="el-crsl1u" data-type="text" id="el-crsl1u" x-text="course.publisher">Saday Wellness Academy</p>
+        <div class="price-row" data-ai-id="el-crsl1v" data-type="html" id="el-crsl1v">
+         <span class="mrp" data-ai-id="el-crsl1w" data-type="text" id="el-crsl1w" x-text="course.mrp">2999</span>
+         <span class="price" data-ai-id="el-crsl1x" data-type="text" id="el-crsl1x" x-text="course.price">₹1999</span>
+        </div>
+       </div>
+      </div><div data-ai-id="el-crsl1q" data-type="html" id="el-crsl1q" x-on:click="window.location.href = course.courseUrl">
+       <img :alt="course.title" :src="course.coverUrl" data-ai-id="el-crsl1r" data-type="image" id="el-crsl1r" alt="Cognitive Behvaioural Therapy (CBT) Course: Beliefs, behaviours and beyond:" src="https://d502jbuhuh9wk.cloudfront.net/courses/69b809929f67b625676e4718/69b809929f67b625676e4718_scaled_cover.jpg?v=1">
+       <div data-ai-id="el-crsl1s" data-type="html" id="el-crsl1s">
+        <h3 data-ai-id="el-crsl1t" data-type="text" id="el-crsl1t" x-text="course.title">Cognitive Behvaioural Therapy (CBT) Course: Beliefs, behaviours and beyond:</h3>
+        <p data-ai-id="el-crsl1u" data-type="text" id="el-crsl1u" x-text="course.publisher">Saday Wellness Academy</p>
+        <div class="price-row" data-ai-id="el-crsl1v" data-type="html" id="el-crsl1v">
+         <span class="mrp" data-ai-id="el-crsl1w" data-type="text" id="el-crsl1w" x-text="course.mrp">4499</span>
+         <span class="price" data-ai-id="el-crsl1x" data-type="text" id="el-crsl1x" x-text="course.price">₹2999</span>
+        </div>
+       </div>
+      </div><div data-ai-id="el-crsl1q" data-type="html" id="el-crsl1q" x-on:click="window.location.href = course.courseUrl">
+       <img :alt="course.title" :src="course.coverUrl" data-ai-id="el-crsl1r" data-type="image" id="el-crsl1r" alt="Fundamentals of Rorschach: Exner Scoring &amp; Clinical Utility Course" src="https://d502jbuhuh9wk.cloudfront.net/courses/69c52b654d4eacd62847fc1e/69c52b654d4eacd62847fc1e_scaled_cover.jpg?v=2">
+       <div data-ai-id="el-crsl1s" data-type="html" id="el-crsl1s">
+        <h3 data-ai-id="el-crsl1t" data-type="text" id="el-crsl1t" x-text="course.title">Fundamentals of Rorschach: Exner Scoring &amp; Clinical Utility Course</h3>
+        <p data-ai-id="el-crsl1u" data-type="text" id="el-crsl1u" x-text="course.publisher">Saday Wellness Academy</p>
+        <div class="price-row" data-ai-id="el-crsl1v" data-type="html" id="el-crsl1v">
+         <span class="mrp" data-ai-id="el-crsl1w" data-type="text" id="el-crsl1w" x-text="course.mrp">2999</span>
+         <span class="price" data-ai-id="el-crsl1x" data-type="text" id="el-crsl1x" x-text="course.price">₹1999</span>
+        </div>
+       </div>
+      </div><div data-ai-id="el-crsl1q" data-type="html" id="el-crsl1q" x-on:click="window.location.href = course.courseUrl">
+       <img :alt="course.title" :src="course.coverUrl" data-ai-id="el-crsl1r" data-type="image" id="el-crsl1r" alt="Unblock OCD: ERP in Clinical Practice" src="https://d502jbuhuh9wk.cloudfront.net/courses/69c5680f46973dfb56ce475d/69c5680f46973dfb56ce475d_scaled_cover.jpg?v=1">
+       <div data-ai-id="el-crsl1s" data-type="html" id="el-crsl1s">
+        <h3 data-ai-id="el-crsl1t" data-type="text" id="el-crsl1t" x-text="course.title">Unblock OCD: ERP in Clinical Practice</h3>
+        <p data-ai-id="el-crsl1u" data-type="text" id="el-crsl1u" x-text="course.publisher">Saday Wellness Academy</p>
+        <div class="price-row" data-ai-id="el-crsl1v" data-type="html" id="el-crsl1v">
+         <span class="mrp" data-ai-id="el-crsl1w" data-type="text" id="el-crsl1w" x-text="course.mrp">3499</span>
+         <span class="price" data-ai-id="el-crsl1x" data-type="text" id="el-crsl1x" x-text="course.price">₹2499</span>
+        </div>
+       </div>
+      </div><div data-ai-id="el-crsl1q" data-type="html" id="el-crsl1q" x-on:click="window.location.href = course.courseUrl">
+       <img :alt="course.title" :src="course.coverUrl" data-ai-id="el-crsl1r" data-type="image" id="el-crsl1r" alt="Quantifying Intelligence : Administering, Scoring &amp; Interpreting IQ Tests" src="https://d502jbuhuh9wk.cloudfront.net/courses/69c5366f40a0f7b6c26c8da1/69c5366f40a0f7b6c26c8da1_scaled_cover.jpg?v=1">
+       <div data-ai-id="el-crsl1s" data-type="html" id="el-crsl1s">
+        <h3 data-ai-id="el-crsl1t" data-type="text" id="el-crsl1t" x-text="course.title">Quantifying Intelligence : Administering, Scoring &amp; Interpreting IQ Tests</h3>
+        <p data-ai-id="el-crsl1u" data-type="text" id="el-crsl1u" x-text="course.publisher">Saday Wellness Academy</p>
+        <div class="price-row" data-ai-id="el-crsl1v" data-type="html" id="el-crsl1v">
+         <span class="mrp" data-ai-id="el-crsl1w" data-type="text" id="el-crsl1w" x-text="course.mrp">3999</span>
+         <span class="price" data-ai-id="el-crsl1x" data-type="text" id="el-crsl1x" x-text="course.price">₹2499</span>
+        </div>
+       </div>
+      </div><div data-ai-id="el-crsl1q" data-type="html" id="el-crsl1q" x-on:click="window.location.href = course.courseUrl">
+       <img :alt="course.title" :src="course.coverUrl" data-ai-id="el-crsl1r" data-type="image" id="el-crsl1r" alt="Hypnotherapy Orientation Course: Into the Unconcious" src="https://d502jbuhuh9wk.cloudfront.net/courses/69c523eddc5e7ddeacb27b9e/69c523eddc5e7ddeacb27b9e_scaled_cover.jpg?v=1">
+       <div data-ai-id="el-crsl1s" data-type="html" id="el-crsl1s">
+        <h3 data-ai-id="el-crsl1t" data-type="text" id="el-crsl1t" x-text="course.title">Hypnotherapy Orientation Course: Into the Unconcious</h3>
+        <p data-ai-id="el-crsl1u" data-type="text" id="el-crsl1u" x-text="course.publisher">Saday Wellness Academy</p>
+        <div class="price-row" data-ai-id="el-crsl1v" data-type="html" id="el-crsl1v">
+         <span class="mrp" data-ai-id="el-crsl1w" data-type="text" id="el-crsl1w" x-text="course.mrp">2999</span>
+         <span class="price" data-ai-id="el-crsl1x" data-type="text" id="el-crsl1x" x-text="course.price">₹1999</span>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div data-ai-id="el-crms1y" data-type="html" id="el-crms1y" style="height: 20px; margin-top: 40px;" x-ref="loadMore">
+    </div>
+    <p class="loader" data-ai-id="el-crst34" x-show="!hasMore">
+     No more courses
+    </p>
+   </div>
+  </section>
+  <style data-ai-id="stl-crsl1" id="stl-crsl1">
+   #sec-crsl1 {
+        padding: 40px 20px;
+        background-color: var(--section-bg, #FFFFFF);
+    }
+
+    /* Category Filter */
+    #el-crsl1b {
+        margin-bottom: 20px;
+    }
+
+    #el-crsl1c {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: var(--heading-color, #333);
+        font-size: 14px;
+        font-family: var(--font-heading, Arial, sans-serif);
+    }
+
+    #el-crsl1d {
+        padding: 8px 12px;
+        border: 1px solid var(--input-border, #ccc);
+        border-radius: 4px;
+        font-size: 14px;
+        width: 100%;
+        max-width: 300px;
+        background-color: var(--input-bg, #FFFFFF);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: var(--heading-color, #333);
+        font-weight: 500;
+        font-family: var(--font-body, Arial, sans-serif);
+    }
+
+    #el-crsl1d:hover {
+        border-color: var(--input-border-active, #999);
+    }
+
+    #el-crsl1d:focus {
+        outline: 2px solid var(--input-border-active, #2d6cdf);
+        outline-offset: 2px;
+        border-color: var(--input-border-active, #2d6cdf);
+    }
+
+    #el-crsl1d:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    /* Breadcrumb */
+    #el-crsl1i {
+        margin-bottom: 1rem;
+    }
+
+    #el-crsl1j {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        color: #555;
+    }
+
+    #el-crsl1k {
+        color: #2d6cdf;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+        font-family: var(--font-body, Arial, sans-serif);
+    }
+
+    #el-crsl1k:hover {
+        text-decoration: underline;
+        color: #1e4a9a;
+    }
+
+    #el-crsl1k:focus {
+        outline: 2px solid #2d6cdf;
+        outline-offset: 2px;
+    }
+
+    #el-crsl1l {
+        color: #999;
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0 3px;
+    }
+
+    #el-crsl1m {
+        font-weight: 600;
+        color: #333;
+    }
+
+    /* Divider line */
+    #el-crsl1n {
+        margin-top: 10px;
+        height: 1px;
+        background: linear-gradient(to right, #ddd, #eee, #ddd);
+    }
+
+    /* Courses Grid */
+    #el-crsl1o {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    /* Course Card */
+    #el-crsl1q {
+        border: 1px solid #eee;
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+        background: var(--card-bg, #FFFFFF);
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    #el-crsl1q:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        transform: translateY(-4px);
+    }
+
+    #el-crsl1q:focus-within {
+        outline: 2px solid #2d6cdf;
+        outline-offset: 2px;
+    }
+
+    /* Card Image */
+    #el-crsl1r {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        display: block;
+    }
+
+    #el-crsl1q:hover #el-crsl1r {
+        transform: scale(1.05);
+    }
+
+    /* Card Content */
+    #el-crsl1s {
+        padding: 15px;
+    }
+
+    /* Card Title */
+    #el-crsl1t {
+        margin: 0 0 10px 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--heading-color, #333);
+        line-height: 1.4;
+        font-family: var(--font-heading, Arial, sans-serif);
+    }
+
+    /* Card Publisher */
+    #el-crsl1u {
+        margin: 0 0 10px 0;
+        font-size: 10px;
+        color: var(--muted-text-color, #999);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-family: var(--font-body, Arial, sans-serif);
+    }
+
+    /* Price Row */
+    #el-crsl1v {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+    #el-crsl1v .mrp {
+        text-decoration: line-through;
+        color: #999;
+        font-size: 14px;
+        font-family: var(--font-body, Arial, sans-serif);
+    }
+
+    #el-crsl1v .price {
+        font-weight: 600;
+        font-size: 15px;
+        color: #111;
+        font-family: var(--font-heading, Arial, sans-serif);
+    }
+
+    /* Load More Trigger */
+    #el-crsl1y {
+        height: 20px;
+        margin-top: 40px;
+    }
+
+    /* No More Courses Message */
+    #el-crsl1z {
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+        color: #666;
+        margin: 0;
+        padding-top: 100px;
+        font-weight: 500;
+        font-family: var(--font-body, Arial, sans-serif);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        #sec-crsl1 {
+            padding: 30px 15px;
+        }
+
+        #el-crsl1o {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        #el-crsl1r {
+            height: 180px;
+        }
+
+        #el-crsl1t {
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #sec-crsl1 {
+            padding: 20px 10px;
+        }
+
+        #el-crsl1o {
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        #el-crsl1d {
+            max-width: 100%;
+        }
+
+        #el-crsl1r {
+            height: 200px;
+        }
+
+        #el-crsl1t {
+            font-size: 14px;
+        }
+
+        #el-crsl1u {
+            font-size: 9px;
+        }
+
+        #el-crsl1v .price {
+            font-size: 14px;
+        }
+    }
+  </style>
+  <script data-ai-id="scr-crsl1" id="scr-crsl1">
+   (function() {
+        const section = document.getElementById('sec-crsl1');
+        if (section) {
+            const images = section.querySelectorAll('[data-type="image"]');
+            images.forEach(img => {
+                img.addEventListener('load', function() {
+                    this.style.opacity = '1';
+                });
+                img.addEventListener('error', function() {
+                    this.style.opacity = '0.5';
+                });
+            });
+        }
+    })();
+  </script>
+ 
+
+</body></html>

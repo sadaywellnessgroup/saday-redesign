@@ -1,0 +1,8 @@
+Category,Function,Vendor (if visible),Direction (in/out/both),Protocol,BAA required?,Notes
+Calendar,Calendar sync & availability blocking,Google Calendar,both,OAuth,Unknown,Connected — syncs org availability
+Conferencing,Video session hosting,Google Meet,out,OAuth,Unknown,Not yet connected; sends Meet link to clients on booking
+Communication,Email + WhatsApp messaging,MSG91,out,API,Unknown,Not yet connected
+Communication,Automated SMTP email,Email (custom SMTP or 3rd-party),out,SMTP,Unknown,Not yet connected
+Payment,Payment processing,Tealfeed Pay,in,Proprietary,Unknown,Active gateway
+Payment,Payment processing,Easebuzz,in,API,Unknown,"Available, not installed"
+Payment,Payment processing,Razorpay,in,API,Unknown,"Available, not installed"

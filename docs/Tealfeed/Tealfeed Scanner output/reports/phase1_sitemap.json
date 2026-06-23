@@ -1,0 +1,581 @@
+{
+  "generatedAt": "2026-04-18T18:00:51.187Z",
+  "sitemap": [
+    {
+      "index": 1,
+      "module": "Home",
+      "submenu": "—",
+      "screen": "Dashboard",
+      "url": "https://app.tealfeed.com/",
+      "purpose": "",
+      "screenshot": "phase1__00_dashboard.png",
+      "navPath": []
+    },
+    {
+      "index": 2,
+      "module": "Home",
+      "submenu": "—",
+      "screen": "Overview",
+      "url": "https://app.tealfeed.com/",
+      "purpose": "",
+      "screenshot": "phase1__02_home.png",
+      "navPath": [
+        "Home"
+      ]
+    },
+    {
+      "index": 3,
+      "module": "CalendarNew",
+      "submenu": "—",
+      "screen": "Calendar",
+      "url": "https://app.tealfeed.com/calendar",
+      "purpose": "",
+      "screenshot": "phase1__03_calendarnew.png",
+      "navPath": [
+        "CalendarNew"
+      ]
+    },
+    {
+      "index": 4,
+      "module": "1-1 Connect",
+      "submenu": "—",
+      "screen": "All Sessions",
+      "url": "https://app.tealfeed.com/connect/sessions/upcoming",
+      "purpose": "",
+      "screenshot": "phase1__04_1_1_connect.png",
+      "navPath": [
+        "1-1 Connect"
+      ]
+    },
+    {
+      "index": 5,
+      "module": "Bundles",
+      "submenu": "—",
+      "screen": "All Bundles",
+      "url": "https://app.tealfeed.com/bundles/ongoing",
+      "purpose": "",
+      "screenshot": "phase1__05_bundles.png",
+      "navPath": [
+        "Bundles"
+      ]
+    },
+    {
+      "index": 6,
+      "module": "Events",
+      "submenu": "—",
+      "screen": "All Events",
+      "url": "https://app.tealfeed.com/events/manage/upcoming",
+      "purpose": "",
+      "screenshot": "phase1__06_events.png",
+      "navPath": [
+        "Events"
+      ]
+    },
+    {
+      "index": 7,
+      "module": "Clients",
+      "submenu": "—",
+      "screen": "Client Panel",
+      "url": "https://app.tealfeed.com/clients/active?page=1",
+      "purpose": "",
+      "screenshot": "phase1__07_clients.png",
+      "navPath": [
+        "Clients"
+      ]
+    },
+    {
+      "index": 8,
+      "module": "Availability",
+      "submenu": "—",
+      "screen": "Availability",
+      "url": "https://app.tealfeed.com/availability/general",
+      "purpose": "",
+      "screenshot": "phase1__08_availability.png",
+      "navPath": [
+        "Availability"
+      ]
+    },
+    {
+      "index": 9,
+      "module": "Payments",
+      "submenu": "—",
+      "screen": "Your Earnings",
+      "url": "https://app.tealfeed.com/payments/earnings/all-booking?page=1",
+      "purpose": "",
+      "screenshot": "phase1__09_payments.png",
+      "navPath": [
+        "Payments"
+      ]
+    },
+    {
+      "index": 10,
+      "module": "Integrations",
+      "submenu": "—",
+      "screen": "Integrations",
+      "url": "https://app.tealfeed.com/integrations/add-new/all",
+      "purpose": "",
+      "screenshot": "phase1__10_integrations.png",
+      "navPath": [
+        "Integrations"
+      ]
+    },
+    {
+      "index": 11,
+      "module": "My Blogs",
+      "submenu": "—",
+      "screen": "Published Articles",
+      "url": "https://app.tealfeed.com/myblogs/published",
+      "purpose": "",
+      "screenshot": "phase1__11_my_blogs.png",
+      "navPath": [
+        "My Blogs"
+      ]
+    },
+    {
+      "index": 12,
+      "module": "Calendar",
+      "submenu": "—",
+      "screen": "Calendar",
+      "url": "https://app.tealfeed.com/calendar",
+      "purpose": "",
+      "screenshot": "phase1__12_calendar.png",
+      "navPath": [
+        "Calendar"
+      ]
+    },
+    {
+      "index": 13,
+      "module": "Admin Panel",
+      "submenu": "—",
+      "screen": "404",
+      "url": "https://app.tealfeed.com/admin",
+      "purpose": "",
+      "screenshot": "phase1__13_admin_panel.png",
+      "navPath": [
+        "Admin Panel"
+      ]
+    },
+    {
+      "index": 14,
+      "module": "Home",
+      "submenu": "—",
+      "screen": "Dashboard / Overview",
+      "url": "https://app.tealfeed.com/",
+      "purpose": "KPI summary: sessions booked, one-off sessions, bundles sold, group sessions; upcoming session card; reschedule requests",
+      "screenshot": null,
+      "navPath": [
+        "Home"
+      ]
+    },
+    {
+      "index": 15,
+      "module": "Calendar",
+      "submenu": "—",
+      "screen": "Calendar Day/Week view",
+      "url": "https://app.tealfeed.com/calendar",
+      "purpose": "Time-grid view of scheduled sessions; drag-to-create; per-member or all-team view",
+      "screenshot": null,
+      "navPath": [
+        "Calendar"
+      ]
+    },
+    {
+      "index": 16,
+      "module": "1-1 Connect",
+      "submenu": "My sessions",
+      "screen": "All Sessions — Upcoming",
+      "url": "https://app.tealfeed.com/connect/sessions/upcoming",
+      "purpose": "View & manage booked 1-1 sessions — upcoming tab",
+      "screenshot": null,
+      "navPath": [
+        "1-1 Connect",
+        "My sessions"
+      ]
+    },
+    {
+      "index": 18,
+      "module": "1-1 Connect",
+      "submenu": "My sessions",
+      "screen": "All Sessions — Past",
+      "url": "https://app.tealfeed.com/connect/sessions/past",
+      "purpose": "View & manage booked 1-1 sessions — past tab",
+      "screenshot": null,
+      "navPath": [
+        "1-1 Connect",
+        "My sessions"
+      ]
+    },
+    {
+      "index": 19,
+      "module": "1-1 Connect",
+      "submenu": "Manage sessions",
+      "screen": "Session product list",
+      "url": "https://app.tealfeed.com/connect/manage",
+      "purpose": "Create/edit/toggle active the 1-1 service offerings",
+      "screenshot": null,
+      "navPath": [
+        "1-1 Connect",
+        "Manage sessions"
+      ]
+    },
+    {
+      "index": 20,
+      "module": "Bundles",
+      "submenu": "My Bundles",
+      "screen": "Bundle bookings — Ongoing",
+      "url": "https://app.tealfeed.com/bundles/ongoing",
+      "purpose": "Track purchased bundles — ongoing tab",
+      "screenshot": null,
+      "navPath": [
+        "Bundles",
+        "My Bundles"
+      ]
+    },
+    {
+      "index": 21,
+      "module": "Bundles",
+      "submenu": "My Bundles",
+      "screen": "Bundle bookings — Completed",
+      "url": "https://app.tealfeed.com/bundles/completed",
+      "purpose": "Track purchased bundles — completed tab",
+      "screenshot": null,
+      "navPath": [
+        "Bundles",
+        "My Bundles"
+      ]
+    },
+    {
+      "index": 22,
+      "module": "Bundles",
+      "submenu": "Manage Bundles",
+      "screen": "Bundle product list",
+      "url": "https://app.tealfeed.com/bundles/manage",
+      "purpose": "Create/edit/toggle active bundle products",
+      "screenshot": null,
+      "navPath": [
+        "Bundles",
+        "Manage Bundles"
+      ]
+    },
+    {
+      "index": 23,
+      "module": "Events",
+      "submenu": "—",
+      "screen": "All Events — Upcoming",
+      "url": "https://app.tealfeed.com/events/manage/upcoming",
+      "purpose": "Create/manage group event sessions — upcoming",
+      "screenshot": null,
+      "navPath": [
+        "Events"
+      ]
+    },
+    {
+      "index": 24,
+      "module": "Events",
+      "submenu": "—",
+      "screen": "All Events — Completed",
+      "url": "https://app.tealfeed.com/events/manage/completed",
+      "purpose": "Create/manage group event sessions — completed",
+      "screenshot": null,
+      "navPath": [
+        "Events"
+      ]
+    },
+    {
+      "index": 25,
+      "module": "Events",
+      "submenu": "—",
+      "screen": "All Events — Draft",
+      "url": "https://app.tealfeed.com/events/manage/draft",
+      "purpose": "Create/manage group event sessions — drafts",
+      "screenshot": null,
+      "navPath": [
+        "Events"
+      ]
+    },
+    {
+      "index": 26,
+      "module": "Events",
+      "submenu": "—",
+      "screen": "All Events — Deleted",
+      "url": "https://app.tealfeed.com/events/manage/deleted",
+      "purpose": "Create/manage group event sessions — deleted",
+      "screenshot": null,
+      "navPath": [
+        "Events"
+      ]
+    },
+    {
+      "index": 27,
+      "module": "Events",
+      "submenu": "—",
+      "screen": "All Events — Unconfirmed",
+      "url": "https://app.tealfeed.com/events/manage/unconfirmed",
+      "purpose": "Create/manage group event sessions — unconfirmed",
+      "screenshot": null,
+      "navPath": [
+        "Events"
+      ]
+    },
+    {
+      "index": 28,
+      "module": "Availability",
+      "submenu": "General Settings",
+      "screen": "Availability — General",
+      "url": "https://app.tealfeed.com/availability/general",
+      "purpose": "Global availability toggle, timezone, future booking window, minimum notice",
+      "screenshot": null,
+      "navPath": [
+        "Availability",
+        "General Settings"
+      ]
+    },
+    {
+      "index": 30,
+      "module": "Payments",
+      "submenu": "Withdrawals",
+      "screen": "Withdrawals history",
+      "url": "https://app.tealfeed.com/payments/withdrawls?page=1",
+      "purpose": "Withdrawn amount & available balance; table of withdrawal history",
+      "screenshot": null,
+      "navPath": [
+        "Payments",
+        "Withdrawals"
+      ]
+    },
+    {
+      "index": 31,
+      "module": "Payments",
+      "submenu": "Details (Beta)",
+      "screen": "Payment Details",
+      "url": "https://app.tealfeed.com/payments/details/calls?page=1&sort=startTime.desc",
+      "purpose": "Per-transaction detail view filtered by product/payment/session type",
+      "screenshot": null,
+      "navPath": [
+        "Payments",
+        "Details (Beta)"
+      ]
+    },
+    {
+      "index": 32,
+      "module": "Payments",
+      "submenu": "Coupons",
+      "screen": "Coupon management",
+      "url": "https://app.tealfeed.com/payments/coupons/active?page=1",
+      "purpose": "Create/view active & inactive coupons",
+      "screenshot": null,
+      "navPath": [
+        "Payments",
+        "Coupons"
+      ]
+    },
+    {
+      "index": 33,
+      "module": "Integrations",
+      "submenu": "—",
+      "screen": "All Integrations",
+      "url": "https://app.tealfeed.com/integrations/add-new/all",
+      "purpose": "Connect calendar/conferencing/communication tools",
+      "screenshot": null,
+      "navPath": [
+        "Integrations"
+      ]
+    },
+    {
+      "index": 36,
+      "module": "Admin Panel",
+      "submenu": "Dashboard > Overall",
+      "screen": "Overall Analytics Dashboard",
+      "url": "https://app.tealfeed.com/admin-panel/dashboard/overall",
+      "purpose": "Org-wide KPIs: total earnings, on/off-platform, total clients, sessions by type",
+      "screenshot": null,
+      "navPath": [
+        "Admin Panel",
+        "Dashboard > Overall"
+      ]
+    },
+    {
+      "index": 37,
+      "module": "Admin Panel",
+      "submenu": "Dashboard > Expert",
+      "screen": "Expert Analytics Dashboard",
+      "url": "https://app.tealfeed.com/admin-panel/dashboard/expert",
+      "purpose": "Per-member KPIs: earnings, clients, session counts, avg booking value",
+      "screenshot": null,
+      "navPath": [
+        "Admin Panel",
+        "Dashboard > Expert"
+      ]
+    },
+    {
+      "index": 38,
+      "module": "Admin Panel",
+      "submenu": "Dashboard > Client",
+      "screen": "Client Analytics Dashboard",
+      "url": "https://app.tealfeed.com/admin-panel/dashboard/client",
+      "purpose": "Client-side KPIs: earnings, sessions by type, bundles sold, cancellation rate",
+      "screenshot": null,
+      "navPath": [
+        "Admin Panel",
+        "Dashboard > Client"
+      ]
+    },
+    {
+      "index": 39,
+      "module": "Admin Panel",
+      "submenu": "Segment Analysis",
+      "screen": "Segment Filters + Results",
+      "url": "https://app.tealfeed.com/admin-panel/segment-analysis",
+      "purpose": "Filter clients by expert/product/date; create segment; download results",
+      "screenshot": null,
+      "navPath": [
+        "Admin Panel",
+        "Segment Analysis"
+      ]
+    },
+    {
+      "index": 40,
+      "module": "Admin Panel",
+      "submenu": "Team Members",
+      "screen": "Team Members",
+      "url": "https://app.tealfeed.com/admin-panel/members/active?page=1",
+      "purpose": "View/invite/manage team members; search; export",
+      "screenshot": null,
+      "navPath": [
+        "Admin Panel",
+        "Team Members"
+      ]
+    },
+    {
+      "index": 41,
+      "module": "Admin Panel",
+      "submenu": "Payments > Payment Gateways",
+      "screen": "Payment Gateways",
+      "url": "https://app.tealfeed.com/admin-panel/payment-methods/list",
+      "purpose": "Install/manage payment processors: Tealfeed Pay, Easebuzz, Razorpay",
+      "screenshot": null,
+      "navPath": [
+        "Admin Panel",
+        "Payments > Payment Gateways"
+      ]
+    },
+    {
+      "index": 42,
+      "module": "Admin Panel",
+      "submenu": "Payments > Deductions",
+      "screen": "Deductions",
+      "url": "https://app.tealfeed.com/admin-panel/payment-methods/deductions",
+      "purpose": "Configure deduction rules for payouts",
+      "screenshot": null,
+      "navPath": [
+        "Admin Panel",
+        "Payments > Deductions"
+      ]
+    },
+    {
+      "index": 43,
+      "module": "Admin Panel",
+      "submenu": "Payments > Statuses (Beta)",
+      "screen": "Payment Statuses",
+      "url": "https://app.tealfeed.com/admin-panel/payment-methods/statuses",
+      "purpose": "View/manage payment status labels",
+      "screenshot": null,
+      "navPath": [
+        "Admin Panel",
+        "Payments > Statuses (Beta)"
+      ]
+    },
+    {
+      "index": 44,
+      "module": "Admin Panel",
+      "submenu": "Manage Payout",
+      "screen": "Manage Payout",
+      "url": "https://app.tealfeed.com/admin-panel/payout/manage",
+      "purpose": "Handle payout distribution to team members",
+      "screenshot": null,
+      "navPath": [
+        "Admin Panel",
+        "Manage Payout"
+      ]
+    },
+    {
+      "index": 45,
+      "module": "Admin Panel",
+      "submenu": "Global Defaults > Categories",
+      "screen": "Service Categories",
+      "url": "https://app.tealfeed.com/admin-panel/global-defaults/categories",
+      "purpose": "Create color-coded categories for services",
+      "screenshot": null,
+      "navPath": [
+        "Admin Panel",
+        "Global Defaults > Categories"
+      ]
+    },
+    {
+      "index": 46,
+      "module": "Admin Panel",
+      "submenu": "Global Defaults > Templates",
+      "screen": "Session/notification templates",
+      "url": "https://app.tealfeed.com/admin-panel/global-defaults/templates",
+      "purpose": "Manage message/notification templates",
+      "screenshot": null,
+      "navPath": [
+        "Admin Panel",
+        "Global Defaults > Templates"
+      ]
+    },
+    {
+      "index": 47,
+      "module": "Admin Panel",
+      "submenu": "Global Defaults > Client Settings (Beta)",
+      "screen": "Client Settings",
+      "url": "https://app.tealfeed.com/admin-panel/global-defaults/client-settings",
+      "purpose": "Beta client-facing settings configuration",
+      "screenshot": null,
+      "navPath": [
+        "Admin Panel",
+        "Global Defaults > Client Settings (Beta)"
+      ]
+    },
+    {
+      "index": 48,
+      "module": "Admin Panel",
+      "submenu": "Form Templates",
+      "screen": "Form Template library",
+      "url": "https://app.tealfeed.com/admin-panel/forms/templates",
+      "purpose": "Create reusable intake/form templates",
+      "screenshot": null,
+      "navPath": [
+        "Admin Panel",
+        "Form Templates"
+      ]
+    },
+    {
+      "index": 49,
+      "module": "Admin Panel",
+      "submenu": "Org Settings",
+      "screen": "Organization Settings",
+      "url": "https://app.tealfeed.com/admin-panel/org-settings",
+      "purpose": "Logo, org name, coupon toggle, admin notifications, reschedule/cancel policy",
+      "screenshot": null,
+      "navPath": [
+        "Admin Panel",
+        "Org Settings"
+      ]
+    },
+    {
+      "index": 50,
+      "module": "Admin Panel",
+      "submenu": "Form Builder",
+      "screen": "Form Builder",
+      "url": "https://app.tealfeed.com/admin-panel/forms/builder",
+      "purpose": "Build custom intake/session forms with drag-and-drop fields",
+      "screenshot": null,
+      "navPath": [
+        "Admin Panel",
+        "Form Builder"
+      ]
+    }
+  ],
+  "mergedAt": "2026-04-18T18:29:51.818Z"
+}

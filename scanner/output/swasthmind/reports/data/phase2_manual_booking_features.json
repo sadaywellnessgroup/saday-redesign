@@ -1,0 +1,506 @@
+[
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "Conversations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "My Schedule",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "My Therapists",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "Manual Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "Sessions",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "Assessments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "My Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "Reports",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "Seminars",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "Internships/Career",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "Ecommerce",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "Cancellation & Reschedule Policy",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "Session Follow-ups",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "FAQ & Tutorials",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "Bulk Messages",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "New Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "Appointment History",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "+ Create New Client",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "Clear",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Manual Booking",
+    "subCapability": "Create Booking & Send Payment Link",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "Conversations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "My Schedule",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "My Therapists",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "Manual Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "Sessions",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "Assessments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "My Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "Reports",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "Seminars",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "Internships/Career",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "Ecommerce",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "Cancellation & Reschedule Policy",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "Session Follow-ups",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "FAQ & Tutorials",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "Bulk Messages",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "New Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "Appointment History",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "+ Create New Client",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "Clear",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "New Booking",
+    "subCapability": "Create Booking & Send Payment Link",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "Conversations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "My Schedule",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "My Therapists",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "Manual Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "Sessions",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "Assessments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "My Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "Reports",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "Seminars",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "Internships/Career",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "Ecommerce",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "Cancellation & Reschedule Policy",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "Session Follow-ups",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "FAQ & Tutorials",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "Bulk Messages",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "New Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "Appointment History",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "+ Create New Client",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "Clear",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Manual Booking",
+    "feature": "Appointment History",
+    "subCapability": "Create Booking & Send Payment Link",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  }
+]

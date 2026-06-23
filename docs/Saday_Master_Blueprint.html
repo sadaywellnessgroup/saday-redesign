@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saday Wellness — Master Blueprint</title>
+<style>
+  :root {
+    --blue: #1a56db; --green: #057a55; --red: #c81e1e; --orange: #b45309;
+    --purple: #6d28d9; --teal: #0f766e;
+    --gray: #374151; --light: #f9fafb; --border: #e5e7eb;
+    --warn: #fef3c7; --ok: #ecfdf5; --info: #eff6ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; color: var(--gray); background: #fff; }
+  .toc { position: fixed; top: 0; left: 0; width: 240px; height: 100vh; overflow-y: auto; background: #0f172a; padding: 20px 0; z-index: 100; }
+  .toc .brand { padding: 0 16px 16px; border-bottom: 1px solid #1e293b; margin-bottom: 12px; }
+  .toc .brand b { color: #f1f5f9; font-size: 14px; font-weight: 700; display: block; }
+  .toc .brand span { color: #64748b; font-size: 11px; }
+  .toc h3 { color: #94a3b8; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; padding: 16px 16px 6px; }
+  .toc a { display: block; color: #cbd5e1; font-size: 12px; padding: 5px 16px 5px 20px; text-decoration: none; border-left: 2px solid transparent; }
+  .toc a:hover { color: #fff; border-left-color: var(--blue); background: #1e293b; }
+  .toc a.sub { padding-left: 32px; font-size: 11px; color: #94a3b8; }
+  main { margin-left: 240px; padding: 32px 44px 100px; max-width: 1180px; }
+  h1 { font-size: 26px; font-weight: 800; margin-bottom: 4px; color: #0f172a; }
+  .meta { color: #6b7280; font-size: 12px; margin-bottom: 28px; }
+  .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #f1f5f9; padding: 20px 24px; border-radius: 8px; margin-bottom: 32px; }
+  .hero h1 { color: #fff; margin-bottom: 6px; }
+  .hero p { color: #cbd5e1; font-size: 13px; line-height: 1.6; }
+  .hero .tags { margin-top: 10px; }
+  .hero .tags span { display: inline-block; background: rgba(255,255,255,.08); color: #cbd5e1; padding: 3px 9px; border-radius: 4px; font-size: 11px; margin-right: 6px; }
+  h2 { font-size: 19px; font-weight: 700; margin: 44px 0 14px; padding-top: 10px; border-top: 2px solid var(--blue); color: var(--blue); }
+  h3 { font-size: 14px; font-weight: 600; margin: 22px 0 8px; color: #0f172a; }
+  h4 { font-size: 13px; font-weight: 600; margin: 14px 0 6px; color: #334155; }
+  p { line-height: 1.65; margin-bottom: 10px; }
+  ul, ol { margin: 0 0 12px 22px; }
+  li { line-height: 1.6; margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 12px; }
+  th { background: #1e293b; color: #f1f5f9; font-weight: 600; text-align: left; padding: 7px 10px; white-space: nowrap; }
+  td { padding: 6px 10px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.45; }
+  tr:nth-child(even) td { background: var(--light); }
+  td.nowrap { white-space: nowrap; }
+  .badge { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 10.5px; font-weight: 600; white-space: nowrap; }
+  .badge-green { background: #d1fae5; color: var(--green); }
+  .badge-red { background: #fee2e2; color: var(--red); }
+  .badge-orange { background: #fef3c7; color: var(--orange); }
+  .badge-blue { background: #dbeafe; color: var(--blue); }
+  .badge-purple { background: #ede9fe; color: var(--purple); }
+  .badge-teal { background: #ccfbf1; color: var(--teal); }
+  .badge-gray { background: #f3f4f6; color: var(--gray); }
+  .warn-box { background: var(--warn); border-left: 4px solid #f59e0b; padding: 10px 14px; margin: 10px 0 16px; border-radius: 4px; font-size: 12px; }
+  .ok-box { background: var(--ok); border-left: 4px solid var(--green); padding: 10px 14px; margin: 10px 0 16px; border-radius: 4px; font-size: 12px; }
+  .info-box { background: var(--info); border-left: 4px solid var(--blue); padding: 10px 14px; margin: 10px 0 16px; border-radius: 4px; font-size: 12px; }
+  .crit-box { background: #fef2f2; border-left: 4px solid var(--red); padding: 10px 14px; margin: 10px 0 16px; border-radius: 4px; font-size: 12px; }
+  .card { border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px; margin-bottom: 14px; background: #fff; }
+  .card h4 { margin-top: 0; }
+  .card dl { display: grid; grid-template-columns: 170px 1fr; gap: 4px 12px; }
+  .card dt { font-weight: 600; color: #6b7280; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; padding-top: 2px; }
+  .card dd { font-size: 12px; line-height: 1.55; }
+  code { background: #f1f5f9; padding: 1px 5px; border-radius: 3px; font-family: ui-monospace, 'SF Mono', Monaco, monospace; font-size: 11px; color: #0f172a; }
+  pre { background: #0f172a; color: #e2e8f0; padding: 14px 16px; border-radius: 6px; font-size: 11.5px; line-height: 1.55; overflow-x: auto; margin-bottom: 16px; font-family: ui-monospace, 'SF Mono', Monaco, monospace; }
+  pre .c { color: #94a3b8; }
+  pre .k { color: #f472b6; }
+  pre .s { color: #86efac; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  @media (max-width: 900px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+  .track { border-left: 4px solid #cbd5e1; padding: 12px 16px; margin-bottom: 12px; background: #f8fafc; border-radius: 0 6px 6px 0; }
+  .track.t1 { border-left-color: #60a5fa; }
+  .track.t2 { border-left-color: #34d399; }
+  .track.t3 { border-left-color: #fbbf24; }
+  .track.t4 { border-left-color: #fb923c; }
+  .track.t5 { border-left-color: var(--red); background: #fef2f2; }
+  .track b { color: #0f172a; font-size: 13px; }
+  .screen-flow { border: 1px dashed #94a3b8; border-radius: 6px; padding: 14px 18px; margin: 10px 0; background: #f8fafc; font-family: ui-monospace, 'SF Mono', Monaco, monospace; font-size: 11.5px; white-space: pre-wrap; line-height: 1.55; color: #334155; }
+  .pill { display: inline-block; font-size: 10.5px; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  .pill-p0 { background: #fee2e2; color: var(--red); font-weight: 700; }
+  .pill-p1 { background: #fef3c7; color: var(--orange); font-weight: 600; }
+  .pill-p2 { background: #dbeafe; color: var(--blue); }
+  .pill-v1 { background: #ecfdf5; color: var(--green); font-weight: 600; }
+  .pill-v2 { background: #f3f4f6; color: var(--gray); }
+  .pill-v3 { background: #f5f3ff; color: var(--purple); }
+  hr { border: none; border-top: 1px solid var(--border); margin: 30px 0; }
+  .kpi { display: inline-block; background: #0f172a; color: #f1f5f9; padding: 8px 14px; border-radius: 6px; margin: 4px 6px 4px 0; font-size: 12px; }
+  .kpi b { color: #fbbf24; font-size: 16px; display: block; }
+  .exit-rule { background: #fff7ed; border: 1px solid #fdba74; border-radius: 4px; padding: 8px 12px; margin: 6px 0; font-size: 12px; }
+  .exit-rule b { color: var(--red); }
+
+  /* ═══════════ MOBILE ═══════════ */
+  .toc-toggle { display: none; }
+  .mobile-header { display: none; }
+
+  @media (max-width: 820px) {
+    body { font-size: 14px; }
+
+    /* Mobile header bar with hamburger */
+    .mobile-header {
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; left: 0; right: 0;
+      background: #0f172a; color: #f1f5f9;
+      padding: 10px 14px; z-index: 200;
+      border-bottom: 1px solid #1e293b;
+    }
+    .mobile-header b { color: #f1f5f9; font-size: 14px; }
+    .mobile-header span { color: #64748b; font-size: 11px; margin-left: 6px; }
+    .mobile-header label {
+      color: #f1f5f9; font-size: 22px; line-height: 1; cursor: pointer;
+      padding: 4px 10px; border: 1px solid #334155; border-radius: 4px;
+      user-select: none;
+    }
+
+    /* Hide desktop sidebar by default on mobile */
+    .toc {
+      position: fixed; top: 0; left: 0; width: 80%; max-width: 300px;
+      height: 100vh; z-index: 150;
+      transform: translateX(-100%); transition: transform .25s ease;
+      box-shadow: 2px 0 10px rgba(0,0,0,.4);
+    }
+    #toc-toggle:checked ~ .toc { transform: translateX(0); }
+
+    /* Dim overlay when open */
+    .toc-overlay {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5);
+      z-index: 140;
+    }
+    #toc-toggle:checked ~ .toc-overlay { display: block; }
+
+    main { margin-left: 0; padding: 18px 14px 80px; max-width: 100%; }
+
+    h1 { font-size: 22px; }
+    h2 { font-size: 17px; margin-top: 30px; padding-top: 8px; }
+    h3 { font-size: 14px; margin: 18px 0 6px; }
+    h4 { font-size: 13px; }
+
+    .hero { padding: 16px 18px; border-radius: 6px; margin-bottom: 20px; }
+    .hero h1 { font-size: 20px; }
+    .hero p { font-size: 13px; line-height: 1.55; }
+    .hero .tags span { font-size: 10.5px; margin-bottom: 4px; }
+
+    .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 10px; }
+
+    /* Tables: horizontal scroll container */
+    table {
+      display: block; overflow-x: auto; -webkit-overflow-scrolling: touch;
+      width: 100%; font-size: 11.5px;
+    }
+    thead, tbody { display: table; width: 100%; min-width: 560px; }
+    tr { display: table-row; }
+    th, td { display: table-cell; padding: 6px 8px; word-break: break-word; white-space: normal; }
+    th { white-space: nowrap; }
+
+    pre { font-size: 11px; padding: 10px 12px; }
+    .card { padding: 12px 14px; }
+    .card dl { grid-template-columns: 1fr; gap: 2px 0; }
+    .card dt { padding-top: 6px; }
+
+    .kpi { display: inline-block; margin: 4px 4px 4px 0; font-size: 11px; padding: 6px 10px; }
+    .track { padding: 10px 12px; }
+    .screen-flow { font-size: 10.5px; padding: 10px 12px; overflow-x: auto; }
+    .warn-box, .ok-box, .info-box, .crit-box { padding: 10px 12px; font-size: 12px; }
+  }
+
+  @media (min-width: 821px) {
+    .mobile-header, .toc-overlay, #toc-toggle { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<input type="checkbox" id="toc-toggle" hidden>
+<header class="mobile-header">
+  <div><b>Saday Wellness</b><span>Blueprint v1.1</span></div>
+  <label for="toc-toggle" aria-label="Toggle menu">☰</label>
+</header>
+<label for="toc-toggle" class="toc-overlay" aria-hidden="true"></label>
+
+<nav class="toc">
+  <div class="brand">
+    <b>Saday Wellness</b>
+    <span>Master Blueprint · v1.0</span>
+  </div>
+  <h3>Strategy</h3>
+  <a href="#summary">1. Executive Summary</a>
+  <a href="#positioning">2. Positioning &amp; Moat (Swasthmind)</a>
+  <a href="#tealfeed">2A. Tealfeed Scan Synthesis</a>
+  <a href="#dual">2B. Dual-Scan Landscape Map</a>
+  <a href="#verdict">3. CEO Verdict</a>
+
+  <h3>Clinical Architecture</h3>
+  <a href="#tracks">4. Five-Track Care Model</a>
+  <a href="#intake">5. Adaptive Intake System</a>
+  <a href="#tools">6. Assessment Tool Library</a>
+  <a href="#routing">7. Cluster → Tool Routing</a>
+  <a href="#informant">8. Informant / Collateral</a>
+  <a href="#populations">9. Special Populations</a>
+  <a href="#safety">10. Safety &amp; Crisis Protocol</a>
+
+  <h3>Technical</h3>
+  <a href="#datamodel">11. Data Model</a>
+  <a href="#cto">12. CTO Non-Negotiables</a>
+  <a href="#stack">13. Stack &amp; Integrations</a>
+  <a href="#compliance">14. Compliance (DPDP + Telemed)</a>
+  <a href="#ai">15. AI Leverage Playbook</a>
+
+  <h3>Execution</h3>
+  <a href="#scope">16. MVP Scope Lock</a>
+  <a href="#phases">17. 6-Month Phase Plan</a>
+  <a href="#teams">18. Team Briefings</a>
+  <a href="#risks">19. Risk Register</a>
+  <a href="#next">20. Next Actions (This Week)</a>
+</nav>
+
+<main>
+
+<div class="hero">
+  <h1>Saday Wellness — Master Blueprint</h1>
+  <p>Digital-only mental health consultation ecosystem for India. Single source of truth for product, clinical, technical, and operational decisions. Consolidates <b>two independent competitive scans</b> — <b>SwasthMind CRM</b> (the clinical-CRM reference for Indian mental-health practices) and <b>Tealfeed</b> (the solopreneur booking/coaching platform many Indian MHPs currently default to) — together with the CEO/CTO strategic review, the five-track care architecture, the adaptive intake design, the 30-tool assessment library, and the 6-month execution plan.</p>
+  <div class="tags">
+    <span>Version 1.1 · Compiled 2026-04-21</span>
+    <span>Stage: Ideation (tech) · Pre-launch (clinical)</span>
+    <span>Target V1: 6 months · Budget ₹1 lakh</span>
+    <span>Scans merged: Swasthmind + Tealfeed</span>
+    <span>Audience: Founders, Developer, Designer, MHPs, Counsellor, AI agents</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="summary">1. Executive Summary</h2>
+
+<p>Saday Wellness is a digital-only mental health consultation platform targeting Tier 2–3 Indian cities. It is operated by a psychiatrist-CTO founder, a clinical psychologist co-founder, a back-end developer (Claude-assisted), an amateur designer, and 2–3 already-enrolled mental health professionals (MHPs) as launch providers. Budget: ₹1 lakh bootstrapped. Target: working V1 in 6 months.</p>
+
+<h3>Product thesis in one sentence</h3>
+<p>An <b>honest-scope</b> mental health platform that triages every intake into one of five care tracks, uses 30 freely-available validated assessment tools (not just PHQ-9/GAD-7), supports collateral informants where clinically necessary (bipolar, geriatric, pediatric, schizophrenia follow-up), and publishes longitudinal outcome data as its long-term moat.</p>
+
+<h3>The four foundational design choices</h3>
+<div class="grid-2">
+  <div class="card">
+    <h4>1. Adaptive intake, not a static form</h4>
+    <p>Language → self/proxy → age → plain-language symptom clusters → adaptive assessments → always-on safety screen → contact. Two visible exits (red-flag hard-redirect and voluntary skip) so the form is never a dead-end.</p>
+  </div>
+  <div class="card">
+    <h4>2. Five care tracks, not one pathway</h4>
+    <p>Wellness · Standard outpatient · Complex (BPD, bipolar, SUD, complex PTSD) · Supported / Adjunct (stable schizophrenia follow-up) · Not-suitable-for-online (acute psychosis / severe withdrawal / anorexia with low BMI / acute suicidality). Each track has its own MHP type, session cadence, pricing, and assessment set.</p>
+  </div>
+  <div class="card">
+    <h4>3. Informant / collateral system</h4>
+    <p>Three tiers of linked accounts (observation only / collateral interview / caregiver support). No other Indian platform has this. Non-negotiable for bipolar, schizophrenia follow-up, dementia, pediatric, and ADHD diagnostic pathways.</p>
+  </div>
+  <div class="card">
+    <h4>4. Outcome data from day one</h4>
+    <p>PHQ-9, GAD-7, mood logs, and population-specific tools captured at fixed treatment milestones (weeks 0/2/4/8/12). Immutable, server-timestamped, episode-of-care linked. This becomes the published evidence base — the real moat.</p>
+  </div>
+</div>
+
+<h3>Top-line metrics of the build</h3>
+<div style="margin: 10px 0 20px;">
+  <div class="kpi"><b>5</b> care tracks</div>
+  <div class="kpi"><b>30</b> free validated tools</div>
+  <div class="kpi"><b>13</b> symptom clusters</div>
+  <div class="kpi"><b>7</b> intake screens</div>
+  <div class="kpi"><b>6</b> user roles</div>
+  <div class="kpi"><b>3</b> informant tiers</div>
+  <div class="kpi"><b>2</b> languages (Hindi + English) at launch</div>
+  <div class="kpi"><b>6</b> months to V1</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="positioning">2. Positioning &amp; Moat — Swasthmind Gap Analysis</h2>
+
+<p>The SwasthMind CRM scan (Apr 2026, 33 screens, 21 entities, 14 flows, 29 gap items) is the single most useful clinical-product competitive artifact available. SwasthMind is what Saday is most often <em>confused with</em> — a CRM-first tool for Indian mental-health practices. Each gap they have is a clinical-positioning opportunity for Saday.</p>
+
+<table>
+<thead><tr><th>SwasthMind Gap</th><th>ID</th><th>Saday Response</th><th>Priority</th></tr></thead>
+<tbody>
+<tr><td>No client portal — all patient interaction is WhatsApp-only</td><td>FL-G14</td><td>Build a minimal but real patient portal from day 1: intake, upcoming sessions, materials library, safety resources</td><td><span class="pill pill-p0">P0</span></td></tr>
+<tr><td>No structured intake — Client Detail has only a Notes tab</td><td>FL-Clients</td><td>The adaptive intake is the front door; feeds every downstream decision (care track, MHP assignment, assessment schedule)</td><td><span class="pill pill-p0">P0</span></td></tr>
+<tr><td>Manual Assessments nav routes to /my-schedule (broken) — feature is inaccessible</td><td>FL-G04</td><td>Functional assessment engine is the MVP core. 30-tool library, pure-function scoring, serial re-assessment at fixed milestones.</td><td><span class="pill pill-p0">P0</span></td></tr>
+<tr><td>SOS urgency flag exists but has no automated escalation</td><td>DM-07 / INT-G02</td><td>Red-flag clusters (psychosis, withdrawal, active suicidality) trigger immediate clinician-review queue + on-call WhatsApp alert &lt;2 hrs</td><td><span class="pill pill-p0">P0</span></td></tr>
+<tr><td>No clinical notes beyond a free-text "Notes" tab; no diagnosis code, medication list, treatment plan</td><td>FL-Clients / DM-03 / DM-04</td><td>Proper SOAP notes (signed, versioned, who-edited-when), medication list entity, ICD-10 / ICD-11 diagnosis field on episode_of_care</td><td><span class="pill pill-p0">P0</span></td></tr>
+<tr><td>No guardian / next-of-kin entity for paediatric clients (child therapy is a listed session type)</td><td>DM-10</td><td>Linked-account model from day 1 — supports paediatric consent architecture and informant flows</td><td><span class="pill pill-p0">P0</span></td></tr>
+<tr><td>Admin cannot reply to WhatsApp conversations from CRM — read-only inbox</td><td>FL-Conv</td><td>Two-way WhatsApp inbox via MSG91 Business API (V1 = templated replies + live agent in V1.5)</td><td><span class="pill pill-p1">P1</span></td></tr>
+<tr><td>No automated refund processing — admin manually refunds externally</td><td>G-08</td><td>Razorpay refund API integration for session cancellations within policy window</td><td><span class="pill pill-p1">P1</span></td></tr>
+<tr><td>"My Therapists" list empty despite 10 active therapists in booking dropdowns (data split between Therapist and User tables)</td><td>DM-09</td><td>Single source of truth: <code>mhps</code> table with <code>user_id</code> FK; no duplicate identity records</td><td><span class="pill pill-p1">P1</span></td></tr>
+<tr><td>Feedback follow-up flow missing "Hours after session end" config (Check-in has it)</td><td>DM-06</td><td>All follow-up flows share a single <code>trigger_offset_hours</code> schema — no fork between CheckIn and Feedback</td><td><span class="pill pill-p2">P2</span></td></tr>
+<tr><td>No aggregate revenue total in Reports (per-row ledger only)</td><td>DM-05</td><td>MHP dashboard shows this-month revenue, utilisation %, no-show rate; admin sees platform-wide roll-ups</td><td><span class="pill pill-p1">P1</span></td></tr>
+<tr><td>No assessment template versioning — schema changes could break historical responses</td><td>DM-08</td><td><code>assessment_tool_versions</code> table; every submission locks to the version it was rendered from</td><td><span class="pill pill-p0">P0</span></td></tr>
+<tr><td>No e-prescribing; prescription = letterhead + signature PDF only</td><td>INT-G07</td><td>V1 accepts same (out-of-platform PDF). V2 adds structured medication entity + digitally-signed Rx per IT Act Sec 5</td><td><span class="pill pill-v2">V2</span></td></tr>
+<tr><td>No ABDM / ABHA Health ID integration</td><td>INT-G08</td><td>V2 — integrate once 20+ active patients to justify registration effort</td><td><span class="pill pill-v2">V2</span></td></tr>
+<tr><td>JWT stored in sessionStorage — XSS-exposed</td><td>SEC-04</td><td>HttpOnly cookies for session tokens from day 1; Supabase Auth handles this by default</td><td><span class="pill pill-p0">P0</span></td></tr>
+<tr><td>No MFA for admin or staff login on a PHI system</td><td>SEC-01</td><td>TOTP-based 2FA mandatory for MHP and admin roles; optional for patients</td><td><span class="pill pill-p1">P1</span></td></tr>
+<tr><td>No informant / collateral linking; bipolar, schizophrenia, paediatric cases lack family involvement</td><td>novel</td><td>Three-tier linked accounts (observation / collateral interview / caregiver support)</td><td><span class="pill pill-p0">P0</span></td></tr>
+<tr><td>AI conversation analysis processes PHI but vendor + DPA not disclosed</td><td>INT-G09</td><td>All LLM calls go through a named vendor with a signed DPA; PHI never leaves Indian servers without de-identification</td><td><span class="pill pill-p0">P0</span></td></tr>
+</tbody>
+</table>
+
+<div class="ok-box"><b>Saday's defensible position in one line:</b> The only Indian mental-health platform that routes every intake through a clinically adaptive triage, serves five defined care tracks honestly (including refusing patients it cannot safely treat), supports the informant/collateral workflow that bipolar / schizophrenia / paediatric / geriatric care actually requires, and publishes its own longitudinal outcome data.</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="tealfeed">2A. Tealfeed Scan Synthesis — Booking Polish, Not Clinical Depth</h2>
+
+<p>The Tealfeed admin scan (Apr 2026, 45 screens audited, 11 top-nav modules, 14 product/admin areas including Form Builder and Segment Analysis) surfaces a second reference point. Tealfeed is <b>not</b> a clinical platform — it is a <b>creator / coach / consultant booking product</b> that many independent Indian MHPs currently use because nothing better exists for solopreneurs. It tells us what a <em>polished Indian booking product</em> looks like, and equally what it <em>refuses to do</em>.</p>
+
+<div class="grid-2">
+  <div class="card">
+    <h4>What Tealfeed does well (Saday should selectively adopt)</h4>
+    <ul>
+      <li><b>Bundle product</b> — prepaid multi-session packs (Ongoing / Completed state machine).</li>
+      <li><b>Coupons engine</b> — code, discount, apply-on, usage limit, start/expiry.</li>
+      <li><b>Multi-gateway payments</b> — Razorpay + Easebuzz + Tealfeed Pay; <b>Deductions</b> entity (tax / service charge); <b>Manage Payout</b> for team splits.</li>
+      <li><b>Segment Analysis</b> — filter clients by expert × product × date; export.</li>
+      <li><b>Form Builder</b> — 12 field types (text, email, number, textarea, dropdown, radio, checkbox, date, time, linear scale, MC grid, checkbox grid). Reusable templates via Form Template Library.</li>
+      <li><b>Availability engine</b> — timezone, future-booking window, minimum-notice; drag-to-create Day/Week calendar.</li>
+      <li><b>Global Defaults</b> — service categories (color-coded), session/notification templates, client-setting defaults.</li>
+      <li><b>Earnings ledger</b> — per-transaction: service, buyer, PG charges, net amount, deductions, coupon, payout status, no-show flag, refund status.</li>
+      <li><b>Client panel</b> — Follow-up link, Assigned Members, Services Bought, Last Availed, Revenue Earned per client.</li>
+      <li><b>Org Settings</b> — reschedule.kind / cancellation.kind policy config.</li>
+      <li><b>My Blogs / Published Articles</b> — built-in content engine for SEO.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h4>What Tealfeed does not do (Saday moat — clinical)</h4>
+    <ul>
+      <li>No <b>validated assessment instruments</b> — Form Builder is generic; cannot do PHQ-9 scoring, MDQ cut-off logic, or PCL-5 cluster scoring.</li>
+      <li>No <b>symptom-cluster triage</b> or adaptive branching — flat forms only.</li>
+      <li>No <b>care-track model</b> — every buyer is treated the same; no refusal protocol.</li>
+      <li>No <b>safety / crisis escalation</b> — no C-SSRS, no on-call SLA, no red-flag alerts.</li>
+      <li>No <b>SOAP / clinical notes</b> / diagnosis codes / medication list / treatment plan.</li>
+      <li>No <b>informant / collateral</b> workflow — single-buyer identity only.</li>
+      <li>No <b>paediatric / guardian consent</b> architecture.</li>
+      <li>No <b>DPDP / Telemed-specific posture</b> — creator-economy ToS, not health-data compliance.</li>
+      <li>No <b>episode-of-care</b> or longitudinal outcome tracking.</li>
+      <li><b>Accessibility debt</b> — 102 inputs missing label, 39 screens below WCAG AA contrast, 56 consistency issues (scan-measured).</li>
+      <li>English-only; no Hindi / regional language surface.</li>
+      <li>No <b>prescription</b> surface (letterhead / signature / e-Rx).</li>
+    </ul>
+  </div>
+</div>
+
+<h3>Tealfeed features Saday adopts (with clinical modifications)</h3>
+<table>
+<thead><tr><th>Tealfeed pattern</th><th>Saday adoption</th><th>Priority</th><th>V-target</th></tr></thead>
+<tbody>
+<tr><td>Bundle product (prepaid multi-session)</td><td><code>session_packages</code> entity — 4-session / 8-session therapy packs with tracked consumption; Track 2 (Standard) default</td><td><span class="pill pill-p1">P1</span></td><td><span class="pill pill-v1">V1</span></td></tr>
+<tr><td>Coupons (code / discount / expiry / usage limit)</td><td>V1.5 only — keep V1 pricing rigid; coupons for launch-cohort referral (₹100 off first session)</td><td><span class="pill pill-p2">P2</span></td><td><span class="pill pill-v2">V1.5</span></td></tr>
+<tr><td>Multi-gateway + Deductions + Payout engine</td><td>V1 = Razorpay + UPI fallback only; <code>deductions</code> and <code>payouts</code> entities scaffolded so GST / TDS / MHP commission handled from day 1</td><td><span class="pill pill-p0">P0</span></td><td><span class="pill pill-v1">V1</span></td></tr>
+<tr><td>Segment Analysis (filter clients by expert × product × date)</td><td>Admin Reports screen — MHP × care-track × date-range segments; never surface client list to non-assigned MHP (RLS)</td><td><span class="pill pill-p1">P1</span></td><td><span class="pill pill-v2">V1.5</span></td></tr>
+<tr><td>Form Builder with 12 field types + template library</td><td><b>Do not</b> build a generic form builder for clinical use — validated tools only. <b>Do</b> build a <em>screening-extension builder</em> for MHPs to add non-diagnostic intake questions (hobbies, language preference, cultural context).</td><td><span class="pill pill-p2">P2</span></td><td><span class="pill pill-v2">V2</span></td></tr>
+<tr><td>Availability engine (timezone, future-booking window, min-notice)</td><td>Per-MHP <code>availability</code> config with recurring weekly slots + block-outs; explicit IST only for V1</td><td><span class="pill pill-p0">P0</span></td><td><span class="pill pill-v1">V1</span></td></tr>
+<tr><td>Service Categories (color-coded)</td><td>Care-track color coding (T1 blue / T2 green / T3 amber / T4 orange / T5 red); used across calendar, reports, client list</td><td><span class="pill pill-p1">P1</span></td><td><span class="pill pill-v1">V1</span></td></tr>
+<tr><td>Session / notification Template library</td><td>WhatsApp / email / SMS templates table; versioned; Meta-approved template IDs stored alongside Saday template name</td><td><span class="pill pill-p0">P0</span></td><td><span class="pill pill-v1">V1</span></td></tr>
+<tr><td>Client-panel Revenue-Earned + Last-Availed</td><td>MHP-facing client card: last session, next session, days-in-care, care-track, completed-assessments, safety-flag</td><td><span class="pill pill-p1">P1</span></td><td><span class="pill pill-v1">V1</span></td></tr>
+<tr><td>Earnings ledger (per-transaction, full attribution)</td><td>Immutable <code>earnings_ledger</code> with coupon, PG charge, deduction, net, payout status — matches Tealfeed column set almost 1:1</td><td><span class="pill pill-p0">P0</span></td><td><span class="pill pill-v1">V1</span></td></tr>
+<tr><td>Org Settings (reschedule.kind / cancellation.kind)</td><td>Single policy table; enforced at booking + cancel API; mirrored in patient-facing policy PDF</td><td><span class="pill pill-p0">P0</span></td><td><span class="pill pill-v1">V1</span></td></tr>
+<tr><td>Drag-to-create Day/Week calendar</td><td>V1 = list view only; V2 = drag-to-create (big lift; not worth for 3 MHPs)</td><td><span class="pill pill-p2">P2</span></td><td><span class="pill pill-v3">V2</span></td></tr>
+<tr><td>My Blogs / Published Articles (SEO content engine)</td><td>Static MDX content site under <code>/blog</code> — same Next.js project; do not rebuild Tealfeed's rich editor in V1</td><td><span class="pill pill-p1">P1</span></td><td><span class="pill pill-v2">V1.5</span></td></tr>
+<tr><td>Team Members with Access Role</td><td>Already covered by RBAC in §12; Tealfeed's model validates the shape</td><td>—</td><td><span class="pill pill-v1">V1</span></td></tr>
+</tbody>
+</table>
+
+<h3>Tealfeed patterns Saday explicitly rejects</h3>
+<ul>
+  <li><b>Generic Form Builder as clinical instrument.</b> An MHP can create a "depression screener" in Tealfeed using radio buttons — Saday never allows this. All clinical scoring goes through versioned validated tools in <code>assessment_tool_versions</code>.</li>
+  <li><b>"Every buyer = client" model.</b> In Tealfeed anyone with a card becomes a client. Saday filters at intake — Track 5 patients are referred out, not onboarded.</li>
+  <li><b>Drafts / Deleted / Unconfirmed session states visible to buyer.</b> Tealfeed exposes these; Saday keeps clinical workflow state server-side only (HIPAA-style minimum disclosure).</li>
+  <li><b>Segment export of client list.</b> Tealfeed allows "Export" on Client Panel and Team Members. Saday restricts exports to aggregate / de-identified only; client-level export requires admin + audit-log entry + patient consent.</li>
+  <li><b>English-only interface.</b> Non-negotiable for Saday: Hindi + IST + INR on day 1.</li>
+  <li><b>Accessibility debt.</b> Saday launches at WCAG AA contrast / labelled inputs; Tealfeed's 56 consistency issues document what not to ship.</li>
+</ul>
+
+<div class="info-box"><b>Key insight:</b> Tealfeed is the <em>pricing, booking, and payments</em> reference. SwasthMind is the <em>clinical CRM</em> reference. Saday merges Tealfeed's solopreneur-ergonomics with SwasthMind's clinical surfaces, then adds what <em>neither</em> does: adaptive triage, validated-instrument scoring, informant system, and honest-scope refusal.</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="dual">2B. Dual-Scan Landscape Map — Who Does What</h2>
+
+<p>Feature-by-feature matrix across the three products. Green = strong; amber = partial; red = absent. "Saday V1" reflects committed scope; "Saday later" shows the trajectory.</p>
+
+<table>
+<thead><tr><th>Capability</th><th>Swasthmind</th><th>Tealfeed</th><th>Saday V1</th><th>Saday later</th></tr></thead>
+<tbody>
+<tr><td colspan="5" style="background:#f1f5f9;font-weight:700;color:#0f172a;">Booking &amp; Scheduling</td></tr>
+<tr><td>Manual booking by admin</td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-green">Yes</span></td><td>—</td></tr>
+<tr><td>Self-serve patient booking</td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-green">Yes</span></td><td>Cluster-aware slot filtering</td></tr>
+<tr><td>Availability (timezone + notice + window)</td><td><span class="badge badge-orange">Basic</span></td><td><span class="badge badge-green">Rich</span></td><td><span class="badge badge-green">Rich</span></td><td>—</td></tr>
+<tr><td>Reschedule / cancel policy config</td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-green">Yes</span></td><td>—</td></tr>
+<tr><td>Drag-to-create calendar</td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-red">List only</span></td><td>V2</td></tr>
+<tr><td>Session packages / Bundles</td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-green">Yes</span></td><td>—</td></tr>
+<tr><td>Seminars / Group Events</td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-red">No</span></td><td>V2</td></tr>
+
+<tr><td colspan="5" style="background:#f1f5f9;font-weight:700;color:#0f172a;">Payments</td></tr>
+<tr><td>Primary gateway</td><td><span class="badge badge-orange">Razorpay only</span></td><td><span class="badge badge-green">Multi (RP/EB/TF)</span></td><td><span class="badge badge-orange">Razorpay only</span></td><td>Easebuzz as fallback</td></tr>
+<tr><td>Coupons / discounts</td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-red">No</span></td><td>V1.5</td></tr>
+<tr><td>Refund API</td><td><span class="badge badge-red">Manual</span></td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-green">Yes</span></td><td>—</td></tr>
+<tr><td>Deductions / tax / payout engine</td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-green">Yes</span></td><td>—</td></tr>
+<tr><td>Earnings ledger (per-transaction)</td><td><span class="badge badge-orange">Row list</span></td><td><span class="badge badge-green">Full</span></td><td><span class="badge badge-green">Full</span></td><td>—</td></tr>
+<tr><td>Withdrawals UX for MHP</td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-red">No</span></td><td>V1.5</td></tr>
+
+<tr><td colspan="5" style="background:#f1f5f9;font-weight:700;color:#0f172a;">Clinical</td></tr>
+<tr><td>Validated assessment tools</td><td><span class="badge badge-red">Broken route</span></td><td><span class="badge badge-red">None</span></td><td><span class="badge badge-green">12 V1 / 30 library</span></td><td>—</td></tr>
+<tr><td>Symptom-cluster triage</td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-green">Yes (7-screen)</span></td><td>—</td></tr>
+<tr><td>Care-track model</td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-green">5 tracks</span></td><td>—</td></tr>
+<tr><td>SOAP clinical notes / ICD</td><td><span class="badge badge-red">Free-text only</span></td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-green">Yes</span></td><td>—</td></tr>
+<tr><td>Safety / C-SSRS / crisis SLA</td><td><span class="badge badge-orange">Flag only</span></td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-green">Full protocol</span></td><td>—</td></tr>
+<tr><td>Informant / collateral linking</td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-green">3-tier</span></td><td>—</td></tr>
+<tr><td>Guardian / paediatric consent</td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-green">Yes</span></td><td>—</td></tr>
+<tr><td>Prescription surface</td><td><span class="badge badge-orange">PDF only</span></td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-orange">PDF only</span></td><td>V2 structured Rx</td></tr>
+
+<tr><td colspan="5" style="background:#f1f5f9;font-weight:700;color:#0f172a;">Messaging &amp; Engagement</td></tr>
+<tr><td>WhatsApp inbox (read)</td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-orange">Templated</span></td><td>V1.5 two-way</td></tr>
+<tr><td>WhatsApp reply (write)</td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-red">No</span></td><td>V1.5</td></tr>
+<tr><td>Session follow-up flows</td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-green">Yes</span></td><td>—</td></tr>
+<tr><td>Bulk messages / campaigns</td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-orange">Templates</span></td><td><span class="badge badge-red">No</span></td><td>V1.5</td></tr>
+
+<tr><td colspan="5" style="background:#f1f5f9;font-weight:700;color:#0f172a;">Admin &amp; Analytics</td></tr>
+<tr><td>Role-based access control</td><td><span class="badge badge-green">29 modules</span></td><td><span class="badge badge-green">Access Roles</span></td><td><span class="badge badge-green">RLS + roles</span></td><td>—</td></tr>
+<tr><td>Segment analysis (client × expert × product × date)</td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-red">No</span></td><td>V1.5</td></tr>
+<tr><td>Per-MHP analytics dashboard</td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-green">Basic</span></td><td>—</td></tr>
+<tr><td>Service categories (color-coded)</td><td><span class="badge badge-orange">Session types</span></td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-green">Care tracks</span></td><td>—</td></tr>
+
+<tr><td colspan="5" style="background:#f1f5f9;font-weight:700;color:#0f172a;">Compliance &amp; Safety</td></tr>
+<tr><td>DPDP / Indian data residency</td><td><span class="badge badge-orange">Unclear</span></td><td><span class="badge badge-red">Creator-ToS</span></td><td><span class="badge badge-green">Yes (Mumbai)</span></td><td>—</td></tr>
+<tr><td>Audit log append-only</td><td><span class="badge badge-red">Absent</span></td><td><span class="badge badge-red">Absent</span></td><td><span class="badge badge-green">Day 1</span></td><td>—</td></tr>
+<tr><td>MFA for admin / staff</td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-red">Not observed</span></td><td><span class="badge badge-green">TOTP</span></td><td>—</td></tr>
+<tr><td>HttpOnly session cookies</td><td><span class="badge badge-red">sessionStorage</span></td><td><span class="badge badge-orange">Unknown</span></td><td><span class="badge badge-green">Yes</span></td><td>—</td></tr>
+<tr><td>WCAG AA (contrast + labels)</td><td><span class="badge badge-orange">Partial</span></td><td><span class="badge badge-red">39 fails / 102 unlabeled</span></td><td><span class="badge badge-green">Target AA</span></td><td>AAA where possible</td></tr>
+
+<tr><td colspan="5" style="background:#f1f5f9;font-weight:700;color:#0f172a;">Content &amp; Acquisition</td></tr>
+<tr><td>Built-in blog / articles</td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-green">Yes</span></td><td><span class="badge badge-orange">Static MDX</span></td><td>V1.5 CMS</td></tr>
+<tr><td>Hindi / regional language</td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-red">No</span></td><td><span class="badge badge-green">Yes (HI + EN)</span></td><td>+ 3 regional V2</td></tr>
+</tbody>
+</table>
+
+<div class="ok-box"><b>Strategic read of the matrix:</b><br>
+1. <b>Saday V1 scope is defensible.</b> Every green cell in "Saday V1" is either table-stakes from Tealfeed or a clinical must-have neither competitor offers.<br>
+2. <b>Where Saday is deliberately behind:</b> drag-to-create calendar, multi-gateway, coupons, bulk messaging, two-way WhatsApp, built-in CMS, seminars. All in V1.5 / V2 roadmap — not forgotten, explicitly deferred.<br>
+3. <b>Where Saday is uniquely ahead:</b> assessments, triage, care tracks, informant, paediatric consent, safety protocol, audit log, HttpOnly, Hindi. This is the moat.</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="verdict">3. CEO Verdict — From Strategic Scorecard</h2>
+
+<table>
+<thead><tr><th>Dimension</th><th>Score /10</th><th>Assessment</th></tr></thead>
+<tbody>
+<tr><td>Clinical vision</td><td><span class="badge badge-green">9</span></td><td>Psychiatrist-founder-led; five-track model is clinically mature; safety protocol non-negotiable from day 1</td></tr>
+<tr><td>Team composition</td><td><span class="badge badge-green">8</span></td><td>Clinical lead + co-founder psychologist + developer + already-enrolled MHPs. Missing: medico-legal consultant (hire for one-time review)</td></tr>
+<tr><td>Market timing</td><td><span class="badge badge-green">8</span></td><td>Post-2020 normalisation of tele-mental-health, rising Tier 2 demand, no dominant Indian player with honest-scope positioning</td></tr>
+<tr><td>Differentiation</td><td><span class="badge badge-green">9</span></td><td>Adaptive intake + care tracks + informant system + outcome data — none of these exist in combination on an Indian platform today</td></tr>
+<tr><td>Tech approach</td><td><span class="badge badge-green">7</span></td><td>Claude-assisted development is appropriate at this budget; must enforce cross-cutting consistency (architecture doc, weekly review)</td></tr>
+<tr><td>Compliance readiness</td><td><span class="badge badge-orange">6</span></td><td>Clear on DPDP + Telemed guidelines but no signed medico-legal review yet; data-residency (India-only) must be enforced from first patient</td></tr>
+<tr><td>Revenue model</td><td><span class="badge badge-orange">6</span></td><td>Dual (commission + MHP subscription) is fragile with 2–3 MHPs. Validate ₹500 psychiatric rate with real bookings before fixing MHP subscription tier</td></tr>
+<tr><td>Go-to-market</td><td><span class="badge badge-orange">5</span></td><td>WhatsApp-first is correct; SEO content engine not yet built; founder-led clinical credibility is the strongest asset</td></tr>
+<tr><td>Budget alignment</td><td><span class="badge badge-red">3</span></td><td>₹1 lakh builds the MVP described here only if scope is held ruthlessly. Enterprise EMR, prescribing, ABDM = V2</td></tr>
+<tr><td>Operational resilience</td><td><span class="badge badge-orange">5</span></td><td>Single developer + single clinical lead is a bus-factor-of-1 risk; document everything; don't let tribal knowledge accumulate</td></tr>
+</tbody>
+</table>
+
+<div class="crit-box"><b>Three non-negotiable conditions for success:</b><br>
+1. <b>Scope discipline.</b> The MVP is booking + notes + materials + intake + video + self-assessment. Not EMR. Not ABDM. Not e-prescribing. Not insurance. Say no to scope creep weekly.<br>
+2. <b>Clinical data integrity from commit #1.</b> Immutable assessments, server timestamps, signed notes, audit log, episode-of-care linkage. Breaking any of these later = rebuild.<br>
+3. <b>User test the intake on 5 real people before writing backend code.</b> The 30 minutes that saves 3 months.</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="tracks">4. Five-Track Care Model</h2>
+
+<p>Mental health presentations exist on four axes (severity, online-treatability, informant-dependency, population). A single pathway does not serve them. Saday routes every completed intake into one of five tracks. Each track is a distinct care model — different MHP type, session cadence, pricing, and assessment schedule.</p>
+
+<div class="track t1">
+  <b>Track 1 — Wellness &amp; Subclinical</b>
+  <p>Relationship difficulties, burnout, grief, adjustment issues, life transitions, work stress, existential concerns. No diagnosable disorder by definition but high volume and commercially valuable.</p>
+  <p><b>MHP:</b> Counselling psychologist or trained counsellor (master's level, supervised). <b>Cadence:</b> Fortnightly, 45 min. <b>Price anchor:</b> ₹500–800 / session. <b>Assessments:</b> PSS-10 + PHQ-9 at weeks 0 and 4 (to catch misclassified cases). <b>Re-route risk:</b> BPD, bipolar II, early psychosis all present here first — re-screen at session 3.</p>
+</div>
+
+<div class="track t2">
+  <b>Track 2 — Standard Outpatient Clinical</b>
+  <p>Depression, anxiety, OCD, PTSD, adult ADHD without major comorbidity. Core volume; works well with integrated psychiatry-psychology model.</p>
+  <p><b>MHP:</b> Clinical psychologist ± psychiatrist. <b>Cadence:</b> Weekly or fortnightly, 45 min. <b>Price anchor:</b> ₹500 (psychiatric) / ₹800–1200 (therapy). <b>Assessments:</b> PHQ-9 + GAD-7 + tool-specific (OCI-R for OCD, PCL-5 for PTSD, ASRS for ADHD) at weeks 0, 2, 4, 8, 12.</p>
+</div>
+
+<div class="track t3">
+  <b>Track 3 — Complex Clinical</b>
+  <p>BPD, stable bipolar maintenance, moderate eating disorders, SUD in counselling/recovery phase, ADHD + significant comorbidity, complex PTSD. Manageable online but requires structured protocols, higher session frequency, and usually informant involvement.</p>
+  <p><b>MHP:</b> DBT-trained psychologist + psychiatrist (split). <b>Cadence:</b> Weekly 60 min + between-session structured check-ins. <b>Price model:</b> Package-based (8-session packages) not per-session. <b>Assessments:</b> Diagnosis-specific + mood log (bipolar) + MSI-BPD retest (BPD) + AUDIT/DAST (SUD) + C-SSRS every visit.</p>
+</div>
+
+<div class="track t4">
+  <b>Track 4 — Supported / Adjunct</b>
+  <p>Stable schizophrenia follow-up, severe bipolar in maintenance, dementia + caregiver. Platform is <b>not</b> primary treating team — a local psychiatrist is. Saday provides monitoring, psychoeducation, caregiver support, medication-adherence structure.</p>
+  <p><b>MHP:</b> Psychiatrist (follow-up) + caregiver support counsellor. <b>Cadence:</b> Monthly follow-up + caregiver sessions on demand. <b>Mandatory fields:</b> <code>primary_treating_physician</code>, <code>primary_emergency_contact</code>, <code>local_hospital</code>. <b>Assessments:</b> Clinician-rated (PANSS / BPRS / YMRS / MoCA) during video; informant observation forms weekly during high-risk periods.</p>
+</div>
+
+<div class="track t5">
+  <b>Track 5 — Not Suitable for Online Care</b>
+  <p>Active florid psychosis; acute mania; severe alcohol or benzodiazepine withdrawal (medical emergency); anorexia BMI &lt;16; acute suicidality requiring inpatient observation; active child protection concerns.</p>
+  <p><b>Saday response:</b> Intake immediately presents emergency-referral screen with: iCall (9152987821), Vandrevala Foundation (1860-2662-345), nearest NIMHANS centre, state-wise emergency psychiatry contacts. Logged as <code>triage_outcome = not_suitable</code> with reason. <b>No booking offered.</b> This protects the patient and the platform.</p>
+</div>
+
+<div class="info-box"><b>Track assignment is automatic at intake, editable by junior counsellor after first conversation.</b> Every patient record stores <code>assigned_track</code>, <code>track_assigned_by</code>, <code>track_changed_log</code>. Track migration (e.g., T2 → T3 after BPD unmasks) is an expected clinical event, not a bug.</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="intake">5. Adaptive Intake System — The Front Door</h2>
+
+<p>The intake is not a form — it is a 7-screen conversational state machine rendering from JSON config. This is the single most differentiated product surface of Saday.</p>
+
+<h3>The screen flow</h3>
+
+<div class="card">
+  <h4>Screen 0 — Language Selection</h4>
+  <p>Rendered before the logo fully loads. Three buttons: <b>English</b> · <b>हिंदी</b> · <b>Other</b> (reveals: Gujarati / Tamil / Telugu / Bengali — <i>coming soon</i>). "Other" does not dead-end — falls back to Hindi/English. Everything from Screen 1 onward renders from a locale JSON (no hardcoded strings anywhere).</p>
+</div>
+
+<div class="card">
+  <h4>Screen 1 — Who Is This For?</h4>
+  <div class="screen-flow">"Who are you seeking help for today?"
+
+[ For myself ]                          → Screen 2A
+[ For someone else — family or friend ] → Screen 2B  (proxy branch)</div>
+  <p>The proxy branch is a <b>separate form tree</b>, not just a different name field. Language shifts to third-person ("she has been forgetting things recently"), consent architecture changes, and age-band routing becomes primary.</p>
+</div>
+
+<div class="card">
+  <h4>Screen 2A — Self: Basic Context</h4>
+  <div class="screen-flow">Age band:    [ Under 18 ] [ 18–25 ] [ 26–40 ] [ 41–60 ] [ 60+ ]
+Gender:      [ Male ] [ Female ] [ Non-binary / Other ] [ Prefer not to say ]</div>
+  <p>Age band (not exact age) drives tool selection. Under 18 → paediatric pathway (V1: hard redirect to "we'll call you"; V1.5: full adolescent pathway). 60+ → GDS-15 substitutes for PHQ-9; AD8 enters the routing table.</p>
+</div>
+
+<div class="card">
+  <h4>Screen 2B — Proxy: Context Collection</h4>
+  <div class="screen-flow">Relationship:  [ Parent of a child ] [ Spouse / Partner ]
+               [ Adult child of an elderly parent ] [ Friend ]
+               [ Other family member ]
+
+Approximate age:  [ &lt;12 ] [ 12–17 ] [ 18–40 ] [ 41–60 ] [ 60+ ]
+
+Are they aware you're seeking help on their behalf?
+  [ Yes ] [ No ] [ I'm not sure ]</div>
+  <p>"Aware" = No → non-blocking note: "We'll discuss the best way to involve them when you speak with our team." This is informed consent territory; proxy alone cannot authorize treatment for a competent adult.</p>
+</div>
+
+<div class="card">
+  <h4>Screen 3 — Symptom Cluster Selection (the heart of the form)</h4>
+  <p>13 plain-language clusters + "something else" + "I'm not sure." Multi-select. Each has a brief elaboration on tap. Floating <b>"Skip — book directly"</b> button visible here and on every subsequent screen.</p>
+  <div class="screen-flow">[ ] Feeling very sad, empty, or losing interest in things
+[ ] Worry, anxiety, or fear that's hard to control
+[ ] Extreme mood swings — very high and very low periods
+[ ] Trouble focusing, restlessness, acting without thinking
+[ ] Drinking, substance use, or feeling unable to stop
+[ ] Something traumatic that keeps coming back to you
+[ ] Thoughts or urges that repeat and feel distressing
+[ ] Seeing, hearing, or believing things others say aren't real    ← red-flag
+[ ] Memory problems, confusion, or unclear thinking
+[ ] Difficult relationship with food or your body
+[ ] Intense emotional pain in relationships, or not knowing who you are
+[ ] Complete exhaustion, burnout, or feeling overwhelmed
+[ ] Sleep problems that are affecting your life
+[ ] Something else I haven't seen here
+[ ] I'm not sure — I just know something is wrong
+                        ──────────────────────
+              [ Skip — I want to book directly ]</div>
+
+  <h4>Exit rules at Screen 3</h4>
+  <div class="exit-rule"><b>0 selected + "I'm not sure":</b> soft route → "That's okay. Our team will figure it out together with you. Book a first session."</div>
+  <div class="exit-rule"><b>1–2 selected:</b> proceed to adaptive assessments (Screens 4+).</div>
+  <div class="exit-rule"><b>3+ selected:</b> soft redirect → "You've mentioned several areas. Rather than continue with forms, we'd recommend speaking directly with one of our professionals." [ Book a Session ] [ Continue with form anyway ]</div>
+  <div class="exit-rule"><b>Red-flag cluster selected</b> (psychosis; substance withdrawal symptoms; active suicidality on later screen): <b>hard redirect</b> to crisis resources + 2-hour contact commitment. No "continue" option.</div>
+</div>
+
+<div class="card">
+  <h4>Screens 4+ — Adaptive Assessments</h4>
+  <p>Tools triggered by the Screen 3 selections and Screen 2 age band. One question per mobile screen. Progress indicator ("Question 3 of 9"). Back button. Auto-save every answer to localStorage.</p>
+  <p><b>Cap:</b> 25 questions total across all selected tools. If exceeded, serve gate versions (PHQ-2, GAD-2, AUDIT-C) and note <code>full_assessment_deferred_to_session = true</code> in the backend submission.</p>
+  <p><b>Transitions</b> are human sentences, not clinical headings: <i>"You mentioned feeling low or losing interest. These 9 questions will help us understand how you've been feeling."</i></p>
+</div>
+
+<div class="card">
+  <h4>Screen 5 — Safety Screen (always, for everyone, never skipped)</h4>
+  <div class="screen-flow">"In the past two weeks, have you had any thoughts of hurting yourself or ending your life?"
+  [ No ] [ Passing thoughts only ] [ Thinking about it seriously ] [ Rather not say ]
+
+"Is there anything you need urgently right now?"
+  [ No, I'm okay ] [ I'm in a difficult situation right now ]</div>
+  <p>"Thinking about it seriously" OR "Rather not say" combined with any other indicator → safety protocol fires before form completion. Crisis numbers shown. Option to be contacted within 1 hour. <code>safety_flag</code> written to submission as an immutable field.</p>
+</div>
+
+<div class="card">
+  <h4>Screen 6 — Contact &amp; Completion</h4>
+  <div class="screen-flow">Name (first name is sufficient)
+Phone (WhatsApp preferred)
+Best time to reach you
+Preferred MHP type:
+  [ ] Recommend for me
+  [ ] Psychiatrist
+  [ ] Psychologist / therapist
+  [ ] Initial chat with a counsellor
+
+                  [ Submit and See Available Appointments ]</div>
+</div>
+
+<div class="info-box"><b>Architecture rule:</b> The form is a pure state machine. States = <code>language · who_for · basic_context · clusters · assessment_sequence[] · safety · contact</code>. Every transition is a config-driven rule. Every exit rule is a config value. Changing a threshold is a database update, not a deployment.</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="tools">6. Assessment Tool Library — 30 Freely-Available Instruments</h2>
+
+<p>All tools below are either public domain, WHO-free, or free for non-commercial clinical use. Hindi validation status is the single most important practical property — a validated Hindi PHQ-9 is not the same string as a Google-translated PHQ-9; use only published validated translations for tool content.</p>
+
+<div class="warn-box"><b>Copyright landmines — do NOT use without a licence:</b> BDI-II (Pearson), Conners Rating Scales (MHS), MMPI (Pearson), WAIS / WISC (Pearson). These three are the most commonly (mistakenly) assumed free.</div>
+
+<h3>Depression</h3>
+<table>
+<thead><tr><th>Tool</th><th>Items</th><th>Time</th><th>Hindi Validated</th><th>Role</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td><b>PHQ-9</b></td><td>9</td><td>3 min</td><td><span class="badge badge-green">Yes</span></td><td>Self</td><td>Standard adult depression screen + severity</td></tr>
+<tr><td>PHQ-2</td><td>2</td><td>1 min</td><td><span class="badge badge-green">Yes</span></td><td>Self</td><td>Ultra-brief gate</td></tr>
+<tr><td><b>GDS-15</b></td><td>15</td><td>5 min</td><td><span class="badge badge-green">Yes</span></td><td>Self</td><td>Geriatric depression (replaces PHQ-9 for 60+)</td></tr>
+<tr><td>DASS-21 (D-subscale)</td><td>7</td><td>2 min</td><td><span class="badge badge-orange">Partial</span></td><td>Self</td><td>Combined D/A/S screen</td></tr>
+</tbody>
+</table>
+
+<h3>Anxiety</h3>
+<table>
+<thead><tr><th>Tool</th><th>Items</th><th>Time</th><th>Hindi Validated</th><th>Role</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td><b>GAD-7</b></td><td>7</td><td>2 min</td><td><span class="badge badge-green">Yes</span></td><td>Self</td><td>Standard adult anxiety screen</td></tr>
+<tr><td>GAD-2</td><td>2</td><td>1 min</td><td><span class="badge badge-green">Yes</span></td><td>Self</td><td>Gate question</td></tr>
+<tr><td>DASS-21 (A-subscale)</td><td>7</td><td>2 min</td><td><span class="badge badge-orange">Partial</span></td><td>Self</td><td>Combined</td></tr>
+<tr><td>SCARED (brief 5-item)</td><td>5</td><td>2 min</td><td><span class="badge badge-orange">Partial</span></td><td>Child + Parent</td><td>Child anxiety</td></tr>
+</tbody>
+</table>
+
+<h3>Mood instability / Bipolar</h3>
+<table>
+<thead><tr><th>Tool</th><th>Items</th><th>Time</th><th>Hindi Validated</th><th>Role</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td><b>MDQ</b></td><td>15</td><td>5 min</td><td><span class="badge badge-orange">Partial</span></td><td>Self</td><td>Bipolar screen in adults</td></tr>
+<tr><td>HCL-32</td><td>32</td><td>8 min</td><td><span class="badge badge-red">No</span></td><td>Self</td><td>Hypomania spectrum — more sensitive than MDQ</td></tr>
+<tr><td>YMRS</td><td>11</td><td>Session</td><td>—</td><td>Clinician</td><td>Active mania — during video, not self-administered</td></tr>
+</tbody>
+</table>
+
+<h3>ADHD</h3>
+<table>
+<thead><tr><th>Tool</th><th>Items</th><th>Time</th><th>Hindi Validated</th><th>Role</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td><b>ASRS-v1.1</b></td><td>18 (6-item screener)</td><td>3 min</td><td><span class="badge badge-orange">Partial</span></td><td>Self</td><td>WHO public-domain adult ADHD screen</td></tr>
+<tr><td>ASRS Part A</td><td>6</td><td>1 min</td><td><span class="badge badge-orange">Partial</span></td><td>Self</td><td>Gate question</td></tr>
+<tr><td>Vanderbilt</td><td>55</td><td>10 min</td><td><span class="badge badge-red">No</span></td><td>Parent + Teacher</td><td>Paediatric ADHD (V1.5)</td></tr>
+<tr><td>SNAP-IV</td><td>26 / 90</td><td>8 min</td><td><span class="badge badge-red">No</span></td><td>Parent + Teacher</td><td>Paediatric ADHD (V1.5)</td></tr>
+</tbody>
+</table>
+
+<h3>Trauma / PTSD</h3>
+<table>
+<thead><tr><th>Tool</th><th>Items</th><th>Time</th><th>Hindi Validated</th><th>Role</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td><b>PCL-5</b></td><td>20</td><td>5 min</td><td><span class="badge badge-red">No (translatable)</span></td><td>Self</td><td>PTSD severity — public domain</td></tr>
+<tr><td><b>IES-R</b></td><td>22</td><td>5 min</td><td><span class="badge badge-green">Yes</span></td><td>Self</td><td>Impact of Event Scale — good Indian validation</td></tr>
+</tbody>
+</table>
+
+<h3>OCD</h3>
+<table>
+<thead><tr><th>Tool</th><th>Items</th><th>Time</th><th>Hindi Validated</th><th>Role</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td><b>OCI-R</b></td><td>18</td><td>5 min</td><td><span class="badge badge-red">No</span></td><td>Self</td><td>OCI-Revised — free</td></tr>
+<tr><td>DOCS</td><td>20</td><td>7 min</td><td><span class="badge badge-red">No</span></td><td>Self</td><td>Dimensional OCD</td></tr>
+<tr><td>Y-BOCS</td><td>Clinician</td><td>Session</td><td>—</td><td>Clinician</td><td>Severity measure</td></tr>
+</tbody>
+</table>
+
+<h3>Psychosis</h3>
+<table>
+<thead><tr><th>Tool</th><th>Items</th><th>Time</th><th>Hindi Validated</th><th>Role</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td>PROD-Screen</td><td>12</td><td>4 min</td><td><span class="badge badge-red">No</span></td><td>Self</td><td>Prodromal — early psychosis</td></tr>
+<tr><td>BPRS</td><td>18</td><td>Session</td><td><span class="badge badge-orange">Partial</span></td><td>Clinician</td><td>Brief Psychiatric Rating</td></tr>
+<tr><td>PANSS</td><td>30</td><td>Session</td><td><span class="badge badge-green">Yes</span></td><td>Clinician</td><td>Comprehensive psychosis assessment</td></tr>
+</tbody>
+</table>
+
+<h3>Substance use</h3>
+<table>
+<thead><tr><th>Tool</th><th>Items</th><th>Time</th><th>Hindi Validated</th><th>Role</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td><b>AUDIT</b></td><td>10</td><td>3 min</td><td><span class="badge badge-green">Yes</span></td><td>Self</td><td>WHO Alcohol Use Disorders — free</td></tr>
+<tr><td><b>AUDIT-C</b></td><td>3</td><td>1 min</td><td><span class="badge badge-green">Yes</span></td><td>Self</td><td>Ultra-brief alcohol gate</td></tr>
+<tr><td><b>DAST-10</b></td><td>10</td><td>3 min</td><td><span class="badge badge-red">No</span></td><td>Self</td><td>Drug abuse screen</td></tr>
+<tr><td>CRAFFT</td><td>6</td><td>2 min</td><td><span class="badge badge-red">No</span></td><td>Self</td><td>Adolescent substance use</td></tr>
+</tbody>
+</table>
+
+<h3>Eating / body</h3>
+<table>
+<thead><tr><th>Tool</th><th>Items</th><th>Time</th><th>Hindi Validated</th><th>Role</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td><b>SCOFF</b></td><td>5</td><td>1 min</td><td><span class="badge badge-red">No</span></td><td>Self</td><td>Eating disorder screen — ultra-brief</td></tr>
+<tr><td>EDE-Q (brief)</td><td>12</td><td>5 min</td><td><span class="badge badge-red">No</span></td><td>Self</td><td>EDE-Questionnaire</td></tr>
+</tbody>
+</table>
+
+<h3>Stress / burnout / somatic</h3>
+<table>
+<thead><tr><th>Tool</th><th>Items</th><th>Time</th><th>Hindi Validated</th><th>Role</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td><b>PSS-10</b></td><td>10</td><td>3 min</td><td><span class="badge badge-green">Yes</span></td><td>Self</td><td>Perceived Stress Scale</td></tr>
+<tr><td>DASS-21 (S-subscale)</td><td>7</td><td>2 min</td><td><span class="badge badge-orange">Partial</span></td><td>Self</td><td>Stress component</td></tr>
+<tr><td><b>PHQ-15</b></td><td>15</td><td>4 min</td><td><span class="badge badge-green">Yes</span></td><td>Self</td><td>Somatic symptom severity</td></tr>
+</tbody>
+</table>
+
+<h3>Sleep</h3>
+<table>
+<thead><tr><th>Tool</th><th>Items</th><th>Time</th><th>Hindi Validated</th><th>Role</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td><b>ISI</b></td><td>7</td><td>2 min</td><td><span class="badge badge-orange">Partial</span></td><td>Self</td><td>Insomnia Severity Index</td></tr>
+<tr><td>PSQI</td><td>19</td><td>5 min</td><td><span class="badge badge-green">Yes</span></td><td>Self</td><td>Pittsburgh Sleep Quality</td></tr>
+<tr><td>ESS</td><td>8</td><td>2 min</td><td><span class="badge badge-orange">Partial</span></td><td>Self</td><td>Epworth Sleepiness</td></tr>
+</tbody>
+</table>
+
+<h3>Cognitive / memory</h3>
+<table>
+<thead><tr><th>Tool</th><th>Items</th><th>Time</th><th>Hindi Validated</th><th>Role</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td>MMSE</td><td>30</td><td>Session</td><td><span class="badge badge-green">Yes</span></td><td>Clinician</td><td>Mini-Mental State Exam</td></tr>
+<tr><td><b>MoCA</b></td><td>30</td><td>Session</td><td><span class="badge badge-green">Yes (Hindi)</span></td><td>Clinician</td><td>Better than MMSE for MCI — free for clinicians</td></tr>
+<tr><td>SLUMS</td><td>11</td><td>Session</td><td><span class="badge badge-red">No</span></td><td>Clinician</td><td>Saint Louis University Mental Status</td></tr>
+<tr><td><b>AD8</b></td><td>8</td><td>3 min</td><td><span class="badge badge-red">No</span></td><td>Informant</td><td>Informant-rated cognitive screen</td></tr>
+</tbody>
+</table>
+
+<h3>Personality / BPD</h3>
+<table>
+<thead><tr><th>Tool</th><th>Items</th><th>Time</th><th>Hindi Validated</th><th>Role</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td><b>MSI-BPD</b></td><td>10</td><td>3 min</td><td><span class="badge badge-red">No</span></td><td>Self</td><td>McLean Screening Instrument for BPD</td></tr>
+<tr><td>PDQ-4 (brief)</td><td>85</td><td>15 min</td><td><span class="badge badge-red">No</span></td><td>Self</td><td>Personality disorder questionnaire</td></tr>
+</tbody>
+</table>
+
+<h3>Suicide &amp; safety</h3>
+<table>
+<thead><tr><th>Tool</th><th>Items</th><th>Time</th><th>Hindi Validated</th><th>Role</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td><b>C-SSRS (screener)</b></td><td>6</td><td>2 min</td><td><span class="badge badge-orange">Partial</span></td><td>Self + Clinician</td><td>Columbia Suicide Severity Rating</td></tr>
+<tr><td>ASQ</td><td>4</td><td>1 min</td><td><span class="badge badge-red">No</span></td><td>Self</td><td>NIMH Ask Suicide-Screening Questions</td></tr>
+<tr><td>SBQ-R</td><td>4</td><td>2 min</td><td><span class="badge badge-red">No</span></td><td>Self</td><td>Suicidal Behaviours Questionnaire Revised</td></tr>
+</tbody>
+</table>
+
+<h3>Paediatric &amp; geriatric</h3>
+<table>
+<thead><tr><th>Tool</th><th>Items</th><th>Time</th><th>Hindi Validated</th><th>Role</th><th>Use Case</th></tr></thead>
+<tbody>
+<tr><td><b>SDQ</b></td><td>25</td><td>5 min</td><td><span class="badge badge-green">Yes</span></td><td>Parent + Teacher</td><td>Strengths &amp; Difficulties — free</td></tr>
+<tr><td>M-CHAT-R/F</td><td>20</td><td>5 min</td><td><span class="badge badge-orange">Partial</span></td><td>Parent</td><td>Toddler autism screen</td></tr>
+<tr><td>CDR</td><td>Clinician</td><td>Session</td><td><span class="badge badge-orange">Partial</span></td><td>Clinician + Informant</td><td>Clinical Dementia Rating</td></tr>
+</tbody>
+</table>
+
+<div class="info-box"><b>Tool database schema:</b> <code>assessment_tools</code> stores <code>tool_id, version, language, items (JSON), scoring_logic (JSON), severity_thresholds (JSON), is_clinician_administered, min_age, max_age, validated_populations</code>. Every submission row locks to a <code>tool_version_id</code> FK so schema changes don't corrupt history.</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="routing">7. Symptom Cluster → Tool Routing Logic</h2>
+
+<p>Configuration-driven mapping. Each cluster has a gate tool + full tool + optional red-flag side-question. Stored as <code>cluster_tool_mapping</code> rows — changeable without code deployment.</p>
+
+<table>
+<thead><tr><th>Cluster (plain language)</th><th>Gate tool</th><th>If gate +</th><th>Flags / routing</th></tr></thead>
+<tbody>
+<tr><td>Feeling sad, empty, losing interest</td><td>PHQ-2</td><td>PHQ-9</td><td>PHQ-9 Q9 ≥ 1 → C-SSRS immediately; If PHQ-2 negative → PSS-10 (likely stress not depression)</td></tr>
+<tr><td>Worried, anxious, on edge</td><td>GAD-2</td><td>GAD-7</td><td>If specific fears → + DASS-21 anxiety subscale</td></tr>
+<tr><td>Extreme mood swings</td><td>MDQ Q1</td><td>Full MDQ</td><td>MDQ ≥ 7 + impairment → route to <b>psychiatrist</b>, not psychologist; prompt for informant availability</td></tr>
+<tr><td>Trouble focusing, restless, impulsive</td><td>ASRS Part A</td><td>Full ASRS-v1.1</td><td>Age &gt; 40 → add cognitive screen (depression / early cognitive decline more likely than ADHD)</td></tr>
+<tr><td>Substance use, feeling unable to stop</td><td>AUDIT-C</td><td>AUDIT + DAST-10 if non-alcohol</td><td><b>Red flag:</b> "Are you currently shaking / sweating / unwell when you stop?" → <span class="badge badge-red">withdrawal = emergency exit</span></td></tr>
+<tr><td>Something traumatic keeps coming back</td><td>2-item PCL screen</td><td>PCL-5</td><td>Also PHQ-9 (comorbidity is the rule not exception)</td></tr>
+<tr><td>Repeating thoughts / urges that distress</td><td>2 OCI-R items</td><td>OCI-R</td><td>—</td></tr>
+<tr><td>Seeing / hearing / believing things others say aren't real</td><td><span class="badge badge-red">No gate — flag on selection</span></td><td>PROD-Screen</td><td><span class="badge badge-red">Immediate &lt;2-hour clinician review</span>; senior counsellor / psychiatrist only; no junior triage</td></tr>
+<tr><td>Forgetting things, confused, unclear thinking</td><td>AD8 (informant version in proxy flow)</td><td>AD8 scored ≥ 2</td><td>Age &lt; 40 → differential (depression / ADHD / substance) not dementia; Age ≥ 60 → geriatric psychiatrist + MoCA in session</td></tr>
+<tr><td>Relationship with food / body</td><td>SCOFF</td><td>SCOFF ≥ 2 → EDE-Q brief</td><td><b>Red flag:</b> "Currently at a weight your doctor has said is medically concerning?" → in-person referral exit</td></tr>
+<tr><td>Intense emotional pain in relationships, don't know who I am</td><td>MSI-BPD</td><td>MSI-BPD ≥ 7</td><td>Route to DBT-trained psychologist; do NOT label "personality disorder" in form-facing text</td></tr>
+<tr><td>Exhausted, burned out, overwhelmed</td><td>PSS-10</td><td>PSS-10 ≥ 27 → also PHQ-9 (burnout masks depression); &lt; 27 → Track 1 counselling</td><td>—</td></tr>
+<tr><td>Serious sleep problems</td><td>ISI (2 items)</td><td>Full ISI</td><td>Also check if sleep is secondary to another cluster already selected</td></tr>
+</tbody>
+</table>
+
+<h3>Routing as data, not code</h3>
+<pre><span class="c">-- cluster_tool_mapping</span>
+cluster_id | tool_id     | trigger_condition     | sequence | is_gate | parent_gate_id
+-----------+-------------+-----------------------+----------+---------+----------------
+mood_low   | phq2        | always                | 1        | true    | null
+mood_low   | phq9        | phq2_score &gt;= 3       | 2        | false   | phq2
+mood_low   | c_ssrs      | phq9_q9 &gt;= 1          | 3        | false   | phq9
+mood_low   | pss10       | phq2_score &lt; 3        | 2        | false   | phq2
+...
+</pre>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="informant">8. Informant / Collateral System — A True Novel Feature</h2>
+
+<p>No Indian mental-health platform currently has this. It is non-negotiable for bipolar, schizophrenia follow-up, dementia, paediatric, and ADHD diagnostic pathways. Design must respect Indian family dynamics (family involvement is culturally normal) without breaking therapeutic confidentiality (family involvement is sometimes exactly what patient does not want).</p>
+
+<h3>Three-tier linked account model</h3>
+
+<table>
+<thead><tr><th>Tier</th><th>Who</th><th>What they can do</th><th>What they can't see</th></tr></thead>
+<tbody>
+<tr><td><b>L1 — Observation only</b></td><td>Caregiver invited by adult patient</td><td>Submit weekly / monthly observation form. Sees their own submissions.</td><td>No session notes. No assessment results. No appointment history.</td></tr>
+<tr><td><b>L2 — Collateral interview</b></td><td>Informant invited for a specific session</td><td>Join one scheduled collateral interview session (video). Documented separately as "collateral interview", not regular session.</td><td>Not recurring — each session requires fresh invite.</td></tr>
+<tr><td><b>L3 — Caregiver / guardian</b></td><td>Parent of child patient; adult child of dementia patient</td><td>Manages patient account, books appointments, joins sessions. Has own billable caregiver-support appointments.</td><td>—</td></tr>
+</tbody>
+</table>
+
+<h3>Consent and access rules</h3>
+<ul>
+  <li>L1 invitation requires patient to set access level at time of invite, with explicit "You can change or revoke this anytime" notice.</li>
+  <li>L1/L2 access is scoped by <code>linked_account_id</code> + <code>episode_of_care_id</code> — revoked if patient ends the episode.</li>
+  <li>Patient can revoke linked-account access without explanation. Revocation is logged but not explained to the linked party.</li>
+  <li>For L3 on paediatric &lt;12 patients, the guardian IS the account-holder; there is no separate "patient account".</li>
+  <li>For L3 on adolescent 12–17 patients, both accounts exist; disclosure rules follow NMC Telemedicine Guidelines 2020 confidentiality carve-outs (suicidality / abuse / harm-to-others break confidentiality to guardian).</li>
+  <li>If MHP believes L1 collateral is clinically essential (bipolar, schizophrenia) but patient refuses: document refusal in notes, adjust plan accordingly, do not force.</li>
+</ul>
+
+<h3>Data model</h3>
+<pre><span class="c">-- linked_accounts</span>
+id | patient_id | linked_user_id | access_level (L1|L2|L3)
+   | relationship | invited_at | accepted_at | revoked_at
+   | scoped_episode_id (FK → episodes_of_care, nullable for L3)
+
+<span class="c">-- informant_observations  (L1 submissions)</span>
+id | linked_account_id | episode_id | observation_type (weekly_mood | medication_adherence | behaviour_change)
+   | response_json | submitted_at (server ts) | reviewed_by_mhp_at
+</pre>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="populations">9. Special Populations</h2>
+
+<div class="card">
+  <h4>Adult ADHD</h4>
+  <p>ASRS-v1.1 at intake → if positive, book 90-min extended assessment appointment with DIVA-2.0-capable psychologist. Informant (parent / partner) corroboration for childhood symptoms is the gold standard — build L2 collateral interview into the pathway. Always rule out bipolar II, anxiety, sleep disorder as alternatives before diagnosis. Medication decisions live in V2 with proper prescription entity.</p>
+</div>
+<div class="card">
+  <h4>Borderline Personality Disorder (the stealth presentation)</h4>
+  <p>Rarely self-identified. Junior counsellor needs training to spot red flags (history of multiple therapist changes, "difficult" label, intense fear of abandonment, self-harm without suicidal intent, rapid idealization-devaluation cycles). BPD cannot live in Track 2 — requires DBT-trained psychologist, structured between-session coaching windows (not ad-hoc WhatsApp), documented safety plan. If you don't have DBT-trained MHP, refer honestly.</p>
+</div>
+<div class="card">
+  <h4>Bipolar disorder</h4>
+  <p><b>Mood log feature is the highest-value clinical tool of the entire platform.</b> Two fields, 30 seconds, daily WhatsApp prompt: "How are you today? (1 sad ↔ 10 very high) | Sleep last night: ___ hours." MHP sees 3-month trajectory at a glance before each session. Informant (spouse / parent) weekly observation form during high-risk periods — hypomania is universally insight-free. Lithium / valproate level monitoring: recurring task reminder + lab result upload + MHP flag when overdue. V2: lab API integration (Thyrocare, Dr. Lal PathLabs).</p>
+</div>
+<div class="card">
+  <h4>Substance Use Disorders</h4>
+  <p>NDPS Act creates legal sensitivity — platform takes harm-reduction clinical approach, addiction is a medical condition, non-judgmental access. Intake must assess substance, frequency, quantity (AUDIT/DAST), last use, previous detox history, and <b>current withdrawal symptoms</b>. Active alcohol / benzodiazepine withdrawal = medical emergency = Track 5 exit. Platform offers: MI in early change stages, relapse prevention, family psychoeducation, co-occurring management. Does NOT offer: medically-supervised detox or residential rehab.</p>
+</div>
+<div class="card">
+  <h4>Schizophrenia &amp; psychosis (follow-up only — Track 4)</h4>
+  <p>Stable, treatment-adherent, insight-intact patients only. Acute = Track 5. Critical feature: <b>family/caregiver portal (L1)</b> with monthly observation (sleep changes, social withdrawal, medication adherence, unusual behaviour) that flags to MHP on concerning patterns. Assessment tools (PANSS, BPRS) are clinician-administered during video session. Mandatory <code>primary_treating_physician</code> + <code>local_hospital</code> fields.</p>
+</div>
+<div class="card">
+  <h4>Geriatric (60+)</h4>
+  <p>Substantially different across every dimension. PHQ-9 over-detects somatic aging symptoms — use <b>GDS-15</b>. Cognitive screening (MoCA, clinician-administered) standard. Polypharmacy + psychotropics = anticholinergic / fall risk monitoring. Depression often presents as memory / pain / withdrawal, not "sad". <b>Family-assisted onboarding pathway</b> is first-class: son/daughter sets up account, manages appointments, is present in sessions. MHP profile tag: "<code>comfortable_with_geriatric</code>" required for routing. Caregiver burden is frequently the more acute presenting problem — caregiver-support sessions are billable.</p>
+</div>
+<div class="card">
+  <h4>Paediatric &amp; adolescent</h4>
+  <p><b>Consent architecture by age:</b><br>
+  <b>&lt;12:</b> Parent / legal guardian is account holder. Child is identified patient but has no platform access. MHP may meet child alone for rapport but treatment contract is with parents.<br>
+  <b>12–17:</b> Adolescent self-referral allowed with simplified consent + explicit confidentiality exceptions (suicidality, abuse, harm-to-others). Parental consent required for treatment to begin UNLESS adolescent is seeking help related to parental abuse (child protection protocol overrides).<br>
+  Assessment tools change: CDI-2 (depression), SCARED (anxiety), Vanderbilt/SNAP-IV (ADHD), SDQ (behavioural), M-CHAT (autism screen &lt;4y), CRAFFT (substance). Teacher-rated forms require one-time-access-link system (V2). Autism diagnostic assessment is <b>out of scope</b> — platform does post-diagnosis support only. Adolescent eating disorders require medical threshold for in-person referral.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="safety">10. Safety &amp; Crisis Protocol</h2>
+
+<div class="crit-box"><b>This is the single most legally and ethically consequential section of the platform.</b> Every item below is P0 and must be live before the first patient books.</div>
+
+<h3>Always-on safety detection</h3>
+<ul>
+  <li><b>Screen 5 (suicidality screen)</b> fires for every intake, every time. Not conditional on clusters. Not skippable.</li>
+  <li><b>PHQ-9 Q9 ≥ 1</b> auto-triggers C-SSRS screener on next question.</li>
+  <li><b>C-SSRS ideation ≥ 4 OR any behaviour item</b> fires immediate crisis screen + on-call clinician WhatsApp alert.</li>
+  <li><b>Red-flag clusters</b> (psychosis, active withdrawal symptoms) hard-redirect at Screen 3 with no "continue" option.</li>
+  <li><b>Post-intake submission</b> with any safety flag enters <code>clinician_review_queue</code> with SLA &lt;2 hours (not 4). Junior counsellor cannot clear. Senior only.</li>
+</ul>
+
+<h3>Crisis resource screen (always rendered when triggered)</h3>
+<div class="screen-flow">If you or someone you know is in immediate danger:
+
+iCall (Tata Institute of Social Sciences)  · +91 9152987821 · Mon–Sat 8am–10pm
+Vandrevala Foundation Helpline              · 1860-2662-345 · 24×7
+AASRA                                        · +91 9820466726 · 24×7
+NIMHANS Centre for Well Being (Bengaluru)    · 080-26685950
+
+If in physical danger right now:  Dial 112 (India's unified emergency).
+
+Saday commitment: if you'd like a team member to contact you within 1 hour:
+                                           [ Yes, contact me ]</div>
+
+<h3>Safety plan artifact (per patient with any flag)</h3>
+<p>MHP creates a structured safety plan at first session. Stored in <code>safety_plans</code> table: warning signs, internal coping strategies, social contacts for distraction, trusted people to call, professionals to call, making environment safe (means restriction). Patient can view in portal anytime. Version-controlled — every edit creates a new version.</p>
+
+<h3>Escalation SLA</h3>
+<table>
+<thead><tr><th>Flag</th><th>Response SLA</th><th>Who</th></tr></thead>
+<tbody>
+<tr><td>C-SSRS behaviour item positive</td><td>&lt; 30 min</td><td>On-call senior clinician</td></tr>
+<tr><td>C-SSRS ideation level 4–5</td><td>&lt; 2 hours</td><td>Senior clinician or psychiatrist</td></tr>
+<tr><td>C-SSRS ideation 1–3 + other indicators</td><td>&lt; 4 hours</td><td>Senior clinician</td></tr>
+<tr><td>Red-flag cluster (psychosis / withdrawal)</td><td>&lt; 2 hours</td><td>Psychiatrist</td></tr>
+<tr><td>Child protection concern (adolescent intake)</td><td>&lt; 2 hours</td><td>Senior clinician + co-founder consult</td></tr>
+</tbody>
+</table>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="datamodel">11. Data Model — Core Entities</h2>
+
+<p>Starting from the Swasthmind 21-entity model, minus identified gaps, plus the new entities required for the five-track, informant-aware, outcome-tracking architecture.</p>
+
+<h3>V1 entity catalogue</h3>
+
+<table>
+<thead><tr><th>Entity</th><th>Purpose</th><th>Key fields</th><th>New vs Swasthmind</th></tr></thead>
+<tbody>
+<tr><td><code>organizations</code></td><td>Tenant (single-tenant V1, ready for multi-tenant V2)</td><td>id, name, slug, whatsapp_number, msg91_template_ns, razorpay_account_id, timezone, currency</td><td>—</td></tr>
+<tr><td><code>users</code></td><td>All human accounts (patients, MHPs, admin, junior counsellor, linked accounts)</td><td>id, email, phone, role, is_active, mfa_enabled</td><td>—</td></tr>
+<tr><td><code>user_roles</code></td><td>patient · mhp · admin · counsellor · linked_account</td><td>name (enum), permissions (array)</td><td>Added <code>counsellor</code> + <code>linked_account</code></td></tr>
+<tr><td><code>mhps</code></td><td>Clinical provider profile</td><td>user_id, title, specializations, languages_spoken, years_exp, tags (paediatric, geriatric, DBT, etc.), commission_pct, subscription_tier, kyc_status</td><td>Single source of truth — fixes Swasthmind DM-09</td></tr>
+<tr><td><code>mhp_availability</code></td><td>Slot blocks (recurring + one-off overrides)</td><td>mhp_id, weekday, start_time, end_time, session_type, mode (online/offline), valid_from, valid_to</td><td>Rule-based availability, not hand-built slots (fixes FL-08 / G-03)</td></tr>
+<tr><td><code>patients</code></td><td>Patient master record</td><td>user_id, dob, age_band, gender, preferred_language, source, assigned_mhp_id</td><td>—</td></tr>
+<tr><td><b><code>linked_accounts</code></b></td><td>Informant / guardian / caregiver L1/L2/L3</td><td>patient_id, linked_user_id, access_level, relationship, scoped_episode_id, invited_at, accepted_at, revoked_at</td><td><span class="badge badge-green">NEW</span></td></tr>
+<tr><td><b><code>intake_submissions</code></b></td><td>Completed adaptive intake</td><td>patient_id, language, selected_clusters (array), safety_flags (json), triage_outcome (track_1..5 or not_suitable), raw_state (json)</td><td><span class="badge badge-green">NEW</span></td></tr>
+<tr><td><b><code>assessment_tools</code></b></td><td>Tool library (30 tools × versions × languages)</td><td>tool_key, version, language, items (json), scoring_logic (json), thresholds (json), is_clinician, min_age, max_age</td><td><span class="badge badge-green">NEW</span> — fixes DM-08</td></tr>
+<tr><td><b><code>assessment_submissions</code></b></td><td>Patient-completed assessment</td><td>patient_id, tool_version_id (FK), episode_id, responses (json), total_score, subscale_scores (json), severity_label, flags (json), submitted_at (server), is_signed_off</td><td><span class="badge badge-green">NEW</span> — immutable, version-locked</td></tr>
+<tr><td><b><code>episodes_of_care</code></b></td><td>A treatment episode — the clinical container</td><td>patient_id, track (1..5), primary_mhp_id, start_date, end_date, reason_for_closure, primary_treating_physician (external, Track 4), icd_dx_codes (array)</td><td><span class="badge badge-green">NEW</span> — fixes DM-03, groups sessions+notes+assessments+plans</td></tr>
+<tr><td><code>appointments</code></td><td>Single booked session</td><td>patient_id, mhp_id, episode_id, scheduled_at (server), duration, mode, status, booking_channel, price, payment_status, meeting_link, collateral_interview (bool)</td><td>Added <code>episode_id</code> + <code>collateral_interview</code> flag</td></tr>
+<tr><td><b><code>session_notes</code></b></td><td>Signed clinical note (SOAP or template-based)</td><td>appointment_id, mhp_id, subjective, objective, assessment, plan, signed_at, signed_by, edit_history (json), version</td><td><span class="badge badge-green">NEW</span> — fixes FL-Clients gap; immutable after sign</td></tr>
+<tr><td><b><code>safety_plans</code></b></td><td>Structured safety plan per patient</td><td>patient_id, episode_id, warning_signs, coping_strategies, social_distractions, trusted_people, professionals, means_restriction, version, created_by, created_at</td><td><span class="badge badge-green">NEW</span></td></tr>
+<tr><td><b><code>mood_logs</code></b></td><td>Daily mood + sleep (bipolar track)</td><td>patient_id, date, mood_1_10, sleep_hours, note, submitted_at (server)</td><td><span class="badge badge-green">NEW</span></td></tr>
+<tr><td><b><code>informant_observations</code></b></td><td>L1 caregiver submissions</td><td>linked_account_id, episode_id, observation_type, response_json, submitted_at, reviewed_by_mhp_at</td><td><span class="badge badge-green">NEW</span></td></tr>
+<tr><td><code>materials</code></td><td>Psychoeducation / toolkit content (CBT thought records, sleep hygiene sheets, etc.)</td><td>id, title, language, file_url, category, tags</td><td>—</td></tr>
+<tr><td><code>material_dispatches</code></td><td>Material assignment to patient</td><td>material_id, patient_id, assigned_by, assigned_at, delivered_channel (whatsapp/portal), opened_at</td><td>—</td></tr>
+<tr><td><code>payments</code></td><td>Razorpay transactions</td><td>appointment_id, razorpay_order_id, razorpay_payment_id, amount, status, refund_id, refunded_at</td><td>Webhook-reconciled (fixes CTO integration risk)</td></tr>
+<tr><td><code>conversations</code> + <code>messages</code></td><td>WhatsApp inbox</td><td>same as Swasthmind minus read-only; adds <code>agent_reply_enabled: true</code></td><td>Two-way (fixes FL-Conv)</td></tr>
+<tr><td><code>audit_log</code></td><td>Append-only; who did what when</td><td>actor_user_id, action, resource_type, resource_id, before (json), after (json), ip, user_agent, at (server)</td><td><span class="badge badge-green">NEW</span> — day-1 requirement</td></tr>
+<tr><td><code>clinician_review_queue</code></td><td>Intakes pending senior-clinician review</td><td>intake_submission_id, priority (urgent/normal), sla_deadline, assigned_to, resolved_at, outcome</td><td><span class="badge badge-green">NEW</span> — fixes DM-07 / INT-G02</td></tr>
+</tbody>
+</table>
+
+<h3>V2 entities (deferred, keep fields reserved in V1 schema)</h3>
+<ul>
+  <li><code>prescriptions</code> (structured med entity, IT Act Sec 5 digital signature)</li>
+  <li><code>lab_orders</code> + <code>lab_results</code> (Thyrocare / Dr. Lal API)</li>
+  <li><code>referrals</code> (V2 referral partner network)</li>
+  <li><code>abha_links</code> (ABDM / ABHA Health ID)</li>
+  <li><code>group_sessions</code> (DBT skills group, peer-support groups)</li>
+</ul>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="cto">12. CTO Non-Negotiables — Architecture Decisions You Cannot Easily Undo</h2>
+
+<div class="grid-2">
+  <div class="card"><h4>1. Multi-tenant-ready from day 1</h4><p>Single tenant at launch but every table has <code>organization_id</code>. RLS policies scope by it. V2 white-label = config change, not rebuild.</p></div>
+  <div class="card"><h4>2. Role-based access in the first commit</h4><p>Five roles: patient · mhp · admin · counsellor · linked_account. Supabase RLS policies tested with a cross-patient access attempt before launch.</p></div>
+  <div class="card"><h4>3. Immutable clinical data</h4><p>Assessments, notes (post-sign), safety plans — append-only. Edits create new versions. Server timestamps only, never client.</p></div>
+  <div class="card"><h4>4. Audit log from commit #1</h4><p>Not a V2 feature. Append-only table. Every mutation to PHI writes a row. DPDP Section 8(5) requires demonstrable processing records.</p></div>
+  <div class="card"><h4>5. Indian data residency</h4><p>Mumbai region only. Supabase <code>ap-south-1</code>. No US regions even for backups. Vendor DPAs (Razorpay, MSG91, Daily.co) confirmed India-compliant.</p></div>
+  <div class="card"><h4>6. HttpOnly cookies for session tokens</h4><p>Not sessionStorage (Swasthmind's SEC-04 mistake). Supabase Auth default. CSRF token on state-changing requests.</p></div>
+  <div class="card"><h4>7. Field-level encryption for identifiers</h4><p>Phone, Aadhaar (if ever collected — avoid), bank details (MHP payouts). Use pgcrypto or app-layer envelope encryption.</p></div>
+  <div class="card"><h4>8. No PHI in logs — ever</h4><p>Logger redacts name, message body, clinical content. Only user IDs and action types. Every new log statement reviewed.</p></div>
+  <div class="card"><h4>9. Webhook retry + manual reconciliation</h4><p>Razorpay webhook handler with retry + dead-letter queue. Daily reconciliation screen: Razorpay settlements vs. appointments. Fixes Swasthmind G-08 gap and webhook-miss failure mode.</p></div>
+  <div class="card"><h4>10. Hard rate limits on outbound messaging</h4><p>MSG91 per-patient cap (e.g., 3 WhatsApp messages / day). Prevents runaway-loop bills. Set in config, enforced at send time.</p></div>
+  <div class="card"><h4>11. Automated daily backups</h4><p>Supabase point-in-time recovery + nightly pg_dump to encrypted S3 (Mumbai). Quarterly restore drill.</p></div>
+  <div class="card"><h4>12. Error monitoring on day 1</h4><p>Sentry free tier. 20 minutes to set up. Tells you when something breaks before patients do.</p></div>
+</div>
+
+<h3>Enforcing cross-cutting consistency despite Claude-assisted development</h3>
+<div class="warn-box"><b>The Claude-generated code failure mode:</b> each module is correct in isolation but auth handling, error shapes, and transaction boundaries diverge across modules. The fix is an <b>architecture document</b> the developer writes in Week 1 that defines: auth middleware, error response shape, DB transaction rules, PHI redaction rule, naming conventions. Every Claude prompt references it. Weekly code review looks for deviations, not details.</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="stack">13. Stack &amp; Integrations</h2>
+
+<table>
+<thead><tr><th>Layer</th><th>Choice</th><th>Why</th><th>Risk / mitigation</th></tr></thead>
+<tbody>
+<tr><td>Frontend</td><td>Next.js 14 (App Router) + Tailwind + next-intl</td><td>Matches existing codebase patterns (CLAUDE.md); i18n first-class; SSR for SEO</td><td>—</td></tr>
+<tr><td>Backend / DB</td><td>Supabase (Postgres + Auth + RLS + Storage) — Mumbai region</td><td>RLS gives patient-isolation for free; Auth is secure by default; fast to V1</td><td>Vendor lock-in — mitigated by standard Postgres</td></tr>
+<tr><td>Auth</td><td>Supabase Auth (email+OTP + TOTP 2FA for MHP/admin)</td><td>HttpOnly cookies by default; JWT rotation handled</td><td>—</td></tr>
+<tr><td>Video</td><td>Daily.co (or Jitsi self-hosted if budget-tight)</td><td>Native embed; India data-residency optional; 10-min setup; not Google Meet (link breakage, account friction)</td><td>₹ per-minute cost — monitor</td></tr>
+<tr><td>Payments</td><td>Razorpay (primary) + UPI direct fallback. <code>deductions</code> + <code>payouts</code> + <code>earnings_ledger</code> entities modelled on Tealfeed's payment primitives.</td><td>Indian market default; webhook reliability; refund API; Tealfeed scan validated the ledger-column shape (service, buyer, PG charges, net, deductions, coupon, payout status, no-show, refund).</td><td>Reconciliation screen mandatory. Easebuzz reserved as V1.5 fallback gateway (Tealfeed pattern).</td></tr>
+<tr><td>WhatsApp</td><td>MSG91 Business API</td><td>Template management; Indian pricing; reliable delivery</td><td>Meta template 24h approval + 1-update/24h limit — draft templates in Week 1</td></tr>
+<tr><td>SMS fallback</td><td>MSG91 SMS</td><td>Same vendor; fallback when WhatsApp undelivered</td><td>—</td></tr>
+<tr><td>Email</td><td>Resend or AWS SES</td><td>Transactional only (invoices, password reset); not for clinical content</td><td>—</td></tr>
+<tr><td>Error monitoring</td><td>Sentry (free tier)</td><td>20-min setup; catches exceptions</td><td>PHI-redaction hook in event capture</td></tr>
+<tr><td>Analytics</td><td>Plausible or PostHog self-hosted</td><td>Privacy-respecting; no third-party fingerprinting of patients</td><td>—</td></tr>
+<tr><td>AI / LLM</td><td>Claude (Anthropic API) with signed DPA</td><td>Dev assistance + intake analysis (V1.5); de-identified inputs only</td><td>Never send raw PHI to LLM APIs; log every call</td></tr>
+<tr><td>File storage</td><td>Supabase Storage (Mumbai bucket)</td><td>RLS-protected; signed URLs for time-boxed access</td><td>—</td></tr>
+<tr><td>Hosting / CDN</td><td>Cloudflare Pages (existing project uses it)</td><td>Free tier sufficient for V1; India PoPs</td><td>—</td></tr>
+<tr><td>Backups</td><td>Supabase PITR + nightly encrypted pg_dump → S3 Mumbai</td><td>Point-in-time recovery; off-provider copy</td><td>Quarterly restore drill</td></tr>
+</tbody>
+</table>
+
+<h3>Integration-risk fallbacks (every external dependency has one)</h3>
+<ul>
+  <li><b>Razorpay down:</b> patient still books; payment-link retry job runs every 15 min for 24 hrs. Admin can record bank transfer manually.</li>
+  <li><b>MSG91 down:</b> confirmation email sent instead; SMS fallback; in-portal notification.</li>
+  <li><b>Daily.co down:</b> appointment page exposes a Jitsi room link as fallback; patient phone displayed to MHP.</li>
+  <li><b>Supabase auth outage:</b> read-only mode with static FAQ + crisis resources accessible.</li>
+</ul>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="compliance">14. Compliance — DPDP Act 2023 + Telemedicine Practice Guidelines 2020</h2>
+
+<p>HIPAA used only as a benchmark standard, not the regulatory frame. The Indian regulatory stack:</p>
+
+<h3>Digital Personal Data Protection Act 2023 — platform obligations</h3>
+<table>
+<thead><tr><th>Area</th><th>Requirement</th><th>Saday response</th></tr></thead>
+<tbody>
+<tr><td>Lawful basis</td><td>Explicit consent or legitimate use</td><td>Consent captured at intake Screen 6 + stored with IP, user agent, timestamp, language</td></tr>
+<tr><td>Purpose limitation</td><td>Use data only for stated purpose</td><td>Privacy policy enumerates purposes; no secondary use without separate consent</td></tr>
+<tr><td>Data minimization</td><td>Collect only what's needed</td><td>Age band not exact age; first name only in initial intake; Aadhaar never collected</td></tr>
+<tr><td>Children</td><td>Verifiable parental consent &lt;18</td><td>Under-18 path blocks self-referral; guardian account with phone OTP + declaration</td></tr>
+<tr><td>Data principal rights</td><td>Access, correction, erasure, grievance</td><td>Patient portal: download-my-data, correction request, account deletion, grievance officer contact</td></tr>
+<tr><td>Breach notification</td><td>72-hour notification to DPBI</td><td>Incident-response SOP with 72-hour timer</td></tr>
+<tr><td>Data Protection Officer</td><td>If Significant Data Fiduciary</td><td>V1 likely below threshold; monitor volume; appoint when crossed</td></tr>
+<tr><td>Cross-border transfer</td><td>Restricted / whitelisted countries</td><td>Indian servers only; LLM vendor (Anthropic) DPA with India-compatible terms; de-identified inputs only</td></tr>
+</tbody>
+</table>
+
+<h3>Telemedicine Practice Guidelines (NMC 2020) — clinical obligations</h3>
+<table>
+<thead><tr><th>Area</th><th>Requirement</th><th>Saday response</th></tr></thead>
+<tbody>
+<tr><td>Registered practitioner</td><td>Every consult by NMC / RCI / state-council registered professional</td><td>MHP onboarding captures registration number; verified before first consult</td></tr>
+<tr><td>Patient consent</td><td>Explicit, documented</td><td>Telemedicine consent form displayed at first session; checkbox + timestamp stored</td></tr>
+<tr><td>Identification</td><td>Verify patient identity</td><td>Phone OTP + photo ID for first session; re-verify annually</td></tr>
+<tr><td>Medical records</td><td>Maintain records per profession-specific norms</td><td>7-year retention for adults; 21 years for minors per NMC 2020; immutable; encrypted</td></tr>
+<tr><td>Medication boundaries</td><td>Schedule X / NDPS drugs not via telemedicine</td><td>Formulary guardrails in Rx interface (V2); MHP training material (V1)</td></tr>
+<tr><td>Fee disclosure</td><td>Fees declared upfront</td><td>Per-MHP pricing visible before booking</td></tr>
+<tr><td>Emergency protocols</td><td>Clear referral pathways when tele inadequate</td><td>Track 5 emergency referral screen; documented; SOP for junior counsellor</td></tr>
+</tbody>
+</table>
+
+<h3>Legal artifacts to produce (Week 3–4, AI-drafted, medico-legally signed off)</h3>
+<ul>
+  <li>Privacy Policy (DPDP-compliant, English + Hindi)</li>
+  <li>Terms of Service (platform use)</li>
+  <li>Telemedicine Consent Form (per NMC 2020)</li>
+  <li>MHP Service Agreement (commission + subscription + SOP compliance + non-circumvention)</li>
+  <li>Linked-Account Consent (L1/L2/L3 access disclosures)</li>
+  <li>Parental/Guardian Consent (paediatric)</li>
+  <li>Adolescent Simplified Consent (12–17, includes confidentiality exceptions)</li>
+  <li>Grievance Officer Notice</li>
+  <li>Data Retention &amp; Deletion Policy</li>
+</ul>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="ai">15. AI Leverage Playbook — What Claude Does, What You Do</h2>
+
+<p>AI compresses a 12-month build toward 6 months, a 5-person team toward 2, and a ₹5 lakh documentation effort toward ₹50k. The leverage is real but requires a good reviewer.</p>
+
+<h3>A. Technical development</h3>
+<ul>
+  <li>Database schema design + self-critique</li>
+  <li>API contract (endpoints, request/response shape, error codes) before coding</li>
+  <li>Security audit of written routes — paste code, ask for vulnerability review</li>
+  <li>Boilerplate generation (auth middleware, Razorpay webhook, MSG91 integration, RBAC guard)</li>
+  <li>Test-case generation with edge cases — critical for PHQ-9 scoring, payment status, role checks</li>
+  <li>Query optimization as patient volume grows</li>
+</ul>
+
+<h3>B. Clinical → technical translation (your superpower)</h3>
+<ul>
+  <li>Clinical SOP → technical spec — you describe, Claude produces DB fields / API / UI state</li>
+  <li>Assessment scoring + interpretation logic — paste PHQ-9 manual, get pure scoring function</li>
+  <li>Safety protocol implementation — C-SSRS escalation, crisis flagging, safety plan structure</li>
+  <li>SOAP + psychology session note templates for the MHP population</li>
+</ul>
+
+<h3>C. Compliance documentation</h3>
+<ul>
+  <li>DPDP-compliant Privacy Policy (Hindi + English drafts) — you review, lawyer signs off</li>
+  <li>Telemedicine Consent Form (NMC 2020)</li>
+  <li>MHP Service Agreement with non-circumvention</li>
+  <li>Launch compliance checklist for Indian telemed mental-health platform</li>
+</ul>
+
+<h3>D. Content &amp; marketing</h3>
+<ul>
+  <li>Bilingual SEO blog drafts (20 high-intent queries: "anxiety ka ilaj", "depression mein kya karen", etc.)</li>
+  <li>Instagram reel scripts in Hinglish with hooks</li>
+  <li>WhatsApp message templates for Meta submission</li>
+  <li>Patient psychoeducation materials (CBT thought records, breathing guides, sleep hygiene, HI/EN)</li>
+</ul>
+
+<h3>E. Operations</h3>
+<ul>
+  <li>SOP documentation (intake triage, high-risk escalation, MHP cancellation, records request)</li>
+  <li>MHP onboarding orientation script</li>
+  <li>Patient FAQ content (top 20 concerns: "Is this confidential?", "Can I talk in Hindi?", "What if I need medicines?")</li>
+</ul>
+
+<h3>What AI cannot do</h3>
+<ul>
+  <li>Replace medico-legal sign-off on compliance documents</li>
+  <li>Validate production code security it cannot see</li>
+  <li>Make clinical judgment calls (track assignment, escalation decisions, safety plan content for specific patient)</li>
+  <li>Build MHP trust — that's human work</li>
+  <li>Replace real user testing — watch a real person use the intake</li>
+</ul>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="scope">16. MVP Scope Lock — V1 / V1.5 / V2 / V3</h2>
+
+<table>
+<thead><tr><th>Capability</th><th>V1 (0–6 mo)</th><th>V1.5 (6–9 mo)</th><th>V2 (9–18 mo)</th><th>V3 (18+ mo)</th></tr></thead>
+<tbody>
+<tr><td>Adaptive intake (7 screens, EN+HI)</td><td><span class="pill pill-v1">✓</span></td><td>+ Gujarati, Tamil</td><td>+ 4 more languages</td><td>Adaptive follow-up visits (not just intake)</td></tr>
+<tr><td>Care-track triage (all 5)</td><td><span class="pill pill-v1">✓</span></td><td>Refine based on real data</td><td>ML-assisted track suggestion</td><td>—</td></tr>
+<tr><td>Booking + video + notes</td><td><span class="pill pill-v1">✓</span></td><td>Recurring bookings</td><td>Group sessions (DBT skills)</td><td>—</td></tr>
+<tr><td>Assessment library</td><td><span class="pill pill-v1">12 core tools</span></td><td>+ 18 remaining tools (full 30)</td><td>+ Paediatric full battery</td><td>Custom clinic-specific tools</td></tr>
+<tr><td>Safety protocol</td><td><span class="pill pill-v1">✓ &lt;2hr SLA</span></td><td>On-call rotation UI</td><td>Proactive risk modeling</td><td>—</td></tr>
+<tr><td>Material dispatch</td><td><span class="pill pill-v1">✓ static PDF</span></td><td>Video modules</td><td>Interactive self-help programs</td><td>—</td></tr>
+<tr><td>Informant system</td><td><span class="pill pill-v1">L1 only</span></td><td>L2 collateral interviews</td><td>L3 caregiver appointments</td><td>Family therapy workflows</td></tr>
+<tr><td>Mood log (bipolar track)</td><td><span class="pill pill-v1">✓</span></td><td>Trend visualization</td><td>Lab integration (Thyrocare)</td><td>Wearable sync</td></tr>
+<tr><td>WhatsApp (booking + reminders)</td><td><span class="pill pill-v1">✓ templated</span></td><td>Two-way agent reply</td><td>Bot-first booking flow</td><td>—</td></tr>
+<tr><td>Payments (Razorpay + refunds)</td><td><span class="pill pill-v1">✓</span></td><td>Package purchases</td><td>Insurance (if partner available)</td><td>—</td></tr>
+<tr><td>MHP dashboard</td><td><span class="pill pill-v1">Basic (list + revenue)</span></td><td>Utilization, no-show rate</td><td>Commission auto-payout</td><td>—</td></tr>
+<tr><td>Admin console</td><td><span class="pill pill-v1">Basic (users, recon)</span></td><td>Reporting roll-ups</td><td>Multi-tenant white-label</td><td>—</td></tr>
+<tr><td>SEO content</td><td><span class="pill pill-v1">20 articles EN+HI</span></td><td>40 more</td><td>Video content library</td><td>—</td></tr>
+<tr><td>Prescriptions</td><td><span class="pill pill-v2">Out of platform PDF</span></td><td>—</td><td>Structured Rx entity, digital sign</td><td>Pharmacy fulfillment</td></tr>
+<tr><td>ABDM / ABHA</td><td><span class="pill pill-v2">—</span></td><td>—</td><td>✓ once 20+ active patients</td><td>—</td></tr>
+<tr><td>Paediatric &amp; adolescent full pathway</td><td>Adult-proxy only</td><td>V1.5 adolescent self-referral</td><td>Full paediatric battery + teacher portal</td><td>—</td></tr>
+<tr><td>Referral partner network</td><td>Text list only</td><td>Formal network in 3 cities</td><td>Warm handoff API</td><td>—</td></tr>
+<tr><td>Published outcome data</td><td>Internal only</td><td>Internal dashboard</td><td>Public transparency page</td><td>Peer-reviewed publication</td></tr>
+</tbody>
+</table>
+
+<div class="crit-box"><b>Anything not in the V1 column is NOT being built in the first 6 months. Period.</b> Every Tuesday scope-review: any new ask goes into V1.5/V2 unless it breaks P0. The founder's first discipline is saying no.</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="phases">17. 6-Month Phase Plan — Week by Week</h2>
+
+<h3>Phase 0 — Foundation Docs (Week 1, no code)</h3>
+<table>
+<thead><tr><th>#</th><th>Artifact</th><th>Owner</th><th>AI role</th><th>Addresses</th></tr></thead>
+<tbody>
+<tr><td>0.1</td><td><code>prd-v1.md</code> — locked scope + five tracks + personas</td><td>CTO + Co-founder</td><td>Claude drafts from bullets, you red-line clinically</td><td>Scope discipline</td></tr>
+<tr><td>0.2</td><td><code>data-model.md</code> — ERD + Postgres DDL</td><td>Developer</td><td>Claude generates DDL + critiques its own schema</td><td>DM-03, DM-08, DM-10</td></tr>
+<tr><td>0.3</td><td><code>tool-library.json</code> — 12 core tools seed data</td><td>Clinical team</td><td>Claude encodes items + scoring + thresholds</td><td>FL-G04 (Swasthmind assessments broken)</td></tr>
+<tr><td>0.4</td><td><code>intake-spec.md</code> — state machine + cluster routing JSON</td><td>CTO</td><td>Claude writes state transitions from clinical rules</td><td>Adaptive intake novelty</td></tr>
+<tr><td>0.5</td><td><code>architecture.md</code> — auth, error shape, tx rules, PHI redaction, naming</td><td>Developer</td><td>Claude drafts; CTO reviews; every future prompt cites it</td><td>Claude-consistency failure mode</td></tr>
+<tr><td>0.6</td><td>WhatsApp template drafts (booking / reminder / post-session check-in / safety-net)</td><td>Ops</td><td>Claude drafts; submit to Meta Week 2 for 24h approval</td><td>Meta approval lead time</td></tr>
+</tbody>
+</table>
+
+<h3>Phase 1 — Intake Prototype (Week 2)</h3>
+<p>Static HTML + Tailwind + vanilla JS. All 7 screens rendering from locale JSON + cluster_tool_mapping JSON. localStorage persistence. JSON export of completed submission. Runs on a phone, no backend.</p>
+<p><b>Gate:</b> Usable on a phone by a non-technical target-demographic tester.</p>
+
+<h3>Phase 1.5 — User Test (Week 3, half-day)</h3>
+<p>5 people from target demographic (25–40, Tier 2 background, non-clinical). Paper/phone prototype. Silent observation. Watch for: where they pause, what language confuses them, where they want to quit. Revise cluster language. This is the cheapest high-leverage activity in the plan.</p>
+
+<h3>Phase 2 — Backend MVP (Weeks 4–10)</h3>
+<table>
+<thead><tr><th>Week</th><th>Sprint</th><th>Gate opened</th></tr></thead>
+<tbody>
+<tr><td>W4</td><td>Supabase setup · schema migration · RLS policies · Auth (5 roles) · Audit log · Error monitoring (Sentry)</td><td>Trusted identity across all subsequent features</td></tr>
+<tr><td>W5</td><td>Intake submission API · scoring engine as pure module · care-track classifier · clinician_review_queue</td><td>Prototype becomes a real triage pipeline</td></tr>
+<tr><td>W5–6</td><td>Episodes of care · booking flow · Razorpay checkout · webhook handler + retry + reconciliation screen</td><td>Paid bookings work end-to-end</td></tr>
+<tr><td>W6</td><td>MHP availability (rule-based slots) · appointment creation · conflict detection</td><td>Fixes Swasthmind G-03 empty-slot issue</td></tr>
+<tr><td>W7</td><td>Video (Daily.co embed) · waiting room · session start/end logging</td><td>Live consultations</td></tr>
+<tr><td>W7</td><td>SOAP notes · sign + version · edit history</td><td>Fixes FL-Clients gap</td></tr>
+<tr><td>W8</td><td>MSG91: booking confirmation, reminder, post-session check-in templates · SMS fallback · rate limits</td><td>Communications working</td></tr>
+<tr><td>W8</td><td>Materials dispatch (MHP assigns, WhatsApp + portal delivery)</td><td>V1 feature complete</td></tr>
+<tr><td>W9</td><td>Serial assessments scheduler (PHQ-9 weeks 0/2/4/8/12) · mood log · AD8 follow-up · trend charts for MHP</td><td>Outcome data collection begins</td></tr>
+<tr><td>W9</td><td>Linked Accounts v1 (L1 only) · informant observation form · MHP sees submissions</td><td>Novel feature live</td></tr>
+<tr><td>W10</td><td>Admin reconciliation · MHP dashboard · commission + subscription ledger · basic reporting</td><td>Operations unblocked</td></tr>
+</tbody>
+</table>
+
+<h3>Phase 3 — Closed Beta (Weeks 11–14)</h3>
+<ul>
+  <li>Onboard the 2–3 enrolled MHPs + 1 junior counsellor</li>
+  <li>Invite 10–15 patients across Tracks 1–3</li>
+  <li>Watch for: intake drop-off by cluster; track-misclassification; MHP friction; safety-flag false pos/neg; payment reconciliation gaps</li>
+  <li>Daily standup with clinical team; weekly with developer; bi-weekly with co-founder on business metrics</li>
+  <li>One-time medico-legal review of all compliance artifacts (Week 13)</li>
+</ul>
+
+<h3>Phase 4 — Public Launch Prep (Weeks 15–24)</h3>
+<ul>
+  <li>SEO blog engine (20 bilingual articles, AI-drafted, clinician-signed)</li>
+  <li>Instagram / YouTube content pipeline (psychoeducation reels in Hinglish)</li>
+  <li>Linked Accounts L2 (collateral interview sessions)</li>
+  <li>Hindi translation of remaining tool content (use published validated versions only)</li>
+  <li>Paediatric/adolescent pathway (consent architecture + CDI-2 + SCARED + SDQ)</li>
+  <li>Referral partner text list (3–5 in-person centres per metro) for Track 5 handoffs</li>
+  <li>Public launch: Week 24</li>
+</ul>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="teams">18. Team Briefings — Who Owns What</h2>
+
+<h3>You — CTO / Psychiatrist founder</h3>
+<table>
+<thead><tr><th>Phase 0</th><th>Phase 2</th><th>Phase 3–4</th></tr></thead>
+<tbody>
+<tr><td>PRD, intake-spec, safety protocol, track criteria, tool-library clinical review</td><td>Weekly code review (look for cross-cutting consistency, not details); safety flag audit; architecture enforcement</td><td>Clinical supervision; MHP onboarding orientation; medico-legal liaison</td></tr>
+</tbody>
+</table>
+
+<h3>Co-founder — Clinical Psychologist</h3>
+<table>
+<thead><tr><th>Phase 0</th><th>Phase 2</th><th>Phase 3–4</th></tr></thead>
+<tbody>
+<tr><td>Track 1–3 SOPs; SOAP templates; cluster-language red-line; supervision model for junior counsellor</td><td>Review tool-library content; validate SOAP template in UI</td><td>Junior counsellor training; triage calibration across first 30 intakes; DBT protocol if taking BPD cases</td></tr>
+</tbody>
+</table>
+
+<h3>Backend developer (Claude-assisted)</h3>
+<table>
+<thead><tr><th>Phase 0</th><th>Phase 2</th><th>Phase 3–4</th></tr></thead>
+<tbody>
+<tr><td><code>data-model.md</code>, <code>architecture.md</code>, API contracts; Postgres schema reviewed by CTO before CREATE TABLE</td><td>Sprint delivery per phase 2 table; daily error-monitor check; weekly reconciliation drill</td><td>Bug-fixes, performance tuning; V1.5 planning</td></tr>
+</tbody>
+</table>
+
+<h3>Designer (amateur Canva)</h3>
+<table>
+<thead><tr><th>Phase 0</th><th>Phase 1–2</th><th>Phase 3–4</th></tr></thead>
+<tbody>
+<tr><td>Mobile-first (360px base) wireframes for intake screens 0–6; Hindi + English copy blocks</td><td>Patient portal UI; MHP dashboard layout; WhatsApp creative assets; material templates (CBT worksheets etc.)</td><td>SEO blog post templates; Instagram reel templates; brand system maturation</td></tr>
+</tbody>
+</table>
+
+<h3>Junior counsellor (hire before Week 11)</h3>
+<table>
+<thead><tr><th>Phase 3 (beta)</th><th>Phase 4+ (launch)</th></tr></thead>
+<tbody>
+<tr><td>Triage queue review (non-urgent intakes); first-contact calls; track-correction after first conversation; red-flag escalation to senior clinician</td><td>Live triage across all inbound intakes; material dispatch ownership; first-session scheduling; V1.5 two-way WhatsApp agent role</td></tr>
+</tbody>
+</table>
+
+<h3>MHPs (2–3 enrolled, more onboarded at launch)</h3>
+<p>Deliver sessions, complete signed SOAP notes, administer clinician-rated assessments during video (PANSS/BPRS/YMRS/MoCA as indicated), review informant observation submissions weekly for their patients, engage with the adaptive-intake summary before each first session.</p>
+
+<h3>AI (Claude)</h3>
+<p>Every artifact above where "AI role" is listed. Does not sign anything clinical. Does not make escalation decisions. Every output reviewed by the human role that owns the artifact.</p>
+
+<h3>Medico-legal consultant (one-time, Week 13)</h3>
+<p>Signs off on: Privacy Policy, TOS, Telemedicine Consent, MHP Service Agreement, Linked-Account Consent, Paediatric/Adolescent Consent forms. Budget ₹15–25k for this engagement.</p>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="risks">19. Risk Register</h2>
+
+<table>
+<thead><tr><th>ID</th><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th></tr></thead>
+<tbody>
+<tr><td>R-01</td><td>Scope creep consumes the ₹1 lakh budget before V1 ships</td><td><span class="badge badge-red">High</span></td><td><span class="badge badge-red">Critical</span></td><td>Weekly scope review; any new ask = V1.5 by default; CTO has sole veto</td></tr>
+<tr><td>R-02</td><td>Patient safety incident in beta (missed suicidality, mishandled psychosis)</td><td><span class="badge badge-orange">Medium</span></td><td><span class="badge badge-red">Catastrophic</span></td><td>Track 5 hard-exit working before first patient; &lt;2hr clinician SLA; documented escalation protocol; safety plan mandatory; incident response SOP</td></tr>
+<tr><td>R-03</td><td>DPDP / Telemedicine breach or lawsuit</td><td><span class="badge badge-orange">Medium</span></td><td><span class="badge badge-red">Critical</span></td><td>Medico-legal sign-off before launch; India-only data residency; audit log from day 1; 72-hr breach SOP</td></tr>
+<tr><td>R-04</td><td>2–3 enrolled MHPs churn during rough MVP period</td><td><span class="badge badge-orange">Medium</span></td><td><span class="badge badge-orange">High</span></td><td>Weekly founder-MHP touchbase; defer MHP subscription until month 3; honest "we're early, rough edges expected" framing; relationship-first</td></tr>
+<tr><td>R-05</td><td>Developer bus-factor-of-1 (leaves / illness)</td><td><span class="badge badge-orange">Medium</span></td><td><span class="badge badge-red">Critical</span></td><td>Everything in git; architecture doc current; database backups off-provider; CTO has admin credentials independently</td></tr>
+<tr><td>R-06</td><td>Claude-generated code has subtle security vulnerability (auth bypass, SQLi, improper txn)</td><td><span class="badge badge-orange">Medium</span></td><td><span class="badge badge-red">High</span></td><td>Weekly security-audit prompt on critical routes; RLS tested with cross-patient attack; staging environment with production-like data (de-identified)</td></tr>
+<tr><td>R-07</td><td>Payment reconciliation mismatch (Razorpay webhook missed, patient paid but no appt)</td><td><span class="badge badge-orange">Medium</span></td><td><span class="badge badge-orange">High</span></td><td>Webhook retry + dead-letter queue; daily reconciliation screen; admin-visible mismatch alerts</td></tr>
+<tr><td>R-08</td><td>MSG91 / WhatsApp delivery failure or accidental spam loop</td><td><span class="badge badge-orange">Low-Med</span></td><td><span class="badge badge-orange">Medium</span></td><td>Per-patient rate limit at send time; spend alert on MSG91; email + SMS fallback; all templates pre-approved</td></tr>
+<tr><td>R-09</td><td>AI / LLM vendor PHI exposure</td><td><span class="badge badge-orange">Low</span></td><td><span class="badge badge-red">Critical</span></td><td>De-identification before any LLM call; signed DPA with Anthropic; never raw PHI; log every LLM call with payload hash</td></tr>
+<tr><td>R-10</td><td>Pricing assumptions wrong (₹500 psychiatric / ₹800–1200 therapy)</td><td><span class="badge badge-orange">Medium</span></td><td><span class="badge badge-orange">Medium</span></td><td>First 20 patients = price validation cohort; willingness-to-pay survey at intake; ready to revise quarterly</td></tr>
+<tr><td>R-11</td><td>Complex-track patients (BPD, bipolar, SUD) arrive before we have trained MHPs</td><td><span class="badge badge-red">High</span></td><td><span class="badge badge-orange">Medium</span></td><td>Honest Track 3 referral to in-person care if no DBT MHP available; do NOT accept what platform cannot safely treat</td></tr>
+<tr><td>R-12</td><td>Intake language doesn't land for target demographic</td><td><span class="badge badge-orange">Medium</span></td><td><span class="badge badge-orange">Medium</span></td><td>User test with 5 real people Week 3 BEFORE backend work; willingness to rewrite cluster language based on observation</td></tr>
+<tr><td>R-13</td><td>Meta WhatsApp template rejection or slow approval blocks communications</td><td><span class="badge badge-orange">Medium</span></td><td><span class="badge badge-orange">Medium</span></td><td>Submit all launch templates Week 2 (start of 24h approval + 1-per-24h limit); SMS + email fallbacks ready</td></tr>
+<tr><td>R-14</td><td>Target MHP cohort defects to Tealfeed / similar solopreneur platform for booking ergonomics during Saday's rough MVP phase</td><td><span class="badge badge-orange">Medium</span></td><td><span class="badge badge-orange">High</span></td><td>V1 ships the Tealfeed-matched booking polish (availability engine, session packages, earnings ledger, service categories) so MHPs do not feel downgraded; honest "we do booking as well as Tealfeed <em>and</em> clinical as nobody else" framing; weekly MHP pulse check on friction</td></tr>
+<tr><td>R-15</td><td>Feature-creep pressure from MHPs who have used Tealfeed — "can we have drag-calendar / coupons / segment-export now?"</td><td><span class="badge badge-red">High</span></td><td><span class="badge badge-orange">Medium</span></td><td>§2A adoption table is the answer sheet: each Tealfeed feature has a V-target and priority pill. CTO cites this document when saying "yes, V1.5" or "no, clinical reason". Avoids re-arguing each ask.</td></tr>
+<tr><td>R-16</td><td>Accessibility debt silently shipped (inputs without labels, contrast failures) matching Tealfeed's 102-label / 39-contrast issue profile</td><td><span class="badge badge-orange">Medium</span></td><td><span class="badge badge-orange">Medium</span></td><td>Lighthouse + axe-core CI check on every PR from Phase 1; WCAG AA contrast mandatory; every form input has an explicit <code>&lt;label&gt;</code>; designer audits before merge</td></tr>
+</tbody>
+</table>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<h2 id="next">20. Next Actions — This Week</h2>
+
+<div class="ok-box"><b>Three parallel tracks starting today.</b></div>
+
+<table>
+<thead><tr><th>#</th><th>Action</th><th>Owner</th><th>Output</th><th>ETA</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Draft <code>intake-spec.md</code> — state machine, cluster routing config, exit rules, safety thresholds</td><td>Claude + CTO review</td><td>Spec doc in <code>docs/</code></td><td>Today (2 hrs)</td></tr>
+<tr><td>2</td><td>Build the intake HTML prototype (all 7 screens, locale JSON, localStorage, JSON export)</td><td>Claude + CTO review</td><td><code>saday-intake-prototype.html</code> in project root</td><td>Tomorrow (4 hrs)</td></tr>
+<tr><td>3</td><td>Draft <code>data-model.md</code> — Postgres DDL for all V1 entities</td><td>Developer (Claude-assisted)</td><td>DDL file + ERD image</td><td>End of week</td></tr>
+<tr><td>4</td><td>Seed <code>tool-library.json</code> — 12 core tools (PHQ-9, GAD-7, MDQ, ASRS-v1.1, AUDIT-C, PCL-5, OCI-R, MSI-BPD, SCOFF, PSS-10, ISI, C-SSRS) × EN + HI</td><td>Clinical team + Claude</td><td>JSON seed file</td><td>End of week</td></tr>
+<tr><td>5</td><td>Draft WhatsApp templates (booking confirmation, reminder, post-session check-in, safety net) + submit to MSG91/Meta</td><td>Ops</td><td>4 approved templates by W2</td><td>Submit by end of W1</td></tr>
+<tr><td>6</td><td>Write <code>architecture.md</code> (auth, error shape, tx rules, PHI redaction, naming conventions)</td><td>Developer</td><td>Short doc every Claude prompt cites</td><td>End of week</td></tr>
+<tr><td>7</td><td>Identify 5 target-demographic testers (25–40, Tier 2 background) for Week 3 user-test</td><td>CTO / Co-founder</td><td>Contact list + scheduled 30-min slots</td><td>End of week</td></tr>
+</tbody>
+</table>
+
+<h3>Decision to make this week</h3>
+<ul>
+  <li><b>Video vendor:</b> Daily.co (paid per-minute, India-compatible, easy embed) vs Jitsi self-hosted (free, more ops)</li>
+  <li><b>Admin role split:</b> does junior counsellor review EVERY intake, or only non-auto-triaged ones?</li>
+  <li><b>MHP commission tier:</b> single % or track-specific %? (Track 3 complex patients deserve higher take-home)</li>
+  <li><b>Subscription deferral:</b> MHP monthly fee starts month 1, month 3, or only after 10 completed patients?</li>
+  <li><b>Beta cohort size:</b> 10–15 patients or scale to 25 if multiple MHPs ready?</li>
+</ul>
+
+<hr>
+
+<h2>Document Control</h2>
+<table>
+<thead><tr><th>Field</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Version</td><td>1.1 (added §2A Tealfeed synthesis, §2B dual-scan matrix, R-14–R-16, stack payment primitives)</td></tr>
+<tr><td>Compiled</td><td>2026-04-21</td></tr>
+<tr><td>Owner</td><td>Founder / CTO — Saday Wellness</td></tr>
+<tr><td>Sources</td><td>SwasthMind CRM scan (Phases 1–7, Apr 2026, 33 screens / 21 entities / 14 flows) · Tealfeed admin scan (Apr 2026, 45 screens / 11 top-nav modules / Form Builder + Segment Analysis + earnings ledger captured) · CEO strategic review · CTO technical review · Clinical architecture session · Adaptive intake design session · Tool library curation</td></tr>
+<tr><td>Review cadence</td><td>Weekly during Phase 0–2; fortnightly thereafter</td></tr>
+<tr><td>Update triggers</td><td>Scope change · Team change · Regulatory change · Beta learnings</td></tr>
+</tbody>
+</table>
+
+<hr>
+<p style="color:#9ca3af;font-size:11px;text-align:center;margin-top:40px;">Saday Wellness — Master Blueprint — v1.0 — 2026-04-21 — All PHI redacted — For internal team + AI-agent use only</p>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,154 @@
+[
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "Conversations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "My Schedule",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "My Therapists",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "Manual Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "Sessions",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "Assessments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "My Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "Reports",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "Seminars",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "Internships/Career",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "Ecommerce",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "Cancellation & Reschedule Policy",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "Session Follow-ups",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "FAQ & Tutorials",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "Bulk Messages",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "Add Client",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "Sr no",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "My Clients",
+    "feature": "My Clients",
+    "subCapability": "Name",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  }
+]

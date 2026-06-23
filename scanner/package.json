@@ -1,0 +1,26 @@
+{
+  "name": "crm-scanner",
+  "version": "1.1.0",
+  "description": "Playwright agent to systematically scan and document CRM admin panels (Tealfeed, SwasthMind)",
+  "type": "module",
+  "scripts": {
+    "auth": "node scanner.js --crm tealfeed --auth",
+    "phase1": "node scanner.js --crm tealfeed --phase 1",
+    "phase2": "node scanner.js --crm tealfeed --phase 2 --module",
+    "phase2:all": "node scanner.js --crm tealfeed --phase 2 --all-modules",
+    "resume": "node scanner.js --resume",
+    "report": "node report.js --crm tealfeed",
+    "sw:auth": "node scanner.js --crm swasthmind --auth",
+    "sw:phase1": "node scanner.js --crm swasthmind --phase 1",
+    "sw:phase2": "node scanner.js --crm swasthmind --phase 2 --module",
+    "sw:phase2:all": "node scanner.js --crm swasthmind --phase 2 --all-modules",
+    "sw:report": "node report.js --crm swasthmind",
+    "monitor": "node monitor.js",
+    "monitor:report": "node monitor.js --report",
+    "monitor:update": "node monitor.js --update",
+    "monitor:unpause": "node monitor.js --unpause"
+  },
+  "dependencies": {
+    "playwright": "^1.59.1"
+  }
+}

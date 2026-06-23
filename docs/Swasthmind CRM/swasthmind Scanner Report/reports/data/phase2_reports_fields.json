@@ -1,0 +1,542 @@
+[
+  {
+    "entity": "Reports",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Reports",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r5:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Reports",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r6:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Reports",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "Rows per page:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Reports",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r12:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Reports",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "8",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Reports",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-4",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r5:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-4",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r6:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-4",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "Rows per page:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-4",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r12:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-4",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "8",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-4",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-3",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r5:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-3",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r6:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-3",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "Rows per page:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-3",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r12:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-3",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "8",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-3",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-2",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r5:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-2",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r6:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-2",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "Rows per page:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-2",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r12:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-2",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "8",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-2",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-1",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r5:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-1",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r6:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-1",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "Rows per page:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-1",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r12:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-1",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "8",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-1",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-46",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r5:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-46",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r6:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-46",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "Rows per page:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-46",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r12:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-46",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "8",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-46",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-45",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r5:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-45",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r6:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-45",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "Rows per page:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-45",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r12:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-45",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "8",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-45",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-44",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r5:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-44",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r6:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-44",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "Rows per page:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-44",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r12:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-44",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "8",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-44",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "​",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-43",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r5:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-43",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r6:",
+    "type": "date",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-43",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "Rows per page:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-43",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": ":r12:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-43",
+    "notes": ""
+  },
+  {
+    "entity": "Reports",
+    "field": "8",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "SS-43",
+    "notes": ""
+  }
+]

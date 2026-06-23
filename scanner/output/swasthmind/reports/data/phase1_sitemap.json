@@ -1,0 +1,493 @@
+{
+  "generatedAt": "2026-04-20T18:04:45.546Z",
+  "sitemap": [
+    {
+      "index": 1,
+      "module": "Home",
+      "submenu": "—",
+      "screen": "Dashboard",
+      "url": "https://crm.swasthmind.com/",
+      "purpose": "",
+      "screenshot": "phase1__00_dashboard.png",
+      "navPath": []
+    },
+    {
+      "index": 2,
+      "module": "Conversations",
+      "submenu": "—",
+      "screen": "Conversations",
+      "url": "https://crm.swasthmind.com/my-conversations",
+      "purpose": "",
+      "screenshot": "phase1__02_conversations.png",
+      "navPath": [
+        "Conversations"
+      ]
+    },
+    {
+      "index": 3,
+      "module": "My Schedule",
+      "submenu": "—",
+      "screen": "My Schedule",
+      "url": "https://crm.swasthmind.com/my-schedule",
+      "purpose": "",
+      "screenshot": "phase1__03_my_schedule.png",
+      "navPath": [
+        "My Schedule"
+      ]
+    },
+    {
+      "index": 4,
+      "module": "My Therapists",
+      "submenu": "—",
+      "screen": "My Therapists",
+      "url": "https://crm.swasthmind.com/my-therapists",
+      "purpose": "",
+      "screenshot": "phase1__04_my_therapists.png",
+      "navPath": [
+        "My Therapists"
+      ]
+    },
+    {
+      "index": 5,
+      "module": "Manual Booking",
+      "submenu": "—",
+      "screen": "Manual Booking",
+      "url": "https://crm.swasthmind.com/manual-booking",
+      "purpose": "",
+      "screenshot": "phase1__05_manual_booking.png",
+      "navPath": [
+        "Manual Booking"
+      ]
+    },
+    {
+      "index": 6,
+      "module": "Manual Booking",
+      "submenu": "New Booking",
+      "screen": "New Booking",
+      "url": "https://crm.swasthmind.com/manual-booking",
+      "purpose": "",
+      "screenshot": "phase1__06_manual_booking_new_booking.png",
+      "navPath": [
+        "Manual Booking",
+        "New Booking"
+      ]
+    },
+    {
+      "index": 7,
+      "module": "Manual Booking",
+      "submenu": "Appointment History",
+      "screen": "Appointment History",
+      "url": "https://crm.swasthmind.com/manual-booking",
+      "purpose": "",
+      "screenshot": "phase1__07_manual_booking_appointment_history.png",
+      "navPath": [
+        "Manual Booking",
+        "Appointment History"
+      ]
+    },
+    {
+      "index": 8,
+      "module": "Upcoming Sessions",
+      "submenu": "—",
+      "screen": "Not Found",
+      "url": "https://crm.swasthmind.com/upcoming-sessions",
+      "purpose": "",
+      "screenshot": "phase1__08_upcoming_sessions.png",
+      "navPath": [
+        "Upcoming Sessions"
+      ]
+    },
+    {
+      "index": 9,
+      "module": "Completed Sessions",
+      "submenu": "—",
+      "screen": "Completed Sessions",
+      "url": "https://crm.swasthmind.com/completed-sessions",
+      "purpose": "",
+      "screenshot": "phase1__09_completed_sessions.png",
+      "navPath": [
+        "Completed Sessions"
+      ]
+    },
+    {
+      "index": 10,
+      "module": "Session Packages",
+      "submenu": "—",
+      "screen": "Session Packages",
+      "url": "https://crm.swasthmind.com/session-packages",
+      "purpose": "",
+      "screenshot": "phase1__10_session_packages.png",
+      "navPath": [
+        "Session Packages"
+      ]
+    },
+    {
+      "index": 11,
+      "module": "Session Discounts",
+      "submenu": "—",
+      "screen": "Session Discounts",
+      "url": "https://crm.swasthmind.com/session-discounts",
+      "purpose": "",
+      "screenshot": "phase1__11_session_discounts.png",
+      "navPath": [
+        "Session Discounts"
+      ]
+    },
+    {
+      "index": 12,
+      "module": "Purchased Packages",
+      "submenu": "—",
+      "screen": "Not Found",
+      "url": "https://crm.swasthmind.com/purchased-packages",
+      "purpose": "",
+      "screenshot": "phase1__12_purchased_packages.png",
+      "navPath": [
+        "Purchased Packages"
+      ]
+    },
+    {
+      "index": 13,
+      "module": "Automated Reports",
+      "submenu": "—",
+      "screen": "Not Found",
+      "url": "https://crm.swasthmind.com/automated-reports",
+      "purpose": "",
+      "screenshot": "phase1__13_automated_reports.png",
+      "navPath": [
+        "Automated Reports"
+      ]
+    },
+    {
+      "index": 14,
+      "module": "Manual Assessments",
+      "submenu": "—",
+      "screen": "Manual Assessments",
+      "url": "https://crm.swasthmind.com/my-schedule",
+      "purpose": "",
+      "screenshot": "phase1__14_manual_assessments.png",
+      "navPath": [
+        "Manual Assessments"
+      ]
+    },
+    {
+      "index": 15,
+      "module": "My Clients",
+      "submenu": "—",
+      "screen": "My Clients",
+      "url": "https://crm.swasthmind.com/my-clients",
+      "purpose": "",
+      "screenshot": "phase1__15_my_clients.png",
+      "navPath": [
+        "My Clients"
+      ]
+    },
+    {
+      "index": 16,
+      "module": "Reports",
+      "submenu": "—",
+      "screen": "Reports",
+      "url": "https://crm.swasthmind.com/my-report",
+      "purpose": "",
+      "screenshot": "phase1__16_reports.png",
+      "navPath": [
+        "Reports"
+      ]
+    },
+    {
+      "index": 17,
+      "module": "Reports",
+      "submenu": "SS-4",
+      "screen": "SS-4",
+      "url": "https://crm.swasthmind.com/my-report",
+      "purpose": "",
+      "screenshot": "phase1__17_reports_ss_4.png",
+      "navPath": [
+        "Reports",
+        "SS-4"
+      ]
+    },
+    {
+      "index": 18,
+      "module": "Reports",
+      "submenu": "SS-3",
+      "screen": "SS-3",
+      "url": "https://crm.swasthmind.com/my-report",
+      "purpose": "",
+      "screenshot": "phase1__18_reports_ss_3.png",
+      "navPath": [
+        "Reports",
+        "SS-3"
+      ]
+    },
+    {
+      "index": 19,
+      "module": "Reports",
+      "submenu": "SS-2",
+      "screen": "SS-2",
+      "url": "https://crm.swasthmind.com/my-report",
+      "purpose": "",
+      "screenshot": "phase1__19_reports_ss_2.png",
+      "navPath": [
+        "Reports",
+        "SS-2"
+      ]
+    },
+    {
+      "index": 20,
+      "module": "Reports",
+      "submenu": "SS-1",
+      "screen": "SS-1",
+      "url": "https://crm.swasthmind.com/my-report",
+      "purpose": "",
+      "screenshot": "phase1__20_reports_ss_1.png",
+      "navPath": [
+        "Reports",
+        "SS-1"
+      ]
+    },
+    {
+      "index": 21,
+      "module": "Reports",
+      "submenu": "SS-46",
+      "screen": "SS-46",
+      "url": "https://crm.swasthmind.com/my-report",
+      "purpose": "",
+      "screenshot": "phase1__21_reports_ss_46.png",
+      "navPath": [
+        "Reports",
+        "SS-46"
+      ]
+    },
+    {
+      "index": 22,
+      "module": "Reports",
+      "submenu": "SS-45",
+      "screen": "SS-45",
+      "url": "https://crm.swasthmind.com/my-report",
+      "purpose": "",
+      "screenshot": "phase1__22_reports_ss_45.png",
+      "navPath": [
+        "Reports",
+        "SS-45"
+      ]
+    },
+    {
+      "index": 23,
+      "module": "Reports",
+      "submenu": "SS-44",
+      "screen": "SS-44",
+      "url": "https://crm.swasthmind.com/my-report",
+      "purpose": "",
+      "screenshot": "phase1__23_reports_ss_44.png",
+      "navPath": [
+        "Reports",
+        "SS-44"
+      ]
+    },
+    {
+      "index": 24,
+      "module": "Reports",
+      "submenu": "SS-43",
+      "screen": "SS-43",
+      "url": "https://crm.swasthmind.com/my-report",
+      "purpose": "",
+      "screenshot": "phase1__24_reports_ss_43.png",
+      "navPath": [
+        "Reports",
+        "SS-43"
+      ]
+    },
+    {
+      "index": 25,
+      "module": "Seminars",
+      "submenu": "—",
+      "screen": "Seminars",
+      "url": "https://crm.swasthmind.com/seminars",
+      "purpose": "",
+      "screenshot": "phase1__25_seminars.png",
+      "navPath": [
+        "Seminars"
+      ]
+    },
+    {
+      "index": 26,
+      "module": "Job Listings",
+      "submenu": "—",
+      "screen": "Job Listings",
+      "url": "https://crm.swasthmind.com/job-listings",
+      "purpose": "",
+      "screenshot": "phase1__26_job_listings.png",
+      "navPath": [
+        "Job Listings"
+      ]
+    },
+    {
+      "index": 27,
+      "module": "Applications",
+      "submenu": "—",
+      "screen": "Applications",
+      "url": "https://crm.swasthmind.com/job-applications",
+      "purpose": "",
+      "screenshot": "phase1__27_applications.png",
+      "navPath": [
+        "Applications"
+      ]
+    },
+    {
+      "index": 28,
+      "module": "Ecommerce",
+      "submenu": "—",
+      "screen": "Not Found",
+      "url": "https://crm.swasthmind.com/ecommerce",
+      "purpose": "",
+      "screenshot": "phase1__28_ecommerce.png",
+      "navPath": [
+        "Ecommerce"
+      ]
+    },
+    {
+      "index": 29,
+      "module": "Cancellation & Reschedule",
+      "submenu": "—",
+      "screen": "Not Found",
+      "url": "https://crm.swasthmind.com/cancellation-reschedule",
+      "purpose": "",
+      "screenshot": "phase1__29_cancellation_reschedule.png",
+      "navPath": [
+        "Cancellation & Reschedule"
+      ]
+    },
+    {
+      "index": 30,
+      "module": "Manage Flows",
+      "submenu": "—",
+      "screen": "Not Found",
+      "url": "https://crm.swasthmind.com/manage-flows",
+      "purpose": "",
+      "screenshot": "phase1__30_manage_flows.png",
+      "navPath": [
+        "Manage Flows"
+      ]
+    },
+    {
+      "index": 31,
+      "module": "Submissions",
+      "submenu": "—",
+      "screen": "Not Found",
+      "url": "https://crm.swasthmind.com/submissions",
+      "purpose": "",
+      "screenshot": "phase1__31_submissions.png",
+      "navPath": [
+        "Submissions"
+      ]
+    },
+    {
+      "index": 32,
+      "module": "Message Templates",
+      "submenu": "—",
+      "screen": "Please select a bulk message pack and proceed to payment via the My Profile → Subscription → Feature tab.",
+      "url": "https://crm.swasthmind.com/message-templates",
+      "purpose": "",
+      "screenshot": "phase1__32_message_templates.png",
+      "navPath": [
+        "Message Templates"
+      ]
+    },
+    {
+      "index": 33,
+      "module": "Message Logs",
+      "submenu": "—",
+      "screen": "Message Logs",
+      "url": "https://crm.swasthmind.com/message-logs",
+      "purpose": "",
+      "screenshot": "phase1__33_message_logs.png",
+      "navPath": [
+        "Message Logs"
+      ]
+    },
+    {
+      "index": 34,
+      "module": "Bulk Message Plans",
+      "submenu": "—",
+      "screen": "Not Found",
+      "url": "https://crm.swasthmind.com/bulk-message-plans",
+      "purpose": "",
+      "screenshot": "phase1__34_bulk_message_plans.png",
+      "navPath": [
+        "Bulk Message Plans"
+      ]
+    },
+    {
+      "index": 35,
+      "module": "Receptionists",
+      "submenu": "—",
+      "screen": "Receptionists",
+      "url": "https://crm.swasthmind.com/receptionists",
+      "purpose": "",
+      "screenshot": "phase1__35_receptionists.png",
+      "navPath": [
+        "Receptionists"
+      ]
+    },
+    {
+      "index": 36,
+      "module": "Accountants",
+      "submenu": "—",
+      "screen": "Accountants",
+      "url": "https://crm.swasthmind.com/accountants",
+      "purpose": "",
+      "screenshot": "phase1__36_accountants.png",
+      "navPath": [
+        "Accountants"
+      ]
+    },
+    {
+      "index": 37,
+      "module": "Co-Admins",
+      "submenu": "—",
+      "screen": "Co-Admins",
+      "url": "https://crm.swasthmind.com/co-admins",
+      "purpose": "",
+      "screenshot": "phase1__37_co_admins.png",
+      "navPath": [
+        "Co-Admins"
+      ]
+    },
+    {
+      "index": 38,
+      "module": "Branch Admins",
+      "submenu": "—",
+      "screen": "Branch Admins",
+      "url": "https://crm.swasthmind.com/branch-admins",
+      "purpose": "",
+      "screenshot": "phase1__38_branch_admins.png",
+      "navPath": [
+        "Branch Admins"
+      ]
+    },
+    {
+      "index": 39,
+      "module": "Branches",
+      "submenu": "—",
+      "screen": "Branches",
+      "url": "https://crm.swasthmind.com/branches",
+      "purpose": "",
+      "screenshot": "phase1__39_branches.png",
+      "navPath": [
+        "Branches"
+      ]
+    },
+    {
+      "index": 40,
+      "module": "Access Control",
+      "submenu": "—",
+      "screen": "Access Control",
+      "url": "https://crm.swasthmind.com/rbac-config",
+      "purpose": "",
+      "screenshot": "phase1__40_access_control.png",
+      "navPath": [
+        "Access Control"
+      ]
+    }
+  ]
+}

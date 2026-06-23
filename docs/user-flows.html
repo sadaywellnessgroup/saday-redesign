@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saday Wellness — User Flows</title>
+<style>
+  :root {
+    --purple: #5B2A86;
+    --purple-light: #7C3AAD;
+    --purple-pale: #F3EDF9;
+    --teal: #0D9488;
+    --teal-pale: #E6FAF8;
+    --amber: #D97706;
+    --amber-pale: #FEF3C7;
+    --red: #DC2626;
+    --red-pale: #FEF2F2;
+    --green: #059669;
+    --green-pale: #ECFDF5;
+    --blue: #2563EB;
+    --blue-pale: #EFF6FF;
+    --gray: #374151;
+    --gray-light: #9CA3AF;
+    --border: #E5E7EB;
+    --bg: #F6F4F9;
+    --white: #FFFFFF;
+    --text: #111827;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* ── Sidebar ── */
+  .sidebar {
+    position: fixed; top: 0; left: 0;
+    width: 220px; height: 100vh;
+    background: #1A0533;
+    overflow-y: auto;
+    z-index: 100;
+    display: flex; flex-direction: column;
+  }
+  .sidebar-brand {
+    padding: 20px 16px 16px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  .sidebar-brand .logo {
+    display: flex; align-items: center; gap: 8px; margin-bottom: 4px;
+  }
+  .sidebar-brand .logo-icon {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--purple-light);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 14px;
+  }
+  .sidebar-brand b { color: #F1F5F9; font-size: 13px; }
+  .sidebar-brand span { color: #64748B; font-size: 10px; display: block; }
+  .sidebar nav { padding: 12px 0; flex: 1; }
+  .sidebar nav a {
+    display: block; color: #94A3B8; font-size: 11.5px;
+    padding: 6px 16px; text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: all .15s;
+  }
+  .sidebar nav a:hover,
+  .sidebar nav a.active {
+    color: #fff; background: rgba(255,255,255,.06);
+    border-left-color: var(--purple-light);
+  }
+  .sidebar nav .section-label {
+    color: #475569; font-size: 9.5px; text-transform: uppercase;
+    letter-spacing: .08em; padding: 14px 16px 4px;
+  }
+
+  /* ── Main ── */
+  main { margin-left: 220px; padding: 32px 40px 80px; }
+
+  .page-header { margin-bottom: 32px; }
+  .page-header h1 { font-size: 22px; font-weight: 800; color: #0F172A; margin-bottom: 4px; }
+  .page-header p { color: var(--gray-light); font-size: 12.5px; }
+  .page-header .tag {
+    display: inline-block; background: var(--purple-pale);
+    color: var(--purple); font-size: 10.5px; font-weight: 600;
+    padding: 2px 8px; border-radius: 4px; margin-right: 6px; margin-top: 8px;
+  }
+
+  /* ── Flow section ── */
+  .flow-section {
+    background: var(--white); border-radius: 10px;
+    border: 1px solid var(--border);
+    margin-bottom: 28px; overflow: hidden;
+  }
+  .flow-header {
+    display: flex; align-items: center; gap: 12px;
+    padding: 16px 20px; border-bottom: 1px solid var(--border);
+  }
+  .flow-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0;
+  }
+  .flow-header h2 { font-size: 15px; font-weight: 700; color: #0F172A; }
+  .flow-header p { font-size: 11.5px; color: var(--gray-light); margin-top: 1px; }
+  .flow-body { padding: 20px; }
+
+  /* ── Flow lane ── */
+  .flow-lane {
+    display: flex; flex-direction: column; gap: 0;
+    position: relative;
+  }
+
+  .flow-step {
+    display: flex; align-items: flex-start; gap: 14px;
+    position: relative; padding-bottom: 0;
+  }
+
+  /* connector line */
+  .flow-step:not(:last-child) .step-left::after {
+    content: '';
+    position: absolute;
+    left: 14px; top: 30px;
+    width: 2px;
+    bottom: 0;
+    background: var(--border);
+    z-index: 0;
+  }
+
+  .step-left {
+    display: flex; flex-direction: column; align-items: center;
+    position: relative; width: 30px; flex-shrink: 0;
+  }
+
+  .step-num {
+    width: 30px; height: 30px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700;
+    z-index: 1; position: relative; flex-shrink: 0;
+  }
+
+  .step-connector {
+    width: 2px; flex: 1; min-height: 24px;
+    background: var(--border);
+  }
+
+  .step-content {
+    flex: 1; padding-bottom: 20px;
+  }
+
+  .step-label {
+    font-size: 13px; font-weight: 600; color: #0F172A;
+    margin-bottom: 4px;
+  }
+  .step-desc { font-size: 11.5px; color: var(--gray); line-height: 1.55; }
+
+  .step-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+  .chip {
+    font-size: 10.5px; padding: 2px 8px; border-radius: 4px;
+    font-weight: 500;
+  }
+  .chip-screen { background: #EFF6FF; color: #1D4ED8; }
+  .chip-action { background: #F0FDF4; color: #15803D; }
+  .chip-warn { background: #FEF3C7; color: #92400E; }
+  .chip-danger { background: #FEF2F2; color: #B91C1C; }
+  .chip-info { background: #F5F3FF; color: #5B21B6; }
+  .chip-gray { background: #F3F4F6; color: #374151; }
+
+  /* branch / fork */
+  .branch-block {
+    background: #FAFAFA; border: 1px solid var(--border);
+    border-radius: 6px; padding: 10px 12px;
+    margin-top: 8px; font-size: 11.5px;
+  }
+  .branch-block strong { display: block; font-size: 11px; color: var(--gray-light); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+  .branch-row { display: flex; align-items: baseline; gap: 6px; margin-bottom: 5px; }
+  .branch-row:last-child { margin-bottom: 0; }
+  .branch-cond {
+    font-size: 10.5px; font-weight: 700; padding: 1px 6px;
+    border-radius: 3px; white-space: nowrap;
+  }
+  .cond-y { background: #DCFCE7; color: #166534; }
+  .cond-n { background: #FEE2E2; color: #991B1B; }
+  .cond-a { background: #DBEAFE; color: #1E40AF; }
+  .cond-b { background: #FEF3C7; color: #92400E; }
+  .cond-c { background: #F3E8FF; color: #6B21A8; }
+
+  /* safety callout */
+  .safety-box {
+    background: #FEF2F2; border: 1px solid #FCA5A5;
+    border-left: 4px solid var(--red);
+    border-radius: 6px; padding: 10px 14px; margin-top: 8px;
+    font-size: 11.5px;
+  }
+  .safety-box strong { color: var(--red); font-size: 11px; text-transform: uppercase; letter-spacing: .04em; display: block; margin-bottom: 4px; }
+
+  /* role color themes */
+  .theme-patient .flow-avatar { background: #EDE9FE; }
+  .theme-patient .step-num { background: #EDE9FE; color: var(--purple); }
+  .theme-patient .flow-header { background: #FDFCFF; }
+
+  .theme-psychiatrist .flow-avatar { background: #DBEAFE; }
+  .theme-psychiatrist .step-num { background: #DBEAFE; color: #1E40AF; }
+  .theme-psychiatrist .flow-header { background: #F8FBFF; }
+
+  .theme-psychologist .flow-avatar { background: #D1FAE5; }
+  .theme-psychologist .step-num { background: #D1FAE5; color: #065F46; }
+  .theme-psychologist .flow-header { background: #F6FFFC; }
+
+  .theme-admin .flow-avatar { background: #FEE2E2; }
+  .theme-admin .step-num { background: #FEE2E2; color: #991B1B; }
+  .theme-admin .flow-header { background: #FFFBFB; }
+
+  /* track badges */
+  .track-badge {
+    display: inline-flex; align-items: center;
+    font-size: 10.5px; font-weight: 700;
+    padding: 2px 8px; border-radius: 4px; margin: 2px;
+  }
+  .t1 { background: #DBEAFE; color: #1E40AF; }
+  .t2 { background: #D1FAE5; color: #065F46; }
+  .t3 { background: #FEF3C7; color: #92400E; }
+  .t4 { background: #FFEDD5; color: #9A3412; }
+  .t5 { background: #FEE2E2; color: #991B1B; }
+
+  /* two-col grid for sub-sections */
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  @media (max-width: 860px) { .grid2 { grid-template-columns: 1fr; } }
+
+  .sub-card {
+    background: #FAFAFA; border: 1px solid var(--border);
+    border-radius: 8px; padding: 14px;
+  }
+  .sub-card h4 { font-size: 12px; font-weight: 700; color: #0F172A; margin-bottom: 10px; }
+
+  /* divider between new/returning inside patient section */
+  .variant-tabs { display: flex; gap: 0; margin-bottom: 20px; }
+  .variant-tab {
+    flex: 1; padding: 8px 12px; text-align: center;
+    font-size: 11.5px; font-weight: 600;
+    border: 1px solid var(--border); cursor: pointer;
+    background: #F9FAFB; color: var(--gray-light);
+  }
+  .variant-tab:first-child { border-radius: 6px 0 0 6px; }
+  .variant-tab:last-child { border-radius: 0 6px 6px 0; border-left: none; }
+  .variant-tab.active { background: var(--purple-pale); color: var(--purple); border-color: var(--purple); z-index: 1; }
+
+  .variant-panel { display: none; }
+  .variant-panel.active { display: block; }
+
+  /* timeline decoration */
+  .timeline-end {
+    display: flex; align-items: center; gap: 8px;
+    margin-top: 4px; padding-top: 4px;
+    border-top: 1px dashed var(--border);
+    color: var(--gray-light); font-size: 11px;
+  }
+  .timeline-end .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
+
+  /* ── Legend ── */
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    padding: 14px 20px; background: #FAFAFA;
+    border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--gray);
+  }
+  .legend-item { display: flex; align-items: center; gap: 5px; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ SIDEBAR ═══════════════════════════════ -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="logo">
+      <div class="logo-icon">🌿</div>
+      <b>Saday Wellness</b>
+    </div>
+    <span>User Flow Specification · v1.0</span>
+  </div>
+  <nav>
+    <div class="section-label">Patient</div>
+    <a href="#new-user">New User (Patient)</a>
+    <a href="#returning-user">Returning User (Patient)</a>
+    <div class="section-label">Clinician</div>
+    <a href="#psychiatrist">Psychiatrist</a>
+    <a href="#psychologist">Psychologist</a>
+    <div class="section-label">Operations</div>
+    <a href="#admin">Main Admin</a>
+    <div class="section-label">Reference</div>
+    <a href="#tracks">Care Track Key</a>
+    <a href="#shared-screens">Shared Screens</a>
+  </nav>
+</aside>
+
+<!-- ═══════════════════════════════ MAIN ═══════════════════════════════ -->
+<main>
+
+  <div class="page-header">
+    <h1>User Flow Specification</h1>
+    <p>End-to-end journeys for every actor on the Saday Wellness platform</p>
+    <span class="tag">Phase 0 → Phase 2</span>
+    <span class="tag">5 Roles</span>
+    <span class="tag">Action Plan v1.0</span>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       1 · NEW USER (PATIENT)
+  ══════════════════════════════════════════ -->
+  <div class="flow-section theme-patient" id="new-user">
+    <div class="flow-header">
+      <div class="flow-avatar">🆕</div>
+      <div>
+        <h2>New User — Patient</h2>
+        <p>First visit · no existing account · never used the platform</p>
+      </div>
+    </div>
+    <div class="flow-body">
+
+      <div class="flow-lane">
+
+        <!-- STEP 1 -->
+        <div class="flow-step">
+          <div class="step-left">
+            <div class="step-num">1</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-label">Landing / Discovery</div>
+            <div class="step-desc">User arrives via organic search, referral link, or WhatsApp share card. Sees hero + value prop.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Home / Landing</span>
+              <span class="chip chip-action">CTA: "Start Healing" or "Talk to Someone"</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="flow-step">
+          <div class="step-left">
+            <div class="step-num">2</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-label">Language Selection</div>
+            <div class="step-desc">User picks English or Hindi. Persisted to localStorage and used throughout intake.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen 0: Welcome</span>
+              <span class="chip chip-gray">EN / HI toggle</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="flow-step">
+          <div class="step-left">
+            <div class="step-num">3</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-label">Who Is This For?</div>
+            <div class="step-desc">User states whether they are seeking help for themselves, their child, or someone else (informant linkage triggered later).</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen 1: Who-Is-This-For</span>
+            </div>
+            <div class="branch-block">
+              <strong>Branch</strong>
+              <div class="branch-row"><span class="branch-cond cond-a">Myself</span> → Continue intake as primary patient</div>
+              <div class="branch-row"><span class="branch-cond cond-b">My Child / Family</span> → Flag for informant / guardian consent later (Screen 6)</div>
+              <div class="branch-row"><span class="branch-cond cond-c">Someone Else</span> → Redirect: suggest they share the link with that person</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="flow-step">
+          <div class="step-left">
+            <div class="step-num">4</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-label">Age Band</div>
+            <div class="step-desc">Determines eligibility and appropriate track. Under-18 requires guardian consent.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen 2: Age Band</span>
+            </div>
+            <div class="branch-block">
+              <strong>Branch</strong>
+              <div class="branch-row"><span class="branch-cond cond-a">18–60</span> → Standard adult intake continues</div>
+              <div class="branch-row"><span class="branch-cond cond-b">Under 18</span> → Guardian consent screen injected before Screen 6</div>
+              <div class="branch-row"><span class="branch-cond cond-c">60+</span> → Flag for geriatric considerations; Track 2 preferred MHPs surfaced</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 5 -->
+        <div class="flow-step">
+          <div class="step-left">
+            <div class="step-num">5</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-label">Symptom Clusters</div>
+            <div class="step-desc">Adaptive multi-select of concern areas (sleep, mood, anxiety, relationships, substance, etc.). Cluster routing logic runs in real-time. Red-flag cluster triggers Track 5 short-circuit immediately.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen 3: Symptom Clusters</span>
+              <span class="chip chip-action">Adaptive — hides irrelevant clusters</span>
+            </div>
+            <div class="safety-box">
+              <strong>🔴 Safety Short-Circuit</strong>
+              If user selects "thoughts of self-harm / suicide" cluster → skip to C-SSRS probe (Screen 5b) immediately. Positive C-SSRS → Crisis Resources screen with Vandrevala + iCall. Do NOT proceed to booking.
+            </div>
+            <div class="step-chips" style="margin-top:8px">
+              <span class="chip chip-danger">C-SSRS positive → Track 5 · Crisis</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 6 -->
+        <div class="flow-step">
+          <div class="step-left">
+            <div class="step-num">6</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-label">Duration &amp; Impact</div>
+            <div class="step-desc">How long, how much it's affecting work / relationships. Refines track severity.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen 4: Duration / Impact</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 7 -->
+        <div class="flow-step">
+          <div class="step-left">
+            <div class="step-num">7</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-label">Contextual Questions</div>
+            <div class="step-desc">Short adaptive follow-ups based on clusters selected (e.g., PHQ-2 bridging items for mood; AUDIT-C for substance). EN + HI culturally adapted phrasing.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen 5: Contextual Questions</span>
+              <span class="chip chip-info">Tools: PHQ-2, AUDIT-C, ISI snippets</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 8 -->
+        <div class="flow-step">
+          <div class="step-left">
+            <div class="step-num">8</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-label">Consent + Summary</div>
+            <div class="step-desc">Displays recommended track + brief "what happens next." Collects: Privacy Policy consent, Telemed consent, (if under-18: Guardian consent). User creates account at this point — email + OTP only.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen 6: Consent + Summary</span>
+              <span class="chip chip-warn">Account creation: email + OTP</span>
+            </div>
+            <div class="branch-block">
+              <strong>Assigned Track</strong>
+              <div class="branch-row"><span class="track-badge t1">Track 1</span> Mild / Stress / Wellbeing — Counsellor</div>
+              <div class="branch-row"><span class="track-badge t2">Track 2</span> Moderate / Mood / Anxiety — Psychologist</div>
+              <div class="branch-row"><span class="track-badge t3">Track 3</span> Complex / Trauma / OCD — Senior Psychologist</div>
+              <div class="branch-row"><span class="track-badge t4">Track 4</span> Psychiatric / Medication — Psychiatrist</div>
+              <div class="branch-row"><span class="track-badge t5">Track 5</span> Crisis — Junior Counsellor escalation → Psychiatrist</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 9 -->
+        <div class="flow-step">
+          <div class="step-left">
+            <div class="step-num">9</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-label">Book First Session</div>
+            <div class="step-desc">Platform surfaces MHPs matching the assigned track. User picks MHP, sees bio + languages. Picks date/time slot from availability calendar.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Pick MHP</span>
+              <span class="chip chip-screen">Screen: Pick Slot</span>
+              <span class="chip chip-action">Filter by track, language, availability</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 10 -->
+        <div class="flow-step">
+          <div class="step-left">
+            <div class="step-num">10</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-label">Payment</div>
+            <div class="step-desc">Review booking summary. Pay via Razorpay (UPI, card, netbanking). Option to buy session package (4-pack / 8-pack at discount).</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Review + Pay</span>
+              <span class="chip chip-action">Razorpay checkout</span>
+              <span class="chip chip-info">Package option shown</span>
+            </div>
+            <div class="branch-block">
+              <strong>Payment Outcome</strong>
+              <div class="branch-row"><span class="branch-cond cond-y">Success</span> → Booking confirmed; WhatsApp + email confirmation sent</div>
+              <div class="branch-row"><span class="branch-cond cond-n">Failure</span> → Retry screen; slot held for 10 min</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 11 -->
+        <div class="flow-step">
+          <div class="step-left">
+            <div class="step-num">11</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-label">Booking Confirmed → Patient Portal</div>
+            <div class="step-desc">Lands on dashboard. Sees upcoming session card. Receives 24h WhatsApp reminder automatically. Pre-session check-in prompt appears 1h before session.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Patient Dashboard</span>
+              <span class="chip chip-action">WhatsApp: booking-confirmation template</span>
+              <span class="chip chip-action">WhatsApp: reminder-24h template</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 12 -->
+        <div class="flow-step">
+          <div class="step-left">
+            <div class="step-num">12</div>
+            <div class="step-connector"></div>
+          </div>
+          <div class="step-content">
+            <div class="step-label">Video Session</div>
+            <div class="step-desc">Join via Daily.co room link from portal. Session timer runs. MHP can mark complete / no-show / reschedule from their side.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Session Room</span>
+              <span class="chip chip-gray">Jitsi fallback if Daily.co unavailable</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 13 -->
+        <div class="flow-step">
+          <div class="step-left">
+            <div class="step-num">13</div>
+          </div>
+          <div class="step-content">
+            <div class="step-label">Post-Session: Summary + Follow-up</div>
+            <div class="step-desc">Patient sees MHP-shared session summary (next steps, homework, medication list if applicable). 24h post-session follow-up check-in WhatsApp sent automatically.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Session Summary</span>
+              <span class="chip chip-action">WhatsApp: post-session-check-in template</span>
+              <span class="chip chip-info">Materials: psychoeducation PDFs available</span>
+            </div>
+            <div class="timeline-end">
+              <div class="dot"></div>
+              End of new-user flow → merges with Returning User journey from this point
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /flow-lane -->
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       2 · RETURNING USER (PATIENT)
+  ══════════════════════════════════════════ -->
+  <div class="flow-section theme-patient" id="returning-user">
+    <div class="flow-header">
+      <div class="flow-avatar">🔄</div>
+      <div>
+        <h2>Returning User — Patient</h2>
+        <p>Existing account · completed at least one session · logging back in</p>
+      </div>
+    </div>
+    <div class="flow-body">
+      <div class="flow-lane">
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">1</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Login</div>
+            <div class="step-desc">Email + OTP (no password). HttpOnly cookie session. "Remember this device" sets 30-day cookie.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Login / OTP</span>
+              <span class="chip chip-action">OTP via email</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">2</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Patient Dashboard</div>
+            <div class="step-desc">Lands on dashboard showing: upcoming session(s), package balance, recent session summaries, safety plan (if set), materials library shortcut.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Dashboard</span>
+              <span class="chip chip-gray">Package balance visible if purchased</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">3</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Returning User — Key Actions</div>
+            <div class="step-desc">From dashboard the patient has multiple paths available simultaneously.</div>
+            <div class="branch-block">
+              <strong>Available Actions</strong>
+              <div class="branch-row"><span class="branch-cond cond-a">Book Next</span> → Book follow-up with same or new MHP; package consumed if active</div>
+              <div class="branch-row"><span class="branch-cond cond-b">Reschedule</span> → Within policy window: free. Outside window: fee per org policy</div>
+              <div class="branch-row"><span class="branch-cond cond-c">Cancel</span> → Within policy: refund to source. Outside: credit or platform policy</div>
+              <div class="branch-row"><span class="branch-cond cond-a">View Summary</span> → Read past session summaries shared by MHP</div>
+              <div class="branch-row"><span class="branch-cond cond-b">Safety Plan</span> → View / edit their personal safety plan</div>
+              <div class="branch-row"><span class="branch-cond cond-c">Materials</span> → Browse psychoeducation library (EN + HI PDFs)</div>
+              <div class="branch-row"><span class="branch-cond cond-a">Buy Package</span> → Purchase 4-session or 8-session pack</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">4</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Pre-Session Check-in (1h before)</div>
+            <div class="step-desc">1-tap mood rating prompt appears in portal + WhatsApp. Optional free-text "anything you want your MHP to know." Submitted to MHP dashboard before session.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Pre-Session Check-In</span>
+              <span class="chip chip-action">WhatsApp prompt → links to portal</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">5</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Session → Follow-up Loop</div>
+            <div class="step-desc">Video session → MHP writes SOAP → session summary shared → 24h follow-up check-in. Patient responds to check-in. Repeats for subsequent sessions in care plan.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Session Room</span>
+              <span class="chip chip-screen">Screen: Session Summary</span>
+              <span class="chip chip-action">WhatsApp: post-session-check-in (24h)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">6</div></div>
+          <div class="step-content">
+            <div class="step-label">Ongoing: Informant Invitation (optional)</div>
+            <div class="step-desc">Patient can invite a family member / caregiver as an informant (L1/L2/L3). Informant receives consent request. If accepted, can submit structured observations visible to MHP only.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Informant Invite</span>
+              <span class="chip chip-warn">Consent-gated — patient controls access</span>
+            </div>
+            <div class="timeline-end">
+              <div class="dot"></div>
+              Returning patient loop is continuous until discharge or self-exit
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       3 · PSYCHIATRIST
+  ══════════════════════════════════════════ -->
+  <div class="flow-section theme-psychiatrist" id="psychiatrist">
+    <div class="flow-header">
+      <div class="flow-avatar">🧠</div>
+      <div>
+        <h2>Psychiatrist (MHP — Track 4 Lead)</h2>
+        <p>Medical doctor · prescribes medications · handles complex psychiatric cases · requires TOTP 2FA</p>
+      </div>
+    </div>
+    <div class="flow-body">
+      <div class="flow-lane">
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">1</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Onboarding (One-time)</div>
+            <div class="step-desc">Admin registers psychiatrist. Psychiatrist receives invite email → sets up TOTP 2FA (mandatory). Submits: NMC registration number, specialties, languages, availability windows, per-session fee.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: MHP Onboarding Form</span>
+              <span class="chip chip-warn">TOTP 2FA required before any patient access</span>
+              <span class="chip chip-action">NMC reg. verified by admin</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">2</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Login</div>
+            <div class="step-desc">Email + password + TOTP 2FA code. Session is HttpOnly cookie. Auto-logout after 8h inactivity.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: MHP Login</span>
+              <span class="chip chip-warn">2FA mandatory — no bypass</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">3</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">MHP Dashboard — Daily View</div>
+            <div class="step-desc">Lands on dashboard with: today's session schedule, client cards (last-session / next-session / care-track / safety-flag), incident queue (C-SSRS alerts), unread follow-up responses.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: MHP Dashboard</span>
+              <span class="chip chip-danger">Safety flags highlighted in red</span>
+              <span class="chip chip-info">Week-view toggle available</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">4</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Pre-Session Prep</div>
+            <div class="step-desc">Opens patient's client card. Reviews: intake summary, assigned track, past SOAP notes, medication list, assessment scores, patient's pre-session check-in note. Sets session intent.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Client Card</span>
+              <span class="chip chip-info">Assessment history: PHQ-9, GAD-7, MDQ trends</span>
+              <span class="chip chip-gray">Pre-session check-in response shown</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">5</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Video Session</div>
+            <div class="step-desc">Joins Daily.co room from dashboard. Session is 1:1. Timer shown. Can mark: Completed / No-show / Rescheduled.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Session (MHP view)</span>
+              <span class="chip chip-gray">Jitsi fallback available</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">6</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">SOAP Note + Clinical Documentation</div>
+            <div class="step-desc">After session: writes Subjective, Objective, Assessment, Plan. Adds/updates medication list (not e-Rx — list only). Assigns ICD-11 diagnosis code to episode of care. Note is versioned and immutable once signed.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: SOAP Editor</span>
+              <span class="chip chip-action">Medication list (not e-Rx)</span>
+              <span class="chip chip-action">ICD-11 code lookup</span>
+              <span class="chip chip-warn">Immutable after sign — cannot edit</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">7</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Session Summary — Share with Patient</div>
+            <div class="step-desc">Selects what to share: next steps, homework, key points (not full SOAP). Patient can see only this curated summary. Triggers follow-up check-in WhatsApp in 24h.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Session Summary Editor</span>
+              <span class="chip chip-action">Patient notified via WhatsApp</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">8</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Assessment Administration (Between Sessions)</div>
+            <div class="step-desc">Can assign formal tools to patient: PHQ-9, MDQ, AUDIT-C, PCL-5, etc. Patient receives WhatsApp link → completes in portal. Scores appear in client card automatically.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Assign Assessment</span>
+              <span class="chip chip-info">12 V1 tools available</span>
+              <span class="chip chip-action">Scores auto-computed + trended</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">9</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Safety Escalation Handling</div>
+            <div class="step-desc">If C-SSRS alert arrives (from patient intake or in-session disclosure): receives MSG91 alert within 2h SLA. Reviews patient. Activates safety plan review. Logs escalation outcome in incident queue.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Incident Queue</span>
+              <span class="chip chip-danger">2h SLA — timer shown</span>
+              <span class="chip chip-action">Safety plan review + update</span>
+            </div>
+            <div class="safety-box">
+              <strong>🔴 P0 — Never skip</strong>
+              Every C-SSRS-positive case must have a logged response. Admin sees SLA adherence. JC covers out-of-hours; psychiatrist on-call as backup.
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">10</div></div>
+          <div class="step-content">
+            <div class="step-label">Earnings + Payout View</div>
+            <div class="step-desc">Sees personal earnings ledger: session fee, platform commission deduction, net, payout status. Cannot edit — read-only view of finance.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Earnings</span>
+              <span class="chip chip-gray">Read-only — payouts by admin</span>
+            </div>
+            <div class="timeline-end">
+              <div class="dot"></div>
+              Repeating loop: Dashboard → Prep → Session → SOAP → Summary → Follow-up reads
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       4 · PSYCHOLOGIST
+  ══════════════════════════════════════════ -->
+  <div class="flow-section theme-psychologist" id="psychologist">
+    <div class="flow-header">
+      <div class="flow-avatar">💬</div>
+      <div>
+        <h2>Psychologist (MHP — Tracks 1–3)</h2>
+        <p>Non-prescribing clinician · therapy-focused · handles Tracks 1, 2, 3 patients</p>
+      </div>
+    </div>
+    <div class="flow-body">
+
+      <div style="background:#F0FDF4;border:1px solid #86EFAC;border-radius:6px;padding:10px 14px;margin-bottom:16px;font-size:11.5px;color:#065F46;">
+        <strong>Key difference from Psychiatrist:</strong> Psychologist flow is 90% identical to Psychiatrist. The differences are: (1) no medication list access, (2) no ICD-11 diagnosis entry (assessment summary only), (3) assigned Tracks 1–3 only, (4) no Track 4/5 patients visible in roster. All safety escalation responsibilities remain identical.
+      </div>
+
+      <div class="flow-lane">
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">1</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Onboarding (One-time)</div>
+            <div class="step-desc">Admin registers. Psychologist receives invite → sets TOTP 2FA. Submits: RCI registration number, specialties (CBT, DBT, ACT etc.), languages, availability, fee.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: MHP Onboarding Form</span>
+              <span class="chip chip-action">RCI reg. verified by admin</span>
+              <span class="chip chip-warn">TOTP 2FA mandatory</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">2</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Dashboard + Roster</div>
+            <div class="step-desc">Same structure as psychiatrist dashboard but roster filtered to Tracks 1–3 clients only. Safety flag column present — Track 3 clients (complex) may have elevated risk.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: MHP Dashboard</span>
+              <span class="track-badge t1">T1</span>
+              <span class="track-badge t2">T2</span>
+              <span class="track-badge t3">T3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">3</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Session + SOAP Notes</div>
+            <div class="step-desc">Same flow as psychiatrist: prep → video → SOAP (S/O/A/P). Assessment Plan section includes therapeutic modality and homework. No medication section shown in SOAP editor for psychologist role.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: SOAP Editor (Psychologist view)</span>
+              <span class="chip chip-gray">No medication list section</span>
+              <span class="chip chip-action">Therapeutic homework field</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">4</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Track Escalation Recommendation</div>
+            <div class="step-desc">If psychologist determines a Track 1–3 client needs psychiatric evaluation (medication, complex diagnosis), they flag for escalation. Admin / psychiatrist sees flag. Patient is offered a transfer booking with psychiatrist.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Client Card → Escalate</span>
+              <span class="chip chip-warn">Triggers admin notification</span>
+              <span class="chip chip-action">Patient consent required for track change</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">5</div></div>
+          <div class="step-content">
+            <div class="step-label">Informant Observations — View</div>
+            <div class="step-desc">If patient has linked an informant, psychologist can view informant observations (L1 access). Useful for paediatric / adolescent cases, bipolar monitoring.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Client Card → Informant Tab</span>
+              <span class="chip chip-warn">Only visible with patient consent on file</span>
+            </div>
+            <div class="timeline-end">
+              <div class="dot"></div>
+              Same repeating loop as psychiatrist. Discharge triggers episode-of-care closure.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       5 · MAIN ADMIN
+  ══════════════════════════════════════════ -->
+  <div class="flow-section theme-admin" id="admin">
+    <div class="flow-header">
+      <div class="flow-avatar">⚙️</div>
+      <div>
+        <h2>Main Admin</h2>
+        <p>Platform operator · full read access · no patient PHI in raw form · manages MHPs, policies, finance, incidents</p>
+      </div>
+    </div>
+    <div class="flow-body">
+
+      <div style="background:#FEF2F2;border:1px solid #FCA5A5;border-radius:6px;padding:10px 14px;margin-bottom:16px;font-size:11.5px;color:#991B1B;">
+        <strong>PHI Access Note:</strong> Admin sees aggregate data, booking records, payment records, and incident queue — but does NOT see clinical notes (SOAP), assessment scores, or raw symptom responses. RLS enforces this.
+      </div>
+
+      <div class="flow-lane">
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">1</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Login</div>
+            <div class="step-desc">Email + password + TOTP 2FA. TOTP mandatory. Separate admin subdomain or route (/admin). Session auto-expires after 4h.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Admin Login</span>
+              <span class="chip chip-warn">TOTP mandatory · 4h session</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">2</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Admin Dashboard — Overview</div>
+            <div class="step-desc">Headline KPIs: total active patients, sessions this week, revenue MTD, no-show rate, open incidents, SLA adherence %. Live metric cards refreshed periodically.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Admin Dashboard</span>
+              <span class="chip chip-info">Bookings · Revenue · Utilisation · Safety KPIs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">3</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">MHP Management</div>
+            <div class="step-desc">Add / edit / deactivate MHPs. Verify NMC/RCI registration. Set per-MHP commission rate. View MHP utilisation (sessions, no-show rate, earnings, payout status). Trigger manual payout.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: MHP Roster</span>
+              <span class="chip chip-screen">Screen: MHP Profile + Earnings</span>
+              <span class="chip chip-action">Trigger payout</span>
+              <span class="chip chip-action">Deactivate / re-activate</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">4</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Bookings Management</div>
+            <div class="step-desc">Full booking list with filters (date, MHP, track, status). Can view booking details: patient name, MHP, slot, payment status. Cannot see clinical notes.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Bookings List</span>
+              <span class="chip chip-gray">Filters: MHP · Track · Status · Date</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">5</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Revenue + Payments</div>
+            <div class="step-desc">Earnings ledger view: gross, PG charges, platform commission, net to MHP, refund status, payout status. Razorpay webhook DLQ visible — dead-letter items flagged for manual reconciliation.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Revenue Ledger</span>
+              <span class="chip chip-screen">Screen: Webhook DLQ / Reconciliation</span>
+              <span class="chip chip-action">Initiate refund (within policy window)</span>
+              <span class="chip chip-warn">DLQ alert if webhook failures &gt; 0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">6</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Incident Queue — Safety</div>
+            <div class="step-desc">All C-SSRS-positive events appear here with SLA timer. Status: Open / Acknowledged / Resolved. Admin tracks MHP response time. If SLA breached: escalation alert fired to on-call lead.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Incident Queue</span>
+              <span class="chip chip-danger">SLA: 2h from alert to MHP acknowledgement</span>
+              <span class="chip chip-action">Mark resolved · add admin note</span>
+            </div>
+            <div class="safety-box">
+              <strong>🔴 P0</strong>
+              Admin must never close an incident without a logged MHP response. Audit log captures every state change.
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">7</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Organization Policies</div>
+            <div class="step-desc">Configure platform-wide rules: cancellation policy (hours window, refund type), reschedule policy, minimum booking notice, session package prices, commission rates, intake cluster config.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Org Settings</span>
+              <span class="chip chip-warn">Changes audit-logged · cannot roll back silently</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">8</div><div class="step-connector"></div></div>
+          <div class="step-content">
+            <div class="step-label">Compliance + Legal Artifact Management</div>
+            <div class="step-desc">View versioned legal documents (privacy policy, telemed consent, MHP service agreement, adolescent consent). Each doc has a version stamp and the date it was accepted by each user. Upload new versions; old versions archived.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Legal Documents</span>
+              <span class="chip chip-action">Upload new version</span>
+              <span class="chip chip-gray">Consent acceptance log per user</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-step">
+          <div class="step-left"><div class="step-num">9</div></div>
+          <div class="step-content">
+            <div class="step-label">Audit Log Viewer</div>
+            <div class="step-desc">Append-only log of every PHI write, role escalation attempt, and admin action. Filterable by user, table, action, date range. Export to CSV for medico-legal review.</div>
+            <div class="step-chips">
+              <span class="chip chip-screen">Screen: Audit Log</span>
+              <span class="chip chip-gray">Read-only · append-only · tamper-evident</span>
+              <span class="chip chip-action">Export CSV</span>
+            </div>
+            <div class="timeline-end">
+              <div class="dot"></div>
+              Admin has no session-end — access is role-based and persistent while employed
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       CARE TRACK REFERENCE
+  ══════════════════════════════════════════ -->
+  <div class="flow-section" id="tracks">
+    <div class="flow-header">
+      <div class="flow-avatar" style="background:#F3F4F6;">📋</div>
+      <div>
+        <h2>Care Track Reference</h2>
+        <p>Intake routing output — determines MHP type and tools assigned</p>
+      </div>
+    </div>
+    <div class="flow-body">
+      <div class="grid2">
+
+        <div class="sub-card">
+          <h4><span class="track-badge t1">Track 1</span> Mild / Stress / Wellbeing</h4>
+          <div style="font-size:11.5px;color:#374151;line-height:1.6;">
+            <strong>MHP:</strong> Junior Counsellor<br>
+            <strong>Tools:</strong> PSS-10, ISI<br>
+            <strong>Typical presenting:</strong> Work stress, sleep issues, mild anxiety, adjustment<br>
+            <strong>Session cadence:</strong> 4-session pack typical
+          </div>
+        </div>
+
+        <div class="sub-card">
+          <h4><span class="track-badge t2">Track 2</span> Moderate / Mood / Anxiety</h4>
+          <div style="font-size:11.5px;color:#374151;line-height:1.6;">
+            <strong>MHP:</strong> Psychologist (RCI)<br>
+            <strong>Tools:</strong> PHQ-9, GAD-7, SCOFF<br>
+            <strong>Typical presenting:</strong> Depression, anxiety disorders, eating concerns<br>
+            <strong>Session cadence:</strong> 8-session pack typical
+          </div>
+        </div>
+
+        <div class="sub-card">
+          <h4><span class="track-badge t3">Track 3</span> Complex / Trauma / OCD</h4>
+          <div style="font-size:11.5px;color:#374151;line-height:1.6;">
+            <strong>MHP:</strong> Senior Psychologist<br>
+            <strong>Tools:</strong> PCL-5, OCI-R, MSI-BPD<br>
+            <strong>Typical presenting:</strong> PTSD, OCD, borderline features, complex trauma<br>
+            <strong>Session cadence:</strong> Ongoing; 8-session packs
+          </div>
+        </div>
+
+        <div class="sub-card">
+          <h4><span class="track-badge t4">Track 4</span> Psychiatric / Medication</h4>
+          <div style="font-size:11.5px;color:#374151;line-height:1.6;">
+            <strong>MHP:</strong> Psychiatrist (NMC)<br>
+            <strong>Tools:</strong> MDQ, ASRS-v1.1, AUDIT-C<br>
+            <strong>Typical presenting:</strong> Bipolar, ADHD, psychosis, substance, medication mgmt<br>
+            <strong>Session cadence:</strong> Variable; follow-up 4-6 weeks
+          </div>
+        </div>
+
+        <div class="sub-card" style="border-color:#FCA5A5;">
+          <h4><span class="track-badge t5">Track 5</span> Crisis</h4>
+          <div style="font-size:11.5px;color:#374151;line-height:1.6;">
+            <strong>MHP:</strong> JC first-line → Psychiatrist on-call<br>
+            <strong>Tools:</strong> C-SSRS (trigger)<br>
+            <strong>Presenting:</strong> Active SI/HI, acute psychosis, immediate risk<br>
+            <strong>Action:</strong> Crisis resources shown; no booking offered; SLA 2h alert
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SHARED SCREENS REFERENCE
+  ══════════════════════════════════════════ -->
+  <div class="flow-section" id="shared-screens">
+    <div class="flow-header">
+      <div class="flow-avatar" style="background:#F3F4F6;">🔗</div>
+      <div>
+        <h2>Shared Screens + WhatsApp Templates</h2>
+        <p>Components used across multiple user flows</p>
+      </div>
+    </div>
+    <div class="flow-body">
+      <div class="grid2">
+
+        <div class="sub-card">
+          <h4>WhatsApp Templates (4 · Meta-approved)</h4>
+          <div style="font-size:11.5px;color:#374151;line-height:1.8;">
+            <strong>booking-confirmation</strong> — fires on payment success<br>
+            <strong>reminder-24h</strong> — fires 24h before session<br>
+            <strong>post-session-check-in</strong> — fires 24h after session<br>
+            <strong>safety-net</strong> — fires on C-SSRS positive with crisis resources
+          </div>
+        </div>
+
+        <div class="sub-card">
+          <h4>Auth Screens</h4>
+          <div style="font-size:11.5px;color:#374151;line-height:1.8;">
+            <strong>Patient:</strong> Email + OTP only (no password)<br>
+            <strong>MHP:</strong> Email + password + TOTP 2FA<br>
+            <strong>Admin:</strong> Email + password + TOTP 2FA · 4h session<br>
+            <strong>All:</strong> HttpOnly cookies · Sentry error capture with PHI redacted
+          </div>
+        </div>
+
+        <div class="sub-card">
+          <h4>Safety Resources Screen</h4>
+          <div style="font-size:11.5px;color:#374151;line-height:1.8;">
+            Always accessible from patient portal footer.<br>
+            Contains: iCall (9152987821), Vandrevala Foundation (1860-2662-345), NIMHANS, local emergency.<br>
+            <strong>Also triggered:</strong> automatically on C-SSRS positive during intake.
+          </div>
+        </div>
+
+        <div class="sub-card">
+          <h4>Materials Library</h4>
+          <div style="font-size:11.5px;color:#374151;line-height:1.8;">
+            Accessible to all patients (no track restriction).<br>
+            Psychoeducation PDFs in EN + HI.<br>
+            Categories: Anxiety, Depression, Sleep, Relationships, Substances, Workplace Stress.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#EFF6FF;border:1px solid #1D4ED8;"></div> Screen / UI state</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#F0FDF4;border:1px solid #15803D;"></div> User action</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#FEF3C7;border:1px solid #92400E;"></div> Warning / Policy</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#FEF2F2;border:1px solid #B91C1C;"></div> Safety / P0</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#F5F3FF;border:1px solid #5B21B6;"></div> Clinical tool</div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  // Tab toggle for variant panels (if needed in future)
+  document.querySelectorAll('.variant-tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+      const group = this.closest('.variant-tabs').dataset.group;
+      document.querySelectorAll(`[data-group="${group}"] .variant-tab`).forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+      const target = this.dataset.target;
+      document.querySelectorAll(`[data-panel-group="${group}"] .variant-panel`).forEach(p => p.classList.remove('active'));
+      document.getElementById(target)?.classList.add('active');
+    });
+  });
+
+  // Highlight active sidebar link on scroll
+  const sections = document.querySelectorAll('[id]');
+  const navLinks = document.querySelectorAll('.sidebar nav a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Saday Wellness — Scaling Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500;600;700;800;900&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary:'#8C68CD', primaryDark:'#7A52C4',
+          plum:'#1D142E', violet:'#4E2D89', ink:'#2A2433', muted:'#6B6577',
+          lav:{50:'#F8F5FD',100:'#F1EBFA',200:'#E4DAF5',300:'#D2C1ED'},
+          amber:'#E8915B', amberSoft:'#FBEDE2',
+          good:'#15924A', goodSoft:'#E7F4ED',
+          warn:'#C9821C', warnSoft:'#FBF1DF',
+          bad:'#C2463A', badSoft:'#F8E7E4',
+        },
+        fontFamily:{ heading:['"Darker Grotesque"','sans-serif'], body:['"Source Sans 3"','sans-serif'], mono:['"JetBrains Mono"','monospace'] },
+        maxWidth:{ container:'1120px' },
+        boxShadow:{ card:'0 8px 30px rgba(78,45,137,.08)', cardHover:'0 16px 44px rgba(78,45,137,.16)', soft:'0 2px 10px rgba(29,20,46,.06)' },
+      }
+    }
+  };
+</script>
+<style>
+  html{scroll-behavior:smooth}
+  body{font-family:'"Source Sans 3"',sans-serif;color:#2A2433}
+  h1,h2,h3,h4{font-family:'"Darker Grotesque"',sans-serif;letter-spacing:-.015em}
+  .mono{font-family:'"JetBrains Mono"',monospace}
+  .h-display{font-size:clamp(2.6rem,6vw,4.6rem);line-height:.96;font-weight:800}
+  .h-sec{font-size:clamp(1.9rem,3.6vw,2.9rem);line-height:1;font-weight:700}
+  .eyebrow{letter-spacing:.16em;text-transform:uppercase;font-weight:600;font-size:.72rem}
+  .grain{background-image:radial-gradient(circle at 1px 1px,rgba(140,104,205,.10) 1px,transparent 0);background-size:22px 22px}
+  /* phase accent rails */
+  .rail{border-left:5px solid var(--pc,#8C68CD)}
+  .badge-phase{background:var(--pcs,#F1EBFA);color:var(--pc,#4E2D89)}
+  /* responsive tables: scroll instead of squish */
+  .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #E4DAF5;border-radius:14px}
+  table.r{width:100%;border-collapse:collapse;min-width:560px;font-size:14.5px}
+  table.r th{background:#F8F5FD;text-align:left;font-weight:600;color:#4E2D89;padding:12px 14px;font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+  table.r td{padding:12px 14px;border-top:1px solid #F1EBFA;vertical-align:top}
+  table.r tr:hover td{background:#FBFAFE}
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  /* gantt */
+  .gantt-row{display:grid;grid-template-columns:120px 1fr;align-items:center;gap:14px}
+  @media(max-width:640px){.gantt-row{grid-template-columns:84px 1fr;gap:10px}}
+  .gantt-bar{height:30px;border-radius:8px;display:flex;align-items:center;padding:0 12px;color:#fff;font-size:12.5px;font-weight:600;white-space:nowrap;overflow:hidden}
+  /* sticky nav active scroll snap */
+  .navlink{transition:.15s}
+  .navlink:hover{color:#8C68CD}
+  ::-webkit-scrollbar{height:9px;width:9px}
+  ::-webkit-scrollbar-thumb{background:#D2C1ED;border-radius:9px}
+</style>
+</head>
+<body class="bg-lav-50 antialiased">
+
+<!-- NAV -->
+<header class="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-lav-100">
+  <div class="max-w-container mx-auto px-5 sm:px-7 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2.5">
+      <span class="grid place-items-center w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-violet text-white text-sm font-heading font-700">स</span>
+      <span class="font-heading font-700 text-lg text-plum leading-none">Saday <span class="text-muted font-500">· Roadmap</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-[14px] font-500 text-ink">
+      <a href="#phases" class="navlink">Stages</a>
+      <a href="#leverage" class="navlink">Who does what</a>
+      <a href="#timeline" class="navlink">Timeline</a>
+      <a href="#uncompressible" class="navlink">Calendar items</a>
+    </nav>
+    <span class="mono text-[11px] text-muted hidden sm:inline">v0.1 · 2026-06-12</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="relative overflow-hidden bg-gradient-to-br from-plum via-violet to-[#3d2570] text-white">
+  <div class="absolute inset-0 grain opacity-50"></div>
+  <div class="absolute -top-24 -right-24 w-[420px] h-[420px] rounded-full bg-primary/30 blur-3xl"></div>
+  <div class="relative max-w-container mx-auto px-5 sm:px-7 pt-16 pb-20 lg:pt-24 lg:pb-28">
+    <span class="eyebrow inline-flex items-center gap-2 text-lav-200 bg-white/10 rounded-full px-3.5 py-1.5">
+      <span class="w-1.5 h-1.5 rounded-full bg-amber"></span> Solo build · agentic codegen · psychiatrist-CTO + frontend
+    </span>
+    <h1 class="h-display mt-6 max-w-4xl">Scaling Roadmap</h1>
+    <p class="mt-5 text-[19px] leading-relaxed text-white/80 max-w-2xl">
+      One risk-ascending path from a thin, verifiable core → the ₹1L product → the full OG blueprint. Plus a marketing-site phase up front to beat the Odoo clock.
+    </p>
+
+    <!-- stepper -->
+    <div class="mt-10 flex flex-wrap items-center gap-2 text-[13px] font-600">
+      <span class="rounded-full bg-amber/90 text-plum px-3.5 py-1.5">M · Marketing</span>
+      <span class="text-white/40">→</span>
+      <span class="rounded-full bg-white/15 px-3.5 py-1.5">P0 · Foundation</span>
+      <span class="text-white/40">→</span>
+      <span class="rounded-full bg-primary px-3.5 py-1.5">P1 · Thin Safe Core</span>
+      <span class="text-white/40">→</span>
+      <span class="rounded-full bg-white/15 px-3.5 py-1.5">P2 · ₹1L Product</span>
+      <span class="text-white/40">→</span>
+      <span class="rounded-full bg-white/15 px-3.5 py-1.5">P3 · OG Blueprint</span>
+    </div>
+
+    <div class="mt-10 grid sm:grid-cols-3 gap-3 max-w-2xl">
+      <div class="rounded-2xl bg-white/10 backdrop-blur px-5 py-4">
+        <p class="font-heading text-3xl font-800">5–7 mo</p>
+        <p class="text-[13px] text-white/70 mt-0.5">to OG-complete, part-time</p>
+      </div>
+      <div class="rounded-2xl bg-white/10 backdrop-blur px-5 py-4">
+        <p class="font-heading text-3xl font-800">~20–25 h</p>
+        <p class="text-[13px] text-white/70 mt-0.5">per week assumed</p>
+      </div>
+      <div class="rounded-2xl bg-white/10 backdrop-blur px-5 py-4">
+        <p class="font-heading text-3xl font-800">4 gates</p>
+        <p class="text-[13px] text-white/70 mt-0.5">verify before you expand</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLE -->
+<section class="max-w-container mx-auto px-5 sm:px-7 py-14 lg:py-20">
+  <div class="reveal rounded-3xl bg-white shadow-card p-7 lg:p-10 border-l-[6px] border-primary">
+    <span class="eyebrow text-primary">The rule</span>
+    <p class="mt-3 font-heading text-2xl lg:text-3xl font-700 text-plum leading-tight max-w-3xl">
+      Build only what you can personally verify is safe. Prove it with real patients. Then let agents expand the surface — fastest where it's lowest-risk.
+    </p>
+    <p class="mt-4 text-[16px] text-ink/75 max-w-2xl">Staged risk-ascending, not feature-descending. Each stage has a hard exit gate — you don't start the next until it passes. That's what keeps a solo build from quietly shipping an unsafe PHI surface.</p>
+  </div>
+</section>
+
+<!-- STAGE SUMMARY -->
+<section id="phases" class="max-w-container mx-auto px-5 sm:px-7 pb-6">
+  <h2 class="reveal h-sec text-plum">The stages at a glance</h2>
+  <div class="reveal mt-7 tbl-wrap shadow-soft">
+    <table class="r">
+      <thead><tr><th>Stage</th><th>Name</th><th>One-line goal</th><th>Patients?</th><th>Effort</th></tr></thead>
+      <tbody>
+        <tr><td><span class="mono font-600 text-amber">M</span></td><td class="font-600">Marketing Site</td><td>Get off Odoo — content-complete static landing</td><td class="text-muted">No (info only)</td><td class="whitespace-nowrap">~1–2 wks</td></tr>
+        <tr><td><span class="mono font-600">P0</span></td><td class="font-600">Foundation</td><td>Decisions locked + infra + auth skeleton</td><td class="text-muted">No</td><td class="whitespace-nowrap">~1 wk</td></tr>
+        <tr><td><span class="mono font-600 text-primary">P1</span></td><td class="font-600 text-primary">Thin Safe Core</td><td>Smallest surface a real patient can safely use</td><td class="font-600">Yes — pilot</td><td class="whitespace-nowrap">~3–5 wks</td></tr>
+        <tr><td><span class="mono font-600">P2</span></td><td class="font-600">Product MVP (≈₹1L)</td><td>A sellable product with differentiators</td><td>Yes — paid</td><td class="whitespace-nowrap">~3–4 wks</td></tr>
+        <tr><td><span class="mono font-600">P3</span></td><td class="font-600">Full OG Blueprint</td><td>The V1.5/V2 vision + the data moat</td><td>Yes — at scale</td><td class="whitespace-nowrap">~3–4 mo</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="reveal mt-4 text-[14.5px] text-muted max-w-3xl"><b class="text-amber">Phase M runs first and is fully decoupled</b> from P0–P3 — pure frontend, no PHI, no auth — so it ships while app decisions are still being locked. The Odoo expiry sets its deadline.</p>
+</section>
+
+<!-- LEVERAGE MAP -->
+<section id="leverage" class="max-w-container mx-auto px-5 sm:px-7 py-14 lg:py-20">
+  <span class="reveal eyebrow text-primary">Founder-leverage map</span>
+  <h2 class="reveal h-sec text-plum mt-3">Where your hands help — and where they don't</h2>
+  <p class="reveal mt-4 text-[16px] text-ink/75 max-w-2xl">Your scarce resource isn't typing (agents cover that) — it's <b>review time on security-critical code</b> and <b>wall-clock on calendar items</b>. Stage the build so you never hold more unverified surface than you can review at once.</p>
+
+  <div class="mt-9 grid lg:grid-cols-3 gap-4">
+    <div class="reveal rounded-2xl bg-goodSoft border border-good/20 p-6">
+      <div class="flex items-center gap-2.5"><span class="grid place-items-center w-8 h-8 rounded-lg bg-good text-white">🟢</span><h3 class="font-heading text-xl font-700 text-good">You own it</h3></div>
+      <p class="mt-3 text-[15px] text-ink/80">Frontend, component system, intake UX, accessibility, EN/HI i18n, design system, patient-app polish, and <b>clinical-logic correctness</b> (you're the psychiatrist).</p>
+      <p class="mt-3 text-[13px] font-600 text-good">Lead. This is your edge. · Agent leverage: high</p>
+    </div>
+    <div class="reveal rounded-2xl bg-warnSoft border border-warn/20 p-6">
+      <div class="flex items-center gap-2.5"><span class="grid place-items-center w-8 h-8 rounded-lg bg-warn text-white">🟡</span><h3 class="font-heading text-xl font-700 text-warn">Agents draft · you verify</h3></div>
+      <p class="mt-3 text-[15px] text-ink/80">RLS policies, auth, payments/webhooks, audit log, SOAP record integrity, API routes, migrations. Read <b>every line</b>. Buy one external security review at the P1 and P3 gates.</p>
+      <p class="mt-3 text-[13px] font-600 text-warn">Reviewer-in-chief. · Verification is the bottleneck</p>
+    </div>
+    <div class="reveal rounded-2xl bg-badSoft border border-bad/20 p-6">
+      <div class="flex items-center gap-2.5"><span class="grid place-items-center w-8 h-8 rounded-lg bg-bad text-white">🔴</span><h3 class="font-heading text-xl font-700 text-bad">Calendar, not code</h3></div>
+      <p class="mt-3 text-[15px] text-ink/80">Meta/MSG91 template approval, Razorpay live KYC, pen-test, clinical sign-off, DPDP/medico-legal review. Start early, run in parallel.</p>
+      <p class="mt-3 text-[13px] font-600 text-bad">Agent leverage: none</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHASES DETAIL -->
+<section class="max-w-container mx-auto px-5 sm:px-7 pb-6 space-y-5">
+
+  <!-- PHASE M -->
+  <article class="reveal rail rounded-2xl bg-white shadow-card p-6 lg:p-9" style="--pc:#E8915B;--pcs:#FBEDE2">
+    <div class="flex flex-wrap items-center gap-3">
+      <span class="badge-phase rounded-full px-3 py-1 text-[13px] font-700 mono">M</span>
+      <h3 class="font-heading text-2xl lg:text-3xl font-800 text-plum">Marketing Site &amp; Content Migration</h3>
+      <span class="ml-auto text-[13px] font-600 text-amber whitespace-nowrap">~1–2 wks · do first</span>
+    </div>
+    <p class="mt-4 text-[16px] text-ink/80"><b>Goal:</b> a content-complete, on-brand <b>static</b> marketing site live on <span class="mono text-[14px]">sadaywellness.com</span> <b>before the Odoo subscription lapses</b>. No accounts, no DB, no PHI — brochure-ware. Zero security surface, ships independent of every app decision.</p>
+
+    <div class="mt-6 grid lg:grid-cols-2 gap-5">
+      <div>
+        <p class="eyebrow text-good">Ships</p>
+        <ul class="mt-2 space-y-1.5 text-[15px] text-ink/80">
+          <li>• <b>Home</b> — hero, "Why?" stat, services, stats band, testimonial <span class="text-muted">(done in mockup)</span></li>
+          <li>• <b>About / Team</b> — 8 real bios</li>
+          <li>• <b>Services</b> — 8 services + 2 programs</li>
+          <li>• <b>Contact</b> — phone/email/address + no-backend form</li>
+          <li>• <b>Privacy + Terms</b> — written fresh</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow text-bad">Watch-outs</p>
+        <ul class="mt-2 space-y-1.5 text-[15px] text-ink/80">
+          <li>⚠️ Live <b>Support Groups</b> card is Odoo lorem-ipsum — rewrite</li>
+          <li>⚠️ <span class="mono text-[13px]">/terms</span> placeholder &amp; <span class="mono text-[13px]">/privacy</span> 404 — health brand needs real legal pages</li>
+          <li>⚠️ <b>Shop / courses / memberships</b> die with Odoo (eCommerce module) — decision needed</li>
+          <li>↳ Export Odoo data (PDFs, contacts) <b>before</b> lapse</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-6 rounded-xl bg-lav-50 border border-lav-100 p-4 text-[14.5px] text-ink/80">
+      <b class="text-violet">Inputs already in hand:</b> the full <span class="mono text-[13px]">sadaywellness.com</span> content audit (verbatim) + <span class="mono text-[13px]">mockups/saday-home.html</span> (modernized homepage already built). Booking CTA keeps pointing to existing external booking (Tealfeed/Swasthmind) during the gap. Deploy to <b>Cloudflare Pages</b>, point DNS, done.
+    </div>
+    <div class="mt-5 rounded-xl bg-amberSoft border-l-4 border-amber p-4 text-[14.5px]">
+      <b class="text-plum">Exit gate M → P0:</b> all pages live on the real domain · real Privacy + Terms published · contact form delivering · booking CTA valid · Odoo data exported · subscription safely cancellable.
+    </div>
+  </article>
+
+  <!-- PHASE P0 -->
+  <article class="reveal rail rounded-2xl bg-white shadow-card p-6 lg:p-9" style="--pc:#9AA19C;--pcs:#EFEEE9">
+    <div class="flex flex-wrap items-center gap-3">
+      <span class="badge-phase rounded-full px-3 py-1 text-[13px] font-700 mono">P0</span>
+      <h3 class="font-heading text-2xl lg:text-3xl font-800 text-plum">Foundation</h3>
+      <span class="ml-auto text-[13px] font-600 text-muted whitespace-nowrap">~1 wk</span>
+    </div>
+    <p class="mt-4 text-[16px] text-ink/80"><b>Goal:</b> every downstream decision is locked and the infra exists. No product yet.</p>
+    <div class="mt-6 grid lg:grid-cols-2 gap-5">
+      <div>
+        <p class="eyebrow text-violet">Lock first (baked into the schema)</p>
+        <ol class="mt-2 space-y-1.5 text-[15px] text-ink/80 list-decimal list-inside">
+          <li>Safety screen — ASQ vs C-SSRS (D2)</li>
+          <li>Proxy/age — 18+ self-only for P1</li>
+          <li>Admin vs notes — B6 RLS-deny?</li>
+          <li>Audit — append-only + revoke UPDATE/DELETE</li>
+          <li>PHI encryption — disk+RLS now, Vault later</li>
+          <li><b>Brand — purple vs sage</b> (gates all frontend)</li>
+        </ol>
+      </div>
+      <div>
+        <p class="eyebrow text-good">Build</p>
+        <ul class="mt-2 space-y-1.5 text-[15px] text-ink/80">
+          <li>• Supabase in <span class="mono text-[13px]">ap-south-1</span>, RLS-default-deny on</li>
+          <li>• Next.js 14 + TS + Tailwind scaffold + CI</li>
+          <li>• Auth skeleton + <span class="mono text-[13px]">current_user_id()</span> bridge</li>
+          <li>• Design tokens + base component library</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-5 rounded-xl bg-lav-50 border-l-4 border-muted p-4 text-[14.5px]">
+      <b class="text-plum">Exit gate P0 → P1:</b> repo runs · logged-in user resolves through <span class="mono text-[13px]">current_user_id()</span> · a non-owner SELECT returns <b>zero rows</b> (default-deny proven).
+    </div>
+  </article>
+
+  <!-- PHASE P1 -->
+  <article class="reveal rail rounded-2xl bg-white shadow-card p-6 lg:p-9 ring-2 ring-primary/20" style="--pc:#8C68CD;--pcs:#F1EBFA">
+    <div class="flex flex-wrap items-center gap-3">
+      <span class="badge-phase rounded-full px-3 py-1 text-[13px] font-700 mono">P1</span>
+      <h3 class="font-heading text-2xl lg:text-3xl font-800 text-primary">Thin Safe Core</h3>
+      <span class="ml-auto text-[13px] font-700 text-primary whitespace-nowrap">~3–5 wks · the verification floor</span>
+    </div>
+    <p class="mt-4 text-[16px] text-ink/80"><b>Goal:</b> the smallest app a real patient can use <b>safely</b>. Pilot with a few consenting patients. This is where you spend most of your review budget.</p>
+    <div class="mt-6 grid lg:grid-cols-2 gap-5">
+      <div>
+        <p class="eyebrow text-good">Ships (full loop)</p>
+        <ul class="mt-2 space-y-1.5 text-[15px] text-ink/80">
+          <li>• Sign-up + <b>hard 18+ gate</b>; doctor/admin <b>TOTP</b></li>
+          <li>• Short <b>self-only</b> adaptive intake</li>
+          <li>• <b>Safety screen</b> → crisis resources + flag (no auto-book)</li>
+          <li>• <b>PHQ-9 + GAD-7</b>, versioned, immutable</li>
+          <li>• Book → <b>Razorpay</b> → confirm</li>
+          <li>• <b>Jitsi</b> video (lobby + password)</li>
+          <li>• <b>SOAP sign-&amp;-lock</b> + B6 admin-deny</li>
+          <li>• Signed-PDF prescription · append-only audit · DSR</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow text-muted">Not in P1</p>
+        <p class="mt-2 text-[15px] text-ink/70">Tracks/routing · proxy · care-plan PDF · mood logs · any tool beyond PHQ-9/GAD-7 · ledger · outcomes · messaging · materials · Vault crypto · Merkle audit.</p>
+        <p class="eyebrow text-good mt-5">🟢 You own ~60%</p>
+        <p class="mt-2 text-[15px] text-ink/70">Patient app, intake UX, SOAP editor, i18n, design system in anger.</p>
+        <p class="eyebrow text-warn mt-4">🟡 Verify line-by-line</p>
+        <p class="mt-2 text-[15px] text-ink/70">RLS, TOTP, Razorpay webhook, audit grants, immutability + sign-lock, B6 deny.</p>
+      </div>
+    </div>
+    <div class="mt-5 rounded-xl bg-primary/5 border-l-4 border-primary p-4 text-[14.5px]">
+      <b class="text-plum">Exit gate P1 → P2 (the big one):</b> RLS attack-test suite passes (cross-patient blocked, admin can't read note bodies, signed note immutable, audit rows can't be edited) · a real Razorpay payment reconciles · you clinically review the safety path · <b>one external security review</b> · 3–5 pilot patients complete the full loop with no safety/privacy defect.
+      <div class="mt-2 font-600 text-primary">If this gate doesn't pass, nothing else matters.</div>
+    </div>
+  </article>
+
+  <!-- PHASE P2 -->
+  <article class="reveal rail rounded-2xl bg-white shadow-card p-6 lg:p-9" style="--pc:#7A52C4;--pcs:#ECE3F8">
+    <div class="flex flex-wrap items-center gap-3">
+      <span class="badge-phase rounded-full px-3 py-1 text-[13px] font-700 mono">P2</span>
+      <h3 class="font-heading text-2xl lg:text-3xl font-800 text-plum">Product MVP <span class="text-muted font-600 text-xl">≈ ₹1L scope</span></h3>
+      <span class="ml-auto text-[13px] font-600 text-muted whitespace-nowrap">~3–4 wks on top</span>
+    </div>
+    <p class="mt-4 text-[16px] text-ink/80"><b>Goal:</b> turn the safe core into a <b>sellable product</b> by adding the ₹1L differentiators — now on a foundation you've proven safe.</p>
+    <div class="mt-6 grid lg:grid-cols-2 gap-5">
+      <div>
+        <p class="eyebrow text-good">Adds</p>
+        <ul class="mt-2 space-y-1.5 text-[15px] text-ink/80">
+          <li>• <b>Care-plan PDF</b> (the differentiator)</li>
+          <li>• <b>Proxy — adult-for-adult only</b> (minors still excluded) + consent flow</li>
+          <li>• Richer intake (more clusters; no full track engine)</li>
+          <li>• Cancellation/refund surfaced (manual via Razorpay)</li>
+          <li>• Patient portal: sessions, receipts, history</li>
+          <li>• Consent ledger (granular, versioned)</li>
+          <li>• Light admin: patient list, schedule, flag queue</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow text-warn">The one re-expansion of liability</p>
+        <p class="mt-2 text-[15px] text-ink/70">Proxy returns — gate it with its own consent + access-control review.</p>
+        <p class="eyebrow text-muted mt-4">Still not in P2</p>
+        <p class="mt-2 text-[15px] text-ink/70">5/7-track engine · full 12-tool library · ledger/payouts · outcomes · informant tiers · Vault crypto · Merkle audit.</p>
+      </div>
+    </div>
+    <div class="mt-5 rounded-xl bg-lav-50 border-l-4 border-primaryDark p-4 text-[14.5px]">
+      <b class="text-plum">Exit gate P2 → P3:</b> proxy access-control attack-tested (can't exceed scope, can't act for a minor) · paying patients running · refund/cancellation working · DPDP posture reviewed · real demand signal.
+    </div>
+  </article>
+
+  <!-- PHASE P3 -->
+  <article class="reveal rail rounded-2xl bg-gradient-to-br from-plum to-violet text-white shadow-card p-6 lg:p-9" style="--pc:#1D142E;--pcs:#E4DAF5">
+    <div class="flex flex-wrap items-center gap-3">
+      <span class="rounded-full px-3 py-1 text-[13px] font-700 mono bg-white/15 text-white">P3</span>
+      <h3 class="font-heading text-2xl lg:text-3xl font-800">Full OG Blueprint <span class="text-lav-200 font-600 text-xl">· the moat</span></h3>
+      <span class="ml-auto text-[13px] font-600 text-lav-200 whitespace-nowrap">~3–4 mo on top</span>
+    </div>
+    <p class="mt-4 text-[16px] text-white/80"><b>Goal:</b> the V1.5/V2 system — 34-table model, data moat, multi-clinician ops. Built surface-by-surface; each addition is now low-risk on a proven base, and these are the parts agents do best.</p>
+    <div class="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-[15px] text-white/85">
+      <div>1. <b>Full 12-tool library</b> — highest leverage, lowest risk</div>
+      <div>2. <b>Care-track engine</b> — 5 vs 7 decided first</div>
+      <div>3. <b>Outcomes dashboard</b> — the moat</div>
+      <div>4. <b>Earnings ledger + payouts</b> — GST/TDS</div>
+      <div>5. <b>3-tier informant system</b> — reopens minor question</div>
+      <div>6. <b>Hardened compliance</b> — Vault crypto + Merkle audit</div>
+      <div>7. <b>Ops surface</b> — KYC, materials, messaging, calendar</div>
+      <div>8. <b>Daily.co</b> video with signed URLs</div>
+    </div>
+    <div class="mt-5 rounded-xl bg-white/10 border-l-4 border-amber p-4 text-[14.5px]">
+      <b>Exit gate (launch-grade):</b> pen-test passed · clinical sign-off · DPDP/medico-legal review · MSG91/Meta templates live · backup/restore verified · Merkle anchor verifiable.
+    </div>
+  </article>
+</section>
+
+<!-- UNCOMPRESSIBLES -->
+<section id="uncompressible" class="max-w-container mx-auto px-5 sm:px-7 py-14 lg:py-20">
+  <span class="reveal eyebrow text-bad">Parallel track</span>
+  <h2 class="reveal h-sec text-plum mt-3">Start these on Day 1 — calendar, not code</h2>
+  <p class="reveal mt-4 text-[16px] text-ink/75 max-w-2xl">These run alongside M–P3. Starting late is the most common way a solo build slips months. Agents give ~0 leverage here.</p>
+  <div class="reveal mt-7 tbl-wrap shadow-soft">
+    <table class="r">
+      <thead><tr><th>Item</th><th>Start</th><th>Lead time</th><th>Blocks</th></tr></thead>
+      <tbody>
+        <tr><td><b>Export Odoo data</b> (PDFs, contacts)</td><td class="mono">M</td><td>before lapse</td><td>Phase M cutover</td></tr>
+        <tr><td>MSG91 + Meta WhatsApp templates</td><td class="mono">P0</td><td>weeks</td><td>rich notifications (P1/P2)</td></tr>
+        <tr><td>Razorpay live KYC + activation</td><td class="mono">P0</td><td>days–weeks</td><td>live payments (P1 gate)</td></tr>
+        <tr><td>Clinical sign-off on intake/safety copy</td><td class="mono">P0</td><td>ongoing</td><td>P1 gate</td></tr>
+        <tr><td>DPDP / medico-legal review</td><td class="mono">P2</td><td>weeks</td><td>P2/P3 gates</td></tr>
+        <tr><td>External security review #1</td><td class="mono">end P1</td><td>~1–2 wks</td><td>P1 gate</td></tr>
+        <tr><td>Pen-test #2</td><td class="mono">end P3</td><td>~2 wks</td><td>launch</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- TIMELINE GANTT -->
+<section id="timeline" class="max-w-container mx-auto px-5 sm:px-7 pb-6">
+  <h2 class="reveal h-sec text-plum">Timeline at a glance</h2>
+  <div class="reveal mt-7 rounded-2xl bg-white shadow-card p-6 lg:p-9 space-y-3">
+    <div class="gantt-row"><span class="text-[13px] font-600 text-amber">M · Mktg</span><div class="gantt-bar bg-amber" style="width:14%">~1–2 wks</div></div>
+    <div class="gantt-row"><span class="text-[13px] font-600 text-muted">P0 · Found</span><div class="gantt-bar bg-muted" style="width:8%">~1 wk</div></div>
+    <div class="gantt-row"><span class="text-[13px] font-600 text-primary">P1 · Core</span><div class="gantt-bar bg-primary" style="width:30%">~3–5 wks · pilot + security review</div></div>
+    <div class="gantt-row"><span class="text-[13px] font-600 text-primaryDark">P2 · ₹1L</span><div class="gantt-bar bg-primaryDark" style="width:26%">~3–4 wks · paying patients</div></div>
+    <div class="gantt-row"><span class="text-[13px] font-600 text-plum">P3 · OG</span><div class="gantt-bar bg-gradient-to-r from-violet to-plum" style="width:88%">~3–4 mo · moat, hardening, pen-test</div></div>
+    <p class="text-[14px] text-muted pt-2 border-t border-lav-100">Phase M is independent — it can finish before P0 even starts. <b class="text-plum">Total to OG-complete ≈ 5–7 months part-time</b> (agentic, solo) + Phase M up front. Agentic speed reaches the fast end of each band — it doesn't break the floor set by the 🔴 calendar items. "Two weeks" is a prototype slice, not this.</p>
+  </div>
+</section>
+
+<!-- BRAND DECISION -->
+<section class="max-w-container mx-auto px-5 sm:px-7 py-14 lg:py-20">
+  <span class="reveal eyebrow text-primary">Open decision that gates frontend</span>
+  <h2 class="reveal h-sec text-plum mt-3">Pick a brand before P0 closes</h2>
+  <div class="mt-7 grid md:grid-cols-2 gap-4">
+    <div class="reveal rounded-2xl bg-white shadow-soft p-6 border-l-4 border-primary">
+      <div class="flex items-center gap-3"><span class="w-10 h-10 rounded-full bg-primary"></span><span class="w-10 h-10 rounded-full bg-violet"></span><span class="w-10 h-10 rounded-full bg-plum"></span></div>
+      <h3 class="font-heading text-2xl font-700 text-plum mt-4">Purple — current Saday</h3>
+      <p class="mt-2 text-[15px] text-ink/75"><span class="mono text-[13px]">#8C68CD</span> + tree logo + Darker Grotesque. Existing equity; warm. See <span class="mono text-[13px]">mockups/saday-home.html</span>.</p>
+    </div>
+    <div class="reveal rounded-2xl bg-white shadow-soft p-6 border-l-4 border-[#2d4a3e]">
+      <div class="flex items-center gap-3"><span class="w-10 h-10 rounded-full" style="background:#2d4a3e"></span><span class="w-10 h-10 rounded-full" style="background:#c9b489"></span><span class="w-10 h-10 rounded-full" style="background:#fbfaf6;border:1px solid #e5e2d8"></span></div>
+      <h3 class="font-heading text-2xl font-700 text-plum mt-4">Sage + serif — vendor mockup</h3>
+      <p class="mt-2 text-[15px] text-ink/75">Forest green <span class="mono text-[13px]">#2d4a3e</span> + Fraunces serif + warm paper. More premium/calm; discards equity. See <span class="mono text-[13px]">vendor-mockup-scan/</span>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS METRICS -->
+<section class="max-w-container mx-auto px-5 sm:px-7 pb-16">
+  <h2 class="reveal h-sec text-plum">Done, not just busy</h2>
+  <div class="reveal mt-7 grid sm:grid-cols-3 gap-4">
+    <div class="rounded-2xl bg-white shadow-soft p-6"><span class="mono font-700 text-primary">P1</span><p class="mt-2 text-[15px] text-ink/80">A stranger goes intake → consult → signed note → prescription, and you can <b>prove</b> no cross-patient leak. <span class="text-muted">Safety, demonstrated.</span></p></div>
+    <div class="rounded-2xl bg-white shadow-soft p-6"><span class="mono font-700 text-primary">P2</span><p class="mt-2 text-[15px] text-ink/80">Patients pay, come back, and refer. <span class="text-muted">Product-market-fit signal.</span></p></div>
+    <div class="rounded-2xl bg-white shadow-soft p-6"><span class="mono font-700 text-primary">P3</span><p class="mt-2 text-[15px] text-ink/80">You can show outcome data — mean PHQ-9 drop across a cohort. <span class="text-muted">The moat exists.</span></p></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-plum text-white/70">
+  <div class="max-w-container mx-auto px-5 sm:px-7 py-10">
+    <div class="flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <span class="grid place-items-center w-8 h-8 rounded-lg bg-white/10 text-white text-sm font-heading font-700">स</span>
+        <span class="font-heading font-700 text-lg text-white">Saday Wellness · Scaling Roadmap</span>
+      </div>
+      <span class="mono text-[12px] text-white/50">v0.1 · 2026-06-12 · living doc</span>
+    </div>
+    <p class="mt-6 text-[13px] text-white/50 leading-relaxed border-t border-white/10 pt-6">
+      Source anchors: <span class="mono">docs/intake-spec.md</span> (D1–D8) · <span class="mono">docs/data-model.md</span> · <span class="mono">Saday_MVP_Developer_Brief_v1.1.md</span> · <span class="mono">docs/Saday_Solo_Agentic_Build_Estimate.html</span> · <span class="mono">vendor-mockup-scan/AUDIT.md</span> · <span class="mono">mockups/saday-home.html</span>.
+    </p>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Saday Wellness — Solo Agentic Build Estimate &amp; Audit</title>
+<style>
+  @page {
+    size: A4;
+    margin: 18mm 16mm 20mm 16mm;
+    @bottom-center {
+      content: "Saday Wellness · Solo Agentic Build Estimate · Page " counter(page) " of " counter(pages);
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 8pt;
+      color: #888;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.45;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+  }
+  body { padding: 0; }
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    color: #0a0a0a;
+    page-break-after: avoid;
+    line-height: 1.25;
+  }
+  h1 {
+    font-size: 22pt;
+    margin: 0 0 4pt 0;
+    letter-spacing: -0.02em;
+  }
+  h2 {
+    font-size: 14pt;
+    margin: 22pt 0 8pt 0;
+    padding-bottom: 4pt;
+    border-bottom: 1.5pt solid #1a1a1a;
+  }
+  h3 {
+    font-size: 11.5pt;
+    margin: 14pt 0 6pt 0;
+    color: #1a1a1a;
+  }
+  h4 {
+    font-size: 10.5pt;
+    margin: 10pt 0 4pt 0;
+    color: #333;
+  }
+  p { margin: 0 0 8pt 0; }
+  ul, ol { margin: 4pt 0 8pt 18pt; padding: 0; }
+  li { margin-bottom: 3pt; }
+  strong { color: #000; }
+  em { color: #333; }
+  code, .mono {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 9pt;
+    background: #f3f3f3;
+    padding: 1pt 4pt;
+    border-radius: 2pt;
+    color: #1a1a1a;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6pt 0 12pt 0;
+    font-size: 9pt;
+    page-break-inside: auto;
+  }
+  table th, table td {
+    border: 0.5pt solid #ccc;
+    padding: 5pt 7pt;
+    vertical-align: top;
+    text-align: left;
+  }
+  table thead th {
+    background: #1a1a1a;
+    color: #fff;
+    font-weight: 600;
+    font-size: 9pt;
+    letter-spacing: 0.02em;
+  }
+  table tbody tr:nth-child(even) td { background: #f7f7f7; }
+  table tr { page-break-inside: avoid; }
+  .meta {
+    font-size: 9pt;
+    color: #666;
+    margin-bottom: 14pt;
+    border-bottom: 0.5pt solid #ddd;
+    padding-bottom: 8pt;
+  }
+  .callout {
+    background: #fff8e6;
+    border-left: 3pt solid #d4a017;
+    padding: 8pt 12pt;
+    margin: 10pt 0;
+    font-size: 9.5pt;
+  }
+  .callout.warn {
+    background: #fff0ee;
+    border-left-color: #c0392b;
+  }
+  .callout.good {
+    background: #eef9f0;
+    border-left-color: #27884a;
+  }
+  .callout.info {
+    background: #eef3fb;
+    border-left-color: #2563eb;
+  }
+  .leverage {
+    display: inline-block;
+    padding: 1pt 5pt;
+    border-radius: 2pt;
+    font-size: 8pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .leverage.vh { background: #d1fae5; color: #065f46; }
+  .leverage.h  { background: #dbeafe; color: #1e40af; }
+  .leverage.m  { background: #fef3c7; color: #92400e; }
+  .leverage.l  { background: #fee2e2; color: #991b1b; }
+  .leverage.z  { background: #e5e7eb; color: #374151; }
+  .pagebreak { page-break-before: always; }
+  .lead {
+    font-size: 11pt;
+    color: #1a1a1a;
+    border-left: 2pt solid #1a1a1a;
+    padding-left: 10pt;
+    margin: 8pt 0 14pt 0;
+  }
+  .footer {
+    margin-top: 24pt;
+    padding-top: 8pt;
+    border-top: 0.5pt solid #ccc;
+    font-size: 8.5pt;
+    color: #666;
+  }
+  .total-row td {
+    font-weight: 700;
+    background: #1a1a1a !important;
+    color: #fff;
+  }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .small { font-size: 9pt; }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10pt;
+    margin: 8pt 0;
+  }
+  .panel {
+    border: 0.5pt solid #ccc;
+    padding: 8pt 10pt;
+    background: #fafafa;
+    border-radius: 3pt;
+    font-size: 9pt;
+  }
+  .panel h4 { margin-top: 0; }
+  hr { border: none; border-top: 0.5pt solid #ccc; margin: 14pt 0; }
+</style>
+</head>
+<body>
+
+<h1>Saday Wellness — Solo Agentic Build Estimate &amp; Internal Audit</h1>
+<div class="meta">
+  <strong>Document:</strong> <code>docs/Saday_Solo_Agentic_Build_Estimate.html</code> &nbsp;·&nbsp;
+  <strong>Date:</strong> 2026-05-05 &nbsp;·&nbsp;
+  <strong>Prepared for:</strong> Akash (CTO &amp; practicing psychiatrist) &nbsp;·&nbsp;
+  <strong>Companion to:</strong> <code>data-model.md</code> v1.1, <code>intake-spec.md</code> v1.0, <code>stack-decision.md</code> v1.0, <code>Saday_Action_Plan_by_Claude.md</code> &nbsp;·&nbsp;
+  <strong>Purpose:</strong> a single document that quantifies the cost, leverage, risk, and uncompressible blockers of a solo + agentic-codegen build path on the locked stack (Next.js 14 + Supabase Postgres + RLS-first + TypeScript), so it can be compared head-to-head against the vendor quote (₹2L / 60 days / Vue + Laravel + MySQL) and an alternative hybrid path.
+</div>
+
+<p class="lead">
+This is an internal estimating document. It is biased toward honesty, not toward selling a path. Wherever an estimate is optimistic, it is flagged. Wherever a number depends on a calendar-blocking dependency outside Akash's control (CF time, MSG91 template approval, pen-test scheduling), it is called out separately and <em>not</em> reduced by codegen leverage.
+</p>
+
+<h2>1 · Executive summary</h2>
+
+<table>
+<thead>
+<tr><th style="width: 22%;">Path</th><th>Wall-clock</th><th>Cash out</th><th>What you own at the end</th><th>Risk profile</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vendor as quoted</strong><br><span class="small">₹2L / 60 working days / Vue + Laravel + MySQL</span></td>
+<td>~12 calendar weeks</td>
+<td>₹2L + ~₹3k/mo infra (under-spec)</td>
+<td>Demo-shaped MVP on a stack you didn't pick. 3 locked spec decisions silently violated. B6 (SOAP body deny) is at app layer not DB layer. Audit log = INSERT-only table, not Merkle-anchored.</td>
+<td><strong>High.</strong> Compliance posture regression vs spec. DPDP / MHA exposure if scrutinised.</td>
+</tr>
+<tr>
+<td><strong>Vendor with renegotiated stack + scope</strong><br><span class="small">Postgres-first, paise, C-SSRS, B-series intact</span></td>
+<td>~16–20 calendar weeks</td>
+<td>~₹3–5L renegotiated + ₹15–25k/mo infra</td>
+<td>Spec-true MVP on Postgres. You don't write a line; you spec-review every PR.</td>
+<td><strong>Medium.</strong> Vendor competence still unverified on the harder bits (RLS, audit cryptography, Vault).</td>
+</tr>
+<tr>
+<td><strong>Solo + agentic codegen</strong><br><span class="small">You, Claude Code/Cursor, 25h/week</span></td>
+<td><strong>24–28 calendar weeks</strong></td>
+<td><strong>~₹15–25k/mo infra + pen-test ₹40–80k</strong></td>
+<td>Spec-true MVP. Full stack ownership. Bus factor = 1 (you).</td>
+<td><strong>Medium.</strong> Two-hat clinical bandwidth risk + review fatigue + RLS debugging tax.</td>
+</tr>
+<tr>
+<td><strong>Hybrid (recommended)</strong><br><span class="small">You build safety-critical; contractor builds dashboards</span></td>
+<td>~14–16 calendar weeks</td>
+<td>~₹2–3L contractor + ₹15–25k/mo infra + pen-test ₹40–80k</td>
+<td>Spec-true MVP. You own all safety-critical code. Contractor owns well-trodden surfaces.</td>
+<td><strong>Low–medium.</strong> Best balance of correctness, speed, and bus factor.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="callout info">
+<strong>Headline number:</strong> Solo + agentic on the locked stack lands at <strong>~110–140 dev-days, 24–28 calendar weeks at 25 hours/week</strong>. The single biggest variable is not your typing speed; it is <strong>CF availability</strong> (clinical sign-off, Hindi review) and <strong>external dependencies</strong> (MSG91 template approval, Razorpay live activation, pen-test scheduling). These are uncompressible by codegen and consume 4–6 of those calendar weeks regardless of how fast you code.
+</div>
+
+<h2>2 · Why this stack is materially better for agentic codegen</h2>
+
+<p>Stack choice is not aesthetics. The locked stack (Next.js 14 + Supabase Postgres + RLS-first + TypeScript end-to-end) was picked deliberately in <code>stack-decision.md</code>; agentic codegen amplifies <em>every one of those choices</em>. The vendor's pivot to Vue + Laravel + MySQL undoes the same amplifications.</p>
+
+<table>
+<thead>
+<tr><th style="width: 28%;">Stack property</th><th>Why codegen produces fewer landmines</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>TypeScript end-to-end</strong></td>
+  <td>Hallucinated column names and shape mismatches fail at <em>compile time</em>, not at runtime in a clinic. Single biggest quality lever an agentic dev can hold.</td>
+</tr>
+<tr>
+  <td><strong><code>supabase gen types typescript</code></strong></td>
+  <td>Schema is the source of truth. Types regenerate after every migration. Codegen consumes the generated types and stops inventing fields it has not seen.</td>
+</tr>
+<tr>
+  <td><strong>RLS policies are pure SQL</strong></td>
+  <td>A policy is 5–15 lines, easy for an LLM to draft, easy for a human to read, fails closed by default. Compare to Laravel policies — 200+ controller files where forgetting <code>$this-&gt;authorize()</code> once equals a leak.</td>
+</tr>
+<tr>
+  <td><strong>Server Components + Server Actions</strong></td>
+  <td>Eliminates a layer (REST API route + client fetch + duplicated validation). Less surface for codegen to misalign client and server.</td>
+</tr>
+<tr>
+  <td><strong>Single language across surfaces</strong></td>
+  <td>Frontend, server actions, edge functions all in TS. Codegen's context window stays coherent across files; PHP+JS forces two mental models.</td>
+</tr>
+<tr>
+  <td><strong>Managed Supabase + Vercel/Cloudflare</strong></td>
+  <td>Codegen does not write nginx, supervisor, queue worker daemons, redis tuning, log rotation, php-fpm pool sizing. That work disappears entirely. Saves ~1 hour/week of ops indefinitely.</td>
+</tr>
+<tr>
+  <td><strong>Drizzle / Supabase-js typed query builders</strong></td>
+  <td>Column references are statically checked. The single most common LLM SQL error — <code>WHERE user_id = …</code> when the column is <code>userId</code> — fails compile.</td>
+</tr>
+<tr>
+  <td><strong>Supabase Vault + <code>app_secret()</code> helper</strong></td>
+  <td>Crypto key custody is a one-time setup; codegen never sees the key. On Laravel + APP_KEY, codegen will routinely write <code>pgp_sym_encrypt('PHI', env('KEY'))</code> patterns and tempt fate.</td>
+</tr>
+<tr>
+  <td><strong>RLS attack tests</strong></td>
+  <td>The <code>data-model.md §7.4</code> adversarial test suite runs against the database, not against the application. Codegen can write 100 controllers; if RLS holds, it does not matter that 3 of them forgot to authz. <strong>This is the single biggest reason the spec was written Postgres-first.</strong></td>
+</tr>
+</tbody>
+</table>
+
+<div class="callout good">
+<strong>The most under-rated point.</strong> RLS converts "did I remember to authz this controller?" from a per-route human review (which fatigues a solo dev after week 4) into a single SQL test suite. That is the architecture paying you back exactly when codegen's failure mode bites — 80% review acceptance + 20% rubber-stamping after fatigue sets in.
+</div>
+
+<h2>3 · Where codegen struggles on this stack (honest)</h2>
+
+<p>Symmetry: it is not a free lunch. Six places where agentic codegen on this exact stack costs more than naive estimates assume:</p>
+
+<ol>
+<li><strong>RLS debugging tax.</strong> "Why is this query returning empty when I'm clearly logged in?" Famous time-eater. When a test fails, codegen's reflex is to <em>broaden</em> the policy; you must enforce the discipline of "narrow first, prove the case, then accept." Budget 1.2–1.5× on RLS-touching work.</li>
+<li><strong>Supabase Auth custom_access_token_hook.</strong> Documentation thin. Codegen often produces the older <code>raw_user_meta_data</code> pattern that does not work for RLS. You will fight this once, then it sticks. Add 2 days.</li>
+<li><strong>Storage RLS is separate from table RLS.</strong> Materials, SOAP attachments, exports: storage policies live in their own surface. Codegen will write table policies and forget storage. Add 1–2 days.</li>
+<li><strong>pgcrypto + Vault wiring.</strong> Codegen reflexively writes <code>pgp_sym_encrypt('val', 'plaintext')</code>. You must enforce <code>app_secret('key_name')</code> via Vault every single time. This is a code-review discipline issue, not a codegen issue.</li>
+<li><strong>Edge runtime vs Node runtime.</strong> Codegen mixes them. Some libraries (Razorpay SDK, certain crypto helpers) do not run on Edge. You hit this exactly once per surface and it costs an hour each time.</li>
+<li><strong>Clinical scoring functions.</strong> PHQ-9, GAD-7, PCL-5, OCI-R, MSI-BPD, SCOFF, AUDIT-C all have edge cases (reverse-coded items, "difficulty" question on PHQ-9 not scored, AUDIT-C cutoffs differ by gender). Codegen produces scoring that <em>looks correct</em> and silently miscalculates 1–2 tools. <strong>You must hand-verify against published scoring sheets, not against codegen's tests.</strong> Codegen tests will pass against codegen's understanding.</li>
+</ol>
+
+<h2 class="pagebreak">4 · Detailed estimation table</h2>
+
+<p class="small"><strong>Assumptions:</strong> senior dev (Akash), spec already locked, Claude Code / Cursor with model parity to current Opus tier, Supabase Mumbai project provisioned, Vercel or Cloudflare Pages deploy target, Vault configured, ~25 hours/week of actual coding time. Working day = 5 productive hours net of context switches. Estimates exclude calendar-blocking external dependencies (covered separately in §5).</p>
+
+<table>
+<thead>
+<tr>
+  <th style="width: 30%;">Work surface</th>
+  <th style="width: 9%;">Codegen leverage</th>
+  <th style="width: 13%;">Estimate (dev-days)</th>
+  <th>Why this number, what bites</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+  <td><strong>Project scaffold</strong> — Next.js 14 App Router, TS strict, Tailwind, Supabase client, Sentry with PHI redaction, Cloudflare WAF + Turnstile, Vercel/Pages deploy, GitHub Actions CI, env management, <code>supabase gen types</code> pipeline, ESLint + Prettier + Husky</td>
+  <td><span class="leverage vh">Very High</span></td>
+  <td class="num"><strong>2–3</strong></td>
+  <td>Most compressed work in any stack. Codegen ships a clean day-one repo. Risk is over-eager scaffolding (codegen adds boilerplate you do not need). Reject auth boilerplate that does not match Supabase patterns.</td>
+</tr>
+
+<tr>
+  <td><strong>34-table schema + migrations</strong> — all 9 domains, GENERATED columns (<code>age_band</code>, SLA deadlines), CHECK constraints, FK <code>ON DELETE RESTRICT</code>, cross-domain FKs deferred to <code>0010b</code>, identity bridge (<code>users.auth_user_id → auth.users.id</code>), <code>current_user_id()</code> helper, idle-timeout helper</td>
+  <td><span class="leverage h">High (drafting), Low (audit pass)</span></td>
+  <td class="num"><strong>5–7</strong></td>
+  <td>Codegen drafts each table from <code>data-model.md §6</code> cleanly. You then read every line because codegen quietly drops a CHECK or weakens a NOT NULL when a downstream test fails. The audit pass is the work, not the typing.</td>
+</tr>
+
+<tr>
+  <td><strong>RLS policies</strong> — per-table template, 6 worked examples, service_role-only audit INSERT (A4), SOAP body deny (B6), assessment trigger blocking patient assignment of clinician-only tools (A15), redaction rule for <code>session_notes</code> S/O/A/P and <code>conversations.ai_summary</code> in audit JSONB (A5)</td>
+  <td><span class="leverage h">High (drafting), Medium (correctness)</span></td>
+  <td class="num"><strong>4–6</strong></td>
+  <td>Drafting is fast. "Why is this query returning empty" debugging is the famous time-eater. Codegen's reflex is to broaden the policy; you must enforce narrow-first-prove-case. Single biggest source of unplanned hours.</td>
+</tr>
+
+<tr>
+  <td><strong>RLS attack test suite</strong> — cross-patient, cross-MHP, role-escalation, admin-reads-SOAP, patient-reads-other-org, addendum-bypass, audit-actor-forgery</td>
+  <td><span class="leverage m">Medium</span></td>
+  <td class="num"><strong>2–3</strong></td>
+  <td>Codegen writes the tests; you must invent the adversarial cases yourself. Codegen will not propose attacks it has not seen. This is where you spend half a day thinking like a malicious admin.</td>
+</tr>
+
+<tr>
+  <td><strong>pgcrypto + Vault + key custody</strong> — Vault setup, <code>app_secret(key_name)</code> helper, DM5 columns (<code>users.phone_encrypted</code>, MHP bank fields, safety-contact phone), service-role-gated decrypt views, encrypted-column read helpers</td>
+  <td><span class="leverage l">Low</span></td>
+  <td class="num"><strong>2–3</strong></td>
+  <td>Vault setup is a UI-and-migration dance, doc-thin. Codegen helps minimally. Most of this is reading the Supabase Vault docs and getting the policy on <code>vault.decrypted_secrets</code> right.</td>
+</tr>
+
+<tr>
+  <td><strong>Audit log</strong> — per-row sha256 trigger, monthly partitioning via pg_partman, JSONB <code>before_row</code>/<code>after_row</code> with redaction rule, weekly Merkle build via pg_cron, S3 ap-south-1 export with object-lock, V1.5 R2 mirror plan stub</td>
+  <td><span class="leverage m">Medium-Low</span></td>
+  <td class="num"><strong>4–6</strong></td>
+  <td>Codegen writes a working trigger and a passable Merkle builder. The redaction rule is where it will silently leak SOAP into JSONB if you do not catch it in review. pg_partman setup has its own learning curve. Tested-and-verified weekly Merkle externalisation is a half-day in itself.</td>
+</tr>
+
+<tr>
+  <td><strong>Auth</strong> — Supabase Auth + custom_access_token_hook injecting <code>user_role</code>, identity bridge resolution, email-OTP for patients, TOTP enrolment for MHP/admin/counsellor, idle timeout enforcement, HttpOnly cookies, password-less patient sign-in</td>
+  <td><span class="leverage m">Medium</span></td>
+  <td class="num"><strong>4–5</strong></td>
+  <td>Codegen frequently produces the deprecated <code>raw_user_meta_data</code> pattern. You fight it once, then it sticks. TOTP recovery codes + lockout policy is a genuine half-day of careful work.</td>
+</tr>
+
+<tr>
+  <td><strong>Intake prototype</strong> — 7-screen flow, port HTML prototype to React, state machine, 8-cluster routing, severity-wins tiebreak, C-SSRS items 1–2 universal + 3–6 gated, T5 short-circuit, JC alert dispatch, EN+HI i18n scaffold, localStorage draft with 7-day expiry, Cloudflare Turnstile, per-IP rate limit</td>
+  <td><span class="leverage vh">Very High</span></td>
+  <td class="num"><strong>7–10</strong></td>
+  <td>Canonical React + state-machine work. Codegen excels. Bumped because of CF feedback loops on routing tables. If CF is responsive (1-day turnaround), lower bound holds; if 3-day turnaround, upper.</td>
+</tr>
+
+<tr>
+  <td><strong>5-tester intake study</strong> — recruit, run sessions, transcribe, fix, re-run §10 cases against v2</td>
+  <td><span class="leverage z">None</span></td>
+  <td class="num"><strong>5–7 calendar days, ~10h yours</strong></td>
+  <td>Pure human work. Cannot compress. Do not gate other work on this — run in parallel during sprint 3 or 4.</td>
+</tr>
+
+<tr>
+  <td><strong>12 assessment tools</strong> — DB-driven rendering from <code>assessment_tool_versions</code>, version-locked instances, pure-function scoring, EN+HI content, A/B/C validation tier flag, milestone re-administration scheduler, A15 trigger blocking patient assignment of clinician tools</td>
+  <td><span class="leverage l">Low (scoring), High (UI)</span></td>
+  <td class="num"><strong>8–10</strong></td>
+  <td>Each tool has scoring edge cases (PHQ-9 difficulty question, GAD-7 simple sum, AUDIT-C gender cutoffs, PCL-5 cluster scoring, MDQ multi-criteria positivity, ASRS Part A vs B, SCOFF threshold, OCI-R subscales, MSI-BPD threshold, ISI threshold, PSS-10 reverse coding, C-SSRS gating). Codegen produces plausible scoring that miscalculates 1–2 tools. Hand-verify against published sheets.</td>
+</tr>
+
+<tr>
+  <td><strong>Hindi clinical content review by CF</strong></td>
+  <td><span class="leverage z">None</span></td>
+  <td class="num"><strong>1–2 calendar weeks, blocking</strong></td>
+  <td>Pure CF time. Cannot compress with codegen. Plan to start CF review early so it overlaps build, not gates it.</td>
+</tr>
+
+<tr>
+  <td><strong>MHP availability + booking</strong> — weekly recurring slots, block-outs, IST timezone handling, self-serve booking UI, session packages (4-session / 8-session), reschedule + cancel with policy enforcement</td>
+  <td><span class="leverage h">High</span></td>
+  <td class="num"><strong>5–7</strong></td>
+  <td>Calendar/availability is well-trodden. Edge cases: DST (none in IST, win), MHP timezone if MHP travels (defer to V1.5), recurring-slot exception model (codegen handles cleanly).</td>
+</tr>
+
+<tr>
+  <td><strong>Razorpay integration</strong> — order create, checkout, webhook receive + signature verify, idempotency keys, reconciliation cron, refund API, paise everywhere, display formatter at every UI surface, GST/TDS deductions ledger</td>
+  <td><span class="leverage m">Medium</span></td>
+  <td class="num"><strong>6–8</strong></td>
+  <td>Codegen writes the happy path in 2 days. Webhook idempotency, retry-with-backoff, partial refund handling, dispute/chargeback hooks, signature timing-attack-safe compare — these need hand-design and a careful afternoon each. Live activation calendar-blocking (separate).</td>
+</tr>
+
+<tr>
+  <td><strong>Earnings ledger</strong> — full attribution per transaction (service / PG charges / GST / TDS / commission / net / payout status), admin payout config UI, per-MHP rollups, refund flow ledger entries</td>
+  <td><span class="leverage m">Medium</span></td>
+  <td class="num"><strong>3–4</strong></td>
+  <td>Schema is already specced. Codegen writes the rollup queries. Reconciliation edge cases (refund of a session in a paid-out batch) need you.</td>
+</tr>
+
+<tr>
+  <td><strong>Daily.co + Jitsi</strong> — room minting on booking, signed-URL JIT mint server-side, Jitsi fallback toggle, session state machine (scheduled/in-progress/completed/no-show), pre-session 1-tap mood rating, post-session disconnect handling</td>
+  <td><span class="leverage h">Medium-High</span></td>
+  <td class="num"><strong>4–5</strong></td>
+  <td>Daily.co API is clean and codegen-friendly. Jitsi fallback adds a configurable provider abstraction (a half-day). Mood-rating UX is one screen.</td>
+</tr>
+
+<tr>
+  <td><strong>SOAP editor</strong> — signed + versioned + immutable-after-sign trigger, addendum pattern (<code>is_addendum</code> + <code>addendum_to_id</code>), B6 RLS denial enforcement, admin metadata-only view, MHP-only S/O/A/P read</td>
+  <td><span class="leverage m">Medium</span></td>
+  <td class="num"><strong>4–5</strong></td>
+  <td>Codegen writes the editor in a day. The immutability trigger + addendum + B6 view layer is a focused half-week. The temptation to "soft-edit before sign" must be resisted at the schema level.</td>
+</tr>
+
+<tr>
+  <td><strong>Medication list + ICD-11 + episodes</strong> — structured medication list (not e-prescription), ICD-11 lookup integration (WHO API or static catalog import), episode-of-care assignment, DM4 manual-close UX, 90-day-inactive admin widget</td>
+  <td><span class="leverage h">High (UI), Medium (ICD-11 ingest)</span></td>
+  <td class="num"><strong>4–5</strong></td>
+  <td>ICD-11 catalog import is a one-time data engineering task; the WHO API has rate limits, prefer static import for V1. Episode lifecycle is straightforward.</td>
+</tr>
+
+<tr>
+  <td><strong>Patient dashboard</strong> — upcoming sessions, history, materials library (Supabase Storage with signed URLs and storage RLS), safety plan editor, follow-up questionnaire scheduling (PHQ-9 / GAD-7 at weeks 0/2/4/8/12), assessment results display</td>
+  <td><span class="leverage h">High</span></td>
+  <td class="num"><strong>4–5</strong></td>
+  <td>Storage RLS is the gotcha (separate policy surface from table RLS). Codegen forgets it twice before you internalise the discipline.</td>
+</tr>
+
+<tr>
+  <td><strong>Informant linkage L1/L2/L3</strong> — link request flow, consent capture, RLS for cross-account read with role flag, revocation flow, audit on every cross-account access</td>
+  <td><span class="leverage m">Medium</span></td>
+  <td class="num"><strong>3–4</strong></td>
+  <td>RLS gets gnarly here — informant role is not a fixed <code>user_role</code>, it is a relationship. Either model as a separate policy clause per table, or via a helper function <code>can_read_patient(patient_id)</code>. Latter scales better.</td>
+</tr>
+
+<tr>
+  <td><strong>MHP dashboard</strong> — today, week view, earnings, utilisation rate, client list with last/next session and care track and safety flags, assessment admin, track assignment (system suggests, MHP confirms)</td>
+  <td><span class="leverage h">High</span></td>
+  <td class="num"><strong>4–5</strong></td>
+  <td>Standard dashboard. Codegen-friendly with shadcn/ui or tremor.so charts.</td>
+</tr>
+
+<tr>
+  <td><strong>Admin portal</strong> — MHP onboarding, booking oversight + calendar, revenue dashboard (aggregate + per-MHP), earnings ledger view, refund processing, incident/safety queue, deductions config, policy config (reschedule/cancel/refund), WhatsApp/email template editor</td>
+  <td><span class="leverage h">High</span></td>
+  <td class="num"><strong>8–12</strong></td>
+  <td>Largest single surface. <strong>Honest call: consider <code>refine.dev</code> or shadcn-admin templates.</strong> Codegen pairs well with them and compresses this to 5–6 days. Without a template, 8–12 of hand-built React.</td>
+</tr>
+
+<tr>
+  <td><strong>Notifications</strong> — MSG91 WhatsApp templates (booking confirm, 24h reminder, post-session check-in, safety net), template registration with Meta, one-way send, email via Resend/SES, retry with dead-letter queue, opt-out tracking</td>
+  <td><span class="leverage h">High</span></td>
+  <td class="num"><strong>3–4</strong></td>
+  <td>Code is small; Meta template approval is calendar-blocking (1–3 weeks separate).</td>
+</tr>
+
+<tr>
+  <td><strong>DPDP compliance plumbing</strong> — DSR portal (30-day SLA workflow, schema → operator queue → fulfil), consent ledger UI with versioned transcripts, breach 72h workflow + <code>incident_log</code>, vendor DPA registry CRUD with renewal alerts (A12 GENERATED <code>renewal_alert_at</code>), patient-queryable <code>phi_access_events</code> view (schema in V1, UI V1.5)</td>
+  <td><span class="leverage m">Medium</span></td>
+  <td class="num"><strong>5–7</strong></td>
+  <td>Schema is already specced. The operator-side UI and SLA timer logic is real work. Easy to under-estimate because it is not glamorous.</td>
+</tr>
+
+<tr>
+  <td><strong>Accessibility audit (WCAG AA)</strong> — axe-core in CI, manual screen-reader pass on intake (VoiceOver + NVDA), keyboard-only nav verification, contrast verification, label coverage</td>
+  <td><span class="leverage l">Low</span></td>
+  <td class="num"><strong>3–4</strong></td>
+  <td>Codegen catches obvious misses (missing labels, missing alt). Manual screen-reader pass is the work. Plan a half-day with a screen reader you have not used before.</td>
+</tr>
+
+<tr>
+  <td><strong>Pen-test / security review</strong> — §7 walk + RLS attack tests run against staging, auth bypass attempts, Razorpay signature verification edge cases, Daily.co URL leakage check, secret-in-logs check, dependency CVE scan</td>
+  <td><span class="leverage z">None</span></td>
+  <td class="num"><strong>5–7 calendar days external, ~₹40–80k</strong></td>
+  <td>Either external reviewer or you with fresh eyes (worse but possible). External strongly recommended for a clinical/PHI product. Saday spec mandates W10 Tue security review anyway.</td>
+</tr>
+
+<tr>
+  <td><strong>Production cutover</strong> — Supabase Mumbai prod project, run full migration set, schedule cron jobs, configure Sentry PHI redaction, enable Cloudflare WAF + Turnstile in prod, verify backups + restorability, write runbook, set up status page</td>
+  <td><span class="leverage m">Medium</span></td>
+  <td class="num"><strong>3–4</strong></td>
+  <td>Codegen helps with the migration script and runbook template. Backup-restore drill is the part you must actually do, not stub.</td>
+</tr>
+
+<tr class="total-row">
+  <td>TOTAL — solo agentic, dev-days only (excluding calendar-blocking)</td>
+  <td>—</td>
+  <td class="num">~110–140</td>
+  <td>~22–28 calendar weeks at 25h/week (5h/day net of context switches)</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2 class="pagebreak">5 · Calendar-blocking dependencies (uncompressible)</h2>
+
+<p>These run in parallel with build, but the <em>launch date</em> is gated by the slowest one. Codegen does not move them.</p>
+
+<table>
+<thead>
+<tr><th style="width: 30%;">Dependency</th><th>Calendar cost</th><th>How to de-risk</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>CF clinical sign-off on intake routing + 12 tool scoring + Hindi content</strong></td>
+  <td>2–4 weeks aggregate (overlapping with build)</td>
+  <td>Start CF review on intake-spec v1.0 immediately (already drafted). Schedule weekly 1h CF review slot.</td>
+</tr>
+<tr>
+  <td><strong>MSG91 + Meta WhatsApp template approval</strong></td>
+  <td>1–3 weeks (Meta review opaque + iterative)</td>
+  <td>Submit templates in week 1, before any code is needed. Build with email + SMS fallback so launch does not gate on Meta.</td>
+</tr>
+<tr>
+  <td><strong>Razorpay live activation + KYC</strong></td>
+  <td>3–10 business days</td>
+  <td>Submit KYC docs in week 1. Build against test mode. Smoke test live with a ₹1 transaction at week 18.</td>
+</tr>
+<tr>
+  <td><strong>Daily.co plan + recording config</strong></td>
+  <td>1–2 days</td>
+  <td>Trivial. Sign up week 1.</td>
+</tr>
+<tr>
+  <td><strong>Supabase project provisioning ap-south-1 + Pro plan + Vault enabled</strong></td>
+  <td>1 day</td>
+  <td>Trivial. Day one.</td>
+</tr>
+<tr>
+  <td><strong>5-tester intake study + revisions</strong></td>
+  <td>5–10 calendar days</td>
+  <td>Run between sprint 2 (prototype done) and sprint 3 (port to backend). Recruit testers in week 1.</td>
+</tr>
+<tr>
+  <td><strong>Pen-test / external security review</strong></td>
+  <td>1 calendar week (firm) + 3–5 days of fix work</td>
+  <td>Schedule firm 8 weeks ahead of intended launch. Indian firms with healthcare experience: Lucideus, Network Intelligence, Payatu — quote ranges ₹40k–₹1.2L.</td>
+</tr>
+<tr>
+  <td><strong>DPDP DPO appointment + Privacy Policy + Terms (telemed-aligned)</strong></td>
+  <td>1–2 weeks legal review</td>
+  <td>Engage a DPDP-fluent counsel in week 1. Mental-health-specific clauses (MHA §23/§24) need a healthcare-fluent lawyer, not a generic startup lawyer.</td>
+</tr>
+<tr>
+  <td><strong>Vendor DPAs signed (Supabase, Cloudflare, Razorpay, MSG91, Daily.co, Sentry, Resend/SES)</strong></td>
+  <td>2–4 weeks aggregate</td>
+  <td>Most have standard DPAs accessible online. Razorpay's may need a back-and-forth. Capture in <code>vendor_dpas</code> table from day one.</td>
+</tr>
+<tr>
+  <td><strong>Bank account + GST + TDS deduction setup for payouts</strong></td>
+  <td>1–2 weeks</td>
+  <td>Founder admin work, parallel.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="callout warn">
+<strong>Aggregate calendar reality.</strong> Even at maximum codegen throughput on dev work, the project is gated by <strong>the slower of (a) ~22–28 build weeks at 25h/week, (b) ~6–8 calendar weeks of external/CF dependencies if started in parallel from day 1</strong>. Build is the longer pole at this team size, but if external work is started <em>late</em>, it becomes the gate. Start the calendar-blockers in week 1, not week 18.
+</div>
+
+<h2>6 · Aggregate cost view</h2>
+
+<table>
+<thead>
+<tr>
+  <th>Cost line</th>
+  <th>Solo agentic</th>
+  <th>Hybrid (you + 1 contractor)</th>
+  <th>Vendor as quoted</th>
+  <th>Vendor renegotiated</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Your time (25h/week)</td><td>24–28 weeks</td><td>10–12 weeks</td><td>2–3 weeks (review only)</td><td>4–6 weeks (review only)</td></tr>
+<tr><td>Cash to dev/vendor</td><td>₹0</td><td>₹2–3L</td><td>₹2L</td><td>₹3–5L</td></tr>
+<tr><td>Infra (24 months runway)</td><td>~₹3.6–6L (₹15–25k/mo Supabase Pro + Vercel + Cloudflare + S3 + Sentry + Daily.co)</td><td>same</td><td>~₹0.7–1.4L (₹3–6k/mo VPS) — under-spec</td><td>same as solo if Postgres-mandated</td></tr>
+<tr><td>Pen-test</td><td>₹40–80k</td><td>₹40–80k</td><td>not included</td><td>negotiate inclusion</td></tr>
+<tr><td>Legal (DPDP DPO + privacy/terms)</td><td>₹50k–1.5L</td><td>₹50k–1.5L</td><td>₹50k–1.5L</td><td>₹50k–1.5L</td></tr>
+<tr><td>CF time (clinical sign-off)</td><td>~30–50h</td><td>~30–50h</td><td>~30–50h</td><td>~30–50h</td></tr>
+<tr><td>Maintenance (post-V1)</td><td>your time, ongoing</td><td>retainer ₹40–60k/mo or insourced</td><td>included 6 months, then per-feature</td><td>negotiate 12 months</td></tr>
+<tr class="total-row"><td>Cash year-1 ballpark</td><td>~₹4.5–8L</td><td>~₹6.5–11L</td><td>~₹3–5L (under-spec, fragile)</td><td>~₹6–8L</td></tr>
+</tbody>
+</table>
+
+<p class="small"><strong>What this table does not show:</strong> opportunity cost. Six months of your time at 25h/week is ~600 hours. At any reasonable clinic-revenue equivalence, that is materially more than the cash differential between solo and vendor. Pure-cash comparison flatters the solo path; total-cost comparison flatters the vendor path. Neither is wrong.</p>
+
+<h2 class="pagebreak">7 · Internal audit — where these estimates are wrong</h2>
+
+<h3>7.1 · Where I am probably <em>under</em>-estimating</h3>
+<ol>
+<li><strong>RLS debugging tax.</strong> Every senior Postgres-on-Supabase dev reports the same time-eater. Estimates assume 1.2× overhead on RLS-touching work; reality may be 1.5×. <strong>Add ~3–5 dev-days.</strong></li>
+<li><strong>Codegen review fatigue.</strong> When you accept 80% of generated code, the 20% you do not catch compounds. After ~6 weeks of solo agentic dev you are rubber-stamping. Mitigation: schedule one "no-codegen review day" per week where you re-read what you accepted last week with fresh eyes. This costs ~10% time and saves the project. <strong>Add ~10% across the board.</strong></li>
+<li><strong>The two-hat problem.</strong> 25h/week assumes you do not lose Wednesdays to clinic emergencies. You will. <strong>Apply a 30% calendar buffer to anything quoted.</strong> 24 calendar weeks → 31 calendar weeks realistic with clinic load.</li>
+<li><strong>Custom_access_token_hook + RLS interaction with Realtime / Edge Functions</strong> is documented thinly and codegen will mis-pattern it. <strong>Add 2 days.</strong></li>
+<li><strong>Supabase Storage signed-URL handling for materials + SOAP attachments</strong> has subtle RLS interplay. Storage policies are separate from table policies. <strong>Add 1–2 days.</strong></li>
+<li><strong>MSG91 template approval cycles</strong> are calendar-blocking and Meta is famously inconsistent. Do not gate launch on this — fall back to SMS for V1 launch. Calendar risk, not dev-day risk.</li>
+<li><strong>Vault key-rotation playbook.</strong> First time you rotate a Vault secret in production with encrypted columns referencing it, you will lose a day. Plan for it before V1, do not discover it after.</li>
+<li><strong>The 5-tester study almost always surfaces a routing or wording change.</strong> Budget 2 days of revisions, not 0.</li>
+</ol>
+
+<h3>7.2 · Where I am probably <em>over</em>-estimating</h3>
+<ol>
+<li><strong>Intake prototype.</strong> You already have <code>intake-spec.md</code> at "engineer can scaffold from this" detail. Codegen could eat this in 4–5 days flat for V1, not 7–10. Bumped because of CF feedback loops; if CF is responsive, lower bound holds. <strong>Subtract ~2 days.</strong></li>
+<li><strong>Earnings ledger / payout config.</strong> The schema in <code>data-model.md</code> is so specific that codegen has very little room to mis-interpret. Could be 2 days, not 3–4. <strong>Subtract ~1 day.</strong></li>
+<li><strong>Admin portal.</strong> With <code>refine.dev</code> or shadcn-admin templates + codegen, this could compress to 5–6 days, not 8–12. <strong>Subtract ~3 days if templating.</strong></li>
+<li><strong>Production cutover.</strong> If staging mirrors prod (which it should), cutover is a half-day, not 3–4. <strong>Subtract ~1–2 days.</strong></li>
+</ol>
+
+<h3>7.3 · Net of corrections</h3>
+
+<p>Optimistic centre with corrections: ~110 → ~115 dev-days (over-estimation savings of ~7 days, under-estimation additions of ~12 days; net +5).</p>
+<p>Realistic centre with corrections: ~140 → ~150 dev-days. Calendar with two-hat 30% buffer: <strong>~28–31 calendar weeks. ~7 calendar months from kickoff to launch.</strong></p>
+
+<div class="callout">
+<strong>This tracks Saday_Action_Plan_by_Claude.md's 24-week Phase 0–4 plan</strong>, which Akash drafted <em>before</em> assuming agentic dev. The Action Plan's calendar was not bottlenecked on typing speed in the first place. It was bottlenecked on CF time, clinical sign-off, legal review, and 5-tester studies — none of which codegen accelerates. <strong>Agentic dev compresses build, not project.</strong>
+</div>
+
+<h2>8 · Risk register</h2>
+
+<table>
+<thead>
+<tr><th style="width: 26%;">Risk</th><th style="width: 12%;">Likelihood</th><th style="width: 12%;">Impact</th><th>Mitigation</th></tr>
+</thead>
+<tbody>
+<tr><td>Clinic emergencies eat coding weeks</td><td>High</td><td>High</td><td>30% calendar buffer baked in. Hard rule: no client deadline tied to a specific week. Buffer + monthly slip review.</td></tr>
+<tr><td>Codegen review fatigue → rubber-stamping</td><td>High</td><td>High</td><td>Weekly "fresh-eyes review day." Pair-review with Claude Code on diffs older than 3 days. Reject "make the test pass" patches.</td></tr>
+<tr><td>RLS broaden-on-fail anti-pattern</td><td>High</td><td>High</td><td>Discipline rule: every RLS change needs a passing attack test in the same PR. CI gate: <code>RLS_ATTACK_TESTS</code> required.</td></tr>
+<tr><td>Clinical scoring miscalculation in 1–2 tools</td><td>Medium</td><td>Critical</td><td>Hand-verify every tool against a published scoring sheet. CF re-verifies before V1 launch. Lock <code>assessment_tool_versions</code> with a version per (tool, version, language).</td></tr>
+<tr><td>SOAP body leak via storage RLS oversight</td><td>Medium</td><td>Critical</td><td>Storage policies tested separately. Adversarial test: admin user attempts to fetch a SOAP attachment URL.</td></tr>
+<tr><td>Pen-test surfaces a critical finding 2 weeks before launch</td><td>Medium</td><td>High</td><td>Schedule pen-test at week 18, not week 26. Buffer 2 weeks for fixes.</td></tr>
+<tr><td>Meta WhatsApp template rejection cycles delay launch</td><td>Medium</td><td>Medium</td><td>Submit week 1. SMS fallback for V1. Do not couple launch to WhatsApp.</td></tr>
+<tr><td>Vault key custody bug → unrecoverable encrypted columns</td><td>Low</td><td>Critical</td><td>Test key rotation before V1 with synthetic data. Document recovery runbook. Backup Vault export to a separate secure store.</td></tr>
+<tr><td>Bus factor = 1 (you alone leaves / falls ill)</td><td>Low</td><td>Critical</td><td>Documented runbooks. Spec is exhaustive (already true). Hybrid path materially de-risks this.</td></tr>
+<tr><td>Razorpay webhook idempotency bug → double-charge / double-refund</td><td>Medium</td><td>High</td><td>Idempotency keys + persisted webhook ledger. Reconciliation cron daily. Manual refund-of-double review pre-V1.</td></tr>
+<tr><td>DPDP DSR request arrives in V1 and the operator UI is V1.5</td><td>Low</td><td>Medium</td><td>Schema is V1; operator-side fulfilment can be manual via SQL for first 90 days post-launch. Document.</td></tr>
+<tr><td>Hindi content not CF-signed by launch</td><td>Medium</td><td>Medium</td><td>Launch EN-only if needed; HI as fast-follow. Do not block launch on translation.</td></tr>
+<tr><td>Cloudflare Turnstile + per-IP rate limit too aggressive → real users blocked from intake</td><td>Low</td><td>Medium</td><td>Generous limits in V1; tune down only after observing traffic. Log challenge solves to detect false positives.</td></tr>
+<tr><td>Audit Merkle externalisation cron fails silently for weeks</td><td>Medium</td><td>High</td><td>Cron failure → Sentry alert + dashboard widget showing last successful Merkle anchor timestamp. Alert if &gt;8 days.</td></tr>
+</tbody>
+</table>
+
+<h2 class="pagebreak">9 · Solo build path — week-by-week skeleton</h2>
+
+<p class="small">28-week plan with 30% buffer. Two-hat weeks (25h coding) assumed. Calendar-blocking work runs in parallel from week 1.</p>
+
+<table>
+<thead>
+<tr><th style="width: 8%;">Week</th><th>Build focus</th><th>Parallel calendar work</th><th>Output</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>Project scaffold, Supabase Mumbai, Vault, types pipeline, Sentry, Cloudflare, CI/CD</td><td>Submit MSG91 templates · Razorpay KYC · engage DPDP counsel · book pen-test for week 22 · CF review of intake-spec begins</td><td>Repo + deploy pipeline + dev/staging envs</td></tr>
+<tr><td>2</td><td>Migrations days 1–4: domains 1–4 (users, mhps, patients, episodes)</td><td>CF intake review continues</td><td>Half schema in DB</td></tr>
+<tr><td>3</td><td>Migrations days 5–8: domains 5–9 + cross-domain FKs (<code>0010b</code>) + Vault wiring</td><td>Vendor DPAs signed: Supabase, Cloudflare, Daily.co</td><td>Full schema + Vault</td></tr>
+<tr><td>4</td><td>RLS policies for users, patients, mhps, episodes + first attack tests</td><td>Vendor DPAs: Razorpay, MSG91, Sentry</td><td>Half RLS surface + 6 attack tests passing</td></tr>
+<tr><td>5</td><td>RLS policies for session_notes (B6), assessment_*, audit_log + remaining attack tests</td><td>CF clinical sign-off on cluster taxonomy + routing</td><td>Full RLS + 12 attack tests</td></tr>
+<tr><td>6</td><td>Auth: Supabase Auth + custom_access_token_hook + identity bridge + email-OTP for patients + TOTP for MHP/admin</td><td>Privacy policy + ToS draft v1</td><td>Login flows for all 3 roles</td></tr>
+<tr><td>7</td><td>Audit log triggers + monthly partition + redaction rule + Merkle build cron + S3 export</td><td>5-tester recruitment</td><td>Audit log live + first Merkle anchor in S3</td></tr>
+<tr><td>8</td><td>Intake prototype port (S0–S3) + EN+HI scaffold + localStorage draft</td><td>CF Hindi review starts</td><td>Half intake live</td></tr>
+<tr><td>9</td><td>Intake S4–S6 + 8-cluster routing + C-SSRS gating + T5 short-circuit + JC alert</td><td>5-tester study runs</td><td>Full intake live</td></tr>
+<tr><td>10</td><td>Intake revisions from 5-tester study + Turnstile + rate limits + server-side routing port</td><td>Razorpay live activation arrives</td><td>Intake v2 with study fixes</td></tr>
+<tr><td>11</td><td>Assessment engine: PHQ-9, GAD-7, MDQ, ASRS-v1.1 (rendering + scoring + version locks)</td><td>CF verifies PHQ-9, GAD-7 scoring</td><td>4 tools live</td></tr>
+<tr><td>12</td><td>Assessment engine: AUDIT-C, PCL-5, OCI-R, MSI-BPD</td><td>CF verifies these 4</td><td>8 tools live</td></tr>
+<tr><td>13</td><td>Assessment engine: SCOFF, PSS-10, ISI, C-SSRS + milestone scheduler</td><td>CF verifies last 4 + Hindi sign-off batch 1</td><td>All 12 tools + milestones</td></tr>
+<tr><td>14</td><td>MHP availability + booking + reschedule/cancel</td><td>—</td><td>Booking flow live</td></tr>
+<tr><td>15</td><td>Razorpay: order + checkout + webhook + idempotency + signature</td><td>—</td><td>Test-mode payments end-to-end</td></tr>
+<tr><td>16</td><td>Razorpay: refund + reconciliation + earnings ledger</td><td>—</td><td>Earnings live</td></tr>
+<tr><td>17</td><td>Daily.co + Jitsi + session state machine + pre-session mood</td><td>—</td><td>Video sessions live</td></tr>
+<tr><td>18</td><td>SOAP editor + signing trigger + addendum + B6 verification</td><td>Pen-test firm intake call</td><td>SOAP live, B6 attack tests pass</td></tr>
+<tr><td>19</td><td>Medication list + ICD-11 + episode-of-care UI + DM4 manual close</td><td>—</td><td>Clinical surfaces complete</td></tr>
+<tr><td>20</td><td>Patient dashboard + materials library + safety plan + follow-up scheduling</td><td>—</td><td>Patient surface complete</td></tr>
+<tr><td>21</td><td>Informant linkage L1/L2/L3 + cross-account RLS</td><td>Pen-test starts</td><td>Informant flows live</td></tr>
+<tr><td>22</td><td>MHP dashboard + admin portal scaffold (refine/shadcn-admin)</td><td>Pen-test report received</td><td>MHP dashboard + admin shell</td></tr>
+<tr><td>23</td><td>Admin portal: revenue + earnings + refund + incident queue</td><td>Fix pen-test findings</td><td>Admin core surfaces live</td></tr>
+<tr><td>24</td><td>Admin portal: configs (deductions, policies, templates) + DSR portal + consent ledger UI</td><td>Pen-test re-verify</td><td>Compliance plumbing live</td></tr>
+<tr><td>25</td><td>MSG91 + email + retry + dead-letter + opt-out</td><td>WhatsApp templates approved (best case)</td><td>Notifications live</td></tr>
+<tr><td>26</td><td>Accessibility audit + axe-core CI + manual screen-reader pass + remediation</td><td>—</td><td>WCAG AA verified</td></tr>
+<tr><td>27</td><td>Production cutover + backup verify + runbook + monitoring + load test</td><td>Bank + GST + payouts ready</td><td>Production env hot</td></tr>
+<tr><td>28</td><td>Soft launch with 5–10 invited patients · monitor · fix · go-public on day 7</td><td>—</td><td>Launch</td></tr>
+</tbody>
+</table>
+
+<h2>10 · Decision rubric</h2>
+
+<p>Pick a path against these 7 questions. Each answer biases toward one column.</p>
+
+<table>
+<thead>
+<tr><th style="width: 30%;">Question</th><th>Solo agentic</th><th>Hybrid (recommended)</th><th>Vendor (renegotiated)</th></tr>
+</thead>
+<tbody>
+<tr><td>Will you have ≥25h/week to code for 28 weeks straight?</td><td>Required</td><td>10–12h/week is enough</td><td>2–3h/week (review only)</td></tr>
+<tr><td>How much do you want to learn this codebase intimately?</td><td>Maximally</td><td>Deeply on safety-critical, lightly elsewhere</td><td>Spec-level only</td></tr>
+<tr><td>Cash budget for build (year 1)?</td><td>Lowest</td><td>Mid</td><td>Higher (if renegotiated)</td></tr>
+<tr><td>Tolerance for bus-factor=1?</td><td>High</td><td>Medium</td><td>Low</td></tr>
+<tr><td>Confidence the spec is right and a vendor will not get it?</td><td>Highest preserved</td><td>You guard safety-critical surfaces</td><td>You spec-review every PR</td></tr>
+<tr><td>How much do you trust agentic codegen on PHI code?</td><td>With heavy review</td><td>Same, less surface</td><td>You delegate to vendor's review</td></tr>
+<tr><td>Do you want to ship faster than 6 months?</td><td>No (24–28 weeks)</td><td>Yes (14–16 weeks)</td><td>Yes (12–20 weeks)</td></tr>
+</tbody>
+</table>
+
+<h3>Cumulative scoring</h3>
+
+<div class="grid-2">
+<div class="panel">
+<h4>Solo path scores best when</h4>
+<ul>
+  <li>Cash is the binding constraint</li>
+  <li>You want maximum codebase ownership</li>
+  <li>Bus-factor concerns can be deferred</li>
+  <li>Clinic load is genuinely 50%-of-week or less for 7 months</li>
+  <li>You expect to keep building this product yourself for 1–2 years</li>
+</ul>
+</div>
+<div class="panel">
+<h4>Hybrid path scores best when</h4>
+<ul>
+  <li>Speed-to-launch matters (14–16 weeks)</li>
+  <li>You can identify a competent contractor (₹1.5–2.5k/hour senior, Indian Next.js+TS pool, Postgres-fluent)</li>
+  <li>Safety-critical surfaces are non-negotiable in your hands</li>
+  <li>Cash budget is mid (₹6–11L year 1 acceptable)</li>
+  <li>You want a clear handoff boundary (you do schema/RLS/audit/intake/scoring; contractor does dashboards/payments/video/notifications)</li>
+</ul>
+</div>
+</div>
+
+<div class="callout good">
+<strong>My honest read.</strong> Solo agentic is a credible and respectable path on this stack — more credible than on any other stack you could have picked. But the project is gated by CF time and external dependencies, not coding speed, so the gain over hybrid is smaller than it looks. The hybrid path lands ~10–12 weeks earlier with the same correctness guarantees on the load-bearing surfaces, and a ₹2–3L contractor spend is &lt;1.5× a single month of clinic revenue equivalence. <strong>Hybrid is the rational default. Solo is the right call if cash is the binding constraint or if owning every line is a hard requirement for you.</strong>
+</div>
+
+<h2>11 · Open questions for Akash to answer before locking a path</h2>
+
+<ol>
+<li><strong>Honest 8-week-ahead clinic load forecast.</strong> Will you genuinely have 25h/week for 7 months, or is it 15h/week with growth into 25? The latter pushes solo to ~10 calendar months.</li>
+<li><strong>Contractor pool reality.</strong> Do you have a known Next.js+TS+Postgres senior in your network, or do you need to recruit cold? Recruiting cold adds 4–6 weeks before contractor work starts and is a hidden risk.</li>
+<li><strong>What is the launch trigger?</strong> First 10 patients? First MHP onboarded? First DPDP-compliant audit-ready checkpoint? The trigger changes which surfaces are V1 versus deferred.</li>
+<li><strong>Hindi at launch — required, or fast-follow?</strong> If fast-follow, you save 1.5–2 calendar weeks of CF blocking time on launch.</li>
+<li><strong>Are you willing to ship V1 EN-only with HI 4 weeks later?</strong> Decoupling translation from build calendar is a strong simplification.</li>
+<li><strong>Is admin portal a V1 must-have or V1.1 acceptable?</strong> If admin can be SQL + a Notion runbook for 60 days post-launch, you save 2 weeks of dev. Patients and MHPs cannot wait; admin can.</li>
+<li><strong>Solo dev review cadence.</strong> Are you willing to enforce a weekly fresh-eyes review day at the cost of ~10% throughput? If not, expect the failure mode to bite around week 14.</li>
+</ol>
+
+<div class="footer">
+<strong>Drafted:</strong> 2026-05-05 by Claude (Opus 4.7) for Akash, in response to a request to compare the vendor quote against a solo + agentic path on the locked stack. <br>
+<strong>Status:</strong> internal estimating document. Numbers are honest best-guesses with explicit over/under bias flags in §7. <br>
+<strong>Companion documents:</strong> <code>data-model.md</code> v1.1 · <code>intake-spec.md</code> v1.0 · <code>stack-decision.md</code> v1.0 · <code>Saday_Action_Plan_by_Claude.md</code> · <code>Saday_Master_Blueprint.html</code> · <code>Saday Wellness Quote.pdf</code> (vendor) <br>
+<strong>Reading order if first time:</strong> §1 → §6 → §7 → §10 → §9 → §2/§3 → §11.
+</div>
+
+</body>
+</html>

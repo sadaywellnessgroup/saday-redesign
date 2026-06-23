@@ -1,0 +1,36 @@
+#,Top nav / module,Submenu,Screen / page,Available to roles,Purpose (1 line),Screenshot ref
+1,Home,—,Dashboard / Overview,Admin,"KPI summary: sessions booked, one-off sessions, bundles sold, group sessions; upcoming session card; reschedule requests",ss_3404ajlhj
+2,Calendar,—,Calendar Day/Week view,Admin,"Time-grid view of scheduled sessions; drag-to-create; per-member or all-team view",ss_5559xes6l
+2a,Calendar,Settings (gear),Customize Calendar modal,Admin,"Set default view (Day/Week), default member filter, color-coding (by member or category)",ss_1180jv7ki
+3,1-1 Connect,My sessions,All Sessions — Upcoming / Reschedule Requests / Past,Admin,"View & manage booked 1-1 sessions with tabs for status; member filter; search",ss_2264jtnc2
+3b,1-1 Connect,Manage sessions,Session product list,Admin,"Create/edit/toggle active the 1-1 service offerings (title, price, duration, description, share link)",ss_8884vuy1p
+4,Bundles,My Bundles,Bundle bookings — Ongoing / Completed,Admin,"Track purchased bundles by status; member filter; search",ss_6018sxj41
+4b,Bundles,Manage Bundles,Bundle product list,Admin,"Create/edit/toggle active bundle products (title, session count, price, share link)",ss_3684spphf
+5,Events,—,All Events — Upcoming / Completed / Draft / Deleted / Unconfirmed,Admin,"Create/manage group event sessions; member filter; search",ss_06347btqm
+6,Clients,—,Client Panel,Admin,"Client roster with total clients & revenue stats; search/filter by status; bulk status update; export; add follow-up link",ss_8302ms18w
+7,Availability,General Settings,Availability — General,Admin,"Global availability toggle, timezone, future booking window (days), minimum notice (minutes), block specific dates/times per session",ss_83522gjzk
+7b,Availability,Custom Schedules,Availability — Schedule,Admin,"Named schedule profiles; per-day time windows with day limits; assign schedules to services",ss_92693dsxh
+8,Payments,Earnings,Your Earnings,Admin,"Summary (available balance, withdrawn, total); tabs by product type; member filter; date filter; transaction table with export",ss_01102puf1
+8b,Payments,Withdrawls,Withdrawals history,Admin,"Withdrawn amount & available balance; table of withdrawal date, masked account, amount",ss_39079v2w2
+8c,Payments,Details (Beta),Payment Details,Admin,"Per-transaction detail view filtered by product type, payment status, session status, session type",ss_1603wb99j
+8d,Payments,Coupons,Coupon management,Admin,"Create/view active & inactive coupons; table: name, code, discount (% or fixed), apply-on scope, times used",ss_1586p1ihi
+9,Integrations,—,All Integrations,Admin,"Connect calendar/conferencing/communication tools; category filter tabs",ss_1323izvip
+10,My Blogs,Published,Published Articles,Admin,View/manage published blog posts,ss_0439np9qu
+10b,My Blogs,Drafts,Draft Articles,Admin,Manage unpublished drafts,—
+10c,My Blogs,Deleted,Deleted Articles,Admin,Recover or permanently remove deleted posts,—
+11,Admin Panel,Dashboard > Overall,Overall Analytics Dashboard,Admin,"Org-wide KPIs: total earnings, on-platform vs off-platform, total clients, sessions by type",ss_5790rz0dl
+11b,Admin Panel,Dashboard > Expert,Expert Analytics Dashboard,Admin,"Per-member KPIs: earnings, clients, session counts, avg booking value, avg sessions/client, avg clients/month",ss_8253hew0n
+11c,Admin Panel,Dashboard > Client,Client Analytics Dashboard,Admin,"Client-side KPIs: earnings, sessions by type, bundles sold, avg booking, avg sessions/month, cancellation rate",ss_9254bfcbs
+11d,Admin Panel,Segment Analysis,Segment Filters + Results,Admin,"Filter clients by expert, product type, product, date range, orders count, amount spent; create segment; download results",ss_32946peyr
+11e,Admin Panel,Team Members,Team Members (Active / Invited),Admin,"View/invite/manage team members; search; export; roles visible",ss_3508lcs8m
+11f,Admin Panel,Payments > Payment Gateways,Payment Gateways,Admin,"Install/manage payment processors: Tealfeed Pay (active), Easebuzz, Razorpay",ss_3957gefux
+11g,Admin Panel,Payments > Deductions,Deductions,Admin,Configure deduction rules for payouts,—
+11h,Admin Panel,Payments > Statuses (Beta),Payment Statuses,Admin,View/manage payment status labels,—
+11i,Admin Panel,Manage Payout,Manage Payout,Admin,Handle payout distribution to team members,—
+11j,Admin Panel,Global Defaults > Categories,Service Categories,Admin,"Create color-coded categories for services (Color, Category name, Description)",ss_5606b4udb
+11k,Admin Panel,Global Defaults > Templates,Session/notification templates,Admin,Manage message/notification templates,—
+11l,Admin Panel,Global Defaults > Client Settings (Beta),Client Settings,Admin,Beta client-facing settings configuration,—
+11m,Admin Panel,Form Templates,Form Template library,Admin,Create reusable intake/form templates,ss_5341ti075
+11n,Admin Panel,Org Settings,Organization Settings,Admin,"Logo, org name, coupon toggle, admin notifications, org Google Calendar/Meet, reschedule/cancel policy, booking cutoff, currency settings",ss_1709yo00r
+12,(Top bar),Avatar dropdown,Account / Profile / Billing,Admin,"Visit public profile, copy profile URL, edit profile, account settings (email, password), billing, what's new, logout",ss_60101a5uv
+13,(Top bar),+ Create new,Quick-create menu,Admin,"Shortcuts to create: 1-1 Connect session, Event, Bundle, One-off session, Client, Post",ss_7374qeoew

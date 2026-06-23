@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Saday Wellness — Mental health care that meets you where you are</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500;600;700;800&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#8C68CD',
+          primaryDark: '#7A52C4',
+          plum: '#1D142E',
+          violet: '#4E2D89',
+          ink: '#2A2433',
+          muted: '#6B6577',
+          lav: { 50:'#F7F4FC', 100:'#F0EAFA', 200:'#E4DAF5', 300:'#D2C1ED' },
+          sand: '#FBF7F0',
+          amber: '#E8915B',
+        },
+        fontFamily: {
+          heading: ['"Darker Grotesque"', 'sans-serif'],
+          body: ['"Source Sans 3"', 'sans-serif'],
+        },
+        borderRadius: { xl2: '1.25rem', xl3: '1.75rem' },
+        boxShadow: {
+          card: '0 8px 30px rgba(78,45,137,0.08)',
+          cardHover: '0 16px 44px rgba(78,45,137,0.16)',
+          soft: '0 2px 10px rgba(29,20,46,0.06)',
+        },
+        maxWidth: { container: '1180px' },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: '"Source Sans 3"', sans-serif; color: #2A2433; }
+  h1,h2,h3,h4 { font-family: '"Darker Grotesque"', sans-serif; letter-spacing: -0.01em; }
+  .h-display { font-size: clamp(2.75rem, 6vw, 4.75rem); line-height: 0.98; font-weight: 800; }
+  .h-section { font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.02; font-weight: 700; }
+  .eyebrow { font-family: '"Source Sans 3"', sans-serif; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; font-size: 0.78rem; }
+  .grain { background-image: radial-gradient(circle at 1px 1px, rgba(140,104,205,0.10) 1px, transparent 0); background-size: 22px 22px; }
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+</style>
+</head>
+<body class="bg-white antialiased">
+
+<!-- ============ NAV ============ -->
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-lav-100">
+  <div class="max-w-container mx-auto px-5 sm:px-8 h-[72px] flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2.5">
+      <span class="grid place-items-center w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-violet text-white">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M12 12c0-3 2-5 5-5"/><path d="M12 12c0-3-2-5-5-5"/><path d="M12 7c0-2.5 1.5-4 4-4"/><path d="M12 7c0-2.5-1.5-4-4-4"/></svg>
+      </span>
+      <span class="leading-none">
+        <span class="block font-heading font-700 text-[20px] text-plum tracking-tight">Saday Wellness</span>
+        <span class="block text-[10px] tracking-[0.18em] text-muted font-600 uppercase">Compassion &amp; Well-being</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-[15px] font-500 text-ink">
+      <a href="#services" class="hover:text-primary transition">Services</a>
+      <a href="#approach" class="hover:text-primary transition">Our approach</a>
+      <a href="#team" class="hover:text-primary transition">Team</a>
+      <a href="#courses" class="hover:text-primary transition">Courses</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#" class="hidden sm:inline text-[15px] font-500 text-ink hover:text-primary transition">Sign in</a>
+      <a href="#book" class="inline-flex items-center gap-1.5 rounded-full bg-primary hover:bg-primaryDark text-white text-[15px] font-600 px-5 py-2.5 shadow-soft transition">
+        Book a consult
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="relative overflow-hidden bg-lav-50 grain">
+  <div class="absolute -top-24 -right-24 w-[460px] h-[460px] rounded-full bg-lav-200 blur-3xl opacity-60"></div>
+  <div class="absolute top-40 -left-32 w-[380px] h-[380px] rounded-full bg-lav-100 blur-3xl opacity-70"></div>
+  <div class="relative max-w-container mx-auto px-5 sm:px-8 pt-16 pb-20 lg:pt-24 lg:pb-28 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="reveal">
+      <span class="eyebrow inline-flex items-center gap-2 text-violet bg-white rounded-full px-3.5 py-1.5 shadow-soft">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber"></span> Confidential · India-based care
+      </span>
+      <h1 class="h-display text-plum mt-6">
+        You're not alone.<br>
+        Care that meets you<br>
+        <span class="text-primary">where you are.</span>
+      </h1>
+      <p class="mt-6 text-[19px] leading-relaxed text-ink/80 max-w-[34rem]">
+        Talk to psychiatrists and clinical psychologists you can trust — from home, in your language. Personalised consultations, therapy, and support, designed around your life.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a href="#book" class="inline-flex items-center gap-2 rounded-full bg-primary hover:bg-primaryDark text-white text-[16px] font-600 px-7 py-3.5 shadow-card hover:shadow-cardHover transition">
+          Book a consult
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#checkin" class="inline-flex items-center gap-2 rounded-full bg-white hover:bg-lav-100 text-violet border border-lav-200 text-[16px] font-600 px-7 py-3.5 transition">
+          Take a free check-in
+        </a>
+      </div>
+      <div class="mt-8 flex items-center gap-5 text-[14px] text-muted">
+        <div class="flex -space-x-2.5">
+          <span class="w-9 h-9 rounded-full bg-lav-300 border-2 border-white grid place-items-center text-violet font-600 text-xs">AA</span>
+          <span class="w-9 h-9 rounded-full bg-primary border-2 border-white grid place-items-center text-white font-600 text-xs">VP</span>
+          <span class="w-9 h-9 rounded-full bg-violet border-2 border-white grid place-items-center text-white font-600 text-xs">KC</span>
+          <span class="w-9 h-9 rounded-full bg-amber border-2 border-white grid place-items-center text-white font-600 text-xs">SS</span>
+        </div>
+        <p class="leading-snug"><span class="text-ink font-600">8 mental-health professionals</span><br>RCI-registered &amp; MD psychiatrists</p>
+      </div>
+    </div>
+
+    <!-- hero visual -->
+    <div class="reveal relative">
+      <div class="relative rounded-xl3 overflow-hidden shadow-card bg-gradient-to-br from-lav-200 to-lav-100 aspect-[4/5] grid place-items-center">
+        <div class="text-center px-8">
+          <div class="mx-auto w-20 h-20 rounded-full bg-white/70 grid place-items-center mb-4">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#8C68CD" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <p class="font-heading text-2xl font-700 text-violet">Your team photo here</p>
+          <p class="text-sm text-violet/70 mt-1">warm, real, on-brand photography</p>
+        </div>
+      </div>
+      <!-- floating proof card -->
+      <div class="absolute -bottom-6 -left-6 bg-white rounded-xl2 shadow-card p-4 w-[200px] hidden sm:block">
+        <p class="font-heading text-3xl font-800 text-primary leading-none">15,000<span class="text-amber">+</span></p>
+        <p class="text-[13px] text-muted mt-1 leading-snug">psychiatric consultations provided</p>
+      </div>
+      <div class="absolute -top-5 -right-3 bg-white rounded-full shadow-card px-4 py-2.5 flex items-center gap-2 hidden sm:flex">
+        <span class="w-2 h-2 rounded-full bg-green-500"></span>
+        <span class="text-[13px] font-600 text-ink">Available today</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STATS ============ -->
+<section class="bg-white border-y border-lav-100">
+  <div class="max-w-container mx-auto px-5 sm:px-8 py-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="text-center lg:text-left">
+      <p class="font-heading text-4xl font-800 text-plum">8</p>
+      <p class="text-[14px] text-muted mt-1">Mental-health professionals</p>
+    </div>
+    <div class="text-center lg:text-left">
+      <p class="font-heading text-4xl font-800 text-plum">12<span class="text-primary">+</span></p>
+      <p class="text-[14px] text-muted mt-1">Seminars &amp; workshops conducted</p>
+    </div>
+    <div class="text-center lg:text-left">
+      <p class="font-heading text-4xl font-800 text-plum">15,000<span class="text-primary">+</span></p>
+      <p class="text-[14px] text-muted mt-1">Psychiatric consultations</p>
+    </div>
+    <div class="text-center lg:text-left">
+      <p class="font-heading text-4xl font-800 text-plum">10,000<span class="text-primary">+</span></p>
+      <p class="text-[14px] text-muted mt-1">Combined hours of therapy</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section id="why" class="bg-sand">
+  <div class="max-w-container mx-auto px-5 sm:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-14 items-center">
+    <div class="reveal">
+      <span class="eyebrow text-primary">Why Saday</span>
+      <h2 class="h-section text-plum mt-4">One in ten Indians lives with mental illness. Only 15% ever see a professional.</h2>
+      <p class="mt-6 text-[18px] leading-relaxed text-ink/75 max-w-[34rem]">
+        Many of these struggles can be managed — when awareness and the skills for self-care reach the people who need them. Saday exists to close that gap, with a wide range of accessible mental-health services for individuals, schools, and workplaces.
+      </p>
+      <a href="#approach" class="inline-flex items-center gap-2 mt-7 text-violet font-600 hover:gap-3 transition-all">
+        Learn how we help
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="reveal grid grid-cols-2 gap-4">
+      <div class="rounded-xl2 bg-white shadow-soft p-6">
+        <p class="font-heading text-5xl font-800 text-primary leading-none">1 in 10</p>
+        <p class="text-[14px] text-muted mt-2">Indians affected by mental illness</p>
+      </div>
+      <div class="rounded-xl2 bg-violet text-white shadow-soft p-6 mt-8">
+        <p class="font-heading text-5xl font-800 leading-none">85%</p>
+        <p class="text-[14px] text-white/75 mt-2">never reach a professional</p>
+      </div>
+      <div class="rounded-xl2 bg-primary text-white shadow-soft p-6 -mt-4">
+        <p class="font-heading text-4xl font-800 leading-none">EN · हिं</p>
+        <p class="text-[14px] text-white/80 mt-2">Care in English &amp; Hindi</p>
+      </div>
+      <div class="rounded-xl2 bg-white shadow-soft p-6 mt-4">
+        <p class="font-heading text-4xl font-800 text-primary leading-none">100%</p>
+        <p class="text-[14px] text-muted mt-2">Confidential &amp; private</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="bg-white">
+  <div class="max-w-container mx-auto px-5 sm:px-8 py-20 lg:py-28">
+    <div class="reveal max-w-2xl">
+      <span class="eyebrow text-primary">What we offer</span>
+      <h2 class="h-section text-plum mt-4">Complete mental-health solutions</h2>
+      <p class="mt-5 text-[18px] leading-relaxed text-ink/75">From a single consultation to long-term care — psychiatrists, clinical psychologists, and allied professionals, together under one roof.</p>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- card -->
+      <article class="reveal group rounded-xl2 border border-lav-100 bg-white p-7 shadow-soft hover:shadow-cardHover hover:-translate-y-1 transition-all">
+        <span class="grid place-items-center w-12 h-12 rounded-xl bg-lav-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        </span>
+        <h3 class="font-heading text-2xl font-700 text-plum mt-5">Psychiatric consultation</h3>
+        <p class="mt-2 text-[15.5px] leading-relaxed text-muted">Comprehensive assessment with our psychiatrists, plus medical and psychological interventions tailored to you.</p>
+      </article>
+
+      <article class="reveal group rounded-xl2 border border-lav-100 bg-white p-7 shadow-soft hover:shadow-cardHover hover:-translate-y-1 transition-all">
+        <span class="grid place-items-center w-12 h-12 rounded-xl bg-lav-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+        </span>
+        <h3 class="font-heading text-2xl font-700 text-plum mt-5">Psychotherapy</h3>
+        <p class="mt-2 text-[15.5px] leading-relaxed text-muted">Personalised treatment plans from experienced clinical psychologists to help you overcome challenges and rediscover yourself.</p>
+      </article>
+
+      <article class="reveal group rounded-xl2 border border-lav-100 bg-white p-7 shadow-soft hover:shadow-cardHover hover:-translate-y-1 transition-all">
+        <span class="grid place-items-center w-12 h-12 rounded-xl bg-lav-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="8" rx="1"/><rect x="13" y="6" width="3" height="12" rx="1"/></svg>
+        </span>
+        <h3 class="font-heading text-2xl font-700 text-plum mt-5">Psychometric assessments</h3>
+        <p class="mt-2 text-[15.5px] leading-relaxed text-muted">Standardised tools for emotional and behavioural assessment — to evaluate, tailor intervention, and improve outcomes.</p>
+      </article>
+
+      <article class="reveal group rounded-xl2 border border-lav-100 bg-white p-7 shadow-soft hover:shadow-cardHover hover:-translate-y-1 transition-all">
+        <span class="grid place-items-center w-12 h-12 rounded-xl bg-lav-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </span>
+        <h3 class="font-heading text-2xl font-700 text-plum mt-5">School mental-health</h3>
+        <p class="mt-2 text-[15.5px] leading-relaxed text-muted">Programs designed for schools — early identification of problems and life-skills for well-being from a young age.</p>
+      </article>
+
+      <article class="reveal group rounded-xl2 border border-lav-100 bg-white p-7 shadow-soft hover:shadow-cardHover hover:-translate-y-1 transition-all">
+        <span class="grid place-items-center w-12 h-12 rounded-xl bg-lav-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
+        </span>
+        <h3 class="font-heading text-2xl font-700 text-plum mt-5">Corporate well-being</h3>
+        <p class="mt-2 text-[15.5px] leading-relaxed text-muted">Awareness, screening, and stress-management workshops — combined in one interactive program for teams.</p>
+      </article>
+
+      <article class="reveal group rounded-xl2 border border-lav-100 bg-white p-7 shadow-soft hover:shadow-cardHover hover:-translate-y-1 transition-all">
+        <span class="grid place-items-center w-12 h-12 rounded-xl bg-lav-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <h3 class="font-heading text-2xl font-700 text-plum mt-5">Support groups</h3>
+        <p class="mt-2 text-[15.5px] leading-relaxed text-muted">Facilitated peer spaces where you realise you're not alone — open, safe, and led by trained professionals.</p>
+      </article>
+    </div>
+
+    <div class="mt-10">
+      <a href="#services" class="inline-flex items-center gap-2 text-violet font-600 hover:gap-3 transition-all">
+        See all services &amp; programs
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPROACH / HOW IT WORKS ============ -->
+<section id="approach" class="bg-lav-50 grain">
+  <div class="max-w-container mx-auto px-5 sm:px-8 py-20 lg:py-28">
+    <div class="reveal max-w-2xl">
+      <span class="eyebrow text-primary">How it works</span>
+      <h2 class="h-section text-plum mt-4">Help, in three simple steps</h2>
+    </div>
+    <div class="mt-12 grid md:grid-cols-3 gap-5">
+      <div class="reveal relative rounded-xl2 bg-white p-8 shadow-soft">
+        <span class="font-heading text-6xl font-800 text-lav-200">01</span>
+        <h3 class="font-heading text-2xl font-700 text-plum mt-2">Tell us what's going on</h3>
+        <p class="mt-2 text-[15.5px] leading-relaxed text-muted">A short, private check-in helps us understand how you're feeling and what kind of support fits best.</p>
+      </div>
+      <div class="reveal relative rounded-xl2 bg-white p-8 shadow-soft">
+        <span class="font-heading text-6xl font-800 text-lav-200">02</span>
+        <h3 class="font-heading text-2xl font-700 text-plum mt-2">Meet the right professional</h3>
+        <p class="mt-2 text-[15.5px] leading-relaxed text-muted">Get matched with a psychiatrist or psychologist and book a secure video consultation at a time that works.</p>
+      </div>
+      <div class="reveal relative rounded-xl2 bg-white p-8 shadow-soft">
+        <span class="font-heading text-6xl font-800 text-lav-200">03</span>
+        <h3 class="font-heading text-2xl font-700 text-plum mt-2">Follow your care plan</h3>
+        <p class="mt-2 text-[15.5px] leading-relaxed text-muted">Receive a personalised plan, prescriptions where needed, and ongoing support — all in one place.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section id="team" class="bg-white">
+  <div class="max-w-container mx-auto px-5 sm:px-8 py-20 lg:py-28">
+    <div class="reveal flex flex-wrap items-end justify-between gap-6">
+      <div class="max-w-2xl">
+        <span class="eyebrow text-primary">The people behind Saday</span>
+        <h2 class="h-section text-plum mt-4">A team that actually listens</h2>
+        <p class="mt-5 text-[18px] leading-relaxed text-ink/75">Psychiatrists, clinical psychologists, and allied professionals from diverse backgrounds — brought together to bring you comprehensive, compassionate care.</p>
+      </div>
+      <a href="#team" class="inline-flex items-center gap-2 text-violet font-600 hover:gap-3 transition-all">Meet everyone
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <!-- doctor card -->
+      <article class="reveal rounded-xl2 border border-lav-100 overflow-hidden bg-white shadow-soft hover:shadow-cardHover transition-all">
+        <div class="aspect-[4/5] bg-gradient-to-br from-lav-200 to-lav-100 grid place-items-center">
+          <span class="font-heading text-5xl font-800 text-violet/40">AA</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-heading text-xl font-700 text-plum">Dr. Aditya Agrawal</h3>
+          <p class="text-[13px] text-primary font-600 mt-0.5">Psychiatrist · Co-Founder</p>
+          <p class="text-[14px] text-muted mt-2 leading-snug">Addictions, child &amp; adolescent mental health. Y20 &amp; UNICEF India speaker.</p>
+        </div>
+      </article>
+      <article class="reveal rounded-xl2 border border-lav-100 overflow-hidden bg-white shadow-soft hover:shadow-cardHover transition-all">
+        <div class="aspect-[4/5] bg-gradient-to-br from-lav-200 to-lav-100 grid place-items-center">
+          <span class="font-heading text-5xl font-800 text-violet/40">VP</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-heading text-xl font-700 text-plum">Mr. Vikrant Patel</h3>
+          <p class="text-[13px] text-primary font-600 mt-0.5">Clinical Psychologist · Co-Founder</p>
+          <p class="text-[14px] text-muted mt-2 leading-snug">RCI-registered, KGMU-trained. 1000+ assessments &amp; interventions.</p>
+        </div>
+      </article>
+      <article class="reveal rounded-xl2 border border-lav-100 overflow-hidden bg-white shadow-soft hover:shadow-cardHover transition-all">
+        <div class="aspect-[4/5] bg-gradient-to-br from-lav-200 to-lav-100 grid place-items-center">
+          <span class="font-heading text-5xl font-800 text-violet/40">KC</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-heading text-xl font-700 text-plum">Dr. Kritika Chawla</h3>
+          <p class="text-[13px] text-primary font-600 mt-0.5">Psychiatrist</p>
+          <p class="text-[14px] text-muted mt-2 leading-snug">MBBS, MD (KGMU). Individualised therapy &amp; mindfulness; national speaker.</p>
+        </div>
+      </article>
+      <article class="reveal rounded-xl2 border border-lav-100 overflow-hidden bg-white shadow-soft hover:shadow-cardHover transition-all">
+        <div class="aspect-[4/5] bg-gradient-to-br from-lav-200 to-lav-100 grid place-items-center">
+          <span class="font-heading text-5xl font-800 text-violet/40">SS</span>
+        </div>
+        <div class="p-5">
+          <h3 class="font-heading text-xl font-700 text-plum">Dr. Shivangini Singh</h3>
+          <p class="text-[13px] text-primary font-600 mt-0.5">Psychiatrist</p>
+          <p class="text-[14px] text-muted mt-2 leading-snug">MD, KGMU. Youth mental health, anxiety, de-addiction; awareness advocate.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIAL ============ -->
+<section class="bg-violet text-white relative overflow-hidden">
+  <div class="absolute -top-20 -right-10 w-[360px] h-[360px] rounded-full bg-primary/30 blur-3xl"></div>
+  <div class="relative max-w-container mx-auto px-5 sm:px-8 py-20 lg:py-28 grid lg:grid-cols-[1fr_1.4fr] gap-12 items-center">
+    <div class="reveal">
+      <span class="eyebrow text-lav-200">Real stories</span>
+      <h2 class="h-section mt-4">You're not the only one feeling this way.</h2>
+      <p class="mt-5 text-[17px] text-white/70 leading-relaxed">Our support groups and consultations remind people, every day, that they aren't alone.</p>
+    </div>
+    <figure class="reveal bg-white text-ink rounded-xl3 p-8 lg:p-10 shadow-card relative">
+      <span class="absolute -top-5 left-8 grid place-items-center w-12 h-12 rounded-xl bg-primary text-white font-heading text-3xl font-800">”</span>
+      <blockquote class="mt-4 text-[19px] leading-relaxed text-ink/85">
+        “I came to realise that I am not alone in my struggle against Obsessive Compulsive Disorder. Everybody was very open about the symptoms they were facing, and the panel of psychiatrists gave their opinion on each. It was a very fruitful session.”
+      </blockquote>
+      <figcaption class="mt-6 flex items-center gap-3">
+        <span class="w-11 h-11 rounded-full bg-lav-200 grid place-items-center text-violet font-700">AS</span>
+        <span>
+          <span class="block font-600 text-plum">Aditya Singh</span>
+          <span class="block text-[13px] text-muted">Samwaad — OCD Support Group participant</span>
+        </span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section id="book" class="bg-white">
+  <div class="max-w-container mx-auto px-5 sm:px-8 py-16 lg:py-24">
+    <div class="reveal rounded-xl3 bg-gradient-to-br from-primary via-[#7d57c6] to-violet text-white px-8 py-14 lg:px-16 lg:py-20 text-center relative overflow-hidden">
+      <div class="absolute inset-0 grain opacity-40"></div>
+      <div class="relative">
+        <h2 class="h-section">Take the first step today.</h2>
+        <p class="mt-4 text-[18px] text-white/80 max-w-xl mx-auto">Connecting with us is simple, private, and judgment-free. Your mental health journey starts with one conversation.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <a href="#" class="inline-flex items-center gap-2 rounded-full bg-white text-violet text-[16px] font-700 px-8 py-3.5 hover:bg-lav-100 transition shadow-card">
+            Get started
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#checkin" class="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/30 text-white text-[16px] font-600 px-8 py-3.5 hover:bg-white/20 transition">
+            Take a free check-in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-plum text-white/80">
+  <div class="max-w-container mx-auto px-5 sm:px-8 py-16 grid md:grid-cols-[1.4fr_1fr_1fr] gap-12">
+    <div>
+      <div class="flex items-center gap-2.5">
+        <span class="grid place-items-center w-9 h-9 rounded-xl bg-white/10 text-white">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M12 12c0-3 2-5 5-5"/><path d="M12 12c0-3-2-5-5-5"/><path d="M12 7c0-2.5 1.5-4 4-4"/><path d="M12 7c0-2.5-1.5-4-4-4"/></svg>
+        </span>
+        <span class="font-heading font-700 text-xl text-white">Saday Wellness</span>
+      </div>
+      <p class="mt-4 text-[15px] leading-relaxed max-w-sm text-white/60">Compassion &amp; well-being. A team of psychiatrists, clinical psychologists, and allied professionals bringing comprehensive mental-health care to everyone.</p>
+      <div class="mt-6 flex gap-3">
+        <a href="#" class="grid place-items-center w-9 h-9 rounded-full bg-white/10 hover:bg-primary transition" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" class="grid place-items-center w-9 h-9 rounded-full bg-white/10 hover:bg-primary transition" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg></a>
+        <a href="#" class="grid place-items-center w-9 h-9 rounded-full bg-white/10 hover:bg-primary transition" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5A2.5 2.5 0 0 0 1.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 0 0 1.8-1.8C23 15.2 23 12 23 12zM10 15V9l5 3z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <p class="font-600 text-white text-[15px] mb-4">Explore</p>
+      <ul class="space-y-2.5 text-[15px]">
+        <li><a href="#services" class="hover:text-white transition">Services</a></li>
+        <li><a href="#team" class="hover:text-white transition">Our team</a></li>
+        <li><a href="#courses" class="hover:text-white transition">Courses</a></li>
+        <li><a href="#book" class="hover:text-white transition">Book a consult</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-600 text-white text-[15px] mb-4">Get in touch</p>
+      <ul class="space-y-2.5 text-[15px]">
+        <li><a href="tel:+919235293990" class="hover:text-white transition">+91 92352 93990</a></li>
+        <li><a href="mailto:sadaywellnessgroup@gmail.com" class="hover:text-white transition break-all">sadaywellnessgroup@gmail.com</a></li>
+        <li class="text-white/60 leading-snug pt-1">Green City, Arjunganj,<br>Lucknow, Uttar Pradesh 226002</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-container mx-auto px-5 sm:px-8 py-5 flex flex-wrap items-center justify-between gap-3 text-[13px] text-white/50">
+      <p>© 2026 Saday Mental Health Wellness. All rights reserved.</p>
+      <div class="flex gap-5">
+        <a href="#" class="hover:text-white transition">Privacy</a>
+        <a href="#" class="hover:text-white transition">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 4 * 70) + 'ms'; io.observe(el); });
+</script>
+</body>
+</html>

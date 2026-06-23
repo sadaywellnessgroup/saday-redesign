@@ -1,0 +1,162 @@
+[
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "Conversations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "My Schedule",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "My Therapists",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "Manual Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "Sessions",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "Assessments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "My Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "Reports",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "Seminars",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "Internships/Career",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "Ecommerce",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "Cancellation & Reschedule Policy",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "Session Follow-ups",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "FAQ & Tutorials",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "Bulk Messages",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "Name",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "Phone Number",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "Last Interaction",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Conversations",
+    "feature": "Conversations",
+    "subCapability": "Show",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  }
+]

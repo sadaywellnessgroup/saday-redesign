@@ -1,0 +1,182 @@
+[
+  {
+    "module": "Conversations",
+    "screen": "Conversations",
+    "submenu": "—",
+    "url": "https://crm.swasthmind.com/my-conversations",
+    "headings": [],
+    "tabs": [],
+    "tables": [
+      {
+        "headers": [
+          "Name",
+          "Phone Number",
+          "Last Interaction",
+          "Show",
+          "Conversational Tag"
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "Dashboard",
+      "Conversations",
+      "My Schedule",
+      "My Therapists",
+      "Manual Booking",
+      "Sessions",
+      "Assessments",
+      "My Clients",
+      "Reports",
+      "Seminars",
+      "Internships/Career",
+      "Ecommerce",
+      "Cancellation & Reschedule Policy",
+      "Session Follow-ups",
+      "FAQ & Tutorials",
+      "Bulk Messages",
+      "Name",
+      "Phone Number",
+      "Last Interaction",
+      "Show",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "9"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/conversations/conversations__full.png",
+    "designAudit": {
+      "module": "Conversations",
+      "screen": "Conversations",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1f2d2b",
+            "count": 303
+          },
+          {
+            "hex": "#6b7280",
+            "count": 16
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 8
+          },
+          {
+            "hex": "#1e293b",
+            "count": 4
+          },
+          {
+            "hex": "#111827",
+            "count": 4
+          },
+          {
+            "hex": "#6b7c78",
+            "count": 2
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#3b82f6",
+            "count": 6
+          },
+          {
+            "hex": "#f8fafc",
+            "count": 4
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          },
+          {
+            "hex": "#f1f5f9",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 7,
+        "uniqueBgColors": 4
+      },
+      "typography": {
+        "fontFamilies": [
+          "Inter",
+          "Arial"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 106
+          },
+          {
+            "size": "13px",
+            "count": 26
+          },
+          {
+            "size": "16px",
+            "count": 17
+          },
+          {
+            "size": "18px",
+            "count": 8
+          },
+          {
+            "size": "24px",
+            "count": 2
+          },
+          {
+            "size": "12px",
+            "count": 2
+          }
+        ],
+        "fontWeights": [
+          "600",
+          "700"
+        ],
+        "uniqueFontSizeCount": 6
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 71,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 39,
+        "inputs": 2,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 58,
+        "badges": 63,
+        "tooltips": 0,
+        "dropdowns": 15,
+        "charts": 59,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 2,
+        "interactivesMissingRole": 8,
+        "bodyContrastRatio": 1.47,
+        "bodyColor": "#1f2d2b",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "2 input(s) missing label",
+        "Body text contrast ratio 1.47 below WCAG AA (4.5)"
+      ]
+    }
+  }
+]

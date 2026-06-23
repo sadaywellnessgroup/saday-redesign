@@ -1,0 +1,15 @@
+{
+  "cookies": [
+    {
+      "name": "crm_token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxNzksImVtYWlsIjoic2FkYXl3ZWxsbmVzc2dyb3VwQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlzX2FkbWluIjp0cnVlLCJpc19zaW5nbGVfb3duZXIiOmZhbHNlLCJ0aGVyYXBpc3Rfb3JnYW5pc2F0aW9uX2lkIjo0NiwidXNlcl90eXBlIjoidGhlcmFwaXN0In0sImlhdCI6MTc3NjcwODAyNCwiZXhwIjoxNzc2ODgwODI0fQ.tzZ4Pa3-Y9pCKbpomqSpQA121pxrVCppQTOPklgtL-g",
+      "domain": "mappapiprodv.swasthmind.com",
+      "path": "/",
+      "expires": 1776794424.466101,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Strict"
+    }
+  ],
+  "origins": []
+}

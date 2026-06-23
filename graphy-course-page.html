@@ -1,0 +1,4064 @@
+<html lang="en" data-ai-id="el-d26309b5" id="el-d26309b5"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Readex%20Pro:wght@400;500;600;700&amp;family=Lato:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style data-ai-id="stl-global-style" id="stl-global-style">
+   :root {
+          
+--color-primary-lightest: #efebf7;
+--color-primary-lighter: #c8b7e9;
+--color-primary-light: #a78be0;
+--color-primary: #5e2dc6;
+--color-primary-dark: #4a20a1;
+--color-primary-darker: #3b1984;
+--color-primary-darkest: #27105d;
+
+--color-accent1-lightest: #fcf8f8;
+--color-accent1-lighter: #f7e7e7;
+--color-accent1-light: #f3d8d8;
+--color-accent1: #edb6b6;
+--color-accent1-dark: #de7171;
+--color-accent1-darker: #d53b3d;
+--color-accent1-darkest: #9e1e21;
+
+--color-accent2-lightest: #fdfdfd;
+--color-accent2-lighter: #fbfaf9;
+--color-accent2-light: #f9f8f6;
+--color-accent2: #f4f2f0;
+--color-accent2-dark: #cec4b5;
+--color-accent2-darker: #b2a188;
+--color-accent2-darkest: #857154;
+
+--color-accent3-lightest: #f5f9fc;
+--color-accent3-lighter: #dbebf6;
+--color-accent3-light: #c6e1f2;
+--color-accent3: #93c9ec;
+--color-accent3-dark: #4fabe3;
+--color-accent3-darker: #1e94da;
+--color-accent3-darkest: #126899;
+
+--color-neutral-lightest: #f5f5f5;
+--color-neutral-lighter: #dddddd;
+--color-neutral-light: #c9c9c9;
+--color-neutral: #9e9e9e;
+--color-neutral-dark: #7e7e7e;
+--color-neutral-darker: #666666;
+--color-neutral-darkest: #474747;
+
+
+          
+/* Buttons */
+--button-primary-bg: var(--color-primary);
+--button-primary-hover-bg: var(--color-primary-dark);
+--button-primary-text: var(--color-neutral-lightest);
+--button-secondary-bg: var(--color-neutral-lightest);
+--button-secondary-border: var(--color-neutral-light);
+--button-secondary-text: var(--color-primary-dark);
+--button-tertiary-text: var(--color-accent1-dark);
+
+/* Text & Links */
+--link-color: var(--color-primary);
+--link-hover-color: var(--color-primary-dark);
+--heading-color: var(--color-neutral-darkest);
+--body-color: var(--color-neutral);
+--subhead-color: var(--color-neutral-dark);
+--muted-text-color: var(--color-neutral-light);
+--placeholder-color: var(--color-neutral-light);
+
+/* Surfaces & Layout */
+--card-bg: var(--color-neutral-lightest);
+--card-hover-bg: var(--color-neutral-lighter);
+--card-border: var(--color-neutral-lighter);
+section:nth-of-type(odd) {
+  --section-bg: linear-gradient(
+    180deg,
+    var(--color-neutral-lightest),
+    var(--color-primary-lightest)
+  );
+}
+section:nth-of-type(even) {
+  --section-bg: linear-gradient(
+    180deg,
+    var(--color-primary-lightest),
+    var(--color-neutral-lightest)
+  );
+}
+--nav-bg: var(--color-neutral-lightest);
+--nav-text: var(--color-neutral-darkest);
+--nav-active: var(--color-primary);
+--footer-bg: var(--color-neutral-darkest);
+--footer-text: var(--color-neutral-light);
+
+/* Components & Indicators */
+--badge-bg: var(--color-accent1);
+--icon-color: var(--color-primary);
+--icon-secondary-color: var(--color-accent2);
+--progress-color: var(--color-primary);
+--progress-bg: var(--color-neutral-lighter);
+--tab-active: var(--color-primary);
+--tab-inactive: var(--color-neutral-light);
+
+/* Forms & Inputs */
+--input-border-active: var(--color-primary);
+--input-focus: var(--color-primary-light);
+--input-border: var(--color-neutral-light);
+--input-bg: var(--color-neutral-lightest);
+
+/* Callouts & Banners */
+--callout-bg: var(--color-accent1-lightest);
+--callout-border: var(--color-accent1-light);
+
+/* Stats & Illustrations */
+--stats-highlight: var(--color-primary-dark);
+--stats-accent: var(--color-accent2-dark);
+--illu-main: var(--color-primary);
+--illu-accent: var(--color-accent1);
+--illu-fill-light: var(--color-neutral-lightest);
+--illu-fill-dark: var(--color-neutral-darkest);
+
+
+          
+  --font-heading: 'Readex Pro', sans-serif;
+  --font-body: 'Lato', sans-serif;
+
+
+          --spacing-xs: 0.5rem;
+          --spacing-sm: 1rem;
+          --spacing-md: 2rem;
+          --spacing-lg: 3rem;
+          --spacing-xl: 4rem;
+          --spacing-xxl: 6rem;
+
+          --border-radius: 12px;
+          --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--color-neutral);
+            background-color: var(--color-background);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+        }
+        
+        h2 {
+            font-size: clamp(1.75rem, 5vw, 2.75rem);
+        }
+        
+        h3 {
+            font-size: clamp(1.35rem, 3vw, 2rem);
+        }
+
+        h4 {
+          font-size: 1.25rem;
+        }
+        
+        p {
+            font-size: 1.025rem;
+            line-height: 1.8;
+        }
+        
+        a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        button {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 600;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border: none;
+            border-radius: var(--border-radius-md);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }    
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);}
+        }
+        
+        .section-divider {
+            width: 60px;
+            height: 4px;
+            background-color: var(--color-accent);
+            margin: var(--spacing-md) 0;
+            border-radius: var(--border-radius-sm);
+        }
+  </style>
+<!-- Alpine.js -->
+<script defer="" src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js">
+</script>
+<script data-ai-id="scr-global-script" id="scr-global-script">
+   document.addEventListener('DOMContentLoaded', function() {
+        const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+        smoothScrollLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const element = document.querySelector(href);
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    });
+  </script>
+
+    <script editor-injected-script="true">
+      window.__CURRENT_ORG__ = {"_id":"6999ad918983583b6c770d60","currencyCode":"INR"};
+      window.__MOCK_PRODUCTS__ = {"packages":[{"title":"Comprehensive Mental Health Support Package","description":"Includes individual consultations, access to CBT workshops, community support, and AI-powered WhatsApp assistance.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-package-Comprehensive_Mental_Health_Support_Package.png","mrp":148,"price":98}],"courses":[{"title":"CBT Mastery for Practitioners","description":"Enhance your clinical skills with evidence-based Cognitive Behavioral Therapy techniques.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-course-CBT_Mastery_for_Practitioners.png","mrp":148,"price":98},{"title":"Mindfulness for Mental Wellness","description":"Learn guided mindfulness exercises to improve your mental health and well-being.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-course-Mindfulness_for_Mental_Wellness.png","mrp":148,"price":98},{"title":"Confidentiality and Ethics in Mental Health","description":"Understand the importance of confidentiality and professional standards in mental health practice.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-course-Confidentiality_and_Ethics_in_Mental_Health.png","mrp":148,"price":98}],"digitalProducts":[{"title":"Evidence-Based Mental Health eBook","description":"A comprehensive guide to evidence-based practices in mental health care.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-digitalProduct-Evidence-Based_Mental_Health_eBook.png","mrp":148,"price":98}],"memberships":[{"title":"Saday Wellness Pro Membership","description":"Gain unlimited access to all courses, workshops, and exclusive community support programs.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-membership-Saday_Wellness_Pro_Membership.png","mrp":148,"price":98}],"telegramCommunities":[{"title":"Saday Wellness Support Group","description":"A private Telegram community for peer support, sharing experiences, and professional advice.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-telegramCommunity-Saday_Wellness_Support_Group.png","mrp":148,"price":98}],"webinars":[{"title":"Advanced CBT Techniques Webinar","description":"Join Dr. Shivangini Singh for an in-depth webinar on advanced Cognitive Behavioral Therapy techniques.","image_path":"ai_web/6999ad918983583b6c770d60/media/image/mock-product-webinar-Advanced_CBT_Techniques_Webinar.png","mrp":148,"price":98}]};
+      window.__CDN_URL__ = "https://d502jbuhuh9wk.cloudfront.net/";
+    </script>
+  
+<script src="https://sadaywellness.graphy.com/n/websiteV3/utils.js" data-preview-mode="true" editor-injected-script="true"></script>
+<script src="https://sadaywellness.graphy.com/n/websiteV3/coursePage.js" data-preview-mode="true" editor-injected-script="true"></script></head>
+<body data-ai-id="el-90261894" id="el-90261894">
+<section data-ai-id="sec-topbar" data-nav-element="header" data-section-type="header" data-template-name="HEADER1" id="sec-topbar">
+<div class="topbar-wrapper" data-ai-id="el-topbar-wrapper" data-nav-element="header" data-type="html" id="el-topbar-wrapper">
+<div class="topbar-left" data-ai-id="el-topbar-left" data-nav-element="header" data-type="html" id="el-topbar-left">
+<div class="logo-container" data-ai-id="el-logo-container" data-nav-element="header" data-type="html" id="el-logo-container">
+<a data-ai-id="el-logo-link" data-nav-element="header" href="/" id="el-logo-link">
+<img alt="Saday Wellness Logo" data-ai-id="el-logo-img" data-cta-type="website_logo" data-nav-element="header" data-type="image" id="el-logo-img" src="https://d502jbuhuh9wk.cloudfront.net/ai_web/6999ad918983583b6c770d60/media/image/345d9b3f-c917-4890-a85c-7ea63f9878b3-Saday_tree.png">
+</a>
+</div>
+</div>
+<div class="topbar-right" data-ai-id="el-topbar-right" data-nav-element="header" data-type="html" id="el-topbar-right">
+<nav class="nav-left" data-ai-id="el-nav-left" data-nav-element="header" data-type="html" id="el-nav-left">
+<a class="dashboard-link" data-ai-id="el-nav-courses" data-nav-element="header" data-type="text" href="/courses" id="el-nav-courses">
+       Courses
+      </a>
+<a class="dashboard-link" data-ai-id="el-nav-about" data-nav-element="header" data-type="text" href="/aboutus" id="el-nav-about">
+       About
+      </a>
+<a class="dashboard-link" data-ai-id="el-nav-contact" data-nav-element="header" data-type="text" href="/contactus" id="el-nav-contact">
+       Contact
+      </a>
+<a class="dashboard-link" data-ai-id="el-dashboard-link" data-cta-type="dashboard" data-nav-element="header" data-type="text" href="#" id="el-dashboard-link" style="display:none">
+       Dashboard
+      </a>
+<button class="login-btn" data-ai-id="el-login-btn" data-button-enum="login" data-cta-type="login_signup" data-nav-element="header" data-type="html" id="el-login-btn">
+       Login
+      </button>
+</nav>
+<!-- USER PIC AND DROPDOWN SECTION -->
+<div data-ai-id="el-logged-in-state" data-cta-type="logged-in-state" data-nav-element="header" id="el-logged-in-state">
+<button class="dropdown-trigger-wrapper" data-ai-id="el-dropdown-trigger" data-nav-element="header" data-type="html" id="el-dropdown-trigger">
+<div class="avatar" data-ai-id="el-avatar" data-nav-element="header" data-type="html" id="el-avatar">
+<img class="avatar" data-ai-id="el-avatar-text" data-cta-type="profile_icon" data-nav-element="header" id="el-avatar-text" src="%%PROFILE_ICON%%">
+</div>
+<svg data-ai-id="el-chevron-icon" data-nav-element="header" data-type="html" fill="none" height="16" id="el-chevron-icon" stroke="currentColor" viewBox="0 0 24 24" width="16">
+<polyline points="6 9 12 15 18 9">
+</polyline>
+</svg>
+</button>
+</div>
+</div>
+<div class="dropdown-menu" data-ai-id="el-dropdown-menu" data-nav-element="header" data-type="html" id="el-dropdown-menu">
+<a data-ai-id="el-purchases-text" data-cta-type="my-purchases" data-nav-element="header" data-type="text" href="" id="el-purchases-text">
+      My Purchases
+     </a>
+<a data-ai-id="el-profile-text" data-cta-type="my-profile" data-nav-element="header" data-type="text" href="" id="el-profile-text">
+      My Profile
+     </a>
+<button data-ai-id="el-logout-btn" data-button-enum="logout" data-cta-type="signout" data-nav-element="header" data-type="html" id="el-logout-btn">
+      Log Out
+     </button>
+</div>
+</div>
+</section>
+<style data-ai-id="stl-topbar" id="stl-topbar">
+   #sec-topbar{
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    background: var(--section-bg);
+    padding:10;
+  }
+  .topbar-wrapper {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 73.66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 77.752px;
+    background-color: var(--section-bg);
+    border-bottom: 1px solid var(--card-border);
+    z-index: 100;
+    box-sizing: border-box;
+  }
+
+  .topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 19.444px;
+  }
+ 
+  .logo-container {
+    width: auto;
+    max-width: 160px; 
+    height: 46.667px;
+    background-color: var(--logo-bg);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .logo-container img {
+    width: auto;
+    height: 46.667px;
+    max-width: 160px;
+    object-fit: contain;
+  }
+
+  .site-title {
+    font-size: 15.556px;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    color: var(--heading-color);
+    line-height: 15.556px;
+    margin: 0;
+  }
+
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 32.738px;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 31.111px;
+  }
+
+  .dashboard-link {
+    font-size: 17.5px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--heading-color);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9.795px;
+    padding: 11.754px 23.508px;
+    border-radius: 23.508px;
+    background-color: var(--button-primary-bg);
+    color: var(--button-primary-text);
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .dropdown-trigger-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5.456px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .avatar {
+    width: 38.194px;
+    height: 38.194px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19.097px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--body-color);
+  }
+
+  .dropdown-trigger-wrapper svg {
+    width: 16.369px;
+    height: 16.369px;
+    stroke-width: 2;
+    color: var(--muted-text-color);
+  }
+
+  .dropdown-menu {
+    position: fixed;
+    top: 64px;
+    right: 77.752px;
+    width: 249px;
+    background: var(--section-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .dropdown-menu a,
+  .dropdown-menu button {
+    font-size: 14px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--body-color);
+    text-decoration: none;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+
+  .dropdown-menu a:hover,
+  .dropdown-menu button:hover {
+    background-color: var(--card-hover-bg);
+  }
+  
+  [data-cta-type="logged-in-state"] {
+      display: none;
+  }
+
+  @media (max-width: 768px) {
+    .topbar-wrapper {
+      padding: 0 24px;
+    }
+
+    .dashboard-link {
+      display: none;
+    }
+  }
+  </style>
+<script data-ai-id="scr-topbar" id="scr-topbar">
+   const trigger = document.getElementById("el-dropdown-trigger");
+  const menu = document.getElementById("el-dropdown-menu");
+
+  if (trigger && menu) {
+    trigger.addEventListener("click", () => {
+      const isOpen = menu.style.opacity === "1";
+
+      if (isOpen) {
+        menu.style.opacity = "0";
+        menu.style.visibility = "hidden";
+      } else {
+        menu.style.opacity = "1";
+        menu.style.visibility = "visible";
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && !trigger.contains(e.target)) {
+        menu.style.opacity = "0";
+        menu.style.visibility = "hidden";
+      }
+    });
+  }
+  </script>
+
+<section class="course-hero-section" data-ai-id="sec-ch2" data-type="section" id="sec-ch2">
+<div class="hero-bg-blob" data-ai-id="el-ch2-blob">
+</div>
+<div class="hero-container" data-ai-id="el-ch2-container">
+<!-- Left Side: Content -->
+<div class="hero-content" data-ai-id="el-ch2g">
+<nav class="breadcrumbs" data-ai-id="el-ch2-breadcrumbs">
+<a data-ai-id="el-ch2-bc1" href="/">
+       Courses
+      </a>
+<span class="separator" data-ai-id="el-ch2-sep1">
+<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="12">
+<polyline points="9 18 15 12 9 6">
+</polyline>
+</svg>
+</span>
+<a data-ai-id="el-ch2-bc2" href="#">
+       Somatic &amp; Integrative
+      </a>
+<span class="separator" data-ai-id="el-ch2-sep2">
+<svg fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="12">
+<polyline points="9 18 15 12 9 6">
+</polyline>
+</svg>
+</span>
+<span class="current" data-ai-id="el-ch2-bc3">
+       Somatic Therapy
+      </span>
+</nav>
+<h1 class="content-title" data-ai-id="el-ch2i" data-type="text">
+      CBT Mastery for Practitioners
+     </h1>
+<p class="course-tagline" data-ai-id="el-ch2j" data-type="text">
+      Enhance your clinical skills with evidence-based Cognitive Behavioral Therapy techniques.
+     </p>
+<div class="course-badges" data-ai-id="el-ch2-badges">
+<div class="badge rating" data-ai-id="el-ch2-badge-rating">
+<span class="icon">
+<svg fill="#FFD700" height="16" stroke="#FFD700" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+</polygon>
+</svg>
+</span>
+<span class="badge-text">
+        4.9 (128 Reviews)
+       </span>
+</div>
+<div class="badge duration" data-ai-id="el-ch2-badge-duration">
+<span class="icon">
+<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+<circle cx="12" cy="12" r="10">
+</circle>
+<polyline points="12 6 12 12 16 14">
+</polyline>
+</svg>
+</span>
+<span class="badge-text">
+        10 Days
+       </span>
+</div>
+<div class="badge certificate" data-ai-id="el-ch2-badge-cert">
+<span class="icon">
+<svg fill="none" height="16" stroke="#10b981" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z">
+</path>
+</svg>
+</span>
+<span class="badge-text">
+        Certificate Included
+       </span>
+</div>
+</div>
+<div class="hero-actions" data-ai-id="el-ch2-actions">
+<button class="btn-primary" data-ai-id="el-ch2ag" data-cta-type="scroll_buy_now" data-type="html">
+       Enroll Now — $499
+       <svg class="arrow" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20">
+<line x1="5" x2="19" y1="12" y2="12">
+</line>
+<polyline points="12 5 19 12 12 19">
+</polyline>
+</svg>
+</button>
+<button class="btn-secondary" data-ai-id="el-ch2-add-cart" data-type="html">
+       Add to Cart
+      </button>
+</div>
+</div>
+<!-- Right Side: Image & Cards -->
+<div class="hero-visual" data-ai-id="el-ch2b">
+<div class="image-wrapper" data-ai-id="el-ch2c">
+<img alt="CBT Mastery for Practitioners" class="course-image" data-ai-id="el-ch2d" data-type="image" src="https://d502jbuhuh9wk.cloudfront.net/ai_web/6999ad918983583b6c770d60/media/image/0a07fbd3-2458-42be-b0f9-2f974a66a637-image.png">
+<!-- Floating Card 1: Top Right -->
+<div class="floating-card card-top" data-ai-id="el-ch2-card-top">
+<div class="card-icon purple">
+<svg fill="currentColor" height="16" viewBox="0 0 24 24" width="16">
+<polygon points="5 3 19 12 5 21 5 3">
+</polygon>
+</svg>
+</div>
+<div class="card-text">
+<span class="label">
+         TOTAL CONTENT
+        </span>
+<span class="value">
+         24 Hours
+        </span>
+</div>
+</div>
+<!-- Floating Card 2: Bottom Left -->
+<div class="floating-card card-bottom" data-ai-id="el-ch2-card-bottom">
+<div class="card-icon green">
+<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16">
+<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2">
+</path>
+<circle cx="9" cy="7" r="4">
+</circle>
+<path d="M23 21v-2a4 4 0 0 0-3-3.87">
+</path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75">
+</path>
+</svg>
+</div>
+<div class="card-text">
+<span class="value">
+         2,500+
+        </span>
+<span class="label">
+         CLINICIANS ENROLLED
+        </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Hidden elements for backend -->
+<div data-ai-id="el-ch2-hidden" style="display:none">
+<div data-type="instructor-list">
+     
+    </div>
+<div data-type="language-list">
+     
+    </div>
+</div>
+</section>
+<style data-ai-id="stl-ch2" id="stl-ch2">
+   #sec-ch2 {
+  position: relative;
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f3f0ff 0%, #ffffff 100%);
+  overflow: hidden;
+  font-family: var(--font-family-body);
+}
+
+#sec-ch2 .hero-bg-blob {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 40%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(94, 45, 198, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+#sec-ch2 .hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  #sec-ch2 {
+    padding: 100px 0;
+  }
+  #sec-ch2 .hero-container {
+    flex-direction: row;
+    align-items: center;
+  }
+  #sec-ch2 .hero-content {
+    flex: 0 0 58%;
+  }
+  #sec-ch2 .hero-visual {
+    flex: 0 0 42%;
+  }
+}
+
+/* Breadcrumbs */
+#sec-ch2 .breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+}
+
+#sec-ch2 .breadcrumbs a {
+  color: #71717a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+#sec-ch2 .breadcrumbs a:hover {
+  color: #5e2dc6;
+}
+
+#sec-ch2 .breadcrumbs .separator {
+  color: #d4d4d8;
+  display: flex;
+  align-items: center;
+}
+
+#sec-ch2 .breadcrumbs .current {
+  color: #5e2dc6;
+  font-weight: 700;
+}
+
+/* Typography */
+#sec-ch2 .content-title {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #474747;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 1024px) {
+  #sec-ch2 .content-title {
+    font-size: 3.2rem;
+  }
+}
+
+#sec-ch2 .course-tagline {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #71717a;
+  margin-bottom: 32px;
+  max-width: 620px;
+}
+
+/* Badges */
+#sec-ch2 .course-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+#sec-ch2 .badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+#sec-ch2 .badge.rating {
+  background: #fffbeb;
+  color: #92400e;
+}
+
+#sec-ch2 .badge.duration {
+  background: #f3f0ff;
+  color: #5e2dc6;
+}
+
+#sec-ch2 .badge.certificate {
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+#sec-ch2 .badge .icon {
+  display: flex;
+  align-items: center;
+}
+
+/* Actions */
+#sec-ch2 .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+#sec-ch2 .btn-primary {
+  background: #5e2dc6;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 15px -3px rgba(94, 45, 198, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#sec-ch2 .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(94, 45, 198, 0.4);
+}
+
+#sec-ch2 .btn-secondary {
+  background: transparent;
+  color: #5e2dc6;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: 2px solid #5e2dc6;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#sec-ch2 .btn-secondary:hover {
+  background: rgba(94, 45, 198, 0.05);
+}
+
+/* Visual */
+#sec-ch2 .hero-visual {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+#sec-ch2 .image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+#sec-ch2 .course-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 4px solid #ffffff;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media (min-width: 1024px) {
+  #sec-ch2 .course-image {
+    transform: rotate(2deg);
+  }
+  #sec-ch2 .image-wrapper:hover .course-image {
+    transform: rotate(0deg);
+  }
+}
+
+/* Floating Cards */
+#sec-ch2 .floating-card {
+  position: absolute;
+  background: #ffffff;
+  padding: 12px 16px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  display: none; /* Hidden on mobile */
+}
+
+@media (min-width: 1024px) {
+  #sec-ch2 .floating-card {
+    display: flex;
+  }
+}
+
+#sec-ch2 .card-top {
+  top: -20px;
+  right: -20px;
+}
+
+#sec-ch2 .card-bottom {
+  bottom: -20px;
+  left: -20px;
+}
+
+#sec-ch2 .card-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sec-ch2 .card-icon.purple {
+  background: #f3f0ff;
+  color: #5e2dc6;
+}
+
+#sec-ch2 .card-icon.green {
+  background: #ecfdf5;
+  color: #10b981;
+}
+
+#sec-ch2 .card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+#sec-ch2 .card-text .label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #a1a1aa;
+  letter-spacing: 0.05em;
+}
+
+#sec-ch2 .card-text .value {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #474747;
+}
+  </style>
+<style id="stl-ch2">
+   #sec-ch2 { width: 100%; background-color: var(--color-primary-lightest); padding: 3rem 2rem; overflow: hidden; }
+  .hero-grid { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.1fr; gap: 3rem; align-items: center; }
+  .hero-image-side { position: relative; display: flex; align-items: center; justify-content: center; }
+  .image-box { position: relative; width: 100%; max-width: 400px; aspect-ratio: 4/5; border-radius: 0; overflow: hidden; box-shadow: 0 25px 50px rgba(30, 78, 121, 0.18); transition: transform 0.4s; }
+  .image-box:hover { transform: translateY(-8px); }
+  .course-image { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.5s ease; }
+  .image-box:hover .course-image { transform: scale(1.08); }
+  .hero-content-side { display: flex; flex-direction: column; gap: 1.75rem; }
+  .content-title { font-family: var(--font-heading); font-size: 3rem; font-weight: 800; line-height: 1.15; color: var(--heading-color); margin: 0; }
+  .course-tagline { font-family: var(--font-body); font-size: 1.125rem; line-height: 1.8; color: var(--body-color); margin: 0; }
+  .instructor-info-row { display: flex; gap: 0.75rem; align-items: center; padding: 0.75rem 0; }
+  .language-info-row { display: flex; gap: 0.75rem; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid var(--card-border); }
+  .info-label { font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; color: var(--muted-text-color); text-transform: uppercase; letter-spacing: 0.05em; }
+  .info-value { font-family: var(--font-body); font-size: 1rem; font-weight: 500; color: var(--heading-color); }
+  .buy-now-btn { flex: 1; min-width: 150px; padding: 1rem 1.5rem; background-color: var(--button-primary-bg); color: var(--button-primary-text); font-family: var(--font-heading); font-size: 1rem; font-weight: 600; border: none; border-radius: 0; cursor: pointer; transition: all 0.3s; }
+  .buy-now-btn:hover { background-color: var(--button-primary-hover-bg); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(30, 78, 121, 0.2); }
+  @media (max-width: 1024px) { .hero-grid { grid-template-columns: 1fr; gap: 2rem; } .content-title { font-size: 2.5rem; } .image-box { max-width: 350px; } }
+  @media (max-width: 768px) { #sec-ch2 { padding: 2rem 1.5rem; } .content-title { font-size: 2rem; } .buy-now-btn { width: 100%; } }
+  </style>
+<script data-ai-id="scr-ch2" id="scr-ch2">
+   (function() {
+  const section = document.getElementById('sec-ch2');
+  if (!section) return;
+
+  function setupScrollButton() {
+    const button = section.querySelector('[data-cta-type="scroll_buy_now"]');
+    if (!button) return;
+
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      const plansSection = document.getElementById('sec-p9k2m4x7');
+      if (plansSection) {
+        plansSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        console.warn('Course plans section not found');
+      }
+    });
+
+    button.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
+  }
+
+  function setupImageErrorHandling() {
+    const image = section.querySelector('.course-image');
+    if (image) {
+      image.addEventListener('error', function() {
+        this.style.backgroundColor = 'var(--color-neutral-lighter)';
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      setupScrollButton();
+      setupImageErrorHandling();
+    });
+  } else {
+    setupScrollButton();
+    setupImageErrorHandling();
+  }
+})();
+  </script>
+<section data-ai-id="sec-p9k2m4x7" data-section-type="course_plans" data-template-name="COURSE_PLANS1" id="sec-p9k2m4x7">
+   
+   <div class="section-container" data-ai-id="el-p9k4h4x7" data-type="html" id="el-p9k4h4x7">
+<h2 class="section-title" data-ai-id="el-h2k7n3p1" data-type="text" id="el-h2k7n3p1">
+     Pricing
+    </h2>
+<div class="plans-grid" data-ai-id="el-g5r8t2m4" data-type="html" id="el-g5r8t2m4">
+     
+     <label class="plan-card active" data-ai-id="el-l6w9q3x0" data-type="html" id="el-l6w9q3x0">
+<div class="card-checkbox" data-ai-id="el-cc0" data-type="html" id="el-cc0">
+<input data-ai-id="el-i4d7k2n0" data-buy-button-label="Buy now for $999" data-mrp="1000" data-pid="p1" data-price="999" data-type="html" data-vid="v1-0-0" id="el-i4d7k2n0" name="course_plan" type="radio" value="p1">
+<span class="checkmark" data-ai-id="el-cm0" data-type="html" id="el-cm0">
+</span>
+</div>
+<div class="card-content" data-ai-id="el-cc-content0" data-type="html" id="el-cc-content0">
+<div class="plan-header" data-ai-id="el-h8m3p5r0" data-type="html" id="el-h8m3p5r0">
+<div class="plan-name" data-ai-id="el-n2q7t9w0" data-type="text" id="el-n2q7t9w0">
+         OTP
+        </div>
+<div class="plan-validity" data-ai-id="el-v5x1k8m0" data-type="text" id="el-v5x1k8m0">
+         ● Lifetime
+        </div>
+</div>
+<div class="plan-price" data-ai-id="el-p3r6w2q0" data-type="html" id="el-p3r6w2q0">
+        
+        <span class="current" data-ai-id="el-c2p5k9x0" data-type="text" id="el-c2p5k9x0">
+         $
+                            999
+        </span>
+        
+        <span class="original" data-ai-id="el-o8m3w6r0" data-type="text" id="el-o8m3w6r0">
+         $
+                            1000
+        </span>
+        
+                        
+       </div>
+<!--TOOL TIP FOR CUSTOM INSTALMENTS-->
+       
+      </div>
+</label>
+     
+     <label class="plan-card " data-ai-id="el-l6w9q3x1" data-type="html" id="el-l6w9q3x1">
+<div class="card-checkbox" data-ai-id="el-cc1" data-type="html" id="el-cc1">
+<input data-ai-id="el-i4d7k2n1" data-buy-button-label="Buy now for $416.67" data-mrp="416.67" data-pid="p2" data-price="416.67" data-type="html" data-vid="v2-5000-5000" id="el-i4d7k2n1" name="course_plan" type="radio" value="p2">
+<span class="checkmark" data-ai-id="el-cm1" data-type="html" id="el-cm1">
+</span>
+</div>
+<div class="card-content" data-ai-id="el-cc-content1" data-type="html" id="el-cc-content1">
+<div class="plan-header" data-ai-id="el-h8m3p5r1" data-type="html" id="el-h8m3p5r1">
+<div class="plan-name" data-ai-id="el-n2q7t9w1" data-type="text" id="el-n2q7t9w1">
+         Split name
+        </div>
+<div class="plan-validity" data-ai-id="el-v5x1k8m1" data-type="text" id="el-v5x1k8m1">
+         ● Lifetime
+        </div>
+</div>
+<div class="plan-price" data-ai-id="el-p3r6w2q1" data-type="html" id="el-p3r6w2q1">
+        
+        <span class="current" data-ai-id="el-c9t2k5x1" data-type="text" id="el-c9t2k5x1">
+         $
+                            416.67
+        </span>
+<span class="recur-period-label" data-ai-id="el-r4w8m3n1" data-type="text" id="el-r4w8m3n1">
+         per month x 12
+        </span>
+<span class="instalment-total" data-ai-id="el-i6q1t7m1" data-type="text" id="el-i6q1t7m1">
+         Total: $
+                            5000
+        </span>
+        
+       </div>
+<!--TOOL TIP FOR CUSTOM INSTALMENTS-->
+       
+      </div>
+</label>
+     
+     <label class="plan-card " data-ai-id="el-l6w9q3x2" data-type="html" id="el-l6w9q3x2">
+<div class="card-checkbox" data-ai-id="el-cc2" data-type="html" id="el-cc2">
+<input data-ai-id="el-i4d7k2n2" data-buy-button-label="Buy now for FREE" data-mrp="0" data-pid="p3" data-price="0" data-type="html" data-vid="v3-0-0" id="el-i4d7k2n2" name="course_plan" type="radio" value="p3">
+<span class="checkmark" data-ai-id="el-cm2" data-type="html" id="el-cm2">
+</span>
+</div>
+<div class="card-content" data-ai-id="el-cc-content2" data-type="html" id="el-cc-content2">
+<div class="plan-header" data-ai-id="el-h8m3p5r2" data-type="html" id="el-h8m3p5r2">
+<div class="plan-name" data-ai-id="el-n2q7t9w2" data-type="text" id="el-n2q7t9w2">
+         Free name
+        </div>
+<div class="plan-validity" data-ai-id="el-v5x1k8m2" data-type="text" id="el-v5x1k8m2">
+         ● Lifetime
+        </div>
+</div>
+<div class="plan-price" data-ai-id="el-p3r6w2q2" data-type="html" id="el-p3r6w2q2">
+        
+        <span class="current" data-ai-id="el-c7m4n1p2" data-type="text" id="el-c7m4n1p2">
+         FREE
+        </span>
+        
+       </div>
+<!--TOOL TIP FOR CUSTOM INSTALMENTS-->
+       
+      </div>
+</label>
+     
+    </div>
+<div class="buy-button-container" data-ai-id="el-b4n7q2m9" data-type="html" id="el-b4n7q2m9">
+<button class="cta-button cta-primary" data-ai-id="el-b4nf82m9" data-cta-type="plan_buy_now" data-type="html" id="plan-buy-button">
+      Buy now for $999
+     </button>
+</div>
+</div>
+   
+  </section>
+<style data-ai-id="stl-p9k2m4x7" id="stl-p9k2m4x7">
+   #sec-p9k2m4x7 {
+        margin: 0 auto;
+        padding: 60px 20px;
+        font-family: var(--font-body);
+        background-color: var(--section-bg);
+    }
+
+    #sec-p9k2m4x7 .section-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    #sec-p9k2m4x7 .section-title {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 48px;
+        font-family: var(--font-heading);
+        color: var(--heading-color);
+    }
+
+    /* GRID */
+    #sec-p9k2m4x7 .plans-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 36px;
+    }
+
+    .instalment-tooltip-wrapper {
+        position: relative;
+        display: inline-block;
+        margin-top: 6px;
+    }
+
+    .instalment-tooltip-icon {
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .instalment-tooltip {
+        display: none;
+        position: absolute;
+        bottom: 120%;
+        left: 0;
+        width: 240px;
+        background: #111;
+        color: #fff;
+        padding: 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        z-index: 20;
+    }
+
+    .instalment-tooltip-wrapper:hover .instalment-tooltip {
+        display: block;
+    }
+
+    .instalment-row {
+        margin-bottom: 6px;
+    }
+
+    .instalment-row:last-child {
+        margin-bottom: 0;
+    }
+
+    .due-text {
+        display: block;
+        opacity: 0.8;
+    }
+
+    /* CARD */
+    #sec-p9k2m4x7 .plan-card {
+        position: relative;
+        background: var(--card-bg);
+        border-radius: 0;
+        padding: 24px;
+        border: 2px solid var(--card-border);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #sec-p9k2m4x7 .plan-card:hover {
+        border-color: var(--color-primary-light);
+        background-color: var(--color-primary-lightest);
+    }
+
+    /* ACTIVE */
+    #sec-p9k2m4x7 .plan-card.active {
+        background: var(--color-primary-lightest);
+        border-color: var(--color-primary);
+        box-shadow: 0 8px 20px rgba(30, 78, 121, 0.12);
+    }
+
+    /* CHECKBOX STYLING */
+    #sec-p9k2m4x7 .card-checkbox {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+
+    #sec-p9k2m4x7 .plan-card input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+    }
+
+    #sec-p9k2m4x7 .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        background-color: var(--card-bg);
+        border: 2px solid var(--card-border);
+        border-radius: 0;
+        transition: all 0.2s ease;
+    }
+
+    #sec-p9k2m4x7 .plan-card input:checked~.checkmark {
+        background-color: var(--color-primary);
+        border-color: var(--color-primary);
+    }
+
+    #sec-p9k2m4x7 .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 6px;
+        top: 2px;
+        width: 6px;
+        height: 10px;
+        border: solid var(--color-neutral-lightest);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+
+    #sec-p9k2m4x7 .plan-card input:checked~.checkmark:after {
+        display: block;
+    }
+
+    /* CONTENT */
+    #sec-p9k2m4x7 .card-content {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* HEADER */
+    #sec-p9k2m4x7 .plan-header {
+        flex: 1;
+    }
+
+    /* PLAN NAME - Professional & Dark */
+    #sec-p9k2m4x7 .plan-name {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 6px;
+        color: var(--heading-color);
+        font-family: var(--font-heading);
+        letter-spacing: 0.3px;
+    }
+
+    /* VALIDITY - Bold & Clear */
+    #sec-p9k2m4x7 .plan-validity {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--color-primary);
+        font-family: var(--font-heading);
+        letter-spacing: 0.2px;
+    }
+
+    /* PRICE */
+    #sec-p9k2m4x7 .plan-price {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+        white-space: nowrap;
+    }
+
+    /* CURRENT PRICE - Bold & Prominent */
+    #sec-p9k2m4x7 .plan-price .current {
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--heading-color);
+        font-family: var(--font-heading);
+        letter-spacing: -0.5px;
+    }
+
+    /* ORIGINAL MRP - Subtle */
+    #sec-p9k2m4x7 .plan-price .original {
+        font-size: 12px;
+        text-decoration: line-through;
+        color: var(--color-neutral-light);
+        font-family: var(--font-body);
+    }
+
+    /* RECUR PERIOD - Secondary */
+    #sec-p9k2m4x7 .recur-period-label {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--subhead-color);
+        font-family: var(--font-heading);
+    }
+
+    /* INSTALMENT TOTAL - Important */
+    #sec-p9k2m4x7 .instalment-total {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--heading-color);
+        font-family: var(--font-heading);
+    }
+
+    /* BUTTON */
+    #sec-p9k2m4x7 .buy-button-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #sec-p9k2m4x7 .cta-button {
+        padding: 14px 32px;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: var(--font-heading);
+        letter-spacing: 0.5px;
+    }
+
+    #sec-p9k2m4x7 .cta-primary {
+        background-color: var(--button-primary-bg);
+        color: var(--button-primary-text);
+    }
+
+    #sec-p9k2m4x7 .cta-primary:hover {
+        background-color: var(--button-primary-hover-bg);
+        transform: translateY(-2px);
+    }
+
+    #sec-p9k2m4x7 .cta-primary:focus {
+        outline: 2px solid var(--input-border-active);
+        outline-offset: 2px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+        #sec-p9k2m4x7 .section-title {
+            font-size: 22px;
+            margin-bottom: 36px;
+        }
+
+        #sec-p9k2m4x7 .plan-card {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        #sec-p9k2m4x7 .card-content {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        #sec-p9k2m4x7 .plan-price {
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        #sec-p9k2m4x7 .plan-name {
+            font-size: 16px;
+        }
+
+        #sec-p9k2m4x7 .plan-price .current {
+            font-size: 20px;
+        }
+
+        #sec-p9k2m4x7 .cta-button {
+            padding: 12px 24px;
+            font-size: 14px;
+        }
+    }
+  </style>
+<script data-ai-id="scr-p9k2m4x7" id="scr-p9k2m4x7">
+   (function() {
+        const section = document.getElementById('sec-p9k2m4x7');
+        if (section) {
+            const cards = section.querySelectorAll('.plan-card');
+            const inputs = section.querySelectorAll('input[name="course_plan"]');
+
+            inputs.forEach(input => {
+                input.addEventListener('change', function() {
+                    cards.forEach(card => card.classList.remove('active'));
+                    this.closest('.plan-card').classList.add('active');
+                });
+            });
+        }
+    })();
+  </script>
+<section data-ai-id="sec-about3" data-section-type="about_course" data-template-name="ABOUT_COURSE3" id="sec-about3">
+<div class="about-course-container" data-ai-id="el-about3-container" id="el-about3-container">
+<!-- Image Column (Left) -->
+<div class="about-course-image-wrapper" data-ai-id="el-about3-image-wrapper" id="el-about3-image-wrapper">
+<!-- Image with alt text -->
+<img alt="" class="about-course-image" data-ai-id="el-about3a" data-aspect-ratio="16:9" data-type="image" id="el-about3a" src="https://images.unsplash.com/photo-1552196527-bffef41ef674?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w1MjAyNzJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE4Mjk0ODl8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="aspect-ratio: 16/9;">
+</div>
+<!-- Content Column (Right) -->
+<div class="about-course-content" data-ai-id="el-about3-content" id="el-about3-content">
+<h2 class="about-course-heading" data-ai-id="el-about3b" data-type="text" id="el-about3b">
+      About Course
+     </h2>
+<p class="about-course-description" data-ai-id="el-about3c" data-type="text" id="el-about3c">
+      Enhance your clinical skills with evidence-based Cognitive Behavioral Therapy techniques.
+     </p>
+</div>
+</div>
+</section>
+<!-- ABOUT_COURSE3 STYLES -->
+<style data-ai-id="stl-about3" id="stl-about3">
+   section[data-section-type="about_course"] {
+    background-color: #FFFFFF;
+    padding: 3rem 1.5rem;
+  }
+
+  .about-course-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .about-course-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .about-course-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: var(--border-radius-lg);
+    transition: transform 0.4s ease;
+    aspect-ratio: 3/4;
+  }
+
+  .about-course-image-wrapper:hover .about-course-image {
+    transform: scale(1.05);
+  }
+
+  .about-course-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .about-course-heading {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    line-height: 1.2;
+    color: var(--color-neutral-darkest);
+    margin: 0;
+  }
+
+  .about-course-description {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-neutral);
+    margin: 0;
+  }
+
+  .cta-button {
+    align-self: flex-start;
+    padding: 0.875rem 2.5rem;
+    background-color: var(--button-primary-bg);
+    color: var(--color-neutral-lightest);
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: var(--button-primary-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .cta-button:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  .cta-button:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Tablet Breakpoint */
+  @media (max-width: 768px) {
+    section[data-section-type="about_course"] {
+      padding: 2rem 1rem;
+    }
+
+    .about-course-container {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .about-course-heading {
+      font-size: 1.875rem;
+    }
+
+    .about-course-description {
+      font-size: 0.95rem;
+    }
+  }
+
+  /* Mobile Breakpoint */
+  @media (max-width: 480px) {
+    section[data-section-type="about_course"] {
+      padding: 1.5rem 1rem;
+    }
+
+    .about-course-heading {
+      font-size: 1.5rem;
+      line-height: 1.3;
+    }
+
+    .about-course-description {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .cta-button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  /* ACCESSIBILITY */
+  @media (prefers-reduced-motion: reduce) {
+    .about-course-image,
+    .cta-button {
+      transition: none;
+    }
+  }
+  </style>
+<!-- ABOUT_COURSE3 SCRIPT -->
+<script data-ai-id="scr-about3" id="scr-about3">
+   (function() {
+    const section = document.querySelector('section[data-section-type="about_course"]');
+    
+    if (section) {
+      const button = section.querySelector('[data-cta-type="know_more"]');
+      
+      if (button) {
+        button.addEventListener('click', function() {
+          console.log('Know More button clicked');
+        });
+
+        button.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+          }
+        });
+      }
+
+      // Image hover effect
+      const image = section.querySelector('.about-course-image');
+      if (image) {
+        image.addEventListener('mouseenter', function() {
+          this.style.transform = 'scale(1.05)';
+        });
+        
+        image.addEventListener('mouseleave', function() {
+          this.style.transform = 'scale(1)';
+        });
+      }
+    }
+  })();
+  </script>
+<section data-ai-id="sec-d4e5f6a7" data-section-type="course_curriculum" data-template-name="COURSE_CURRICULUM2" data-type="html" id="sec-d4e5f6a7" x-data="curriculumData()" x-show="curriculum.length &gt; 0">
+<div class="container" data-ai-id="el-h8i9j0k1" data-type="html" id="el-h8i9j0k1">
+<h2 class="curriculum-heading" data-ai-id="el-l2m3n4o5" data-type="text" id="el-l2m3n4o5">
+     Course Curriculum
+    </h2>
+<div class="curriculum-list" data-ai-id="el-p6q7r8s9" data-type="list" id="el-p6q7r8s9">
+<template :key="section.id" x-for="(section, index) in curriculum">
+<div class="curriculum-section" data-ai-id="el-t0u1v2w3" data-type="html" id="el-t0u1v2w3" x-data="{ expanded: false }">
+<div class="section-header" data-ai-id="el-x4y5z6a7" data-type="html" id="el-x4y5z6a7" x-on:click="expanded = !expanded">
+<div class="section-header-left" data-ai-id="el-b8c9d0e1" data-type="html" id="el-b8c9d0e1">
+<span class="section-number" data-ai-id="el-f2g3h4i5" data-type="text" id="el-f2g3h4i5" x-text="String(index + 1).padStart(2, '0')">
+</span>
+<h3 class="section-title" data-ai-id="el-j6k7l8m9" data-type="text" id="el-j6k7l8m9" x-text="section.title">
+</h3>
+</div>
+<div class="section-header-right" data-ai-id="el-n0o1p2q3" data-type="html" id="el-n0o1p2q3">
+<span class="section-count" data-ai-id="el-r4s5t6u7" data-type="text" id="el-r4s5t6u7" x-text="section.items.length + ' items'">
+</span>
+<span class="module-duration" data-ai-id="el-f4h5h6j7" data-type="text" id="el-f4h5h6j7" x-show="assetInfo &amp;&amp; getTotalModuleDuration(section.items) !== '0 min 0 sec'" x-text="getTotalModuleDuration(section.items)">
+</span>
+<svg :class="{ 'rotated': expanded }" class="chevron-icon" data-ai-id="el-v8w9x0y1" data-type="html" fill="none" height="24" id="el-v8w9x0y1" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24">
+<polyline data-ai-id="el-a1b2c3d4" id="el-a1b2c3d4" points="6 9 12 15 18 9">
+</polyline>
+</svg>
+</div>
+</div>
+<div class="section-content" data-ai-id="el-z2a3b4c5" data-type="html" id="el-z2a3b4c5" x-collapse="" x-show="expanded">
+<template :key="item.id" x-for="item in section.items">
+<div class="curriculum-item" data-ai-id="el-d6e7f8g9" data-type="html" id="el-d6e7f8g9">
+<div class="item-icon" data-ai-id="el-h0i1j2k3" data-type="html" id="el-h0i1j2k3">
+<template x-if="item.type === 'pdf'">
+<svg data-ai-id="el-e5f6g7h8" fill="none" height="24" id="el-e5f6g7h8" stroke="var(--color-accent1)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-ai-id="el-i9j0k1l2" id="el-i9j0k1l2">
+</path>
+<polyline data-ai-id="el-m3n4o5p6" id="el-m3n4o5p6" points="14 2 14 8 20 8">
+</polyline>
+<line data-ai-id="el-q7r8s9t0" id="el-q7r8s9t0" x1="16" x2="8" y1="13" y2="13">
+</line>
+<line data-ai-id="el-u1v2w3x4" id="el-u1v2w3x4" x1="16" x2="8" y1="17" y2="17">
+</line>
+<polyline data-ai-id="el-y5z6a7b8" id="el-y5z6a7b8" points="10 9 9 9 8 9">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'video'">
+<svg data-ai-id="el-c9d0e1f2" fill="none" height="24" id="el-c9d0e1f2" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<polygon data-ai-id="el-g3h4i5j6" id="el-g3h4i5j6" points="5 3 19 12 5 21 5 3">
+</polygon>
+</svg>
+</template>
+<template x-if="item.type === 'assessment' || item.type === 'livetest'">
+<svg data-ai-id="el-k7l8m9n0" fill="none" height="24" id="el-k7l8m9n0" stroke="var(--color-primary)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M9 11l3 3L22 4" data-ai-id="el-o1p2q3r4" id="el-o1p2q3r4">
+</path>
+<path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" data-ai-id="el-s5t6u7v8" id="el-s5t6u7v8">
+</path>
+</svg>
+</template>
+<template x-if="item.type === 'liveclass'">
+<svg data-ai-id="el-w9x0y1z2" fill="none" height="24" id="el-w9x0y1z2" stroke="var(--color-primary-dark)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<rect data-ai-id="el-a3b4c5d6" height="15" id="el-a3b4c5d6" rx="2" ry="2" width="20" x="2" y="7">
+</rect>
+<polyline data-ai-id="el-e7f8g9h0" id="el-e7f8g9h0" points="17 2 12 7 7 2">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'assignment'">
+<svg data-ai-id="el-i1j2k3l4" fill="none" height="24" id="el-i1j2k3l4" stroke="var(--color-accent1-dark)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-ai-id="el-m5n6o7p8" id="el-m5n6o7p8">
+</path>
+<polyline data-ai-id="el-q9r0s1t2" id="el-q9r0s1t2" points="14 2 14 8 20 8">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'code'">
+<svg data-ai-id="el-u3v4w5x6" fill="none" height="24" id="el-u3v4w5x6" stroke="var(--color-accent2-dark)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<polyline data-ai-id="el-y7z8a9b0" id="el-y7z8a9b0" points="16 18 22 12 16 6">
+</polyline>
+<polyline data-ai-id="el-c1d2e3f4" id="el-c1d2e3f4" points="8 6 2 12 8 18">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'scorm'">
+<svg data-ai-id="el-scorm-icon" fill="none" height="24" id="el-scorm-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<rect data-ai-id="el-scorm-rect" height="20" id="el-scorm-rect" rx="2" ry="2" width="16" x="4" y="2">
+</rect>
+<line data-ai-id="el-scorm-line-1" id="el-scorm-line-1" x1="8" x2="16" y1="7" y2="7">
+</line>
+<line data-ai-id="el-scorm-line-2" id="el-scorm-line-2" x1="8" x2="16" y1="12" y2="12">
+</line>
+<line data-ai-id="el-scorm-line-3" id="el-scorm-line-3" x1="8" x2="16" y1="17" y2="17">
+</line>
+</svg>
+</template>
+<template x-if="item.type === 'audio'">
+<svg data-ai-id="el-audio-icon" fill="none" height="24" id="el-audio-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" data-ai-id="el-audio-wave-1" id="el-audio-wave-1">
+</path>
+<polygon data-ai-id="el-audio-triangle" id="el-audio-triangle" points="10 8 10 16 16 12 10 8">
+</polygon>
+</svg>
+</template>
+<template x-if="item.type === 'file'">
+<svg data-ai-id="el-file-icon" fill="none" height="24" id="el-file-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" data-ai-id="el-file-path" id="el-file-path">
+</path>
+<polyline data-ai-id="el-file-fold" id="el-file-fold" points="13 2 13 9 20 9">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'article'">
+<svg data-ai-id="el-article-icon" fill="none" height="24" id="el-article-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" data-ai-id="el-article-rect" id="el-article-rect">
+</path>
+<line data-ai-id="el-article-line-1" id="el-article-line-1" x1="7" x2="17" y1="9" y2="9">
+</line>
+<line data-ai-id="el-article-line-2" id="el-article-line-2" x1="7" x2="17" y1="13" y2="13">
+</line>
+<line data-ai-id="el-article-line-3" id="el-article-line-3" x1="7" x2="13" y1="17" y2="17">
+</line>
+</svg>
+</template>
+<template x-if="item.type === 'link'">
+<svg data-ai-id="el-link-icon" fill="none" height="24" id="el-link-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" data-ai-id="el-link-path-1" id="el-link-path-1">
+</path>
+<path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" data-ai-id="el-link-path-2" id="el-link-path-2">
+</path>
+</svg>
+</template>
+<template x-if="item.type === 'activity'">
+<svg data-ai-id="el-form-icon" fill="none" height="24" id="el-form-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" data-ai-id="el-form-rect" id="el-form-rect">
+</path>
+<rect data-ai-id="el-form-input-1" height="2" id="el-form-input-1" width="10" x="7" y="8">
+</rect>
+<rect data-ai-id="el-form-input-2" height="2" id="el-form-input-2" width="10" x="7" y="12">
+</rect>
+<circle cx="7" cy="18" data-ai-id="el-form-checkbox" id="el-form-checkbox" r="1.5">
+</circle>
+</svg>
+</template>
+</div>
+<div class="item-content" data-ai-id="el-l4m5n6o7" data-type="html" id="el-l4m5n6o7">
+<h4 class="item-title" data-ai-id="el-p8q9r0s1" data-type="text" id="el-p8q9r0s1" x-text="item.title">
+</h4>
+<div class="item-meta" data-ai-id="el-t2u3v4w5" data-type="html" id="el-t2u3v4w5">
+<span class="item-type" data-ai-id="el-x6y7z8a9" data-type="text" id="el-x6y7z8a9" x-text="getItemTypeLabel(item)">
+</span>
+<template x-if="assetInfo &amp;&amp; (item.duration || item.pages)">
+<span class="item-dot" data-ai-id="el-b0c1d2e3" data-type="text" id="el-b0c1d2e3">
+              •
+             </span>
+</template>
+<span class="item-duration" data-ai-id="el-f4g5h6i7" data-type="text" id="el-f4g5h6i7" x-show="assetInfo &amp;&amp; (item.duration || item.pages)" x-text="getItemDuration(item)">
+</span>
+<a :href="getPreviewLink(item)" class="item-preview-link" data-ai-id="el-f4g6h6i8" data-type="text" id="el-f4g6h6i8" rel="noopener noreferrer" x-show="getPreviewLink(item)" x-text="item.type === 'video' ? 'Watch' : 'Preview'">
+</a>
+</div>
+</div>
+</div>
+</template>
+</div>
+</div>
+</template><div class="curriculum-section" data-ai-id="el-t0u1v2w3" data-type="html" id="el-t0u1v2w3" x-data="{ expanded: false }">
+<div class="section-header" data-ai-id="el-x4y5z6a7" data-type="html" id="el-x4y5z6a7" x-on:click="expanded = !expanded">
+<div class="section-header-left" data-ai-id="el-b8c9d0e1" data-type="html" id="el-b8c9d0e1">
+<span class="section-number" data-ai-id="el-f2g3h4i5" data-type="text" id="el-f2g3h4i5" x-text="String(index + 1).padStart(2, '0')">01</span>
+<h3 class="section-title" data-ai-id="el-j6k7l8m9" data-type="text" id="el-j6k7l8m9" x-text="section.title">Chapter 1</h3>
+</div>
+<div class="section-header-right" data-ai-id="el-n0o1p2q3" data-type="html" id="el-n0o1p2q3">
+<span class="section-count" data-ai-id="el-r4s5t6u7" data-type="text" id="el-r4s5t6u7" x-text="section.items.length + ' items'">1 items</span>
+<span class="module-duration" data-ai-id="el-f4h5h6j7" data-type="text" id="el-f4h5h6j7" x-show="assetInfo &amp;&amp; getTotalModuleDuration(section.items) !== '0 min 0 sec'" x-text="getTotalModuleDuration(section.items)" style="display: none;">0 sec</span>
+<svg :class="{ 'rotated': expanded }" class="chevron-icon" data-ai-id="el-v8w9x0y1" data-type="html" fill="none" height="24" id="el-v8w9x0y1" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24">
+<polyline data-ai-id="el-a1b2c3d4" id="el-a1b2c3d4" points="6 9 12 15 18 9">
+</polyline>
+</svg>
+</div>
+</div>
+<div class="section-content" data-ai-id="el-z2a3b4c5" data-type="html" id="el-z2a3b4c5" x-collapse="" x-show="expanded" style="display: none;">
+<template :key="item.id" x-for="item in section.items">
+<div class="curriculum-item" data-ai-id="el-d6e7f8g9" data-type="html" id="el-d6e7f8g9">
+<div class="item-icon" data-ai-id="el-h0i1j2k3" data-type="html" id="el-h0i1j2k3">
+<template x-if="item.type === 'pdf'">
+<svg data-ai-id="el-e5f6g7h8" fill="none" height="24" id="el-e5f6g7h8" stroke="var(--color-accent1)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-ai-id="el-i9j0k1l2" id="el-i9j0k1l2">
+</path>
+<polyline data-ai-id="el-m3n4o5p6" id="el-m3n4o5p6" points="14 2 14 8 20 8">
+</polyline>
+<line data-ai-id="el-q7r8s9t0" id="el-q7r8s9t0" x1="16" x2="8" y1="13" y2="13">
+</line>
+<line data-ai-id="el-u1v2w3x4" id="el-u1v2w3x4" x1="16" x2="8" y1="17" y2="17">
+</line>
+<polyline data-ai-id="el-y5z6a7b8" id="el-y5z6a7b8" points="10 9 9 9 8 9">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'video'">
+<svg data-ai-id="el-c9d0e1f2" fill="none" height="24" id="el-c9d0e1f2" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<polygon data-ai-id="el-g3h4i5j6" id="el-g3h4i5j6" points="5 3 19 12 5 21 5 3">
+</polygon>
+</svg>
+</template>
+<template x-if="item.type === 'assessment' || item.type === 'livetest'">
+<svg data-ai-id="el-k7l8m9n0" fill="none" height="24" id="el-k7l8m9n0" stroke="var(--color-primary)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M9 11l3 3L22 4" data-ai-id="el-o1p2q3r4" id="el-o1p2q3r4">
+</path>
+<path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" data-ai-id="el-s5t6u7v8" id="el-s5t6u7v8">
+</path>
+</svg>
+</template>
+<template x-if="item.type === 'liveclass'">
+<svg data-ai-id="el-w9x0y1z2" fill="none" height="24" id="el-w9x0y1z2" stroke="var(--color-primary-dark)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<rect data-ai-id="el-a3b4c5d6" height="15" id="el-a3b4c5d6" rx="2" ry="2" width="20" x="2" y="7">
+</rect>
+<polyline data-ai-id="el-e7f8g9h0" id="el-e7f8g9h0" points="17 2 12 7 7 2">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'assignment'">
+<svg data-ai-id="el-i1j2k3l4" fill="none" height="24" id="el-i1j2k3l4" stroke="var(--color-accent1-dark)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-ai-id="el-m5n6o7p8" id="el-m5n6o7p8">
+</path>
+<polyline data-ai-id="el-q9r0s1t2" id="el-q9r0s1t2" points="14 2 14 8 20 8">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'code'">
+<svg data-ai-id="el-u3v4w5x6" fill="none" height="24" id="el-u3v4w5x6" stroke="var(--color-accent2-dark)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<polyline data-ai-id="el-y7z8a9b0" id="el-y7z8a9b0" points="16 18 22 12 16 6">
+</polyline>
+<polyline data-ai-id="el-c1d2e3f4" id="el-c1d2e3f4" points="8 6 2 12 8 18">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'scorm'">
+<svg data-ai-id="el-scorm-icon" fill="none" height="24" id="el-scorm-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<rect data-ai-id="el-scorm-rect" height="20" id="el-scorm-rect" rx="2" ry="2" width="16" x="4" y="2">
+</rect>
+<line data-ai-id="el-scorm-line-1" id="el-scorm-line-1" x1="8" x2="16" y1="7" y2="7">
+</line>
+<line data-ai-id="el-scorm-line-2" id="el-scorm-line-2" x1="8" x2="16" y1="12" y2="12">
+</line>
+<line data-ai-id="el-scorm-line-3" id="el-scorm-line-3" x1="8" x2="16" y1="17" y2="17">
+</line>
+</svg>
+</template>
+<template x-if="item.type === 'audio'">
+<svg data-ai-id="el-audio-icon" fill="none" height="24" id="el-audio-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" data-ai-id="el-audio-wave-1" id="el-audio-wave-1">
+</path>
+<polygon data-ai-id="el-audio-triangle" id="el-audio-triangle" points="10 8 10 16 16 12 10 8">
+</polygon>
+</svg>
+</template>
+<template x-if="item.type === 'file'">
+<svg data-ai-id="el-file-icon" fill="none" height="24" id="el-file-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" data-ai-id="el-file-path" id="el-file-path">
+</path>
+<polyline data-ai-id="el-file-fold" id="el-file-fold" points="13 2 13 9 20 9">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'article'">
+<svg data-ai-id="el-article-icon" fill="none" height="24" id="el-article-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" data-ai-id="el-article-rect" id="el-article-rect">
+</path>
+<line data-ai-id="el-article-line-1" id="el-article-line-1" x1="7" x2="17" y1="9" y2="9">
+</line>
+<line data-ai-id="el-article-line-2" id="el-article-line-2" x1="7" x2="17" y1="13" y2="13">
+</line>
+<line data-ai-id="el-article-line-3" id="el-article-line-3" x1="7" x2="13" y1="17" y2="17">
+</line>
+</svg>
+</template>
+<template x-if="item.type === 'link'">
+<svg data-ai-id="el-link-icon" fill="none" height="24" id="el-link-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" data-ai-id="el-link-path-1" id="el-link-path-1">
+</path>
+<path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" data-ai-id="el-link-path-2" id="el-link-path-2">
+</path>
+</svg>
+</template>
+<template x-if="item.type === 'activity'">
+<svg data-ai-id="el-form-icon" fill="none" height="24" id="el-form-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" data-ai-id="el-form-rect" id="el-form-rect">
+</path>
+<rect data-ai-id="el-form-input-1" height="2" id="el-form-input-1" width="10" x="7" y="8">
+</rect>
+<rect data-ai-id="el-form-input-2" height="2" id="el-form-input-2" width="10" x="7" y="12">
+</rect>
+<circle cx="7" cy="18" data-ai-id="el-form-checkbox" id="el-form-checkbox" r="1.5">
+</circle>
+</svg>
+</template>
+</div>
+<div class="item-content" data-ai-id="el-l4m5n6o7" data-type="html" id="el-l4m5n6o7">
+<h4 class="item-title" data-ai-id="el-p8q9r0s1" data-type="text" id="el-p8q9r0s1" x-text="item.title">
+</h4>
+<div class="item-meta" data-ai-id="el-t2u3v4w5" data-type="html" id="el-t2u3v4w5">
+<span class="item-type" data-ai-id="el-x6y7z8a9" data-type="text" id="el-x6y7z8a9" x-text="getItemTypeLabel(item)">
+</span>
+<template x-if="assetInfo &amp;&amp; (item.duration || item.pages)">
+<span class="item-dot" data-ai-id="el-b0c1d2e3" data-type="text" id="el-b0c1d2e3">
+              •
+             </span>
+</template>
+<span class="item-duration" data-ai-id="el-f4g5h6i7" data-type="text" id="el-f4g5h6i7" x-show="assetInfo &amp;&amp; (item.duration || item.pages)" x-text="getItemDuration(item)">
+</span>
+<a :href="getPreviewLink(item)" class="item-preview-link" data-ai-id="el-f4g6h6i8" data-type="text" id="el-f4g6h6i8" rel="noopener noreferrer" x-show="getPreviewLink(item)" x-text="item.type === 'video' ? 'Watch' : 'Preview'">
+</a>
+</div>
+</div>
+</div>
+</template><div class="curriculum-item" data-ai-id="el-d6e7f8g9" data-type="html" id="el-d6e7f8g9">
+<div class="item-icon" data-ai-id="el-h0i1j2k3" data-type="html" id="el-h0i1j2k3">
+<template x-if="item.type === 'pdf'">
+<svg data-ai-id="el-e5f6g7h8" fill="none" height="24" id="el-e5f6g7h8" stroke="var(--color-accent1)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-ai-id="el-i9j0k1l2" id="el-i9j0k1l2">
+</path>
+<polyline data-ai-id="el-m3n4o5p6" id="el-m3n4o5p6" points="14 2 14 8 20 8">
+</polyline>
+<line data-ai-id="el-q7r8s9t0" id="el-q7r8s9t0" x1="16" x2="8" y1="13" y2="13">
+</line>
+<line data-ai-id="el-u1v2w3x4" id="el-u1v2w3x4" x1="16" x2="8" y1="17" y2="17">
+</line>
+<polyline data-ai-id="el-y5z6a7b8" id="el-y5z6a7b8" points="10 9 9 9 8 9">
+</polyline>
+</svg>
+</template><svg data-ai-id="el-e5f6g7h8" fill="none" height="24" id="el-e5f6g7h8" stroke="var(--color-accent1)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-ai-id="el-i9j0k1l2" id="el-i9j0k1l2">
+</path>
+<polyline data-ai-id="el-m3n4o5p6" id="el-m3n4o5p6" points="14 2 14 8 20 8">
+</polyline>
+<line data-ai-id="el-q7r8s9t0" id="el-q7r8s9t0" x1="16" x2="8" y1="13" y2="13">
+</line>
+<line data-ai-id="el-u1v2w3x4" id="el-u1v2w3x4" x1="16" x2="8" y1="17" y2="17">
+</line>
+<polyline data-ai-id="el-y5z6a7b8" id="el-y5z6a7b8" points="10 9 9 9 8 9">
+</polyline>
+</svg>
+<template x-if="item.type === 'video'">
+<svg data-ai-id="el-c9d0e1f2" fill="none" height="24" id="el-c9d0e1f2" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<polygon data-ai-id="el-g3h4i5j6" id="el-g3h4i5j6" points="5 3 19 12 5 21 5 3">
+</polygon>
+</svg>
+</template>
+<template x-if="item.type === 'assessment' || item.type === 'livetest'">
+<svg data-ai-id="el-k7l8m9n0" fill="none" height="24" id="el-k7l8m9n0" stroke="var(--color-primary)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M9 11l3 3L22 4" data-ai-id="el-o1p2q3r4" id="el-o1p2q3r4">
+</path>
+<path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" data-ai-id="el-s5t6u7v8" id="el-s5t6u7v8">
+</path>
+</svg>
+</template>
+<template x-if="item.type === 'liveclass'">
+<svg data-ai-id="el-w9x0y1z2" fill="none" height="24" id="el-w9x0y1z2" stroke="var(--color-primary-dark)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<rect data-ai-id="el-a3b4c5d6" height="15" id="el-a3b4c5d6" rx="2" ry="2" width="20" x="2" y="7">
+</rect>
+<polyline data-ai-id="el-e7f8g9h0" id="el-e7f8g9h0" points="17 2 12 7 7 2">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'assignment'">
+<svg data-ai-id="el-i1j2k3l4" fill="none" height="24" id="el-i1j2k3l4" stroke="var(--color-accent1-dark)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-ai-id="el-m5n6o7p8" id="el-m5n6o7p8">
+</path>
+<polyline data-ai-id="el-q9r0s1t2" id="el-q9r0s1t2" points="14 2 14 8 20 8">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'code'">
+<svg data-ai-id="el-u3v4w5x6" fill="none" height="24" id="el-u3v4w5x6" stroke="var(--color-accent2-dark)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<polyline data-ai-id="el-y7z8a9b0" id="el-y7z8a9b0" points="16 18 22 12 16 6">
+</polyline>
+<polyline data-ai-id="el-c1d2e3f4" id="el-c1d2e3f4" points="8 6 2 12 8 18">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'scorm'">
+<svg data-ai-id="el-scorm-icon" fill="none" height="24" id="el-scorm-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<rect data-ai-id="el-scorm-rect" height="20" id="el-scorm-rect" rx="2" ry="2" width="16" x="4" y="2">
+</rect>
+<line data-ai-id="el-scorm-line-1" id="el-scorm-line-1" x1="8" x2="16" y1="7" y2="7">
+</line>
+<line data-ai-id="el-scorm-line-2" id="el-scorm-line-2" x1="8" x2="16" y1="12" y2="12">
+</line>
+<line data-ai-id="el-scorm-line-3" id="el-scorm-line-3" x1="8" x2="16" y1="17" y2="17">
+</line>
+</svg>
+</template>
+<template x-if="item.type === 'audio'">
+<svg data-ai-id="el-audio-icon" fill="none" height="24" id="el-audio-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" data-ai-id="el-audio-wave-1" id="el-audio-wave-1">
+</path>
+<polygon data-ai-id="el-audio-triangle" id="el-audio-triangle" points="10 8 10 16 16 12 10 8">
+</polygon>
+</svg>
+</template>
+<template x-if="item.type === 'file'">
+<svg data-ai-id="el-file-icon" fill="none" height="24" id="el-file-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" data-ai-id="el-file-path" id="el-file-path">
+</path>
+<polyline data-ai-id="el-file-fold" id="el-file-fold" points="13 2 13 9 20 9">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'article'">
+<svg data-ai-id="el-article-icon" fill="none" height="24" id="el-article-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" data-ai-id="el-article-rect" id="el-article-rect">
+</path>
+<line data-ai-id="el-article-line-1" id="el-article-line-1" x1="7" x2="17" y1="9" y2="9">
+</line>
+<line data-ai-id="el-article-line-2" id="el-article-line-2" x1="7" x2="17" y1="13" y2="13">
+</line>
+<line data-ai-id="el-article-line-3" id="el-article-line-3" x1="7" x2="13" y1="17" y2="17">
+</line>
+</svg>
+</template>
+<template x-if="item.type === 'link'">
+<svg data-ai-id="el-link-icon" fill="none" height="24" id="el-link-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" data-ai-id="el-link-path-1" id="el-link-path-1">
+</path>
+<path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" data-ai-id="el-link-path-2" id="el-link-path-2">
+</path>
+</svg>
+</template>
+<template x-if="item.type === 'activity'">
+<svg data-ai-id="el-form-icon" fill="none" height="24" id="el-form-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" data-ai-id="el-form-rect" id="el-form-rect">
+</path>
+<rect data-ai-id="el-form-input-1" height="2" id="el-form-input-1" width="10" x="7" y="8">
+</rect>
+<rect data-ai-id="el-form-input-2" height="2" id="el-form-input-2" width="10" x="7" y="12">
+</rect>
+<circle cx="7" cy="18" data-ai-id="el-form-checkbox" id="el-form-checkbox" r="1.5">
+</circle>
+</svg>
+</template>
+</div>
+<div class="item-content" data-ai-id="el-l4m5n6o7" data-type="html" id="el-l4m5n6o7">
+<h4 class="item-title" data-ai-id="el-p8q9r0s1" data-type="text" id="el-p8q9r0s1" x-text="item.title">Subsection 1</h4>
+<div class="item-meta" data-ai-id="el-t2u3v4w5" data-type="html" id="el-t2u3v4w5">
+<span class="item-type" data-ai-id="el-x6y7z8a9" data-type="text" id="el-x6y7z8a9" x-text="getItemTypeLabel(item)">PDF Document</span>
+<template x-if="assetInfo &amp;&amp; (item.duration || item.pages)">
+<span class="item-dot" data-ai-id="el-b0c1d2e3" data-type="text" id="el-b0c1d2e3">
+              •
+             </span>
+</template>
+<span class="item-duration" data-ai-id="el-f4g5h6i7" data-type="text" id="el-f4g5h6i7" x-show="assetInfo &amp;&amp; (item.duration || item.pages)" x-text="getItemDuration(item)" style="display: none;">1 pages</span>
+<a :href="getPreviewLink(item)" class="item-preview-link" data-ai-id="el-f4g6h6i8" data-type="text" id="el-f4g6h6i8" rel="noopener noreferrer" x-show="getPreviewLink(item)" x-text="item.type === 'video' ? 'Watch' : 'Preview'" style="display: none;">Preview</a>
+</div>
+</div>
+</div>
+</div>
+</div><div class="curriculum-section" data-ai-id="el-t0u1v2w3" data-type="html" id="el-t0u1v2w3" x-data="{ expanded: false }">
+<div class="section-header" data-ai-id="el-x4y5z6a7" data-type="html" id="el-x4y5z6a7" x-on:click="expanded = !expanded">
+<div class="section-header-left" data-ai-id="el-b8c9d0e1" data-type="html" id="el-b8c9d0e1">
+<span class="section-number" data-ai-id="el-f2g3h4i5" data-type="text" id="el-f2g3h4i5" x-text="String(index + 1).padStart(2, '0')">02</span>
+<h3 class="section-title" data-ai-id="el-j6k7l8m9" data-type="text" id="el-j6k7l8m9" x-text="section.title">Chapter 2</h3>
+</div>
+<div class="section-header-right" data-ai-id="el-n0o1p2q3" data-type="html" id="el-n0o1p2q3">
+<span class="section-count" data-ai-id="el-r4s5t6u7" data-type="text" id="el-r4s5t6u7" x-text="section.items.length + ' items'">1 items</span>
+<span class="module-duration" data-ai-id="el-f4h5h6j7" data-type="text" id="el-f4h5h6j7" x-show="assetInfo &amp;&amp; getTotalModuleDuration(section.items) !== '0 min 0 sec'" x-text="getTotalModuleDuration(section.items)" style="display: none;">0 sec</span>
+<svg :class="{ 'rotated': expanded }" class="chevron-icon" data-ai-id="el-v8w9x0y1" data-type="html" fill="none" height="24" id="el-v8w9x0y1" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="24">
+<polyline data-ai-id="el-a1b2c3d4" id="el-a1b2c3d4" points="6 9 12 15 18 9">
+</polyline>
+</svg>
+</div>
+</div>
+<div class="section-content" data-ai-id="el-z2a3b4c5" data-type="html" id="el-z2a3b4c5" x-collapse="" x-show="expanded" style="display: none;">
+<template :key="item.id" x-for="item in section.items">
+<div class="curriculum-item" data-ai-id="el-d6e7f8g9" data-type="html" id="el-d6e7f8g9">
+<div class="item-icon" data-ai-id="el-h0i1j2k3" data-type="html" id="el-h0i1j2k3">
+<template x-if="item.type === 'pdf'">
+<svg data-ai-id="el-e5f6g7h8" fill="none" height="24" id="el-e5f6g7h8" stroke="var(--color-accent1)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-ai-id="el-i9j0k1l2" id="el-i9j0k1l2">
+</path>
+<polyline data-ai-id="el-m3n4o5p6" id="el-m3n4o5p6" points="14 2 14 8 20 8">
+</polyline>
+<line data-ai-id="el-q7r8s9t0" id="el-q7r8s9t0" x1="16" x2="8" y1="13" y2="13">
+</line>
+<line data-ai-id="el-u1v2w3x4" id="el-u1v2w3x4" x1="16" x2="8" y1="17" y2="17">
+</line>
+<polyline data-ai-id="el-y5z6a7b8" id="el-y5z6a7b8" points="10 9 9 9 8 9">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'video'">
+<svg data-ai-id="el-c9d0e1f2" fill="none" height="24" id="el-c9d0e1f2" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<polygon data-ai-id="el-g3h4i5j6" id="el-g3h4i5j6" points="5 3 19 12 5 21 5 3">
+</polygon>
+</svg>
+</template>
+<template x-if="item.type === 'assessment' || item.type === 'livetest'">
+<svg data-ai-id="el-k7l8m9n0" fill="none" height="24" id="el-k7l8m9n0" stroke="var(--color-primary)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M9 11l3 3L22 4" data-ai-id="el-o1p2q3r4" id="el-o1p2q3r4">
+</path>
+<path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" data-ai-id="el-s5t6u7v8" id="el-s5t6u7v8">
+</path>
+</svg>
+</template>
+<template x-if="item.type === 'liveclass'">
+<svg data-ai-id="el-w9x0y1z2" fill="none" height="24" id="el-w9x0y1z2" stroke="var(--color-primary-dark)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<rect data-ai-id="el-a3b4c5d6" height="15" id="el-a3b4c5d6" rx="2" ry="2" width="20" x="2" y="7">
+</rect>
+<polyline data-ai-id="el-e7f8g9h0" id="el-e7f8g9h0" points="17 2 12 7 7 2">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'assignment'">
+<svg data-ai-id="el-i1j2k3l4" fill="none" height="24" id="el-i1j2k3l4" stroke="var(--color-accent1-dark)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-ai-id="el-m5n6o7p8" id="el-m5n6o7p8">
+</path>
+<polyline data-ai-id="el-q9r0s1t2" id="el-q9r0s1t2" points="14 2 14 8 20 8">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'code'">
+<svg data-ai-id="el-u3v4w5x6" fill="none" height="24" id="el-u3v4w5x6" stroke="var(--color-accent2-dark)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<polyline data-ai-id="el-y7z8a9b0" id="el-y7z8a9b0" points="16 18 22 12 16 6">
+</polyline>
+<polyline data-ai-id="el-c1d2e3f4" id="el-c1d2e3f4" points="8 6 2 12 8 18">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'scorm'">
+<svg data-ai-id="el-scorm-icon" fill="none" height="24" id="el-scorm-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<rect data-ai-id="el-scorm-rect" height="20" id="el-scorm-rect" rx="2" ry="2" width="16" x="4" y="2">
+</rect>
+<line data-ai-id="el-scorm-line-1" id="el-scorm-line-1" x1="8" x2="16" y1="7" y2="7">
+</line>
+<line data-ai-id="el-scorm-line-2" id="el-scorm-line-2" x1="8" x2="16" y1="12" y2="12">
+</line>
+<line data-ai-id="el-scorm-line-3" id="el-scorm-line-3" x1="8" x2="16" y1="17" y2="17">
+</line>
+</svg>
+</template>
+<template x-if="item.type === 'audio'">
+<svg data-ai-id="el-audio-icon" fill="none" height="24" id="el-audio-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" data-ai-id="el-audio-wave-1" id="el-audio-wave-1">
+</path>
+<polygon data-ai-id="el-audio-triangle" id="el-audio-triangle" points="10 8 10 16 16 12 10 8">
+</polygon>
+</svg>
+</template>
+<template x-if="item.type === 'file'">
+<svg data-ai-id="el-file-icon" fill="none" height="24" id="el-file-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" data-ai-id="el-file-path" id="el-file-path">
+</path>
+<polyline data-ai-id="el-file-fold" id="el-file-fold" points="13 2 13 9 20 9">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'article'">
+<svg data-ai-id="el-article-icon" fill="none" height="24" id="el-article-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" data-ai-id="el-article-rect" id="el-article-rect">
+</path>
+<line data-ai-id="el-article-line-1" id="el-article-line-1" x1="7" x2="17" y1="9" y2="9">
+</line>
+<line data-ai-id="el-article-line-2" id="el-article-line-2" x1="7" x2="17" y1="13" y2="13">
+</line>
+<line data-ai-id="el-article-line-3" id="el-article-line-3" x1="7" x2="13" y1="17" y2="17">
+</line>
+</svg>
+</template>
+<template x-if="item.type === 'link'">
+<svg data-ai-id="el-link-icon" fill="none" height="24" id="el-link-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" data-ai-id="el-link-path-1" id="el-link-path-1">
+</path>
+<path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" data-ai-id="el-link-path-2" id="el-link-path-2">
+</path>
+</svg>
+</template>
+<template x-if="item.type === 'activity'">
+<svg data-ai-id="el-form-icon" fill="none" height="24" id="el-form-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" data-ai-id="el-form-rect" id="el-form-rect">
+</path>
+<rect data-ai-id="el-form-input-1" height="2" id="el-form-input-1" width="10" x="7" y="8">
+</rect>
+<rect data-ai-id="el-form-input-2" height="2" id="el-form-input-2" width="10" x="7" y="12">
+</rect>
+<circle cx="7" cy="18" data-ai-id="el-form-checkbox" id="el-form-checkbox" r="1.5">
+</circle>
+</svg>
+</template>
+</div>
+<div class="item-content" data-ai-id="el-l4m5n6o7" data-type="html" id="el-l4m5n6o7">
+<h4 class="item-title" data-ai-id="el-p8q9r0s1" data-type="text" id="el-p8q9r0s1" x-text="item.title">
+</h4>
+<div class="item-meta" data-ai-id="el-t2u3v4w5" data-type="html" id="el-t2u3v4w5">
+<span class="item-type" data-ai-id="el-x6y7z8a9" data-type="text" id="el-x6y7z8a9" x-text="getItemTypeLabel(item)">
+</span>
+<template x-if="assetInfo &amp;&amp; (item.duration || item.pages)">
+<span class="item-dot" data-ai-id="el-b0c1d2e3" data-type="text" id="el-b0c1d2e3">
+              •
+             </span>
+</template>
+<span class="item-duration" data-ai-id="el-f4g5h6i7" data-type="text" id="el-f4g5h6i7" x-show="assetInfo &amp;&amp; (item.duration || item.pages)" x-text="getItemDuration(item)">
+</span>
+<a :href="getPreviewLink(item)" class="item-preview-link" data-ai-id="el-f4g6h6i8" data-type="text" id="el-f4g6h6i8" rel="noopener noreferrer" x-show="getPreviewLink(item)" x-text="item.type === 'video' ? 'Watch' : 'Preview'">
+</a>
+</div>
+</div>
+</div>
+</template><div class="curriculum-item" data-ai-id="el-d6e7f8g9" data-type="html" id="el-d6e7f8g9">
+<div class="item-icon" data-ai-id="el-h0i1j2k3" data-type="html" id="el-h0i1j2k3">
+<template x-if="item.type === 'pdf'">
+<svg data-ai-id="el-e5f6g7h8" fill="none" height="24" id="el-e5f6g7h8" stroke="var(--color-accent1)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-ai-id="el-i9j0k1l2" id="el-i9j0k1l2">
+</path>
+<polyline data-ai-id="el-m3n4o5p6" id="el-m3n4o5p6" points="14 2 14 8 20 8">
+</polyline>
+<line data-ai-id="el-q7r8s9t0" id="el-q7r8s9t0" x1="16" x2="8" y1="13" y2="13">
+</line>
+<line data-ai-id="el-u1v2w3x4" id="el-u1v2w3x4" x1="16" x2="8" y1="17" y2="17">
+</line>
+<polyline data-ai-id="el-y5z6a7b8" id="el-y5z6a7b8" points="10 9 9 9 8 9">
+</polyline>
+</svg>
+</template><svg data-ai-id="el-e5f6g7h8" fill="none" height="24" id="el-e5f6g7h8" stroke="var(--color-accent1)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-ai-id="el-i9j0k1l2" id="el-i9j0k1l2">
+</path>
+<polyline data-ai-id="el-m3n4o5p6" id="el-m3n4o5p6" points="14 2 14 8 20 8">
+</polyline>
+<line data-ai-id="el-q7r8s9t0" id="el-q7r8s9t0" x1="16" x2="8" y1="13" y2="13">
+</line>
+<line data-ai-id="el-u1v2w3x4" id="el-u1v2w3x4" x1="16" x2="8" y1="17" y2="17">
+</line>
+<polyline data-ai-id="el-y5z6a7b8" id="el-y5z6a7b8" points="10 9 9 9 8 9">
+</polyline>
+</svg>
+<template x-if="item.type === 'video'">
+<svg data-ai-id="el-c9d0e1f2" fill="none" height="24" id="el-c9d0e1f2" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<polygon data-ai-id="el-g3h4i5j6" id="el-g3h4i5j6" points="5 3 19 12 5 21 5 3">
+</polygon>
+</svg>
+</template>
+<template x-if="item.type === 'assessment' || item.type === 'livetest'">
+<svg data-ai-id="el-k7l8m9n0" fill="none" height="24" id="el-k7l8m9n0" stroke="var(--color-primary)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M9 11l3 3L22 4" data-ai-id="el-o1p2q3r4" id="el-o1p2q3r4">
+</path>
+<path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" data-ai-id="el-s5t6u7v8" id="el-s5t6u7v8">
+</path>
+</svg>
+</template>
+<template x-if="item.type === 'liveclass'">
+<svg data-ai-id="el-w9x0y1z2" fill="none" height="24" id="el-w9x0y1z2" stroke="var(--color-primary-dark)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<rect data-ai-id="el-a3b4c5d6" height="15" id="el-a3b4c5d6" rx="2" ry="2" width="20" x="2" y="7">
+</rect>
+<polyline data-ai-id="el-e7f8g9h0" id="el-e7f8g9h0" points="17 2 12 7 7 2">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'assignment'">
+<svg data-ai-id="el-i1j2k3l4" fill="none" height="24" id="el-i1j2k3l4" stroke="var(--color-accent1-dark)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" data-ai-id="el-m5n6o7p8" id="el-m5n6o7p8">
+</path>
+<polyline data-ai-id="el-q9r0s1t2" id="el-q9r0s1t2" points="14 2 14 8 20 8">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'code'">
+<svg data-ai-id="el-u3v4w5x6" fill="none" height="24" id="el-u3v4w5x6" stroke="var(--color-accent2-dark)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<polyline data-ai-id="el-y7z8a9b0" id="el-y7z8a9b0" points="16 18 22 12 16 6">
+</polyline>
+<polyline data-ai-id="el-c1d2e3f4" id="el-c1d2e3f4" points="8 6 2 12 8 18">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'scorm'">
+<svg data-ai-id="el-scorm-icon" fill="none" height="24" id="el-scorm-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<rect data-ai-id="el-scorm-rect" height="20" id="el-scorm-rect" rx="2" ry="2" width="16" x="4" y="2">
+</rect>
+<line data-ai-id="el-scorm-line-1" id="el-scorm-line-1" x1="8" x2="16" y1="7" y2="7">
+</line>
+<line data-ai-id="el-scorm-line-2" id="el-scorm-line-2" x1="8" x2="16" y1="12" y2="12">
+</line>
+<line data-ai-id="el-scorm-line-3" id="el-scorm-line-3" x1="8" x2="16" y1="17" y2="17">
+</line>
+</svg>
+</template>
+<template x-if="item.type === 'audio'">
+<svg data-ai-id="el-audio-icon" fill="none" height="24" id="el-audio-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" data-ai-id="el-audio-wave-1" id="el-audio-wave-1">
+</path>
+<polygon data-ai-id="el-audio-triangle" id="el-audio-triangle" points="10 8 10 16 16 12 10 8">
+</polygon>
+</svg>
+</template>
+<template x-if="item.type === 'file'">
+<svg data-ai-id="el-file-icon" fill="none" height="24" id="el-file-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" data-ai-id="el-file-path" id="el-file-path">
+</path>
+<polyline data-ai-id="el-file-fold" id="el-file-fold" points="13 2 13 9 20 9">
+</polyline>
+</svg>
+</template>
+<template x-if="item.type === 'article'">
+<svg data-ai-id="el-article-icon" fill="none" height="24" id="el-article-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" data-ai-id="el-article-rect" id="el-article-rect">
+</path>
+<line data-ai-id="el-article-line-1" id="el-article-line-1" x1="7" x2="17" y1="9" y2="9">
+</line>
+<line data-ai-id="el-article-line-2" id="el-article-line-2" x1="7" x2="17" y1="13" y2="13">
+</line>
+<line data-ai-id="el-article-line-3" id="el-article-line-3" x1="7" x2="13" y1="17" y2="17">
+</line>
+</svg>
+</template>
+<template x-if="item.type === 'link'">
+<svg data-ai-id="el-link-icon" fill="none" height="24" id="el-link-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" data-ai-id="el-link-path-1" id="el-link-path-1">
+</path>
+<path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" data-ai-id="el-link-path-2" id="el-link-path-2">
+</path>
+</svg>
+</template>
+<template x-if="item.type === 'activity'">
+<svg data-ai-id="el-form-icon" fill="none" height="24" id="el-form-icon" stroke="var(--color-accent2)" stroke-width="2" viewBox="0 0 24 24" width="24">
+<path d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" data-ai-id="el-form-rect" id="el-form-rect">
+</path>
+<rect data-ai-id="el-form-input-1" height="2" id="el-form-input-1" width="10" x="7" y="8">
+</rect>
+<rect data-ai-id="el-form-input-2" height="2" id="el-form-input-2" width="10" x="7" y="12">
+</rect>
+<circle cx="7" cy="18" data-ai-id="el-form-checkbox" id="el-form-checkbox" r="1.5">
+</circle>
+</svg>
+</template>
+</div>
+<div class="item-content" data-ai-id="el-l4m5n6o7" data-type="html" id="el-l4m5n6o7">
+<h4 class="item-title" data-ai-id="el-p8q9r0s1" data-type="text" id="el-p8q9r0s1" x-text="item.title">Subsection 2</h4>
+<div class="item-meta" data-ai-id="el-t2u3v4w5" data-type="html" id="el-t2u3v4w5">
+<span class="item-type" data-ai-id="el-x6y7z8a9" data-type="text" id="el-x6y7z8a9" x-text="getItemTypeLabel(item)">PDF Document</span>
+<template x-if="assetInfo &amp;&amp; (item.duration || item.pages)">
+<span class="item-dot" data-ai-id="el-b0c1d2e3" data-type="text" id="el-b0c1d2e3">
+              •
+             </span>
+</template>
+<span class="item-duration" data-ai-id="el-f4g5h6i7" data-type="text" id="el-f4g5h6i7" x-show="assetInfo &amp;&amp; (item.duration || item.pages)" x-text="getItemDuration(item)" style="display: none;">1 pages</span>
+<a :href="getPreviewLink(item)" class="item-preview-link" data-ai-id="el-f4g6h6i8" data-type="text" id="el-f4g6h6i8" rel="noopener noreferrer" x-show="getPreviewLink(item)" x-text="item.type === 'video' ? 'Watch' : 'Preview'" style="display: none;">Preview</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<style data-ai-id="stl-d4e5f6a7" data-type="style" id="stl-d4e5f6a7">
+   #sec-d4e5f6a7 {
+			padding: 70px 0;
+			background: var(--color-neutral-lightest);
+		}
+
+		#sec-d4e5f6a7 .curriculum-heading {
+			text-align: center;
+			margin-bottom: 50px;
+			font-size: 34px;
+			font-weight: 700;
+			color: var(--heading-color);
+			font-family: var(--font-heading);
+		}
+
+		#sec-d4e5f6a7 .curriculum-list {
+			max-width: 900px;
+			margin: 0 auto;
+		}
+
+		#sec-d4e5f6a7 .curriculum-section {
+			background: white;
+			border-radius: var(--border-radius);
+			margin-bottom: 20px;
+			overflow: hidden;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+			transition: var(--transition);
+		}
+
+		#sec-d4e5f6a7 .curriculum-section:hover {
+			box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+		}
+
+		#sec-d4e5f6a7 .section-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 24px 28px;
+			cursor: pointer;
+			user-select: none;
+			transition: background 0.2s ease;
+		}
+
+		#sec-d4e5f6a7 .section-header:hover {
+			background: var(--card-hover-bg);
+		}
+
+		#sec-d4e5f6a7 .section-header-left {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			flex: 1;
+		}
+
+		#sec-d4e5f6a7 .section-number {
+			font-size: 18px;
+			font-weight: 700;
+			color: var(--color-primary);
+			font-family: var(--font-heading);
+			min-width: 32px;
+		}
+
+		#sec-d4e5f6a7 .section-title {
+			font-size: 18px;
+			font-weight: 600;
+			color: var(--heading-color);
+			margin: 0;
+			line-height: 1.4;
+			word-break: break-word;
+		}
+
+		#sec-d4e5f6a7 .section-header-right {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+		}
+
+		#sec-d4e5f6a7 .section-count {
+			font-size: 14px;
+			color: var(--subhead-color);
+			font-family: var(--font-body);
+		}
+
+		#sec-d4e5f6a7 .chevron-icon {
+			color: var(--color-neutral-dark);
+			transition: transform 0.3s ease;
+		}
+
+		#sec-d4e5f6a7 .chevron-icon.rotated {
+			transform: rotate(180deg);
+		}
+
+		#sec-d4e5f6a7 .section-content {
+			border-top: 1px solid var(--card-border);
+			padding: 12px 0;
+		}
+
+		#sec-d4e5f6a7 .curriculum-item {
+			display: flex;
+			gap: 16px;
+			padding: 16px 28px;
+			transition: background 0.2s ease;
+		}
+
+		#sec-d4e5f6a7 .curriculum-item:hover {
+			background: var(--card-hover-bg);
+		}
+
+		#sec-d4e5f6a7 .item-icon {
+			flex-shrink: 0;
+			width: 24px;
+			height: 24px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#sec-d4e5f6a7 .item-content {
+			flex: 1;
+			min-width: 0;
+		}
+
+		#sec-d4e5f6a7 .item-title {
+			font-size: 16px;
+			font-weight: 500;
+			color: var(--heading-color);
+			margin: 0 0 6px 0;
+			line-height: 1.4;
+			word-break: break-word;
+		}
+
+		#sec-d4e5f6a7 .item-meta {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-size: 14px;
+			color: var(--subhead-color);
+			font-family: var(--font-body);
+		}
+
+		#sec-d4e5f6a7 .item-type {
+			text-transform: capitalize;
+		}
+
+		#sec-d4e5f6a7 .item-dot {
+			color: var(--muted-text-color);
+		}
+		
+		#sec-d4e5f6a7 .item-preview-link {
+			margin-left: auto;
+		}
+
+		@media (max-width: 768px) {
+			#sec-d4e5f6a7 {
+				padding: 50px 0;
+			}
+
+			#sec-d4e5f6a7 .curriculum-heading {
+				font-size: 28px;
+				margin-bottom: 30px;
+			}
+
+			#sec-d4e5f6a7 .section-header {
+				padding: 18px 20px;
+			}
+
+			#sec-d4e5f6a7 .section-header-left {
+				gap: 14px;
+			}
+
+			#sec-d4e5f6a7 .section-number {
+				font-size: 16px;
+				min-width: 28px;
+			}
+
+			#sec-d4e5f6a7 .section-title {
+				font-size: 16px;
+			}
+
+			#sec-d4e5f6a7 .section-count {
+				display: none;
+			}
+
+			#sec-d4e5f6a7 .curriculum-item {
+				padding: 14px 20px;
+			}
+
+			#sec-d4e5f6a7 .item-title {
+				font-size: 15px;
+			}
+
+			#sec-d4e5f6a7 .item-meta {
+				font-size: 13px;
+			}
+		}
+  </style>
+<section data-ai-id="sec-benefits2" data-section-type="benefits" data-template-name="BENEFITS13" id="sec-benefits2">
+<div class="benefits2-container" data-ai-id="el-benefits2a" data-type="html" id="el-benefits2a">
+<!-- Section Header -->
+<div class="benefits2-header" data-ai-id="el-benefits2b" data-type="html" id="el-benefits2b">
+<span class="benefits2-eyebrow" data-ai-id="el-benefits2c" data-type="text" id="el-benefits2c">
+      Why Choose Our Course
+     </span>
+<h2 class="benefits2-heading" data-ai-id="el-benefits2d" data-type="text" id="el-benefits2d">
+      Transform Your Mental Health Knowledge with Evidence-Based Learning
+     </h2>
+<p class="benefits2-description" data-ai-id="el-benefits2e" data-type="text" id="el-benefits2e">
+      Our structured course combines professional expertise with accessible learning, designed to empower you with practical mental health skills and compassionate understanding grounded in clinical evidence.
+     </p>
+</div>
+<!-- Cards Grid -->
+<div class="benefits2-grid" data-ai-id="el-benefits2f" data-type="html" id="el-benefits2f">
+<!-- Card 1 -->
+<div class="benefits2-card" data-ai-id="el-benefits2g" data-type="html" id="el-benefits2g">
+<div class="benefits2-card-image-wrapper" data-ai-id="el-benefits2h" data-type="html" id="el-benefits2h">
+<img alt="Learn from Licensed Specialists" class="benefits2-card-image" data-ai-id="el-benefits2i" data-type="image" id="el-benefits2i" src="https://images.unsplash.com/photo-1683056255281-e52a141924f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w1MjAyNzJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE4Mjk0OTB8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="aspect-ratio: 4/3;">
+<div class="benefits2-card-overlay" data-ai-id="el-benefits2j" data-type="html" id="el-benefits2j">
+</div>
+<div class="benefits2-card-number" data-ai-id="el-benefits2k" data-type="html" id="el-benefits2k">
+        01
+       </div>
+</div>
+<div class="benefits2-card-content" data-ai-id="el-benefits2l" data-type="html" id="el-benefits2l">
+<span class="benefits2-card-label" data-ai-id="el-benefits2m" data-type="text" id="el-benefits2m">
+        Professional Expertise
+       </span>
+<h3 class="benefits2-card-heading" data-ai-id="el-benefits2n" data-type="text" id="el-benefits2n">
+        Learn from Licensed Specialists
+       </h3>
+<p class="benefits2-card-description" data-ai-id="el-benefits2o" data-type="text" id="el-benefits2o">
+        Access instruction from verified mental health professionals including psychiatrists and clinical psychologists who bring real-world clinical experience to every lesson.
+       </p>
+<button class="benefits2-card-cta" data-ai-id="el-benefits2p" data-cta-type="know_more" data-type="html" id="el-benefits2p">
+<span data-ai-id="el-benefits2q" data-type="text" id="el-benefits2q">
+         Learn More
+        </span>
+<span class="benefits2-arrow" data-ai-id="el-benefits2r" data-type="html" id="el-benefits2r">
+         →
+        </span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="benefits2-card" data-ai-id="el-benefits2s" data-type="html" id="el-benefits2s">
+<div class="benefits2-card-image-wrapper" data-ai-id="el-benefits2t" data-type="html" id="el-benefits2t">
+<img alt="Master Proven Therapeutic Approaches" class="benefits2-card-image" data-ai-id="el-benefits2u" data-type="image" id="el-benefits2u" src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w1MjAyNzJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE4Mjk0OTF8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="aspect-ratio: 4/3;">
+<div class="benefits2-card-overlay" data-ai-id="el-benefits2v" data-type="html" id="el-benefits2v">
+</div>
+<div class="benefits2-card-number" data-ai-id="el-benefits2w" data-type="html" id="el-benefits2w">
+        02
+       </div>
+</div>
+<div class="benefits2-card-content" data-ai-id="el-benefits2x" data-type="html" id="el-benefits2x">
+<span class="benefits2-card-label" data-ai-id="el-benefits2y" data-type="text" id="el-benefits2y">
+        Evidence-Based Methods
+       </span>
+<h3 class="benefits2-card-heading" data-ai-id="el-benefits2z" data-type="text" id="el-benefits2z">
+        Master Proven Therapeutic Approaches
+       </h3>
+<p class="benefits2-card-description" data-ai-id="el-benefits2aa" data-type="text" id="el-benefits2aa">
+        Study scientifically validated techniques including Cognitive Behavioral Therapy and mindfulness practices that deliver measurable outcomes in mental health support.
+       </p>
+<button class="benefits2-card-cta" data-ai-id="el-benefits2ab" data-cta-type="know_more" data-type="html" id="el-benefits2ab">
+<span data-ai-id="el-benefits2ac" data-type="text" id="el-benefits2ac">
+         Learn More
+        </span>
+<span class="benefits2-arrow" data-ai-id="el-benefits2ad" data-type="html" id="el-benefits2ad">
+         →
+        </span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="benefits2-card" data-ai-id="el-benefits2ae" data-type="html" id="el-benefits2ae">
+<div class="benefits2-card-image-wrapper" data-ai-id="el-benefits2af" data-type="html" id="el-benefits2af">
+<img alt="Navigate Your Learning Journey with Confidence" class="benefits2-card-image" data-ai-id="el-benefits2ag" data-type="image" id="el-benefits2ag" src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w1MjAyNzJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE4Mjk0OTJ8&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="aspect-ratio: 4/3;">
+<div class="benefits2-card-overlay" data-ai-id="el-benefits2ah" data-type="html" id="el-benefits2ah">
+</div>
+<div class="benefits2-card-number" data-ai-id="el-benefits2ai" data-type="html" id="el-benefits2ai">
+        03
+       </div>
+</div>
+<div class="benefits2-card-content" data-ai-id="el-benefits2aj" data-type="html" id="el-benefits2aj">
+<span class="benefits2-card-label" data-ai-id="el-benefits2ak" data-type="text" id="el-benefits2ak">
+        Structured Support
+       </span>
+<h3 class="benefits2-card-heading" data-ai-id="el-benefits2al" data-type="text" id="el-benefits2al">
+        Navigate Your Learning Journey with Confidence
+       </h3>
+<p class="benefits2-card-description" data-ai-id="el-benefits2am" data-type="text" id="el-benefits2am">
+        Benefit from clear, logical course progression that reduces overwhelm while building practical skills you can apply immediately in your personal or professional practice.
+       </p>
+<button class="benefits2-card-cta" data-ai-id="el-benefits2an" data-cta-type="know_more" data-type="html" id="el-benefits2an">
+<span data-ai-id="el-benefits2ao" data-type="text" id="el-benefits2ao">
+         Learn More
+        </span>
+<span class="benefits2-arrow" data-ai-id="el-benefits2ap" data-type="html" id="el-benefits2ap">
+         →
+        </span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<style data-ai-id="stl-benefits2" id="stl-benefits2">
+   /* Section Container */
+#sec-benefits2 {
+  width: 100%;
+  padding: 120px 48px;
+  background: var(--section-bg);
+  position: relative;
+}
+
+/* Container */
+#el-benefits2a {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+#el-benefits2b {
+  max-width: 800px;
+  margin: 0 auto 80px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#el-benefits2c {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+#el-benefits2d {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--heading-color);
+  margin: 0;
+}
+
+#el-benefits2e {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--body-color);
+  margin: 0;
+}
+
+/* Grid */
+#el-benefits2f {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* Card */
+.benefits2-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.benefits2-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Wrapper */
+.benefits2-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: var(--color-neutral-lighter);
+}
+
+.benefits2-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefits2-card:hover .benefits2-card-image {
+  transform: scale(1.1);
+}
+
+/* Overlay */
+.benefits2-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.benefits2-card:hover .benefits2-card-overlay {
+  opacity: 1;
+}
+
+/* Number Badge */
+.benefits2-card-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+}
+
+.benefits2-card:hover .benefits2-card-number {
+  transform: scale(1.1);
+  background: var(--color-primary-dark);
+}
+
+/* Card Content */
+.benefits2-card-content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.benefits2-card-label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent1);
+}
+
+.benefits2-card-heading {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--heading-color);
+  margin: 0;
+}
+
+.benefits2-card-description {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--body-color);
+  margin: 0;
+  flex: 1;
+}
+
+/* CTA Button */
+.benefits2-card-cta {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.benefits2-card-cta:hover {
+  color: var(--color-primary-dark);
+  gap: 12px;
+}
+
+.benefits2-card-cta:focus {
+  outline: 2px solid var(--input-focus);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.benefits2-arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.benefits2-card-cta:hover .benefits2-arrow {
+  transform: translateX(4px);
+}
+
+/* Tablet Styles */
+@media (max-width: 1023px) {
+  #sec-benefits2 {
+    padding: 80px 32px;
+  }
+
+  #el-benefits2b {
+    margin-bottom: 60px;
+  }
+
+  #el-benefits2d {
+    font-size: 40px;
+  }
+
+  #el-benefits2e {
+    font-size: 16px;
+  }
+
+  #el-benefits2f {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .benefits2-card-image-wrapper {
+    height: 240px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  #sec-benefits2 {
+    padding: 60px 24px;
+  }
+
+  #el-benefits2b {
+    margin-bottom: 48px;
+    gap: 12px;
+  }
+
+  #el-benefits2c {
+    font-size: 12px;
+  }
+
+  #el-benefits2d {
+    font-size: 32px;
+  }
+
+  #el-benefits2e {
+    font-size: 15px;
+  }
+
+  #el-benefits2f {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .benefits2-card-image-wrapper {
+    height: 220px;
+  }
+
+  .benefits2-card-content {
+    padding: 24px;
+    gap: 12px;
+  }
+
+  .benefits2-card-heading {
+    font-size: 20px;
+  }
+
+  .benefits2-card-description {
+    font-size: 14px;
+  }
+
+  .benefits2-card-number {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    top: 16px;
+    right: 16px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 479px) {
+  #el-benefits2d {
+    font-size: 28px;
+  }
+
+  .benefits2-card-image-wrapper {
+    height: 200px;
+  }
+
+  .benefits2-card-content {
+    padding: 20px;
+  }
+}
+  </style>
+<script data-ai-id="scr-benefits2" id="scr-benefits2">
+   (function() {
+  const section = document.getElementById('sec-benefits2');
+  if (!section) return;
+
+  // Keyboard accessibility
+  const buttons = section.querySelectorAll('.benefits2-card-cta');
+  buttons.forEach(button => {
+    button.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        // Functional handling in global scripts
+      }
+    });
+  });
+
+  // Scroll fade-in animation
+  const cards = section.querySelectorAll('.benefits2-card');
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.style.opacity = '0';
+          entry.target.style.transform = 'translateY(30px)';
+          entry.target.style.transition = 'all 0.6s ease';
+          
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, 100);
+        }, index * 150);
+        
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  cards.forEach(card => observer.observe(card));
+})();
+  </script>
+<section data-ai-id="sec-f8d9e2a1" data-section-type="course_feedback" data-template-name="COURSE_FEEDBACK2" data-type="html" id="sec-f8d9e2a1">
+<div class="feedback-container" data-ai-id="el-a1b2c3d4" data-type="html" id="el-a1b2c3d4" x-data="courseFeedbackData()">
+<!-- Overall Rating Card -->
+<div class="rating-summary-card" data-ai-id="el-b2c3d4e5" data-type="html" id="el-b2c3d4e5">
+<h3 class="rating-title" data-ai-id="el-c3d4e5f6" data-type="text" id="el-c3d4e5f6">
+      Customer ratings
+     </h3>
+<div class="rating-content" data-ai-id="el-d4e5f6a7" data-type="html" id="el-d4e5f6a7">
+<svg class="star-icon" data-ai-id="el-e5f6a7b8" data-type="image" fill="var(--color-accent2)" id="el-e5f6a7b8" viewBox="0 0 24 24">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+</path>
+</svg>
+<div class="rating-numbers" data-ai-id="el-f6a7b8c9" data-type="html" id="el-f6a7b8c9">
+<span class="avg-rating" data-ai-id="el-a7b8c9d1" data-type="text" id="el-a7b8c9d1" x-text="avgrating.avgRating.toFixed(1)">4.5</span>
+<span class="max-rating" data-ai-id="el-b8c9d1e2" data-type="text" id="el-b8c9d1e2">
+        /5
+       </span>
+</div>
+</div>
+<div class="total-reviews" data-ai-id="el-c9d1e2f3" data-type="text" id="el-c9d1e2f3">
+<span data-ai-id="el-a3f9c2d7" id="el-a3f9c2d7" x-text="avgrating.total">4</span>
+      reviews
+     </div>
+</div>
+<!-- User's Own Review (if exists) -->
+<template data-ai-id="el-f1c3b8e9" id="el-f1c3b8e9" x-if="userReview">
+<div class="review-card user-review" data-ai-id="el-d1e2f3a4" data-type="html" id="el-d1e2f3a4">
+<div class="review-header" data-ai-id="el-e2f3a4b5" data-type="html" id="el-e2f3a4b5">
+<span class="review-text" data-ai-id="el-f3a4b5c6" data-type="text" id="el-f3a4b5c6" x-text="userReview.reviewtext">
+</span>
+</div>
+<div class="review-footer" data-ai-id="el-a4b5c6d7" data-type="html" id="el-a4b5c6d7">
+<div class="reviewer-info" data-ai-id="el-b5c6d7e8" data-type="html" id="el-b5c6d7e8">
+<span class="reviewer-name" data-ai-id="el-c6d7e8f9" data-type="text" id="el-c6d7e8f9" x-text="userReview.userName">
+</span>
+</div>
+<div class="star-rating" data-ai-id="el-d7e8f9a1" data-type="html" id="el-d7e8f9a1">
+<template data-ai-id="el-1a9c7e4b" id="el-1a9c7e4b" x-for="i in 5">
+<svg class="star" data-ai-id="el-3f9d8a2c" id="el-3f9d8a2c" viewBox="0 0 24 24" x-bind:class="{'filled': i &lt;= userReview.rating}">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+</path>
+</svg>
+</template>
+</div>
+<button class="delete-btn" data-ai-id="el-e8f9a1b2" data-cta-type="delete_review" data-type="attrs" id="el-e8f9a1b2" x-on:click="deleteReview()">
+<svg data-ai-id="el-5b7e1c9d" fill="currentColor" id="el-5b7e1c9d" viewBox="0 0 24 24">
+<path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z">
+</path>
+</svg>
+</button>
+</div>
+</div>
+</template>
+<!-- Review Submission Form (if no user review) -->
+<template data-ai-id="el-6d9a2c7f" id="el-6d9a2c7f" x-if="!userReview &amp;&amp; isLoggedIn">
+<div class="review-card submit-form-card" data-ai-id="el-submit-form" data-type="html" id="el-submit-form">
+<div class="form-header" data-ai-id="el-2c8f9e7a" id="el-2c8f9e7a">
+<h4 class="form-title" data-ai-id="el-7e1a9cfd" id="el-7e1a9cfd">
+        Share your feedback
+       </h4>
+</div>
+<div class="form-body" data-ai-id="el-4d9c2a8e" id="el-4d9c2a8e">
+<div class="form-group" data-ai-id="el-f9a1c7e2" id="el-f9a1c7e2">
+<labe class="form-label" data-ai-id="el-0a9e3c7d" id="el-0a9e3c7d">
+         Your Rating
+        </labe>
+<div class="star-rating-input" data-ai-id="el-9c1d7e4a" id="el-9c1d7e4a">
+<template data-ai-id="el-7b2e9cda" id="el-7b2e9cda" x-for="i in 5">
+<svg class="star-input" data-ai-id="el-8d3f2c9a" id="el-8d3f2c9a" viewBox="0 0 24 24" x-bind:class="{'filled': i &lt;= selectedRating, 'hover': i &lt;= hoverRating}" x-on:click="selectedRating = i" x-on:mouseenter="hoverRating = i" x-on:mouseleave="hoverRating = 0">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+</path>
+</svg>
+</template>
+</div>
+</div>
+<div class="form-group" data-ai-id="el-4e7a9c2d" id="el-4e7a9c2d">
+<label class="form-label" data-ai-id="el-c2a9e7d4" id="el-c2a9e7d4">
+         Your Review
+        </label>
+<textarea class="form-textarea" data-ai-id="el-7d4c9e1a" id="el-7d4c9e1a" placeholder="Tell us about your experience with this course..." rows="4" x-model="reviewText"></textarea>
+</div>
+<button class="submit-btn" data-ai-id="el-e1c7a9d4" data-cta-type="submit_review" id="el-e1c7a9d4" x-bind:disabled="submitting || selectedRating === 0 || reviewText.trim() === ''" x-on:click="submitReview()">
+<span data-ai-id="el-9e1b7c4a" id="el-9e1b7c4a" x-text="submitting ? 'Submitting...' : 'Submit Review'">
+</span>
+</button>
+</div>
+</div>
+</template>
+<!-- Other Reviews -->
+<div class="reviews-list" data-ai-id="el-f9a1b2c3" data-type="list" id="el-f9a1b2c3">
+<template data-ai-id="el-c7e1b4d9" id="el-c7e1b4d9" x-bind:key="review.userId" x-for="review in displayedReviews">
+<div class="review-card" data-ai-id="el-8e9d1a7c" data-type="html" id="el-8e9d1a7c">
+<div class="review-header" data-ai-id="el-3c7e9a4d" data-type="html" id="el-3c7e9a4d">
+<span class="review-text" data-ai-id="el-d9a4c7e1" data-type="text" id="el-d9a4c7e1" x-text="review.reviewtext">
+</span>
+</div>
+<div class="review-footer" data-ai-id="el-d4grf6a7" data-type="html" id="el-d4grf6a7">
+<div class="reviewer-info" data-ai-id="el-eki6a7b8" data-type="html" id="el-eki6a7b8">
+<span class="reviewer-name" data-ai-id="el-f6a7bw29" data-type="text" id="el-f6a7bw29" x-text="review.userName">
+</span>
+</div>
+<div class="star-rating" data-ai-id="el-a7huc9d1" data-type="html" id="el-a7huc9d1">
+<template data-ai-id="el-2f8dca91" id="el-2f8dca91" x-for="i in 5">
+<svg class="star" data-ai-id="el-a9d4c1e7" id="el-a9d4c1e7" viewBox="0 0 24 24" x-bind:class="{'filled': i &lt;= review.rating}">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+</path>
+</svg>
+</template>
+</div>
+</div>
+</div>
+</template><div class="review-card" data-ai-id="el-8e9d1a7c" data-type="html" id="el-8e9d1a7c">
+<div class="review-header" data-ai-id="el-3c7e9a4d" data-type="html" id="el-3c7e9a4d">
+<span class="review-text" data-ai-id="el-d9a4c7e1" data-type="text" id="el-d9a4c7e1" x-text="review.reviewtext">This course exceeded my expectations! The content was comprehensive and very well structured.</span>
+</div>
+<div class="review-footer" data-ai-id="el-d4grf6a7" data-type="html" id="el-d4grf6a7">
+<div class="reviewer-info" data-ai-id="el-eki6a7b8" data-type="html" id="el-eki6a7b8">
+<span class="reviewer-name" data-ai-id="el-f6a7bw29" data-type="text" id="el-f6a7bw29" x-text="review.userName">Priya Mehra</span>
+</div>
+<div class="star-rating" data-ai-id="el-a7huc9d1" data-type="html" id="el-a7huc9d1">
+<template data-ai-id="el-2f8dca91" id="el-2f8dca91" x-for="i in 5">
+<svg class="star" data-ai-id="el-a9d4c1e7" id="el-a9d4c1e7" viewBox="0 0 24 24" x-bind:class="{'filled': i &lt;= review.rating}">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+</path>
+</svg>
+</template><svg class="star filled" data-ai-id="el-a9d4c1e7" id="el-a9d4c1e7" viewBox="0 0 24 24" x-bind:class="{'filled': i &lt;= review.rating}">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+</path>
+</svg><svg class="star filled" data-ai-id="el-a9d4c1e7" id="el-a9d4c1e7" viewBox="0 0 24 24" x-bind:class="{'filled': i &lt;= review.rating}">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+</path>
+</svg><svg class="star filled" data-ai-id="el-a9d4c1e7" id="el-a9d4c1e7" viewBox="0 0 24 24" x-bind:class="{'filled': i &lt;= review.rating}">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+</path>
+</svg><svg class="star filled" data-ai-id="el-a9d4c1e7" id="el-a9d4c1e7" viewBox="0 0 24 24" x-bind:class="{'filled': i &lt;= review.rating}">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+</path>
+</svg><svg class="star filled" data-ai-id="el-a9d4c1e7" id="el-a9d4c1e7" viewBox="0 0 24 24" x-bind:class="{'filled': i &lt;= review.rating}">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+</path>
+</svg>
+</div>
+</div>
+</div><div class="review-card" data-ai-id="el-8e9d1a7c" data-type="html" id="el-8e9d1a7c">
+<div class="review-header" data-ai-id="el-3c7e9a4d" data-type="html" id="el-3c7e9a4d">
+<span class="review-text" data-ai-id="el-d9a4c7e1" data-type="text" id="el-d9a4c7e1" x-text="review.reviewtext">Great course! I learned a lot, but some sections could use more examples.</span>
+</div>
+<div class="review-footer" data-ai-id="el-d4grf6a7" data-type="html" id="el-d4grf6a7">
+<div class="reviewer-info" data-ai-id="el-eki6a7b8" data-type="html" id="el-eki6a7b8">
+<span class="reviewer-name" data-ai-id="el-f6a7bw29" data-type="text" id="el-f6a7bw29" x-text="review.userName">Siddharth Patel</span>
+</div>
+<div class="star-rating" data-ai-id="el-a7huc9d1" data-type="html" id="el-a7huc9d1">
+<template data-ai-id="el-2f8dca91" id="el-2f8dca91" x-for="i in 5">
+<svg class="star" data-ai-id="el-a9d4c1e7" id="el-a9d4c1e7" viewBox="0 0 24 24" x-bind:class="{'filled': i &lt;= review.rating}">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+</path>
+</svg>
+</template><svg class="star filled" data-ai-id="el-a9d4c1e7" id="el-a9d4c1e7" viewBox="0 0 24 24" x-bind:class="{'filled': i &lt;= review.rating}">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+</path>
+</svg><svg class="star filled" data-ai-id="el-a9d4c1e7" id="el-a9d4c1e7" viewBox="0 0 24 24" x-bind:class="{'filled': i &lt;= review.rating}">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+</path>
+</svg><svg class="star filled" data-ai-id="el-a9d4c1e7" id="el-a9d4c1e7" viewBox="0 0 24 24" x-bind:class="{'filled': i &lt;= review.rating}">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+</path>
+</svg><svg class="star filled" data-ai-id="el-a9d4c1e7" id="el-a9d4c1e7" viewBox="0 0 24 24" x-bind:class="{'filled': i &lt;= review.rating}">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+</path>
+</svg><svg class="star" data-ai-id="el-a9d4c1e7" id="el-a9d4c1e7" viewBox="0 0 24 24" x-bind:class="{'filled': i &lt;= review.rating}">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+</path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<!-- View More Button -->
+<template data-ai-id="el-e9b1c7d4" id="el-e9b1c7d4" x-if="hasMore">
+<div class="view-more-container" data-ai-id="el-b8c9jie2" data-type="html" id="el-b8c9jie2">
+<button class="view-more-btn" data-ai-id="el-c9djf32f3" data-cta-type="view_more" data-type="attrs" id="el-c9djf32f3" x-bind:disabled="loading" x-on:click="loadMore()">
+<span data-ai-id="el-d4c8a9f1" id="el-d4c8a9f1" x-text="loading ? 'Loading...' : 'View more'">
+</span>
+</button>
+</div>
+</template>
+</div>
+</section>
+<style data-ai-id="stl-f8d9e2a1" data-type="style" id="stl-f8d9e2a1">
+   #sec-f8d9e2a1 {
+    padding: 70px 0;
+    background: var(--section-bg);
+  }
+
+  #sec-f8d9e2a1 .feedback-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #sec-f8d9e2a1 .rating-summary-card {
+    background: var(--card-bg);
+    border-radius: 0;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 140px;
+    border: 2px solid var(--card-border);
+  }
+
+  #sec-f8d9e2a1 .rating-title {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 24px;
+    letter-spacing: 0.3px;
+  }
+
+  #sec-f8d9e2a1 .rating-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+
+  #sec-f8d9e2a1 .star-icon {
+    width: 64px;
+    height: 64px;
+    fill: var(--color-accent2);
+  }
+
+  #sec-f8d9e2a1 .rating-numbers {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+
+  #sec-f8d9e2a1 .avg-rating {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--heading-color);
+    line-height: 1;
+    letter-spacing: -0.5px;
+  }
+
+  #sec-f8d9e2a1 .max-rating {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--color-neutral-light);
+  }
+
+  #sec-f8d9e2a1 .total-reviews {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--body-color);
+  }
+
+  #sec-f8d9e2a1 .review-card {
+    background: var(--card-bg);
+    border-radius: 0;
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 2px solid var(--card-border);
+    min-height: 120px;
+  }
+
+  #sec-f8d9e2a1 .review-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-primary-light);
+  }
+
+  #sec-f8d9e2a1 .user-review {
+    border: 2px solid var(--color-primary);
+    background: var(--color-primary-lightest);
+  }
+
+  #sec-f8d9e2a1 .submit-form-card {
+    border: 2px solid var(--color-primary-light);
+    background: var(--card-bg);
+  }
+
+  #sec-f8d9e2a1 .form-header {
+    margin-bottom: 8px;
+    min-width: 200px;
+  }
+
+  #sec-f8d9e2a1 .form-title {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin: 0;
+    letter-spacing: 0.3px;
+  }
+
+  #sec-f8d9e2a1 .form-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+  }
+
+  #sec-f8d9e2a1 .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #sec-f8d9e2a1 .form-label {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--heading-color);
+    letter-spacing: 0.2px;
+  }
+
+  #sec-f8d9e2a1 .star-rating-input {
+    display: flex;
+    gap: 8px;
+  }
+
+  #sec-f8d9e2a1 .star-input {
+    width: 32px;
+    height: 32px;
+    fill: var(--color-neutral-lighter);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  #sec-f8d9e2a1 .star-input.filled,
+  #sec-f8d9e2a1 .star-input.hover {
+    fill: var(--color-accent2);
+    transform: scale(1.1);
+  }
+
+  #sec-f8d9e2a1 .form-textarea {
+    font-family: var(--font-body);
+    font-size: 14px;
+    padding: 12px 16px;
+    border: 2px solid var(--card-border);
+    border-radius: 0;
+    resize: vertical;
+    transition: all 0.3s ease;
+    line-height: 1.6;
+    color: var(--body-color);
+    background: var(--card-bg);
+  }
+
+  #sec-f8d9e2a1 .form-textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(30, 78, 121, 0.08);
+  }
+
+  #sec-f8d9e2a1 .submit-btn {
+    background: var(--button-primary-bg);
+    color: var(--button-primary-text);
+    border: none;
+    padding: 12px 28px;
+    border-radius: 0;
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    letter-spacing: 0.5px;
+  }
+
+  #sec-f8d9e2a1 .submit-btn:hover:not(:disabled) {
+    background: var(--button-primary-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 78, 121, 0.2);
+  }
+
+  #sec-f8d9e2a1 .submit-btn:focus {
+    outline: 2px solid var(--input-border-active);
+    outline-offset: 2px;
+  }
+
+  #sec-f8d9e2a1 .submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  #sec-f8d9e2a1 .review-header {
+    flex: 1;
+  }
+
+  #sec-f8d9e2a1 .review-text {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--body-color);
+    display: block;
+  }
+
+  #sec-f8d9e2a1 .review-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    position: relative;
+    min-width: 300px;
+  }
+
+  #sec-f8d9e2a1 .reviewer-info {
+    flex: 1;
+    text-align: right;
+  }
+
+  #sec-f8d9e2a1 .reviewer-name {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--heading-color);
+    letter-spacing: 0.2px;
+  }
+
+  #sec-f8d9e2a1 .star-rating {
+    display: flex;
+    gap: 4px;
+  }
+
+  #sec-f8d9e2a1 .star {
+    width: 18px;
+    height: 18px;
+    fill: var(--color-neutral-lighter);
+    transition: fill 0.2s ease;
+  }
+
+  #sec-f8d9e2a1 .star.filled {
+    fill: var(--color-accent2);
+  }
+
+  #sec-f8d9e2a1 .delete-btn {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: var(--color-accent1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  #sec-f8d9e2a1 .delete-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  #sec-f8d9e2a1 .delete-btn:hover {
+    color: var(--color-accent1-dark);
+    transform: scale(1.15);
+  }
+
+  #sec-f8d9e2a1 .delete-btn:focus {
+    outline: 2px solid var(--input-border-active);
+    outline-offset: 2px;
+  }
+
+  #sec-f8d9e2a1 .reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #sec-f8d9e2a1 .view-more-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 0 0;
+  }
+
+  #sec-f8d9e2a1 .view-more-btn {
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    padding: 12px 32px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    letter-spacing: 0.5px;
+  }
+
+  #sec-f8d9e2a1 .view-more-btn:hover:not(:disabled) {
+    background: var(--color-primary-lightest);
+    color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+  }
+
+  #sec-f8d9e2a1 .view-more-btn:focus {
+    outline: 2px solid var(--input-border-active);
+    outline-offset: 2px;
+  }
+
+  #sec-f8d9e2a1 .view-more-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 1024px) {
+    #sec-f8d9e2a1 .review-card {
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: auto;
+      padding: 20px 24px;
+    }
+
+    #sec-f8d9e2a1 .review-footer {
+      width: 100%;
+      justify-content: space-between;
+      min-width: auto;
+    }
+
+    #sec-f8d9e2a1 .reviewer-info {
+      text-align: left;
+    }
+
+    #sec-f8d9e2a1 .submit-form-card {
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: auto;
+    }
+
+    #sec-f8d9e2a1 .form-header {
+      min-width: auto;
+      width: 100%;
+    }
+
+    #sec-f8d9e2a1 .form-body {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #sec-f8d9e2a1 {
+      padding: 50px 0;
+    }
+
+    #sec-f8d9e2a1 .feedback-container {
+      gap: 16px;
+    }
+
+    #sec-f8d9e2a1 .rating-summary-card {
+      padding: 32px 20px;
+      min-height: auto;
+    }
+
+    #sec-f8d9e2a1 .rating-title {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    #sec-f8d9e2a1 .avg-rating {
+      font-size: 48px;
+    }
+
+    #sec-f8d9e2a1 .review-card {
+      padding: 16px 20px;
+      gap: 16px;
+    }
+
+    #sec-f8d9e2a1 .review-text {
+      font-size: 15px;
+    }
+
+    #sec-f8d9e2a1 .form-title {
+      font-size: 18px;
+    }
+
+    #sec-f8d9e2a1 .view-more-btn {
+      padding: 10px 24px;
+      font-size: 14px;
+    }
+  }
+  </style>
+
+
+<section class="sdf-footer-section" data-ai-id="sec-foot1" id="sec-foot1">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<div class="sdf-footer-container" data-ai-id="el-sdf-container">
+<div class="sdf-footer-grid" data-ai-id="el-sdf-grid">
+<!-- Column 1: Logo & Description -->
+<div class="sdf-footer-col sdf-footer-brand" data-ai-id="el-sdf-col1">
+<div class="sdf-footer-logo" data-ai-id="el-sdf-logo">
+<i class="fa-solid fa-leaf" data-ai-id="el-sdf-logo-icon" style="color: #22E36A;">
+</i>
+<span data-ai-id="el-sdf-logo-text">
+        Saday Academy
+       </span>
+</div>
+<p class="sdf-footer-description" data-ai-id="el-sdf-description">
+       Empowering learners worldwide with expert-led courses and a community-driven approach to personal and professional growth.
+      </p>
+</div>
+<!-- Column 2: Academy Links -->
+<div class="sdf-footer-col" data-ai-id="el-sdf-col2">
+<h4 class="sdf-footer-title" data-ai-id="el-sdf-title1">
+       Academy
+      </h4>
+<ul class="sdf-footer-links" data-ai-id="el-sdf-links1">
+<li>
+<a data-ai-id="el-sdf-link1-1" href="/courses">
+         All Courses
+        </a>
+</li>
+<li>
+<a data-ai-id="el-sdf-link1-2" href="#">
+         Instructors
+        </a>
+</li>
+<li>
+<a data-ai-id="el-sdf-link1-3" href="#">
+         Live Events
+        </a>
+</li>
+<li>
+<a data-ai-id="el-sdf-link1-4" href="#">
+         Reviews
+        </a>
+</li>
+</ul>
+</div>
+<!-- Column 3: Support Links -->
+<div class="sdf-footer-col" data-ai-id="el-sdf-col3">
+<h4 class="sdf-footer-title" data-ai-id="el-sdf-title2">
+       Support
+      </h4>
+<ul class="sdf-footer-links" data-ai-id="el-sdf-links2">
+<li>
+<a data-ai-id="el-sdf-link2-1" href="#">
+         Student Portal
+        </a>
+</li>
+<li>
+<a data-ai-id="el-sdf-link2-2" href="#">
+         Accreditation
+        </a>
+</li>
+<li>
+<a data-ai-id="el-sdf-link2-3" href="/contactus">
+         Contact Us
+        </a>
+</li>
+<li>
+<a data-ai-id="el-sdf-link2-4" href="#">
+         FAQs
+        </a>
+</li>
+</ul>
+</div>
+<!-- Column 4: Newsletter -->
+<div class="sdf-footer-col" data-ai-id="el-sdf-col4">
+<h4 class="sdf-footer-title" data-ai-id="el-sdf-title3">
+       Stay Updated
+      </h4>
+<p class="sdf-footer-newsletter-text" data-ai-id="el-sdf-newsletter-desc">
+       Subscribe to get the latest updates and offers.
+      </p>
+<form class="sdf-footer-newsletter-form" data-ai-id="el-sdf-form" onsubmit="return false;">
+<input class="sdf-footer-input" data-ai-id="el-sdf-input" placeholder="Email address" required="" type="email">
+<button class="sdf-footer-button" data-ai-id="el-sdf-button" type="submit">
+        Subscribe
+       </button>
+</form>
+</div>
+</div>
+<hr class="sdf-footer-divider" data-ai-id="el-sdf-divider">
+<div class="sdf-footer-bottom" data-ai-id="el-sdf-bottom">
+<p class="sdf-footer-copyright" data-ai-id="el-sdf-copyright">
+      © 2024 Saday Academy. All rights reserved.
+     </p>
+<div class="sdf-footer-legal" data-ai-id="el-sdf-legal">
+<a data-ai-id="el-sdf-legal1" href="/privacypolicy">
+       Privacy Policy
+      </a>
+<a data-ai-id="el-sdf-legal2" href="/termsofuse">
+       Terms of Service
+      </a>
+</div>
+</div>
+</div>
+</section>
+<style data-ai-id="stl-foot1" id="stl-foot1">
+   #sec-foot1 {
+  background-color: #5B458E;
+  color: #FFFFFF;
+  padding: 80px 20px 40px;
+  font-family: 'Inter', sans-serif;
+}
+
+.sdf-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sdf-footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.sdf-footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.sdf-footer-description {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+.sdf-footer-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #FFFFFF;
+}
+
+.sdf-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sdf-footer-links li {
+  margin-bottom: 12px;
+}
+
+.sdf-footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.sdf-footer-links a:hover {
+  color: #FFFFFF;
+}
+
+.sdf-footer-newsletter-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.sdf-footer-newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sdf-footer-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #FFFFFF;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.sdf-footer-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sdf-footer-input:focus {
+  border-color: #8B75D1;
+}
+
+.sdf-footer-button {
+  background: linear-gradient(90deg, #8B75D1, #7A63C7);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.sdf-footer-button:hover {
+  opacity: 0.9;
+}
+
+.sdf-footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 0 0 30px 0;
+}
+
+.sdf-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.sdf-footer-copyright {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.sdf-footer-legal {
+  display: flex;
+  gap: 24px;
+}
+
+.sdf-footer-legal a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.sdf-footer-legal a:hover {
+  color: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+  .sdf-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #sec-foot1 {
+    padding: 60px 20px 30px;
+    text-align: center;
+  }
+
+  .sdf-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .sdf-footer-logo {
+    justify-content: center;
+  }
+
+  .sdf-footer-newsletter-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .sdf-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sdf-footer-legal {
+    justify-content: center;
+  }
+}
+  </style>
+<script data-ai-id="scr-foot1" id="scr-foot1">
+   // Footer script for potential interactivity (e.g., newsletter submission)
+(function() {
+  const form = document.querySelector('.sdf-footer-newsletter-form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input').value;
+      if (email) {
+        // Placeholder for submission logic
+        console.log('Newsletter subscription for:', email);
+        alert('Thank you for subscribing!');
+        this.reset();
+      }
+    });
+  }
+})();
+  </script>
+
+
+<section data-ai-id="sec-graphy-footer" data-nav-element="graphy_footer" data-section-type="graphy_footer" id="sec-graphy-footer" style="background-color: #f7f8f5; padding: 12px 20px;">
+<div class="footer-content" data-nav-element="graphy_footer">
+<div class="footer-left">
+<img alt="Graphy Logo" class="logo-image" src="https://media.marka-img.com/461f7112/zQ3tBUI9rdD1qblfI0JQJO7IngL4xv.png">
+</div>
+<div class="footer-right">
+<div class="trust-badge">
+<img alt="Trust Badge" class="badge-image" src="https://media.marka-img.com/461f7112/sg3a5Hm3ZPL7Zb38mHFsXCzMTRNbgY.png">
+<span class="trust-text">200K+ creators trust Graphy</span>
+</div>
+<a class="cta-link" href="https://graphy.com" target="_blank">Try Graphy</a>
+</div>
+</div>
+</section>
+<style data-ai-id="stl-graphy-footer" id="stl-graphy-footer">
+    #sec-graphy-footer {
+        background-color: #f7f8f5;
+    }
+
+    #sec-graphy-footer .footer-content {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 16px !important;
+        max-width: 1400px !important;
+        margin: 0 auto !important;
+        flex-wrap: wrap !important;
+    }
+
+    #sec-graphy-footer .footer-left {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+
+    #sec-graphy-footer .powered-by {
+        font-size: 11px !important;
+        color: #666 !important;
+        font-family: Roobert, Arial, sans-serif !important;
+        font-weight: normal !important;
+        letter-spacing: 0.015em !important;
+    }
+
+    #sec-graphy-footer .logo-image {
+        width: 50px !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+    #sec-graphy-footer .footer-right {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    #sec-graphy-footer .trust-badge {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    #sec-graphy-footer .badge-image {
+        width: 28px !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+    #sec-graphy-footer .trust-text {
+        font-size: 11px !important;
+        color: #666 !important;
+        font-family: Roobert, Arial, sans-serif !important;
+        letter-spacing: 0.015em !important;
+    }
+
+    #sec-graphy-footer .cta-link {
+        font-size: 11px !important;
+        color: white !important;
+        text-decoration: none !important;
+        font-weight: 600 !important;
+        font-family: Roobert, Arial, sans-serif !important;
+        padding: 10px 20px !important;
+        background-color: #232228 !important;
+        border: none !important;
+        border-radius: 100px !important;
+        transition: all 0.3s ease !important;
+        white-space: nowrap !important;
+        letter-spacing: 0.015em !important;
+        display: inline-block !important;
+    }
+
+    #sec-graphy-footer .cta-link:hover {
+        background-color: #3d3a43 !important;
+        transform: translateY(-2px) !important;
+    }
+
+    @media (max-width: 768px) {
+        #sec-graphy-footer .footer-content {
+            gap: 12px;
+            padding: 0 16px;
+        }
+
+        #sec-graphy-footer .logo-image {
+            width: 50px;
+        }
+
+        #sec-graphy-footer .trust-text,
+        #sec-graphy-footer .powered-by,
+        #sec-graphy-footer .cta-link {
+            font-size: 11px;
+        }
+
+        #sec-graphy-footer .cta-link {
+            padding: 6px 12px;
+        }
+
+        #sec-graphy-footer .badge-image {
+            width: 28px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #sec-graphy-footer .footer-content {
+            gap: 8px;
+        }
+
+        #sec-graphy-footer .logo-image {
+            width: 45px;
+        }
+
+        #sec-graphy-footer .badge-image {
+            width: 24px;
+        }
+    }
+</style>
+
+</body></html>

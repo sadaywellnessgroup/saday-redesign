@@ -1,0 +1,62 @@
+[
+  {
+    "entity": "Payments",
+    "field": "Search",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Coupon management",
+    "notes": ""
+  },
+  {
+    "entity": "Admin Panel",
+    "field": "Search by Member Name, Email",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Team Members",
+    "notes": ""
+  },
+  {
+    "entity": "Admin Panel",
+    "field": "Enter deduction name (e.g., Tax, Service Charge)",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Form: Add New",
+    "notes": ""
+  },
+  {
+    "entity": "Admin Panel",
+    "field": "Enter percentage (e.g., 10)",
+    "type": "text",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Form: Add New",
+    "notes": ""
+  },
+  {
+    "entity": "Admin Panel",
+    "field": "Untitled Form",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Form Builder",
+    "notes": ""
+  },
+  {
+    "entity": "Admin Panel",
+    "field": "Add a description...",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Form Builder",
+    "notes": ""
+  }
+]

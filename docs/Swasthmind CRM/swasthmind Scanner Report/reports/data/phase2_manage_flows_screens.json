@@ -1,0 +1,137 @@
+[
+  {
+    "module": "Manage Flows",
+    "screen": "Not Found",
+    "submenu": "—",
+    "url": "https://crm.swasthmind.com/manage-flows",
+    "headings": [
+      "Not Found"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "Dashboard",
+      "Conversations",
+      "My Schedule",
+      "My Therapists",
+      "Manual Booking",
+      "Sessions",
+      "Assessments",
+      "My Clients",
+      "Reports",
+      "Seminars",
+      "Internships/Career",
+      "Ecommerce",
+      "Cancellation & Reschedule Policy",
+      "Session Follow-ups",
+      "FAQ & Tutorials",
+      "Bulk Messages",
+      "Go Back"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/manage_flows/not_found__full.png",
+    "designAudit": {
+      "module": "Manage Flows",
+      "screen": "Not Found",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1f2d2b",
+            "count": 108
+          },
+          {
+            "hex": "#1e293b",
+            "count": 4
+          },
+          {
+            "hex": "#2f8f6b",
+            "count": 4
+          },
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f5f9f7",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 4,
+        "uniqueBgColors": 1
+      },
+      "typography": {
+        "fontFamilies": [
+          "Inter",
+          "Arial",
+          "Roboto"
+        ],
+        "topFontSizes": [
+          {
+            "size": "16px",
+            "count": 16
+          },
+          {
+            "size": "14px",
+            "count": 3
+          },
+          {
+            "size": "24px",
+            "count": 2
+          },
+          {
+            "size": "12px",
+            "count": 1
+          },
+          {
+            "size": "32px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "600",
+          "700"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "unknown",
+        "flexCount": 30,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 19,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 27,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 1,
+        "charts": 18,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "contained"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1.47,
+        "bodyColor": "#1f2d2b",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.47 below WCAG AA (4.5)"
+      ]
+    }
+  }
+]

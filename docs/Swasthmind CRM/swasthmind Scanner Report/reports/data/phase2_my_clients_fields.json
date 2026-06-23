@@ -1,0 +1,92 @@
+[
+  {
+    "entity": "My Clients",
+    "field": ":r4:",
+    "type": "text",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "My Clients",
+    "notes": ""
+  },
+  {
+    "entity": "My Clients",
+    "field": "Both",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "My Clients",
+    "notes": ""
+  },
+  {
+    "entity": "My Clients",
+    "field": "Saday Wellness Group",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "My Clients",
+    "notes": ""
+  },
+  {
+    "entity": "My Clients",
+    "field": "Rows per page:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "My Clients",
+    "notes": ""
+  },
+  {
+    "entity": "My Clients",
+    "field": ":ro:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "My Clients",
+    "notes": ""
+  },
+  {
+    "entity": "My Clients",
+    "field": "8",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "My Clients",
+    "notes": ""
+  },
+  {
+    "entity": "My Clients",
+    "field": ":rs:",
+    "type": "text",
+    "required": "Yes",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Form: Add Client",
+    "notes": ""
+  },
+  {
+    "entity": "My Clients",
+    "field": ":rt:",
+    "type": "text",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Form: Add Client",
+    "notes": ""
+  },
+  {
+    "entity": "My Clients",
+    "field": ":ru:",
+    "type": "text",
+    "required": "Yes",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Form: Add Client",
+    "notes": ""
+  }
+]

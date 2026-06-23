@@ -1,0 +1,52 @@
+[
+  {
+    "entity": "Conversations",
+    "field": "conv-analysis",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Conversations",
+    "notes": ""
+  },
+  {
+    "entity": "Conversations",
+    "field": "All Categories",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Conversations",
+    "notes": ""
+  },
+  {
+    "entity": "Conversations",
+    "field": "Rows per page:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Conversations",
+    "notes": ""
+  },
+  {
+    "entity": "Conversations",
+    "field": ":r13:",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Conversations",
+    "notes": ""
+  },
+  {
+    "entity": "Conversations",
+    "field": "8",
+    "type": "string",
+    "required": "Unknown",
+    "enumValues": "",
+    "phi": "Unknown",
+    "sourceScreen": "Conversations",
+    "notes": ""
+  }
+]

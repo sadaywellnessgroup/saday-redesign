@@ -1,0 +1,6949 @@
+[
+  {
+    "module": "Home",
+    "screen": "Dashboard",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/",
+    "headings": [
+      "Services",
+      "Manage",
+      "Overview",
+      "1:1 Sessions Booked",
+      "59",
+      "One-off Sessions",
+      "1",
+      "Bundles Sold",
+      "7",
+      "Group Session Booked",
+      "0",
+      "Upcoming",
+      "Reschedule requests"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "View all"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/home/dashboard__full.png",
+    "designAudit": {
+      "module": "Home",
+      "screen": "Dashboard",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#505050",
+            "count": 23
+          },
+          {
+            "hex": "#008080",
+            "count": 19
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 16
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#e6f2f2",
+            "count": 3
+          },
+          {
+            "hex": "#f9fafb",
+            "count": 3
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 4
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 59
+          },
+          {
+            "size": "16px",
+            "count": 8
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "24px",
+            "count": 4
+          },
+          {
+            "size": "20px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 61,
+        "gridCount": 2,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 11,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 27,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 7,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Home",
+    "screen": "Overview",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/",
+    "headings": [
+      "Services",
+      "Manage",
+      "Overview",
+      "1:1 Sessions Booked",
+      "59",
+      "One-off Sessions",
+      "1",
+      "Bundles Sold",
+      "7",
+      "Group Session Booked",
+      "0",
+      "Upcoming",
+      "Reschedule requests"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "View all"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/home/overview__full.png",
+    "designAudit": {
+      "module": "Home",
+      "screen": "Overview",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#505050",
+            "count": 23
+          },
+          {
+            "hex": "#008080",
+            "count": 19
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 16
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#e6f2f2",
+            "count": 3
+          },
+          {
+            "hex": "#f9fafb",
+            "count": 3
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 4
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 59
+          },
+          {
+            "size": "16px",
+            "count": 8
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "24px",
+            "count": 4
+          },
+          {
+            "size": "20px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 61,
+        "gridCount": 2,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 11,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 27,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 7,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Home",
+    "screen": "Dashboard / Overview",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/",
+    "headings": [
+      "Services",
+      "Manage",
+      "Overview",
+      "1:1 Sessions Booked",
+      "59",
+      "One-off Sessions",
+      "1",
+      "Bundles Sold",
+      "7",
+      "Group Session Booked",
+      "0",
+      "Upcoming",
+      "Reschedule requests"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "View all"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/home/dashboard_overview__full.png",
+    "designAudit": {
+      "module": "Home",
+      "screen": "Dashboard / Overview",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#505050",
+            "count": 23
+          },
+          {
+            "hex": "#008080",
+            "count": 19
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 16
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#e6f2f2",
+            "count": 3
+          },
+          {
+            "hex": "#f9fafb",
+            "count": 3
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 4
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 59
+          },
+          {
+            "size": "16px",
+            "count": 8
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "24px",
+            "count": 4
+          },
+          {
+            "size": "20px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 61,
+        "gridCount": 2,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 11,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 27,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 7,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "CalendarNew",
+    "screen": "Calendar",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/calendar",
+    "headings": [
+      "Services",
+      "Manage",
+      "Calendar",
+      "Drag to Create Sessions",
+      "Click and drag",
+      "Enter details",
+      "Save & confirm"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Today",
+      "Day",
+      "Add Appointment",
+      "Sat18",
+      "Try now"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/calendarnew/calendar__full.png",
+    "designAudit": {
+      "module": "CalendarNew",
+      "screen": "Calendar",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#a8a8a8",
+            "count": 24
+          },
+          {
+            "hex": "#008080",
+            "count": 16
+          },
+          {
+            "hex": "#505050",
+            "count": 9
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 6
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 2
+          },
+          {
+            "hex": "#008080",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 1
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 1
+          },
+          {
+            "hex": "#e0e0e0",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 6,
+        "uniqueBgColors": 7
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 54
+          },
+          {
+            "size": "12px",
+            "count": 29
+          },
+          {
+            "size": "16px",
+            "count": 6
+          },
+          {
+            "size": "14.4px",
+            "count": 2
+          },
+          {
+            "size": "28px",
+            "count": 1
+          },
+          {
+            "size": "20px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 6
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 105,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 19,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 27,
+        "badges": 0,
+        "tooltips": 3,
+        "dropdowns": 2,
+        "charts": 0,
+        "emptyStates": 1,
+        "loadingSpinner": 2
+      },
+      "buttonVariants": [
+        "text",
+        "outline",
+        "link"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "1-1 Connect",
+    "screen": "All Sessions",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/connect/sessions/upcoming",
+    "headings": [
+      "Services",
+      "Manage",
+      "All Sessions",
+      "No sessions"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Add New",
+      "Upcoming (0)",
+      "Reschedule Requests (0)",
+      "Past Sessions (60)",
+      "Search"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/1_1_connect/all_sessions__full.png",
+    "designAudit": {
+      "module": "1-1 Connect",
+      "screen": "All Sessions",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#008080",
+            "count": 16
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 6
+          },
+          {
+            "hex": "#505050",
+            "count": 6
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#008080",
+            "count": 1
+          },
+          {
+            "hex": "#f9fafb",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 5
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 52
+          },
+          {
+            "size": "16px",
+            "count": 10
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "28px",
+            "count": 1
+          },
+          {
+            "size": "24px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 63,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 15,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 24,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 3,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "1-1 Connect",
+    "screen": "All Sessions — Upcoming",
+    "submenu": "My sessions",
+    "url": "https://app.tealfeed.com/connect/sessions/upcoming",
+    "headings": [
+      "Services",
+      "Manage",
+      "All Sessions",
+      "No sessions"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Add New",
+      "Upcoming (0)",
+      "Reschedule Requests (0)",
+      "Past Sessions (60)",
+      "Search"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/1_1_connect/all_sessions_upcoming__full.png",
+    "designAudit": {
+      "module": "1-1 Connect",
+      "screen": "All Sessions — Upcoming",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#008080",
+            "count": 16
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 6
+          },
+          {
+            "hex": "#505050",
+            "count": 6
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#008080",
+            "count": 1
+          },
+          {
+            "hex": "#f9fafb",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 5
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 52
+          },
+          {
+            "size": "16px",
+            "count": 10
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "28px",
+            "count": 1
+          },
+          {
+            "size": "24px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 63,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 15,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 24,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 3,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "1-1 Connect",
+    "screen": "All Sessions — Past",
+    "submenu": "My sessions",
+    "url": "https://app.tealfeed.com/connect/sessions/past",
+    "headings": [
+      "Services",
+      "Manage",
+      "All Sessions",
+      "Consultation (Follow Up Session)",
+      "with Shikha Singhby Aditya Agrawal",
+      "Consultation (Follow Up Session)",
+      "with Chetanaby Aditya Agrawal",
+      "Consultation (Follow Up Session)",
+      "with Abdullah Siddiqueby Aditya Agrawal",
+      "Consultation (Follow Up Session)",
+      "with Kuldeep Singhby Aditya Agrawal",
+      "Therapy Session",
+      "with Neetuby Aditya Agrawal",
+      "Consultation (Follow Up Session)",
+      "with Shikha Singhby Aditya Agrawal",
+      "Consultation (Follow Up Session)",
+      "with Kuldeep Singhby Aditya Agrawal",
+      "Consultation (Follow Up Session)",
+      "with Abdullah Siddiqueby Aditya Agrawal",
+      "Consultation (Follow Up Session)",
+      "with Abdullah Siddiqueby Aditya Agrawal",
+      "Consultation (Follow Up Session)",
+      "with Rushank Mondalby Aditya Agrawal"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Add New",
+      "Upcoming (0)",
+      "Reschedule Requests (0)",
+      "Past Sessions (60)",
+      "Search",
+      "View details"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/1_1_connect/all_sessions_past__full.png",
+    "designAudit": {
+      "module": "1-1 Connect",
+      "screen": "All Sessions — Past",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#505050",
+            "count": 18
+          },
+          {
+            "hex": "#008080",
+            "count": 16
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 6
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#008080",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 5
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "16px",
+            "count": 109
+          },
+          {
+            "size": "14px",
+            "count": 62
+          },
+          {
+            "size": "20px",
+            "count": 40
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 98,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 35,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 54,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 3,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 16
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "1-1 Connect",
+    "screen": "Session product list",
+    "submenu": "Manage sessions",
+    "url": "https://app.tealfeed.com/connect/manage",
+    "headings": [
+      "Services",
+      "Manage",
+      "All Sessions",
+      "Joint Consultation",
+      "by Aditya Agrawal",
+      "Consultation (Follow Up Session)",
+      "by Aditya Agrawal",
+      "Therapy Session",
+      "by Aditya Agrawal",
+      "First Consultation",
+      "by Aditya Agrawal"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Add New",
+      "Search",
+      "Edit Session"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/1_1_connect/session_product_list__full.png",
+    "designAudit": {
+      "module": "1-1 Connect",
+      "screen": "Session product list",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1e1e1e",
+            "count": 26
+          },
+          {
+            "hex": "#505050",
+            "count": 26
+          },
+          {
+            "hex": "#008080",
+            "count": 24
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#c43131",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 13
+          },
+          {
+            "hex": "#a8a8a8",
+            "count": 4
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 3
+          },
+          {
+            "hex": "#008080",
+            "count": 3
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 6,
+        "uniqueBgColors": 6
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 71
+          },
+          {
+            "size": "16px",
+            "count": 49
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "20px",
+            "count": 1
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 109,
+        "gridCount": 1,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 27,
+        "inputs": 3,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 28,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 1,
+        "charts": 0,
+        "emptyStates": 5,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline",
+        "primary"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 3,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "3 input(s) missing label",
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Bundles",
+    "screen": "All Bundles",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/bundles/ongoing",
+    "headings": [
+      "Services",
+      "Manage",
+      "All Bundles",
+      "No bundles found"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Add new",
+      "Ongoing (0)",
+      "Completed (7)",
+      "Search"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/bundles/all_bundles__full.png",
+    "designAudit": {
+      "module": "Bundles",
+      "screen": "All Bundles",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1e1e1e",
+            "count": 25
+          },
+          {
+            "hex": "#008080",
+            "count": 22
+          },
+          {
+            "hex": "#505050",
+            "count": 19
+          },
+          {
+            "hex": "#003333",
+            "count": 4
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#eef3ed",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 12
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#008080",
+            "count": 2
+          },
+          {
+            "hex": "#a8a8a8",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#508647",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 7,
+        "uniqueBgColors": 7
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 60
+          },
+          {
+            "size": "16px",
+            "count": 28
+          },
+          {
+            "size": "12px",
+            "count": 16
+          },
+          {
+            "size": "20px",
+            "count": 1
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 95,
+        "gridCount": 1,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 22,
+        "inputs": 10,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 25,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 2,
+        "charts": 0,
+        "emptyStates": 5,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline",
+        "primary"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 10,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "10 input(s) missing label",
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Bundles",
+    "screen": "Bundle bookings — Ongoing",
+    "submenu": "My Bundles",
+    "url": "https://app.tealfeed.com/bundles/ongoing",
+    "headings": [
+      "Services",
+      "Manage",
+      "All Bundles",
+      "No bundles found"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Add new",
+      "Ongoing (0)",
+      "Completed (7)",
+      "Search"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/bundles/bundle_bookings_ongoing__full.png",
+    "designAudit": {
+      "module": "Bundles",
+      "screen": "Bundle bookings — Ongoing",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1e1e1e",
+            "count": 25
+          },
+          {
+            "hex": "#008080",
+            "count": 22
+          },
+          {
+            "hex": "#505050",
+            "count": 19
+          },
+          {
+            "hex": "#003333",
+            "count": 4
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#eef3ed",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 12
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#008080",
+            "count": 2
+          },
+          {
+            "hex": "#a8a8a8",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#508647",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 7,
+        "uniqueBgColors": 7
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 60
+          },
+          {
+            "size": "16px",
+            "count": 28
+          },
+          {
+            "size": "12px",
+            "count": 16
+          },
+          {
+            "size": "20px",
+            "count": 1
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 95,
+        "gridCount": 1,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 22,
+        "inputs": 10,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 25,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 2,
+        "charts": 0,
+        "emptyStates": 5,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline",
+        "primary"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 10,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "10 input(s) missing label",
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Bundles",
+    "screen": "Bundle bookings — Completed",
+    "submenu": "My Bundles",
+    "url": "https://app.tealfeed.com/bundles/completed",
+    "headings": [
+      "Services",
+      "Manage",
+      "All Bundles",
+      "Therapy Session Bundle",
+      "with Prasiddhi Chaturvediby Aditya Agrawal",
+      "Therapy Session Bundle",
+      "with Prasiddhi Chaturvediby Aditya Agrawal",
+      "Therapy Session Bundle",
+      "with Prasiddhi Chaturvediby Aditya Agrawal",
+      "Therapy Session Bundle",
+      "with Prasiddhi Chaturvediby Aditya Agrawal",
+      "Therapy Session Bundle",
+      "with Prasiddhi Chaturvediby Aditya Agrawal",
+      "Therapy Session Bundle",
+      "with Prasiddhi Chaturvediby Aditya Agrawal",
+      "Therapy Session Bundle",
+      "with Prasiddhi Chaturvediby Aditya Agrawal"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Add new",
+      "Ongoing (0)",
+      "Completed (7)",
+      "Search",
+      "View details"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/bundles/bundle_bookings_completed__full.png",
+    "designAudit": {
+      "module": "Bundles",
+      "screen": "Bundle bookings — Completed",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1e1e1e",
+            "count": 25
+          },
+          {
+            "hex": "#008080",
+            "count": 22
+          },
+          {
+            "hex": "#505050",
+            "count": 19
+          },
+          {
+            "hex": "#003333",
+            "count": 4
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#eef3ed",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 12
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#008080",
+            "count": 2
+          },
+          {
+            "hex": "#a8a8a8",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#508647",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 7,
+        "uniqueBgColors": 7
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 60
+          },
+          {
+            "size": "16px",
+            "count": 28
+          },
+          {
+            "size": "12px",
+            "count": 16
+          },
+          {
+            "size": "20px",
+            "count": 1
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 95,
+        "gridCount": 1,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 22,
+        "inputs": 10,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 25,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 2,
+        "charts": 0,
+        "emptyStates": 5,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline",
+        "primary"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 10,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "10 input(s) missing label",
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Bundles",
+    "screen": "Bundle product list",
+    "submenu": "Manage Bundles",
+    "url": "https://app.tealfeed.com/bundles/manage",
+    "headings": [
+      "Services",
+      "Manage",
+      "Manage Bundles",
+      "Consultation (Follow Up) Bundleby Aditya Agrawal",
+      "4 sessions",
+      "Therapy Session Bundleby Aditya Agrawal",
+      "4 sessions"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Add new",
+      "Search",
+      "Edit Bundle"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/bundles/bundle_product_list__full.png",
+    "designAudit": {
+      "module": "Bundles",
+      "screen": "Bundle product list",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1e1e1e",
+            "count": 25
+          },
+          {
+            "hex": "#008080",
+            "count": 22
+          },
+          {
+            "hex": "#505050",
+            "count": 19
+          },
+          {
+            "hex": "#003333",
+            "count": 4
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#eef3ed",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 12
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#008080",
+            "count": 2
+          },
+          {
+            "hex": "#a8a8a8",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#508647",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 7,
+        "uniqueBgColors": 7
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 60
+          },
+          {
+            "size": "16px",
+            "count": 28
+          },
+          {
+            "size": "12px",
+            "count": 16
+          },
+          {
+            "size": "20px",
+            "count": 1
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 95,
+        "gridCount": 1,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 22,
+        "inputs": 10,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 25,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 2,
+        "charts": 0,
+        "emptyStates": 5,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline",
+        "primary"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 10,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "10 input(s) missing label",
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Events",
+    "screen": "All Events",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/events/manage/upcoming",
+    "headings": [
+      "Services",
+      "Manage",
+      "All Events",
+      "No sessions"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Add new",
+      "Upcoming (0)",
+      "Completed (7)",
+      "Draft (0)",
+      "Deleted (0)",
+      "Unconfirmed (0)",
+      "Search"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/events/all_events__full.png",
+    "designAudit": {
+      "module": "Events",
+      "screen": "All Events",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#008080",
+            "count": 16
+          },
+          {
+            "hex": "#505050",
+            "count": 8
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 7
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#008080",
+            "count": 1
+          },
+          {
+            "hex": "#f9fafb",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 5
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 55
+          },
+          {
+            "size": "16px",
+            "count": 10
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "28px",
+            "count": 1
+          },
+          {
+            "size": "24px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 65,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 17,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 24,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 4,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Events",
+    "screen": "All Events — Upcoming",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/events/manage/upcoming",
+    "headings": [
+      "Services",
+      "Manage",
+      "All Events",
+      "No sessions"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Add new",
+      "Upcoming (0)",
+      "Completed (7)",
+      "Draft (0)",
+      "Deleted (0)",
+      "Unconfirmed (0)",
+      "Search"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/events/all_events_upcoming__full.png",
+    "designAudit": {
+      "module": "Events",
+      "screen": "All Events — Upcoming",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#008080",
+            "count": 16
+          },
+          {
+            "hex": "#505050",
+            "count": 8
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 7
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#008080",
+            "count": 1
+          },
+          {
+            "hex": "#f9fafb",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 5
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 55
+          },
+          {
+            "size": "16px",
+            "count": 10
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "28px",
+            "count": 1
+          },
+          {
+            "size": "24px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 65,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 17,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 24,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 4,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Events",
+    "screen": "All Events — Completed",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/events/manage/completed",
+    "headings": [
+      "Services",
+      "Manage",
+      "All Events",
+      "One to Many",
+      "Projective Pathways Workshop - Day 3 onlyby Aditya Agrawal",
+      "One to Many",
+      "Projective Pathways Workshop Full workshop by Aditya Agrawal",
+      "One to Many",
+      "From Ashes to Action : Quit Tobacco Programby Aditya Agrawal",
+      "One to One",
+      "Vikrant / Aditya Agrawalby Aditya Agrawal",
+      "One to Many",
+      "Projective Pathways Workshop - Day 2 onlyby Aditya Agrawal",
+      "One to Many",
+      "Projective Pathways Workshop - Day 1 onlyby Aditya Agrawal",
+      "One to One",
+      "Prasiddhi Chaturvedi / Aditya Agrawalby Aditya Agrawal"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Add new",
+      "Upcoming (0)",
+      "Completed (7)",
+      "Draft (0)",
+      "Deleted (0)",
+      "Unconfirmed (0)",
+      "Search",
+      "View details"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/events/all_events_completed__full.png",
+    "designAudit": {
+      "module": "Events",
+      "screen": "All Events — Completed",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1e1e1e",
+            "count": 115
+          },
+          {
+            "hex": "#008080",
+            "count": 16
+          },
+          {
+            "hex": "#505050",
+            "count": 13
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 4
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#008080",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 5
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 76
+          },
+          {
+            "size": "16px",
+            "count": 37
+          },
+          {
+            "size": "20px",
+            "count": 21
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 108,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 31,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 73,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 4,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Events",
+    "screen": "All Events — Draft",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/events/manage/draft",
+    "headings": [
+      "Services",
+      "Manage",
+      "All Events",
+      "No sessions"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Add new",
+      "Upcoming (0)",
+      "Completed (7)",
+      "Draft (0)",
+      "Deleted (0)",
+      "Unconfirmed (0)",
+      "Search"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/events/all_events_draft__full.png",
+    "designAudit": {
+      "module": "Events",
+      "screen": "All Events — Draft",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#008080",
+            "count": 16
+          },
+          {
+            "hex": "#505050",
+            "count": 8
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 7
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#008080",
+            "count": 1
+          },
+          {
+            "hex": "#f9fafb",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 5
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 55
+          },
+          {
+            "size": "16px",
+            "count": 10
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "28px",
+            "count": 1
+          },
+          {
+            "size": "24px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 65,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 17,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 24,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 4,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Events",
+    "screen": "All Events — Deleted",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/events/manage/deleted",
+    "headings": [
+      "Services",
+      "Manage",
+      "All Events",
+      "No sessions"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Add new",
+      "Upcoming (0)",
+      "Completed (7)",
+      "Draft (0)",
+      "Deleted (0)",
+      "Unconfirmed (0)",
+      "Search"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/events/all_events_deleted__full.png",
+    "designAudit": {
+      "module": "Events",
+      "screen": "All Events — Deleted",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#008080",
+            "count": 16
+          },
+          {
+            "hex": "#505050",
+            "count": 8
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 7
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#008080",
+            "count": 1
+          },
+          {
+            "hex": "#f9fafb",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 5
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 55
+          },
+          {
+            "size": "16px",
+            "count": 10
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "28px",
+            "count": 1
+          },
+          {
+            "size": "24px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 65,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 17,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 24,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 4,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Events",
+    "screen": "All Events — Unconfirmed",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/events/manage/unconfirmed",
+    "headings": [
+      "Services",
+      "Manage",
+      "All Events",
+      "No sessions"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Add new",
+      "Upcoming (0)",
+      "Completed (7)",
+      "Draft (0)",
+      "Deleted (0)",
+      "Unconfirmed (0)",
+      "Search"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/events/all_events_unconfirmed__full.png",
+    "designAudit": {
+      "module": "Events",
+      "screen": "All Events — Unconfirmed",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#008080",
+            "count": 16
+          },
+          {
+            "hex": "#505050",
+            "count": 8
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 7
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#008080",
+            "count": 1
+          },
+          {
+            "hex": "#f9fafb",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 5
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 55
+          },
+          {
+            "size": "16px",
+            "count": 10
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "28px",
+            "count": 1
+          },
+          {
+            "size": "24px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 65,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 17,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 24,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 4,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Clients",
+    "screen": "Client Panel",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/clients/active?page=1",
+    "headings": [
+      "Services",
+      "Manage",
+      "Client Panel"
+    ],
+    "tabs": [],
+    "tables": [
+      {
+        "headers": [
+          "",
+          "Client Name",
+          "Email",
+          "Follow Up",
+          "Services Bought",
+          "Assigned Members",
+          "Status Beta",
+          "Last Availed",
+          "Revenue Earned",
+          "Actions",
+          ""
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Add New Client",
+      "Add Followup Link",
+      "Select Status",
+      "Update Status (0)",
+      "Client Name",
+      "Email",
+      "Services Bought",
+      "Last Availed",
+      "Revenue Earned",
+      "View Details",
+      "10"
+    ],
+    "flaggedDestructive": [
+      "Export"
+    ],
+    "filters": [],
+    "notes": "",
+    "forms": [
+      {
+        "trigger": "Add New Client",
+        "screenshot": "screenshots/clients/client_panel__form_add_new_client.png",
+        "fieldCount": 2,
+        "fields": [
+          "Enter full name",
+          "Enter email"
+        ]
+      },
+      {
+        "trigger": "Add Followup Link",
+        "screenshot": "screenshots/clients/client_panel__form_add_followup_link.png",
+        "fieldCount": 1,
+        "fields": [
+          "Ex-https://example.com"
+        ]
+      }
+    ],
+    "screenshot": "screenshots/clients/client_panel__full.png",
+    "designAudit": {
+      "module": "Clients",
+      "screen": "Client Panel",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#008080",
+            "count": 20
+          },
+          {
+            "hex": "#505050",
+            "count": 16
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 6
+          },
+          {
+            "hex": "#eef3ed",
+            "count": 3
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 11
+          },
+          {
+            "hex": "#008080",
+            "count": 4
+          },
+          {
+            "hex": "#508647",
+            "count": 3
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#fee2d5",
+            "count": 1
+          },
+          {
+            "hex": "#eedff5",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 6,
+        "uniqueBgColors": 8
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 271
+          },
+          {
+            "size": "12px",
+            "count": 22
+          },
+          {
+            "size": "16px",
+            "count": 18
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700"
+        ],
+        "uniqueFontSizeCount": 4
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 105,
+        "gridCount": 1,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 88,
+        "inputs": 1,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 80,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 12,
+        "charts": 0,
+        "emptyStates": 3,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 1,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "1 input(s) missing label",
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Availability",
+    "screen": "Availability",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/availability/general",
+    "headings": [
+      "Services",
+      "Manage",
+      "Availability",
+      "Selected Dates",
+      "Dates blocked in April:"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "AAAditya AgrawalAditya Agrawal",
+      "General Settings",
+      "Custom Schedules",
+      "India, Sri Lanka Time (Asia/Calcutta)",
+      "Minutes",
+      "All sessions",
+      "Cancel",
+      "Save Changes"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [
+      {
+        "trigger": "Create new",
+        "screenshot": "screenshots/availability/availability__form_create_new.png",
+        "fieldCount": 0,
+        "fields": []
+      }
+    ],
+    "screenshot": "screenshots/availability/availability__full.png",
+    "designAudit": {
+      "module": "Availability",
+      "screen": "Availability",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#8798ad",
+            "count": 50
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 28
+          },
+          {
+            "hex": "#008080",
+            "count": 16
+          },
+          {
+            "hex": "#505050",
+            "count": 11
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 6
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#eef3ed",
+            "count": 1
+          },
+          {
+            "hex": "#a8a8a8",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 8
+          },
+          {
+            "hex": "#008080",
+            "count": 3
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 1
+          },
+          {
+            "hex": "#508647",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 8,
+        "uniqueBgColors": 7
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 116
+          },
+          {
+            "size": "16px",
+            "count": 33
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 4
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 152,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 20,
+        "inputs": 7,
+        "tables": 0,
+        "cards": 0,
+        "modals": 1,
+        "icons": 26,
+        "badges": 0,
+        "tooltips": 1,
+        "dropdowns": 5,
+        "charts": 0,
+        "emptyStates": 6,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 7,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "7 input(s) missing label",
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Availability",
+    "screen": "Availability — General",
+    "submenu": "General Settings",
+    "url": "https://app.tealfeed.com/availability/general",
+    "headings": [
+      "Services",
+      "Manage",
+      "Availability",
+      "Selected Dates",
+      "Dates blocked in April:"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "AAAditya AgrawalAditya Agrawal",
+      "General Settings",
+      "Custom Schedules",
+      "India, Sri Lanka Time (Asia/Calcutta)",
+      "Minutes",
+      "All sessions",
+      "Cancel",
+      "Save Changes"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [
+      {
+        "trigger": "Create new",
+        "screenshot": "screenshots/availability/availability_general__form_create_new.png",
+        "fieldCount": 0,
+        "fields": []
+      }
+    ],
+    "screenshot": "screenshots/availability/availability_general__full.png",
+    "designAudit": {
+      "module": "Availability",
+      "screen": "Availability — General",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#8798ad",
+            "count": 50
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 28
+          },
+          {
+            "hex": "#008080",
+            "count": 16
+          },
+          {
+            "hex": "#505050",
+            "count": 11
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 6
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#eef3ed",
+            "count": 1
+          },
+          {
+            "hex": "#a8a8a8",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 8
+          },
+          {
+            "hex": "#008080",
+            "count": 3
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 1
+          },
+          {
+            "hex": "#508647",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 8,
+        "uniqueBgColors": 7
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 116
+          },
+          {
+            "size": "16px",
+            "count": 33
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 4
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 152,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 20,
+        "inputs": 7,
+        "tables": 0,
+        "cards": 0,
+        "modals": 1,
+        "icons": 26,
+        "badges": 0,
+        "tooltips": 1,
+        "dropdowns": 5,
+        "charts": 0,
+        "emptyStates": 6,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 7,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "7 input(s) missing label",
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Payments",
+    "screen": "Your Earnings",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/payments/earnings/all-booking?page=1",
+    "headings": [
+      "Services",
+      "Manage",
+      "Your Earnings",
+      "Payments Information"
+    ],
+    "tabs": [],
+    "tables": [
+      {
+        "headers": [
+          "Service Title",
+          "Service Type",
+          "Member",
+          "Buyer",
+          "Buyer Email",
+          "Buyer Whatsapp Number",
+          "Bought Date",
+          "Service Date",
+          "Service Time",
+          "Payment Type",
+          "Original Amount",
+          "Amount Paid",
+          "Gross Amount",
+          "PG Charges",
+          "Net Amount",
+          "Deductions",
+          "PG Method",
+          "Coupon Used",
+          "Coupon Discount",
+          "Status of Service",
+          "Payout Status",
+          "Payout At",
+          "No Show",
+          "No Show Date",
+          "Session Reschedule",
+          "Session Cancel",
+          "Transaction Id",
+          "Refund Status",
+          ""
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "All BookingsBeta",
+      "Beta",
+      "All Paid Bookings",
+      "Paid Sessions",
+      "Paid Bundles",
+      "Paid Events",
+      "Date Filter",
+      "Service Title",
+      "Service Type",
+      "Member",
+      "Buyer",
+      "Buyer Email",
+      "Buyer Whatsapp Number",
+      "Bought Date",
+      "Service Date",
+      "Payment Type",
+      "Original Amount",
+      "Amount Paid",
+      "Gross Amount",
+      "PG Charges",
+      "Net Amount",
+      "Deductions",
+      "PG Method",
+      "Coupon Used",
+      "Coupon Discount",
+      "Status of Service",
+      "Payout Status",
+      "Payout At",
+      "No Show",
+      "No Show Date",
+      "Session Reschedule",
+      "Session Cancel",
+      "10",
+      "Mark this as read"
+    ],
+    "flaggedDestructive": [
+      "Export",
+      "Refund Status"
+    ],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/payments/your_earnings__full.png",
+    "designAudit": {
+      "module": "Payments",
+      "screen": "Your Earnings",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#008080",
+            "count": 34
+          },
+          {
+            "hex": "#505050",
+            "count": 24
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 5
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#dbe5f8",
+            "count": 1
+          },
+          {
+            "hex": "#fee2d5",
+            "count": 1
+          },
+          {
+            "hex": "#eedff5",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 8
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 533
+          },
+          {
+            "size": "12px",
+            "count": 58
+          },
+          {
+            "size": "16px",
+            "count": 16
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700"
+        ],
+        "uniqueFontSizeCount": 4
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 102,
+        "gridCount": 1,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 71,
+        "inputs": 1,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 82,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 12,
+        "charts": 0,
+        "emptyStates": 2,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 1,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "1 input(s) missing label",
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Integrations",
+    "screen": "Integrations",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/integrations/add-new/all",
+    "headings": [
+      "Services",
+      "Manage",
+      "Integrations"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "All",
+      "Calendar",
+      "Conferencing",
+      "Communication",
+      "Add New",
+      "Manage",
+      "Connect Account",
+      "Learn More",
+      "Connect"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/integrations/integrations__full.png",
+    "designAudit": {
+      "module": "Integrations",
+      "screen": "Integrations",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#5f6368",
+            "count": 94
+          },
+          {
+            "hex": "#202124",
+            "count": 64
+          },
+          {
+            "hex": "#1a73e8",
+            "count": 6
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#1a73e8",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 3,
+        "uniqueBgColors": 1
+      },
+      "typography": {
+        "fontFamilies": [
+          "arial"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 12
+          },
+          {
+            "size": "12px",
+            "count": 6
+          },
+          {
+            "size": "24px",
+            "count": 1
+          },
+          {
+            "size": "16px",
+            "count": 1
+          },
+          {
+            "size": "13.3333px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "unknown",
+        "flexCount": 10,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 2,
+        "inputs": 9,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 0,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 1,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 9,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 16.1,
+        "bodyColor": "#202124",
+        "bodyBg": "#ffffff"
+      },
+      "consistencyIssues": [
+        "9 input(s) missing label"
+      ]
+    }
+  },
+  {
+    "module": "Integrations",
+    "screen": "All Integrations",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/integrations/add-new/all",
+    "headings": [
+      "Services",
+      "Manage",
+      "Integrations"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "All",
+      "Calendar",
+      "Conferencing",
+      "Communication",
+      "Add New",
+      "Manage",
+      "Connect Account",
+      "Learn More",
+      "Connect"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/integrations/all_integrations__full.png",
+    "designAudit": {
+      "module": "Integrations",
+      "screen": "All Integrations",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#5f6368",
+            "count": 94
+          },
+          {
+            "hex": "#202124",
+            "count": 64
+          },
+          {
+            "hex": "#1a73e8",
+            "count": 6
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#1a73e8",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 3,
+        "uniqueBgColors": 1
+      },
+      "typography": {
+        "fontFamilies": [
+          "arial"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 12
+          },
+          {
+            "size": "12px",
+            "count": 6
+          },
+          {
+            "size": "24px",
+            "count": 1
+          },
+          {
+            "size": "16px",
+            "count": 1
+          },
+          {
+            "size": "13.3333px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "unknown",
+        "flexCount": 10,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 2,
+        "inputs": 9,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 0,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 1,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 9,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 16.1,
+        "bodyColor": "#202124",
+        "bodyBg": "#ffffff"
+      },
+      "consistencyIssues": [
+        "9 input(s) missing label"
+      ]
+    }
+  },
+  {
+    "module": "Calendar",
+    "screen": "Calendar",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/calendar",
+    "headings": [
+      "Services",
+      "Manage",
+      "Calendar"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Today",
+      "Day",
+      "Add Appointment",
+      "Sat18"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/calendar/calendar__full.png",
+    "designAudit": {
+      "module": "Calendar",
+      "screen": "Calendar",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#a8a8a8",
+            "count": 24
+          },
+          {
+            "hex": "#008080",
+            "count": 16
+          },
+          {
+            "hex": "#505050",
+            "count": 9
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 6
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 2
+          },
+          {
+            "hex": "#008080",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 1
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 6,
+        "uniqueBgColors": 6
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 54
+          },
+          {
+            "size": "12px",
+            "count": 29
+          },
+          {
+            "size": "16px",
+            "count": 6
+          },
+          {
+            "size": "14.4px",
+            "count": 2
+          },
+          {
+            "size": "28px",
+            "count": 1
+          },
+          {
+            "size": "20px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 6
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 105,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 19,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 27,
+        "badges": 0,
+        "tooltips": 3,
+        "dropdowns": 2,
+        "charts": 0,
+        "emptyStates": 1,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline",
+        "link"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Calendar",
+    "screen": "Calendar Day/Week view",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/calendar",
+    "headings": [
+      "Services",
+      "Manage",
+      "Calendar"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Today",
+      "Day",
+      "Add Appointment",
+      "Sat18"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/calendar/calendar_day_week_view__full.png",
+    "designAudit": {
+      "module": "Calendar",
+      "screen": "Calendar Day/Week view",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#a8a8a8",
+            "count": 24
+          },
+          {
+            "hex": "#008080",
+            "count": 16
+          },
+          {
+            "hex": "#505050",
+            "count": 9
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 6
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 2
+          },
+          {
+            "hex": "#008080",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 1
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 6,
+        "uniqueBgColors": 6
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 54
+          },
+          {
+            "size": "12px",
+            "count": 29
+          },
+          {
+            "size": "16px",
+            "count": 6
+          },
+          {
+            "size": "14.4px",
+            "count": 2
+          },
+          {
+            "size": "28px",
+            "count": 1
+          },
+          {
+            "size": "20px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 6
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 105,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 19,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 27,
+        "badges": 0,
+        "tooltips": 3,
+        "dropdowns": 2,
+        "charts": 0,
+        "emptyStates": 1,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline",
+        "link"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "Overall Analytics Dashboard",
+    "submenu": "Dashboard > Overall",
+    "url": "https://app.tealfeed.com/admin-panel/dashboard/overall",
+    "headings": [
+      "Settings",
+      "Overall Analytics Dashboard",
+      "Total Earnings",
+      "Earnings on Tealfeed",
+      "Earnings outside Tealfeed",
+      "Total Clients",
+      "Total Sessions Booked",
+      "Total 1-1 Sessions",
+      "Total One-Off Sessions",
+      "Total Event Sessions",
+      "Total Bundles Sold"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "Back to home",
+      "Dashboard",
+      "Segment Analysis",
+      "Team Members",
+      "Payments",
+      "Manage Payout",
+      "Global Defaults",
+      "Form Templates",
+      "Org Settings",
+      "Create new",
+      "Service Type",
+      "Date Filter"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/admin_panel/overall_analytics_dashboard__full.png",
+    "designAudit": {
+      "module": "Admin Panel",
+      "screen": "Overall Analytics Dashboard",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#008080",
+            "count": 51
+          },
+          {
+            "hex": "#505050",
+            "count": 27
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 26
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#e6f2f2",
+            "count": 9
+          },
+          {
+            "hex": "#f9fafb",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 4
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 53
+          },
+          {
+            "size": "20px",
+            "count": 9
+          },
+          {
+            "size": "16px",
+            "count": 3
+          },
+          {
+            "size": "12px",
+            "count": 2
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 61,
+        "gridCount": 1,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 14,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 28,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 7,
+        "charts": 0,
+        "emptyStates": 1,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "outline",
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "Expert Analytics Dashboard",
+    "submenu": "Dashboard > Expert",
+    "url": "https://app.tealfeed.com/admin-panel/dashboard/expert",
+    "headings": [
+      "Settings",
+      "Expert Analytics Dashboard",
+      "Total Earnings",
+      "Earnings on Tealfeed",
+      "Earnings outside Tealfeed",
+      "Total Clients",
+      "Total Sessions Booked",
+      "Total 1-1 Sessions",
+      "Total One-Off Sessions",
+      "Total Event Sessions",
+      "Total Bundles Sold",
+      "Average booking value",
+      "Average Session per Client",
+      "Average Client per month",
+      "Average Session per month",
+      "Cancellation rate per month",
+      "No show per month",
+      "Session Details at Expert Level"
+    ],
+    "tabs": [],
+    "tables": [
+      {
+        "headers": [
+          "Service Title",
+          "Service Type",
+          "Member",
+          "Buyer",
+          "Buyer Email",
+          "Buyer Whatsapp Number",
+          "Bought Date",
+          "Service Date",
+          "Service Time",
+          "Payment Type",
+          "Original Amount",
+          "Amount Paid",
+          "Gross Amount",
+          "PG Charges",
+          "Net Amount",
+          "Deductions",
+          "PG Method",
+          "Coupon Used",
+          "Coupon Discount",
+          "Status of Service",
+          "Payout Status",
+          "Payout At",
+          "No Show",
+          "No Show Date",
+          "Session Reschedule",
+          "Session Cancel",
+          "Transaction Id",
+          "Refund Status",
+          ""
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "Back to home",
+      "Dashboard",
+      "Segment Analysis",
+      "Team Members",
+      "Payments",
+      "Manage Payout",
+      "Global Defaults",
+      "Form Templates",
+      "Org Settings",
+      "Create new",
+      "Service Type",
+      "Date Filter",
+      "Service Title",
+      "Member",
+      "Buyer",
+      "Buyer Email",
+      "Buyer Whatsapp Number",
+      "Bought Date",
+      "Service Date",
+      "Payment Type",
+      "Original Amount",
+      "Amount Paid",
+      "Gross Amount",
+      "PG Charges",
+      "Net Amount",
+      "Deductions",
+      "PG Method",
+      "Coupon Used",
+      "Coupon Discount",
+      "Status of Service",
+      "Payout Status",
+      "Payout At",
+      "No Show",
+      "No Show Date",
+      "Session Reschedule",
+      "Session Cancel",
+      "10"
+    ],
+    "flaggedDestructive": [
+      "Export",
+      "Refund Status"
+    ],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/admin_panel/expert_analytics_dashboard__full.png",
+    "designAudit": {
+      "module": "Admin Panel",
+      "screen": "Expert Analytics Dashboard",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#505050",
+            "count": 33
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 17
+          },
+          {
+            "hex": "#008080",
+            "count": 7
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 6
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 3
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 531
+          },
+          {
+            "size": "12px",
+            "count": 56
+          },
+          {
+            "size": "20px",
+            "count": 15
+          },
+          {
+            "size": "16px",
+            "count": 9
+          },
+          {
+            "size": "28px",
+            "count": 1
+          },
+          {
+            "size": "24px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 6
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 112,
+        "gridCount": 1,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 64,
+        "inputs": 1,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 72,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 18,
+        "charts": 0,
+        "emptyStates": 3,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "outline",
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 1,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "1 input(s) missing label",
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "Segment Filters + Results",
+    "submenu": "Segment Analysis",
+    "url": "https://app.tealfeed.com/admin-panel/segment-analysis",
+    "headings": [
+      "Settings"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "Back to home",
+      "Dashboard",
+      "Segment Analysis",
+      "Team Members",
+      "Payments",
+      "Manage Payout",
+      "Global Defaults",
+      "Form Templates",
+      "Org Settings",
+      "Create new"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/admin_panel/segment_filters_results__full.png",
+    "designAudit": {
+      "module": "Admin Panel",
+      "screen": "Segment Filters + Results",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1e1e1e",
+            "count": 16
+          },
+          {
+            "hex": "#008080",
+            "count": 7
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 4,
+        "uniqueBgColors": 2
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 37
+          },
+          {
+            "size": "16px",
+            "count": 2
+          },
+          {
+            "size": "12px",
+            "count": 2
+          }
+        ],
+        "fontWeights": [
+          "500"
+        ],
+        "uniqueFontSizeCount": 3
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 38,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 12,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 17,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 7,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "outline",
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "Service Categories",
+    "submenu": "Global Defaults > Categories",
+    "url": "https://app.tealfeed.com/admin-panel/global-defaults/categories",
+    "headings": [
+      "Settings",
+      "Categories"
+    ],
+    "tabs": [],
+    "tables": [
+      {
+        "headers": [
+          "Color",
+          "Category",
+          "Description",
+          ""
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "Back to home",
+      "Dashboard",
+      "Segment Analysis",
+      "Team Members",
+      "Payments",
+      "Manage Payout",
+      "Global Defaults",
+      "Form Templates",
+      "Org Settings",
+      "Create new",
+      "Add new",
+      "Category",
+      "10"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [
+      {
+        "trigger": "Add new",
+        "screenshot": "screenshots/admin_panel/service_categories__form_add_new.png",
+        "fieldCount": 3,
+        "fields": [
+          "name",
+          "description",
+          "Beige"
+        ]
+      }
+    ],
+    "screenshot": "screenshots/admin_panel/service_categories__full.png",
+    "designAudit": {
+      "module": "Admin Panel",
+      "screen": "Service Categories",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#008080",
+            "count": 15
+          },
+          {
+            "hex": "#505050",
+            "count": 15
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 5
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 3
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 1
+          },
+          {
+            "hex": "#008080",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 5
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 41
+          },
+          {
+            "size": "12px",
+            "count": 5
+          },
+          {
+            "size": "16px",
+            "count": 3
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700"
+        ],
+        "uniqueFontSizeCount": 4
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 55,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 19,
+        "inputs": 0,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 24,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 3,
+        "charts": 0,
+        "emptyStates": 1,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "outline",
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "Organization Settings",
+    "submenu": "Org Settings",
+    "url": "https://app.tealfeed.com/admin-panel/org-settings",
+    "headings": [
+      "Settings",
+      "Org Settings"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "Back to home",
+      "Dashboard",
+      "Segment Analysis",
+      "Team Members",
+      "Payments",
+      "Manage Payout",
+      "Global Defaults",
+      "Form Templates",
+      "Org Settings",
+      "Create new",
+      "+91",
+      "Connect Google Calendar",
+      "Connect Google Meet",
+      "Request",
+      "30m",
+      "None",
+      "Discard",
+      "Save Changes"
+    ],
+    "flaggedDestructive": [],
+    "filters": [
+      "reschedule.kind",
+      "cancellation.kind"
+    ],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/admin_panel/organization_settings__full.png",
+    "designAudit": {
+      "module": "Admin Panel",
+      "screen": "Organization Settings",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1e1e1e",
+            "count": 53
+          },
+          {
+            "hex": "#505050",
+            "count": 23
+          },
+          {
+            "hex": "#808080",
+            "count": 9
+          },
+          {
+            "hex": "#008080",
+            "count": 7
+          },
+          {
+            "hex": "#004d4d",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 15
+          },
+          {
+            "hex": "#008080",
+            "count": 4
+          },
+          {
+            "hex": "#a8a8a8",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 7,
+        "uniqueBgColors": 5
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 57
+          },
+          {
+            "size": "16px",
+            "count": 46
+          },
+          {
+            "size": "12px",
+            "count": 2
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 4
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 94,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 27,
+        "inputs": 15,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 23,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 11,
+        "charts": 0,
+        "emptyStates": 9,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "outline",
+        "text",
+        "primary"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 15,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "15 input(s) missing label",
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Payments",
+    "screen": "Withdrawals history",
+    "submenu": "Withdrawals",
+    "url": "https://app.tealfeed.com/payments/withdrawls?page=1",
+    "headings": [
+      "Services",
+      "Manage",
+      "Your Withdrawals"
+    ],
+    "tabs": [],
+    "tables": [
+      {
+        "headers": [
+          "Withdrawl Date",
+          "Account Details",
+          "Amount",
+          ""
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Withdrawl Date",
+      "Account Details",
+      "Amount",
+      "10"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/payments/withdrawals_history__full.png",
+    "designAudit": {
+      "module": "Payments",
+      "screen": "Withdrawals history",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#008080",
+            "count": 31
+          },
+          {
+            "hex": "#505050",
+            "count": 15
+          },
+          {
+            "hex": "#004d4d",
+            "count": 10
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 6
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 3
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#dbe5f8",
+            "count": 1
+          },
+          {
+            "hex": "#fee2d5",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 6,
+        "uniqueBgColors": 7
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 133
+          },
+          {
+            "size": "16px",
+            "count": 7
+          },
+          {
+            "size": "12px",
+            "count": 7
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700"
+        ],
+        "uniqueFontSizeCount": 4
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 71,
+        "gridCount": 1,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 20,
+        "inputs": 0,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 33,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 18,
+        "charts": 0,
+        "emptyStates": 1,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Payments",
+    "screen": "Payment Details",
+    "submenu": "Details (Beta)",
+    "url": "https://app.tealfeed.com/payments/details/calls?page=1&sort=startTime.desc",
+    "headings": [
+      "Services",
+      "Manage",
+      "Payment Details"
+    ],
+    "tabs": [],
+    "tables": [
+      {
+        "headers": [
+          "Date & Time",
+          "Service Details",
+          "Amount",
+          "Payment Status",
+          "Session Type",
+          "Actions"
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Events",
+      "Date Filter",
+      "Payment Status",
+      "Session Status",
+      "Session Type",
+      "Clear Filters",
+      "Date & Time",
+      "10"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/payments/payment_details__full.png",
+    "designAudit": {
+      "module": "Payments",
+      "screen": "Payment Details",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1e1e1e",
+            "count": 33
+          },
+          {
+            "hex": "#505050",
+            "count": 30
+          },
+          {
+            "hex": "#008080",
+            "count": 16
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 7
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 4
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 85
+          },
+          {
+            "size": "16px",
+            "count": 9
+          },
+          {
+            "size": "12px",
+            "count": 5
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700"
+        ],
+        "uniqueFontSizeCount": 4
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 84,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 24,
+        "inputs": 0,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 33,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 9,
+        "charts": 0,
+        "emptyStates": 4,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Payments",
+    "screen": "Coupon management",
+    "submenu": "Coupons",
+    "url": "https://app.tealfeed.com/payments/coupons/active?page=1",
+    "headings": [
+      "Services",
+      "Manage",
+      "Coupons"
+    ],
+    "tabs": [],
+    "tables": [
+      {
+        "headers": [
+          "Coupon Name",
+          "Coupon Code",
+          "Discount",
+          "Apply On",
+          "Times Used",
+          "Usage Limit",
+          "Start Date",
+          "Expiry Date",
+          ""
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "Add New",
+      "Active",
+      "Inactive",
+      "Coupon Name",
+      "Coupon Code",
+      "Discount",
+      "Apply On",
+      "Times Used",
+      "Usage Limit",
+      "Start Date",
+      "Expiry Date",
+      "10"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/payments/coupon_management__full.png",
+    "designAudit": {
+      "module": "Payments",
+      "screen": "Coupon management",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#505050",
+            "count": 25
+          },
+          {
+            "hex": "#008080",
+            "count": 15
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 14
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 7
+          },
+          {
+            "hex": "#008080",
+            "count": 6
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 5
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 59
+          },
+          {
+            "size": "16px",
+            "count": 45
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "20px",
+            "count": 1
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 109,
+        "gridCount": 4,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 23,
+        "inputs": 4,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 22,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 2,
+        "charts": 0,
+        "emptyStates": 4,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "text",
+        "outline",
+        "primary"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 4,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "4 input(s) missing label",
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "My Blogs",
+    "screen": "Published Articles",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/myblogs/published",
+    "headings": [
+      "Services",
+      "Manage",
+      "Published Articles",
+      "No articles found"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "1-1 Connect",
+      "Bundles",
+      "Clients",
+      "Availability",
+      "Payments",
+      "Integrations",
+      "My Blogs",
+      "Create new",
+      "New Article"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/my_blogs/published_articles__full.png",
+    "designAudit": {
+      "module": "My Blogs",
+      "screen": "Published Articles",
+      "colors": {
+        "topTextColors": [],
+        "topBgColors": [],
+        "uniqueTextColors": 0,
+        "uniqueBgColors": 0
+      },
+      "typography": {
+        "fontFamilies": [],
+        "topFontSizes": [],
+        "fontWeights": [],
+        "uniqueFontSizeCount": 0
+      },
+      "layout": {
+        "type": "unknown",
+        "flexCount": 0,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 0,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 0,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 0,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "404",
+    "submenu": "—",
+    "url": "https://app.tealfeed.com/admin",
+    "headings": [
+      "404",
+      "This page could not be found."
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/admin_panel/404__full.png",
+    "designAudit": {
+      "module": "Admin Panel",
+      "screen": "404",
+      "colors": {
+        "topTextColors": [],
+        "topBgColors": [],
+        "uniqueTextColors": 0,
+        "uniqueBgColors": 0
+      },
+      "typography": {
+        "fontFamilies": [
+          "system-ui"
+        ],
+        "topFontSizes": [
+          {
+            "size": "24px",
+            "count": 1
+          },
+          {
+            "size": "14px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500"
+        ],
+        "uniqueFontSizeCount": 2
+      },
+      "layout": {
+        "type": "unknown",
+        "flexCount": 2,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 0,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 0,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 0,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 21,
+        "bodyColor": "#000000",
+        "bodyBg": "#ffffff"
+      },
+      "consistencyIssues": []
+    }
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "Team Members",
+    "submenu": "Team Members",
+    "url": "https://app.tealfeed.com/admin-panel/members/active?page=1",
+    "headings": [
+      "Settings",
+      "Team Members"
+    ],
+    "tabs": [],
+    "tables": [
+      {
+        "headers": [
+          "Member Name",
+          "Email",
+          "Access Role",
+          ""
+        ]
+      }
+    ],
+    "actionsAvailable": [
+      "Back to home",
+      "Dashboard",
+      "Segment Analysis",
+      "Team Members",
+      "Payments",
+      "Manage Payout",
+      "Global Defaults",
+      "Form Templates",
+      "Org Settings",
+      "Create new",
+      "Invite Member",
+      "Active",
+      "Invited",
+      "Member Name",
+      "Email",
+      "Access Role",
+      "10"
+    ],
+    "flaggedDestructive": [
+      "Export"
+    ],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/admin_panel/team_members__full.png",
+    "designAudit": {
+      "module": "Admin Panel",
+      "screen": "Team Members",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1e1e1e",
+            "count": 22
+          },
+          {
+            "hex": "#505050",
+            "count": 16
+          },
+          {
+            "hex": "#008080",
+            "count": 8
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 4
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#008080",
+            "count": 1
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 5
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 74
+          },
+          {
+            "size": "16px",
+            "count": 10
+          },
+          {
+            "size": "12px",
+            "count": 5
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700"
+        ],
+        "uniqueFontSizeCount": 4
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 68,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 26,
+        "inputs": 1,
+        "tables": 1,
+        "cards": 0,
+        "modals": 0,
+        "icons": 29,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 11,
+        "charts": 0,
+        "emptyStates": 2,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "outline",
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 1,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "1 input(s) missing label",
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "Payment Gateways",
+    "submenu": "Payments > Payment Gateways",
+    "url": "https://app.tealfeed.com/admin-panel/payment-methods/list",
+    "headings": [
+      "Settings",
+      "Payment Gateways"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "Back to home",
+      "Dashboard",
+      "Segment Analysis",
+      "Team Members",
+      "Payments",
+      "Manage Payout",
+      "Global Defaults",
+      "Form Templates",
+      "Org Settings",
+      "Create new",
+      "Learn More",
+      "Manage",
+      "Install"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/admin_panel/payment_gateways__full.png",
+    "designAudit": {
+      "module": "Admin Panel",
+      "screen": "Payment Gateways",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1e1e1e",
+            "count": 29
+          },
+          {
+            "hex": "#008080",
+            "count": 18
+          },
+          {
+            "hex": "#505050",
+            "count": 4
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 1
+          },
+          {
+            "hex": "#006908",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 3
+          },
+          {
+            "hex": "#008080",
+            "count": 2
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 1
+          },
+          {
+            "hex": "#d7f7c2",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 6,
+        "uniqueBgColors": 6
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 46
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "16px",
+            "count": 3
+          },
+          {
+            "size": "20px",
+            "count": 3
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700",
+          "600"
+        ],
+        "uniqueFontSizeCount": 5
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 61,
+        "gridCount": 1,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 18,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 21,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 7,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "outline",
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "Deductions",
+    "submenu": "Payments > Deductions",
+    "url": "https://app.tealfeed.com/admin-panel/payment-methods/deductions",
+    "headings": [
+      "Settings",
+      "Deductions"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "Back to home",
+      "Dashboard",
+      "Segment Analysis",
+      "Team Members",
+      "Payments",
+      "Manage Payout",
+      "Global Defaults",
+      "Form Templates",
+      "Org Settings",
+      "Create new",
+      "Add New"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [
+      {
+        "trigger": "Add New",
+        "screenshot": "screenshots/admin_panel/deductions__form_add_new.png",
+        "fieldCount": 2,
+        "fields": [
+          "Enter deduction name (e.g., Tax, Service Charge)",
+          "Enter percentage (e.g., 10)"
+        ]
+      }
+    ],
+    "screenshot": "screenshots/admin_panel/deductions__full.png",
+    "designAudit": {
+      "module": "Admin Panel",
+      "screen": "Deductions",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#008080",
+            "count": 15
+          },
+          {
+            "hex": "#505050",
+            "count": 2
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 1
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 1
+          },
+          {
+            "hex": "#008080",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 5,
+        "uniqueBgColors": 4
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 30
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "16px",
+            "count": 2
+          },
+          {
+            "size": "28px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "700"
+        ],
+        "uniqueFontSizeCount": 4
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 41,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 13,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 18,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 1,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "outline",
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "Payment Statuses",
+    "submenu": "Payments > Statuses (Beta)",
+    "url": "https://app.tealfeed.com/admin-panel/payment-methods/statuses",
+    "headings": [
+      "Settings"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "Back to home",
+      "Dashboard",
+      "Segment Analysis",
+      "Team Members",
+      "Payments",
+      "Manage Payout",
+      "Global Defaults",
+      "Form Templates",
+      "Org Settings",
+      "Create new"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/admin_panel/payment_statuses__full.png",
+    "designAudit": {
+      "module": "Admin Panel",
+      "screen": "Payment Statuses",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#1e1e1e",
+            "count": 16
+          },
+          {
+            "hex": "#008080",
+            "count": 15
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#004d4d",
+            "count": 1
+          },
+          {
+            "hex": "#e6f2f2",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 4,
+        "uniqueBgColors": 3
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 40
+          },
+          {
+            "size": "12px",
+            "count": 4
+          },
+          {
+            "size": "16px",
+            "count": 2
+          }
+        ],
+        "fontWeights": [
+          "500"
+        ],
+        "uniqueFontSizeCount": 3
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 44,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 12,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 19,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 7,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "outline",
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "Manage Payout",
+    "submenu": "Manage Payout",
+    "url": "https://app.tealfeed.com/admin-panel/payout/manage",
+    "headings": [
+      "404",
+      "This page could not be found."
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/admin_panel/manage_payout__full.png",
+    "designAudit": {
+      "module": "Admin Panel",
+      "screen": "Manage Payout",
+      "colors": {
+        "topTextColors": [],
+        "topBgColors": [],
+        "uniqueTextColors": 0,
+        "uniqueBgColors": 0
+      },
+      "typography": {
+        "fontFamilies": [
+          "system-ui"
+        ],
+        "topFontSizes": [
+          {
+            "size": "24px",
+            "count": 1
+          },
+          {
+            "size": "14px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500"
+        ],
+        "uniqueFontSizeCount": 2
+      },
+      "layout": {
+        "type": "unknown",
+        "flexCount": 2,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 0,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 0,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 0,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 21,
+        "bodyColor": "#000000",
+        "bodyBg": "#ffffff"
+      },
+      "consistencyIssues": []
+    }
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "Session/notification templates",
+    "submenu": "Global Defaults > Templates",
+    "url": "https://app.tealfeed.com/admin-panel/global-defaults/templates",
+    "headings": [
+      "404",
+      "This page could not be found."
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/admin_panel/session_notification_templates__full.png",
+    "designAudit": {
+      "module": "Admin Panel",
+      "screen": "Session/notification templates",
+      "colors": {
+        "topTextColors": [],
+        "topBgColors": [],
+        "uniqueTextColors": 0,
+        "uniqueBgColors": 0
+      },
+      "typography": {
+        "fontFamilies": [
+          "system-ui"
+        ],
+        "topFontSizes": [
+          {
+            "size": "24px",
+            "count": 1
+          },
+          {
+            "size": "14px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500"
+        ],
+        "uniqueFontSizeCount": 2
+      },
+      "layout": {
+        "type": "unknown",
+        "flexCount": 2,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 0,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 0,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 0,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 21,
+        "bodyColor": "#000000",
+        "bodyBg": "#ffffff"
+      },
+      "consistencyIssues": []
+    }
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "Client Settings",
+    "submenu": "Global Defaults > Client Settings (Beta)",
+    "url": "https://app.tealfeed.com/admin-panel/global-defaults/client-settings",
+    "headings": [
+      "404",
+      "This page could not be found."
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/admin_panel/client_settings__full.png",
+    "designAudit": {
+      "module": "Admin Panel",
+      "screen": "Client Settings",
+      "colors": {
+        "topTextColors": [],
+        "topBgColors": [],
+        "uniqueTextColors": 0,
+        "uniqueBgColors": 0
+      },
+      "typography": {
+        "fontFamilies": [
+          "system-ui"
+        ],
+        "topFontSizes": [
+          {
+            "size": "24px",
+            "count": 1
+          },
+          {
+            "size": "14px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500"
+        ],
+        "uniqueFontSizeCount": 2
+      },
+      "layout": {
+        "type": "unknown",
+        "flexCount": 2,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 0,
+        "inputs": 0,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 0,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 0,
+        "charts": 0,
+        "emptyStates": 0,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 0,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 21,
+        "bodyColor": "#000000",
+        "bodyBg": "#ffffff"
+      },
+      "consistencyIssues": []
+    }
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "Form Template library",
+    "submenu": "Form Templates",
+    "url": "https://app.tealfeed.com/admin-panel/forms/templates",
+    "headings": [
+      "Settings",
+      "No templates created yet"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "Back to home",
+      "Dashboard",
+      "Segment Analysis",
+      "Team Members",
+      "Payments",
+      "Manage Payout",
+      "Global Defaults",
+      "Form Templates",
+      "Org Settings",
+      "Create new",
+      "Create Your First Template"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/admin_panel/form_template_library__full.png",
+    "designAudit": {
+      "module": "Admin Panel",
+      "screen": "Form Template library",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#505050",
+            "count": 157
+          },
+          {
+            "hex": "#a8a8a8",
+            "count": 12
+          },
+          {
+            "hex": "#008080",
+            "count": 7
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 1
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 13
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#008080",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 6,
+        "uniqueBgColors": 3
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 43
+          },
+          {
+            "size": "18px",
+            "count": 3
+          },
+          {
+            "size": "12px",
+            "count": 2
+          },
+          {
+            "size": "16px",
+            "count": 1
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "600"
+        ],
+        "uniqueFontSizeCount": 4
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 71,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 28,
+        "inputs": 2,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 30,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 1,
+        "charts": 0,
+        "emptyStates": 2,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "outline",
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 2,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "2 input(s) missing label",
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  },
+  {
+    "module": "Admin Panel",
+    "screen": "Form Builder",
+    "submenu": "Form Builder",
+    "url": "https://app.tealfeed.com/admin-panel/forms/builder",
+    "headings": [
+      "Settings",
+      "Form Elements",
+      "Start building your form"
+    ],
+    "tabs": [],
+    "tables": [],
+    "actionsAvailable": [
+      "Back to home",
+      "Dashboard",
+      "Segment Analysis",
+      "Team Members",
+      "Payments",
+      "Manage Payout",
+      "Global Defaults",
+      "Form Templates",
+      "Org Settings",
+      "Create new",
+      "Back",
+      "Preview",
+      "Save as Draft",
+      "Publish",
+      "Text InputSingle line text",
+      "EmailEmail address",
+      "NumberNumeric input",
+      "Text AreaMultiple line text",
+      "DropdownSelect from options",
+      "Radio ButtonsSingle choice",
+      "CheckboxesMultiple choices",
+      "DateDate picker",
+      "TimeTime picker",
+      "Linear ScaleScale from 1-10",
+      "Multiple Choice GridGrid with radio options",
+      "Checkbox GridGrid with checkboxes"
+    ],
+    "flaggedDestructive": [],
+    "filters": [],
+    "notes": "",
+    "forms": [],
+    "screenshot": "screenshots/admin_panel/form_builder__full.png",
+    "designAudit": {
+      "module": "Admin Panel",
+      "screen": "Form Builder",
+      "colors": {
+        "topTextColors": [
+          {
+            "hex": "#505050",
+            "count": 157
+          },
+          {
+            "hex": "#1e1e1e",
+            "count": 17
+          },
+          {
+            "hex": "#a8a8a8",
+            "count": 12
+          },
+          {
+            "hex": "#008080",
+            "count": 7
+          },
+          {
+            "hex": "#c3e5e5",
+            "count": 1
+          },
+          {
+            "hex": "#dfdfdf",
+            "count": 1
+          }
+        ],
+        "topBgColors": [
+          {
+            "hex": "#f9fafb",
+            "count": 13
+          },
+          {
+            "hex": "#031e1e",
+            "count": 1
+          },
+          {
+            "hex": "#008080",
+            "count": 1
+          }
+        ],
+        "uniqueTextColors": 6,
+        "uniqueBgColors": 3
+      },
+      "typography": {
+        "fontFamilies": [
+          "__Inter_f367f3"
+        ],
+        "topFontSizes": [
+          {
+            "size": "14px",
+            "count": 54
+          },
+          {
+            "size": "16px",
+            "count": 3
+          },
+          {
+            "size": "18px",
+            "count": 3
+          },
+          {
+            "size": "12px",
+            "count": 2
+          }
+        ],
+        "fontWeights": [
+          "500",
+          "600"
+        ],
+        "uniqueFontSizeCount": 4
+      },
+      "layout": {
+        "type": "sidebar + main",
+        "flexCount": 77,
+        "gridCount": 0,
+        "cardPaddings": []
+      },
+      "components": {
+        "buttons": 28,
+        "inputs": 2,
+        "tables": 0,
+        "cards": 0,
+        "modals": 0,
+        "icons": 31,
+        "badges": 0,
+        "tooltips": 0,
+        "dropdowns": 7,
+        "charts": 0,
+        "emptyStates": 2,
+        "loadingSpinner": 0
+      },
+      "buttonVariants": [
+        "outline",
+        "text"
+      ],
+      "accessibility": {
+        "imgsMissingAlt": 0,
+        "inputsMissingLabel": 2,
+        "interactivesMissingRole": 0,
+        "bodyContrastRatio": 1,
+        "bodyColor": "#000000",
+        "bodyBg": "#000000"
+      },
+      "consistencyIssues": [
+        "2 input(s) missing label",
+        "Body text contrast ratio 1.00 below WCAG AA (4.5)"
+      ]
+    }
+  }
+]

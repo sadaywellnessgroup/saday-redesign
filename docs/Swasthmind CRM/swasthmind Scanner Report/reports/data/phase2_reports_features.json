@@ -1,0 +1,1802 @@
+[
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "Conversations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "My Schedule",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "My Therapists",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "Manual Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "Sessions",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "Assessments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "My Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "Reports",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "Seminars",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "Internships/Career",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "Ecommerce",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "Cancellation & Reschedule Policy",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "Session Follow-ups",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "FAQ & Tutorials",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "Bulk Messages",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "Sr no",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "SS-4",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "SS-3",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "SS-2",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "SS-1",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "SS-46",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "SS-45",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "SS-44",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "Reports",
+    "subCapability": "SS-43",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "Conversations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "My Schedule",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "My Therapists",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "Manual Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "Sessions",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "Assessments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "My Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "Reports",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "Seminars",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "Internships/Career",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "Ecommerce",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "Cancellation & Reschedule Policy",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "Session Follow-ups",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "FAQ & Tutorials",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "Bulk Messages",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "Sr no",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "SS-4",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "SS-3",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "SS-2",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "SS-1",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "SS-46",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "SS-45",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "SS-44",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-4",
+    "subCapability": "SS-43",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "Conversations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "My Schedule",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "My Therapists",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "Manual Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "Sessions",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "Assessments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "My Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "Reports",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "Seminars",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "Internships/Career",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "Ecommerce",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "Cancellation & Reschedule Policy",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "Session Follow-ups",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "FAQ & Tutorials",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "Bulk Messages",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "Sr no",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "SS-4",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "SS-3",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "SS-2",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "SS-1",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "SS-46",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "SS-45",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "SS-44",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-3",
+    "subCapability": "SS-43",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "Conversations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "My Schedule",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "My Therapists",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "Manual Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "Sessions",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "Assessments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "My Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "Reports",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "Seminars",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "Internships/Career",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "Ecommerce",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "Cancellation & Reschedule Policy",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "Session Follow-ups",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "FAQ & Tutorials",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "Bulk Messages",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "Sr no",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "SS-4",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "SS-3",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "SS-2",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "SS-1",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "SS-46",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "SS-45",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "SS-44",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-2",
+    "subCapability": "SS-43",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "Conversations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "My Schedule",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "My Therapists",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "Manual Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "Sessions",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "Assessments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "My Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "Reports",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "Seminars",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "Internships/Career",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "Ecommerce",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "Cancellation & Reschedule Policy",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "Session Follow-ups",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "FAQ & Tutorials",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "Bulk Messages",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "Sr no",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "SS-4",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "SS-3",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "SS-2",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "SS-1",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "SS-46",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "SS-45",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "SS-44",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-1",
+    "subCapability": "SS-43",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "Conversations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "My Schedule",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "My Therapists",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "Manual Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "Sessions",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "Assessments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "My Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "Reports",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "Seminars",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "Internships/Career",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "Ecommerce",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "Cancellation & Reschedule Policy",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "Session Follow-ups",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "FAQ & Tutorials",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "Bulk Messages",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "Sr no",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "SS-4",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "SS-3",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "SS-2",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "SS-1",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "SS-46",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "SS-45",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "SS-44",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-46",
+    "subCapability": "SS-43",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "Conversations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "My Schedule",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "My Therapists",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "Manual Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "Sessions",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "Assessments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "My Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "Reports",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "Seminars",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "Internships/Career",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "Ecommerce",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "Cancellation & Reschedule Policy",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "Session Follow-ups",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "FAQ & Tutorials",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "Bulk Messages",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "Sr no",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "SS-4",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "SS-3",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "SS-2",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "SS-1",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "SS-46",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "SS-45",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "SS-44",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-45",
+    "subCapability": "SS-43",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "Conversations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "My Schedule",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "My Therapists",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "Manual Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "Sessions",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "Assessments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "My Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "Reports",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "Seminars",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "Internships/Career",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "Ecommerce",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "Cancellation & Reschedule Policy",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "Session Follow-ups",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "FAQ & Tutorials",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "Bulk Messages",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "Sr no",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "SS-4",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "SS-3",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "SS-2",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "SS-1",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "SS-46",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "SS-45",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "SS-44",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-44",
+    "subCapability": "SS-43",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "Dashboard",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "Conversations",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "My Schedule",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "My Therapists",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "Manual Booking",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "Sessions",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "Assessments",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "My Clients",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "Reports",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "Seminars",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "Internships/Career",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "Ecommerce",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "Cancellation & Reschedule Policy",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "Session Follow-ups",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "FAQ & Tutorials",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "Bulk Messages",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "Sr no",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "SS-4",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "SS-3",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "SS-2",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "SS-1",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "SS-46",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "SS-45",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "SS-44",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  },
+  {
+    "module": "Reports",
+    "feature": "SS-43",
+    "subCapability": "SS-43",
+    "present": "Yes",
+    "quality": "",
+    "notes": ""
+  }
+]
