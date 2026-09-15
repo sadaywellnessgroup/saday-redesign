@@ -1,3 +1,23 @@
 node_modules/
 .claude
 saday-main.html
+# Playwright storage state — live session cookies, never commit
+scanner/.session*
+web
+docs/MantraCare/screenshots/
+*.zip
+.DS_Store
+
+# Secrets / environment — never commit
+.env
+.env.*
+*.key
+*.pem
+
+# Logs
+*.log
+
+# Editor / OS junk
+.idea/
+*.swp
+Thumbs.db

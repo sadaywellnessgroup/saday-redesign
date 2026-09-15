@@ -1,0 +1,541 @@
+{
+  "capturedAt": "2026-09-15T04:02:36.502Z",
+  "source": "https://provider.mantracare.com/tools/prescription → Medicine → Add",
+  "count": 68,
+  "rows": [
+    {
+      "raw": "Prozac Fluoxetine Hydrochloride (20 mg) tablet by Eli Lilly",
+      "brand": "Prozac",
+      "ingredient": "Fluoxetine Hydrochloride",
+      "strength": "20 mg",
+      "form": "tablet",
+      "maker": "Eli Lilly"
+    },
+    {
+      "raw": "Zoloft Sertraline Hydrochloride (50 mg) tablet by Pfizer",
+      "brand": "Zoloft",
+      "ingredient": "Sertraline Hydrochloride",
+      "strength": "50 mg",
+      "form": "tablet",
+      "maker": "Pfizer"
+    },
+    {
+      "raw": "Cipralex Escitalopram Oxalate (10 mg) tablet by Lundbeck",
+      "brand": "Cipralex",
+      "ingredient": "Escitalopram Oxalate",
+      "strength": "10 mg",
+      "form": "tablet",
+      "maker": "Lundbeck"
+    },
+    {
+      "raw": "Elavil Amitriptyline Hydrochloride (25 mg) tablet by Sandoz",
+      "brand": "Elavil",
+      "ingredient": "Amitriptyline Hydrochloride",
+      "strength": "25 mg",
+      "form": "tablet",
+      "maker": "Sandoz"
+    },
+    {
+      "raw": "Paxil Sertraline Hydrochloride (20 mg) tablet by GlaxoSmithKline",
+      "brand": "Paxil",
+      "ingredient": "Sertraline Hydrochloride",
+      "strength": "20 mg",
+      "form": "tablet",
+      "maker": "GlaxoSmithKline"
+    },
+    {
+      "raw": "Effexor Fluoxetine Hydrochloride (75 mg) tablet by Pfizer",
+      "brand": "Effexor",
+      "ingredient": "Fluoxetine Hydrochloride",
+      "strength": "75 mg",
+      "form": "tablet",
+      "maker": "Pfizer"
+    },
+    {
+      "raw": "Cymbalta Escitalopram Oxalate (30 mg) tablet by Eli Lilly",
+      "brand": "Cymbalta",
+      "ingredient": "Escitalopram Oxalate",
+      "strength": "30 mg",
+      "form": "tablet",
+      "maker": "Eli Lilly"
+    },
+    {
+      "raw": "Remeron Amitriptyline Hydrochloride (15 mg) tablet by Organon",
+      "brand": "Remeron",
+      "ingredient": "Amitriptyline Hydrochloride",
+      "strength": "15 mg",
+      "form": "tablet",
+      "maker": "Organon"
+    },
+    {
+      "raw": "Desyrel Paroxetine Hydrochloride (50 mg) tablet by Pfizer",
+      "brand": "Desyrel",
+      "ingredient": "Paroxetine Hydrochloride",
+      "strength": "50 mg",
+      "form": "tablet",
+      "maker": "Pfizer"
+    },
+    {
+      "raw": "Celexa Venlafaxine Hydrochloride (20 mg) tablet by Forest Laboratories",
+      "brand": "Celexa",
+      "ingredient": "Venlafaxine Hydrochloride",
+      "strength": "20 mg",
+      "form": "tablet",
+      "maker": "Forest Laboratories"
+    },
+    {
+      "raw": "Luvox Duloxetine Hydrochloride (50 mg) tablet by Solvay",
+      "brand": "Luvox",
+      "ingredient": "Duloxetine Hydrochloride",
+      "strength": "50 mg",
+      "form": "tablet",
+      "maker": "Solvay"
+    },
+    {
+      "raw": "Wellbutrin Mirtazapine (150 mg) tablet by GlaxoSmithKline",
+      "brand": "Wellbutrin",
+      "ingredient": "Mirtazapine",
+      "strength": "150 mg",
+      "form": "tablet",
+      "maker": "GlaxoSmithKline"
+    },
+    {
+      "raw": "Pristiq Trazodone Hydrochloride (50 mg) tablet by Wyeth",
+      "brand": "Pristiq",
+      "ingredient": "Trazodone Hydrochloride",
+      "strength": "50 mg",
+      "form": "tablet",
+      "maker": "Wyeth"
+    },
+    {
+      "raw": "Anafranil Citalopram Hydrobromide (25 mg) tablet by Novartis",
+      "brand": "Anafranil",
+      "ingredient": "Citalopram Hydrobromide",
+      "strength": "25 mg",
+      "form": "tablet",
+      "maker": "Novartis"
+    },
+    {
+      "raw": "Valdoxan Fluvoxamine Maleate (25 mg) tablet by Servier",
+      "brand": "Valdoxan",
+      "ingredient": "Fluvoxamine Maleate",
+      "strength": "25 mg",
+      "form": "tablet",
+      "maker": "Servier"
+    },
+    {
+      "raw": "Trintellix Bupropion Hydrochloride (10 mg) tablet by Lundbeck",
+      "brand": "Trintellix",
+      "ingredient": "Bupropion Hydrochloride",
+      "strength": "10 mg",
+      "form": "tablet",
+      "maker": "Lundbeck"
+    },
+    {
+      "raw": "Prozac Sertraline Hydrochloride (20 mg) tablet by Eli Lilly",
+      "brand": "Prozac",
+      "ingredient": "Sertraline Hydrochloride",
+      "strength": "20 mg",
+      "form": "tablet",
+      "maker": "Eli Lilly"
+    },
+    {
+      "raw": "Zoloft Desvenlafaxine (50 mg) tablet by Pfizer",
+      "brand": "Zoloft",
+      "ingredient": "Desvenlafaxine",
+      "strength": "50 mg",
+      "form": "tablet",
+      "maker": "Pfizer"
+    },
+    {
+      "raw": "Cipralex Clomipramine Hydrochloride (10 mg) tablet by Lundbeck",
+      "brand": "Cipralex",
+      "ingredient": "Clomipramine Hydrochloride",
+      "strength": "10 mg",
+      "form": "tablet",
+      "maker": "Lundbeck"
+    },
+    {
+      "raw": "Elavil Mirtazapine (25 mg) tablet by Sandoz",
+      "brand": "Elavil",
+      "ingredient": "Mirtazapine",
+      "strength": "25 mg",
+      "form": "tablet",
+      "maker": "Sandoz"
+    },
+    {
+      "raw": "Paxil Agomelatine (20 mg) tablet by GlaxoSmithKline",
+      "brand": "Paxil",
+      "ingredient": "Agomelatine",
+      "strength": "20 mg",
+      "form": "tablet",
+      "maker": "GlaxoSmithKline"
+    },
+    {
+      "raw": "Effexor Vortioxetine Hydrobromide (75 mg) tablet by Pfizer",
+      "brand": "Effexor",
+      "ingredient": "Vortioxetine Hydrobromide",
+      "strength": "75 mg",
+      "form": "tablet",
+      "maker": "Pfizer"
+    },
+    {
+      "raw": "Cymbalta Amitriptyline Hydrochloride (30 mg) tablet by Eli Lilly",
+      "brand": "Cymbalta",
+      "ingredient": "Amitriptyline Hydrochloride",
+      "strength": "30 mg",
+      "form": "tablet",
+      "maker": "Eli Lilly"
+    },
+    {
+      "raw": "Remeron Escitalopram Oxalate (15 mg) tablet by Organon",
+      "brand": "Remeron",
+      "ingredient": "Escitalopram Oxalate",
+      "strength": "15 mg",
+      "form": "tablet",
+      "maker": "Organon"
+    },
+    {
+      "raw": "Desyrel Sertraline Hydrochloride (50 mg) tablet by Pfizer",
+      "brand": "Desyrel",
+      "ingredient": "Sertraline Hydrochloride",
+      "strength": "50 mg",
+      "form": "tablet",
+      "maker": "Pfizer"
+    },
+    {
+      "raw": "Celexa Fluoxetine Hydrochloride (20 mg) tablet by Forest Laboratories",
+      "brand": "Celexa",
+      "ingredient": "Fluoxetine Hydrochloride",
+      "strength": "20 mg",
+      "form": "tablet",
+      "maker": "Forest Laboratories"
+    },
+    {
+      "raw": "Luvox Paroxetine Hydrochloride (50 mg) tablet by Solvay",
+      "brand": "Luvox",
+      "ingredient": "Paroxetine Hydrochloride",
+      "strength": "50 mg",
+      "form": "tablet",
+      "maker": "Solvay"
+    },
+    {
+      "raw": "Wellbutrin Venlafaxine Hydrochloride (150 mg) tablet by GlaxoSmithKline",
+      "brand": "Wellbutrin",
+      "ingredient": "Venlafaxine Hydrochloride",
+      "strength": "150 mg",
+      "form": "tablet",
+      "maker": "GlaxoSmithKline"
+    },
+    {
+      "raw": "Pristiq Bupropion Hydrochloride (50 mg) tablet by Wyeth",
+      "brand": "Pristiq",
+      "ingredient": "Bupropion Hydrochloride",
+      "strength": "50 mg",
+      "form": "tablet",
+      "maker": "Wyeth"
+    },
+    {
+      "raw": "Anafranil Fluvoxamine Maleate (25 mg) tablet by Novartis",
+      "brand": "Anafranil",
+      "ingredient": "Fluvoxamine Maleate",
+      "strength": "25 mg",
+      "form": "tablet",
+      "maker": "Novartis"
+    },
+    {
+      "raw": "Remeron Citalopram Hydrobromide (15 mg) tablet by Organon",
+      "brand": "Remeron",
+      "ingredient": "Citalopram Hydrobromide",
+      "strength": "15 mg",
+      "form": "tablet",
+      "maker": "Organon"
+    },
+    {
+      "raw": "Valdoxan Agomelatine (25 mg) tablet by Servier",
+      "brand": "Valdoxan",
+      "ingredient": "Agomelatine",
+      "strength": "25 mg",
+      "form": "tablet",
+      "maker": "Servier"
+    },
+    {
+      "raw": "Trintellix Mirtazapine (10 mg) tablet by Lundbeck",
+      "brand": "Trintellix",
+      "ingredient": "Mirtazapine",
+      "strength": "10 mg",
+      "form": "tablet",
+      "maker": "Lundbeck"
+    },
+    {
+      "raw": "Elavil Trazodone Hydrochloride (25 mg) tablet by Sandoz",
+      "brand": "Elavil",
+      "ingredient": "Trazodone Hydrochloride",
+      "strength": "25 mg",
+      "form": "tablet",
+      "maker": "Sandoz"
+    },
+    {
+      "raw": "Cipralex Vortioxetine Hydrobromide (10 mg) tablet by Lundbeck",
+      "brand": "Cipralex",
+      "ingredient": "Vortioxetine Hydrobromide",
+      "strength": "10 mg",
+      "form": "tablet",
+      "maker": "Lundbeck"
+    },
+    {
+      "raw": "Zoloft Amitriptyline Hydrochloride (50 mg) tablet by Pfizer",
+      "brand": "Zoloft",
+      "ingredient": "Amitriptyline Hydrochloride",
+      "strength": "50 mg",
+      "form": "tablet",
+      "maker": "Pfizer"
+    },
+    {
+      "raw": "Prozac Sertraline Hydrochloride (20 mg) tablet by Eli Lilly",
+      "brand": "Prozac",
+      "ingredient": "Sertraline Hydrochloride",
+      "strength": "20 mg",
+      "form": "tablet",
+      "maker": "Eli Lilly"
+    },
+    {
+      "raw": "Paxil Metformin Hydrochloride (20 mg) tablet by GlaxoSmithKline",
+      "brand": "Paxil",
+      "ingredient": "Metformin Hydrochloride",
+      "strength": "20 mg",
+      "form": "tablet",
+      "maker": "GlaxoSmithKline"
+    },
+    {
+      "raw": "Effexor Sitagliptin Phosphate (75 mg) tablet by Pfizer",
+      "brand": "Effexor",
+      "ingredient": "Sitagliptin Phosphate",
+      "strength": "75 mg",
+      "form": "tablet",
+      "maker": "Pfizer"
+    },
+    {
+      "raw": "Wellbutrin Glibenclamide (150 mg) tablet by GlaxoSmithKline",
+      "brand": "Wellbutrin",
+      "ingredient": "Glibenclamide",
+      "strength": "150 mg",
+      "form": "tablet",
+      "maker": "GlaxoSmithKline"
+    },
+    {
+      "raw": "Luvox Gliclazide (50 mg) tablet by Solvay",
+      "brand": "Luvox",
+      "ingredient": "Gliclazide",
+      "strength": "50 mg",
+      "form": "tablet",
+      "maker": "Solvay"
+    },
+    {
+      "raw": "Celexa Insulin Glargine (20 mg) tablet by Forest Laboratories",
+      "brand": "Celexa",
+      "ingredient": "Insulin Glargine",
+      "strength": "20 mg",
+      "form": "tablet",
+      "maker": "Forest Laboratories"
+    },
+    {
+      "raw": "Valdoxan Insulin Aspart (25 mg) tablet by Servier",
+      "brand": "Valdoxan",
+      "ingredient": "Insulin Aspart",
+      "strength": "25 mg",
+      "form": "tablet",
+      "maker": "Servier"
+    },
+    {
+      "raw": "Remeron Pioglitazone Hydrochloride (15 mg) tablet by Organon",
+      "brand": "Remeron",
+      "ingredient": "Pioglitazone Hydrochloride",
+      "strength": "15 mg",
+      "form": "tablet",
+      "maker": "Organon"
+    },
+    {
+      "raw": "Desyrel Repaglinide (50 mg) tablet by Pfizer",
+      "brand": "Desyrel",
+      "ingredient": "Repaglinide",
+      "strength": "50 mg",
+      "form": "tablet",
+      "maker": "Pfizer"
+    },
+    {
+      "raw": "Trintellix Acarbose (10 mg) tablet by Lundbeck",
+      "brand": "Trintellix",
+      "ingredient": "Acarbose",
+      "strength": "10 mg",
+      "form": "tablet",
+      "maker": "Lundbeck"
+    },
+    {
+      "raw": "Elavil Dapagliflozin (25 mg) tablet by Sandoz",
+      "brand": "Elavil",
+      "ingredient": "Dapagliflozin",
+      "strength": "25 mg",
+      "form": "tablet",
+      "maker": "Sandoz"
+    },
+    {
+      "raw": "Zoloft Empagliflozin (50 mg) tablet by Pfizer",
+      "brand": "Zoloft",
+      "ingredient": "Empagliflozin",
+      "strength": "50 mg",
+      "form": "tablet",
+      "maker": "Pfizer"
+    },
+    {
+      "raw": "Mazetol 200 Carbamazepine (200 mg) tablet by Sun Pharma",
+      "brand": "Mazetol 200",
+      "ingredient": "Carbamazepine",
+      "strength": "200 mg",
+      "form": "tablet",
+      "maker": "Sun Pharma"
+    },
+    {
+      "raw": "Tegretol 200 Carbamazepine (200 mg) tablet by Novartis",
+      "brand": "Tegretol 200",
+      "ingredient": "Carbamazepine",
+      "strength": "200 mg",
+      "form": "tablet",
+      "maker": "Novartis"
+    },
+    {
+      "raw": "Topamate 25 Topiramate (25 mg) tablet by Cipla",
+      "brand": "Topamate 25",
+      "ingredient": "Topiramate",
+      "strength": "25 mg",
+      "form": "tablet",
+      "maker": "Cipla"
+    },
+    {
+      "raw": "Inderal 40 Propranolol Hydrochloride (40 mg) tablet by AstraZeneca",
+      "brand": "Inderal 40",
+      "ingredient": "Propranolol Hydrochloride",
+      "strength": "40 mg",
+      "form": "tablet",
+      "maker": "AstraZeneca"
+    },
+    {
+      "raw": "Vitamin B12 1500 Methylcobalamin (1500 mcg) tablet by Cipla",
+      "brand": "Vitamin B12 1500",
+      "ingredient": "Methylcobalamin",
+      "strength": "1500 mcg",
+      "form": "tablet",
+      "maker": "Cipla"
+    },
+    {
+      "raw": "Magnesium 250 Magnesium Oxide (250 mg) tablet by Sun Pharma",
+      "brand": "Magnesium 250",
+      "ingredient": "Magnesium Oxide",
+      "strength": "250 mg",
+      "form": "tablet",
+      "maker": "Sun Pharma"
+    },
+    {
+      "raw": "Arip MT 10 Aripiprazole (10 mg) tablet by Sun Pharma",
+      "brand": "Arip MT 10",
+      "ingredient": "Aripiprazole",
+      "strength": "10 mg",
+      "form": "tablet",
+      "maker": "Sun Pharma"
+    },
+    {
+      "raw": "Abilify 10 Aripiprazole (10 mg) tablet by Otsuka",
+      "brand": "Abilify 10",
+      "ingredient": "Aripiprazole",
+      "strength": "10 mg",
+      "form": "tablet",
+      "maker": "Otsuka"
+    },
+    {
+      "raw": "Sizopin 25 Clozapine (25 mg) tablet by Sun Pharma",
+      "brand": "Sizopin 25",
+      "ingredient": "Clozapine",
+      "strength": "25 mg",
+      "form": "tablet",
+      "maker": "Sun Pharma"
+    },
+    {
+      "raw": "Paliperidone 3 Paliperidone (3 mg) tablet by Janssen",
+      "brand": "Paliperidone 3",
+      "ingredient": "Paliperidone",
+      "strength": "3 mg",
+      "form": "tablet",
+      "maker": "Janssen"
+    },
+    {
+      "raw": "Dulane 30 Duloxetine Hydrochloride (30 mg) tablet by Sun Pharma",
+      "brand": "Dulane 30",
+      "ingredient": "Duloxetine Hydrochloride",
+      "strength": "30 mg",
+      "form": "tablet",
+      "maker": "Sun Pharma"
+    },
+    {
+      "raw": "Cymbalta 30 Duloxetine Hydrochloride (30 mg) tablet by Eli Lilly",
+      "brand": "Cymbalta 30",
+      "ingredient": "Duloxetine Hydrochloride",
+      "strength": "30 mg",
+      "form": "tablet",
+      "maker": "Eli Lilly"
+    },
+    {
+      "raw": "Agomelatine 25 Agomelatine (25 mg) tablet by Servier",
+      "brand": "Agomelatine 25",
+      "ingredient": "Agomelatine",
+      "strength": "25 mg",
+      "form": "tablet",
+      "maker": "Servier"
+    },
+    {
+      "raw": "Modalert 100 Modafinil (100 mg) tablet by Sun Pharma",
+      "brand": "Modalert 100",
+      "ingredient": "Modafinil",
+      "strength": "100 mg",
+      "form": "tablet",
+      "maker": "Sun Pharma"
+    },
+    {
+      "raw": "Vortioxetine 10 Vortioxetine Hydrobromide (10 mg) tablet by Lundbeck",
+      "brand": "Vortioxetine 10",
+      "ingredient": "Vortioxetine Hydrobromide",
+      "strength": "10 mg",
+      "form": "tablet",
+      "maker": "Lundbeck"
+    },
+    {
+      "raw": "Tofranil 25 Imipramine Hydrochloride (25 mg) tablet by Novartis",
+      "brand": "Tofranil 25",
+      "ingredient": "Imipramine Hydrochloride",
+      "strength": "25 mg",
+      "form": "tablet",
+      "maker": "Novartis"
+    },
+    {
+      "raw": "Lithosun SR 400 Lithium Carbonate (SR) (400 mg) tablet by Sun Pharma"
+    },
+    {
+      "raw": "Oxcarbazepine 300 Oxcarbazepine (300 mg) tablet by Novartis",
+      "brand": "Oxcarbazepine 300",
+      "ingredient": "Oxcarbazepine",
+      "strength": "300 mg",
+      "form": "tablet",
+      "maker": "Novartis"
+    },
+    {
+      "raw": "Folic Acid 1mg Folic Acid (1 mg) tablet by Sun Pharma",
+      "brand": "Folic Acid 1mg",
+      "ingredient": "Folic Acid",
+      "strength": "1 mg",
+      "form": "tablet",
+      "maker": "Sun Pharma"
+    },
+    {
+      "raw": "Magnesium L-Threonate Magnesium L-Threonate (2000 mg) tablet by Sun Pharma"
+    }
+  ]
+}
