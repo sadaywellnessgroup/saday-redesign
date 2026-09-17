@@ -1,0 +1,82 @@
+{
+  "code": "ASRS_V1_1",
+  "name": "Adult ADHD Self-Report Scale (ASRS-v1.1) Symptom Checklist",
+  "version": "1.1",
+  "languages": ["en"],
+  "administeredBy": "either",
+  "sourceCitation": "Kessler et al. / World Health Organization (2005). Rate yourself on each item over the past 6 months.",
+  "licenceNote": "WHO — free for clinical use.",
+  "items": [
+    { "id": "asrs_1", "textEn": "How often do you have trouble wrapping up the final details of a project, once the challenging parts have been done?", "part": "A", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_2", "textEn": "How often do you have difficulty getting things in order when you have to do a task that requires organization?", "part": "A", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_3", "textEn": "How often do you have problems remembering appointments or obligations?", "part": "A", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_4", "textEn": "When you have a task that requires a lot of thought, how often do you avoid or delay getting started?", "part": "A", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_5", "textEn": "How often do you fidget or squirm with your hands or feet when you have to sit down for a long time?", "part": "A", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_6", "textEn": "How often do you feel overly active and compelled to do things, like you were driven by a motor?", "part": "A", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_7", "textEn": "How often do you make careless mistakes when you have to work on a boring or difficult project?", "part": "B", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_8", "textEn": "How often do you have difficulty keeping your attention when you are doing boring or repetitive work?", "part": "B", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_9", "textEn": "How often do you have difficulty concentrating on what people say to you, even when they are speaking to you directly?", "part": "B", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_10", "textEn": "How often do you misplace or have difficulty finding things at home or at work?", "part": "B", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_11", "textEn": "How often are you distracted by activity or noise around you?", "part": "B", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_12", "textEn": "How often do you leave your seat in meetings or other situations in which you are expected to remain seated?", "part": "B", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_13", "textEn": "How often do you feel restless or fidgety?", "part": "B", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_14", "textEn": "How often do you have difficulty unwinding and relaxing when you have time to yourself?", "part": "B", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_15", "textEn": "How often do you find yourself talking too much when you are in social situations?", "part": "B", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_16", "textEn": "When you’re in a conversation, how often do you find yourself finishing the sentences of the people you are talking to, before they can finish them themselves?", "part": "B", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_17", "textEn": "How often do you have difficulty waiting your turn in situations when turn taking is required?", "part": "B", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] },
+    { "id": "asrs_18", "textEn": "How often do you interrupt others when they are busy?", "part": "B", "options": [
+      { "value": 0, "labelEn": "Never" }, { "value": 1, "labelEn": "Rarely" }, { "value": 2, "labelEn": "Sometimes" }, { "value": 3, "labelEn": "Often" }, { "value": 4, "labelEn": "Very often" } ] }
+  ],
+  "scoring": {
+    "method": "sum",
+    "total": { "min": 0, "max": 72 },
+    "subscales": [
+      {
+        "id": "inattention",
+        "labelEn": "Inattention",
+        "itemIds": ["asrs_1", "asrs_2", "asrs_3", "asrs_4", "asrs_7", "asrs_8", "asrs_9", "asrs_10", "asrs_11"],
+        "method": "threshold_count",
+        "thresholds": { "asrs_1": 2, "asrs_2": 2, "asrs_3": 2, "asrs_4": 3, "asrs_7": 3, "asrs_8": 3, "asrs_9": 2, "asrs_10": 3, "asrs_11": 3 }
+      },
+      {
+        "id": "hyperactivity_impulsivity",
+        "labelEn": "Hyperactivity–impulsivity",
+        "itemIds": ["asrs_5", "asrs_6", "asrs_12", "asrs_13", "asrs_14", "asrs_15", "asrs_16", "asrs_17", "asrs_18"],
+        "method": "threshold_count",
+        "thresholds": { "asrs_5": 3, "asrs_6": 3, "asrs_12": 2, "asrs_13": 3, "asrs_14": 3, "asrs_15": 3, "asrs_16": 2, "asrs_17": 3, "asrs_18": 2 }
+      }
+    ],
+    "screenRule": {
+      "type": "threshold_count",
+      "itemThresholds": { "asrs_1": 2, "asrs_2": 2, "asrs_3": 2, "asrs_4": 3, "asrs_5": 3, "asrs_6": 3 },
+      "positiveAt": 4,
+      "labelEn": "Part A: 4 or more of the 6 shaded items — positive screen (out of 6)"
+    },
+    "remission": null,
+    "response": {
+      "type": "percent_of_baseline",
+      "fraction": 0.7,
+      "note": "ASRS total 30% drop from baseline (adult ADHD trial convention, per ROADMAP.md licence/monitoring table). No validated remission cut-off — the milestone is functioning rated none or mild."
+    }
+  },
+  "bands": [
+    { "min": 0, "max": 72, "labelEn": "No validated severity band — see the Part A screen result", "color": "minimal" }
+  ]
+}

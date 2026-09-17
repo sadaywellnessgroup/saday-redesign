@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{{title}} — Saday Wellness</title>
+<style>
+@page {
+    size: A4;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Saday Sans', 'Saday Sans Fallback', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #2A2320;
+    background: #fff;
+}
+
+@font-face {
+    font-family: 'Saday Sans';
+    src: url('{{muktaRegularSrc}}') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Saday Sans';
+    src: url('{{muktaBoldSrc}}') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Saday Serif';
+    src: url('{{frauncesBoldSrc}}') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.page {
+    width: 210mm;
+    height: 297mm;
+    position: relative;
+    background-color: #FAF5EC;
+    overflow: hidden;
+}
+
+/* The Canva canvas covers the full A4 page. Header/footer sit on top,
+   in the safe margins the canvases were designed with. */
+.canvas-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    z-index: 1;
+    display: block;
+}
+
+/* HEADER — generic Saday identity only. No doctor name/photo/registration
+   (D-006: materials are generic-branded for V1, not doctor-individualised). */
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 22mm;
+    padding: 0 12mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    background: #3E2A78;
+}
+
+.header-logo-chip {
+    display: flex;
+    align-items: center;
+    background: #FFFDF6;
+    border-radius: 10px;
+    padding: 6px 14px;
+    flex-shrink: 0;
+}
+
+.header-logo-chip img {
+    height: 30px;
+    width: auto;
+    display: block;
+}
+
+.header-wordmark {
+    text-align: right;
+    line-height: 1.25;
+}
+
+.header-wordmark .brand {
+    font-family: 'Saday Serif', serif;
+    font-size: 15pt;
+    font-weight: 700;
+    color: #FFFDF6;
+    letter-spacing: 0.2px;
+}
+
+.header-wordmark .tagline {
+    font-family: 'Saday Sans', sans-serif;
+    font-size: 8pt;
+    font-weight: 400;
+    color: rgba(255, 253, 246, 0.82);
+    margin-top: 1mm;
+}
+
+/* FOOTER — bottom 8mm, transparent over the canvas's own cream ground. */
+.footer-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 8mm;
+    padding: 0 12mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    background: transparent;
+    font-family: 'Saday Sans', sans-serif;
+    font-size: 7.5pt;
+    font-weight: 400;
+    color: #2A2320;
+    letter-spacing: 0.1px;
+}
+
+.footer-overlay .dot {
+    margin: 0 6px;
+    opacity: 0.6;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+    <img class="canvas-img" src="{{canvasSrc}}" alt="{{title}}">
+
+    <div class="header-overlay">
+        <div class="header-logo-chip">
+            <img src="{{logoSrc}}" alt="Saday Wellness">
+        </div>
+        <div class="header-wordmark">
+            <div class="brand">Saday Wellness</div>
+            <div class="tagline">Online consultation &amp; therapy</div>
+        </div>
+    </div>
+
+    <div class="footer-overlay">
+        <span>sadaywellness.com</span>
+        <span class="dot">&middot;</span>
+        <span>Online consultation &amp; therapy</span>
+        <span class="dot">&middot;</span>
+        <span>{{code}}</span>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+{
+  "code": "PHQ9",
+  "name": "Patient Health Questionnaire-9 (PHQ-9)",
+  "version": "1.0",
+  "languages": ["en", "hi"],
+  "administeredBy": "self",
+  "sourceCitation": "Kroenke, Spitzer & Williams (2001). Hindi (India) translation — Pfizer.",
+  "licenceNote": "Pfizer — free to use, no permission required. Official Hindi (India) version. The Hindi item text below was transcribed from a page image (the source PDF's text layer is unreadable) — Saday must proofread it against the original Pfizer Hindi PHQ-9 before clinic use.",
+  "items": [
+    {
+      "id": "phq9_1",
+      "textEn": "Little interest or pleasure in doing things",
+      "textHi": "कुछ करने में बहुत कम दिलचस्पी या मज़ा आना",
+      "options": [
+        { "value": 0, "labelEn": "Not at all", "labelHi": "बिल्कुल नहीं" },
+        { "value": 1, "labelEn": "Several days", "labelHi": "कई दिन" },
+        { "value": 2, "labelEn": "More than half the number of days", "labelHi": "आधे से अधिक दिन" },
+        { "value": 3, "labelEn": "Almost every day", "labelHi": "लगभग हर दिन" }
+      ]
+    },
+    {
+      "id": "phq9_2",
+      "textEn": "Feeling down, depressed, or hopeless",
+      "textHi": "उदास, अवसादग्रस्त या निराश महसूस करना",
+      "options": [
+        { "value": 0, "labelEn": "Not at all", "labelHi": "बिल्कुल नहीं" },
+        { "value": 1, "labelEn": "Several days", "labelHi": "कई दिन" },
+        { "value": 2, "labelEn": "More than half the number of days", "labelHi": "आधे से अधिक दिन" },
+        { "value": 3, "labelEn": "Almost every day", "labelHi": "लगभग हर दिन" }
+      ]
+    },
+    {
+      "id": "phq9_3",
+      "textEn": "Trouble falling or staying asleep, or sleeping too much",
+      "textHi": "नींद आने या सोये रहने में परेशानी, या फिर बहुत अधिक सोना",
+      "options": [
+        { "value": 0, "labelEn": "Not at all", "labelHi": "बिल्कुल नहीं" },
+        { "value": 1, "labelEn": "Several days", "labelHi": "कई दिन" },
+        { "value": 2, "labelEn": "More than half the number of days", "labelHi": "आधे से अधिक दिन" },
+        { "value": 3, "labelEn": "Almost every day", "labelHi": "लगभग हर दिन" }
+      ]
+    },
+    {
+      "id": "phq9_4",
+      "textEn": "Feeling tired or having little energy",
+      "textHi": "थकान महसूस करना या बहुत कम ऊर्जा होना",
+      "options": [
+        { "value": 0, "labelEn": "Not at all", "labelHi": "बिल्कुल नहीं" },
+        { "value": 1, "labelEn": "Several days", "labelHi": "कई दिन" },
+        { "value": 2, "labelEn": "More than half the number of days", "labelHi": "आधे से अधिक दिन" },
+        { "value": 3, "labelEn": "Almost every day", "labelHi": "लगभग हर दिन" }
+      ]
+    },
+    {
+      "id": "phq9_5",
+      "textEn": "Poor appetite or overeating",
+      "textHi": "भूख कम लगना या ज़्यादा खाना",
+      "options": [
+        { "value": 0, "labelEn": "Not at all", "labelHi": "बिल्कुल नहीं" },
+        { "value": 1, "labelEn": "Several days", "labelHi": "कई दिन" },
+        { "value": 2, "labelEn": "More than half the number of days", "labelHi": "आधे से अधिक दिन" },
+        { "value": 3, "labelEn": "Almost every day", "labelHi": "लगभग हर दिन" }
+      ]
+    },
+    {
+      "id": "phq9_6",
+      "textEn": "Feeling bad about yourself — or that you are a failure or have let yourself down or your family down",
+      "textHi": "अपने बारे में बुरा महसूस करना - या ऐसा महसूस करना कि आप नाकाम इंसान हैं और आपने खुद को और अपने परिवार को नीचा दिखाया है",
+      "options": [
+        { "value": 0, "labelEn": "Not at all", "labelHi": "बिल्कुल नहीं" },
+        { "value": 1, "labelEn": "Several days", "labelHi": "कई दिन" },
+        { "value": 2, "labelEn": "More than half the number of days", "labelHi": "आधे से अधिक दिन" },
+        { "value": 3, "labelEn": "Almost every day", "labelHi": "लगभग हर दिन" }
+      ]
+    },
+    {
+      "id": "phq9_7",
+      "textEn": "Trouble concentrating on things, such as reading the newspaper or watching television",
+      "textHi": "अखबार पढ़ने या टेलीविज़न देखने जैसी चीज़ों पर ध्यान देने में परेशानी",
+      "options": [
+        { "value": 0, "labelEn": "Not at all", "labelHi": "बिल्कुल नहीं" },
+        { "value": 1, "labelEn": "Several days", "labelHi": "कई दिन" },
+        { "value": 2, "labelEn": "More than half the number of days", "labelHi": "आधे से अधिक दिन" },
+        { "value": 3, "labelEn": "Almost every day", "labelHi": "लगभग हर दिन" }
+      ]
+    },
+    {
+      "id": "phq9_8",
+      "textEn": "Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual",
+      "textHi": "इतना धीमे चलना-फिरना या बोलना कि लोगों का ध्यान जाये? या इसका उल्टा - इतना अस्थिर या बेचैन होना कि आप सामान्य से काफ़ी ज़्यादा हिलते-डुलते और चलते-फिरते रहे हैं",
+      "options": [
+        { "value": 0, "labelEn": "Not at all", "labelHi": "बिल्कुल नहीं" },
+        { "value": 1, "labelEn": "Several days", "labelHi": "कई दिन" },
+        { "value": 2, "labelEn": "More than half the number of days", "labelHi": "आधे से अधिक दिन" },
+        { "value": 3, "labelEn": "Almost every day", "labelHi": "लगभग हर दिन" }
+      ]
+    },
+    {
+      "id": "phq9_9",
+      "textEn": "Thoughts that you would be better off dead or of hurting yourself in some way",
+      "textHi": "ऐसे विचार कि आप मर जाते तो अच्छा होता या किसी ढंग से ख़ुद को नुक्सान पहुंचाना",
+      "options": [
+        { "value": 0, "labelEn": "Not at all", "labelHi": "बिल्कुल नहीं" },
+        { "value": 1, "labelEn": "Several days", "labelHi": "कई दिन" },
+        { "value": 2, "labelEn": "More than half the number of days", "labelHi": "आधे से अधिक दिन" },
+        { "value": 3, "labelEn": "Almost every day", "labelHi": "लगभग हर दिन" }
+      ]
+    }
+  ],
+  "scoring": {
+    "method": "sum",
+    "total": { "min": 0, "max": 27 },
+    "safetyItemIds": ["phq9_9"],
+    "remission": { "type": "total_lt", "value": 5 },
+    "response": { "type": "percent_of_baseline", "fraction": 0.5, "note": "PHQ-9 at half of baseline or lower (ABC360 depression tracker)." }
+  },
+  "bands": [
+    { "min": 0, "max": 4, "labelEn": "Minimal", "labelHi": "न्यूनतम", "color": "minimal" },
+    { "min": 5, "max": 9, "labelEn": "Mild", "labelHi": "हल्का", "color": "mild" },
+    { "min": 10, "max": 14, "labelEn": "Moderate", "labelHi": "मध्यम", "color": "moderate" },
+    { "min": 15, "max": 19, "labelEn": "Moderately severe", "labelHi": "मध्यम रूप से गंभीर", "color": "moderately_severe" },
+    { "min": 20, "max": 27, "labelEn": "Severe", "labelHi": "गंभीर", "color": "severe" }
+  ]
+}

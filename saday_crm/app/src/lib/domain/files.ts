@@ -36,6 +36,16 @@ export interface MaterialLibraryItem {
   tags: string[];
   kind: MaterialKind;
   storagePath: string | null;
+  /** Public-facing preview image for the library grid/list, e.g.
+   * "/materials/thumbs/mood-tracker.jpg" under app/public. Null when the
+   * material has no rendered thumbnail (e.g. an external link). */
+  thumbnailPath: string | null;
+  /** Page count for a PDF-backed material; null when not applicable
+   * (external link, video) or not yet known (brochure placeholder). */
+  pages: number | null;
+  /** File size in bytes for a storagePath-backed material; null when not
+   * applicable or not yet known. */
+  bytes: number | null;
   externalUrl: string | null;
   isActive: boolean;
   createdAt: ISODateTime;

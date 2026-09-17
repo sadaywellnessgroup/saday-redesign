@@ -1,0 +1,101 @@
+{
+  "code": "GAD7",
+  "name": "Generalized Anxiety Disorder-7 (GAD-7)",
+  "version": "1.0",
+  "languages": ["en", "hi"],
+  "administeredBy": "self",
+  "sourceCitation": "Spitzer, Kroenke, Williams & Löwe (2006). Hindi (India) translation — Pfizer.",
+  "licenceNote": "Pfizer — free to use, no permission required. Official Hindi (India) version. The Hindi item text below was transcribed from a page image (the source PDF's text layer is unreadable) — Saday must proofread it against the original Pfizer Hindi GAD-7 before clinic use.",
+  "items": [
+    {
+      "id": "gad7_1",
+      "textEn": "Feeling nervous, anxious or on edge",
+      "textHi": "बेचैनी, चिंता या तनाव महसूस करना",
+      "options": [
+        { "value": 0, "labelEn": "Not at all", "labelHi": "बिल्कुल नहीं" },
+        { "value": 1, "labelEn": "Several days", "labelHi": "कई दिनों तक" },
+        { "value": 2, "labelEn": "More than half the days", "labelHi": "आधे से ज्यादा दिनों तक" },
+        { "value": 3, "labelEn": "Nearly every day", "labelHi": "लगभग रोज़ाना" }
+      ]
+    },
+    {
+      "id": "gad7_2",
+      "textEn": "Not being able to stop or control worrying",
+      "textHi": "चिंता रोकने या नियंत्रित कर सकने में असफल रहना",
+      "options": [
+        { "value": 0, "labelEn": "Not at all", "labelHi": "बिल्कुल नहीं" },
+        { "value": 1, "labelEn": "Several days", "labelHi": "कई दिनों तक" },
+        { "value": 2, "labelEn": "More than half the days", "labelHi": "आधे से ज्यादा दिनों तक" },
+        { "value": 3, "labelEn": "Nearly every day", "labelHi": "लगभग रोज़ाना" }
+      ]
+    },
+    {
+      "id": "gad7_3",
+      "textEn": "Worrying too much about different things",
+      "textHi": "विभिन्न चीज़ों के लिए बहुत ज्यादा चिंता करना",
+      "options": [
+        { "value": 0, "labelEn": "Not at all", "labelHi": "बिल्कुल नहीं" },
+        { "value": 1, "labelEn": "Several days", "labelHi": "कई दिनों तक" },
+        { "value": 2, "labelEn": "More than half the days", "labelHi": "आधे से ज्यादा दिनों तक" },
+        { "value": 3, "labelEn": "Nearly every day", "labelHi": "लगभग रोज़ाना" }
+      ]
+    },
+    {
+      "id": "gad7_4",
+      "textEn": "Trouble relaxing",
+      "textHi": "आराम करने मे परेशानी",
+      "options": [
+        { "value": 0, "labelEn": "Not at all", "labelHi": "बिल्कुल नहीं" },
+        { "value": 1, "labelEn": "Several days", "labelHi": "कई दिनों तक" },
+        { "value": 2, "labelEn": "More than half the days", "labelHi": "आधे से ज्यादा दिनों तक" },
+        { "value": 3, "labelEn": "Nearly every day", "labelHi": "लगभग रोज़ाना" }
+      ]
+    },
+    {
+      "id": "gad7_5",
+      "textEn": "Being so restless that it is hard to sit still",
+      "textHi": "इतनी ज्यादा बेचैनी, कि स्थिर बैठना मुश्किल हो जाता है",
+      "options": [
+        { "value": 0, "labelEn": "Not at all", "labelHi": "बिल्कुल नहीं" },
+        { "value": 1, "labelEn": "Several days", "labelHi": "कई दिनों तक" },
+        { "value": 2, "labelEn": "More than half the days", "labelHi": "आधे से ज्यादा दिनों तक" },
+        { "value": 3, "labelEn": "Nearly every day", "labelHi": "लगभग रोज़ाना" }
+      ]
+    },
+    {
+      "id": "gad7_6",
+      "textEn": "Becoming easily annoyed or irritable",
+      "textHi": "आसानी से चिढ़ना या खिजना",
+      "options": [
+        { "value": 0, "labelEn": "Not at all", "labelHi": "बिल्कुल नहीं" },
+        { "value": 1, "labelEn": "Several days", "labelHi": "कई दिनों तक" },
+        { "value": 2, "labelEn": "More than half the days", "labelHi": "आधे से ज्यादा दिनों तक" },
+        { "value": 3, "labelEn": "Nearly every day", "labelHi": "लगभग रोज़ाना" }
+      ]
+    },
+    {
+      "id": "gad7_7",
+      "textEn": "Feeling afraid as if something awful might happen",
+      "textHi": "डर महसूस होना कि शायद कुछ बहुत बुरा हो सकता है",
+      "options": [
+        { "value": 0, "labelEn": "Not at all", "labelHi": "बिल्कुल नहीं" },
+        { "value": 1, "labelEn": "Several days", "labelHi": "कई दिनों तक" },
+        { "value": 2, "labelEn": "More than half the days", "labelHi": "आधे से ज्यादा दिनों तक" },
+        { "value": 3, "labelEn": "Nearly every day", "labelHi": "लगभग रोज़ाना" }
+      ]
+    }
+  ],
+  "scoring": {
+    "method": "sum",
+    "total": { "min": 0, "max": 21 },
+    "screenRule": { "type": "total_cutoff", "value": 10, "labelEn": "10 or more: probable anxiety disorder — confirm at interview" },
+    "remission": { "type": "total_lt", "value": 5 },
+    "response": { "type": "percent_of_baseline", "fraction": 0.5, "note": "GAD-7 at half of baseline or lower (ABC360 anxiety tracker)." }
+  },
+  "bands": [
+    { "min": 0, "max": 4, "labelEn": "Minimal", "labelHi": "न्यूनतम", "color": "minimal" },
+    { "min": 5, "max": 9, "labelEn": "Mild", "labelHi": "हल्का", "color": "mild" },
+    { "min": 10, "max": 14, "labelEn": "Moderate", "labelHi": "मध्यम", "color": "moderate" },
+    { "min": 15, "max": 21, "labelEn": "Severe", "labelHi": "गंभीर", "color": "severe" }
+  ]
+}

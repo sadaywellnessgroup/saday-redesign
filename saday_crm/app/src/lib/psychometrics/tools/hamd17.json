@@ -1,0 +1,198 @@
+{
+  "code": "HAMD17",
+  "name": "Hamilton Depression Rating Scale (HAM-D-17)",
+  "version": "1.0",
+  "languages": ["en"],
+  "administeredBy": "clinician",
+  "sourceCitation": "Hamilton (1960). Ratings based on symptoms over the past one week, from a clinical interview.",
+  "licenceNote": "Public domain.",
+  "items": [
+    {
+      "id": "hamd_1",
+      "textEn": "Depressed mood (sadness, hopeless, helpless, worthless)",
+      "options": [
+        { "value": 0, "labelEn": "Absent" },
+        { "value": 1, "labelEn": "These feeling states indicated only on questioning" },
+        { "value": 2, "labelEn": "These feeling states spontaneously reported verbally" },
+        { "value": 3, "labelEn": "Communicates feeling states non-verbally, i.e. through facial expression, posture, voice and tendency to weep" },
+        { "value": 4, "labelEn": "Patient reports virtually only these feeling states in his/her spontaneous verbal and non-verbal communication" }
+      ]
+    },
+    {
+      "id": "hamd_2",
+      "textEn": "Feelings of guilt",
+      "options": [
+        { "value": 0, "labelEn": "Absent" },
+        { "value": 1, "labelEn": "Self reproach, feels he/she has let people down" },
+        { "value": 2, "labelEn": "Ideas of guilt or rumination over past errors or sinful deeds" },
+        { "value": 3, "labelEn": "Present illness is a punishment. Delusions of guilt" },
+        { "value": 4, "labelEn": "Hears accusatory or denunciatory voices and/or experiences threatening visual hallucinations" }
+      ]
+    },
+    {
+      "id": "hamd_3",
+      "textEn": "Suicide",
+      "options": [
+        { "value": 0, "labelEn": "Absent" },
+        { "value": 1, "labelEn": "Feels life is not worth living" },
+        { "value": 2, "labelEn": "Wishes he/she were dead or any thoughts of possible death to self" },
+        { "value": 3, "labelEn": "Ideas or gestures of suicide" },
+        { "value": 4, "labelEn": "Attempts at suicide (any serious attempt rate 4)" }
+      ]
+    },
+    {
+      "id": "hamd_4",
+      "textEn": "Insomnia: early in the night",
+      "options": [
+        { "value": 0, "labelEn": "No difficulty falling asleep" },
+        { "value": 1, "labelEn": "Complains of occasional difficulty falling asleep, i.e. more than ½ hour" },
+        { "value": 2, "labelEn": "Complains of nightly difficulty falling asleep" }
+      ]
+    },
+    {
+      "id": "hamd_5",
+      "textEn": "Insomnia: middle of the night",
+      "options": [
+        { "value": 0, "labelEn": "No difficulty" },
+        { "value": 1, "labelEn": "Patient complains of being restless and disturbed during the night" },
+        { "value": 2, "labelEn": "Waking during the night – any getting out of bed rates 2 (except for purposes of voiding)" }
+      ]
+    },
+    {
+      "id": "hamd_6",
+      "textEn": "Insomnia: early hours of the morning",
+      "options": [
+        { "value": 0, "labelEn": "No difficulty" },
+        { "value": 1, "labelEn": "Waking in early hours of the morning but goes back to sleep" },
+        { "value": 2, "labelEn": "Unable to fall asleep again if he/she gets out of bed" }
+      ]
+    },
+    {
+      "id": "hamd_7",
+      "textEn": "Work and activities",
+      "options": [
+        { "value": 0, "labelEn": "No difficulty" },
+        { "value": 1, "labelEn": "Thoughts and feelings of incapacity, fatigue or weakness related to activities, work or hobbies" },
+        { "value": 2, "labelEn": "Loss of interest in activity, hobbies or work – either directly reported by the patient or indirect in listlessness, indecision and vacillation (feels he/she has to push self to work or activities)" },
+        { "value": 3, "labelEn": "Decrease in actual time spent in activities or decrease in productivity. Rate 3 if the patient does not spend at least three hours a day in activities (job or hobbies) excluding routine chores" },
+        { "value": 4, "labelEn": "Stopped working because of present illness. Rate 4 if patient engages in no activities except routine chores, or if patient fails to perform routine chores unassisted" }
+      ]
+    },
+    {
+      "id": "hamd_8",
+      "textEn": "Retardation (slowness of thought and speech, impaired ability to concentrate, decreased motor activity)",
+      "options": [
+        { "value": 0, "labelEn": "Normal speech and thought" },
+        { "value": 1, "labelEn": "Slight retardation during the interview" },
+        { "value": 2, "labelEn": "Obvious retardation during the interview" },
+        { "value": 3, "labelEn": "Interview difficult" },
+        { "value": 4, "labelEn": "Complete stupor" }
+      ]
+    },
+    {
+      "id": "hamd_9",
+      "textEn": "Agitation",
+      "options": [
+        { "value": 0, "labelEn": "None" },
+        { "value": 1, "labelEn": "Fidgetiness" },
+        { "value": 2, "labelEn": "Playing with hands, hair, etc." },
+        { "value": 3, "labelEn": "Moving about, can’t sit still" },
+        { "value": 4, "labelEn": "Hand wringing, nail biting, hair-pulling, biting of lips" }
+      ]
+    },
+    {
+      "id": "hamd_10",
+      "textEn": "Anxiety psychic",
+      "options": [
+        { "value": 0, "labelEn": "No difficulty" },
+        { "value": 1, "labelEn": "Subjective tension and irritability" },
+        { "value": 2, "labelEn": "Worrying about minor matters" },
+        { "value": 3, "labelEn": "Apprehensive attitude apparent in face or speech" },
+        { "value": 4, "labelEn": "Fears expressed without questioning" }
+      ]
+    },
+    {
+      "id": "hamd_11",
+      "textEn": "Anxiety somatic (physiological concomitants of anxiety, such as: gastro-intestinal – dry mouth, wind, indigestion, diarrhea, cramps, belching · cardio-vascular – palpitations, headaches · respiratory – hyperventilation, sighing · urinary frequency · sweating)",
+      "options": [
+        { "value": 0, "labelEn": "Absent" },
+        { "value": 1, "labelEn": "Mild" },
+        { "value": 2, "labelEn": "Moderate" },
+        { "value": 3, "labelEn": "Severe" },
+        { "value": 4, "labelEn": "Incapacitating" }
+      ]
+    },
+    {
+      "id": "hamd_12",
+      "textEn": "Somatic symptoms gastro-intestinal",
+      "options": [
+        { "value": 0, "labelEn": "None" },
+        { "value": 1, "labelEn": "Loss of appetite but eating without staff encouragement. Heavy feelings in abdomen" },
+        { "value": 2, "labelEn": "Difficulty eating without staff urging. Requests or requires laxatives or medication for bowels or medication for gastro-intestinal symptoms" }
+      ]
+    },
+    {
+      "id": "hamd_13",
+      "textEn": "General somatic symptoms",
+      "options": [
+        { "value": 0, "labelEn": "None" },
+        { "value": 1, "labelEn": "Heaviness in limbs, back or head. Backaches, headaches, muscle aches. Loss of energy and fatigability" },
+        { "value": 2, "labelEn": "Any clear-cut symptom rates 2" }
+      ]
+    },
+    {
+      "id": "hamd_14",
+      "textEn": "Genital symptoms (symptoms such as loss of libido, menstrual disturbances)",
+      "options": [
+        { "value": 0, "labelEn": "Absent" },
+        { "value": 1, "labelEn": "Mild" },
+        { "value": 2, "labelEn": "Severe" }
+      ]
+    },
+    {
+      "id": "hamd_15",
+      "textEn": "Hypochondriasis",
+      "options": [
+        { "value": 0, "labelEn": "Not present" },
+        { "value": 1, "labelEn": "Self-absorption (bodily)" },
+        { "value": 2, "labelEn": "Preoccupation with health" },
+        { "value": 3, "labelEn": "Frequent complaints, requests for help, etc." },
+        { "value": 4, "labelEn": "Hypochondriacal delusions" }
+      ]
+    },
+    {
+      "id": "hamd_16",
+      "textEn": "Loss of weight (rate either a: according to the patient, or b: according to weekly measurements)",
+      "options": [
+        { "value": 0, "labelEn": "a) No weight loss / b) Less than 1 lb weight loss in week" },
+        { "value": 1, "labelEn": "a) Probable weight loss associated with present illness / b) Greater than 1 lb weight loss in week" },
+        { "value": 2, "labelEn": "a) Definite (according to patient) weight loss / b) Greater than 2 lb weight loss in week" }
+      ]
+    },
+    {
+      "id": "hamd_17",
+      "textEn": "Insight",
+      "options": [
+        { "value": 0, "labelEn": "Acknowledges being depressed and ill" },
+        { "value": 1, "labelEn": "Acknowledges illness but attributes cause to bad food, climate, overwork, virus, need for rest, etc." },
+        { "value": 2, "labelEn": "Denies being ill at all" }
+      ]
+    }
+  ],
+  "scoring": {
+    "method": "sum",
+    "total": { "min": 0, "max": 52 },
+    "remission": { "type": "total_lte", "value": 7 },
+    "response": {
+      "type": "percent_of_baseline",
+      "fraction": 0.5,
+      "note": "Not stated separately for HAM-D-17 in the source; applied as the same 50%-of-baseline convention used for PHQ-9/GAD-7/HAM-A/YMRS throughout ABC360. Verify with the clinic before relying on it."
+    }
+  },
+  "bands": [
+    { "min": 0, "max": 7, "labelEn": "No depression", "color": "minimal" },
+    { "min": 8, "max": 16, "labelEn": "Mild", "color": "mild" },
+    { "min": 17, "max": 23, "labelEn": "Moderate", "color": "moderate" },
+    { "min": 24, "max": 52, "labelEn": "Severe", "color": "severe" }
+  ]
+}

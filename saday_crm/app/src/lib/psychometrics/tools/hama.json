@@ -1,0 +1,185 @@
+{
+  "code": "HAMA",
+  "name": "Hamilton Anxiety Rating Scale (HAM-A)",
+  "version": "1.0",
+  "languages": ["en"],
+  "administeredBy": "clinician",
+  "sourceCitation": "Hamilton (1959). Rate the patient by finding the answer which best describes the extent to which they have each condition; select one of five responses for each of the fourteen items.",
+  "licenceNote": "Public domain.",
+  "items": [
+    {
+      "id": "hama_1",
+      "textEn": "Anxious mood — worries, anticipation of the worst, fearful anticipation, irritability",
+      "options": [
+        { "value": 0, "labelEn": "Not present" },
+        { "value": 1, "labelEn": "Mild" },
+        { "value": 2, "labelEn": "Moderate" },
+        { "value": 3, "labelEn": "Severe" },
+        { "value": 4, "labelEn": "Very severe" }
+      ]
+    },
+    {
+      "id": "hama_2",
+      "textEn": "Tension — feelings of tension, fatigability, startle response, moved to tears easily, trembling, feelings of restlessness, inability to relax",
+      "options": [
+        { "value": 0, "labelEn": "Not present" },
+        { "value": 1, "labelEn": "Mild" },
+        { "value": 2, "labelEn": "Moderate" },
+        { "value": 3, "labelEn": "Severe" },
+        { "value": 4, "labelEn": "Very severe" }
+      ]
+    },
+    {
+      "id": "hama_3",
+      "textEn": "Fears — of dark, of strangers, of being left alone, of animals, of traffic, of crowds",
+      "options": [
+        { "value": 0, "labelEn": "Not present" },
+        { "value": 1, "labelEn": "Mild" },
+        { "value": 2, "labelEn": "Moderate" },
+        { "value": 3, "labelEn": "Severe" },
+        { "value": 4, "labelEn": "Very severe" }
+      ]
+    },
+    {
+      "id": "hama_4",
+      "textEn": "Insomnia — difficulty in falling asleep, broken sleep, unsatisfying sleep and fatigue on waking, dreams, nightmares, night terrors",
+      "options": [
+        { "value": 0, "labelEn": "Not present" },
+        { "value": 1, "labelEn": "Mild" },
+        { "value": 2, "labelEn": "Moderate" },
+        { "value": 3, "labelEn": "Severe" },
+        { "value": 4, "labelEn": "Very severe" }
+      ]
+    },
+    {
+      "id": "hama_5",
+      "textEn": "Intellectual (cognitive) — difficulty in concentration, poor memory",
+      "options": [
+        { "value": 0, "labelEn": "Not present" },
+        { "value": 1, "labelEn": "Mild" },
+        { "value": 2, "labelEn": "Moderate" },
+        { "value": 3, "labelEn": "Severe" },
+        { "value": 4, "labelEn": "Very severe" }
+      ]
+    },
+    {
+      "id": "hama_6",
+      "textEn": "Depressed mood — loss of interest, lack of pleasure in hobbies, depression, early waking, diurnal swing",
+      "options": [
+        { "value": 0, "labelEn": "Not present" },
+        { "value": 1, "labelEn": "Mild" },
+        { "value": 2, "labelEn": "Moderate" },
+        { "value": 3, "labelEn": "Severe" },
+        { "value": 4, "labelEn": "Very severe" }
+      ]
+    },
+    {
+      "id": "hama_7",
+      "textEn": "Somatic (muscular) — pains and aches, twitching, stiffness, myoclonic jerks, grinding of teeth, unsteady voice, increased muscular tone",
+      "options": [
+        { "value": 0, "labelEn": "Not present" },
+        { "value": 1, "labelEn": "Mild" },
+        { "value": 2, "labelEn": "Moderate" },
+        { "value": 3, "labelEn": "Severe" },
+        { "value": 4, "labelEn": "Very severe" }
+      ]
+    },
+    {
+      "id": "hama_8",
+      "textEn": "Somatic (sensory) — tinnitus, blurring of vision, hot and cold flushes, feelings of weakness, pricking sensation",
+      "options": [
+        { "value": 0, "labelEn": "Not present" },
+        { "value": 1, "labelEn": "Mild" },
+        { "value": 2, "labelEn": "Moderate" },
+        { "value": 3, "labelEn": "Severe" },
+        { "value": 4, "labelEn": "Very severe" }
+      ]
+    },
+    {
+      "id": "hama_9",
+      "textEn": "Cardiovascular symptoms — tachycardia, palpitations, pain in chest, throbbing of vessels, fainting feelings, missing beat",
+      "options": [
+        { "value": 0, "labelEn": "Not present" },
+        { "value": 1, "labelEn": "Mild" },
+        { "value": 2, "labelEn": "Moderate" },
+        { "value": 3, "labelEn": "Severe" },
+        { "value": 4, "labelEn": "Very severe" }
+      ]
+    },
+    {
+      "id": "hama_10",
+      "textEn": "Respiratory symptoms — pressure or constriction in chest, choking feelings, sighing, dyspnea",
+      "options": [
+        { "value": 0, "labelEn": "Not present" },
+        { "value": 1, "labelEn": "Mild" },
+        { "value": 2, "labelEn": "Moderate" },
+        { "value": 3, "labelEn": "Severe" },
+        { "value": 4, "labelEn": "Very severe" }
+      ]
+    },
+    {
+      "id": "hama_11",
+      "textEn": "Gastrointestinal symptoms — difficulty in swallowing, wind, abdominal pain, burning sensations, abdominal fullness, nausea, vomiting, borborygmi, looseness of bowels, loss of weight, constipation",
+      "options": [
+        { "value": 0, "labelEn": "Not present" },
+        { "value": 1, "labelEn": "Mild" },
+        { "value": 2, "labelEn": "Moderate" },
+        { "value": 3, "labelEn": "Severe" },
+        { "value": 4, "labelEn": "Very severe" }
+      ]
+    },
+    {
+      "id": "hama_12",
+      "textEn": "Genitourinary symptoms — frequency of micturition, urgency of micturition, amenorrhea, menorrhagia, development of frigidity, premature ejaculation, loss of libido, impotence",
+      "options": [
+        { "value": 0, "labelEn": "Not present" },
+        { "value": 1, "labelEn": "Mild" },
+        { "value": 2, "labelEn": "Moderate" },
+        { "value": 3, "labelEn": "Severe" },
+        { "value": 4, "labelEn": "Very severe" }
+      ]
+    },
+    {
+      "id": "hama_13",
+      "textEn": "Autonomic symptoms — dry mouth, flushing, pallor, tendency to sweat, giddiness, tension headache, raising of hair",
+      "options": [
+        { "value": 0, "labelEn": "Not present" },
+        { "value": 1, "labelEn": "Mild" },
+        { "value": 2, "labelEn": "Moderate" },
+        { "value": 3, "labelEn": "Severe" },
+        { "value": 4, "labelEn": "Very severe" }
+      ]
+    },
+    {
+      "id": "hama_14",
+      "textEn": "Behavior at interview — fidgeting, restlessness or pacing, tremor of hands, furrowed brow, strained face, sighing or rapid respiration, facial pallor, swallowing, etc.",
+      "options": [
+        { "value": 0, "labelEn": "Not present" },
+        { "value": 1, "labelEn": "Mild" },
+        { "value": 2, "labelEn": "Moderate" },
+        { "value": 3, "labelEn": "Severe" },
+        { "value": 4, "labelEn": "Very severe" }
+      ]
+    }
+  ],
+  "scoring": {
+    "method": "sum",
+    "total": { "min": 0, "max": 56 },
+    "subscales": [
+      { "id": "psychic", "labelEn": "Psychic anxiety", "itemIds": ["hama_1", "hama_2", "hama_3", "hama_4", "hama_5", "hama_6", "hama_14"] },
+      { "id": "somatic", "labelEn": "Somatic anxiety", "itemIds": ["hama_7", "hama_8", "hama_9", "hama_10", "hama_11", "hama_12", "hama_13"] }
+    ],
+    "remission": { "type": "total_lte", "value": 7 },
+    "response": {
+      "type": "percent_of_baseline",
+      "fraction": 0.5,
+      "note": "Not stated separately for HAM-A in the source; applied as the same 50%-of-baseline convention used for PHQ-9/GAD-7/HAM-D-17/YMRS throughout ABC360. Verify with the clinic before relying on it."
+    }
+  },
+  "bands": [
+    { "min": 0, "max": 7, "labelEn": "No / minimal", "color": "minimal" },
+    { "min": 8, "max": 14, "labelEn": "Mild", "color": "mild" },
+    { "min": 15, "max": 23, "labelEn": "Moderate", "color": "moderate" },
+    { "min": 24, "max": 56, "labelEn": "Severe", "color": "severe" }
+  ]
+}

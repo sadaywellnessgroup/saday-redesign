@@ -1,314 +1,59 @@
 import type { PsychometricSubmission, PsychometricTool } from '@/lib/domain';
+import { toPsychometricTool, type RawTool } from '@/lib/psychometrics/tool-schema';
 import { ORG_ID } from './organization';
 import { FIXTURE_NOW, dayOffset } from './time';
 
+import phq9Json from '@/lib/psychometrics/tools/phq9.json';
+import gad7Json from '@/lib/psychometrics/tools/gad7.json';
+import hamd17Json from '@/lib/psychometrics/tools/hamd17.json';
+import hamaJson from '@/lib/psychometrics/tools/hama.json';
+import bprs18Json from '@/lib/psychometrics/tools/bprs18.json';
+import ymrsJson from '@/lib/psychometrics/tools/ymrs.json';
+import asrsJson from '@/lib/psychometrics/tools/asrs.json';
+
 const NOW = FIXTURE_NOW.toISOString();
 
-const SCALE_OPTIONS = [
-  { label: 'Not at all', value: 0 },
-  { label: 'Several days', value: 1 },
-  { label: 'More than half the days', value: 2 },
-  { label: 'Nearly every day', value: 3 },
-];
+/* D-024 — the 7 free / public-domain tools, sourced verbatim from the
+ * ABC360 proformas (see src/lib/psychometrics/README.md for licence status
+ * and what still needs proofreading). Each JSON file under
+ * src/lib/psychometrics/tools/ is the single source of truth for item
+ * text, scoring, bands, and remission/response rules; this file only
+ * assigns the stable fixture ids that the rest of the app links against
+ * (`/app/track/assess/[toolId]`, the provider's "Assign a tool" sheet). Ids
+ * are kept exactly as they were before D-024 content landed — nothing
+ * downstream needs to change. */
+const TOOL_IDS: Record<string, string> = {
+  PHQ9: 'tool_phq9_en',
+  GAD7: 'tool_gad7_en',
+  HAMD17: 'tool_hamd17_en',
+  HAMA: 'tool_hama_en',
+  BPRS18: 'tool_bprs18_en',
+  YMRS: 'tool_ymrs_en',
+  ASRS_V1_1: 'tool_asrs_en',
+};
 
-const PHQ9_PROMPTS = [
-  'Little interest or pleasure in doing things',
-  'Feeling down, depressed, or hopeless',
-  'Trouble falling or staying asleep, or sleeping too much',
-  'Feeling tired or having little energy',
-  'Poor appetite or overeating',
-  'Feeling bad about yourself — or that you are a failure',
-  'Trouble concentrating on things',
-  'Moving or speaking noticeably slowly, or being fidgety/restless',
-  'Thoughts that you would be better off dead, or of hurting yourself',
-];
-
-const GAD7_PROMPTS = [
-  'Feeling nervous, anxious, or on edge',
-  'Not being able to stop or control worrying',
-  'Worrying too much about different things',
-  'Trouble relaxing',
-  'Being so restless that it is hard to sit still',
-  'Becoming easily annoyed or irritable',
-  'Feeling afraid as if something awful might happen',
-];
+function buildTool(raw: RawTool): PsychometricTool {
+  const id = TOOL_IDS[raw.code];
+  if (!id) throw new Error(`no fixture id mapped for psychometric tool code ${raw.code}`);
+  return toPsychometricTool(raw, { id, organizationId: ORG_ID, language: 'en', createdAt: NOW, updatedAt: NOW });
+}
 
 export const psychometricTools: PsychometricTool[] = [
-  {
-    id: 'tool_phq9_en',
-    organizationId: ORG_ID,
-    code: 'PHQ9',
-    name: 'Patient Health Questionnaire-9 (PHQ-9)',
-    version: '1.0',
-    language: 'en',
-    items: PHQ9_PROMPTS.map((prompt, i) => ({ id: `phq9_${i + 1}`, prompt, options: SCALE_OPTIONS })),
-    scoring: { method: 'sum', total: { min: 0, max: 27 } },
-    bands: [
-      { label: 'Minimal', min: 0, max: 4, severity: 'minimal' },
-      { label: 'Mild', min: 5, max: 9, severity: 'mild' },
-      { label: 'Moderate', min: 10, max: 14, severity: 'moderate' },
-      { label: 'Moderately severe', min: 15, max: 19, severity: 'moderately_severe' },
-      { label: 'Severe', min: 20, max: 27, severity: 'severe' },
-    ],
-    administeredBy: 'either',
-    sourceCitation: 'Kroenke, Spitzer & Williams (2001) — public domain.',
-    licenceNote: 'Free to use (D-024).',
-    isActive: true,
-    createdAt: NOW,
-    updatedAt: NOW,
-  },
-  {
-    id: 'tool_gad7_en',
-    organizationId: ORG_ID,
-    code: 'GAD7',
-    name: 'Generalized Anxiety Disorder-7 (GAD-7)',
-    version: '1.0',
-    language: 'en',
-    items: GAD7_PROMPTS.map((prompt, i) => ({ id: `gad7_${i + 1}`, prompt, options: SCALE_OPTIONS })),
-    scoring: { method: 'sum', total: { min: 0, max: 21 } },
-    bands: [
-      { label: 'Minimal', min: 0, max: 4, severity: 'minimal' },
-      { label: 'Mild', min: 5, max: 9, severity: 'mild' },
-      { label: 'Moderate', min: 10, max: 14, severity: 'moderate' },
-      { label: 'Severe', min: 15, max: 21, severity: 'severe' },
-    ],
-    administeredBy: 'either',
-    sourceCitation: 'Spitzer, Kroenke, Williams & Löwe (2006) — public domain.',
-    licenceNote: 'Free to use (D-024).',
-    isActive: true,
-    createdAt: NOW,
-    updatedAt: NOW,
-  },
+  buildTool(phq9Json as unknown as RawTool),
+  buildTool(gad7Json as unknown as RawTool),
+  buildTool(hamd17Json as unknown as RawTool),
+  buildTool(hamaJson as unknown as RawTool),
+  buildTool(bprs18Json as unknown as RawTool),
+  buildTool(ymrsJson as unknown as RawTool),
+  buildTool(asrsJson as unknown as RawTool),
 ];
 
-/* ------------------------------------------------------------------ *
- * The remaining five D-024 tools. HAM-D-17 / HAM-A / BPRS-18 / YMRS are
- * clinician-rated (the provider runs them inside the console); ASRS-v1.1
- * is self-rated. Item wording is abbreviated to the published item names
- * — all five are free / public-domain instruments.
- * ------------------------------------------------------------------ */
-
-function scale(labels: string[]) {
-  return labels.map((label, value) => ({ label, value }));
-}
-
-const SCALE_0_4 = scale(['Absent', 'Mild', 'Moderate', 'Severe', 'Very severe']);
-const SCALE_0_2 = scale(['Absent', 'Mild / doubtful', 'Clearly present']);
-const SCALE_1_7 = ['Not present', 'Very mild', 'Mild', 'Moderate', 'Moderately severe', 'Severe', 'Extremely severe'].map(
-  (label, i) => ({ label, value: i + 1 }),
-);
-const SCALE_0_8 = scale(['0', '1', '2', '3', '4', '5', '6', '7', '8']);
-const ASRS_SCALE = scale(['Never', 'Rarely', 'Sometimes', 'Often', 'Very often']);
-
-function items(prompts: string[], prefix: string, options: { label: string; value: number }[]) {
-  return prompts.map((prompt, i) => ({ id: `${prefix}_${i + 1}`, prompt, options }));
-}
-
-const HAMD17_0_4 = [
-  'Depressed mood',
-  'Feelings of guilt',
-  'Suicide',
-  'Work and activities',
-  'Retardation (psychomotor)',
-  'Agitation',
-  'Psychic anxiety',
-  'Somatic anxiety',
-  'Hypochondriasis',
-];
-const HAMD17_0_2 = [
-  'Insomnia — early',
-  'Insomnia — middle',
-  'Insomnia — late',
-  'Somatic symptoms — gastrointestinal',
-  'Somatic symptoms — general',
-  'Genital symptoms',
-  'Loss of weight',
-  'Insight',
-];
-
-const HAMA_PROMPTS = [
-  'Anxious mood',
-  'Tension',
-  'Fears',
-  'Insomnia',
-  'Intellectual (cognitive) difficulty',
-  'Depressed mood',
-  'Somatic complaints — muscular',
-  'Somatic complaints — sensory',
-  'Cardiovascular symptoms',
-  'Respiratory symptoms',
-  'Gastrointestinal symptoms',
-  'Genitourinary symptoms',
-  'Autonomic symptoms',
-  'Behaviour at interview',
-];
-
-const BPRS_PROMPTS = [
-  'Somatic concern',
-  'Anxiety',
-  'Emotional withdrawal',
-  'Conceptual disorganisation',
-  'Guilt feelings',
-  'Tension',
-  'Mannerisms and posturing',
-  'Grandiosity',
-  'Depressive mood',
-  'Hostility',
-  'Suspiciousness',
-  'Hallucinatory behaviour',
-  'Motor retardation',
-  'Uncooperativeness',
-  'Unusual thought content',
-  'Blunted affect',
-  'Excitement',
-  'Disorientation',
-];
-
-const YMRS_0_4 = [
-  'Elevated mood',
-  'Increased motor activity / energy',
-  'Sexual interest',
-  'Sleep',
-  'Language — thought disorder',
-  'Appearance',
-  'Insight',
-];
-const YMRS_0_8 = ['Irritability', 'Speech (rate and amount)', 'Content', 'Disruptive / aggressive behaviour'];
-
-const ASRS_PROMPTS = [
-  'Trouble wrapping up the final details of a project',
-  'Difficulty getting things in order for a task requiring organisation',
-  'Problems remembering appointments or obligations',
-  'Avoiding or delaying tasks that require a lot of thought',
-  'Fidgeting or squirming when seated for long',
-  'Feeling overly active, as if driven by a motor',
-  'Making careless mistakes on a boring or difficult project',
-  'Difficulty keeping attention on repetitive work',
-  'Difficulty concentrating on what people say to you',
-  'Misplacing or having trouble finding things',
-  'Being distracted by activity or noise around you',
-  'Leaving your seat when you are expected to stay seated',
-  'Feeling restless or fidgety',
-  'Difficulty unwinding and relaxing when you have time to yourself',
-  'Talking too much in social situations',
-  'Finishing other people’s sentences',
-  'Difficulty waiting your turn',
-  'Interrupting others when they are busy',
-];
-
-psychometricTools.push(
-  {
-    id: 'tool_hamd17_en',
-    organizationId: ORG_ID,
-    code: 'HAMD17',
-    name: 'Hamilton Depression Rating Scale (HAM-D-17)',
-    version: '1.0',
-    language: 'en',
-    items: [...items(HAMD17_0_4, 'hamd_a', SCALE_0_4), ...items(HAMD17_0_2, 'hamd_b', SCALE_0_2)],
-    scoring: { method: 'sum', total: { min: 0, max: 52 } },
-    bands: [
-      { label: 'Normal', min: 0, max: 7, severity: 'minimal' },
-      { label: 'Mild', min: 8, max: 13, severity: 'mild' },
-      { label: 'Moderate', min: 14, max: 18, severity: 'moderate' },
-      { label: 'Severe', min: 19, max: 22, severity: 'moderately_severe' },
-      { label: 'Very severe', min: 23, max: 52, severity: 'severe' },
-    ],
-    administeredBy: 'clinician',
-    sourceCitation: 'Hamilton (1960) — public domain.',
-    licenceNote: 'Free to use (D-024).',
-    isActive: true,
-    createdAt: NOW,
-    updatedAt: NOW,
-  },
-  {
-    id: 'tool_hama_en',
-    organizationId: ORG_ID,
-    code: 'HAMA',
-    name: 'Hamilton Anxiety Rating Scale (HAM-A)',
-    version: '1.0',
-    language: 'en',
-    items: items(HAMA_PROMPTS, 'hama', SCALE_0_4),
-    scoring: { method: 'sum', total: { min: 0, max: 56 } },
-    bands: [
-      { label: 'Mild', min: 0, max: 17, severity: 'mild' },
-      { label: 'Mild to moderate', min: 18, max: 24, severity: 'moderate' },
-      { label: 'Moderate to severe', min: 25, max: 30, severity: 'moderately_severe' },
-      { label: 'Severe', min: 31, max: 56, severity: 'severe' },
-    ],
-    administeredBy: 'clinician',
-    sourceCitation: 'Hamilton (1959) — public domain.',
-    licenceNote: 'Free to use (D-024).',
-    isActive: true,
-    createdAt: NOW,
-    updatedAt: NOW,
-  },
-  {
-    id: 'tool_bprs18_en',
-    organizationId: ORG_ID,
-    code: 'BPRS18',
-    name: 'Brief Psychiatric Rating Scale (BPRS-18)',
-    version: '1.0',
-    language: 'en',
-    items: items(BPRS_PROMPTS, 'bprs', SCALE_1_7),
-    scoring: { method: 'sum', total: { min: 18, max: 126 } },
-    bands: [
-      { label: 'Minimal', min: 18, max: 30, severity: 'minimal' },
-      { label: 'Mild', min: 31, max: 40, severity: 'mild' },
-      { label: 'Moderate', min: 41, max: 52, severity: 'moderate' },
-      { label: 'Severe', min: 53, max: 126, severity: 'severe' },
-    ],
-    administeredBy: 'clinician',
-    sourceCitation: 'Overall & Gorham (1962) — public domain.',
-    licenceNote: 'Free to use (D-024).',
-    isActive: true,
-    createdAt: NOW,
-    updatedAt: NOW,
-  },
-  {
-    id: 'tool_ymrs_en',
-    organizationId: ORG_ID,
-    code: 'YMRS',
-    name: 'Young Mania Rating Scale (YMRS)',
-    version: '1.0',
-    language: 'en',
-    items: [...items(YMRS_0_4, 'ymrs_a', SCALE_0_4), ...items(YMRS_0_8, 'ymrs_b', SCALE_0_8)],
-    scoring: { method: 'sum', total: { min: 0, max: 60 } },
-    bands: [
-      { label: 'Remission', min: 0, max: 12, severity: 'minimal' },
-      { label: 'Minimal', min: 13, max: 19, severity: 'mild' },
-      { label: 'Mild', min: 20, max: 25, severity: 'moderate' },
-      { label: 'Moderate', min: 26, max: 37, severity: 'moderately_severe' },
-      { label: 'Severe', min: 38, max: 60, severity: 'severe' },
-    ],
-    administeredBy: 'clinician',
-    sourceCitation: 'Young et al. (1978) — public domain.',
-    licenceNote: 'Free to use (D-024).',
-    isActive: true,
-    createdAt: NOW,
-    updatedAt: NOW,
-  },
-  {
-    id: 'tool_asrs_en',
-    organizationId: ORG_ID,
-    code: 'ASRS_V1_1',
-    name: 'Adult ADHD Self-Report Scale (ASRS-v1.1)',
-    version: '1.1',
-    language: 'en',
-    items: items(ASRS_PROMPTS, 'asrs', ASRS_SCALE),
-    scoring: { method: 'sum', total: { min: 0, max: 72 } },
-    bands: [
-      { label: 'Unlikely', min: 0, max: 16, severity: 'minimal' },
-      { label: 'Likely', min: 17, max: 23, severity: 'moderate' },
-      { label: 'Highly likely', min: 24, max: 72, severity: 'severe' },
-    ],
-    administeredBy: 'self',
-    sourceCitation: 'Kessler et al. / WHO (2005) — free to reproduce.',
-    licenceNote: 'Free to use (D-024).',
-    isActive: true,
-    createdAt: NOW,
-    updatedAt: NOW,
-  },
-);
+/** Old ids some earlier fixture data or ad-hoc scripts may still reference
+ * (`tool_<code>_en` was always the pattern) — kept as a defensive alias so
+ * a stale reference resolves instead of throwing. Every current id above
+ * already matches this pattern, so this is a no-op map today; it exists so
+ * a future rename doesn't silently break `getTool`. */
+export const TOOL_ID_ALIASES: Record<string, string> = {};
 
 function bandFor(tool: PsychometricTool, total: number): string {
   return tool.bands.find((b) => total >= b.min && total <= b.max)?.label ?? tool.bands[0]!.label;

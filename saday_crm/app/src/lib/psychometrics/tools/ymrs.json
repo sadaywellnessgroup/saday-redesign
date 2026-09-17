@@ -1,0 +1,145 @@
+{
+  "code": "YMRS",
+  "name": "Young Mania Rating Scale (YMRS)",
+  "version": "1.0",
+  "languages": ["en"],
+  "administeredBy": "clinician",
+  "sourceCitation": "Young, Biggs, Ziegler & Meyer (1978), British Journal of Psychiatry.",
+  "licenceNote": "© British Journal of Psychiatry 1978. Clinicians may photocopy for their own clinical use — not public domain and not free to redistribute beyond that use. Items 5, 6, 8 and 9 are scored 0/2/4/6/8 (double-weighted), not 0–4.",
+  "items": [
+    {
+      "id": "ymrs_1",
+      "textEn": "Elevated mood",
+      "options": [
+        { "value": 0, "labelEn": "Absent" },
+        { "value": 1, "labelEn": "Mildly or possibly increased on questioning" },
+        { "value": 2, "labelEn": "Definite subjective elevation; optimistic, self-confident; cheerful, appropriate to the content" },
+        { "value": 3, "labelEn": "Elevated; inappropriate to content; humorous" },
+        { "value": 4, "labelEn": "Euphoric; inappropriate laughter; singing" }
+      ]
+    },
+    {
+      "id": "ymrs_2",
+      "textEn": "Increased motor activity-energy",
+      "options": [
+        { "value": 0, "labelEn": "Absent" },
+        { "value": 1, "labelEn": "Subjectively increased" },
+        { "value": 2, "labelEn": "Animated; gestures increased" },
+        { "value": 3, "labelEn": "Excessive energy; hyperactive at times; restless (can be calmed)" },
+        { "value": 4, "labelEn": "Motor excitement; continuous hyperactivity (cannot be calmed)" }
+      ]
+    },
+    {
+      "id": "ymrs_3",
+      "textEn": "Sexual interest",
+      "options": [
+        { "value": 0, "labelEn": "Normal; not increased" },
+        { "value": 1, "labelEn": "Mildly or possibly increased" },
+        { "value": 2, "labelEn": "Definite subjective increase on questioning" },
+        { "value": 3, "labelEn": "Spontaneous sexual content; elaborates on sexual matters; hypersexual by self-report" },
+        { "value": 4, "labelEn": "Overt sexual acts (toward patients, staff, or interviewer)" }
+      ]
+    },
+    {
+      "id": "ymrs_4",
+      "textEn": "Sleep",
+      "options": [
+        { "value": 0, "labelEn": "Reports no decrease in sleep" },
+        { "value": 1, "labelEn": "Sleeping less than the normal amount by up to one hour" },
+        { "value": 2, "labelEn": "Sleeping less than normal by more than one hour" },
+        { "value": 3, "labelEn": "Reports decreased need for sleep" },
+        { "value": 4, "labelEn": "Denies need for sleep" }
+      ]
+    },
+    {
+      "id": "ymrs_5",
+      "textEn": "Irritability",
+      "options": [
+        { "value": 0, "labelEn": "Absent" },
+        { "value": 2, "labelEn": "Subjectively increased" },
+        { "value": 4, "labelEn": "Irritable at times during interview; recent episodes of anger or annoyance on ward" },
+        { "value": 6, "labelEn": "Frequently irritable during the interview; short, curt throughout" },
+        { "value": 8, "labelEn": "Hostile, uncooperative; interview impossible" }
+      ]
+    },
+    {
+      "id": "ymrs_6",
+      "textEn": "Speech (rate and amount)",
+      "options": [
+        { "value": 0, "labelEn": "No increase" },
+        { "value": 2, "labelEn": "Feels talkative" },
+        { "value": 4, "labelEn": "Increased rate or amount at times, verbose at times" },
+        { "value": 6, "labelEn": "Push; consistently increased rate and amount; difficult to interrupt" },
+        { "value": 8, "labelEn": "Pressured; uninterruptible, continuous speech" }
+      ]
+    },
+    {
+      "id": "ymrs_7",
+      "textEn": "Language-thought disorder",
+      "options": [
+        { "value": 0, "labelEn": "Absent" },
+        { "value": 1, "labelEn": "Circumstantial; mild distractibility; quick thoughts" },
+        { "value": 2, "labelEn": "Distractible, loses goal of thought; changes topics frequently; racing thoughts" },
+        { "value": 3, "labelEn": "Flight of ideas; tangentiality; difficult to follow; rhyming, echolalia" },
+        { "value": 4, "labelEn": "Incoherent; communication impossible" }
+      ]
+    },
+    {
+      "id": "ymrs_8",
+      "textEn": "Content",
+      "options": [
+        { "value": 0, "labelEn": "Normal" },
+        { "value": 2, "labelEn": "Questionable plans, new interests" },
+        { "value": 4, "labelEn": "Special project(s); hyper-religious" },
+        { "value": 6, "labelEn": "Grandiose or paranoid ideas; ideas of reference" },
+        { "value": 8, "labelEn": "Delusions; hallucinations" }
+      ]
+    },
+    {
+      "id": "ymrs_9",
+      "textEn": "Disruptive-aggressive behavior",
+      "options": [
+        { "value": 0, "labelEn": "Absent, cooperative" },
+        { "value": 2, "labelEn": "Sarcastic; loud at times, guarded" },
+        { "value": 4, "labelEn": "Demanding; threats on ward" },
+        { "value": 6, "labelEn": "Threatens interviewer; shouting; interview difficult" },
+        { "value": 8, "labelEn": "Assaultive; destructive; interview impossible" }
+      ]
+    },
+    {
+      "id": "ymrs_10",
+      "textEn": "Appearance",
+      "options": [
+        { "value": 0, "labelEn": "Appropriate dress and grooming" },
+        { "value": 1, "labelEn": "Minimally unkempt" },
+        { "value": 2, "labelEn": "Poorly groomed; moderately disheveled; overdressed" },
+        { "value": 3, "labelEn": "Disheveled; partly clothed; garish make-up" },
+        { "value": 4, "labelEn": "Completely unkempt; decorated; bizarre garb" }
+      ]
+    },
+    {
+      "id": "ymrs_11",
+      "textEn": "Insight",
+      "options": [
+        { "value": 0, "labelEn": "Present; admits illness; agrees with the need for treatment" },
+        { "value": 1, "labelEn": "Possibly ill" },
+        { "value": 2, "labelEn": "Admits behavior change, but denies illness" },
+        { "value": 3, "labelEn": "Admits possible change in behavior, but denies illness" },
+        { "value": 4, "labelEn": "Denies any behavior change" }
+      ]
+    }
+  ],
+  "scoring": {
+    "method": "sum",
+    "total": { "min": 0, "max": 60 },
+    "remission": { "type": "total_lte", "value": 12 },
+    "response": { "type": "percent_of_baseline", "fraction": 0.5, "note": "YMRS at half of baseline or lower (ABC360 mania tracker)." }
+  },
+  "bands": [
+    { "min": 0, "max": 12, "labelEn": "Remission", "color": "minimal" },
+    { "min": 13, "max": 19, "labelEn": "Mild", "color": "mild" },
+    { "min": 20, "max": 29, "labelEn": "Moderate", "color": "moderate" },
+    { "min": 30, "max": 39, "labelEn": "Marked", "color": "moderately_severe" },
+    { "min": 40, "max": 60, "labelEn": "Severe", "color": "severe" }
+  ]
+}

@@ -1,44 +1,52 @@
+import type { RawTool } from './tool-schema';
+import phq9Json from './tools/phq9.json';
+import gad7Json from './tools/gad7.json';
+
 /* Hindi item text for the assessment runner's per-question EN/HI toggle
- * (route 11, ui-references §B "Assessment runner"). The fixture
- * `PsychometricTool` rows (D-024) are English-only in P1 — there is no
- * Hindi `PsychometricTool` row to source from — so this small, explicitly
- * separate translation layer supplies the toggle without inventing new
- * fixture rows. A Hindi speaker should proofread these (same caveat as
- * messages/hi.json — see app/README.md's i18n section). */
+ * (route 11, ui-references §B "Assessment runner"). Sourced from the same
+ * `textHi` / `labelHi` fields as the tool JSON itself (src/lib/psychometrics
+ * /tools/{phq9,gad7}.json) — those two tools are the only ones with a
+ * validated Hindi version (PHQ-9 and GAD-7, official Pfizer India
+ * translations; see ROADMAP's licence table). The Hindi item text was
+ * transcribed from a page image and still needs a Hindi speaker's
+ * proofread before clinic use — see this folder's README.md. Clinician-
+ * rated tools (HAM-D-17, HAM-A, BPRS-18, YMRS) and ASRS-v1.1 have no
+ * Hindi source and are never shown to the patient, so they have no entry
+ * here. */
 
-export const PHQ9_HI: Record<string, string> = {
-  phq9_1: 'किसी काम में दिलचस्पी या आनंद कम महसूस होना',
-  phq9_2: 'उदास, निराश या हताश महसूस करना',
-  phq9_3: 'सोने में परेशानी, बार-बार नींद खुलना, या बहुत ज़्यादा सोना',
-  phq9_4: 'थकान महसूस करना या ऊर्जा की कमी',
-  phq9_5: 'भूख कम लगना या ज़्यादा खाना',
-  phq9_6: 'खुद को लेकर बुरा महसूस करना — या यह लगना कि आप असफल हैं',
-  phq9_7: 'किसी चीज़ पर ध्यान केंद्रित करने में परेशानी',
-  phq9_8: 'इतना धीरे चलना/बोलना कि दूसरों ने ध्यान दिया हो, या बेचैन व अस्थिर रहना',
-  phq9_9: 'यह महसूस होना कि मर जाना बेहतर होता, या खुद को नुकसान पहुंचाने के विचार आना',
-};
+const PHQ9 = phq9Json as unknown as RawTool;
+const GAD7 = gad7Json as unknown as RawTool;
 
-export const GAD7_HI: Record<string, string> = {
-  gad7_1: 'घबराहट, बेचैनी या तनाव महसूस करना',
-  gad7_2: 'चिंता को रोक न पाना या नियंत्रित न कर पाना',
-  gad7_3: 'अलग-अलग बातों को लेकर बहुत ज़्यादा चिंता करना',
-  gad7_4: 'आराम करने में परेशानी',
-  gad7_5: 'इतना बेचैन रहना कि शांत बैठना मुश्किल हो',
-  gad7_6: 'आसानी से झुंझलाहट या चिड़चिड़ापन होना',
-  gad7_7: 'ऐसा डर लगना जैसे कुछ बुरा होने वाला है',
-};
+function itemHiMap(tool: RawTool): Record<string, string> {
+  return Object.fromEntries(tool.items.filter((item) => item.textHi).map((item) => [item.id, item.textHi as string]));
+}
 
-export const SCALE_OPTIONS_HI: Record<string, string> = {
-  'Not at all': 'बिल्कुल नहीं',
-  'Several days': 'कुछ दिन',
-  'More than half the days': 'आधे से ज़्यादा दिन',
-  'Nearly every day': 'लगभग हर दिन',
-};
+function optionHiMap(tool: RawTool): Record<string, string> {
+  const map: Record<string, string> = {};
+  for (const item of tool.items) {
+    for (const opt of item.options) {
+      if (opt.labelHi) map[opt.labelEn] = opt.labelHi;
+    }
+  }
+  return map;
+}
 
 const BY_TOOL_CODE: Record<string, Record<string, string>> = {
-  PHQ9: PHQ9_HI,
-  GAD7: GAD7_HI,
+  PHQ9: itemHiMap(PHQ9),
+  GAD7: itemHiMap(GAD7),
 };
+
+/* Option-label lookup is keyed by the English label text only, because the
+ * assessment runner calls `hiOptionLabel(opt.label)` without the tool code
+ * (see assessment-runner.tsx). PHQ-9 and GAD-7's official English option
+ * text differs for "More than half the ..." and "Almost/Nearly every day",
+ * so those resolve correctly per tool. "Several days" is worded
+ * identically in both English forms but the two official Hindi
+ * translations differ (PHQ-9: कई दिन · GAD-7: कई दिनों तक) — this is a
+ * genuine ambiguity the shared, tool-blind lookup cannot resolve without a
+ * runner change. GAD-7's translation is merged last and wins; see this
+ * folder's README.md "known gap" note. */
+const SCALE_OPTIONS_HI: Record<string, string> = { ...optionHiMap(PHQ9), ...optionHiMap(GAD7) };
 
 export function hiItemPrompt(toolCode: string, itemId: string, fallback: string): string {
   return BY_TOOL_CODE[toolCode]?.[itemId] ?? fallback;
