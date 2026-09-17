@@ -1,0 +1,240 @@
+import type { AssessmentProforma, FollowUpSubmission } from '@/lib/domain';
+import { ORG_ID } from './organization';
+import { FIXTURE_NOW, dayOffset } from './time';
+
+const NOW = FIXTURE_NOW.toISOString();
+
+/* FIXTURE — the online assessment proforma (D-016, BUILD_PLAN §3). One
+ * signed proforma for pat_2 so the patient panel has a summary to show,
+ * one partially-filled draft for pat_3 so "Continue draft" has somewhere
+ * to go. Keys match `src/lib/clinical/proforma-spec.ts`; income and
+ * religion are deliberately absent (D-016). */
+
+const SIGNED_PROFORMA: AssessmentProforma = {
+  id: 'proforma_1',
+  organizationId: ORG_ID,
+  patientId: 'pat_2',
+  providerId: 'prov_aditya',
+  appointmentId: 'appt_5',
+  specVersion: 'proforma-1.0',
+  sociodemographic: {
+    age: 34,
+    gender: 'Male',
+    maritalStatus: 'Married',
+    familyType: 'Nuclear',
+    livingArrangement: 'With spouse',
+    education: 'Post-graduate',
+    occupation: 'Employed',
+    residence: 'Urban',
+    referralSource: 'Self',
+    willingness: 'Willing',
+  },
+  informant: {
+    present: 'Yes',
+    relationship: 'Spouse',
+    knownFor: 'Lifelong',
+    reliability: 'Reliable',
+    adequacy: 'Adequate',
+  },
+  presentIllness: {
+    physicalIllnessPresent: 'No',
+    physicalConditions: ['None'],
+    physicalMedication: 'Nil',
+    allergies: 'None known',
+    complaintSource: 'Both',
+    complaintChips: ['Low mood', 'Sleep disturbance', 'Irritability'],
+    complaintText: 'Low energy and irritability for about six weeks, worse in the mornings.',
+    duration: '1–6 months',
+    onset: 'Insidious',
+    course: 'Continuous',
+    progress: 'Static',
+    predisposing: ['Family history'],
+    precipitating: ['Job loss'],
+    perpetuating: ['Poor support'],
+    hopiNarrative:
+      'Gradual onset following a change of role at work; no discrete precipitant identified by the patient.',
+  },
+  biologicalFunctions: {
+    attitude: 'Accepts illness',
+    treatmentSeeking: 'Active',
+    appetite: 'Reduced',
+    weight: 'Loss',
+    sleepChips: ['Initial insomnia', 'Early morning awakening'],
+    sleepHours: 5,
+    libido: 'Reduced',
+    socioOccupational: 'Mildly impaired',
+  },
+  substanceUse: {
+    classesUsed: ['Nicotine / tobacco'],
+    'detail_Nicotine / tobacco': {
+      ageFirstUse: 21,
+      frequency: 'Daily',
+      quantity: '8–10 cigarettes',
+      route: 'Smoked',
+      lastUse: 'Today',
+    },
+  },
+  pastHistory: {
+    pastPsychiatric: 'No',
+    pastTreatment: ['None'],
+    adherence: 'Not applicable',
+    pastMedical: 'Appendicectomy, 2016.',
+    headInjury: 'No',
+  },
+  familyHistory: {
+    familyPsychiatric: ['Depression'],
+    relationAffected: 'First degree',
+    familyAdjustment: 'Harmonious',
+    communication: 'Open',
+    familyNotes: 'Father treated for depression in his forties.',
+  },
+  personalHistory: {
+    birth: 'Normal',
+    childhood: ['None reported'],
+    scholastic: 'Above average',
+    occupational: 'Stable',
+    forensic: 'Nil',
+    marital: 'Satisfactory',
+    sexual: 'Not assessed',
+    personalNotes: 'No significant adversity reported.',
+  },
+  premorbidPersonality: {
+    socialRelations: 'Selective',
+    mood: 'Stable',
+    character: ['Conscientious', 'Perfectionistic'],
+    habits: 'Reading, long-distance running (stopped three months ago).',
+    religiousBeliefs: 'Responsible',
+  },
+  mse: {
+    appearance: ['Well kempt', 'Cooperative', 'Rapport established'],
+    speech: ['Decreased rate', 'Relevant'],
+    mood: 'Sad',
+    affect: 'Restricted',
+    thoughtStream: ['Normal'],
+    thoughtPossession: ['Normal'],
+    thoughtContent: ['Worthlessness', 'Hopelessness'],
+    delusions: ['None'],
+    perception: ['No abnormality'],
+    orientation: 'Oriented to time, place & person',
+    attention: 'Aroused & sustained',
+    memory: ['Immediate intact', 'Recent intact', 'Remote intact'],
+    intelligence: 'Average',
+    abstraction: 'Abstract',
+    judgement: 'Intact — personal, social & test',
+    insight: 5,
+  },
+  diagnosisIcd11: ['6A70'],
+  formulation:
+    'A 34-year-old married man with a first depressive episode of insidious onset, precipitated by occupational change, on a background of paternal depression and conscientious premorbid traits.',
+  plan: 'Start SSRI, weekly review for four weeks, sleep-hygiene work, PHQ-9 fortnightly.',
+  signedAt: `${dayOffset(-30)}T07:00:00.000Z`,
+  signedByUserId: 'usr_prov_aditya',
+  isLocked: true,
+  version: 1,
+  supersedesId: null,
+  supersededAt: null,
+  createdAt: `${dayOffset(-30)}T05:30:00.000Z`,
+  updatedAt: `${dayOffset(-30)}T07:00:00.000Z`,
+};
+
+const DRAFT_PROFORMA: AssessmentProforma = {
+  id: 'proforma_2',
+  organizationId: ORG_ID,
+  patientId: 'pat_3',
+  providerId: 'prov_aditya',
+  appointmentId: 'appt_26',
+  specVersion: 'proforma-1.0',
+  sociodemographic: {
+    age: 22,
+    gender: 'Female',
+    maritalStatus: 'Unmarried',
+    familyType: 'Nuclear',
+    livingArrangement: 'With family',
+    education: 'Graduate',
+    occupation: 'Student',
+  },
+  informant: { present: 'Yes', relationship: 'Parent' },
+  presentIllness: {
+    complaintSource: 'Patient',
+    complaintChips: ['Anxiety', 'Sleep disturbance'],
+    duration: '6–12 months',
+  },
+  biologicalFunctions: { appetite: 'Normal', sleepChips: ['Initial insomnia'] },
+  substanceUse: { classesUsed: ['None'] },
+  pastHistory: {},
+  familyHistory: {},
+  personalHistory: {},
+  premorbidPersonality: {},
+  mse: {},
+  diagnosisIcd11: [],
+  formulation: null,
+  plan: null,
+  signedAt: null,
+  signedByUserId: null,
+  isLocked: false,
+  version: 1,
+  supersedesId: null,
+  supersededAt: null,
+  createdAt: `${dayOffset(-12)}T06:00:00.000Z`,
+  updatedAt: `${dayOffset(-12)}T06:40:00.000Z`,
+};
+
+export const assessmentProformas: AssessmentProforma[] = [SIGNED_PROFORMA, DRAFT_PROFORMA];
+
+/* FIXTURE — follow-up responses (D-023, org-wide flows). The Today screen
+ * counts the ones the provider has not opened yet. */
+export const followUpSubmissions: FollowUpSubmission[] = [
+  {
+    id: 'fus_1',
+    organizationId: ORG_ID,
+    flowId: 'flow_checkin',
+    appointmentId: 'appt_31',
+    patientId: 'pat_2',
+    responses: { q1: 7, note: 'Sleeping a little better since the last change.' },
+    deliveredVia: 'whatsapp',
+    submittedAt: `${dayOffset(-8)}T13:00:00.000Z`,
+    createdAt: NOW,
+    updatedAt: NOW,
+  },
+  {
+    id: 'fus_2',
+    organizationId: ORG_ID,
+    flowId: 'flow_feedback',
+    appointmentId: 'appt_31',
+    patientId: 'pat_2',
+    responses: { q1: true, note: 'Yes — the worksheet helped.' },
+    deliveredVia: 'whatsapp',
+    submittedAt: `${dayOffset(-7)}T13:00:00.000Z`,
+    createdAt: NOW,
+    updatedAt: NOW,
+  },
+  {
+    id: 'fus_3',
+    organizationId: ORG_ID,
+    flowId: 'flow_checkin',
+    appointmentId: 'appt_26',
+    patientId: 'pat_3',
+    responses: { q1: 4, note: 'Panic came back before the viva.' },
+    deliveredVia: 'whatsapp',
+    submittedAt: `${dayOffset(-11)}T13:00:00.000Z`,
+    createdAt: NOW,
+    updatedAt: NOW,
+  },
+  {
+    id: 'fus_4',
+    organizationId: ORG_ID,
+    flowId: 'flow_checkin',
+    appointmentId: 'appt_25',
+    patientId: 'pat_4',
+    responses: { q1: 5, note: 'Fewer arguments this week.' },
+    deliveredVia: 'whatsapp',
+    submittedAt: `${dayOffset(-4)}T13:00:00.000Z`,
+    createdAt: NOW,
+    updatedAt: NOW,
+  },
+];
+
+/** FIXTURE — which follow-up responses the provider has already opened.
+ * A real build stores this per user; the mock keeps it in memory so the
+ * Today screen's "pending follow-up responses" count is demoable. */
+export const followUpSeenIds = new Set<string>(['fus_1']);

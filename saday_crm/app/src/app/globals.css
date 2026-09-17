@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   SADAY WELLNESS CRM — tokens carried over verbatim from the
+   main site (_refs/main-site/app/globals.css, DECISION_LOG D-002)
+   plus the shadcn/ui CSS-variable mapping (DECISION_LOG D-028).
+   No hard borders: structure comes from tone, soft radius and
+   feathered shadow, never a 1px grey line.
+   ============================================================ */
+
+@layer base {
+  :root {
+    /* brand tokens */
+    --indigo: #3e2a78;
+    --indigo-deep: #2b1d57;
+    --terracotta: #b0522e;
+    --terracotta-deep: #8e4225;
+    --cream: #faf5ec;
+    --card-hex: #fffdf6;
+    --turmeric: #d69a3c;
+    --lilac-tint: #f1ecf9;
+    --ink: #2a2320;
+    --ink-soft: #5c544e;
+    --line: rgba(62, 42, 120, 0.14);
+    --ease: cubic-bezier(0.22, 0.8, 0.3, 1);
+    --shadow: 0 2px 24px rgba(62, 42, 120, 0.08);
+    --shadow-lg: 0 8px 44px rgba(62, 42, 120, 0.12);
+
+    /* shadcn/ui mapping onto the brand tokens (D-028) */
+    --background: var(--cream);
+    --foreground: var(--ink);
+    --card: var(--card-hex);
+    --card-foreground: var(--ink);
+    --popover: var(--card-hex);
+    --popover-foreground: var(--ink);
+    --primary: var(--indigo);
+    --primary-foreground: var(--cream);
+    --secondary: var(--lilac-tint);
+    --secondary-foreground: var(--indigo-deep);
+    --muted: var(--lilac-tint);
+    --muted-foreground: var(--ink-soft);
+    --accent: var(--lilac-tint);
+    --accent-foreground: var(--indigo-deep);
+    --destructive: var(--terracotta-deep);
+    --destructive-foreground: var(--cream);
+    --border: var(--line);
+    --input: var(--line);
+    --ring: var(--indigo);
+    --radius: 18px;
+
+    /* Self-hosted @fontsource faces imported in app/layout.tsx — same
+     * families as the main site (D-002), just not routed through
+     * next/font/google. */
+    --font-display: 'Fraunces';
+    --font-body: 'Mukta';
+    --font-hindi: 'Tiro Devanagari Hindi';
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    @apply bg-cream font-body text-[16px] leading-[1.6] text-ink antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  img {
+    @apply block max-w-full;
+  }
+  a {
+    color: inherit;
+  }
+  :focus-visible {
+    outline: 3px solid var(--turmeric);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  ::selection {
+    background: var(--turmeric);
+    color: var(--indigo-deep);
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-wrap;
+    padding-inline: clamp(16px, 4vw, 44px);
+  }
+
+  .display {
+    @apply font-display font-medium text-indigo-deep;
+    font-size: clamp(28px, 5vw, 44px);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .sec-title {
+    @apply font-display font-medium text-indigo-deep;
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: 1.15;
+  }
+  .lede {
+    @apply text-ink-soft;
+    font-size: clamp(15px, 1.4vw, 17px);
+    max-width: 60ch;
+  }
+  .hindi {
+    @apply font-hindi;
+  }
+  .hindi-accent {
+    @apply font-hindi text-terracotta;
+    font-size: clamp(16px, 1.8vw, 20px);
+    line-height: 1.5;
+  }
+
+  .kicker {
+    @apply inline-flex items-center gap-[10px] font-body text-[12.5px] font-semibold uppercase text-terracotta;
+    letter-spacing: 0.14em;
+  }
+  .kicker .sq {
+    @apply h-[8px] w-[8px] rounded-full bg-turmeric;
+  }
+
+  /* soft card — the workhorse surface. No border; structure from shadow. */
+  .card-soft {
+    @apply rounded-softer bg-card shadow-feather;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  }
+
+  .btn {
+    @apply inline-flex cursor-pointer items-center justify-center gap-[10px] whitespace-nowrap rounded-full font-body text-[14.5px] font-semibold no-underline;
+    letter-spacing: 0.01em;
+    padding: 12px 24px;
+    transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease),
+      background-color 0.25s var(--ease), color 0.25s var(--ease);
+  }
+  .btn-primary {
+    @apply bg-indigo text-cream;
+    box-shadow: 0 6px 22px rgba(62, 42, 120, 0.28);
+  }
+  .btn-primary:hover {
+    @apply bg-indigo-deep;
+    transform: translateY(-2px);
+  }
+  .btn-ghost {
+    @apply bg-card text-indigo;
+    box-shadow: inset 0 0 0 1.5px var(--line), 0 2px 12px rgba(62, 42, 120, 0.07);
+  }
+  .btn-ghost:hover {
+    @apply bg-lilac-tint;
+  }
+
+  /* language pill, carried from Nav.tsx's .nav-lang */
+  .nav-lang {
+    @apply inline-flex items-center gap-[7px] whitespace-nowrap rounded-full bg-lilac-tint font-body text-[12.5px] font-semibold text-indigo;
+    letter-spacing: 0.06em;
+    padding: 8px 14px;
+  }
+
+  .motif {
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.9;
+  }
+}
+
+@layer utilities {
+  /* clearance for the fixed bottom tab bar on mobile shells */
+  .pb-tabbar {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom));
+  }
+}
